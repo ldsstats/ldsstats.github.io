@@ -124,3 +124,76 @@ tr[onclick]:hover td { background-color: #e8f5e9 !important; }
 .los3chiflados { background-color: #000; position: relative; }
 .los3chiflados::before { content: "CL3"; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); color: #ffd700; font-weight: bold; font-size: 6px; }
 .laesperanza { background: linear-gradient(135deg, #fff 40%, #217a2f 40%, #217a2f 60%, #fff 60%); }
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 5px;
+    }
+
+    /* TABLAS */
+    table {
+        font-size: 10px;
+    }
+
+    td {
+        height: 28px;
+    }
+
+    /* RESULTADO más chico */
+    .c-res {
+        width: 20%;
+        font-size: 11px;
+    }
+
+    /* EQUIPOS */
+    .c-loc, .c-vis {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 40%;
+        font-size: 10px;
+    }
+
+    /* NOMBRES largos */
+    .c-equipo {
+        font-size: 10px;
+        padding-left: 4px;
+    }
+
+    /* ESCUDOS más chicos */
+    .escudo {
+        width: 12px;
+        height: 12px;
+        line-height: 12px;
+        margin: 0 2px;
+    }
+
+    /* BOTONES DE FECHAS */
+    .btn-f {
+        width: 24px;
+        height: 22px;
+        font-size: 10px;
+    }
+
+    /* HEADER */
+    .header-t {
+        font-size: 11px;
+        padding: 6px;
+    }
+
+    /* MENÚ */
+    .bloque {
+        width: calc(50% - 5px); /* 2 por fila */
+        min-width: unset;
+    }
+
+    .bloque a {
+        font-size: 10px;
+        padding: 6px 4px;
+    }
+
+    .bloque-titulo {
+        font-size: 9px;
+    }
+}
