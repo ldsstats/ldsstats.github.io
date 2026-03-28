@@ -598,14 +598,15 @@ const BD_FIXTURES_SUB = {
 // Sub resultados F1
 BD_FIXTURES_SUB.sub13.find(f=>f.fecha===1).partidos.forEach(p=>{
     if(p.l==="Villa Mitre"&&p.v==="Olimpo"){p.gl=4;p.gv=2;p.goles_l=["Santiago Martínez","Santiago Martínez","Erick Schwaner","Ringo Melcon"];p.goles_v=["Santino Canales","Leon Cáceres"];}
-    if(p.l==="Kimberley"&&p.v==="Alvarado"){p.gl=null;p.gv=null;}
+    if(p.l==="Kimberley"&&p.v==="Alvarado"){p.gl=2;p.gv=1;}
 });
 BD_FIXTURES_SUB.sub15.find(f=>f.fecha===1).partidos.forEach(p=>{
     if(p.l==="Villa Mitre"&&p.v==="Olimpo"){p.gl=1;p.gv=2;p.goles_l=["Santiago Sánchez"];p.goles_v=["Thiago Alfredo","Galo Martínez"];}
+    if(p.l==="Kimberley"&&p.v==="Alvarado"){p.gl=1;p.gv=1;}
 });
 BD_FIXTURES_SUB.sub17.find(f=>f.fecha===1).partidos.forEach(p=>{
     if(p.l==="Villa Mitre"&&p.v==="Olimpo"){p.gl=1;p.gv=1;p.goles_l=["Mateo Luzuriaga"];p.goles_v=["Benicio Hernández"];}
-    if(p.l==="Kimberley"&&p.v==="Santamarina"){p.gl=2;p.gv=4;}
+    if(p.l==="Kimberley"&&p.v==="Alvarado"){p.gl=2;p.gv=1;}
 });
 
 
@@ -13824,31 +13825,31 @@ function generarReserva(cat) {
 
 const BD_POS_SUB = {
     sub13: [
-        {nombre:"Villa Mitre",    clase:"villamitre",  pj:1,pg:1,pe:0,pp:0,gf:4,gc:2,pts:3},
-        {nombre:"Kimberley",clase:"kimberley",   pj:0,pg:0,pe:0,pp:0,gf:0,gc:0,pts:0},
-        {nombre:"Alvarado", clase:"alvarado",    pj:0,pg:0,pe:0,pp:0,gf:0,gc:0,pts:0},
-        {nombre:"Santamarina",clase:"santamarina", pj:0,pg:0,pe:0,pp:0,gf:0,gc:0,pts:0},
-        {nombre:"Balompié",       clase:"balompie",    pj:0,pg:0,pe:0,pp:0,gf:0,gc:0,pts:0},
-        {nombre:"Mac Allister",   clase:"macallister", pj:0,pg:0,pe:0,pp:0,gf:0,gc:0,pts:0},
-        {nombre:"Olimpo",         clase:"olimpo",      pj:1,pg:0,pe:0,pp:1,gf:2,gc:4,pts:0}
+        {nombre:"Villa Mitre",  clase:"villamitre",  pj:1,pg:1,pe:0,pp:0,gf:4,gc:2,pts:3},
+        {nombre:"Kimberley",    clase:"kimberley",   pj:1,pg:1,pe:0,pp:0,gf:2,gc:1,pts:3},
+        {nombre:"Santamarina",  clase:"santamarina", pj:0,pg:0,pe:0,pp:0,gf:0,gc:0,pts:0},
+        {nombre:"Balompié",     clase:"balompie",    pj:0,pg:0,pe:0,pp:0,gf:0,gc:0,pts:0},
+        {nombre:"Mac Allister", clase:"macallister", pj:0,pg:0,pe:0,pp:0,gf:0,gc:0,pts:0},
+        {nombre:"Alvarado",     clase:"alvarado",    pj:1,pg:0,pe:0,pp:1,gf:1,gc:2,pts:0},
+        {nombre:"Olimpo",       clase:"olimpo",      pj:1,pg:0,pe:0,pp:1,gf:2,gc:4,pts:0}
     ],
     sub15: [
-        {nombre:"Olimpo",         clase:"olimpo",      pj:1,pg:1,pe:0,pp:0,gf:2,gc:1,pts:3},
-        {nombre:"Kimberley",clase:"kimberley",   pj:0,pg:0,pe:0,pp:0,gf:0,gc:0,pts:0},
-        {nombre:"Alvarado", clase:"alvarado",    pj:0,pg:0,pe:0,pp:0,gf:0,gc:0,pts:0},
-        {nombre:"Santamarina",clase:"santamarina", pj:0,pg:0,pe:0,pp:0,gf:0,gc:0,pts:0},
-        {nombre:"Balompié",       clase:"balompie",    pj:0,pg:0,pe:0,pp:0,gf:0,gc:0,pts:0},
-        {nombre:"Mac Allister",   clase:"macallister", pj:0,pg:0,pe:0,pp:0,gf:0,gc:0,pts:0},
-        {nombre:"Villa Mitre",    clase:"villamitre",  pj:1,pg:0,pe:0,pp:1,gf:1,gc:2,pts:0}
+        {nombre:"Olimpo",       clase:"olimpo",      pj:1,pg:1,pe:0,pp:0,gf:2,gc:1,pts:3},
+        {nombre:"Kimberley",    clase:"kimberley",   pj:1,pg:0,pe:1,pp:0,gf:1,gc:1,pts:1},
+        {nombre:"Alvarado",     clase:"alvarado",    pj:1,pg:0,pe:1,pp:0,gf:1,gc:1,pts:1},
+        {nombre:"Santamarina",  clase:"santamarina", pj:0,pg:0,pe:0,pp:0,gf:0,gc:0,pts:0},
+        {nombre:"Balompié",     clase:"balompie",    pj:0,pg:0,pe:0,pp:0,gf:0,gc:0,pts:0},
+        {nombre:"Mac Allister", clase:"macallister", pj:0,pg:0,pe:0,pp:0,gf:0,gc:0,pts:0},
+        {nombre:"Villa Mitre",  clase:"villamitre",  pj:1,pg:0,pe:0,pp:1,gf:1,gc:2,pts:0}
     ],
     sub17: [
-        {nombre:"Villa Mitre",    clase:"villamitre",  pj:1,pg:0,pe:1,pp:0,gf:1,gc:1,pts:1},
-        {nombre:"Olimpo",         clase:"olimpo",      pj:1,pg:0,pe:1,pp:0,gf:1,gc:1,pts:1},
-        {nombre:"Alvarado", clase:"alvarado",    pj:0,pg:0,pe:0,pp:0,gf:0,gc:0,pts:0},
-        {nombre:"Santamarina",clase:"santamarina", pj:0,pg:0,pe:0,pp:0,gf:0,gc:0,pts:0},
-        {nombre:"Balompié",       clase:"balompie",    pj:0,pg:0,pe:0,pp:0,gf:0,gc:0,pts:0},
-        {nombre:"Mac Allister",   clase:"macallister", pj:0,pg:0,pe:0,pp:0,gf:0,gc:0,pts:0},
-        {nombre:"Kimberley",clase:"kimberley",   pj:1,pg:0,pe:0,pp:1,gf:2,gc:4,pts:0}
+        {nombre:"Kimberley",    clase:"kimberley",   pj:1,pg:1,pe:0,pp:0,gf:2,gc:1,pts:3},
+        {nombre:"Villa Mitre",  clase:"villamitre",  pj:1,pg:0,pe:1,pp:0,gf:1,gc:1,pts:1},
+        {nombre:"Olimpo",       clase:"olimpo",      pj:1,pg:0,pe:1,pp:0,gf:1,gc:1,pts:1},
+        {nombre:"Santamarina",  clase:"santamarina", pj:0,pg:0,pe:0,pp:0,gf:0,gc:0,pts:0},
+        {nombre:"Balompié",     clase:"balompie",    pj:0,pg:0,pe:0,pp:0,gf:0,gc:0,pts:0},
+        {nombre:"Mac Allister", clase:"macallister", pj:0,pg:0,pe:0,pp:0,gf:0,gc:0,pts:0},
+        {nombre:"Alvarado",     clase:"alvarado",    pj:1,pg:0,pe:0,pp:1,gf:1,gc:2,pts:0}
     ]
 };
 
