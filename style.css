@@ -34,16 +34,16 @@ td { height: 35px; color: black; border-bottom: 1px solid #ccc; text-align: cent
 .escudo { width: 16px; height: 16px; display: inline-block; vertical-align: middle; border: 1px solid #666; margin: 0 4px; background: white; position: relative; overflow: hidden; text-align: center; line-height: 16px; }
 
 /* ESCUDOS */
-.olimpo { background: repeating-linear-gradient(90deg, #000, #000 3.2px, #ff0 3.2px, #ff0 6.4px); }
+.olimpo { background: linear-gradient(90deg, #000 20%, #ff0 20%, #ff0 40%, #000 40%, #000 60%, #ff0 60%, #ff0 80%, #000 80%); }
 .villamitre { background: linear-gradient(90deg, green 33%, white 33%, white 66%, black 66%); }
-.santamarina { background: repeating-linear-gradient(90deg, #ff0, #ff0 3.2px, #000 3.2px, #000 6.4px); }
-.germinal { background: repeating-linear-gradient(90deg, green, green 3.2px, white 3.2px, white 6.4px); }
-.circulo { background: repeating-linear-gradient(90deg, green, green 3.2px, #ff4500 3.2px, #ff4500 6.4px); }
+.santamarina { background: linear-gradient(90deg, #ff0 20%, #000 20%, #000 40%, #ff0 40%, #ff0 60%, #000 60%, #000 80%, #ff0 80%); }
+.germinal { background: linear-gradient(90deg, green 20%, white 20%, white 40%, green 40%, green 60%, white 60%, white 80%, green 80%); }
+.circulo { background: linear-gradient(90deg, green 20%, #ff4500 20%, #ff4500 40%, green 40%, green 60%, #ff4500 60%, #ff4500 80%, green 80%); }
 .kimberley { background: linear-gradient(90deg, green 50%, white 50%); display: inline-flex !important; align-items: center; justify-content: center; }
 .kimberley::before { content: "K"; color: black; font-size: 10px; font-weight: bold; z-index: 1; }
 .alvarado { background-color: #2a1db5; position: relative; }
 .alvarado::before { content: ""; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: linear-gradient(-45deg, transparent 46%, white 46%, white 54%, transparent 54%); }
-.gbrown { background-color: white; position: relative; }
+.gbrown { background-color: white; position: relative; border: 1px solid #000 !important; }
 .gbrown::before { content: ""; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: linear-gradient(-45deg, transparent 46%, #2a1db5 46%, #2a1db5 54%, transparent 54%); }
 .soldemayo { background-color: #00f2ff; position: relative; }
 .soldemayo::before { content: ""; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: linear-gradient(-45deg, transparent 46%, white 46%, white 54%, transparent 54%); }
@@ -61,11 +61,11 @@ td { height: 35px; color: black; border-bottom: 1px solid #ccc; text-align: cent
 .pacificobb::before { content: "P"; }
 .pacificoc { background-color: green; color: white; font-size: 9px; font-weight: bold; display: inline-flex !important; align-items: center; justify-content: center; }
 .pacificoc::before { content: "PC"; }
-.sansinena { background: repeating-linear-gradient(90deg, #e30613, #e30613 3.2px, #fff 3.2px, #fff 6.4px); }
+.sansinena { background: linear-gradient(90deg, #e30613 20%, #fff 20%, #fff 40%, #e30613 40%, #e30613 60%, #fff 60%, #fff 80%, #e30613 80%); }
 .pacifico { background-color: #008000; color: white; font-size: 9px; font-weight: bold; display: inline-flex !important; align-items: center; justify-content: center; }
 .pacifico::before { content: "P"; }
 .rosariopb { background: linear-gradient(90deg, #003DA5 33.3%, #fff 33.3%, #fff 66.6%, #ED2939 66.6%); }
-.tirofederal { background: repeating-linear-gradient(90deg, #4b0082, #4b0082 3.2px, #ff0 3.2px, #ff0 6.4px); }
+.tirofederal { background: linear-gradient(90deg, #4b0082 20%, #ff0 20%, #ff0 40%, #4b0082 40%, #4b0082 60%, #ff0 60%, #ff0 80%, #4b0082 80%); }
 .puertocomercial { background: linear-gradient(90deg, green 33%, #ff0 33%, #ff0 66%, green 66%); }
 tr[onclick]:hover td { background-color: #e8f5e9 !important; }
 
