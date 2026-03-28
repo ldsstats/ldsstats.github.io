@@ -13,10 +13,10 @@ const BD_EQUIPOS = {
     ],
     federala: [
         { nombre: "Olimpo", clase: "olimpo" }, { nombre: "Villa Mitre", clase: "villamitre" },
-        { nombre: "Alvarado (MdP)", clase: "alvarado" }, { nombre: "Santamarina (T)", clase: "santamarina" },
-        { nombre: "Kimberley (MdP)", clase: "kimberley" }, { nombre: "Sol de Mayo (V)", clase: "soldemayo" },
-        { nombre: "Germinal (R)", clase: "germinal" }, { nombre: "Guillermo Brown (M)", clase: "gbrown" },
-        { nombre: "Círculo Dep. (O)", clase: "circulo" }
+        { nombre: "Alvarado", clase: "alvarado" }, { nombre: "Santamarina", clase: "santamarina" },
+        { nombre: "Kimberley", clase: "kimberley" }, { nombre: "Sol de Mayo", clase: "soldemayo" },
+        { nombre: "Germinal", clase: "germinal" }, { nombre: "Guillermo Brown", clase: "gbrown" },
+        { nombre: "Círculo Dep.", clase: "circulo" }
     ],
     femenino: [
         { nombre: "Sporting", clase: "sporting" }, { nombre: "Municipales", clase: "municipales" },
@@ -84,15 +84,15 @@ const idaPromo = [
 ];
 
 const idaFederal = [
-    { fecha: 1, libre: "Círculo Dep. (O)", partidos: [{l:"Kimberley (MdP)", v:"Villa Mitre", gl:1, gv:0, dia:"Dom 22/03", hora:"16:00", goles_l:["Rodrigo Ríos"], goles_v:[]}, {l:"Sol de Mayo (V)", v:"Germinal (R)", gl:1, gv:1, dia:"Dom 22/03", hora:"15:00", goles_l:["Héctor Morales"], goles_v:["Nicolás Macaroff"]}, {l:"Guillermo Brown (M)", v:"Santamarina (T)", gl:2, gv:2, dia:"Dom 22/03", hora:"16:00", goles_l:["Emanuel Moreno","Ignacio Zapulla"], goles_v:["Nicolás Franco","Luciano Domínguez"]}, {l:"Olimpo", v:"Alvarado (MdP)", gl:2, gv:0, dia:"Dom 22/03", hora:"16:00", goles_l:["Martín Ferreyra","Diego Ramírez"], goles_v:[]}] },
-    { fecha: 2, libre: "Olimpo", partidos: [{l:"Alvarado (MdP)", v:"Guillermo Brown (M)", gl:null, gv:null, dia:"Dom 29/03", hora:"15:30"}, {l:"Santamarina (T)", v:"Sol de Mayo (V)", gl:null, gv:null, dia:"Sáb 28/03", hora:"19:00"}, {l:"Germinal (R)", v:"Kimberley (MdP)", gl:null, gv:null, dia:"Dom 29/03", hora:"15:00"}, {l:"Villa Mitre", v:"Círculo Dep. (O)", gl:null, gv:null, dia:"Dom 29/03", hora:"16:00"}] },
-    { fecha: 3, libre: "Villa Mitre", partidos: [{l:"Círculo Dep. (O)", v:"Germinal (R)", gl:null, gv:null}, {l:"Kimberley (MdP)", v:"Santamarina (T)", gl:null, gv:null}, {l:"Sol de Mayo (V)", v:"Alvarado (MdP)", gl:null, gv:null}, {l:"Guillermo Brown (M)", v:"Olimpo", gl:null, gv:null}] },
-    { fecha: 4, libre: "Guillermo Brown (M)", partidos: [{l:"Olimpo", v:"Sol de Mayo (V)", gl:null, gv:null}, {l:"Alvarado (MdP)", v:"Kimberley (MdP)", gl:null, gv:null}, {l:"Santamarina (T)", v:"Círculo Dep. (O)", gl:null, gv:null}, {l:"Germinal (R)", v:"Villa Mitre", gl:null, gv:null}] },
-    { fecha: 5, libre: "Germinal (R)", partidos: [{l:"Villa Mitre", v:"Santamarina (T)", gl:null, gv:null}, {l:"Círculo Dep. (O)", v:"Alvarado (MdP)", gl:null, gv:null}, {l:"Kimberley (MdP)", v:"Olimpo", gl:null, gv:null}, {l:"Sol de Mayo (V)", v:"Guillermo Brown (M)", gl:null, gv:null}] },
-    { fecha: 6, libre: "Sol de Mayo (V)", partidos: [{l:"Guillermo Brown (M)", v:"Kimberley (MdP)", gl:null, gv:null}, {l:"Olimpo", v:"Círculo Dep. (O)", gl:null, gv:null}, {l:"Alvarado (MdP)", v:"Villa Mitre", gl:null, gv:null}, {l:"Santamarina (T)", v:"Germinal (R)", gl:null, gv:null}] },
-    { fecha: 7, libre: "Santamarina (T)", partidos: [{l:"Germinal (R)", v:"Alvarado (MdP)", gl:null, gv:null}, {l:"Villa Mitre", v:"Olimpo", gl:null, gv:null}, {l:"Círculo Dep. (O)", v:"Guillermo Brown (M)", gl:null, gv:null}, {l:"Kimberley (MdP)", v:"Sol de Mayo (V)", gl:null, gv:null}] },
-    { fecha: 8, libre: "Kimberley (MdP)", partidos: [{l:"Sol de Mayo (V)", v:"Círculo Dep. (O)", gl:null, gv:null}, {l:"Guillermo Brown (M)", v:"Villa Mitre", gl:null, gv:null}, {l:"Olimpo", v:"Germinal (R)", gl:null, gv:null}, {l:"Alvarado (MdP)", v:"Santamarina (T)", gl:null, gv:null}] },
-    { fecha: 9, libre: "Alvarado (MdP)", partidos: [{l:"Santamarina (T)", v:"Olimpo", gl:null, gv:null}, {l:"Germinal (R)", v:"Guillermo Brown (M)", gl:null, gv:null}, {l:"Villa Mitre", v:"Sol de Mayo (V)", gl:null, gv:null}, {l:"Círculo Dep. (O)", v:"Kimberley (MdP)", gl:null, gv:null}] }
+    { fecha: 1, libre: "Círculo Dep.", partidos: [{l:"Kimberley", v:"Villa Mitre", gl:1, gv:0, dia:"Dom 22/03", hora:"16:00", goles_l:["Rodrigo Ríos"], goles_v:[]}, {l:"Sol de Mayo", v:"Germinal", gl:1, gv:1, dia:"Dom 22/03", hora:"15:00", goles_l:["Héctor Morales"], goles_v:["Nicolás Macaroff"]}, {l:"Guillermo Brown", v:"Santamarina", gl:2, gv:2, dia:"Dom 22/03", hora:"16:00", goles_l:["Emanuel Moreno","Ignacio Zapulla"], goles_v:["Nicolás Franco","Luciano Domínguez"]}, {l:"Olimpo", v:"Alvarado", gl:2, gv:0, dia:"Dom 22/03", hora:"16:00", goles_l:["Martín Ferreyra","Diego Ramírez"], goles_v:[]}] },
+    { fecha: 2, libre: "Olimpo", partidos: [{l:"Alvarado", v:"Guillermo Brown", gl:null, gv:null, dia:"Dom 29/03", hora:"15:30"}, {l:"Santamarina", v:"Sol de Mayo", gl:null, gv:null, dia:"Sáb 28/03", hora:"19:00"}, {l:"Germinal", v:"Kimberley", gl:null, gv:null, dia:"Dom 29/03", hora:"15:00"}, {l:"Villa Mitre", v:"Círculo Dep.", gl:null, gv:null, dia:"Dom 29/03", hora:"16:00"}] },
+    { fecha: 3, libre: "Villa Mitre", partidos: [{l:"Círculo Dep.", v:"Germinal", gl:null, gv:null}, {l:"Kimberley", v:"Santamarina", gl:null, gv:null}, {l:"Sol de Mayo", v:"Alvarado", gl:null, gv:null}, {l:"Guillermo Brown", v:"Olimpo", gl:null, gv:null}] },
+    { fecha: 4, libre: "Guillermo Brown", partidos: [{l:"Olimpo", v:"Sol de Mayo", gl:null, gv:null}, {l:"Alvarado", v:"Kimberley", gl:null, gv:null}, {l:"Santamarina", v:"Círculo Dep.", gl:null, gv:null}, {l:"Germinal", v:"Villa Mitre", gl:null, gv:null}] },
+    { fecha: 5, libre: "Germinal", partidos: [{l:"Villa Mitre", v:"Santamarina", gl:null, gv:null}, {l:"Círculo Dep.", v:"Alvarado", gl:null, gv:null}, {l:"Kimberley", v:"Olimpo", gl:null, gv:null}, {l:"Sol de Mayo", v:"Guillermo Brown", gl:null, gv:null}] },
+    { fecha: 6, libre: "Sol de Mayo", partidos: [{l:"Guillermo Brown", v:"Kimberley", gl:null, gv:null}, {l:"Olimpo", v:"Círculo Dep.", gl:null, gv:null}, {l:"Alvarado", v:"Villa Mitre", gl:null, gv:null}, {l:"Santamarina", v:"Germinal", gl:null, gv:null}] },
+    { fecha: 7, libre: "Santamarina", partidos: [{l:"Germinal", v:"Alvarado", gl:null, gv:null}, {l:"Villa Mitre", v:"Olimpo", gl:null, gv:null}, {l:"Círculo Dep.", v:"Guillermo Brown", gl:null, gv:null}, {l:"Kimberley", v:"Sol de Mayo", gl:null, gv:null}] },
+    { fecha: 8, libre: "Kimberley", partidos: [{l:"Sol de Mayo", v:"Círculo Dep.", gl:null, gv:null}, {l:"Guillermo Brown", v:"Villa Mitre", gl:null, gv:null}, {l:"Olimpo", v:"Germinal", gl:null, gv:null}, {l:"Alvarado", v:"Santamarina", gl:null, gv:null}] },
+    { fecha: 9, libre: "Alvarado", partidos: [{l:"Santamarina", v:"Olimpo", gl:null, gv:null}, {l:"Germinal", v:"Guillermo Brown", gl:null, gv:null}, {l:"Villa Mitre", v:"Sol de Mayo", gl:null, gv:null}, {l:"Círculo Dep.", v:"Kimberley", gl:null, gv:null}] }
 ];
 
 
@@ -557,28 +557,28 @@ const idaSub15Fem = [
 const BD_EQUIPOS_SUB = [
     { nombre: "Olimpo",        clase: "olimpo" },
     { nombre: "Villa Mitre",   clase: "villamitre" },
-    { nombre: "Alvarado (MdP)",clase: "alvarado" },
-    { nombre: "Kimberley (MdP)",clase: "kimberley" },
-    { nombre: "Santamarina (T)",clase: "santamarina" },
+    { nombre: "Alvarado",clase: "alvarado" },
+    { nombre: "Kimberley",clase: "kimberley" },
+    { nombre: "Santamarina",clase: "santamarina" },
     { nombre: "Balompié",      clase: "balompie" },
     { nombre: "Mac Allister",  clase: "macallister" }
 ];
 
 const idaSub = [
-    { fecha: 1, libre: "Balompié",      partidos: [{l:"Villa Mitre", v:"Olimpo"}, {l:"Santamarina (T)", v:"Mac Allister"}, {l:"Kimberley (MdP)", v:"Alvarado (MdP)"}] },
-    { fecha: 2, libre: "Kimberley (MdP)", partidos: [{l:"Olimpo", v:"Balompié"}, {l:"Mac Allister", v:"Villa Mitre"}, {l:"Alvarado (MdP)", v:"Santamarina (T)"}] },
-    { fecha: 3, libre: "Olimpo",        partidos: [{l:"Villa Mitre", v:"Alvarado (MdP)"}, {l:"Santamarina (T)", v:"Kimberley (MdP)"}, {l:"Balompié", v:"Mac Allister"}] },
-    { fecha: 4, libre: "Santamarina (T)", partidos: [{l:"Kimberley (MdP)", v:"Villa Mitre"}, {l:"Mac Allister", v:"Olimpo"}, {l:"Alvarado (MdP)", v:"Balompié"}] },
-    { fecha: 5, libre: "Mac Allister",  partidos: [{l:"Olimpo", v:"Alvarado (MdP)"}, {l:"Balompié", v:"Kimberley (MdP)"}, {l:"Villa Mitre", v:"Santamarina (T)"}] },
-    { fecha: 6, libre: "Villa Mitre",   partidos: [{l:"Kimberley (MdP)", v:"Olimpo"}, {l:"Santamarina (T)", v:"Balompié"}, {l:"Alvarado (MdP)", v:"Mac Allister"}] },
-    { fecha: 7, libre: "Alvarado (MdP)", partidos: [{l:"Balompié", v:"Villa Mitre"}, {l:"Olimpo", v:"Santamarina (T)"}, {l:"Mac Allister", v:"Kimberley (MdP)"}] },
-    { fecha: 8,  libre: "Balompié",      partidos: [{l:"Olimpo", v:"Villa Mitre"}, {l:"Mac Allister", v:"Santamarina (T)"}, {l:"Alvarado (MdP)", v:"Kimberley (MdP)"}] },
-    { fecha: 9,  libre: "Kimberley (MdP)", partidos: [{l:"Balompié", v:"Olimpo"}, {l:"Villa Mitre", v:"Mac Allister"}, {l:"Santamarina (T)", v:"Alvarado (MdP)"}] },
-    { fecha: 10, libre: "Olimpo",        partidos: [{l:"Alvarado (MdP)", v:"Villa Mitre"}, {l:"Kimberley (MdP)", v:"Santamarina (T)"}, {l:"Mac Allister", v:"Balompié"}] },
-    { fecha: 11, libre: "Santamarina (T)", partidos: [{l:"Villa Mitre", v:"Kimberley (MdP)"}, {l:"Olimpo", v:"Mac Allister"}, {l:"Balompié", v:"Alvarado (MdP)"}] },
-    { fecha: 12, libre: "Mac Allister",  partidos: [{l:"Alvarado (MdP)", v:"Olimpo"}, {l:"Kimberley (MdP)", v:"Balompié"}, {l:"Santamarina (T)", v:"Villa Mitre"}] },
-    { fecha: 13, libre: "Villa Mitre",   partidos: [{l:"Olimpo", v:"Kimberley (MdP)"}, {l:"Balompié", v:"Santamarina (T)"}, {l:"Mac Allister", v:"Alvarado (MdP)"}] },
-    { fecha: 14, libre: "Alvarado (MdP)", partidos: [{l:"Villa Mitre", v:"Balompié"}, {l:"Santamarina (T)", v:"Olimpo"}, {l:"Kimberley (MdP)", v:"Mac Allister"}] }
+    { fecha: 1, libre: "Balompié",      partidos: [{l:"Villa Mitre", v:"Olimpo"}, {l:"Santamarina", v:"Mac Allister"}, {l:"Kimberley", v:"Alvarado"}] },
+    { fecha: 2, libre: "Kimberley", partidos: [{l:"Olimpo", v:"Balompié"}, {l:"Mac Allister", v:"Villa Mitre"}, {l:"Alvarado", v:"Santamarina"}] },
+    { fecha: 3, libre: "Olimpo",        partidos: [{l:"Villa Mitre", v:"Alvarado"}, {l:"Santamarina", v:"Kimberley"}, {l:"Balompié", v:"Mac Allister"}] },
+    { fecha: 4, libre: "Santamarina", partidos: [{l:"Kimberley", v:"Villa Mitre"}, {l:"Mac Allister", v:"Olimpo"}, {l:"Alvarado", v:"Balompié"}] },
+    { fecha: 5, libre: "Mac Allister",  partidos: [{l:"Olimpo", v:"Alvarado"}, {l:"Balompié", v:"Kimberley"}, {l:"Villa Mitre", v:"Santamarina"}] },
+    { fecha: 6, libre: "Villa Mitre",   partidos: [{l:"Kimberley", v:"Olimpo"}, {l:"Santamarina", v:"Balompié"}, {l:"Alvarado", v:"Mac Allister"}] },
+    { fecha: 7, libre: "Alvarado", partidos: [{l:"Balompié", v:"Villa Mitre"}, {l:"Olimpo", v:"Santamarina"}, {l:"Mac Allister", v:"Kimberley"}] },
+    { fecha: 8,  libre: "Balompié",      partidos: [{l:"Olimpo", v:"Villa Mitre"}, {l:"Mac Allister", v:"Santamarina"}, {l:"Alvarado", v:"Kimberley"}] },
+    { fecha: 9,  libre: "Kimberley", partidos: [{l:"Balompié", v:"Olimpo"}, {l:"Villa Mitre", v:"Mac Allister"}, {l:"Santamarina", v:"Alvarado"}] },
+    { fecha: 10, libre: "Olimpo",        partidos: [{l:"Alvarado", v:"Villa Mitre"}, {l:"Kimberley", v:"Santamarina"}, {l:"Mac Allister", v:"Balompié"}] },
+    { fecha: 11, libre: "Santamarina", partidos: [{l:"Villa Mitre", v:"Kimberley"}, {l:"Olimpo", v:"Mac Allister"}, {l:"Balompié", v:"Alvarado"}] },
+    { fecha: 12, libre: "Mac Allister",  partidos: [{l:"Alvarado", v:"Olimpo"}, {l:"Kimberley", v:"Balompié"}, {l:"Santamarina", v:"Villa Mitre"}] },
+    { fecha: 13, libre: "Villa Mitre",   partidos: [{l:"Olimpo", v:"Kimberley"}, {l:"Balompié", v:"Santamarina"}, {l:"Mac Allister", v:"Alvarado"}] },
+    { fecha: 14, libre: "Alvarado", partidos: [{l:"Villa Mitre", v:"Balompié"}, {l:"Santamarina", v:"Olimpo"}, {l:"Kimberley", v:"Mac Allister"}] }
 ];
 
 // Generar fixtures Sub con gl/gv null
@@ -598,14 +598,14 @@ const BD_FIXTURES_SUB = {
 // Sub resultados F1
 BD_FIXTURES_SUB.sub13.find(f=>f.fecha===1).partidos.forEach(p=>{
     if(p.l==="Villa Mitre"&&p.v==="Olimpo"){p.gl=4;p.gv=2;p.goles_l=["Santiago Martínez","Santiago Martínez","Erick Schwaner","Ringo Melcon"];p.goles_v=["Santino Canales","Leon Cáceres"];}
-    if(p.l==="Kimberley (MdP)"&&p.v==="Alvarado (MdP)"){p.gl=null;p.gv=null;}
+    if(p.l==="Kimberley"&&p.v==="Alvarado"){p.gl=null;p.gv=null;}
 });
 BD_FIXTURES_SUB.sub15.find(f=>f.fecha===1).partidos.forEach(p=>{
     if(p.l==="Villa Mitre"&&p.v==="Olimpo"){p.gl=1;p.gv=2;p.goles_l=["Santiago Sánchez"];p.goles_v=["Thiago Alfredo","Galo Martínez"];}
 });
 BD_FIXTURES_SUB.sub17.find(f=>f.fecha===1).partidos.forEach(p=>{
     if(p.l==="Villa Mitre"&&p.v==="Olimpo"){p.gl=1;p.gv=1;p.goles_l=["Mateo Luzuriaga"];p.goles_v=["Benicio Hernández"];}
-    if(p.l==="Kimberley (MdP)"&&p.v==="Santamarina (T)"){p.gl=2;p.gv=4;}
+    if(p.l==="Kimberley"&&p.v==="Santamarina"){p.gl=2;p.gv=4;}
 });
 
 
@@ -720,7 +720,7 @@ function generarHome() {
                 {l:"Tiro Federal", v:"Rosario PB",  hora:"16:00"}
             ]},
             { nombre: "FEDERAL A", cat: "federala", partidos: [
-                {l:"Santamarina (T)", v:"Sol de Mayo (V)", hora:"19:00", claseL:"santamarina", claseV:"soldemayo"}
+                {l:"Santamarina", v:"Sol de Mayo", hora:"19:00", claseL:"santamarina", claseV:"soldemayo"}
             ]},
             { nombre: "1° FEMENINO", cat: "femenino", partidos: [
                 {l:"Bella Vista", v:"Sporting",              hora:"16:00"},
@@ -746,9 +746,9 @@ function generarHome() {
                 {l:"Sansinena",   v:"Dublin",              hora:"16:00", nota:"Localías invertidas"}
             ]},
             { nombre: "FEDERAL A", cat: "federala", partidos: [
-                {l:"Germinal (R)",      v:"Kimberley (MdP)",     hora:"15:00", claseL:"germinal",  claseV:"kimberley"},
-                {l:"Alvarado (MdP)",    v:"Guillermo Brown (M)", hora:"15:30", claseL:"alvarado",  claseV:"gbrown"},
-                {l:"Villa Mitre",       v:"Círculo Dep. (O)",    hora:"16:00", claseL:"villamitre",claseV:"circulo"}
+                {l:"Germinal",      v:"Kimberley",     hora:"15:00", claseL:"germinal",  claseV:"kimberley"},
+                {l:"Alvarado",    v:"Guillermo Brown", hora:"15:30", claseL:"alvarado",  claseV:"gbrown"},
+                {l:"Villa Mitre",       v:"Círculo Dep.",    hora:"16:00", claseL:"villamitre",claseV:"circulo"}
             ]},
             { nombre: "1° FEMENINO", cat: "femenino", partidos: [
                 {l:"Tiro Federal", v:"La Armonía", hora:"16:00"}
@@ -1782,7 +1782,7 @@ const BD_DETALLES_FUERA = {
                 solo_puntos: true,
                 clasificados: 3,
                 equipos: [
-                    { nombre: "Alvarado (MdP)",              clase: "alvarado",   pj:14, pg:0, pe:0, pp:0, gf:0, gc:0, pts:22 },
+                    { nombre: "Alvarado",              clase: "alvarado",   pj:14, pg:0, pe:0, pp:0, gf:0, gc:0, pts:22 },
                     { nombre: "Cadetes de San Martín (MdP)", clase: "",           pj:14, pg:0, pe:0, pp:0, gf:0, gc:0, pts:21 },
                     { nombre: "Sporting",                    clase: "sporting",   pj:14, pg:0, pe:0, pp:0, gf:0, gc:0, pts:20 },
                     { nombre: "Bella Vista",                 clase: "bellavista", pj:14, pg:0, pe:0, pp:0, gf:0, gc:0, pts:19 },
@@ -1793,14 +1793,14 @@ const BD_DETALLES_FUERA = {
                 ],
                 partidos: [
                     { condicion: "F1",  local: "Villa del Parque (N)",     visitante: "Bella Vista",               gl: 1, gv: 2, goles_local: [], goles_visitante: [] },
-                    { condicion: "F2",  local: "Bella Vista",              visitante: "Alvarado (MdP)",            gl: 0, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F2",  local: "Bella Vista",              visitante: "Alvarado",            gl: 0, gv: 0, goles_local: [], goles_visitante: [] },
                     { condicion: "F3",  local: "Sporting",                 visitante: "Bella Vista",               gl: 0, gv: 0, goles_local: [], goles_visitante: [] },
                     { condicion: "F4",  local: "Bella Vista",              visitante: "Grupo Univ. (T)",           gl: 0, gv: 0, goles_local: [], goles_visitante: [] },
                     { condicion: "F5",  local: "Dep. Coreano (Lobos)",     visitante: "Bella Vista",               gl: 3, gv: 1, goles_local: [], goles_visitante: [] },
                     { condicion: "F6",  local: "Bella Vista",              visitante: "Cadetes S. Martín (MdP)",   gl: 1, gv: 1, goles_local: [], goles_visitante: [] },
                     { condicion: "F7",  local: "Bella Vista",              visitante: "Racing (Olavarría)",        gl: 1, gv: 2, goles_local: [], goles_visitante: [] },
                     { condicion: "F8",  local: "Bella Vista",              visitante: "Villa del Parque (N)",      gl: 3, gv: 3, goles_local: [], goles_visitante: [] },
-                    { condicion: "F9",  local: "Alvarado (MdP)",           visitante: "Bella Vista",               gl: 2, gv: 1, goles_local: [], goles_visitante: [] },
+                    { condicion: "F9",  local: "Alvarado",           visitante: "Bella Vista",               gl: 2, gv: 1, goles_local: [], goles_visitante: [] },
                     { condicion: "F10", local: "Bella Vista",              visitante: "Sporting",                  gl: 1, gv: 1, goles_local: [], goles_visitante: [] },
                     { condicion: "F11", local: "Grupo Univ. (T)",          visitante: "Bella Vista",               gl: 2, gv: 2, goles_local: [], goles_visitante: [] },
                     { condicion: "F12", local: "Bella Vista",              visitante: "Dep. Coreano (Lobos)",      gl: 4, gv: 0, goles_local: [], goles_visitante: [] },
@@ -1815,7 +1815,7 @@ const BD_DETALLES_FUERA = {
                 equipos: [
                     { nombre: "Racing (Olavarría)",          clase: "",           pj:14, pg:0, pe:0, pp:0, gf:0, gc:0, pts:33 },
                     { nombre: "Bella Vista",                 clase: "bellavista", pj:14, pg:0, pe:0, pp:0, gf:0, gc:0, pts:23 },
-                    { nombre: "Alvarado (MdP)",              clase: "alvarado",   pj:14, pg:0, pe:0, pp:0, gf:0, gc:0, pts:23 },
+                    { nombre: "Alvarado",              clase: "alvarado",   pj:14, pg:0, pe:0, pp:0, gf:0, gc:0, pts:23 },
                     { nombre: "Villa del Parque (N)",        clase: "",           pj:14, pg:0, pe:0, pp:0, gf:0, gc:0, pts:21 },
                     { nombre: "Grupo Universitario (T)",     clase: "",           pj:14, pg:0, pe:0, pp:0, gf:0, gc:0, pts:18 },
                     { nombre: "Sporting",                    clase: "sporting",   pj:14, pg:0, pe:0, pp:0, gf:0, gc:0, pts:14 },
@@ -1824,14 +1824,14 @@ const BD_DETALLES_FUERA = {
                 ],
                 partidos: [
                     { condicion: "F1",  local: "Bella Vista",              visitante: "Villa del Parque (N)",      gl: 2, gv: 2, goles_local: [], goles_visitante: [] },
-                    { condicion: "F2",  local: "Alvarado (MdP)",           visitante: "Bella Vista",               gl: 2, gv: 1, goles_local: [], goles_visitante: [] },
+                    { condicion: "F2",  local: "Alvarado",           visitante: "Bella Vista",               gl: 2, gv: 1, goles_local: [], goles_visitante: [] },
                     { condicion: "F3",  local: "Bella Vista",              visitante: "Sporting",                  gl: 3, gv: 0, goles_local: [], goles_visitante: [] },
                     { condicion: "F4",  local: "Grupo Univ. (T)",          visitante: "Bella Vista",               gl: 2, gv: 0, goles_local: [], goles_visitante: [] },
                     { condicion: "F5",  local: "Bella Vista",              visitante: "Dep. Coreano (Lobos)",      gl: 4, gv: 1, goles_local: [], goles_visitante: [] },
                     { condicion: "F6",  local: "Cadetes S. Martín (MdP)",  visitante: "Bella Vista",               gl: 1, gv: 2, goles_local: [], goles_visitante: [] },
                     { condicion: "F7",  local: "Racing (Olavarría)",       visitante: "Bella Vista",               gl: 3, gv: 1, goles_local: [], goles_visitante: [] },
                     { condicion: "F8",  local: "Villa del Parque (N)",     visitante: "Bella Vista",               gl: 1, gv: 1, goles_local: [], goles_visitante: [] },
-                    { condicion: "F9",  local: "Bella Vista",              visitante: "Alvarado (MdP)",            gl: 2, gv: 1, goles_local: [], goles_visitante: [] },
+                    { condicion: "F9",  local: "Bella Vista",              visitante: "Alvarado",            gl: 2, gv: 1, goles_local: [], goles_visitante: [] },
                     { condicion: "F10", local: "Sporting",                 visitante: "Bella Vista",               gl: 2, gv: 0, goles_local: [], goles_visitante: [] },
                     { condicion: "F11", local: "Bella Vista",              visitante: "Grupo Univ. (T)",           gl: 2, gv: 4, goles_local: [], goles_visitante: [] },
                     { condicion: "F12", local: "Dep. Coreano (Lobos)",     visitante: "Bella Vista",               gl: 0, gv: 2, goles_local: [], goles_visitante: [] },
@@ -1913,18 +1913,18 @@ const BD_DETALLES_FUERA = {
                 solo_puntos: true,
                 clasificados: 1,
                 equipos: [
-                    { nombre: "Alvarado (MdP)",  clase: "alvarado",   pj:6, pg:0, pe:0, pp:0, gf:0, gc:0, pts:13 },
+                    { nombre: "Alvarado",  clase: "alvarado",   pj:6, pg:0, pe:0, pp:0, gf:0, gc:0, pts:13 },
                     { nombre: "Dep. Madryn",     clase: "",           pj:6, pg:0, pe:0, pp:0, gf:0, gc:0, pts:8  },
                     { nombre: "Bella Vista",     clase: "bellavista", pj:6, pg:0, pe:0, pp:0, gf:0, gc:0, pts:7  },
                     { nombre: "Racing (Trelew)", clase: "",           pj:6, pg:0, pe:0, pp:0, gf:0, gc:0, pts:5  }
                 ],
                 partidos: [
-                    { condicion: "F1", local: "Bella Vista",     visitante: "Alvarado (MdP)",  gl: 1, gv: 6, goles_local: [], goles_visitante: [] },
+                    { condicion: "F1", local: "Bella Vista",     visitante: "Alvarado",  gl: 1, gv: 6, goles_local: [], goles_visitante: [] },
                     { condicion: "F2", local: "Racing (Trelew)", visitante: "Bella Vista",     gl: 2, gv: 0, goles_local: [], goles_visitante: [] },
                     { condicion: "F3", local: "Bella Vista",     visitante: "Dep. Madryn",     gl: 2, gv: 2, goles_local: [], goles_visitante: [] },
                     { condicion: "F4", local: "Dep. Madryn",     visitante: "Bella Vista",     gl: 3, gv: 0, goles_local: [], goles_visitante: [] },
                     { condicion: "F5", local: "Bella Vista",     visitante: "Racing (Trelew)", gl: 3, gv: 2, goles_local: [], goles_visitante: [] },
-                    { condicion: "F6", local: "Alvarado (MdP)",  visitante: "Bella Vista",     gl: 1, gv: 1, goles_local: [], goles_visitante: [], nota: "Partido jugado en Tandil sin público" }
+                    { condicion: "F6", local: "Alvarado",  visitante: "Bella Vista",     gl: 1, gv: 1, goles_local: [], goles_visitante: [], nota: "Partido jugado en Tandil sin público" }
                 ]
             }
         ]
@@ -2228,14 +2228,14 @@ const BD_DETALLES_FUERA = {
                 partidos: [
                     {
                         condicion: "Ida",
-                        local: "Kimberley (MdP)", visitante: "Bella Vista",
+                        local: "Kimberley", visitante: "Bella Vista",
                         gl: 0, gv: 2,
                         goles_local: [],
                         goles_visitante: ["Fernando Priore", "Emiliano Ovandro"]
                     },
                     {
                         condicion: "Vuelta",
-                        local: "Bella Vista", visitante: "Kimberley (MdP)",
+                        local: "Bella Vista", visitante: "Kimberley",
                         gl: 0, gv: 1,
                         goles_local: [],
                         goles_visitante: []
@@ -2327,18 +2327,18 @@ const BD_DETALLES_FUERA = {
                     { nombre: "Sansinena",           clase: "sansinena",  pj:10, pg:0, pe:0, pp:0, gf:0, gc:0, pts:14 },
                     { nombre: "Agropecuario",        clase: "",           pj:10, pg:0, pe:0, pp:0, gf:0, gc:0, pts:13 },
                     { nombre: "Bella Vista",         clase: "bellavista", pj:10, pg:0, pe:0, pp:0, gf:0, gc:0, pts:12 },
-                    { nombre: "Kimberley (MdP)",     clase: "kimberley",  pj:10, pg:0, pe:0, pp:0, gf:0, gc:0, pts:7  },
+                    { nombre: "Kimberley",     clase: "kimberley",  pj:10, pg:0, pe:0, pp:0, gf:0, gc:0, pts:7  },
                     { nombre: "América (Gral. Pirán)",clase: "",           pj:10, pg:0, pe:0, pp:0, gf:0, gc:0, pts:6  }
                 ],
                 partidos: [
                     { condicion: "F1",  local: "Bella Vista",           visitante: "Sansinena",           gl: 2, gv: 1, goles_local: [], goles_visitante: [] },
                     { condicion: "F2",  local: "Agropecuario",          visitante: "Bella Vista",          gl: 3, gv: 0, goles_local: [], goles_visitante: [] },
-                    { condicion: "F3",  local: "Bella Vista",           visitante: "Kimberley (MdP)",      gl: 1, gv: 1, goles_local: [], goles_visitante: [] },
+                    { condicion: "F3",  local: "Bella Vista",           visitante: "Kimberley",      gl: 1, gv: 1, goles_local: [], goles_visitante: [] },
                     { condicion: "F4",  local: "Bella Vista",           visitante: "— Fecha Libre —",      gl: null, gv: null, goles_local: [], goles_visitante: [] },
                     { condicion: "F5",  local: "América (Gral. Pirán)", visitante: "Bella Vista",          gl: 0, gv: 0, goles_local: [], goles_visitante: [] },
                     { condicion: "F6",  local: "Sansinena",             visitante: "Bella Vista",          gl: 3, gv: 0, goles_local: [], goles_visitante: [] },
                     { condicion: "F7",  local: "Bella Vista",           visitante: "Agropecuario",         gl: 1, gv: 0, goles_local: [], goles_visitante: [] },
-                    { condicion: "F8",  local: "Kimberley (MdP)",       visitante: "Bella Vista",          gl: 0, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F8",  local: "Kimberley",       visitante: "Bella Vista",          gl: 0, gv: 0, goles_local: [], goles_visitante: [] },
                     { condicion: "F9",  local: "Bella Vista",           visitante: "— Fecha Libre —",      gl: null, gv: null, goles_local: [], goles_visitante: [] },
                     { condicion: "F10", local: "Bella Vista",           visitante: "América (Gral. Pirán)",gl: 2, gv: 1, goles_local: [], goles_visitante: [] }
                 ]
@@ -2383,7 +2383,7 @@ const BD_DETALLES_FUERA = {
                     { nombre: "Sansinena",                    clase: "sansinena",  pj:22, pg:0, pe:0, pp:0, gf:0, gc:0, pts:56 },
                     { nombre: "Liniers",                      clase: "liniers",    pj:22, pg:0, pe:0, pp:0, gf:0, gc:0, pts:49 },
                     { nombre: "Villa Mitre",                  clase: "villamitre", pj:22, pg:0, pe:0, pp:0, gf:0, gc:0, pts:43 },
-                    { nombre: "Kimberley (MdP)",              clase: "kimberley",  pj:22, pg:0, pe:0, pp:0, gf:0, gc:0, pts:43 },
+                    { nombre: "Kimberley",              clase: "kimberley",  pj:22, pg:0, pe:0, pp:0, gf:0, gc:0, pts:43 },
                     { nombre: "Sarmiento (Ayacucho)",         clase: "",           pj:22, pg:0, pe:0, pp:0, gf:0, gc:0, pts:38 },
                     { nombre: "América (Gral. Pirán)",        clase: "",           pj:22, pg:0, pe:0, pp:0, gf:0, gc:0, pts:32 },
                     { nombre: "Ferro (Olavarría)",            clase: "",           pj:22, pg:0, pe:0, pp:0, gf:0, gc:0, pts:29 },
@@ -2399,7 +2399,7 @@ const BD_DETALLES_FUERA = {
                     { condicion: "F3",  local: "Bella Vista",                  visitante: "Dep. Sarmiento (Cnel. Suárez)",gl: 2, gv: 3, goles_local: [], goles_visitante: [] },
                     { condicion: "F4",  local: "América (Gral. Pirán)",        visitante: "Bella Vista",                  gl: 3, gv: 2, goles_local: [], goles_visitante: [] },
                     { condicion: "F5",  local: "Bella Vista",                  visitante: "Tres Algarrobos",              gl: 5, gv: 1, goles_local: [], goles_visitante: [] },
-                    { condicion: "F6",  local: "Kimberley (MdP)",              visitante: "Bella Vista",                  gl: 1, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F6",  local: "Kimberley",              visitante: "Bella Vista",                  gl: 1, gv: 0, goles_local: [], goles_visitante: [] },
                     { condicion: "F7",  local: "Bella Vista",                  visitante: "Ferro (Olavarría)",            gl: 2, gv: 4, goles_local: [], goles_visitante: [] },
                     { condicion: "F8",  local: "Bella Vista",                  visitante: "Def. Valeria del Mar",         gl: 1, gv: 1, goles_local: [], goles_visitante: [] },
                     { condicion: "F9",  local: "Liniers",                      visitante: "Bella Vista",                  gl: 0, gv: 2, goles_local: [], goles_visitante: [] },
@@ -2410,7 +2410,7 @@ const BD_DETALLES_FUERA = {
                     { condicion: "F14", local: "Dep. Sarmiento (Cnel. Suárez)",visitante: "Bella Vista",                  gl: 1, gv: 1, goles_local: [], goles_visitante: [] },
                     { condicion: "F15", local: "Bella Vista",                  visitante: "América (Gral. Pirán)",        gl: 0, gv: 1, goles_local: [], goles_visitante: [] },
                     { condicion: "F16", local: "Tres Algarrobos",              visitante: "Bella Vista",                  gl: 1, gv: 2, goles_local: [], goles_visitante: [] },
-                    { condicion: "F17", local: "Bella Vista",                  visitante: "Kimberley (MdP)",              gl: 0, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F17", local: "Bella Vista",                  visitante: "Kimberley",              gl: 0, gv: 0, goles_local: [], goles_visitante: [] },
                     { condicion: "F18", local: "Ferro (Olavarría)",            visitante: "Bella Vista",                  gl: 2, gv: 1, goles_local: [], goles_visitante: [] },
                     { condicion: "F19", local: "Def. Valeria del Mar",         visitante: "Bella Vista",                  gl: 1, gv: 4, goles_local: [], goles_visitante: [] },
                     { condicion: "F20", local: "Bella Vista",                  visitante: "Liniers",                      gl: 1, gv: 2, goles_local: [], goles_visitante: [] },
@@ -2615,7 +2615,7 @@ const BD_DETALLES_FUERA = {
                 equipos: [
                     { nombre: "Once Tigres (9 de Julio)",clase: "",           pj:28, pg:13, pe:8,  pp:7,  gf:40, gc:21, pts:47 },
                     { nombre: "Ferro (Olavarría)",       clase: "",           pj:28, pg:12, pe:7,  pp:9,  gf:30, gc:33, pts:43 },
-                    { nombre: "Alvarado (MdP)",          clase: "alvarado",   pj:28, pg:13, pe:4,  pp:11, gf:36, gc:45, pts:43 },
+                    { nombre: "Alvarado",          clase: "alvarado",   pj:28, pg:13, pe:4,  pp:11, gf:36, gc:45, pts:43 },
                     { nombre: "Villa Mitre",             clase: "villamitre", pj:28, pg:11, pe:9,  pp:8,  gf:47, gc:37, pts:42 },
                     { nombre: "Liniers",                 clase: "liniers",    pj:28, pg:9,  pe:13, pp:6,  gf:39, gc:29, pts:40 },
                     { nombre: "Bella Vista",             clase: "bellavista", pj:28, pg:10, pe:5,  pp:13, gf:37, gc:40, pts:35 },
@@ -2628,28 +2628,28 @@ const BD_DETALLES_FUERA = {
                     { condicion: "F3",  local: "Bella Vista",            visitante: "Ferro (Olavarría)",        gl: 2, gv: 4, goles_local: [], goles_visitante: [] },
                     { condicion: "F4",  local: "Independiente (Tandil)", visitante: "Bella Vista",              gl: 3, gv: 1, goles_local: [], goles_visitante: [] },
                     { condicion: "F5",  local: "Bella Vista",            visitante: "Once Tigres (9 de Julio)", gl: 0, gv: 0, goles_local: [], goles_visitante: [] },
-                    { condicion: "F6",  local: "Bella Vista",            visitante: "Alvarado (MdP)",           gl: 2, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F6",  local: "Bella Vista",            visitante: "Alvarado",           gl: 2, gv: 0, goles_local: [], goles_visitante: [] },
                     { condicion: "F7",  local: "Grupo Univ. (T)",        visitante: "Bella Vista",              gl: 2, gv: 1, goles_local: [], goles_visitante: [] },
                     { condicion: "F8",  local: "Liniers",                visitante: "Bella Vista",              gl: 0, gv: 1, goles_local: [], goles_visitante: [] },
                     { condicion: "F9",  local: "Bella Vista",            visitante: "Villa Mitre",              gl: 1, gv: 2, goles_local: [], goles_visitante: [] },
                     { condicion: "F10", local: "Ferro (Olavarría)",      visitante: "Bella Vista",              gl: 1, gv: 3, goles_local: [], goles_visitante: [] },
                     { condicion: "F11", local: "Bella Vista",            visitante: "Independiente (Tandil)",   gl: 3, gv: 1, goles_local: [], goles_visitante: [] },
                     { condicion: "F12", local: "Once Tigres (9 de Julio)",visitante: "Bella Vista",             gl: 1, gv: 0, goles_local: [], goles_visitante: [] },
-                    { condicion: "F13", local: "Alvarado (MdP)",         visitante: "Bella Vista",              gl: 1, gv: 1, goles_local: [], goles_visitante: [] },
+                    { condicion: "F13", local: "Alvarado",         visitante: "Bella Vista",              gl: 1, gv: 1, goles_local: [], goles_visitante: [] },
                     { condicion: "F14", local: "Bella Vista",            visitante: "Grupo Univ. (T)",          gl: 1, gv: 0, goles_local: [], goles_visitante: [] },
                     { condicion: "F15", local: "Bella Vista",            visitante: "Liniers",                  gl: 3, gv: 3, goles_local: [], goles_visitante: [] },
                     { condicion: "F16", local: "Villa Mitre",            visitante: "Bella Vista",              gl: 0, gv: 2, goles_local: [], goles_visitante: [] },
                     { condicion: "F17", local: "Bella Vista",            visitante: "Ferro (Olavarría)",        gl: 1, gv: 0, goles_local: [], goles_visitante: [] },
                     { condicion: "F18", local: "Independiente (Tandil)", visitante: "Bella Vista",              gl: 2, gv: 1, goles_local: [], goles_visitante: [] },
                     { condicion: "F19", local: "Bella Vista",            visitante: "Once Tigres (9 de Julio)", gl: 1, gv: 2, goles_local: [], goles_visitante: [] },
-                    { condicion: "F20", local: "Bella Vista",            visitante: "Alvarado (MdP)",           gl: 4, gv: 2, goles_local: [], goles_visitante: [] },
+                    { condicion: "F20", local: "Bella Vista",            visitante: "Alvarado",           gl: 4, gv: 2, goles_local: [], goles_visitante: [] },
                     { condicion: "F21", local: "Grupo Univ. (T)",        visitante: "Bella Vista",              gl: 0, gv: 2, goles_local: [], goles_visitante: [] },
                     { condicion: "F22", local: "Liniers",                visitante: "Bella Vista",              gl: 1, gv: 1, goles_local: [], goles_visitante: [] },
                     { condicion: "F23", local: "Bella Vista",            visitante: "Villa Mitre",              gl: 0, gv: 1, goles_local: [], goles_visitante: [] },
                     { condicion: "F24", local: "Ferro (Olavarría)",      visitante: "Bella Vista",              gl: 1, gv: 0, goles_local: [], goles_visitante: [] },
                     { condicion: "F25", local: "Bella Vista",            visitante: "Independiente (Tandil)",   gl: 1, gv: 3, goles_local: [], goles_visitante: [] },
                     { condicion: "F26", local: "Once Tigres (9 de Julio)",visitante: "Bella Vista",             gl: 4, gv: 0, goles_local: [], goles_visitante: [] },
-                    { condicion: "F27", local: "Alvarado (MdP)",         visitante: "Bella Vista",              gl: 1, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F27", local: "Alvarado",         visitante: "Bella Vista",              gl: 1, gv: 0, goles_local: [], goles_visitante: [] },
                     { condicion: "F28", local: "Bella Vista",            visitante: "Grupo Univ. (T)",          gl: 3, gv: 1, goles_local: [], goles_visitante: [] }
                 ]
             }
@@ -2685,7 +2685,7 @@ const BD_DETALLES_FUERA = {
                 nombre: "Primera Ronda — Zona 2",
                 clasificados: 0,
                 equipos: [
-                    { nombre: "Alvarado (MdP)",          clase: "alvarado",   pj:24, pg:11, pe:7, pp:6,  gf:37, gc:23, pts:40 },
+                    { nombre: "Alvarado",          clase: "alvarado",   pj:24, pg:11, pe:7, pp:6,  gf:37, gc:23, pts:40 },
                     { nombre: "Liniers",                 clase: "liniers",    pj:24, pg:10, pe:8, pp:6,  gf:37, gc:30, pts:38 },
                     { nombre: "Racing (Olavarría)",      clase: "",           pj:24, pg:10, pe:6, pp:8,  gf:30, gc:31, pts:36 },
                     { nombre: "Independiente (Tandil)",  clase: "",           pj:24, pg:9,  pe:6, pp:9,  gf:31, gc:28, pts:33 },
@@ -2700,28 +2700,28 @@ const BD_DETALLES_FUERA = {
                     { condicion: "F4",  local: "Bella Vista",            visitante: "Racing (Olavarría)",     gl: 0, gv: 0, goles_local: [], goles_visitante: [] },
                     { condicion: "F5",  local: "Bella Vista",            visitante: "— Fecha Libre —",        gl: null, gv: null, goles_local: [], goles_visitante: [] },
                     { condicion: "F6",  local: "Independiente (Tandil)", visitante: "Bella Vista",            gl: 2, gv: 2, goles_local: [], goles_visitante: [] },
-                    { condicion: "F7",  local: "Bella Vista",            visitante: "Alvarado (MdP)",         gl: 0, gv: 2, goles_local: [], goles_visitante: [] },
+                    { condicion: "F7",  local: "Bella Vista",            visitante: "Alvarado",         gl: 0, gv: 2, goles_local: [], goles_visitante: [] },
                     { condicion: "F8",  local: "Bella Vista",            visitante: "Liniers",                gl: 0, gv: 2, goles_local: [], goles_visitante: [] },
                     { condicion: "F9",  local: "Grupo Univ. (T)",        visitante: "Bella Vista",            gl: 2, gv: 1, goles_local: [], goles_visitante: [] },
                     { condicion: "F10", local: "Bella Vista",            visitante: "Ferro (Olavarría)",      gl: 2, gv: 0, goles_local: [], goles_visitante: [] },
                     { condicion: "F11", local: "Racing (Olavarría)",     visitante: "Bella Vista",            gl: 1, gv: 3, goles_local: [], goles_visitante: [] },
                     { condicion: "F12", local: "Bella Vista",            visitante: "— Fecha Libre —",        gl: null, gv: null, goles_local: [], goles_visitante: [] },
                     { condicion: "F13", local: "Bella Vista",            visitante: "Independiente (Tandil)", gl: 0, gv: 4, goles_local: [], goles_visitante: [] },
-                    { condicion: "F14", local: "Alvarado (MdP)",         visitante: "Bella Vista",            gl: 4, gv: 1, goles_local: [], goles_visitante: [] },
+                    { condicion: "F14", local: "Alvarado",         visitante: "Bella Vista",            gl: 4, gv: 1, goles_local: [], goles_visitante: [] },
                     { condicion: "F15", local: "Bella Vista",            visitante: "— Fecha Libre —",        gl: null, gv: null, goles_local: [], goles_visitante: [] },
                     { condicion: "F16", local: "Bella Vista",            visitante: "Grupo Univ. (T)",        gl: 2, gv: 0, goles_local: [], goles_visitante: [] },
                     { condicion: "F17", local: "Ferro (Olavarría)",      visitante: "Bella Vista",            gl: 0, gv: 1, goles_local: [], goles_visitante: [] },
                     { condicion: "F18", local: "Bella Vista",            visitante: "Racing (Olavarría)",     gl: 1, gv: 1, goles_local: [], goles_visitante: [] },
                     { condicion: "F19", local: "Bella Vista",            visitante: "— Fecha Libre —",        gl: null, gv: null, goles_local: [], goles_visitante: [] },
                     { condicion: "F20", local: "Independiente (Tandil)", visitante: "Bella Vista",            gl: 3, gv: 1, goles_local: [], goles_visitante: [] },
-                    { condicion: "F21", local: "Bella Vista",            visitante: "Alvarado (MdP)",         gl: 1, gv: 4, goles_local: [], goles_visitante: [] },
+                    { condicion: "F21", local: "Bella Vista",            visitante: "Alvarado",         gl: 1, gv: 4, goles_local: [], goles_visitante: [] },
                     { condicion: "F22", local: "Bella Vista",            visitante: "Liniers",                gl: 1, gv: 2, goles_local: [], goles_visitante: [] },
                     { condicion: "F23", local: "Grupo Univ. (T)",        visitante: "Bella Vista",            gl: 3, gv: 0, goles_local: [], goles_visitante: [] },
                     { condicion: "F24", local: "Bella Vista",            visitante: "Ferro (Olavarría)",      gl: 0, gv: 2, goles_local: [], goles_visitante: [] },
                     { condicion: "F25", local: "Racing (Olavarría)",     visitante: "Bella Vista",            gl: 1, gv: 0, goles_local: [], goles_visitante: [] },
                     { condicion: "F26", local: "Bella Vista",            visitante: "— Fecha Libre —",        gl: null, gv: null, goles_local: [], goles_visitante: [] },
                     { condicion: "F27", local: "Bella Vista",            visitante: "Independiente (Tandil)", gl: 3, gv: 2, goles_local: [], goles_visitante: [] },
-                    { condicion: "F28", local: "Alvarado (MdP)",         visitante: "Bella Vista",            gl: 2, gv: 3, goles_local: [], goles_visitante: [] }
+                    { condicion: "F28", local: "Alvarado",         visitante: "Bella Vista",            gl: 2, gv: 3, goles_local: [], goles_visitante: [] }
                 ]
             }
         ]
@@ -2738,7 +2738,7 @@ const BD_DETALLES_FUERA = {
                     { nombre: "Grupo Universitario (T)", clase: "",           pj:14, pg:0, pe:0, pp:0, gf:0, gc:0, pts:21 },
                     { nombre: "Liniers",                 clase: "liniers",    pj:14, pg:0, pe:0, pp:0, gf:0, gc:0, pts:20 },
                     { nombre: "Independiente (Tandil)",  clase: "",           pj:14, pg:0, pe:0, pp:0, gf:0, gc:0, pts:14 },
-                    { nombre: "Alvarado (MdP)",          clase: "alvarado",   pj:14, pg:0, pe:0, pp:0, gf:0, gc:0, pts:11 },
+                    { nombre: "Alvarado",          clase: "alvarado",   pj:14, pg:0, pe:0, pp:0, gf:0, gc:0, pts:11 },
                     { nombre: "Ferro (Olavarría)",       clase: "",           pj:14, pg:0, pe:0, pp:0, gf:0, gc:0, pts:9  }
                 ],
                 partidos: [
@@ -2748,14 +2748,14 @@ const BD_DETALLES_FUERA = {
                     { condicion: "F4",  local: "Liniers",                 visitante: "Bella Vista",            gl: 3, gv: 0, goles_local: [], goles_visitante: [] },
                     { condicion: "F5",  local: "Bella Vista",             visitante: "Racing (Olavarría)",     gl: 1, gv: 0, goles_local: [], goles_visitante: [] },
                     { condicion: "F6",  local: "Independiente (Tandil)",  visitante: "Bella Vista",            gl: 0, gv: 0, goles_local: [], goles_visitante: [] },
-                    { condicion: "F7",  local: "Bella Vista",             visitante: "Alvarado (MdP)",         gl: 1, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F7",  local: "Bella Vista",             visitante: "Alvarado",         gl: 1, gv: 0, goles_local: [], goles_visitante: [] },
                     { condicion: "F8",  local: "Defensores (Salto)",      visitante: "Bella Vista",            gl: 3, gv: 3, goles_local: [], goles_visitante: [], nota: "Partido interzonal" },
                     { condicion: "F9",  local: "Bella Vista",             visitante: "Ferro (Olavarría)",      gl: 2, gv: 1, goles_local: [], goles_visitante: [] },
                     { condicion: "F10", local: "Grupo Univ. (T)",         visitante: "Bella Vista",            gl: 0, gv: 0, goles_local: [], goles_visitante: [] },
                     { condicion: "F11", local: "Bella Vista",             visitante: "Liniers",                gl: 0, gv: 0, goles_local: [], goles_visitante: [] },
                     { condicion: "F12", local: "Racing (Olavarría)",      visitante: "Bella Vista",            gl: 1, gv: 0, goles_local: [], goles_visitante: [] },
                     { condicion: "F13", local: "Bella Vista",             visitante: "Independiente (Tandil)", gl: 4, gv: 1, goles_local: [], goles_visitante: [] },
-                    { condicion: "F14", local: "Alvarado (MdP)",          visitante: "Bella Vista",            gl: 0, gv: 0, goles_local: [], goles_visitante: [] }
+                    { condicion: "F14", local: "Alvarado",          visitante: "Bella Vista",            gl: 0, gv: 0, goles_local: [], goles_visitante: [] }
                 ]
             },
             {
@@ -2776,7 +2776,7 @@ const BD_DETALLES_FUERA = {
                     { nombre: "Ferro (Olavarría)",       clase: "",           pj:14, pg:0, pe:0, pp:0, gf:0, gc:0, pts:23 },
                     { nombre: "Bella Vista",             clase: "bellavista", pj:14, pg:0, pe:0, pp:0, gf:0, gc:0, pts:19 },
                     { nombre: "Grupo Universitario (T)", clase: "",           pj:14, pg:0, pe:0, pp:0, gf:0, gc:0, pts:17 },
-                    { nombre: "Alvarado (MdP)",          clase: "alvarado",   pj:14, pg:0, pe:0, pp:0, gf:0, gc:0, pts:17 },
+                    { nombre: "Alvarado",          clase: "alvarado",   pj:14, pg:0, pe:0, pp:0, gf:0, gc:0, pts:17 },
                     { nombre: "Independiente (Tandil)",  clase: "",           pj:14, pg:0, pe:0, pp:0, gf:0, gc:0, pts:15 }
                 ],
                 partidos: [
@@ -2786,14 +2786,14 @@ const BD_DETALLES_FUERA = {
                     { condicion: "F4",  local: "Liniers",                 visitante: "Bella Vista",            gl: 1, gv: 1, goles_local: [], goles_visitante: [] },
                     { condicion: "F5",  local: "Bella Vista",             visitante: "Racing (Olavarría)",     gl: 0, gv: 0, goles_local: [], goles_visitante: [] },
                     { condicion: "F6",  local: "Independiente (Tandil)",  visitante: "Bella Vista",            gl: 2, gv: 0, goles_local: [], goles_visitante: [] },
-                    { condicion: "F7",  local: "Bella Vista",             visitante: "Alvarado (MdP)",         gl: 2, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F7",  local: "Bella Vista",             visitante: "Alvarado",         gl: 2, gv: 0, goles_local: [], goles_visitante: [] },
                     { condicion: "F8",  local: "Defensores (Salto)",      visitante: "Bella Vista",            gl: 0, gv: 1, goles_local: [], goles_visitante: [], nota: "Partido interzonal" },
                     { condicion: "F9",  local: "Bella Vista",             visitante: "Ferro (Olavarría)",      gl: 3, gv: 2, goles_local: [], goles_visitante: [] },
                     { condicion: "F10", local: "Grupo Univ. (T)",         visitante: "Bella Vista",            gl: 3, gv: 0, goles_local: [], goles_visitante: [] },
                     { condicion: "F11", local: "Bella Vista",             visitante: "Liniers",                gl: 0, gv: 1, goles_local: [], goles_visitante: [] },
                     { condicion: "F12", local: "Racing (Olavarría)",      visitante: "Bella Vista",            gl: 2, gv: 2, goles_local: [], goles_visitante: [] },
                     { condicion: "F13", local: "Bella Vista",             visitante: "Independiente (Tandil)", gl: 3, gv: 1, goles_local: [], goles_visitante: [] },
-                    { condicion: "F14", local: "Alvarado (MdP)",          visitante: "Bella Vista",            gl: 2, gv: 0, goles_local: [], goles_visitante: [] }
+                    { condicion: "F14", local: "Alvarado",          visitante: "Bella Vista",            gl: 2, gv: 0, goles_local: [], goles_visitante: [] }
                 ]
             }
         ]
@@ -2844,14 +2844,14 @@ const BD_DETALLES_FUERA = {
                     { nombre: "Liniers",                    clase: "", pj:6, pg:3, pe:1, pp:2, gf:11, gc:8,  pts:10 },
                     { nombre: "Bella Vista",                clase: "bellavista", pj:6, pg:2, pe:3, pp:1, gf:10, gc:12, pts:9  },
                     { nombre: "Belgrano (Santa Rosa)",      clase: "", pj:6, pg:2, pe:1, pp:3, gf:11, gc:10, pts:7  },
-                    { nombre: "Alvarado (MdP)",             clase: "alvarado", pj:6, pg:2, pe:1, pp:3, gf:7,  gc:9,  pts:7  }
+                    { nombre: "Alvarado",             clase: "alvarado", pj:6, pg:2, pe:1, pp:3, gf:7,  gc:9,  pts:7  }
                 ],
                 partidos: [
                     { condicion: "F1", local: "Bella Vista",           visitante: "Liniers",               gl: 2, gv: 2, goles_local: [], goles_visitante: [] },
-                    { condicion: "F2", local: "Alvarado (MdP)",        visitante: "Bella Vista",           gl: 0, gv: 1, goles_local: [], goles_visitante: [] },
+                    { condicion: "F2", local: "Alvarado",        visitante: "Bella Vista",           gl: 0, gv: 1, goles_local: [], goles_visitante: [] },
                     { condicion: "F3", local: "Belgrano (Santa Rosa)", visitante: "Bella Vista",           gl: 2, gv: 2, goles_local: [], goles_visitante: [] },
                     { condicion: "F4", local: "Liniers",               visitante: "Bella Vista",           gl: 4, gv: 0, goles_local: [], goles_visitante: [] },
-                    { condicion: "F5", local: "Bella Vista",           visitante: "Alvarado (MdP)",        gl: 2, gv: 2, goles_local: [], goles_visitante: [] },
+                    { condicion: "F5", local: "Bella Vista",           visitante: "Alvarado",        gl: 2, gv: 2, goles_local: [], goles_visitante: [] },
                     { condicion: "F6", local: "Bella Vista",           visitante: "Belgrano (Santa Rosa)", gl: 3, gv: 2, goles_local: [], goles_visitante: [] }
                 ]
             },
@@ -3297,15 +3297,15 @@ const BD_DETALLES_FUERA = {
                 equipos: [
                     { nombre: "Sporting",                clase: "sporting",  pj:6, pg:0, pe:0, pp:0, gf:0, gc:0, pts:11 },
                     { nombre: "Rosario Puerto Belgrano", clase: "rosariopb", pj:6, pg:0, pe:0, pp:0, gf:0, gc:0, pts:10 },
-                    { nombre: "Alvarado (MdP)",          clase: "alvarado",  pj:6, pg:0, pe:0, pp:0, gf:0, gc:0, pts:7  },
+                    { nombre: "Alvarado",          clase: "alvarado",  pj:6, pg:0, pe:0, pp:0, gf:0, gc:0, pts:7  },
                     { nombre: "Banfield (MdP)",          clase: "",          pj:6, pg:0, pe:0, pp:0, gf:0, gc:0, pts:6  }
                 ],
                 partidos: [
                     { condicion: "F1", local: "Sporting",                visitante: "Rosario Puerto Belgrano", gl: 1, gv: 0, goles_local: [], goles_visitante: [] },
-                    { condicion: "F2", local: "Rosario Puerto Belgrano", visitante: "Alvarado (MdP)",          gl: 1, gv: 2, goles_local: [], goles_visitante: [] },
+                    { condicion: "F2", local: "Rosario Puerto Belgrano", visitante: "Alvarado",          gl: 1, gv: 2, goles_local: [], goles_visitante: [] },
                     { condicion: "F3", local: "Banfield (MdP)",          visitante: "Rosario Puerto Belgrano", gl: 1, gv: 2, goles_local: [], goles_visitante: [] },
                     { condicion: "F4", local: "Rosario Puerto Belgrano", visitante: "Banfield (MdP)",          gl: 2, gv: 1, goles_local: [], goles_visitante: [] },
-                    { condicion: "F5", local: "Alvarado (MdP)",          visitante: "Rosario Puerto Belgrano", gl: 1, gv: 3, goles_local: [], goles_visitante: [] },
+                    { condicion: "F5", local: "Alvarado",          visitante: "Rosario Puerto Belgrano", gl: 1, gv: 3, goles_local: [], goles_visitante: [] },
                     { condicion: "F6", local: "Rosario Puerto Belgrano", visitante: "Sporting",                gl: 2, gv: 2, goles_local: [], goles_visitante: [] }
                 ]
             }
@@ -3444,21 +3444,21 @@ const BD_DETALLES_FUERA = {
                     { nombre: "Rivadavia (Lincoln)",         clase: "",          pj:14, pg:0, pe:0, pp:0, gf:0, gc:0, pts:22 },
                     { nombre: "El Linqueño (Lincoln)",       clase: "",          pj:14, pg:0, pe:0, pp:0, gf:0, gc:0, pts:19 },
                     { nombre: "Grupo Universitario (Tandil)",clase: "",          pj:14, pg:0, pe:0, pp:0, gf:0, gc:0, pts:18 },
-                    { nombre: "Alvarado (MdP)",              clase: "alvarado",  pj:14, pg:0, pe:0, pp:0, gf:0, gc:0, pts:17 },
+                    { nombre: "Alvarado",              clase: "alvarado",  pj:14, pg:0, pe:0, pp:0, gf:0, gc:0, pts:17 },
                     { nombre: "Santamarina (Tandil)",        clase: "",          pj:14, pg:0, pe:0, pp:0, gf:0, gc:0, pts:16 },
                     { nombre: "Sporting",                    clase: "sporting",  pj:14, pg:0, pe:0, pp:0, gf:0, gc:0, pts:14 },
                     { nombre: "Rosario Puerto Belgrano",     clase: "rosariopb", pj:14, pg:0, pe:0, pp:0, gf:0, gc:0, pts:9  }
                 ],
                 partidos: [
                     { condicion: "F1",  local: "Rosario Puerto Belgrano",     visitante: "— Fecha Libre —",             gl: null, gv: null, goles_local: [], goles_visitante: [] },
-                    { condicion: "F2",  local: "Alvarado (MdP)",              visitante: "Rosario Puerto Belgrano",     gl: 1, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F2",  local: "Alvarado",              visitante: "Rosario Puerto Belgrano",     gl: 1, gv: 0, goles_local: [], goles_visitante: [] },
                     { condicion: "F3",  local: "Rosario Puerto Belgrano",     visitante: "Grupo Universitario (Tandil)",gl: 0, gv: 1, goles_local: [], goles_visitante: [] },
                     { condicion: "F4",  local: "Rivadavia (Lincoln)",         visitante: "Rosario Puerto Belgrano",     gl: 3, gv: 0, goles_local: [], goles_visitante: [] },
                     { condicion: "F5",  local: "Rosario Puerto Belgrano",     visitante: "Sporting",                   gl: 1, gv: 2, goles_local: [], goles_visitante: [] },
                     { condicion: "F6",  local: "El Linqueño (Lincoln)",       visitante: "Rosario Puerto Belgrano",     gl: 2, gv: 0, goles_local: [], goles_visitante: [] },
                     { condicion: "F7",  local: "Rosario Puerto Belgrano",     visitante: "Santamarina (Tandil)",        gl: 2, gv: 1, goles_local: [], goles_visitante: [] },
                     { condicion: "F8",  local: "Rosario Puerto Belgrano",     visitante: "— Fecha Libre —",             gl: null, gv: null, goles_local: [], goles_visitante: [] },
-                    { condicion: "F9",  local: "Rosario Puerto Belgrano",     visitante: "Alvarado (MdP)",              gl: 0, gv: 1, goles_local: [], goles_visitante: [] },
+                    { condicion: "F9",  local: "Rosario Puerto Belgrano",     visitante: "Alvarado",              gl: 0, gv: 1, goles_local: [], goles_visitante: [] },
                     { condicion: "F10", local: "Grupo Universitario (Tandil)",visitante: "Rosario Puerto Belgrano",     gl: 2, gv: 0, goles_local: [], goles_visitante: [] },
                     { condicion: "F11", local: "Rosario Puerto Belgrano",     visitante: "Rivadavia (Lincoln)",         gl: 0, gv: 1, goles_local: [], goles_visitante: [] },
                     { condicion: "F12", local: "Sporting",                    visitante: "Rosario Puerto Belgrano",     gl: 0, gv: 1, goles_local: [], goles_visitante: [] },
@@ -3476,19 +3476,19 @@ const BD_DETALLES_FUERA = {
                     { nombre: "Rosario Puerto Belgrano",     clase: "rosariopb", pj:14, pg:0, pe:0, pp:0, gf:0, gc:0, pts:18 },
                     { nombre: "El Linqueño (Lincoln)",       clase: "",          pj:14, pg:0, pe:0, pp:0, gf:0, gc:0, pts:16 },
                     { nombre: "Grupo Universitario (Tandil)",clase: "",          pj:14, pg:0, pe:0, pp:0, gf:0, gc:0, pts:16 },
-                    { nombre: "Alvarado (MdP)",              clase: "alvarado",  pj:14, pg:0, pe:0, pp:0, gf:0, gc:0, pts:14 },
+                    { nombre: "Alvarado",              clase: "alvarado",  pj:14, pg:0, pe:0, pp:0, gf:0, gc:0, pts:14 },
                     { nombre: "Sporting",                    clase: "sporting",  pj:14, pg:0, pe:0, pp:0, gf:0, gc:0, pts:12 }
                 ],
                 partidos: [
                     { condicion: "F1",  local: "Rosario Puerto Belgrano",     visitante: "— Fecha Libre —",             gl: null, gv: null, goles_local: [], goles_visitante: [] },
-                    { condicion: "F2",  local: "Rosario Puerto Belgrano",     visitante: "Alvarado (MdP)",              gl: 0, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F2",  local: "Rosario Puerto Belgrano",     visitante: "Alvarado",              gl: 0, gv: 0, goles_local: [], goles_visitante: [] },
                     { condicion: "F3",  local: "Grupo Universitario (Tandil)",visitante: "Rosario Puerto Belgrano",     gl: 1, gv: 2, goles_local: [], goles_visitante: [] },
                     { condicion: "F4",  local: "Rosario Puerto Belgrano",     visitante: "Rivadavia (Lincoln)",         gl: 1, gv: 2, goles_local: [], goles_visitante: [] },
                     { condicion: "F5",  local: "Sporting",                    visitante: "Rosario Puerto Belgrano",     gl: 1, gv: 0, goles_local: [], goles_visitante: [] },
                     { condicion: "F6",  local: "Rosario Puerto Belgrano",     visitante: "El Linqueño (Lincoln)",       gl: 1, gv: 0, goles_local: [], goles_visitante: [] },
                     { condicion: "F7",  local: "Santamarina (Tandil)",        visitante: "Rosario Puerto Belgrano",     gl: 0, gv: 2, goles_local: [], goles_visitante: [] },
                     { condicion: "F8",  local: "Rosario Puerto Belgrano",     visitante: "— Fecha Libre —",             gl: null, gv: null, goles_local: [], goles_visitante: [] },
-                    { condicion: "F9",  local: "Alvarado (MdP)",              visitante: "Rosario Puerto Belgrano",     gl: 3, gv: 3, goles_local: [], goles_visitante: [] },
+                    { condicion: "F9",  local: "Alvarado",              visitante: "Rosario Puerto Belgrano",     gl: 3, gv: 3, goles_local: [], goles_visitante: [] },
                     { condicion: "F10", local: "Rosario Puerto Belgrano",     visitante: "Grupo Universitario (Tandil)",gl: 3, gv: 0, goles_local: [], goles_visitante: [] },
                     { condicion: "F11", local: "Rivadavia (Lincoln)",         visitante: "Rosario Puerto Belgrano",     gl: 3, gv: 0, goles_local: [], goles_visitante: [] },
                     { condicion: "F12", local: "Rosario Puerto Belgrano",     visitante: "Sporting",                   gl: 0, gv: 0, goles_local: [], goles_visitante: [] },
@@ -3506,7 +3506,7 @@ const BD_DETALLES_FUERA = {
                     { nombre: "El Linqueño (Lincoln)",       clase: "",          pj:28, pg:0, pe:0, pp:0, gf:0, gc:0, pts:35 },
                     { nombre: "Santamarina (Tandil)",        clase: "",          pj:28, pg:0, pe:0, pp:0, gf:0, gc:0, pts:34 },
                     { nombre: "Grupo Universitario (Tandil)",clase: "",          pj:28, pg:0, pe:0, pp:0, gf:0, gc:0, pts:34 },
-                    { nombre: "Alvarado (MdP)",              clase: "alvarado",  pj:28, pg:0, pe:0, pp:0, gf:0, gc:0, pts:31 },
+                    { nombre: "Alvarado",              clase: "alvarado",  pj:28, pg:0, pe:0, pp:0, gf:0, gc:0, pts:31 },
                     { nombre: "Rosario Puerto Belgrano",     clase: "rosariopb", pj:28, pg:0, pe:0, pp:0, gf:0, gc:0, pts:27 },
                     { nombre: "Sporting",                    clase: "sporting",  pj:28, pg:0, pe:0, pp:0, gf:0, gc:0, pts:26 }
                 ]
@@ -3669,7 +3669,7 @@ const BD_DETALLES_FUERA = {
             {
                 nombre: "Final General",
                 partidos: [
-                    { condicion: "Único", local: "Kimberley (MdP)", visitante: "Rosario Puerto Belgrano", gl: 2, gv: 0, goles_local: [], goles_visitante: [], nota: "Partido jugado en el Estadio General San Martín de Tandil. Rosario debía ganar para forzar un partido adicional." }
+                    { condicion: "Único", local: "Kimberley", visitante: "Rosario Puerto Belgrano", gl: 2, gv: 0, goles_local: [], goles_visitante: [], nota: "Partido jugado en el Estadio General San Martín de Tandil. Rosario debía ganar para forzar un partido adicional." }
                 ]
             }
         ]
@@ -3798,15 +3798,15 @@ const BD_DETALLES_FUERA = {
                         equipos: [
                             { nombre: "Huracán",                        clase: "huracan",  pj:6, pg:4, pe:0, pp:2, gf:0, gc:0, pts:12 },
                             { nombre: "Sporting",                       clase: "sporting", pj:6, pg:2, pe:2, pp:2, gf:0, gc:0, pts:8  },
-                            { nombre: "Alvarado (MdP)",                 clase: "",         pj:6, pg:2, pe:1, pp:3, gf:0, gc:0, pts:7  },
+                            { nombre: "Alvarado",                 clase: "",         pj:6, pg:2, pe:1, pp:3, gf:0, gc:0, pts:7  },
                             { nombre: "Grupo Universitario (Tandil)",   clase: "",         pj:6, pg:1, pe:3, pp:2, gf:0, gc:0, pts:6  }
                         ],
                         partidos: [
                             { condicion: "1° Fecha", local: "Sporting",                      visitante: "Grupo Universitario (Tandil)", gl: 0, gv: 0 },
-                            { condicion: "2° Fecha", local: "Alvarado (MdP)",                visitante: "Sporting",                    gl: 0, gv: 1 },
+                            { condicion: "2° Fecha", local: "Alvarado",                visitante: "Sporting",                    gl: 0, gv: 1 },
                             { condicion: "3° Fecha", local: "Sporting",                      visitante: "Huracán",                     gl: 0, gv: 2 },
                             { condicion: "4° Fecha", local: "Grupo Universitario (Tandil)",  visitante: "Sporting",                    gl: 0, gv: 0 },
-                            { condicion: "5° Fecha", local: "Sporting",                      visitante: "Alvarado (MdP)",              gl: 1, gv: 0 },
+                            { condicion: "5° Fecha", local: "Sporting",                      visitante: "Alvarado",              gl: 1, gv: 0 },
                             { condicion: "6° Fecha", local: "Huracán",                       visitante: "Sporting",                    gl: 4, gv: 1 }
                         ]
                     }
@@ -3879,15 +3879,15 @@ const BD_DETALLES_FUERA = {
                         equipos: [
                             { nombre: "Sporting",              clase: "sporting", pj:6, pg:3, pe:3, pp:0, gf:0, gc:0, pts:12 },
                             { nombre: "El Fortín (Olavarría)", clase: "",         pj:6, pg:3, pe:2, pp:1, gf:0, gc:0, pts:11 },
-                            { nombre: "Alvarado (MdP)",        clase: "",         pj:6, pg:2, pe:2, pp:2, gf:0, gc:0, pts:8  },
+                            { nombre: "Alvarado",        clase: "",         pj:6, pg:2, pe:2, pp:2, gf:0, gc:0, pts:8  },
                             { nombre: "Once Tigres (9 de Julio)",clase: "",       pj:6, pg:0, pe:1, pp:5, gf:0, gc:0, pts:1  }
                         ],
                         partidos: [
                             { condicion: "1° Fecha", local: "El Fortín (Olavarría)",    visitante: "Sporting",              gl: 0, gv: 0 },
-                            { condicion: "2° Fecha", local: "Sporting",                 visitante: "Alvarado (MdP)",        gl: 3, gv: 2 },
+                            { condicion: "2° Fecha", local: "Sporting",                 visitante: "Alvarado",        gl: 3, gv: 2 },
                             { condicion: "3° Fecha", local: "Sporting",                 visitante: "Once Tigres (9 de Julio)", gl: 1, gv: 0 },
                             { condicion: "4° Fecha", local: "Sporting",                 visitante: "El Fortín (Olavarría)", gl: 1, gv: 0 },
-                            { condicion: "5° Fecha", local: "Alvarado (MdP)",           visitante: "Sporting",              gl: 0, gv: 0 },
+                            { condicion: "5° Fecha", local: "Alvarado",           visitante: "Sporting",              gl: 0, gv: 0 },
                             { condicion: "6° Fecha", local: "Once Tigres (9 de Julio)", visitante: "Sporting",              gl: 2, gv: 2 }
                         ]
                     }
@@ -3956,14 +3956,14 @@ const BD_DETALLES_FUERA = {
                         equipos: [
                             { nombre: "Sporting",      clase: "sporting",  pj:6, pg:3, pe:2, pp:1, gf:0, gc:0, pts:11 },
                             { nombre: "Rosario PB",    clase: "rosariopb", pj:6, pg:3, pe:1, pp:2, gf:0, gc:0, pts:10 },
-                            { nombre: "Alvarado (MdP)",clase: "",          pj:6, pg:2, pe:1, pp:3, gf:0, gc:0, pts:7  },
+                            { nombre: "Alvarado",clase: "",          pj:6, pg:2, pe:1, pp:3, gf:0, gc:0, pts:7  },
                             { nombre: "Banfield (MdP)",clase: "",          pj:6, pg:2, pe:0, pp:4, gf:0, gc:0, pts:6  }
                         ],
                         partidos: [
                             { condicion: "1° Fecha", local: "Sporting",      visitante: "Rosario PB",    gl: 1, gv: 0 },
                             { condicion: "2° Fecha", local: "Banfield (MdP)",visitante: "Sporting",      gl: 2, gv: 0 },
-                            { condicion: "3° Fecha", local: "Alvarado (MdP)",visitante: "Sporting",      gl: 0, gv: 0 },
-                            { condicion: "4° Fecha", local: "Sporting",      visitante: "Alvarado (MdP)",gl: 5, gv: 1 },
+                            { condicion: "3° Fecha", local: "Alvarado",visitante: "Sporting",      gl: 0, gv: 0 },
+                            { condicion: "4° Fecha", local: "Sporting",      visitante: "Alvarado",gl: 5, gv: 1 },
                             { condicion: "5° Fecha", local: "Sporting",      visitante: "Banfield (MdP)",gl: 3, gv: 2 },
                             { condicion: "6° Fecha", local: "Rosario PB",    visitante: "Sporting",      gl: 2, gv: 2 }
                         ]
@@ -4000,19 +4000,19 @@ const BD_DETALLES_FUERA = {
                             { nombre: "Banfield (MdP)",                clase: "", pj:10, pg:5, pe:3, pp:2, gf:0, gc:0, pts:18 },
                             { nombre: "Santamarina (Tandil)",          clase: "", pj:10, pg:5, pe:2, pp:3, gf:0, gc:0, pts:17 },
                             { nombre: "Sporting",                      clase: "sporting", pj:10, pg:3, pe:3, pp:4, gf:0, gc:0, pts:12 },
-                            { nombre: "Alvarado (MdP)",                clase: "", pj:10, pg:3, pe:2, pp:5, gf:0, gc:0, pts:11 },
+                            { nombre: "Alvarado",                clase: "", pj:10, pg:3, pe:2, pp:5, gf:0, gc:0, pts:11 },
                             { nombre: "Grupo Universitario (Tandil)",  clase: "", pj:10, pg:2, pe:2, pp:6, gf:0, gc:0, pts:8  }
                         ],
                         partidos: [
                             { condicion: "1° Fecha",  local: "Sporting",                     visitante: "Grupo Universitario (Tandil)", gl: 1, gv: 2 },
                             { condicion: "2° Fecha",  local: "Santamarina (Tandil)",          visitante: "Sporting",                    gl: 2, gv: 0 },
                             { condicion: "3° Fecha",  local: "Sporting",                     visitante: "Banfield (MdP)",              gl: 2, gv: 0 },
-                            { condicion: "4° Fecha",  local: "Alvarado (MdP)",               visitante: "Sporting",                    gl: 0, gv: 1 },
+                            { condicion: "4° Fecha",  local: "Alvarado",               visitante: "Sporting",                    gl: 0, gv: 1 },
                             { condicion: "5° Fecha",  local: "Sporting",                     visitante: "Racing (Olavarría)",          gl: 0, gv: 2 },
                             { condicion: "6° Fecha",  local: "Grupo Universitario (Tandil)", visitante: "Sporting",                    gl: 4, gv: 1 },
                             { condicion: "7° Fecha",  local: "Sporting",                     visitante: "Santamarina (Tandil)",        gl: 3, gv: 1 },
                             { condicion: "8° Fecha",  local: "Banfield (MdP)",               visitante: "Sporting",                    gl: 2, gv: 0 },
-                            { condicion: "9° Fecha",  local: "Sporting",                     visitante: "Alvarado (MdP)",              gl: 2, gv: 1 },
+                            { condicion: "9° Fecha",  local: "Sporting",                     visitante: "Alvarado",              gl: 2, gv: 1 },
                             { condicion: "10° Fecha", local: "Racing (Olavarría)",            visitante: "Sporting",                    gl: 3, gv: 1 }
                         ]
                     }
@@ -4031,19 +4031,19 @@ const BD_DETALLES_FUERA = {
                             { nombre: "Grupo Universitario (Tandil)", clase: "",         pj:10, pg:4, pe:2, pp:4, gf:0, gc:0, pts:14, nota: "Descendió, no disputó playoffs" },
                             { nombre: "Banfield (MdP)",               clase: "",         pj:10, pg:4, pe:1, pp:5, gf:0, gc:0, pts:13 },
                             { nombre: "Racing (Olavarría)",           clase: "",         pj:10, pg:3, pe:2, pp:5, gf:0, gc:0, pts:11 },
-                            { nombre: "Alvarado (MdP)",               clase: "",         pj:10, pg:3, pe:2, pp:5, gf:0, gc:0, pts:11 },
+                            { nombre: "Alvarado",               clase: "",         pj:10, pg:3, pe:2, pp:5, gf:0, gc:0, pts:11 },
                             { nombre: "Santamarina (Tandil)",         clase: "",         pj:10, pg:3, pe:1, pp:6, gf:0, gc:0, pts:10 }
                         ],
                         partidos: [
                             { condicion: "1° Fecha",  local: "Grupo Universitario (Tandil)", visitante: "Sporting",                    gl: 1, gv: 1 },
                             { condicion: "2° Fecha",  local: "Sporting",                     visitante: "Santamarina (Tandil)",        gl: 4, gv: 1 },
                             { condicion: "3° Fecha",  local: "Banfield (MdP)",               visitante: "Sporting",                    gl: 2, gv: 3 },
-                            { condicion: "4° Fecha",  local: "Sporting",                     visitante: "Alvarado (MdP)",              gl: 1, gv: 0 },
+                            { condicion: "4° Fecha",  local: "Sporting",                     visitante: "Alvarado",              gl: 1, gv: 0 },
                             { condicion: "5° Fecha",  local: "Racing (Olavarría)",            visitante: "Sporting",                    gl: 1, gv: 0 },
                             { condicion: "6° Fecha",  local: "Sporting",                     visitante: "Grupo Universitario (Tandil)", gl: 1, gv: 0 },
                             { condicion: "7° Fecha",  local: "Santamarina (Tandil)",          visitante: "Sporting",                    gl: 0, gv: 2 },
                             { condicion: "8° Fecha",  local: "Sporting",                     visitante: "Banfield (MdP)",              gl: 0, gv: 0 },
-                            { condicion: "9° Fecha",  local: "Alvarado (MdP)",               visitante: "Sporting",                    gl: 1, gv: 1 },
+                            { condicion: "9° Fecha",  local: "Alvarado",               visitante: "Sporting",                    gl: 1, gv: 1 },
                             { condicion: "10° Fecha", local: "Sporting",                     visitante: "Racing (Olavarría)",          gl: 1, gv: 0 }
                         ]
                     }
@@ -4080,7 +4080,7 @@ const BD_DETALLES_FUERA = {
                             { nombre: "Rivadavia (Lincoln)",           clase: "", pj:12, pg:7, pe:1, pp:4, gf:0, gc:0, pts:22 },
                             { nombre: "El Linqueño (Lincoln)",         clase: "", pj:12, pg:6, pe:1, pp:5, gf:0, gc:0, pts:19 },
                             { nombre: "Grupo Universitario (Tandil)",  clase: "", pj:12, pg:5, pe:3, pp:4, gf:0, gc:0, pts:18 },
-                            { nombre: "Alvarado (MdP)",                clase: "", pj:12, pg:5, pe:2, pp:5, gf:0, gc:0, pts:17 },
+                            { nombre: "Alvarado",                clase: "", pj:12, pg:5, pe:2, pp:5, gf:0, gc:0, pts:17 },
                             { nombre: "Santamarina (Tandil)",          clase: "", pj:12, pg:5, pe:1, pp:6, gf:0, gc:0, pts:16 },
                             { nombre: "Sporting",                      clase: "sporting", pj:12, pg:4, pe:2, pp:6, gf:0, gc:0, pts:14 },
                             { nombre: "Rosario PB",                    clase: "rosariopb", pj:12, pg:2, pe:3, pp:7, gf:0, gc:0, pts:9  }
@@ -4091,14 +4091,14 @@ const BD_DETALLES_FUERA = {
                             { condicion: "3° Fecha",  local: "El Linqueño (Lincoln)",        visitante: "Sporting",                     gl: 2, gv: 0 },
                             { condicion: "4° Fecha",  local: "Sporting",                     visitante: "Santamarina (Tandil)",         gl: 0, gv: 1 },
                             { condicion: "5° Fecha",  local: "Rosario PB",                   visitante: "Sporting",                     gl: 1, gv: 2 },
-                            { condicion: "6° Fecha",  local: "Sporting",                     visitante: "Alvarado (MdP)",               gl: 2, gv: 2 },
+                            { condicion: "6° Fecha",  local: "Sporting",                     visitante: "Alvarado",               gl: 2, gv: 2 },
                             { condicion: "7° Fecha",  local: "Grupo Universitario (Tandil)", visitante: "Sporting",                     gl: 2, gv: 1 },
                             { condicion: "8° Fecha",  local: "Rivadavia (Lincoln)",          visitante: "Sporting",                     gl: 1, gv: 2 },
                             { condicion: "9° Fecha",  local: null,                           visitante: null,                           gl: null, gv: null },
                             { condicion: "10° Fecha", local: "Sporting",                     visitante: "El Linqueño (Lincoln)",        gl: 1, gv: 2 },
                             { condicion: "11° Fecha", local: "Santamarina (Tandil)",          visitante: "Sporting",                     gl: 1, gv: 1 },
                             { condicion: "12° Fecha", local: "Sporting",                     visitante: "Rosario PB",                   gl: 0, gv: 1 },
-                            { condicion: "13° Fecha", local: "Alvarado (MdP)",               visitante: "Sporting",                     gl: 2, gv: 3 },
+                            { condicion: "13° Fecha", local: "Alvarado",               visitante: "Sporting",                     gl: 2, gv: 3 },
                             { condicion: "14° Fecha", local: "Sporting",                     visitante: "Grupo Universitario (Tandil)", gl: 2, gv: 3 }
                         ]
                     }
@@ -4117,7 +4117,7 @@ const BD_DETALLES_FUERA = {
                             { nombre: "Rosario PB",                    clase: "rosariopb", pj:12, pg:5, pe:3, pp:4, gf:0, gc:0, pts:18 },
                             { nombre: "El Linqueño (Lincoln)",         clase: "", pj:12, pg:4, pe:4, pp:4, gf:0, gc:0, pts:16 },
                             { nombre: "Grupo Universitario (Tandil)",  clase: "", pj:12, pg:4, pe:4, pp:4, gf:0, gc:0, pts:16 },
-                            { nombre: "Alvarado (MdP)",                clase: "", pj:12, pg:4, pe:2, pp:6, gf:0, gc:0, pts:14 },
+                            { nombre: "Alvarado",                clase: "", pj:12, pg:4, pe:2, pp:6, gf:0, gc:0, pts:14 },
                             { nombre: "Sporting",                      clase: "sporting", pj:12, pg:3, pe:3, pp:6, gf:0, gc:0, pts:12 }
                         ],
                         partidos: [
@@ -4126,14 +4126,14 @@ const BD_DETALLES_FUERA = {
                             { condicion: "3° Fecha",  local: "Sporting",                     visitante: "El Linqueño (Lincoln)",        gl: 1, gv: 0 },
                             { condicion: "4° Fecha",  local: "Santamarina (Tandil)",          visitante: "Sporting",                     gl: 3, gv: 0 },
                             { condicion: "5° Fecha",  local: "Sporting",                     visitante: "Rosario PB",                   gl: 1, gv: 0 },
-                            { condicion: "6° Fecha",  local: "Alvarado (MdP)",               visitante: "Sporting",                     gl: 1, gv: 1 },
+                            { condicion: "6° Fecha",  local: "Alvarado",               visitante: "Sporting",                     gl: 1, gv: 1 },
                             { condicion: "7° Fecha",  local: "Sporting",                     visitante: "Grupo Universitario (Tandil)", gl: 1, gv: 2 },
                             { condicion: "8° Fecha",  local: "Sporting",                     visitante: "Rivadavia (Lincoln)",          gl: 2, gv: 1 },
                             { condicion: "9° Fecha",  local: null,                           visitante: null,                           gl: null, gv: null },
                             { condicion: "10° Fecha", local: "El Linqueño (Lincoln)",        visitante: "Sporting",                     gl: 2, gv: 0 },
                             { condicion: "11° Fecha", local: "Sporting",                     visitante: "Santamarina (Tandil)",         gl: 2, gv: 3 },
                             { condicion: "12° Fecha", local: "Rosario PB",                   visitante: "Sporting",                     gl: 0, gv: 0 },
-                            { condicion: "13° Fecha", local: "Sporting",                     visitante: "Alvarado (MdP)",               gl: 0, gv: 0 },
+                            { condicion: "13° Fecha", local: "Sporting",                     visitante: "Alvarado",               gl: 0, gv: 0 },
                             { condicion: "14° Fecha", local: "Grupo Universitario (Tandil)", visitante: "Sporting",                     gl: 1, gv: 0 }
                         ]
                     }
@@ -4153,7 +4153,7 @@ const BD_DETALLES_FUERA = {
                             { nombre: "El Linqueño (Lincoln)",         clase: "", pj:24, pg:0, pe:0, pp:0, gf:0, gc:0, pts:35 },
                             { nombre: "Santamarina (Tandil)",          clase: "", pj:24, pg:0, pe:0, pp:0, gf:0, gc:0, pts:34 },
                             { nombre: "Grupo Universitario (Tandil)",  clase: "", pj:24, pg:0, pe:0, pp:0, gf:0, gc:0, pts:34 },
-                            { nombre: "Alvarado (MdP)",                clase: "", pj:24, pg:0, pe:0, pp:0, gf:0, gc:0, pts:31 },
+                            { nombre: "Alvarado",                clase: "", pj:24, pg:0, pe:0, pp:0, gf:0, gc:0, pts:31 },
                             { nombre: "Rosario PB",                    clase: "rosariopb", pj:24, pg:0, pe:0, pp:0, gf:0, gc:0, pts:27 },
                             { nombre: "Sporting",                      clase: "sporting", pj:24, pg:0, pe:0, pp:0, gf:0, gc:0, pts:26 }
                         ],
@@ -4173,7 +4173,7 @@ const BD_DETALLES_FUERA = {
                     {
                         nombre: "",
                         equipos: [
-                            { nombre: "Alvarado (MdP)",              clase: "", pj:14, pg:7, pe:1, pp:6, gf:0, gc:0, pts:22 },
+                            { nombre: "Alvarado",              clase: "", pj:14, pg:7, pe:1, pp:6, gf:0, gc:0, pts:22 },
                             { nombre: "Cadetes San Martín (MdP)",    clase: "", pj:14, pg:6, pe:3, pp:5, gf:0, gc:0, pts:21 },
                             { nombre: "Sporting",                    clase: "sporting", pj:14, pg:6, pe:2, pp:6, gf:0, gc:0, pts:20 },
                             { nombre: "Bella Vista",                 clase: "bellavista", pj:14, pg:5, pe:4, pp:5, gf:0, gc:0, pts:19 },
@@ -4187,14 +4187,14 @@ const BD_DETALLES_FUERA = {
                             { condicion: "2° Fecha",  local: "Cadetes San Martín (MdP)",    visitante: "Sporting",                    gl: 3, gv: 1 },
                             { condicion: "3° Fecha",  local: "Sporting",                    visitante: "Bella Vista",                 gl: 0, gv: 0 },
                             { condicion: "4° Fecha",  local: "Villa del Parque (Necochea)", visitante: "Sporting",                    gl: 0, gv: 0 },
-                            { condicion: "5° Fecha",  local: "Sporting",                    visitante: "Alvarado (MdP)",              gl: 4, gv: 2 },
+                            { condicion: "5° Fecha",  local: "Sporting",                    visitante: "Alvarado",              gl: 4, gv: 2 },
                             { condicion: "6° Fecha",  local: "Racing (Olavarría)",          visitante: "Sporting",                    gl: 0, gv: 1 },
                             { condicion: "7° Fecha",  local: "Grupo Universitario (Tandil)",visitante: "Sporting",                    gl: 4, gv: 0 },
                             { condicion: "8° Fecha",  local: "Dep. Coreano (Lobos)",        visitante: "Sporting",                    gl: 0, gv: 0 },
                             { condicion: "9° Fecha",  local: "Sporting",                    visitante: "Cadetes San Martín (MdP)",    gl: 1, gv: 0 },
                             { condicion: "10° Fecha", local: "Bella Vista",                 visitante: "Sporting",                    gl: 1, gv: 1 },
                             { condicion: "11° Fecha", local: "Sporting",                    visitante: "Villa del Parque (Necochea)", gl: 5, gv: 1 },
-                            { condicion: "12° Fecha", local: "Alvarado (MdP)",              visitante: "Sporting",                    gl: 3, gv: 0 },
+                            { condicion: "12° Fecha", local: "Alvarado",              visitante: "Sporting",                    gl: 3, gv: 0 },
                             { condicion: "13° Fecha", local: "Sporting",                    visitante: "Racing (Olavarría)",          gl: 1, gv: 3 },
                             { condicion: "14° Fecha", local: "Sporting",                    visitante: "Grupo Universitario (Tandil)",gl: 3, gv: 1 }
                         ]
@@ -4218,7 +4218,7 @@ const BD_DETALLES_FUERA = {
                         equipos: [
                             { nombre: "Racing (Olavarría)",          clase: "", pj:14, pg:10, pe:3, pp:1, gf:0, gc:0, pts:33 },
                             { nombre: "Bella Vista",                 clase: "bellavista", pj:14, pg:7, pe:2, pp:5, gf:0, gc:0, pts:23 },
-                            { nombre: "Alvarado (MdP)",              clase: "", pj:14, pg:7, pe:2, pp:5, gf:0, gc:0, pts:23 },
+                            { nombre: "Alvarado",              clase: "", pj:14, pg:7, pe:2, pp:5, gf:0, gc:0, pts:23 },
                             { nombre: "Villa del Parque (Necochea)", clase: "", pj:14, pg:6, pe:3, pp:5, gf:0, gc:0, pts:21 },
                             { nombre: "Grupo Universitario (Tandil)",clase: "", pj:14, pg:5, pe:3, pp:6, gf:0, gc:0, pts:18 },
                             { nombre: "Sporting",                    clase: "sporting", pj:14, pg:4, pe:2, pp:8, gf:0, gc:0, pts:14 },
@@ -4230,14 +4230,14 @@ const BD_DETALLES_FUERA = {
                             { condicion: "2° Fecha",  local: "Sporting",                    visitante: "Cadetes San Martín (MdP)",    gl: 2, gv: 1 },
                             { condicion: "3° Fecha",  local: "Bella Vista",                 visitante: "Sporting",                    gl: 3, gv: 0 },
                             { condicion: "4° Fecha",  local: "Sporting",                    visitante: "Villa del Parque (Necochea)", gl: 1, gv: 1 },
-                            { condicion: "5° Fecha",  local: "Alvarado (MdP)",              visitante: "Sporting",                    gl: 1, gv: 0 },
+                            { condicion: "5° Fecha",  local: "Alvarado",              visitante: "Sporting",                    gl: 1, gv: 0 },
                             { condicion: "6° Fecha",  local: "Sporting",                    visitante: "Racing (Olavarría)",          gl: 1, gv: 2 },
                             { condicion: "7° Fecha",  local: "Sporting",                    visitante: "Grupo Universitario (Tandil)",gl: 0, gv: 3 },
                             { condicion: "8° Fecha",  local: "Sporting",                    visitante: "Dep. Coreano (Lobos)",        gl: 1, gv: 1 },
                             { condicion: "9° Fecha",  local: "Cadetes San Martín (MdP)",    visitante: "Sporting",                    gl: 1, gv: 1 },
                             { condicion: "10° Fecha", local: "Sporting",                    visitante: "Bella Vista",                 gl: 2, gv: 0 },
                             { condicion: "11° Fecha", local: "Villa del Parque (Necochea)", visitante: "Sporting",                    gl: 3, gv: 1 },
-                            { condicion: "12° Fecha", local: "Sporting",                    visitante: "Alvarado (MdP)",              gl: 2, gv: 2 },
+                            { condicion: "12° Fecha", local: "Sporting",                    visitante: "Alvarado",              gl: 2, gv: 2 },
                             { condicion: "13° Fecha", local: "Racing (Olavarría)",          visitante: "Sporting",                    gl: 4, gv: 1 },
                             { condicion: "14° Fecha", local: "Grupo Universitario (Tandil)",visitante: "Sporting",                    gl: 0, gv: 0 }
                         ]
@@ -4259,7 +4259,7 @@ const BD_DETALLES_FUERA = {
                         nombre: "",
                         equipos: [
                             { nombre: "El Linqueño (Lincoln)",        clase: "", pj:28, pg:20, pe:4, pp:4,  gf:0, gc:0, pts:64 },
-                            { nombre: "Alvarado (MdP)",               clase: "", pj:28, pg:13, pe:6, pp:9,  gf:0, gc:0, pts:45 },
+                            { nombre: "Alvarado",               clase: "", pj:28, pg:13, pe:6, pp:9,  gf:0, gc:0, pts:45 },
                             { nombre: "Racing (Olavarría)",           clase: "", pj:28, pg:13, pe:6, pp:9,  gf:0, gc:0, pts:45 },
                             { nombre: "Grupo Universitario (Tandil)", clase: "", pj:28, pg:13, pe:5, pp:10, gf:0, gc:0, pts:44 },
                             { nombre: "Sporting",                     clase: "sporting", pj:28, pg:9,  pe:5, pp:14, gf:0, gc:0, pts:32 },
@@ -4268,28 +4268,28 @@ const BD_DETALLES_FUERA = {
                             { nombre: "Tres Algarrobos",              clase: "", pj:28, pg:6,  pe:4, pp:18, gf:0, gc:0, pts:22 }
                         ],
                         partidos: [
-                            { condicion: "1° Fecha",  local: "Alvarado (MdP)",               visitante: "Sporting",                    gl: 0, gv: 0 },
+                            { condicion: "1° Fecha",  local: "Alvarado",               visitante: "Sporting",                    gl: 0, gv: 0 },
                             { condicion: "2° Fecha",  local: "Sporting",                     visitante: "Tres Algarrobos",             gl: 1, gv: 0 },
                             { condicion: "3° Fecha",  local: "Defensores (Salto)",           visitante: "Sporting",                    gl: 1, gv: 1 },
                             { condicion: "4° Fecha",  local: "Sporting",                     visitante: "Grupo Universitario (Tandil)",gl: 3, gv: 0 },
                             { condicion: "5° Fecha",  local: "Racing (Olavarría)",           visitante: "Sporting",                    gl: 3, gv: 0 },
                             { condicion: "6° Fecha",  local: "Sporting",                     visitante: "El Linqueño (Lincoln)",       gl: 1, gv: 0 },
                             { condicion: "7° Fecha",  local: "Sporting",                     visitante: "Dep. Coreano (Lobos)",        gl: 0, gv: 0 },
-                            { condicion: "8° Fecha",  local: "Sporting",                     visitante: "Alvarado (MdP)",              gl: 2, gv: 0 },
+                            { condicion: "8° Fecha",  local: "Sporting",                     visitante: "Alvarado",              gl: 2, gv: 0 },
                             { condicion: "9° Fecha",  local: "Tres Algarrobos",              visitante: "Sporting",                    gl: 1, gv: 1 },
                             { condicion: "10° Fecha", local: "Sporting",                     visitante: "Defensores (Salto)",          gl: 1, gv: 0 },
                             { condicion: "11° Fecha", local: "Grupo Universitario (Tandil)", visitante: "Sporting",                    gl: 3, gv: 0 },
                             { condicion: "12° Fecha", local: "Sporting",                     visitante: "Racing (Olavarría)",          gl: 3, gv: 2 },
                             { condicion: "13° Fecha", local: "El Linqueño (Lincoln)",        visitante: "Sporting",                    gl: 1, gv: 0 },
                             { condicion: "14° Fecha", local: "Dep. Coreano (Lobos)",         visitante: "Sporting",                    gl: 0, gv: 1 },
-                            { condicion: "15° Fecha", local: "Alvarado (MdP)",               visitante: "Sporting",                    gl: 3, gv: 1 },
+                            { condicion: "15° Fecha", local: "Alvarado",               visitante: "Sporting",                    gl: 3, gv: 1 },
                             { condicion: "16° Fecha", local: "Sporting",                     visitante: "Tres Algarrobos",             gl: 1, gv: 1 },
                             { condicion: "17° Fecha", local: "Defensores (Salto)",           visitante: "Sporting",                    gl: 0, gv: 0 },
                             { condicion: "18° Fecha", local: "Sporting",                     visitante: "Grupo Universitario (Tandil)",gl: 0, gv: 1 },
                             { condicion: "19° Fecha", local: "Racing (Olavarría)",           visitante: "Sporting",                    gl: 3, gv: 1 },
                             { condicion: "20° Fecha", local: "Sporting",                     visitante: "El Linqueño (Lincoln)",       gl: 1, gv: 3 },
                             { condicion: "21° Fecha", local: "Sporting",                     visitante: "Dep. Coreano (Lobos)",        gl: 1, gv: 2 },
-                            { condicion: "22° Fecha", local: "Sporting",                     visitante: "Alvarado (MdP)",              gl: 0, gv: 0 },
+                            { condicion: "22° Fecha", local: "Sporting",                     visitante: "Alvarado",              gl: 0, gv: 0 },
                             { condicion: "23° Fecha", local: "Tres Algarrobos",              visitante: "Sporting",                    gl: 3, gv: 0 },
                             { condicion: "24° Fecha", local: "Sporting",                     visitante: "Defensores (Salto)",          gl: 3, gv: 1 },
                             { condicion: "25° Fecha", local: "Grupo Universitario (Tandil)", visitante: "Sporting",                    gl: 5, gv: 1 },
@@ -5523,7 +5523,7 @@ const BD_DETALLES_FUERA = {
                             { nombre: "Deportivo Roca",          clase: "", pj:18, pg:0, pe:0, pp:0, gf:0, gc:0, dif:9,   pts:29 },
                             { nombre: "Independiente (Neuquén)", clase: "", pj:18, pg:0, pe:0, pp:0, gf:0, gc:0, dif:4,   pts:29 },
                             { nombre: "Dep. Madryn",             clase: "", pj:18, pg:0, pe:0, pp:0, gf:0, gc:0, dif:3,   pts:29 },
-                            { nombre: "Alvarado (MdP)",          clase: "", pj:18, pg:0, pe:0, pp:0, gf:0, gc:0, dif:6,   pts:27 },
+                            { nombre: "Alvarado",          clase: "", pj:18, pg:0, pe:0, pp:0, gf:0, gc:0, dif:6,   pts:27 },
                             { nombre: "Ferro (Gral. Pico)",      clase: "", pj:18, pg:0, pe:0, pp:0, gf:0, gc:0, dif:10,  pts:26 },
                             { nombre: "Gral. Belgrano (Sta. Rosa)", clase: "", pj:18, pg:0, pe:0, pp:0, gf:0, gc:0, dif:-12, pts:21 },
                             { nombre: "CAI (Comodoro Riv.)",     clase: "", pj:18, pg:0, pe:0, pp:0, gf:0, gc:0, dif:-12, pts:18 },
@@ -5532,7 +5532,7 @@ const BD_DETALLES_FUERA = {
                         partidos: [
                             { condicion: "1° Fecha",  local: "Tiro Federal",               visitante: "Alianza (Cutral Co)",           gl: 0, gv: 0 },
                             { condicion: "2° Fecha",  local: "Cipolletti",                  visitante: "Tiro Federal",                  gl: 5, gv: 2 },
-                            { condicion: "3° Fecha",  local: "Tiro Federal",               visitante: "Alvarado (MdP)",                gl: 1, gv: 2 },
+                            { condicion: "3° Fecha",  local: "Tiro Federal",               visitante: "Alvarado",                gl: 1, gv: 2 },
                             { condicion: "4° Fecha",  local: "Dep. Madryn",                visitante: "Tiro Federal",                  gl: 1, gv: 2 },
                             { condicion: "5° Fecha",  local: "Tiro Federal",               visitante: "Ferro (Gral. Pico)",            gl: 0, gv: 0 },
                             { condicion: "6° Fecha",  local: "Independiente (Neuquén)",    visitante: "Tiro Federal",                  gl: 1, gv: 0 },
@@ -5541,7 +5541,7 @@ const BD_DETALLES_FUERA = {
                             { condicion: "9° Fecha",  local: "Gral. Belgrano (Sta. Rosa)", visitante: "Tiro Federal",                  gl: 0, gv: 3, nota: "Fecha postergada por fallecimiento de Emanuel Ortega, jugador de San Martín de Burzaco" },
                             { condicion: "10° Fecha", local: "Alianza (Cutral Co)",        visitante: "Tiro Federal",                  gl: 2, gv: 3 },
                             { condicion: "11° Fecha", local: "Tiro Federal",               visitante: "Cipolletti",                    gl: 0, gv: 0 },
-                            { condicion: "12° Fecha", local: "Alvarado (MdP)",             visitante: "Tiro Federal",                  gl: 0, gv: 0 },
+                            { condicion: "12° Fecha", local: "Alvarado",             visitante: "Tiro Federal",                  gl: 0, gv: 0 },
                             { condicion: "13° Fecha", local: "Tiro Federal",               visitante: "Dep. Madryn",                   gl: 3, gv: 0 },
                             { condicion: "14° Fecha", local: "Ferro (Gral. Pico)",         visitante: "Tiro Federal",                  gl: 4, gv: 2 },
                             { condicion: "15° Fecha", local: "Tiro Federal",               visitante: "Independiente (Neuquén)",       gl: 3, gv: 1 },
@@ -5618,7 +5618,7 @@ const BD_DETALLES_FUERA = {
                         nombre: "",
                         equipos: [
                             { nombre: "Def. de Belgrano (V. Ramallo)", clase: "", pj:12, pg:0, pe:0, pp:0, gf:0, gc:0, pts:21 },
-                            { nombre: "Alvarado (MdP)",                clase: "", pj:12, pg:0, pe:0, pp:0, gf:0, gc:0, pts:21 },
+                            { nombre: "Alvarado",                clase: "", pj:12, pg:0, pe:0, pp:0, gf:0, gc:0, pts:21 },
                             { nombre: "Ferro (Gral. Pico)",            clase: "", pj:12, pg:0, pe:0, pp:0, gf:0, gc:0, pts:20 },
                             { nombre: "Gral. Belgrano (Sta. Rosa)",    clase: "", pj:12, pg:0, pe:0, pp:0, gf:0, gc:0, pts:14 },
                             { nombre: "Tiro Federal",                  clase: "tirofederal", pj:12, pg:0, pe:0, pp:0, gf:0, gc:0, pts:5  }
@@ -5628,17 +5628,17 @@ const BD_DETALLES_FUERA = {
                             { condicion: "2° Fecha",  local: "Tiro Federal",                  visitante: "Def. de Belgrano (V. Ramallo)", gl: 1, gv: 1 },
                             { condicion: "3° Fecha",  local: null,                            visitante: null,                            gl: null, gv: null },
                             { condicion: "4° Fecha",  local: "Gral. Belgrano (Sta. Rosa)",    visitante: "Tiro Federal",                  gl: 1, gv: 0 },
-                            { condicion: "5° Fecha",  local: "Tiro Federal",                  visitante: "Alvarado (MdP)",                gl: 0, gv: 0 },
+                            { condicion: "5° Fecha",  local: "Tiro Federal",                  visitante: "Alvarado",                gl: 0, gv: 0 },
                             { condicion: "6° Fecha",  local: "Tiro Federal",                  visitante: "Ferro (Gral. Pico)",            gl: 0, gv: 2 },
                             { condicion: "7° Fecha",  local: "Def. de Belgrano (V. Ramallo)", visitante: "Tiro Federal",                  gl: 3, gv: 0 },
                             { condicion: "8° Fecha",  local: null,                            visitante: null,                            gl: null, gv: null },
                             { condicion: "9° Fecha",  local: "Tiro Federal",                  visitante: "Gral. Belgrano (Sta. Rosa)",    gl: 3, gv: 4 },
-                            { condicion: "10° Fecha", local: "Alvarado (MdP)",                visitante: "Tiro Federal",                  gl: 2, gv: 1 },
+                            { condicion: "10° Fecha", local: "Alvarado",                visitante: "Tiro Federal",                  gl: 2, gv: 1 },
                             { condicion: "11° Fecha", local: "Ferro (Gral. Pico)",            visitante: "Tiro Federal",                  gl: 1, gv: 0 },
                             { condicion: "12° Fecha", local: "Tiro Federal",                  visitante: "Def. de Belgrano (V. Ramallo)", gl: 1, gv: 4 },
                             { condicion: "13° Fecha", local: null,                            visitante: null,                            gl: null, gv: null },
                             { condicion: "14° Fecha", local: "Gral. Belgrano (Sta. Rosa)",    visitante: "Tiro Federal",                  gl: 0, gv: 2 },
-                            { condicion: "15° Fecha", local: "Tiro Federal",                  visitante: "Alvarado (MdP)",                gl: 0, gv: 1 }
+                            { condicion: "15° Fecha", local: "Tiro Federal",                  visitante: "Alvarado",                gl: 0, gv: 1 }
                         ]
                     }
                 ]
@@ -5657,7 +5657,7 @@ const BD_DETALLES_FUERA = {
                             { nombre: "San Martín (Tucumán)",            clase: "", pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:22 },
                             { nombre: "Def. de Belgrano (V. Ramallo)",   clase: "", pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:21 },
                             { nombre: "Dep. Madryn",                     clase: "", pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:21 },
-                            { nombre: "Alvarado (MdP)",                  clase: "", pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:21 },
+                            { nombre: "Alvarado",                  clase: "", pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:21 },
                             { nombre: "Unión (Villa Krause)",            clase: "", pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:21 },
                             { nombre: "Libertad (Sunchales)",            clase: "", pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:20 },
                             { nombre: "Ferro (Gral. Pico)",              clase: "", pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:20 },
@@ -6335,7 +6335,7 @@ const BD_DETALLES_FUERA = {
                         equipos: [
                             { nombre: "Olimpo",                    clase: "olimpo", pj:10, pg:0, pe:0, pp:0, gf:0, gc:0, pts:16 },
                             { nombre: "Grupo Universitario (Tandil)", clase: "",    pj:10, pg:0, pe:0, pp:0, gf:0, gc:0, pts:13 },
-                            { nombre: "Kimberley (MdP)",            clase: "",      pj:10, pg:0, pe:0, pp:0, gf:0, gc:0, pts:9  },
+                            { nombre: "Kimberley",            clase: "",      pj:10, pg:0, pe:0, pp:0, gf:0, gc:0, pts:9  },
                             { nombre: "Sportivo Piazza (Azul)",     clase: "",      pj:10, pg:0, pe:0, pp:0, gf:0, gc:0, pts:8  },
                             { nombre: "Estudiantes (Olavarría)",    clase: "",      pj:10, pg:0, pe:0, pp:0, gf:0, gc:0, pts:7  },
                             { nombre: "Ferro (Trenque Lauquen)",    clase: "",      pj:10, pg:0, pe:0, pp:0, gf:0, gc:0, pts:5  }
@@ -6343,12 +6343,12 @@ const BD_DETALLES_FUERA = {
                         partidos: [
                             { condicion: "1° Fecha",  local: "Grupo Universitario (Tandil)", visitante: "Olimpo",                 gl: 1, gv: 1 },
                             { condicion: "2° Fecha",  local: "Olimpo",                      visitante: "Estudiantes (Olavarría)", gl: 5, gv: 0 },
-                            { condicion: "3° Fecha",  local: "Kimberley (MdP)",             visitante: "Olimpo",                 gl: 1, gv: 1 },
+                            { condicion: "3° Fecha",  local: "Kimberley",             visitante: "Olimpo",                 gl: 1, gv: 1 },
                             { condicion: "4° Fecha",  local: "Olimpo",                      visitante: "Sportivo Piazza (Azul)", gl: 5, gv: 0 },
                             { condicion: "5° Fecha",  local: "Ferro (Trenque Lauquen)",     visitante: "Olimpo",                 gl: 0, gv: 1 },
                             { condicion: "6° Fecha",  local: "Olimpo",                      visitante: "Grupo Universitario (Tandil)", gl: 4, gv: 1 },
                             { condicion: "7° Fecha",  local: "Estudiantes (Olavarría)",     visitante: "Olimpo",                 gl: 1, gv: 5 },
-                            { condicion: "8° Fecha",  local: "Olimpo",                      visitante: "Kimberley (MdP)",        gl: 4, gv: 1 },
+                            { condicion: "8° Fecha",  local: "Olimpo",                      visitante: "Kimberley",        gl: 4, gv: 1 },
                             { condicion: "9° Fecha",  local: "Sportivo Piazza (Azul)",      visitante: "Olimpo",                 gl: 2, gv: 1 },
                             { condicion: "10° Fecha", local: "Olimpo",                      visitante: "Ferro (Trenque Lauquen)", gl: 2, gv: 0 }
                         ]
@@ -6851,19 +6851,19 @@ const BD_DETALLES_FUERA = {
                             { nombre: "Huracán (San Rafael)",      clase: "", pj:14, pg:0, pe:0, pp:0, gf:0, gc:0, pts:20 },
                             { nombre: "Villa Mitre",               clase: "villamitre", pj:14, pg:0, pe:0, pp:0, gf:0, gc:0, pts:20 },
                             { nombre: "Olimpo",                    clase: "olimpo", pj:14, pg:0, pe:0, pp:0, gf:0, gc:0, pts:19 },
-                            { nombre: "Alvarado (MdP)",            clase: "", pj:14, pg:0, pe:0, pp:0, gf:0, gc:0, pts:17 },
+                            { nombre: "Alvarado",            clase: "", pj:14, pg:0, pe:0, pp:0, gf:0, gc:0, pts:17 },
                             { nombre: "San Martín (Mendoza)",      clase: "", pj:14, pg:0, pe:0, pp:0, gf:0, gc:0, pts:15 }
                         ],
                         partidos: [
                             { condicion: "1° Fecha",  local: "Olimpo",               visitante: "Villa Mitre",              gl: 6, gv: 1 },
-                            { condicion: "2° Fecha",  local: "Alvarado (MdP)",       visitante: "Olimpo",                   gl: 2, gv: 0 },
+                            { condicion: "2° Fecha",  local: "Alvarado",       visitante: "Olimpo",                   gl: 2, gv: 0 },
                             { condicion: "3° Fecha",  local: "Olimpo",               visitante: "Germinal (Rawson)",        gl: 0, gv: 1 },
                             { condicion: "4° Fecha",  local: "Independiente Rivadavia", visitante: "Olimpo",               gl: 1, gv: 1 },
                             { condicion: "5° Fecha",  local: "Huracán (San Rafael)", visitante: "Olimpo",                   gl: 1, gv: 0 },
                             { condicion: "6° Fecha",  local: "Olimpo",               visitante: "Cipolletti",               gl: 1, gv: 1 },
                             { condicion: "7° Fecha",  local: "San Martín (Mendoza)", visitante: "Olimpo",                   gl: 0, gv: 2 },
                             { condicion: "8° Fecha",  local: "Villa Mitre",          visitante: "Olimpo",                   gl: 2, gv: 0, nota: "Partido suspendido a los 75' por incidentes; dado por ganado a Villa Mitre" },
-                            { condicion: "9° Fecha",  local: "Olimpo",               visitante: "Alvarado (MdP)",           gl: 0, gv: 0 },
+                            { condicion: "9° Fecha",  local: "Olimpo",               visitante: "Alvarado",           gl: 0, gv: 0 },
                             { condicion: "10° Fecha", local: "Germinal (Rawson)",    visitante: "Olimpo",                   gl: 2, gv: 2 },
                             { condicion: "11° Fecha", local: "Olimpo",               visitante: "Independiente Rivadavia",  gl: 3, gv: 0 },
                             { condicion: "12° Fecha", local: "Olimpo",               visitante: "Huracán (San Rafael)",     gl: 2, gv: 1 },
@@ -11811,10 +11811,10 @@ const BD_DETALLES_FUERA = {
                 zonas: [{
                     nombre: "",
                     equipos: [
-                        { nombre: "Santamarina (T)",         clase: "", pj:36, pts:55 },
+                        { nombre: "Santamarina",         clase: "", pj:36, pts:55 },
                         { nombre: "Cipolletti",              clase: "", pj:36, pts:54 },
                         { nombre: "Juventud (Pergamino)",    clase: "", pj:36, pts:45 },
-                        { nombre: "Guillermo Brown (M)",     clase: "", pj:36, pts:42 },
+                        { nombre: "Guillermo Brown",     clase: "", pj:36, pts:42 },
                         { nombre: "Rivadavia (Lincoln)",     clase: "", pj:36, pts:42 },
                         { nombre: "Huracán (Tres Arroyos)",  clase: "", pj:36, pts:41 },
                         { nombre: "Real Arroyo Seco",        clase: "", pj:36, pts:41 },
@@ -11824,8 +11824,8 @@ const BD_DETALLES_FUERA = {
                     partidos: [
                         { condicion: "1° Fecha",  local: "Rivadavia (Lincoln)",    visitante: "Villa Mitre",          gl: 2, gv: 1 },
                         { condicion: "2° Fecha",  local: "Villa Mitre",            visitante: "La Plata FC",          gl: 3, gv: 0 },
-                        { condicion: "3° Fecha",  local: "Santamarina (T)",        visitante: "Villa Mitre",          gl: 2, gv: 1 },
-                        { condicion: "4° Fecha",  local: "Villa Mitre",            visitante: "Guillermo Brown (M)",  gl: 3, gv: 1 },
+                        { condicion: "3° Fecha",  local: "Santamarina",        visitante: "Villa Mitre",          gl: 2, gv: 1 },
+                        { condicion: "4° Fecha",  local: "Villa Mitre",            visitante: "Guillermo Brown",  gl: 3, gv: 1 },
                         { condicion: "5° Fecha",  local: "Cipolletti",             visitante: "Villa Mitre",          gl: 3, gv: 1 },
                         { condicion: "6° Fecha",  local: "Villa Mitre",            visitante: "Real Arroyo Seco",     gl: 0, gv: 2 },
                         { condicion: "7° Fecha",  local: "— Fecha Libre —",        visitante: "",                     gl: null, gv: null },
@@ -11833,8 +11833,8 @@ const BD_DETALLES_FUERA = {
                         { condicion: "9° Fecha",  local: "Villa Mitre",            visitante: "Juventud (Pergamino)", gl: 1, gv: 0, nota: "Jugado en cancha de Huracán de Tres Arroyos" },
                         { condicion: "10° Fecha", local: "Villa Mitre",            visitante: "Rivadavia (Lincoln)",  gl: 4, gv: 3 },
                         { condicion: "11° Fecha", local: "La Plata FC",            visitante: "Villa Mitre",          gl: 1, gv: 1 },
-                        { condicion: "12° Fecha", local: "Villa Mitre",            visitante: "Santamarina (T)",      gl: 0, gv: 0 },
-                        { condicion: "13° Fecha", local: "Guillermo Brown (M)",    visitante: "Villa Mitre",          gl: 1, gv: 0 },
+                        { condicion: "12° Fecha", local: "Villa Mitre",            visitante: "Santamarina",      gl: 0, gv: 0 },
+                        { condicion: "13° Fecha", local: "Guillermo Brown",    visitante: "Villa Mitre",          gl: 1, gv: 0 },
                         { condicion: "14° Fecha", local: "Villa Mitre",            visitante: "Cipolletti",           gl: 1, gv: 1 },
                         { condicion: "15° Fecha", local: "Real Arroyo Seco",       visitante: "Villa Mitre",          gl: 2, gv: 1 },
                         { condicion: "16° Fecha", local: "— Fecha Libre —",        visitante: "",                     gl: null, gv: null },
@@ -11842,8 +11842,8 @@ const BD_DETALLES_FUERA = {
                         { condicion: "18° Fecha", local: "Juventud (Pergamino)",   visitante: "Villa Mitre",          gl: 1, gv: 1 },
                         { condicion: "19° Fecha", local: "Rivadavia (Lincoln)",    visitante: "Villa Mitre",          gl: 0, gv: 0 },
                         { condicion: "20° Fecha", local: "Villa Mitre",            visitante: "La Plata FC",          gl: 0, gv: 1 },
-                        { condicion: "21° Fecha", local: "Santamarina (T)",        visitante: "Villa Mitre",          gl: 1, gv: 0 },
-                        { condicion: "22° Fecha", local: "Villa Mitre",            visitante: "Guillermo Brown (M)",  gl: 0, gv: 1 },
+                        { condicion: "21° Fecha", local: "Santamarina",        visitante: "Villa Mitre",          gl: 1, gv: 0 },
+                        { condicion: "22° Fecha", local: "Villa Mitre",            visitante: "Guillermo Brown",  gl: 0, gv: 1 },
                         { condicion: "23° Fecha", local: "Cipolletti",             visitante: "Villa Mitre",          gl: 2, gv: 2 },
                         { condicion: "24° Fecha", local: "Villa Mitre",            visitante: "Real Arroyo Seco",     gl: 5, gv: 1 },
                         { condicion: "25° Fecha", local: "— Fecha Libre —",        visitante: "",                     gl: null, gv: null },
@@ -11851,8 +11851,8 @@ const BD_DETALLES_FUERA = {
                         { condicion: "27° Fecha", local: "Villa Mitre",            visitante: "Juventud (Pergamino)", gl: 2, gv: 4 },
                         { condicion: "28° Fecha", local: "Villa Mitre",            visitante: "Rivadavia (Lincoln)",  gl: 2, gv: 1 },
                         { condicion: "29° Fecha", local: "La Plata FC",            visitante: "Villa Mitre",          gl: 1, gv: 1 },
-                        { condicion: "30° Fecha", local: "Villa Mitre",            visitante: "Santamarina (T)",      gl: 1, gv: 1 },
-                        { condicion: "31° Fecha", local: "Guillermo Brown (M)",    visitante: "Villa Mitre",          gl: 3, gv: 1 },
+                        { condicion: "30° Fecha", local: "Villa Mitre",            visitante: "Santamarina",      gl: 1, gv: 1 },
+                        { condicion: "31° Fecha", local: "Guillermo Brown",    visitante: "Villa Mitre",          gl: 3, gv: 1 },
                         { condicion: "32° Fecha", local: "Villa Mitre",            visitante: "Cipolletti",           gl: 1, gv: 2 },
                         { condicion: "33° Fecha", local: "Real Arroyo Seco",       visitante: "Villa Mitre",          gl: 1, gv: 1 },
                         { condicion: "34° Fecha", local: "— Fecha Libre —",        visitante: "",                     gl: null, gv: null },
@@ -11887,46 +11887,46 @@ const BD_DETALLES_FUERA = {
                     nombre: "",
                     equipos: [
                         { nombre: "Cipolletti",              clase: "", pj:32, pts:64 },
-                        { nombre: "Santamarina (T)",         clase: "", pj:32, pts:55 },
+                        { nombre: "Santamarina",         clase: "", pj:32, pts:55 },
                         { nombre: "Rivadavia (Lincoln)",     clase: "", pj:32, pts:46 },
-                        { nombre: "Guillermo Brown (M)",     clase: "", pj:32, pts:44 },
+                        { nombre: "Guillermo Brown",     clase: "", pj:32, pts:44 },
                         { nombre: "Villa Mitre",             clase: "villamitre", pj:32, pts:42 },
                         { nombre: "Juventud (Pergamino)",    clase: "", pj:32, pts:39 },
                         { nombre: "Huracán (Tres Arroyos)",  clase: "", pj:32, pts:34 },
-                        { nombre: "Alvarado (MdP)",          clase: "", pj:32, pts:30 }
+                        { nombre: "Alvarado",          clase: "", pj:32, pts:30 }
                     ],
                     partidos: [
-                        { condicion: "1° Fecha",  local: "Guillermo Brown (M)",    visitante: "Villa Mitre",           gl: 0, gv: 0 },
+                        { condicion: "1° Fecha",  local: "Guillermo Brown",    visitante: "Villa Mitre",           gl: 0, gv: 0 },
                         { condicion: "2° Fecha",  local: "Villa Mitre",            visitante: "Cipolletti",            gl: 0, gv: 0 },
                         { condicion: "3° Fecha",  local: "Juventud (Pergamino)",   visitante: "Villa Mitre",           gl: 0, gv: 1 },
-                        { condicion: "4° Fecha",  local: "Villa Mitre",            visitante: "Santamarina (T)",       gl: 2, gv: 2 },
+                        { condicion: "4° Fecha",  local: "Villa Mitre",            visitante: "Santamarina",       gl: 2, gv: 2 },
                         { condicion: "5° Fecha",  local: "Patronato",              visitante: "Villa Mitre",           gl: 2, gv: 0, nota: "Interzonal" },
                         { condicion: "6° Fecha",  local: "Villa Mitre",            visitante: "Rivadavia (Lincoln)",   gl: 1, gv: 0 },
-                        { condicion: "7° Fecha",  local: "Alvarado (MdP)",         visitante: "Villa Mitre",           gl: 5, gv: 2 },
+                        { condicion: "7° Fecha",  local: "Alvarado",         visitante: "Villa Mitre",           gl: 5, gv: 2 },
                         { condicion: "8° Fecha",  local: "Villa Mitre",            visitante: "Huracán (Tres Arroyos)",gl: 3, gv: 1 },
-                        { condicion: "9° Fecha",  local: "Villa Mitre",            visitante: "Guillermo Brown (M)",   gl: 1, gv: 1 },
+                        { condicion: "9° Fecha",  local: "Villa Mitre",            visitante: "Guillermo Brown",   gl: 1, gv: 1 },
                         { condicion: "10° Fecha", local: "Cipolletti",             visitante: "Villa Mitre",           gl: 6, gv: 0 },
                         { condicion: "11° Fecha", local: "Villa Mitre",            visitante: "Juventud (Pergamino)",  gl: 2, gv: 0 },
-                        { condicion: "12° Fecha", local: "Santamarina (T)",        visitante: "Villa Mitre",           gl: 3, gv: 1 },
+                        { condicion: "12° Fecha", local: "Santamarina",        visitante: "Villa Mitre",           gl: 3, gv: 1 },
                         { condicion: "13° Fecha", local: "Villa Mitre",            visitante: "Patronato",             gl: 1, gv: 0 },
                         { condicion: "14° Fecha", local: "Rivadavia (Lincoln)",    visitante: "Villa Mitre",           gl: 3, gv: 2 },
-                        { condicion: "15° Fecha", local: "Villa Mitre",            visitante: "Alvarado (MdP)",        gl: 1, gv: 1 },
+                        { condicion: "15° Fecha", local: "Villa Mitre",            visitante: "Alvarado",        gl: 1, gv: 1 },
                         { condicion: "16° Fecha", local: "Huracán (Tres Arroyos)", visitante: "Villa Mitre",           gl: 2, gv: 0 },
-                        { condicion: "17° Fecha", local: "Guillermo Brown (M)",    visitante: "Villa Mitre",           gl: 3, gv: 0 },
+                        { condicion: "17° Fecha", local: "Guillermo Brown",    visitante: "Villa Mitre",           gl: 3, gv: 0 },
                         { condicion: "18° Fecha", local: "Villa Mitre",            visitante: "Cipolletti",            gl: 2, gv: 1 },
                         { condicion: "19° Fecha", local: "Juventud (Pergamino)",   visitante: "Villa Mitre",           gl: 0, gv: 0 },
-                        { condicion: "20° Fecha", local: "Villa Mitre",            visitante: "Santamarina (T)",       gl: 0, gv: 1 },
+                        { condicion: "20° Fecha", local: "Villa Mitre",            visitante: "Santamarina",       gl: 0, gv: 1 },
                         { condicion: "21° Fecha", local: "Patronato",              visitante: "Villa Mitre",           gl: 5, gv: 1, nota: "Interzonal" },
                         { condicion: "22° Fecha", local: "Villa Mitre",            visitante: "Rivadavia (Lincoln)",   gl: 3, gv: 0 },
-                        { condicion: "23° Fecha", local: "Alvarado (MdP)",         visitante: "Villa Mitre",           gl: 0, gv: 0 },
+                        { condicion: "23° Fecha", local: "Alvarado",         visitante: "Villa Mitre",           gl: 0, gv: 0 },
                         { condicion: "24° Fecha", local: "Villa Mitre",            visitante: "Huracán (Tres Arroyos)",gl: 2, gv: 1 },
-                        { condicion: "25° Fecha", local: "Villa Mitre",            visitante: "Guillermo Brown (M)",   gl: 1, gv: 3 },
+                        { condicion: "25° Fecha", local: "Villa Mitre",            visitante: "Guillermo Brown",   gl: 1, gv: 3 },
                         { condicion: "26° Fecha", local: "Cipolletti",             visitante: "Villa Mitre",           gl: 2, gv: 0 },
                         { condicion: "27° Fecha", local: "Villa Mitre",            visitante: "Juventud (Pergamino)",  gl: 2, gv: 2 },
-                        { condicion: "28° Fecha", local: "Santamarina (T)",        visitante: "Villa Mitre",           gl: 0, gv: 2 },
+                        { condicion: "28° Fecha", local: "Santamarina",        visitante: "Villa Mitre",           gl: 0, gv: 2 },
                         { condicion: "29° Fecha", local: "Villa Mitre",            visitante: "Patronato",             gl: 1, gv: 3 },
                         { condicion: "30° Fecha", local: "Rivadavia (Lincoln)",    visitante: "Villa Mitre",           gl: 0, gv: 1 },
-                        { condicion: "31° Fecha", local: "Villa Mitre",            visitante: "Alvarado (MdP)",        gl: 3, gv: 1 },
+                        { condicion: "31° Fecha", local: "Villa Mitre",            visitante: "Alvarado",        gl: 3, gv: 1 },
                         { condicion: "32° Fecha", local: "Huracán (Tres Arroyos)", visitante: "Villa Mitre",           gl: 0, gv: 0 }
                     ]
                 }]
@@ -11944,46 +11944,46 @@ const BD_DETALLES_FUERA = {
                     nombre: "",
                     equipos: [
                         { nombre: "Cipolletti",              clase: "", pj:32, pts:64 },
-                        { nombre: "Santamarina (T)",         clase: "", pj:32, pts:55 },
+                        { nombre: "Santamarina",         clase: "", pj:32, pts:55 },
                         { nombre: "Rivadavia (Lincoln)",     clase: "", pj:32, pts:46 },
-                        { nombre: "Guillermo Brown (M)",     clase: "", pj:32, pts:44 },
+                        { nombre: "Guillermo Brown",     clase: "", pj:32, pts:44 },
                         { nombre: "Villa Mitre",             clase: "villamitre", pj:32, pts:42 },
                         { nombre: "Juventud (Pergamino)",    clase: "", pj:32, pts:39 },
                         { nombre: "Huracán (Tres Arroyos)",  clase: "", pj:32, pts:34 },
-                        { nombre: "Alvarado (MdP)",          clase: "", pj:32, pts:30 }
+                        { nombre: "Alvarado",          clase: "", pj:32, pts:30 }
                     ],
                     partidos: [
-                        { condicion: "1° Fecha",  local: "Guillermo Brown (M)",    visitante: "Villa Mitre",          gl: 0, gv: 0 },
+                        { condicion: "1° Fecha",  local: "Guillermo Brown",    visitante: "Villa Mitre",          gl: 0, gv: 0 },
                         { condicion: "2° Fecha",  local: "Villa Mitre",            visitante: "Cipolletti",           gl: 0, gv: 0 },
                         { condicion: "3° Fecha",  local: "Juventud (Pergamino)",   visitante: "Villa Mitre",          gl: 0, gv: 1 },
-                        { condicion: "4° Fecha",  local: "Villa Mitre",            visitante: "Santamarina (T)",      gl: 2, gv: 2 },
+                        { condicion: "4° Fecha",  local: "Villa Mitre",            visitante: "Santamarina",      gl: 2, gv: 2 },
                         { condicion: "5° Fecha",  local: "Patronato",              visitante: "Villa Mitre",          gl: 2, gv: 0, nota: "Interzonal" },
                         { condicion: "6° Fecha",  local: "Villa Mitre",            visitante: "Rivadavia (Lincoln)",  gl: 1, gv: 0 },
-                        { condicion: "7° Fecha",  local: "Alvarado (MdP)",         visitante: "Villa Mitre",          gl: 5, gv: 2 },
+                        { condicion: "7° Fecha",  local: "Alvarado",         visitante: "Villa Mitre",          gl: 5, gv: 2 },
                         { condicion: "8° Fecha",  local: "Villa Mitre",            visitante: "Huracán (Tres Arroyos)",gl: 3, gv: 1 },
-                        { condicion: "9° Fecha",  local: "Villa Mitre",            visitante: "Guillermo Brown (M)",  gl: 1, gv: 1 },
+                        { condicion: "9° Fecha",  local: "Villa Mitre",            visitante: "Guillermo Brown",  gl: 1, gv: 1 },
                         { condicion: "10° Fecha", local: "Cipolletti",             visitante: "Villa Mitre",          gl: 6, gv: 0 },
                         { condicion: "11° Fecha", local: "Villa Mitre",            visitante: "Juventud (Pergamino)", gl: 2, gv: 0 },
-                        { condicion: "12° Fecha", local: "Santamarina (T)",        visitante: "Villa Mitre",          gl: 3, gv: 1 },
+                        { condicion: "12° Fecha", local: "Santamarina",        visitante: "Villa Mitre",          gl: 3, gv: 1 },
                         { condicion: "13° Fecha", local: "Villa Mitre",            visitante: "Patronato",            gl: 1, gv: 0 },
                         { condicion: "14° Fecha", local: "Rivadavia (Lincoln)",    visitante: "Villa Mitre",          gl: 3, gv: 2 },
-                        { condicion: "15° Fecha", local: "Villa Mitre",            visitante: "Alvarado (MdP)",       gl: 1, gv: 1 },
+                        { condicion: "15° Fecha", local: "Villa Mitre",            visitante: "Alvarado",       gl: 1, gv: 1 },
                         { condicion: "16° Fecha", local: "Huracán (Tres Arroyos)", visitante: "Villa Mitre",          gl: 2, gv: 0 },
-                        { condicion: "17° Fecha", local: "Guillermo Brown (M)",    visitante: "Villa Mitre",          gl: 3, gv: 0 },
+                        { condicion: "17° Fecha", local: "Guillermo Brown",    visitante: "Villa Mitre",          gl: 3, gv: 0 },
                         { condicion: "18° Fecha", local: "Villa Mitre",            visitante: "Cipolletti",           gl: 2, gv: 1 },
                         { condicion: "19° Fecha", local: "Juventud (Pergamino)",   visitante: "Villa Mitre",          gl: 0, gv: 0 },
-                        { condicion: "20° Fecha", local: "Villa Mitre",            visitante: "Santamarina (T)",      gl: 0, gv: 1 },
+                        { condicion: "20° Fecha", local: "Villa Mitre",            visitante: "Santamarina",      gl: 0, gv: 1 },
                         { condicion: "21° Fecha", local: "Patronato",              visitante: "Villa Mitre",          gl: 5, gv: 1, nota: "Interzonal" },
                         { condicion: "22° Fecha", local: "Villa Mitre",            visitante: "Rivadavia (Lincoln)",  gl: 3, gv: 0 },
-                        { condicion: "23° Fecha", local: "Alvarado (MdP)",         visitante: "Villa Mitre",          gl: 0, gv: 0 },
+                        { condicion: "23° Fecha", local: "Alvarado",         visitante: "Villa Mitre",          gl: 0, gv: 0 },
                         { condicion: "24° Fecha", local: "Villa Mitre",            visitante: "Huracán (Tres Arroyos)",gl: 2, gv: 1 },
-                        { condicion: "25° Fecha", local: "Villa Mitre",            visitante: "Guillermo Brown (M)",  gl: 1, gv: 3 },
+                        { condicion: "25° Fecha", local: "Villa Mitre",            visitante: "Guillermo Brown",  gl: 1, gv: 3 },
                         { condicion: "26° Fecha", local: "Cipolletti",             visitante: "Villa Mitre",          gl: 2, gv: 0 },
                         { condicion: "27° Fecha", local: "Villa Mitre",            visitante: "Juventud (Pergamino)", gl: 2, gv: 2 },
-                        { condicion: "28° Fecha", local: "Santamarina (T)",        visitante: "Villa Mitre",          gl: 0, gv: 2 },
+                        { condicion: "28° Fecha", local: "Santamarina",        visitante: "Villa Mitre",          gl: 0, gv: 2 },
                         { condicion: "29° Fecha", local: "Villa Mitre",            visitante: "Patronato",            gl: 1, gv: 3 },
                         { condicion: "30° Fecha", local: "Rivadavia (Lincoln)",    visitante: "Villa Mitre",          gl: 0, gv: 1 },
-                        { condicion: "31° Fecha", local: "Villa Mitre",            visitante: "Alvarado (MdP)",       gl: 3, gv: 1 },
+                        { condicion: "31° Fecha", local: "Villa Mitre",            visitante: "Alvarado",       gl: 3, gv: 1 },
                         { condicion: "32° Fecha", local: "Huracán (Tres Arroyos)", visitante: "Villa Mitre",          gl: 0, gv: 0 }
                     ]
                 }]
@@ -12002,25 +12002,25 @@ const BD_DETALLES_FUERA = {
                         { nombre: "Cipolletti",              clase: "", pj:16, pts:27 },
                         { nombre: "Huracán (Tres Arroyos)",  clase: "", pj:16, pts:25 },
                         { nombre: "Rivadavia (Lincoln)",     clase: "", pj:16, pts:23 },
-                        { nombre: "Santamarina (T)",         clase: "", pj:16, pts:23 },
+                        { nombre: "Santamarina",         clase: "", pj:16, pts:23 },
                         { nombre: "Unión (MdP)",             clase: "", pj:16, pts:23 },
                         { nombre: "Villa Mitre",             clase: "villamitre", pj:16, pts:19 },
                         { nombre: "Juventud (Pergamino)",    clase: "", pj:16, pts:15 },
-                        { nombre: "Guillermo Brown (M)",     clase: "", pj:16, pts:12 }
+                        { nombre: "Guillermo Brown",     clase: "", pj:16, pts:12 }
                     ],
                     partidos: [
                         { condicion: "1° Fecha",  local: "Juventud (Pergamino)",   visitante: "Villa Mitre",          gl: 1, gv: 1 },
-                        { condicion: "2° Fecha",  local: "Villa Mitre",            visitante: "Santamarina (T)",      gl: 1, gv: 1 },
+                        { condicion: "2° Fecha",  local: "Villa Mitre",            visitante: "Santamarina",      gl: 1, gv: 1 },
                         { condicion: "3° Fecha",  local: "Villa Mitre",            visitante: "Rivadavia (Lincoln)",  gl: 2, gv: 0 },
-                        { condicion: "4° Fecha",  local: "Guillermo Brown (M)",    visitante: "Villa Mitre",          gl: 2, gv: 0 },
+                        { condicion: "4° Fecha",  local: "Guillermo Brown",    visitante: "Villa Mitre",          gl: 2, gv: 0 },
                         { condicion: "5° Fecha",  local: "Villa Mitre",            visitante: "Patronato",            gl: 1, gv: 1, nota: "Interzonal" },
                         { condicion: "6° Fecha",  local: "Villa Mitre",            visitante: "Huracán (Tres Arroyos)",gl: 1, gv: 1 },
                         { condicion: "7° Fecha",  local: "Unión (MdP)",            visitante: "Villa Mitre",          gl: 3, gv: 2 },
                         { condicion: "8° Fecha",  local: "Villa Mitre",            visitante: "Cipolletti",           gl: 0, gv: 2 },
                         { condicion: "9° Fecha",  local: "Villa Mitre",            visitante: "Juventud (Pergamino)", gl: 1, gv: 0 },
-                        { condicion: "10° Fecha", local: "Santamarina (T)",        visitante: "Villa Mitre",          gl: 2, gv: 0 },
+                        { condicion: "10° Fecha", local: "Santamarina",        visitante: "Villa Mitre",          gl: 2, gv: 0 },
                         { condicion: "11° Fecha", local: "Rivadavia (Lincoln)",    visitante: "Villa Mitre",          gl: 0, gv: 0 },
-                        { condicion: "12° Fecha", local: "Villa Mitre",            visitante: "Guillermo Brown (M)",  gl: 6, gv: 1 },
+                        { condicion: "12° Fecha", local: "Villa Mitre",            visitante: "Guillermo Brown",  gl: 6, gv: 1 },
                         { condicion: "13° Fecha", local: "Patronato",              visitante: "Villa Mitre",          gl: 3, gv: 0, nota: "Interzonal" },
                         { condicion: "14° Fecha", local: "Huracán (Tres Arroyos)", visitante: "Villa Mitre",          gl: 0, gv: 1 },
                         { condicion: "15° Fecha", local: "Villa Mitre",            visitante: "Unión (MdP)",          gl: 1, gv: 1 },
@@ -12036,7 +12036,7 @@ const BD_DETALLES_FUERA = {
                     nombre: "",
                     equipos: [
                         { nombre: "Huracán (Tres Arroyos)",  clase: "", pj:18, pts:28 },
-                        { nombre: "Guillermo Brown (M)",     clase: "", pj:18, pts:28 },
+                        { nombre: "Guillermo Brown",     clase: "", pj:18, pts:28 },
                         { nombre: "Estudiantes (RC)",        clase: "", pj:18, pts:27 },
                         { nombre: "Desamparados",            clase: "", pj:18, pts:27 },
                         { nombre: "Alumni (Villa María)",    clase: "", pj:18, pts:21 },
@@ -12046,7 +12046,7 @@ const BD_DETALLES_FUERA = {
                         { nombre: "Deportivo Maipú",         clase: "", pj:18, pts:12 }
                     ],
                     partidos: [
-                        { condicion: "1° Fecha",  local: "Villa Mitre",            visitante: "Guillermo Brown (M)",  gl: 1, gv: 1 },
+                        { condicion: "1° Fecha",  local: "Villa Mitre",            visitante: "Guillermo Brown",  gl: 1, gv: 1 },
                         { condicion: "2° Fecha",  local: "Alumni (Villa María)",   visitante: "Villa Mitre",          gl: 1, gv: 2 },
                         { condicion: "3° Fecha",  local: "Villa Mitre",            visitante: "Desamparados",         gl: 2, gv: 2 },
                         { condicion: "4° Fecha",  local: "— Fecha Libre —",        visitante: "",                     gl: null, gv: null },
@@ -12055,7 +12055,7 @@ const BD_DETALLES_FUERA = {
                         { condicion: "7° Fecha",  local: "Deportivo Maipú",        visitante: "Villa Mitre",          gl: 2, gv: 0 },
                         { condicion: "8° Fecha",  local: "Villa Mitre",            visitante: "Juventud Unida (SL)",  gl: 1, gv: 1 },
                         { condicion: "9° Fecha",  local: "Huracán (Tres Arroyos)", visitante: "Villa Mitre",          gl: 4, gv: 0 },
-                        { condicion: "10° Fecha", local: "Guillermo Brown (M)",    visitante: "Villa Mitre",          gl: 1, gv: 0 },
+                        { condicion: "10° Fecha", local: "Guillermo Brown",    visitante: "Villa Mitre",          gl: 1, gv: 0 },
                         { condicion: "11° Fecha", local: "Villa Mitre",            visitante: "Alumni (Villa María)", gl: 0, gv: 0 },
                         { condicion: "12° Fecha", local: "Desamparados",           visitante: "Villa Mitre",          gl: 2, gv: 0 },
                         { condicion: "13° Fecha", local: "— Fecha Libre —",        visitante: "",                     gl: null, gv: null },
@@ -12082,7 +12082,7 @@ const BD_DETALLES_FUERA = {
                         { nombre: "Unión (Sunchales)",               clase: "", pj:0, pts:56 },
                         { nombre: "Huracán (Tres Arroyos)",          clase: "", pj:0, pts:53 },
                         { nombre: "Juventud Antoniana",              clase: "", pj:0, pts:52 },
-                        { nombre: "Santamarina (T)",                 clase: "", pj:0, pts:52 },
+                        { nombre: "Santamarina",                 clase: "", pj:0, pts:52 },
                         { nombre: "Libertad (Sunchales)",            clase: "", pj:0, pts:49 },
                         { nombre: "Cipolletti",                      clase: "", pj:0, pts:48 },
                         { nombre: "Gimnasia (CdU)",                  clase: "", pj:0, pts:43 },
@@ -12091,7 +12091,7 @@ const BD_DETALLES_FUERA = {
                         { nombre: "Central Córdoba (Santiago)",      clase: "", pj:0, pts:42 },
                         { nombre: "Rivadavia (Lincoln)",             clase: "", pj:0, pts:41 },
                         { nombre: "Estudiantes (RC)",                clase: "", pj:0, pts:40 },
-                        { nombre: "Guillermo Brown (M)",             clase: "", pj:0, pts:40 },
+                        { nombre: "Guillermo Brown",             clase: "", pj:0, pts:40 },
                         { nombre: "Sp. Belgrano (San Francisco)",    clase: "", pj:0, pts:39 },
                         { nombre: "Juventud Unida (SL)",             clase: "", pj:0, pts:39 },
                         { nombre: "Unión (MdP)",                     clase: "", pj:0, pts:39 },
@@ -12123,13 +12123,13 @@ const BD_DETALLES_FUERA = {
                 zonas: [{
                     nombre: "",
                     equipos: [
-                        { nombre: "Guillermo Brown (M)",     clase: "", pj:28, pts:57 },
+                        { nombre: "Guillermo Brown",     clase: "", pj:28, pts:57 },
                         { nombre: "Unión (MdP)",             clase: "", pj:28, pts:45 },
                         { nombre: "Huracán (Tres Arroyos)",  clase: "", pj:28, pts:37 },
                         { nombre: "Cipolletti",              clase: "", pj:28, pts:34 },
                         { nombre: "Douglas Haig",            clase: "", pj:28, pts:33 },
                         { nombre: "Rivadavia (Lincoln)",     clase: "", pj:28, pts:33 },
-                        { nombre: "Santamarina (T)",         clase: "", pj:28, pts:31 },
+                        { nombre: "Santamarina",         clase: "", pj:28, pts:31 },
                         { nombre: "Villa Mitre",             clase: "villamitre", pj:28, pts:27 }
                     ],
                     partidos: [
@@ -12137,30 +12137,30 @@ const BD_DETALLES_FUERA = {
                         { condicion: "2° Fecha",  local: "Villa Mitre",             visitante: "Rivadavia (Lincoln)",  gl: 1, gv: 1 },
                         { condicion: "3° Fecha",  local: "Douglas Haig",            visitante: "Villa Mitre",          gl: 2, gv: 2 },
                         { condicion: "4° Fecha",  local: "Villa Mitre",             visitante: "Cipolletti",           gl: 1, gv: 1 },
-                        { condicion: "5° Fecha",  local: "Guillermo Brown (M)",     visitante: "Villa Mitre",          gl: 3, gv: 0 },
+                        { condicion: "5° Fecha",  local: "Guillermo Brown",     visitante: "Villa Mitre",          gl: 3, gv: 0 },
                         { condicion: "6° Fecha",  local: "Villa Mitre",             visitante: "Huracán (Tres Arroyos)",gl: 2, gv: 0 },
-                        { condicion: "7° Fecha",  local: "Santamarina (T)",         visitante: "Villa Mitre",          gl: 0, gv: 0 },
+                        { condicion: "7° Fecha",  local: "Santamarina",         visitante: "Villa Mitre",          gl: 0, gv: 0 },
                         { condicion: "8° Fecha",  local: "Villa Mitre",             visitante: "Unión (MdP)",          gl: 2, gv: 1 },
                         { condicion: "9° Fecha",  local: "Rivadavia (Lincoln)",     visitante: "Villa Mitre",          gl: 0, gv: 2 },
                         { condicion: "10° Fecha", local: "Villa Mitre",             visitante: "Douglas Haig",         gl: 1, gv: 1 },
                         { condicion: "11° Fecha", local: "Cipolletti",              visitante: "Villa Mitre",          gl: 2, gv: 2 },
-                        { condicion: "12° Fecha", local: "Villa Mitre",             visitante: "Guillermo Brown (M)",  gl: 1, gv: 1 },
+                        { condicion: "12° Fecha", local: "Villa Mitre",             visitante: "Guillermo Brown",  gl: 1, gv: 1 },
                         { condicion: "13° Fecha", local: "Huracán (Tres Arroyos)",  visitante: "Villa Mitre",          gl: 1, gv: 0 },
-                        { condicion: "14° Fecha", local: "Villa Mitre",             visitante: "Santamarina (T)",      gl: 1, gv: 1 },
+                        { condicion: "14° Fecha", local: "Villa Mitre",             visitante: "Santamarina",      gl: 1, gv: 1 },
                         { condicion: "15° Fecha", local: "Unión (MdP)",             visitante: "Villa Mitre",          gl: 2, gv: 1 },
                         { condicion: "16° Fecha", local: "Villa Mitre",             visitante: "Rivadavia (Lincoln)",  gl: 0, gv: 1 },
                         { condicion: "17° Fecha", local: "Douglas Haig",            visitante: "Villa Mitre",          gl: 3, gv: 0 },
                         { condicion: "18° Fecha", local: "Villa Mitre",             visitante: "Cipolletti",           gl: 2, gv: 1 },
-                        { condicion: "19° Fecha", local: "Guillermo Brown (M)",     visitante: "Villa Mitre",          gl: 4, gv: 1 },
+                        { condicion: "19° Fecha", local: "Guillermo Brown",     visitante: "Villa Mitre",          gl: 4, gv: 1 },
                         { condicion: "20° Fecha", local: "Villa Mitre",             visitante: "Huracán (Tres Arroyos)",gl: 1, gv: 2 },
-                        { condicion: "21° Fecha", local: "Santamarina (T)",         visitante: "Villa Mitre",          gl: 1, gv: 1 },
+                        { condicion: "21° Fecha", local: "Santamarina",         visitante: "Villa Mitre",          gl: 1, gv: 1 },
                         { condicion: "22° Fecha", local: "Villa Mitre",             visitante: "Unión (Sunchales)",    gl: 0, gv: 1 },
                         { condicion: "23° Fecha", local: "Rivadavia (Lincoln)",     visitante: "Villa Mitre",          gl: 1, gv: 1 },
                         { condicion: "24° Fecha", local: "Villa Mitre",             visitante: "Douglas Haig",         gl: 2, gv: 1 },
                         { condicion: "25° Fecha", local: "Cipolletti",              visitante: "Villa Mitre",          gl: 4, gv: 2 },
-                        { condicion: "26° Fecha", local: "Villa Mitre",             visitante: "Guillermo Brown (M)",  gl: 1, gv: 1 },
+                        { condicion: "26° Fecha", local: "Villa Mitre",             visitante: "Guillermo Brown",  gl: 1, gv: 1 },
                         { condicion: "27° Fecha", local: "Huracán (Tres Arroyos)",  visitante: "Villa Mitre",          gl: 2, gv: 2 },
-                        { condicion: "28° Fecha", local: "Villa Mitre",             visitante: "Santamarina (T)",      gl: 0, gv: 2 }
+                        { condicion: "28° Fecha", local: "Villa Mitre",             visitante: "Santamarina",      gl: 0, gv: 2 }
                     ]
                 }]
             },
@@ -12175,16 +12175,16 @@ const BD_DETALLES_FUERA = {
                         { nombre: "Cipolletti",              clase: "", pj:10, pts:10 },
                         { nombre: "Rivadavia (Lincoln)",     clase: "", pj:10, pts:9 },
                         { nombre: "Villa Mitre",             clase: "villamitre", pj:10, pts:8 },
-                        { nombre: "Santamarina (T)",         clase: "", pj:10, pts:7 }
+                        { nombre: "Santamarina",         clase: "", pj:10, pts:7 }
                     ],
                     partidos: [
                         { condicion: "1° Fecha",  local: "— Fecha Libre —",         visitante: "",                     gl: null, gv: null },
-                        { condicion: "2° Fecha",  local: "Santamarina (T)",         visitante: "Villa Mitre",          gl: 0, gv: 2 },
+                        { condicion: "2° Fecha",  local: "Santamarina",         visitante: "Villa Mitre",          gl: 0, gv: 2 },
                         { condicion: "3° Fecha",  local: "Villa Mitre",             visitante: "Rivadavia (Lincoln)",  gl: 2, gv: 0 },
                         { condicion: "4° Fecha",  local: "Douglas Haig",            visitante: "Villa Mitre",          gl: 2, gv: 1 },
                         { condicion: "5° Fecha",  local: "Villa Mitre",             visitante: "Cipolletti",           gl: 1, gv: 2 },
                         { condicion: "6° Fecha",  local: "— Fecha Libre —",         visitante: "",                     gl: null, gv: null },
-                        { condicion: "7° Fecha",  local: "Villa Mitre",             visitante: "Santamarina (T)",      gl: 2, gv: 2 },
+                        { condicion: "7° Fecha",  local: "Villa Mitre",             visitante: "Santamarina",      gl: 2, gv: 2 },
                         { condicion: "8° Fecha",  local: "Rivadavia (Lincoln)",     visitante: "Villa Mitre",          gl: 1, gv: 0 },
                         { condicion: "9° Fecha",  local: "Villa Mitre",             visitante: "Douglas Haig",         gl: 1, gv: 4 },
                         { condicion: "10° Fecha", local: "Cipolletti",              visitante: "Villa Mitre",          gl: 2, gv: 2 }
@@ -12202,7 +12202,7 @@ const BD_DETALLES_FUERA = {
                     nombre: "",
                     equipos: [
                         { nombre: "Rivadavia (Lincoln)",     clase: "", pj:0, pts:42 },
-                        { nombre: "Santamarina (T)",         clase: "", pj:0, pts:38 },
+                        { nombre: "Santamarina",         clase: "", pj:0, pts:38 },
                         { nombre: "Estudiantes (RC)",        clase: "", pj:0, pts:37 },
                         { nombre: "Alumni (Villa María)",    clase: "", pj:0, pts:37 },
                         { nombre: "Villa Mitre",             clase: "villamitre", pj:0, pts:35 },
@@ -12224,7 +12224,7 @@ const BD_DETALLES_FUERA = {
                     equipos: [
                         { nombre: "Once Tigres",             clase: "", pj:28, pts:47 },
                         { nombre: "Ferro (Olavarría)",       clase: "", pj:28, pts:43 },
-                        { nombre: "Alvarado (MdP)",          clase: "", pj:28, pts:43 },
+                        { nombre: "Alvarado",          clase: "", pj:28, pts:43 },
                         { nombre: "Villa Mitre",             clase: "villamitre", pj:28, pts:42 },
                         { nombre: "Liniers",                 clase: "", pj:28, pts:40 },
                         { nombre: "Bella Vista",             clase: "", pj:28, pts:35 },
@@ -12236,28 +12236,28 @@ const BD_DETALLES_FUERA = {
                         { condicion: "2° Fecha",  local: "Villa Mitre",            visitante: "Bella Vista",          gl: 1, gv: 1 },
                         { condicion: "3° Fecha",  local: "Grupo Universitario",    visitante: "Villa Mitre",          gl: 0, gv: 4 },
                         { condicion: "4° Fecha",  local: "Villa Mitre",            visitante: "Liniers",              gl: 1, gv: 1 },
-                        { condicion: "5° Fecha",  local: "Alvarado (MdP)",         visitante: "Villa Mitre",          gl: 2, gv: 1 },
+                        { condicion: "5° Fecha",  local: "Alvarado",         visitante: "Villa Mitre",          gl: 2, gv: 1 },
                         { condicion: "6° Fecha",  local: "Ferro (Olavarría)",      visitante: "Villa Mitre",          gl: 1, gv: 0 },
                         { condicion: "7° Fecha",  local: "Villa Mitre",            visitante: "Independiente (Tandil)",gl: 2, gv: 1 },
                         { condicion: "8° Fecha",  local: "Villa Mitre",            visitante: "Once Tigres",          gl: 0, gv: 1 },
                         { condicion: "9° Fecha",  local: "Bella Vista",            visitante: "Villa Mitre",          gl: 1, gv: 2 },
                         { condicion: "10° Fecha", local: "Villa Mitre",            visitante: "Grupo Universitario",  gl: 3, gv: 0 },
                         { condicion: "11° Fecha", local: "Liniers",                visitante: "Villa Mitre",          gl: 3, gv: 3 },
-                        { condicion: "12° Fecha", local: "Villa Mitre",            visitante: "Alvarado (MdP)",       gl: 3, gv: 1 },
+                        { condicion: "12° Fecha", local: "Villa Mitre",            visitante: "Alvarado",       gl: 3, gv: 1 },
                         { condicion: "13° Fecha", local: "Villa Mitre",            visitante: "Ferro (Olavarría)",    gl: 2, gv: 3 },
                         { condicion: "14° Fecha", local: "Independiente (Tandil)", visitante: "Villa Mitre",          gl: 1, gv: 1 },
                         { condicion: "15° Fecha", local: "Once Tigres",            visitante: "Villa Mitre",          gl: 5, gv: 3 },
                         { condicion: "16° Fecha", local: "Villa Mitre",            visitante: "Bella Vista",          gl: 0, gv: 2 },
                         { condicion: "17° Fecha", local: "Grupo Universitario",    visitante: "Villa Mitre",          gl: 1, gv: 2 },
                         { condicion: "18° Fecha", local: "Villa Mitre",            visitante: "Liniers",              gl: 2, gv: 2 },
-                        { condicion: "19° Fecha", local: "Alvarado (MdP)",         visitante: "Villa Mitre",          gl: 1, gv: 0 },
+                        { condicion: "19° Fecha", local: "Alvarado",         visitante: "Villa Mitre",          gl: 1, gv: 0 },
                         { condicion: "20° Fecha", local: "Ferro (Olavarría)",      visitante: "Villa Mitre",          gl: 0, gv: 0 },
                         { condicion: "21° Fecha", local: "Villa Mitre",            visitante: "Independiente (Tandil)",gl: 2, gv: 2 },
                         { condicion: "22° Fecha", local: "Villa Mitre",            visitante: "Once Tigres",          gl: 1, gv: 1 },
                         { condicion: "23° Fecha", local: "Bella Vista",            visitante: "Villa Mitre",          gl: 0, gv: 1 },
                         { condicion: "24° Fecha", local: "Villa Mitre",            visitante: "Grupo Universitario",  gl: 3, gv: 2 },
                         { condicion: "25° Fecha", local: "Liniers",                visitante: "Villa Mitre",          gl: 1, gv: 1 },
-                        { condicion: "26° Fecha", local: "Villa Mitre",            visitante: "Alvarado (MdP)",       gl: 2, gv: 0 },
+                        { condicion: "26° Fecha", local: "Villa Mitre",            visitante: "Alvarado",       gl: 2, gv: 0 },
                         { condicion: "27° Fecha", local: "Villa Mitre",            visitante: "Ferro (Olavarría)",    gl: 1, gv: 2 },
                         { condicion: "28° Fecha", local: "Independiente (Tandil)", visitante: "Villa Mitre",          gl: 0, gv: 3 }
                     ]
@@ -12271,16 +12271,16 @@ const BD_DETALLES_FUERA = {
                     nombre: "",
                     equipos: [
                         { nombre: "Villa Mitre",             clase: "villamitre", pj:6, pts:12 },
-                        { nombre: "Alvarado (MdP)",          clase: "", pj:6, pts:9 },
+                        { nombre: "Alvarado",          clase: "", pj:6, pts:9 },
                         { nombre: "Ferro (Olavarría)",       clase: "", pj:6, pts:7 },
                         { nombre: "Once Tigres",             clase: "", pj:6, pts:7 }
                     ],
                     partidos: [
                         { condicion: "1° Fecha", local: "Once Tigres",        visitante: "Villa Mitre",    gl: 2, gv: 3 },
-                        { condicion: "2° Fecha", local: "Villa Mitre",        visitante: "Alvarado (MdP)", gl: 1, gv: 0 },
+                        { condicion: "2° Fecha", local: "Villa Mitre",        visitante: "Alvarado", gl: 1, gv: 0 },
                         { condicion: "3° Fecha", local: "Ferro (Olavarría)",  visitante: "Villa Mitre",    gl: 2, gv: 3 },
                         { condicion: "4° Fecha", local: "Villa Mitre",        visitante: "Once Tigres",    gl: 6, gv: 2 },
-                        { condicion: "5° Fecha", local: "Alvarado (MdP)",     visitante: "Villa Mitre",    gl: 4, gv: 0 },
+                        { condicion: "5° Fecha", local: "Alvarado",     visitante: "Villa Mitre",    gl: 4, gv: 0 },
                         { condicion: "6° Fecha", local: "Villa Mitre",        visitante: "Ferro (Olavarría)",gl: 2, gv: 1 }
                     ]
                 }]
@@ -12486,8 +12486,8 @@ const BD_DETALLES_FUERA = {
                 nombre: "Etapa Final — 1° Ronda",
                 nota: "Global: 6-3 Villa Mitre",
                 partidos: [
-                    { condicion: "Ida",    local: "Villa Mitre", visitante: "Germinal (R)", gl: 3, gv: 1 },
-                    { condicion: "Vuelta", local: "Germinal (R)", visitante: "Villa Mitre", gl: 2, gv: 3 }
+                    { condicion: "Ida",    local: "Villa Mitre", visitante: "Germinal", gl: 3, gv: 1 },
+                    { condicion: "Vuelta", local: "Germinal", visitante: "Villa Mitre", gl: 2, gv: 3 }
                 ]
             },
             {
@@ -12709,7 +12709,7 @@ const BD_DETALLES_FUERA = {
                         { nombre: "Cipolletti",                  clase: "", pj:9, pts:11 },
                         { nombre: "Deportivo Madryn",            clase: "", pj:9, pts:7 },
                         { nombre: "Sp. Las Parejas",             clase: "", pj:9, pts:5 },
-                        { nombre: "Alvarado (MdP)",              clase: "", pj:9, pts:4 }
+                        { nombre: "Alvarado",              clase: "", pj:9, pts:4 }
                     ],
                     partidos: [
                         { condicion: "1° Fecha", local: "Cipolletti",                  visitante: "Villa Mitre",              gl: 1, gv: 1 },
@@ -12717,7 +12717,7 @@ const BD_DETALLES_FUERA = {
                         { condicion: "3° Fecha", local: "Sp. Las Parejas",             visitante: "Villa Mitre",              gl: 0, gv: 3 },
                         { condicion: "4° Fecha", local: "Villa Mitre",                 visitante: "Agropecuario",             gl: 0, gv: 0 },
                         { condicion: "5° Fecha", local: "Deportivo Madryn",            visitante: "Villa Mitre",              gl: 0, gv: 0 },
-                        { condicion: "6° Fecha", local: "Villa Mitre",                 visitante: "Alvarado (MdP)",           gl: 1, gv: 0 },
+                        { condicion: "6° Fecha", local: "Villa Mitre",                 visitante: "Alvarado",           gl: 1, gv: 0 },
                         { condicion: "7° Fecha", local: "Gimnasia (Mendoza)",          visitante: "Villa Mitre",              gl: 2, gv: 0 },
                         { condicion: "8° Fecha", local: "Villa Mitre",                 visitante: "Unión (Sunchales)",        gl: 2, gv: 2 },
                         { condicion: "9° Fecha", local: "— Fecha Libre —",             visitante: "",                         gl: null, gv: null }
@@ -12728,8 +12728,8 @@ const BD_DETALLES_FUERA = {
                 nombre: "Reválida — 3° Fase",
                 nota: "Global: 2-2. Penales 4-2 Villa Mitre. Anotaron para VM: Mariano Mc Coubrey, Maximiliano Cantoni, Juan Pedro Magabure y Héctor González. Erró para VM: Daniel Romero.",
                 partidos: [
-                    { condicion: "Ida",    local: "Alvarado (MdP)", visitante: "Villa Mitre",    gl: 0, gv: 2 },
-                    { condicion: "Vuelta", local: "Villa Mitre",    visitante: "Alvarado (MdP)", gl: 0, gv: 2 }
+                    { condicion: "Ida",    local: "Alvarado", visitante: "Villa Mitre",    gl: 0, gv: 2 },
+                    { condicion: "Vuelta", local: "Villa Mitre",    visitante: "Alvarado", gl: 0, gv: 2 }
                 ]
             },
             {
@@ -12760,7 +12760,7 @@ const BD_DETALLES_FUERA = {
                 zonas: [{
                     nombre: "",
                     equipos: [
-                        { nombre: "Alvarado (MdP)",          clase: "", pj:16, pts:29 },
+                        { nombre: "Alvarado",          clase: "", pj:16, pts:29 },
                         { nombre: "Villa Mitre",             clase: "villamitre", pj:16, pts:26 },
                         { nombre: "Deportivo Roca",          clase: "", pj:16, pts:24 },
                         { nombre: "Ferro (Gral. Pico)",      clase: "", pj:16, pts:23 },
@@ -12773,7 +12773,7 @@ const BD_DETALLES_FUERA = {
                     partidos: [
                         { condicion: "1° Fecha",  local: "Villa Mitre",             visitante: "Independiente (Neuquén)", gl: 1, gv: 0 },
                         { condicion: "2° Fecha",  local: "— Fecha Libre —",         visitante: "",                        gl: null, gv: null },
-                        { condicion: "3° Fecha",  local: "Alvarado (MdP)",          visitante: "Villa Mitre",             gl: 1, gv: 1 },
+                        { condicion: "3° Fecha",  local: "Alvarado",          visitante: "Villa Mitre",             gl: 1, gv: 1 },
                         { condicion: "4° Fecha",  local: "Villa Mitre",             visitante: "Deportivo Madryn",        gl: 1, gv: 0 },
                         { condicion: "5° Fecha",  local: "Cipolletti",              visitante: "Villa Mitre",             gl: 1, gv: 2 },
                         { condicion: "6° Fecha",  local: "Villa Mitre",             visitante: "Sansinena",               gl: 0, gv: 0 },
@@ -12782,7 +12782,7 @@ const BD_DETALLES_FUERA = {
                         { condicion: "9° Fecha",  local: "Deportivo Roca",          visitante: "Villa Mitre",             gl: 2, gv: 2 },
                         { condicion: "10° Fecha", local: "Independiente (Neuquén)", visitante: "Villa Mitre",             gl: 0, gv: 0 },
                         { condicion: "11° Fecha", local: "— Fecha Libre —",         visitante: "",                        gl: null, gv: null },
-                        { condicion: "12° Fecha", local: "Villa Mitre",             visitante: "Alvarado (MdP)",          gl: 2, gv: 1 },
+                        { condicion: "12° Fecha", local: "Villa Mitre",             visitante: "Alvarado",          gl: 2, gv: 1 },
                         { condicion: "13° Fecha", local: "Deportivo Madryn",        visitante: "Villa Mitre",             gl: 1, gv: 0 },
                         { condicion: "14° Fecha", local: "Villa Mitre",             visitante: "Cipolletti",              gl: 1, gv: 1 },
                         { condicion: "15° Fecha", local: "Sansinena",               visitante: "Villa Mitre",             gl: 1, gv: 1 },
@@ -12801,7 +12801,7 @@ const BD_DETALLES_FUERA = {
                         { nombre: "Estudiantes (RC)",         clase: "", pj:7, pts:15 },
                         { nombre: "Gimnasia (Mendoza)",       clase: "", pj:7, pts:14 },
                         { nombre: "Juventud Unida",           clase: "", pj:7, pts:13 },
-                        { nombre: "Alvarado (MdP)",           clase: "", pj:7, pts:10 },
+                        { nombre: "Alvarado",           clase: "", pj:7, pts:10 },
                         { nombre: "Deportivo Roca",           clase: "", pj:7, pts:9 },
                         { nombre: "Desamparados",             clase: "", pj:7, pts:8 },
                         { nombre: "Villa Mitre",              clase: "villamitre", pj:7, pts:5 },
@@ -12809,7 +12809,7 @@ const BD_DETALLES_FUERA = {
                     ],
                     partidos: [
                         { condicion: "1° Fecha", local: "Villa Mitre",        visitante: "Juventud Unida",        gl: 0, gv: 1 },
-                        { condicion: "2° Fecha", local: "Alvarado (MdP)",     visitante: "Villa Mitre",           gl: 1, gv: 0 },
+                        { condicion: "2° Fecha", local: "Alvarado",     visitante: "Villa Mitre",           gl: 1, gv: 0 },
                         { condicion: "3° Fecha", local: "Villa Mitre",        visitante: "Ferro (Gral. Pico)",    gl: 1, gv: 1 },
                         { condicion: "4° Fecha", local: "Estudiantes (RC)",   visitante: "Villa Mitre",           gl: 1, gv: 0 },
                         { condicion: "5° Fecha", local: "Villa Mitre",        visitante: "Deportivo Roca",        gl: 0, gv: 3 },
@@ -12837,7 +12837,7 @@ const BD_DETALLES_FUERA = {
                 zonas: [{
                     nombre: "",
                     equipos: [
-                        { nombre: "Alvarado (MdP)",          clase: "", pj:18, pts:32 },
+                        { nombre: "Alvarado",          clase: "", pj:18, pts:32 },
                         { nombre: "Villa Mitre",             clase: "villamitre", pj:18, pts:27 },
                         { nombre: "Sansinena",               clase: "sansinena", pj:18, pts:25 },
                         { nombre: "Sol de Mayo",             clase: "", pj:18, pts:24 },
@@ -12850,7 +12850,7 @@ const BD_DETALLES_FUERA = {
                     partidos: [
                         { condicion: "1° Fecha",  local: "Villa Mitre",             visitante: "Cipolletti",              gl: 1, gv: 0 },
                         { condicion: "2° Fecha",  local: "— Fecha Libre —",         visitante: "",                        gl: null, gv: null },
-                        { condicion: "3° Fecha",  local: "Alvarado (MdP)",          visitante: "Villa Mitre",             gl: 2, gv: 2 },
+                        { condicion: "3° Fecha",  local: "Alvarado",          visitante: "Villa Mitre",             gl: 2, gv: 2 },
                         { condicion: "4° Fecha",  local: "Villa Mitre",             visitante: "Deportivo Roca",          gl: 1, gv: 0 },
                         { condicion: "5° Fecha",  local: "Ferro (Gral. Pico)",      visitante: "Villa Mitre",             gl: 0, gv: 1 },
                         { condicion: "6° Fecha",  local: "Villa Mitre",             visitante: "Deportivo Madryn",        gl: 2, gv: 1 },
@@ -12859,7 +12859,7 @@ const BD_DETALLES_FUERA = {
                         { condicion: "9° Fecha",  local: "Independiente (Neuquén)", visitante: "Villa Mitre",             gl: 2, gv: 2 },
                         { condicion: "10° Fecha", local: "Cipolletti",              visitante: "Villa Mitre",             gl: 1, gv: 1 },
                         { condicion: "11° Fecha", local: "— Fecha Libre —",         visitante: "",                        gl: null, gv: null },
-                        { condicion: "12° Fecha", local: "Villa Mitre",             visitante: "Alvarado (MdP)",          gl: 1, gv: 1 },
+                        { condicion: "12° Fecha", local: "Villa Mitre",             visitante: "Alvarado",          gl: 1, gv: 1 },
                         { condicion: "13° Fecha", local: "Deportivo Roca",          visitante: "Villa Mitre",             gl: 2, gv: 0 },
                         { condicion: "14° Fecha", local: "Villa Mitre",             visitante: "Ferro (Gral. Pico)",      gl: 2, gv: 0 },
                         { condicion: "15° Fecha", local: "Deportivo Madryn",        visitante: "Villa Mitre",             gl: 1, gv: 0 },
@@ -12877,7 +12877,7 @@ const BD_DETALLES_FUERA = {
                 zonas: [{
                     nombre: "",
                     equipos: [
-                        { nombre: "Alvarado (MdP)",              clase: "", pj:7, pts:12 },
+                        { nombre: "Alvarado",              clase: "", pj:7, pts:12 },
                         { nombre: "Defensores (Villa Ramallo)",  clase: "", pj:7, pts:12 },
                         { nombre: "Gimnasia (CdU)",              clase: "", pj:7, pts:11 },
                         { nombre: "Sansinena",                   clase: "sansinena", pj:7, pts:11 },
@@ -12891,7 +12891,7 @@ const BD_DETALLES_FUERA = {
                         { condicion: "2° Fecha", local: "Defensores (Villa Ramallo)",   visitante: "Villa Mitre",              gl: 2, gv: 1 },
                         { condicion: "3° Fecha", local: "Villa Mitre",                  visitante: "Gimnasia (CdU)",           gl: 0, gv: 0 },
                         { condicion: "4° Fecha", local: "Villa Mitre",                  visitante: "Unión (Sunchales)",        gl: 3, gv: 1 },
-                        { condicion: "5° Fecha", local: "Alvarado (MdP)",               visitante: "Villa Mitre",              gl: 1, gv: 1 },
+                        { condicion: "5° Fecha", local: "Alvarado",               visitante: "Villa Mitre",              gl: 1, gv: 1 },
                         { condicion: "6° Fecha", local: "Villa Mitre",                  visitante: "Sol de Mayo",              gl: 1, gv: 1 },
                         { condicion: "7° Fecha", local: "Camioneros",                   visitante: "Villa Mitre",              gl: 0, gv: 2 }
                     ]
@@ -12929,7 +12929,7 @@ const BD_DETALLES_FUERA = {
                         { nombre: "Camioneros",              clase: "", pj:23, pts:25 },
                         { nombre: "Estudiantes (SL)",        clase: "", pj:23, pts:25 },
                         { nombre: "Cipolletti",              clase: "", pj:23, pts:25 },
-                        { nombre: "Círculo Dep. (O)",        clase: "", pj:23, pts:24 },
+                        { nombre: "Círculo Dep.",        clase: "", pj:23, pts:24 },
                         { nombre: "Desamparados",            clase: "", pj:23, pts:24 },
                         { nombre: "Sp. Peñarol",             clase: "", pj:23, pts:22 },
                         { nombre: "Sol de Mayo",             clase: "", pj:23, pts:17 }
@@ -12943,7 +12943,7 @@ const BD_DETALLES_FUERA = {
                         { condicion: "6° Fecha",  local: "Villa Mitre",          visitante: "Sol de Mayo",          gl: 2, gv: 0 },
                         { condicion: "7° Fecha",  local: "Desamparados",         visitante: "Villa Mitre",          gl: 0, gv: 1 },
                         { condicion: "8° Fecha",  local: "Villa Mitre",          visitante: "Juventud Unida",       gl: 0, gv: 1 },
-                        { condicion: "9° Fecha",  local: "Círculo Dep. (O)",     visitante: "Villa Mitre",          gl: 0, gv: 0 },
+                        { condicion: "9° Fecha",  local: "Círculo Dep.",     visitante: "Villa Mitre",          gl: 0, gv: 0 },
                         { condicion: "10° Fecha", local: "Villa Mitre",          visitante: "Camioneros",           gl: 0, gv: 0 },
                         { condicion: "11° Fecha", local: "— Fecha Libre —",      visitante: "",                     gl: null, gv: null },
                         { condicion: "12° Fecha", local: "Deportivo Maipú",      visitante: "Villa Mitre",          gl: 1, gv: 1 },
@@ -13041,7 +13041,7 @@ const BD_DETALLES_FUERA = {
                         { nombre: "Huracán (Las Heras)",        clase: "", pj:30, pts:35 },
                         { nombre: "Camioneros",                 clase: "", pj:30, pts:29 },
                         { nombre: "Estudiantes (SL)",           clase: "", pj:30, pts:15 },
-                        { nombre: "Círculo Dep. (O)",           clase: "", pj:30, pts:13 }
+                        { nombre: "Círculo Dep.",           clase: "", pj:30, pts:13 }
                     ],
                     partidos: [
                         { condicion: "1° Fecha",  local: "Huracán (Las Heras)",       visitante: "Villa Mitre",              gl: 2, gv: 1 },
@@ -13052,7 +13052,7 @@ const BD_DETALLES_FUERA = {
                         { condicion: "6° Fecha",  local: "Villa Mitre",               visitante: "Estudiantes (SL)",         gl: 2, gv: 1 },
                         { condicion: "7° Fecha",  local: "Independiente (Chivilcoy)", visitante: "Villa Mitre",              gl: 1, gv: 0 },
                         { condicion: "8° Fecha",  local: "Villa Mitre",               visitante: "Cipolletti",               gl: 1, gv: 0 },
-                        { condicion: "9° Fecha",  local: "Círculo Dep. (O)",          visitante: "Villa Mitre",              gl: 1, gv: 0 },
+                        { condicion: "9° Fecha",  local: "Círculo Dep.",          visitante: "Villa Mitre",              gl: 1, gv: 0 },
                         { condicion: "10° Fecha", local: "Villa Mitre",               visitante: "Ferro (Gral. Pico)",       gl: 2, gv: 1 },
                         { condicion: "11° Fecha", local: "Bolívar",                   visitante: "Villa Mitre",              gl: 2, gv: 2 },
                         { condicion: "12° Fecha", local: "Desamparados",              visitante: "Villa Mitre",              gl: 1, gv: 0 },
@@ -13067,7 +13067,7 @@ const BD_DETALLES_FUERA = {
                         { condicion: "21° Fecha", local: "Estudiantes (SL)",          visitante: "Villa Mitre",              gl: 0, gv: 0 },
                         { condicion: "22° Fecha", local: "Villa Mitre",               visitante: "Independiente (Chivilcoy)",gl: 0, gv: 1 },
                         { condicion: "23° Fecha", local: "Cipolletti",                visitante: "Villa Mitre",              gl: 1, gv: 0 },
-                        { condicion: "24° Fecha", local: "Villa Mitre",               visitante: "Círculo Dep. (O)",         gl: 2, gv: 0 },
+                        { condicion: "24° Fecha", local: "Villa Mitre",               visitante: "Círculo Dep.",         gl: 2, gv: 0 },
                         { condicion: "25° Fecha", local: "Ferro (Gral. Pico)",        visitante: "Villa Mitre",              gl: 3, gv: 0 },
                         { condicion: "26° Fecha", local: "Villa Mitre",               visitante: "Bolívar",                  gl: 1, gv: 0 },
                         { condicion: "27° Fecha", local: "Villa Mitre",               visitante: "Desamparados",             gl: 3, gv: 0 },
@@ -13108,7 +13108,7 @@ const BD_DETALLES_FUERA = {
                         { nombre: "Cipolletti",                 clase: "", pj:34, pts:38 },
                         { nombre: "Sp. Peñarol",                clase: "", pj:34, pts:37 },
                         { nombre: "Liniers",                    clase: "", pj:34, pts:36 },
-                        { nombre: "Círculo Dep. (O)",           clase: "", pj:34, pts:36 },
+                        { nombre: "Círculo Dep.",           clase: "", pj:34, pts:36 },
                         { nombre: "Huracán (Las Heras)",        clase: "", pj:34, pts:35, nota: "-3 pts" },
                         { nombre: "Ferro (Gral. Pico)",         clase: "", pj:34, pts:35 },
                         { nombre: "Desamparados",               clase: "", pj:34, pts:34 },
@@ -13127,7 +13127,7 @@ const BD_DETALLES_FUERA = {
                         { condicion: "10° Fecha", local: "Villa Mitre",               visitante: "Independiente (Chivilcoy)",gl: 1, gv: 0 },
                         { condicion: "11° Fecha", local: "Sol de Mayo",               visitante: "Villa Mitre",              gl: 0, gv: 0 },
                         { condicion: "12° Fecha", local: "Villa Mitre",               visitante: "Argentino (Monte Maíz)",   gl: 1, gv: 1 },
-                        { condicion: "13° Fecha", local: "Círculo Dep. (O)",          visitante: "Villa Mitre",              gl: 1, gv: 0 },
+                        { condicion: "13° Fecha", local: "Círculo Dep.",          visitante: "Villa Mitre",              gl: 1, gv: 0 },
                         { condicion: "14° Fecha", local: "Villa Mitre",               visitante: "Liniers",                  gl: 0, gv: 1 },
                         { condicion: "15° Fecha", local: "Juventud Unida",            visitante: "Villa Mitre",              gl: 1, gv: 1 },
                         { condicion: "16° Fecha", local: "Villa Mitre",               visitante: "Ferro (Gral. Pico)",       gl: 3, gv: 1 },
@@ -13144,7 +13144,7 @@ const BD_DETALLES_FUERA = {
                         { condicion: "27° Fecha", local: "Independiente (Chivilcoy)", visitante: "Villa Mitre",              gl: 1, gv: 1 },
                         { condicion: "28° Fecha", local: "Villa Mitre",               visitante: "Sol de Mayo",              gl: 2, gv: 1 },
                         { condicion: "29° Fecha", local: "Argentino (Monte Maíz)",    visitante: "Villa Mitre",              gl: 1, gv: 1 },
-                        { condicion: "30° Fecha", local: "Villa Mitre",               visitante: "Círculo Dep. (O)",         gl: 2, gv: 2 },
+                        { condicion: "30° Fecha", local: "Villa Mitre",               visitante: "Círculo Dep.",         gl: 2, gv: 2 },
                         { condicion: "31° Fecha", local: "Liniers",                   visitante: "Villa Mitre",              gl: 2, gv: 0 },
                         { condicion: "32° Fecha", local: "Villa Mitre",               visitante: "Juventud Unida",           gl: 2, gv: 1 },
                         { condicion: "33° Fecha", local: "Ferro (Gral. Pico)",        visitante: "Villa Mitre",              gl: 1, gv: 1 },
@@ -13194,49 +13194,49 @@ const BD_DETALLES_FUERA = {
                         { nombre: "Olimpo",              clase: "olimpo", pj:36, pts:70 },
                         { nombre: "Villa Mitre",         clase: "villamitre", pj:36, pts:67 },
                         { nombre: "Cipolletti",          clase: "", pj:36, pts:47 },
-                        { nombre: "Santamarina (T)",     clase: "", pj:36, pts:44 },
+                        { nombre: "Santamarina",     clase: "", pj:36, pts:44 },
                         { nombre: "Sansinena",           clase: "sansinena", pj:36, pts:43 },
                         { nombre: "Sol de Mayo",         clase: "", pj:36, pts:38 },
-                        { nombre: "Germinal (R)",        clase: "", pj:36, pts:34 },
-                        { nombre: "Círculo Dep. (O)",    clase: "", pj:36, pts:29 },
+                        { nombre: "Germinal",        clase: "", pj:36, pts:34 },
+                        { nombre: "Círculo Dep.",    clase: "", pj:36, pts:29 },
                         { nombre: "Liniers",             clase: "", pj:36, pts:24 }
                     ],
                     partidos: [
                         { condicion: "1° Fecha",  local: "Villa Mitre",      visitante: "Liniers",           gl: 0, gv: 0 },
                         { condicion: "2° Fecha",  local: "— Fecha Libre —",  visitante: "",                  gl: null, gv: null },
-                        { condicion: "3° Fecha",  local: "Santamarina (T)",  visitante: "Villa Mitre",       gl: 0, gv: 0 },
+                        { condicion: "3° Fecha",  local: "Santamarina",  visitante: "Villa Mitre",       gl: 0, gv: 0 },
                         { condicion: "4° Fecha",  local: "Villa Mitre",      visitante: "Cipolletti",        gl: 2, gv: 0 },
-                        { condicion: "5° Fecha",  local: "Germinal (R)",     visitante: "Villa Mitre",       gl: 1, gv: 0 },
+                        { condicion: "5° Fecha",  local: "Germinal",     visitante: "Villa Mitre",       gl: 1, gv: 0 },
                         { condicion: "6° Fecha",  local: "Villa Mitre",      visitante: "Sol de Mayo",       gl: 1, gv: 0 },
                         { condicion: "7° Fecha",  local: "Olimpo",           visitante: "Villa Mitre",       gl: 1, gv: 0 },
-                        { condicion: "8° Fecha",  local: "Villa Mitre",      visitante: "Círculo Dep. (O)",  gl: 3, gv: 1 },
+                        { condicion: "8° Fecha",  local: "Villa Mitre",      visitante: "Círculo Dep.",  gl: 3, gv: 1 },
                         { condicion: "9° Fecha",  local: "Sansinena",        visitante: "Villa Mitre",       gl: 0, gv: 2 },
                         { condicion: "10° Fecha", local: "Liniers",          visitante: "Villa Mitre",       gl: 0, gv: 0 },
                         { condicion: "11° Fecha", local: "— Fecha Libre —",  visitante: "",                  gl: null, gv: null },
-                        { condicion: "12° Fecha", local: "Villa Mitre",      visitante: "Santamarina (T)",   gl: 2, gv: 0 },
+                        { condicion: "12° Fecha", local: "Villa Mitre",      visitante: "Santamarina",   gl: 2, gv: 0 },
                         { condicion: "13° Fecha", local: "Cipolletti",       visitante: "Villa Mitre",       gl: 1, gv: 2 },
-                        { condicion: "14° Fecha", local: "Villa Mitre",      visitante: "Germinal (R)",      gl: 3, gv: 0 },
+                        { condicion: "14° Fecha", local: "Villa Mitre",      visitante: "Germinal",      gl: 3, gv: 0 },
                         { condicion: "15° Fecha", local: "Sol de Mayo",      visitante: "Villa Mitre",       gl: 1, gv: 1 },
                         { condicion: "16° Fecha", local: "Villa Mitre",      visitante: "Olimpo",            gl: 1, gv: 0 },
-                        { condicion: "17° Fecha", local: "Círculo Dep. (O)", visitante: "Olimpo",            gl: 0, gv: 0 },
+                        { condicion: "17° Fecha", local: "Círculo Dep.", visitante: "Olimpo",            gl: 0, gv: 0 },
                         { condicion: "18° Fecha", local: "Villa Mitre",      visitante: "Sansinena",         gl: 0, gv: 0 },
                         { condicion: "19° Fecha", local: "Villa Mitre",      visitante: "Liniers",           gl: 4, gv: 1 },
                         { condicion: "20° Fecha", local: "— Fecha Libre —",  visitante: "",                  gl: null, gv: null },
-                        { condicion: "21° Fecha", local: "Santamarina (T)",  visitante: "Villa Mitre",       gl: 1, gv: 1 },
+                        { condicion: "21° Fecha", local: "Santamarina",  visitante: "Villa Mitre",       gl: 1, gv: 1 },
                         { condicion: "22° Fecha", local: "Villa Mitre",      visitante: "Cipolletti",        gl: 2, gv: 0 },
-                        { condicion: "23° Fecha", local: "Germinal (R)",     visitante: "Villa Mitre",       gl: 0, gv: 1 },
+                        { condicion: "23° Fecha", local: "Germinal",     visitante: "Villa Mitre",       gl: 0, gv: 1 },
                         { condicion: "24° Fecha", local: "Villa Mitre",      visitante: "Sol de Mayo",       gl: 4, gv: 1 },
                         { condicion: "25° Fecha", local: "Olimpo",           visitante: "Villa Mitre",       gl: 3, gv: 2 },
-                        { condicion: "26° Fecha", local: "Villa Mitre",      visitante: "Círculo Dep. (O)",  gl: 1, gv: 1 },
+                        { condicion: "26° Fecha", local: "Villa Mitre",      visitante: "Círculo Dep.",  gl: 1, gv: 1 },
                         { condicion: "27° Fecha", local: "Sansinena",        visitante: "Villa Mitre",       gl: 2, gv: 4 },
                         { condicion: "28° Fecha", local: "Liniers",          visitante: "Villa Mitre",       gl: 0, gv: 2 },
                         { condicion: "29° Fecha", local: "— Fecha Libre —",  visitante: "",                  gl: null, gv: null },
-                        { condicion: "30° Fecha", local: "Villa Mitre",      visitante: "Santamarina (T)",   gl: 2, gv: 0 },
+                        { condicion: "30° Fecha", local: "Villa Mitre",      visitante: "Santamarina",   gl: 2, gv: 0 },
                         { condicion: "31° Fecha", local: "Cipolletti",       visitante: "Villa Mitre",       gl: 0, gv: 0 },
-                        { condicion: "32° Fecha", local: "Villa Mitre",      visitante: "Germinal (R)",      gl: 3, gv: 0 },
+                        { condicion: "32° Fecha", local: "Villa Mitre",      visitante: "Germinal",      gl: 3, gv: 0 },
                         { condicion: "33° Fecha", local: "Sol de Mayo",      visitante: "Villa Mitre",       gl: 0, gv: 4 },
                         { condicion: "34° Fecha", local: "Villa Mitre",      visitante: "Olimpo",            gl: 0, gv: 0 },
-                        { condicion: "35° Fecha", local: "Círculo Dep. (O)", visitante: "Villa Mitre",       gl: 1, gv: 4 },
+                        { condicion: "35° Fecha", local: "Círculo Dep.", visitante: "Villa Mitre",       gl: 1, gv: 4 },
                         { condicion: "36° Fecha", local: "Villa Mitre",      visitante: "Sansinena",         gl: 4, gv: 0 }
                     ]
                 }]
@@ -13268,34 +13268,34 @@ const BD_DETALLES_FUERA = {
                     equipos: [
                         { nombre: "Olimpo",              clase: "olimpo", pj:18, pts:36 },
                         { nombre: "Villa Mitre",         clase: "villamitre", pj:18, pts:34 },
-                        { nombre: "Germinal (R)",        clase: "", pj:18, pts:33 },
-                        { nombre: "Santamarina (T)",     clase: "", pj:18, pts:25 },
-                        { nombre: "Kimberley (MdP)",     clase: "", pj:18, pts:25 },
-                        { nombre: "Círculo Dep. (O)",    clase: "", pj:18, pts:21 },
+                        { nombre: "Germinal",        clase: "", pj:18, pts:33 },
+                        { nombre: "Santamarina",     clase: "", pj:18, pts:25 },
+                        { nombre: "Kimberley",     clase: "", pj:18, pts:25 },
+                        { nombre: "Círculo Dep.",    clase: "", pj:18, pts:21 },
                         { nombre: "Sol de Mayo",         clase: "", pj:18, pts:21 },
                         { nombre: "Rincón",              clase: "", pj:18, pts:20 },
                         { nombre: "Cipolletti",          clase: "", pj:18, pts:17 },
                         { nombre: "Sansinena",           clase: "sansinena", pj:18, pts:8, nota: "Abandonó el torneo" }
                     ],
                     partidos: [
-                        { condicion: "1° Fecha",  local: "Villa Mitre",      visitante: "Santamarina (T)",   gl: 2, gv: 0 },
+                        { condicion: "1° Fecha",  local: "Villa Mitre",      visitante: "Santamarina",   gl: 2, gv: 0 },
                         { condicion: "2° Fecha",  local: "Villa Mitre",      visitante: "Sansinena",         gl: 3, gv: 2 },
-                        { condicion: "3° Fecha",  local: "Germinal (R)",     visitante: "Villa Mitre",       gl: 1, gv: 0 },
+                        { condicion: "3° Fecha",  local: "Germinal",     visitante: "Villa Mitre",       gl: 1, gv: 0 },
                         { condicion: "4° Fecha",  local: "Villa Mitre",      visitante: "Sol de Mayo",       gl: 3, gv: 1 },
-                        { condicion: "5° Fecha",  local: "Kimberley (MdP)",  visitante: "Villa Mitre",       gl: 1, gv: 0 },
+                        { condicion: "5° Fecha",  local: "Kimberley",  visitante: "Villa Mitre",       gl: 1, gv: 0 },
                         { condicion: "6° Fecha",  local: "Villa Mitre",      visitante: "Olimpo",            gl: 1, gv: 3 },
                         { condicion: "7° Fecha",  local: "Cipolletti",       visitante: "Villa Mitre",       gl: 0, gv: 1 },
                         { condicion: "8° Fecha",  local: "Villa Mitre",      visitante: "Rincón",            gl: 2, gv: 0 },
-                        { condicion: "9° Fecha",  local: "Círculo Dep. (O)", visitante: "Villa Mitre",       gl: 1, gv: 1 },
-                        { condicion: "10° Fecha", local: "Santamarina (T)",  visitante: "Villa Mitre",       gl: 0, gv: 0 },
+                        { condicion: "9° Fecha",  local: "Círculo Dep.", visitante: "Villa Mitre",       gl: 1, gv: 1 },
+                        { condicion: "10° Fecha", local: "Santamarina",  visitante: "Villa Mitre",       gl: 0, gv: 0 },
                         { condicion: "11° Fecha", local: "Sansinena",        visitante: "Villa Mitre",       gl: 0, gv: 2 },
-                        { condicion: "12° Fecha", local: "Villa Mitre",      visitante: "Germinal (R)",      gl: 2, gv: 0 },
+                        { condicion: "12° Fecha", local: "Villa Mitre",      visitante: "Germinal",      gl: 2, gv: 0 },
                         { condicion: "13° Fecha", local: "Sol de Mayo",      visitante: "Villa Mitre",       gl: 0, gv: 2 },
-                        { condicion: "14° Fecha", local: "Villa Mitre",      visitante: "Kimberley (MdP)",   gl: 0, gv: 0 },
+                        { condicion: "14° Fecha", local: "Villa Mitre",      visitante: "Kimberley",   gl: 0, gv: 0 },
                         { condicion: "15° Fecha", local: "Olimpo",           visitante: "Villa Mitre",       gl: 2, gv: 0 },
                         { condicion: "16° Fecha", local: "Villa Mitre",      visitante: "Cipolletti",        gl: 2, gv: 0 },
                         { condicion: "17° Fecha", local: "Rincón",           visitante: "Villa Mitre",       gl: 1, gv: 1 },
-                        { condicion: "18° Fecha", local: "Villa Mitre",      visitante: "Círculo Dep. (O)",  gl: 2, gv: 0 }
+                        { condicion: "18° Fecha", local: "Villa Mitre",      visitante: "Círculo Dep.",  gl: 2, gv: 0 }
                     ]
                 }]
             },
@@ -13308,22 +13308,22 @@ const BD_DETALLES_FUERA = {
                     nombre: "",
                     equipos: [
                         { nombre: "Bolívar",                clase: "", pj:9, pts:17 },
-                        { nombre: "Santamarina (T)",        clase: "", pj:9, pts:14 },
+                        { nombre: "Santamarina",        clase: "", pj:9, pts:14 },
                         { nombre: "Villa Mitre",            clase: "villamitre", pj:9, pts:14 },
                         { nombre: "Argentino (Monte Maíz)", clase: "", pj:9, pts:13 },
-                        { nombre: "Kimberley (MdP)",        clase: "", pj:9, pts:12 },
+                        { nombre: "Kimberley",        clase: "", pj:9, pts:12 },
                         { nombre: "Gutiérrez SC",           clase: "", pj:9, pts:8 },
                         { nombre: "Camioneros",             clase: "", pj:9, pts:8 },
-                        { nombre: "Germinal (R)",           clase: "", pj:9, pts:7 },
+                        { nombre: "Germinal",           clase: "", pj:9, pts:7 },
                         { nombre: "Olimpo",                 clase: "olimpo", pj:9, pts:5 }
                     ],
                     partidos: [
-                        { condicion: "1° Fecha", local: "Kimberley (MdP)",        visitante: "Villa Mitre",              gl: 2, gv: 0 },
+                        { condicion: "1° Fecha", local: "Kimberley",        visitante: "Villa Mitre",              gl: 2, gv: 0 },
                         { condicion: "2° Fecha", local: "Villa Mitre",            visitante: "Bolívar",                  gl: 2, gv: 1 },
                         { condicion: "3° Fecha", local: "Gutiérrez SC",           visitante: "Villa Mitre",              gl: 1, gv: 1 },
-                        { condicion: "4° Fecha", local: "Villa Mitre",            visitante: "Santamarina (T)",          gl: 1, gv: 1 },
+                        { condicion: "4° Fecha", local: "Villa Mitre",            visitante: "Santamarina",          gl: 1, gv: 1 },
                         { condicion: "5° Fecha", local: "Olimpo",                 visitante: "Villa Mitre",              gl: 0, gv: 1 },
-                        { condicion: "6° Fecha", local: "Villa Mitre",            visitante: "Germinal (R)",             gl: 1, gv: 0 },
+                        { condicion: "6° Fecha", local: "Villa Mitre",            visitante: "Germinal",             gl: 1, gv: 0 },
                         { condicion: "7° Fecha", local: "Argentino (Monte Maíz)", visitante: "Villa Mitre",              gl: 3, gv: 0 },
                         { condicion: "8° Fecha", local: "Villa Mitre",            visitante: "Camioneros",               gl: 3, gv: 1 },
                         { condicion: "9° Fecha", local: "— Fecha Libre —",        visitante: "",                         gl: null, gv: null }
@@ -13358,8 +13358,8 @@ const BD_DETALLES_FUERA = {
                 nombre: "Reválida — Semifinales",
                 nota: "Global: 2-1 Villa Mitre",
                 partidos: [
-                    { condicion: "Ida",    local: "Villa Mitre",      visitante: "Santamarina (T)", gl: 1, gv: 0 },
-                    { condicion: "Vuelta", local: "Santamarina (T)",  visitante: "Villa Mitre",     gl: 1, gv: 1 }
+                    { condicion: "Ida",    local: "Villa Mitre",      visitante: "Santamarina", gl: 1, gv: 0 },
+                    { condicion: "Vuelta", local: "Santamarina",  visitante: "Villa Mitre",     gl: 1, gv: 1 }
                 ]
             },
             {
@@ -13384,33 +13384,33 @@ const BD_DETALLES_FUERA = {
                         { nombre: "Cipolletti",          clase: "", pj:18, pts:40 },
                         { nombre: "Villa Mitre",         clase: "villamitre", pj:18, pts:35 },
                         { nombre: "Olimpo",              clase: "olimpo", pj:18, pts:26 },
-                        { nombre: "Kimberley (MdP)",     clase: "", pj:18, pts:26 },
+                        { nombre: "Kimberley",     clase: "", pj:18, pts:26 },
                         { nombre: "Rincón",              clase: "", pj:18, pts:26 },
-                        { nombre: "Círculo Dep. (O)",    clase: "", pj:18, pts:23 },
-                        { nombre: "Guillermo Brown (M)", clase: "", pj:18, pts:21 },
-                        { nombre: "Santamarina (T)",     clase: "", pj:18, pts:20 },
+                        { nombre: "Círculo Dep.",    clase: "", pj:18, pts:23 },
+                        { nombre: "Guillermo Brown", clase: "", pj:18, pts:21 },
+                        { nombre: "Santamarina",     clase: "", pj:18, pts:20 },
                         { nombre: "Sol de Mayo",         clase: "", pj:18, pts:17 },
-                        { nombre: "Germinal (R)",        clase: "", pj:18, pts:16 }
+                        { nombre: "Germinal",        clase: "", pj:18, pts:16 }
                     ],
                     partidos: [
-                        { condicion: "1° Fecha",  local: "Santamarina (T)",   visitante: "Villa Mitre",       gl: 1, gv: 1 },
-                        { condicion: "2° Fecha",  local: "Villa Mitre",       visitante: "Germinal (R)",      gl: 2, gv: 0 },
+                        { condicion: "1° Fecha",  local: "Santamarina",   visitante: "Villa Mitre",       gl: 1, gv: 1 },
+                        { condicion: "2° Fecha",  local: "Villa Mitre",       visitante: "Germinal",      gl: 2, gv: 0 },
                         { condicion: "3° Fecha",  local: "Olimpo",            visitante: "Villa Mitre",       gl: 0, gv: 0 },
                         { condicion: "4° Fecha",  local: "Villa Mitre",       visitante: "Cipolletti",        gl: 0, gv: 2 },
                         { condicion: "5° Fecha",  local: "Sol de Mayo",       visitante: "Villa Mitre",       gl: 0, gv: 3 },
-                        { condicion: "6° Fecha",  local: "Villa Mitre",       visitante: "Guillermo Brown (M)",gl: 2, gv: 1 },
+                        { condicion: "6° Fecha",  local: "Villa Mitre",       visitante: "Guillermo Brown",gl: 2, gv: 1 },
                         { condicion: "7° Fecha",  local: "Rincón",            visitante: "Villa Mitre",       gl: 0, gv: 2 },
-                        { condicion: "8° Fecha",  local: "Círculo Dep. (O)",  visitante: "Villa Mitre",       gl: 1, gv: 0 },
-                        { condicion: "9° Fecha",  local: "Villa Mitre",       visitante: "Kimberley (MdP)",   gl: 1, gv: 0 },
-                        { condicion: "10° Fecha", local: "Villa Mitre",       visitante: "Santamarina (T)",   gl: 3, gv: 0 },
-                        { condicion: "11° Fecha", local: "Germinal (R)",      visitante: "Villa Mitre",       gl: 1, gv: 1 },
+                        { condicion: "8° Fecha",  local: "Círculo Dep.",  visitante: "Villa Mitre",       gl: 1, gv: 0 },
+                        { condicion: "9° Fecha",  local: "Villa Mitre",       visitante: "Kimberley",   gl: 1, gv: 0 },
+                        { condicion: "10° Fecha", local: "Villa Mitre",       visitante: "Santamarina",   gl: 3, gv: 0 },
+                        { condicion: "11° Fecha", local: "Germinal",      visitante: "Villa Mitre",       gl: 1, gv: 1 },
                         { condicion: "12° Fecha", local: "Villa Mitre",       visitante: "Olimpo",            gl: 1, gv: 0 },
                         { condicion: "13° Fecha", local: "Cipolletti",        visitante: "Villa Mitre",       gl: 1, gv: 1 },
                         { condicion: "14° Fecha", local: "Villa Mitre",       visitante: "Sol de Mayo",       gl: 1, gv: 2 },
-                        { condicion: "15° Fecha", local: "Guillermo Brown (M)",visitante: "Villa Mitre",      gl: 2, gv: 1 },
+                        { condicion: "15° Fecha", local: "Guillermo Brown",visitante: "Villa Mitre",      gl: 2, gv: 1 },
                         { condicion: "16° Fecha", local: "Villa Mitre",       visitante: "Rincón",            gl: 1, gv: 0 },
-                        { condicion: "17° Fecha", local: "Villa Mitre",       visitante: "Círculo Dep. (O)",  gl: 1, gv: 0 },
-                        { condicion: "18° Fecha", local: "Kimberley (MdP)",   visitante: "Villa Mitre",       gl: 0, gv: 0 }
+                        { condicion: "17° Fecha", local: "Villa Mitre",       visitante: "Círculo Dep.",  gl: 1, gv: 0 },
+                        { condicion: "18° Fecha", local: "Kimberley",   visitante: "Villa Mitre",       gl: 0, gv: 0 }
                     ]
                 }]
             },
@@ -13430,7 +13430,7 @@ const BD_DETALLES_FUERA = {
                         { nombre: "Costa Brava",            clase: "", pj:9, pts:9 },
                         { nombre: "Villa Mitre",            clase: "villamitre", pj:9, pts:9 },
                         { nombre: "Cipolletti",             clase: "", pj:9, pts:6 },
-                        { nombre: "Kimberley (MdP)",        clase: "", pj:9, pts:5 }
+                        { nombre: "Kimberley",        clase: "", pj:9, pts:5 }
                     ],
                     partidos: [
                         { condicion: "1° Fecha", local: "Costa Brava",            visitante: "Villa Mitre",              gl: 1, gv: 0 },
@@ -13439,7 +13439,7 @@ const BD_DETALLES_FUERA = {
                         { condicion: "4° Fecha", local: "Villa Mitre",            visitante: "Olimpo",                   gl: 1, gv: 1 },
                         { condicion: "5° Fecha", local: "Cipolletti",             visitante: "Villa Mitre",              gl: 0, gv: 0 },
                         { condicion: "6° Fecha", local: "Villa Mitre",            visitante: "Argentino (Monte Maíz)",   gl: 1, gv: 0 },
-                        { condicion: "7° Fecha", local: "Kimberley (MdP)",        visitante: "Villa Mitre",              gl: 0, gv: 0 },
+                        { condicion: "7° Fecha", local: "Kimberley",        visitante: "Villa Mitre",              gl: 0, gv: 0 },
                         { condicion: "8° Fecha", local: "Villa Mitre",            visitante: "Rincón",                   gl: 1, gv: 0 },
                         { condicion: "9° Fecha", local: "— Fecha Libre —",        visitante: "",                         gl: null, gv: null }
                     ]
@@ -13449,8 +13449,8 @@ const BD_DETALLES_FUERA = {
                 nombre: "Reválida — Segunda Etapa",
                 nota: "Global: 4-2 Guillermo Brown (Madryn). La vuelta se reprogramó dos veces por malas condiciones climáticas.",
                 partidos: [
-                    { condicion: "Ida",    local: "Guillermo Brown (M)", visitante: "Villa Mitre",          gl: 3, gv: 0 },
-                    { condicion: "Vuelta", local: "Villa Mitre",         visitante: "Guillermo Brown (M)",  gl: 2, gv: 1 }
+                    { condicion: "Ida",    local: "Guillermo Brown", visitante: "Villa Mitre",          gl: 3, gv: 0 },
+                    { condicion: "Vuelta", local: "Villa Mitre",         visitante: "Guillermo Brown",  gl: 2, gv: 1 }
                 ]
             }
         ]
@@ -13466,7 +13466,7 @@ const BD_DETALLES_FUERA = {
             {
                 nombre: "Tercera Eliminatoria",
                 partidos: [
-                    { condicion: "Partido Único", local: "Santamarina (T)", visitante: "Villa Mitre", gl: 1, gv: 0 }
+                    { condicion: "Partido Único", local: "Santamarina", visitante: "Villa Mitre", gl: 1, gv: 0 }
                 ]
             }
         ]
@@ -13825,18 +13825,18 @@ function generarReserva(cat) {
 const BD_POS_SUB = {
     sub13: [
         {nombre:"Villa Mitre",    clase:"villamitre",  pj:1,pg:1,pe:0,pp:0,gf:4,gc:2,pts:3},
-        {nombre:"Kimberley (MdP)",clase:"kimberley",   pj:0,pg:0,pe:0,pp:0,gf:0,gc:0,pts:0},
-        {nombre:"Alvarado (MdP)", clase:"alvarado",    pj:0,pg:0,pe:0,pp:0,gf:0,gc:0,pts:0},
-        {nombre:"Santamarina (T)",clase:"santamarina", pj:0,pg:0,pe:0,pp:0,gf:0,gc:0,pts:0},
+        {nombre:"Kimberley",clase:"kimberley",   pj:0,pg:0,pe:0,pp:0,gf:0,gc:0,pts:0},
+        {nombre:"Alvarado", clase:"alvarado",    pj:0,pg:0,pe:0,pp:0,gf:0,gc:0,pts:0},
+        {nombre:"Santamarina",clase:"santamarina", pj:0,pg:0,pe:0,pp:0,gf:0,gc:0,pts:0},
         {nombre:"Balompié",       clase:"balompie",    pj:0,pg:0,pe:0,pp:0,gf:0,gc:0,pts:0},
         {nombre:"Mac Allister",   clase:"macallister", pj:0,pg:0,pe:0,pp:0,gf:0,gc:0,pts:0},
         {nombre:"Olimpo",         clase:"olimpo",      pj:1,pg:0,pe:0,pp:1,gf:2,gc:4,pts:0}
     ],
     sub15: [
         {nombre:"Olimpo",         clase:"olimpo",      pj:1,pg:1,pe:0,pp:0,gf:2,gc:1,pts:3},
-        {nombre:"Kimberley (MdP)",clase:"kimberley",   pj:0,pg:0,pe:0,pp:0,gf:0,gc:0,pts:0},
-        {nombre:"Alvarado (MdP)", clase:"alvarado",    pj:0,pg:0,pe:0,pp:0,gf:0,gc:0,pts:0},
-        {nombre:"Santamarina (T)",clase:"santamarina", pj:0,pg:0,pe:0,pp:0,gf:0,gc:0,pts:0},
+        {nombre:"Kimberley",clase:"kimberley",   pj:0,pg:0,pe:0,pp:0,gf:0,gc:0,pts:0},
+        {nombre:"Alvarado", clase:"alvarado",    pj:0,pg:0,pe:0,pp:0,gf:0,gc:0,pts:0},
+        {nombre:"Santamarina",clase:"santamarina", pj:0,pg:0,pe:0,pp:0,gf:0,gc:0,pts:0},
         {nombre:"Balompié",       clase:"balompie",    pj:0,pg:0,pe:0,pp:0,gf:0,gc:0,pts:0},
         {nombre:"Mac Allister",   clase:"macallister", pj:0,pg:0,pe:0,pp:0,gf:0,gc:0,pts:0},
         {nombre:"Villa Mitre",    clase:"villamitre",  pj:1,pg:0,pe:0,pp:1,gf:1,gc:2,pts:0}
@@ -13844,11 +13844,11 @@ const BD_POS_SUB = {
     sub17: [
         {nombre:"Villa Mitre",    clase:"villamitre",  pj:1,pg:0,pe:1,pp:0,gf:1,gc:1,pts:1},
         {nombre:"Olimpo",         clase:"olimpo",      pj:1,pg:0,pe:1,pp:0,gf:1,gc:1,pts:1},
-        {nombre:"Alvarado (MdP)", clase:"alvarado",    pj:0,pg:0,pe:0,pp:0,gf:0,gc:0,pts:0},
-        {nombre:"Santamarina (T)",clase:"santamarina", pj:0,pg:0,pe:0,pp:0,gf:0,gc:0,pts:0},
+        {nombre:"Alvarado", clase:"alvarado",    pj:0,pg:0,pe:0,pp:0,gf:0,gc:0,pts:0},
+        {nombre:"Santamarina",clase:"santamarina", pj:0,pg:0,pe:0,pp:0,gf:0,gc:0,pts:0},
         {nombre:"Balompié",       clase:"balompie",    pj:0,pg:0,pe:0,pp:0,gf:0,gc:0,pts:0},
         {nombre:"Mac Allister",   clase:"macallister", pj:0,pg:0,pe:0,pp:0,gf:0,gc:0,pts:0},
-        {nombre:"Kimberley (MdP)",clase:"kimberley",   pj:1,pg:0,pe:0,pp:1,gf:2,gc:4,pts:0}
+        {nombre:"Kimberley",clase:"kimberley",   pj:1,pg:0,pe:0,pp:1,gf:2,gc:4,pts:0}
     ]
 };
 
@@ -14197,26 +14197,26 @@ function generarHistorial() {
                     nombre: "Olimpo", clase: "olimpo", cat: "Federal A", catKey: "federala",
                     rivales: [
                         { nombre: "Villa Mitre",         clase: "villamitre",  cat: "Federal A" },
-                        { nombre: "Alvarado (MdP)",      clase: "alvarado",    cat: "Federal A" },
-                        { nombre: "Santamarina (T)",     clase: "santamarina", cat: "Federal A" },
-                        { nombre: "Kimberley (MdP)",     clase: "kimberley",   cat: "Federal A" },
-                        { nombre: "Sol de Mayo (V)",     clase: "soldemayo",   cat: "Federal A" },
-                        { nombre: "Germinal (R)",        clase: "germinal",    cat: "Federal A" },
-                        { nombre: "Guillermo Brown (M)", clase: "gbrown",      cat: "Federal A" },
-                        { nombre: "Círculo Dep. (O)",    clase: "circulo",     cat: "Federal A" }
+                        { nombre: "Alvarado",      clase: "alvarado",    cat: "Federal A" },
+                        { nombre: "Santamarina",     clase: "santamarina", cat: "Federal A" },
+                        { nombre: "Kimberley",     clase: "kimberley",   cat: "Federal A" },
+                        { nombre: "Sol de Mayo",     clase: "soldemayo",   cat: "Federal A" },
+                        { nombre: "Germinal",        clase: "germinal",    cat: "Federal A" },
+                        { nombre: "Guillermo Brown", clase: "gbrown",      cat: "Federal A" },
+                        { nombre: "Círculo Dep.",    clase: "circulo",     cat: "Federal A" }
                     ]
                 },
                 {
                     nombre: "Villa Mitre", clase: "villamitre", cat: "Federal A", catKey: "federala",
                     rivales: [
                         { nombre: "Olimpo",              clase: "olimpo",      cat: "Federal A" },
-                        { nombre: "Alvarado (MdP)",      clase: "alvarado",    cat: "Federal A" },
-                        { nombre: "Santamarina (T)",     clase: "santamarina", cat: "Federal A" },
-                        { nombre: "Kimberley (MdP)",     clase: "kimberley",   cat: "Federal A" },
-                        { nombre: "Sol de Mayo (V)",     clase: "soldemayo",   cat: "Federal A" },
-                        { nombre: "Germinal (R)",        clase: "germinal",    cat: "Federal A" },
-                        { nombre: "Guillermo Brown (M)", clase: "gbrown",      cat: "Federal A" },
-                        { nombre: "Círculo Dep. (O)",    clase: "circulo",     cat: "Federal A" }
+                        { nombre: "Alvarado",      clase: "alvarado",    cat: "Federal A" },
+                        { nombre: "Santamarina",     clase: "santamarina", cat: "Federal A" },
+                        { nombre: "Kimberley",     clase: "kimberley",   cat: "Federal A" },
+                        { nombre: "Sol de Mayo",     clase: "soldemayo",   cat: "Federal A" },
+                        { nombre: "Germinal",        clase: "germinal",    cat: "Federal A" },
+                        { nombre: "Guillermo Brown", clase: "gbrown",      cat: "Federal A" },
+                        { nombre: "Círculo Dep.",    clase: "circulo",     cat: "Federal A" }
                     ]
                 }
             ]
@@ -14839,13 +14839,13 @@ function generarGoleadores(cat) {
         const goleadoresFederala = [
             { jugador: "Martín Ferreyra",  equipo: "Olimpo",              clase: "olimpo",      n: 1 },
             { jugador: "Diego Ramírez",    equipo: "Olimpo",              clase: "olimpo",      n: 1 },
-            { jugador: "Rodrigo Ríos",     equipo: "Kimberley (MdP)",     clase: "kimberley",   n: 1 },
-            { jugador: "Héctor Morales",   equipo: "Sol de Mayo (V)",     clase: "soldemayo",   n: 1 },
-            { jugador: "Nicolás Macaroff", equipo: "Germinal (R)",        clase: "germinal",    n: 1 },
-            { jugador: "Emanuel Moreno",   equipo: "Guillermo Brown (M)", clase: "gbrown",      n: 1 },
-            { jugador: "Ignacio Zapulla",  equipo: "Guillermo Brown (M)", clase: "gbrown",      n: 1 },
-            { jugador: "Nicolás Franco",   equipo: "Santamarina (T)",     clase: "santamarina", n: 1 },
-            { jugador: "Luciano Domínguez",equipo: "Santamarina (T)",     clase: "santamarina", n: 1 }
+            { jugador: "Rodrigo Ríos",     equipo: "Kimberley",     clase: "kimberley",   n: 1 },
+            { jugador: "Héctor Morales",   equipo: "Sol de Mayo",     clase: "soldemayo",   n: 1 },
+            { jugador: "Nicolás Macaroff", equipo: "Germinal",        clase: "germinal",    n: 1 },
+            { jugador: "Emanuel Moreno",   equipo: "Guillermo Brown", clase: "gbrown",      n: 1 },
+            { jugador: "Ignacio Zapulla",  equipo: "Guillermo Brown", clase: "gbrown",      n: 1 },
+            { jugador: "Nicolás Franco",   equipo: "Santamarina",     clase: "santamarina", n: 1 },
+            { jugador: "Luciano Domínguez",equipo: "Santamarina",     clase: "santamarina", n: 1 }
         ];
         let html = `<div class="header-t">GOLEADORES — FEDERAL A 2026</div>
         <table><thead><tr>
