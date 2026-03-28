@@ -70,7 +70,7 @@ td { height: 35px; color: black; border-bottom: 1px solid #ccc; text-align: cent
 tr[onclick]:hover td { background-color: #e8f5e9 !important; }
 
 /* MENÚ DESPLEGABLE */
-.bloque-titulo.sin-drop { cursor: pointer; }
+.bloque-titulo.sin-drop { cursor: pointer; text-align: left; }
 .bloque-titulo.sin-drop:hover { background-color: #004d26; color: white; }
 .bloque-titulo.con-drop { cursor: pointer; display: flex; justify-content: space-between; align-items: center; margin-bottom: 0; border-bottom: none; }
 .bloque-titulo.con-drop:hover { background-color: #004d26; }
@@ -134,27 +134,34 @@ tr[onclick]:hover td { background-color: #e8f5e9 !important; }
     table { table-layout: fixed; width: 100%; font-size: 10px; }
     td { height: 28px; }
 
-    /* Columna local: escudo a la derecha del texto, truncar texto */
+    /* Columna local: escudo siempre visible, texto truncado */
     .c-loc {
         width: 40%;
-        text-align: right;
-        padding: 2px 4px 2px 2px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        padding: 2px 2px 2px 2px;
         font-size: 10px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        direction: rtl;
+        text-align: right;
+    }
+    .c-loc .escudo {
+        direction: ltr;
+        display: inline-block;
+        vertical-align: middle;
+        flex-shrink: 0;
     }
     /* Columna resultado */
     .c-res { width: 20%; font-size: 11px; }
-    /* Columna visitante: escudo a la izquierda del texto, truncar texto */
+    /* Columna visitante: escudo siempre visible, texto truncado */
     .c-vis {
         width: 40%;
-        text-align: left;
-        padding: 2px 2px 2px 4px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        padding: 2px 2px 2px 2px;
         font-size: 10px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        text-align: left;
     }
 
     /* ESCUDOS: tamaño fijo, nunca se recortan */
