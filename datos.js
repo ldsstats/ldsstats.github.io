@@ -1422,7 +1422,7 @@ const BD_EQUIPOS_FUERA = [
     { anio: 2015,      equipo: "Bella Vista", clase: "bellavista", torneo: "Federal B",                      instancia: "Primera fase" },
     { anio: 2016,      equipo: "Bella Vista", clase: "bellavista", torneo: "Federal B",                      instancia: "Semifinal por ascender" },
     { anio: 2016,      equipo: "Bella Vista", clase: "bellavista", torneo: "Federal B Complementario",       instancia: "Segunda Fase" },
-    { anio: 2017,      equipo: "Bella Vista", clase: "bellavista", torneo: "Copa Argentina",                 instancia: "Tercera fase" },
+    { anio: "2016-17", equipo: "Bella Vista", clase: "bellavista", torneo: "Copa Argentina",                 instancia: "Tercera fase" },
     { anio: 2017,      equipo: "Bella Vista", clase: "bellavista", torneo: "Federal B",                      instancia: "Primera Fase Pampeana Sur" },
     { anio: 2019,      equipo: "Bella Vista", clase: "bellavista", torneo: "Torneo Regional Amateur",        instancia: "Primera Fase Pampeana Sur" },
     { anio: 2020,      equipo: "Bella Vista", clase: "bellavista", torneo: "Torneo Regional Amateur",        instancia: "Segunda fase Pampeana Sur" },
@@ -2979,7 +2979,7 @@ const BD_DETALLES_FUERA = {
             }
         ]
     },
-    "Bella Vista|2017|Copa Argentina": {
+    "Bella Vista|2016-17|Copa Argentina": {
         fases: [
             {
                 nombre: "Primera Fase — Grupo B",
