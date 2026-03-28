@@ -1685,6 +1685,782 @@ const BD_EQUIPOS_FUERA = [
 // =============================================
 
 const BD_DETALLES_FUERA = {
+
+    // ── SANSINENA ──────────────────────────────────────────────────────────────
+    "Sansinena|2015|Federal C 2015": {
+        zonas: [
+            {
+                nombre: "1° Fase — Zona 12",
+                solo_puntos: true,
+                clasificados: 1,
+                equipos: [
+                    { nombre: "Sansinena",                    clase: "sansinena", pj:4, pg:0, pe:0, pp:0, gf:0, gc:0, pts:12 },
+                    { nombre: "Def. de Buena Parada",         clase: "",          pj:4, pg:0, pe:0, pp:0, gf:0, gc:0, pts:6  },
+                    { nombre: "Atlético Monte Hermoso",       clase: "",          pj:4, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0  }
+                ],
+                partidos: [
+                    { condicion: "F1",    local: "Sansinena",             visitante: "Def. de Buena Parada",   gl: 3, gv: 2, goles_local: [], goles_visitante: [] },
+                    { condicion: "F2",    local: "Atlético Monte Hermoso",visitante: "Sansinena",              gl: 0, gv: 2, goles_local: [], goles_visitante: [] },
+                    { condicion: "F3",    local: "Sansinena",             visitante: "— Fecha Libre —",        gl: null, gv: null, goles_local: [], goles_visitante: [] },
+                    { condicion: "F4",    local: "Def. de Buena Parada",  visitante: "Sansinena",              gl: 0, gv: 2, goles_local: [], goles_visitante: [] },
+                    { condicion: "F5",    local: "Sansinena",             visitante: "Atlético Monte Hermoso", gl: 8, gv: 2, goles_local: [], goles_visitante: [] },
+                    { condicion: "F6",    local: "Sansinena",             visitante: "— Fecha Libre —",        gl: null, gv: null, goles_local: [], goles_visitante: [] }
+                ]
+            }
+        ],
+        fases: [
+            {
+                nombre: "Fase Eliminatoria — Octavos de final",
+                partidos: [
+                    { condicion: "Ida",    local: "All Boys (Sta. Rosa)", visitante: "Sansinena", gl: 0, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "Vuelta", local: "Sansinena", visitante: "All Boys (Sta. Rosa)", gl: 2, gv: 0, goles_local: [], goles_visitante: [], nota: "Global: 2-0 Sansinena" }
+                ]
+            },
+            {
+                nombre: "Fase Eliminatoria — Cuartos de final",
+                partidos: [
+                    { condicion: "Ida",    local: "Dep. Chichinales", visitante: "Sansinena", gl: 0, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "Vuelta", local: "Sansinena", visitante: "Dep. Chichinales", gl: 4, gv: 0, goles_local: [], goles_visitante: [], nota: "Global: 4-0 Sansinena" }
+                ]
+            },
+            {
+                nombre: "Fase Eliminatoria — Semifinal",
+                partidos: [
+                    { condicion: "Ida",    local: "El Fortín (Olavarría)", visitante: "Sansinena", gl: 1, gv: 2, goles_local: [], goles_visitante: [] },
+                    { condicion: "Vuelta", local: "Sansinena", visitante: "El Fortín (Olavarría)", gl: 3, gv: 0, goles_local: [], goles_visitante: [], nota: "Global: 5-1 Sansinena" }
+                ]
+            },
+            {
+                nombre: "Fase Eliminatoria — Final",
+                partidos: [
+                    { condicion: "Ida",    local: "Dep. Rincón", visitante: "Sansinena", gl: 1, gv: 1, goles_local: [], goles_visitante: [] },
+                    { condicion: "Vuelta", local: "Sansinena", visitante: "Dep. Rincón", gl: 3, gv: 0, goles_local: [], goles_visitante: [], nota: "Global: 4-1 Sansinena — Ascenso al Federal B" }
+                ]
+            }
+        ]
+    },
+    "Sansinena|2015|Federal B 2015": {
+        zonas: [
+            {
+                nombre: "1° Fase — Zona 22",
+                solo_puntos: true,
+                clasificados: 5,
+                clasificados_rojo: 3,
+                equipos: [
+                    { nombre: "Sansinena",                       clase: "sansinena",  pj:22, pg:0, pe:0, pp:0, gf:0, gc:0, pts:56 },
+                    { nombre: "Liniers",                         clase: "liniers",    pj:22, pg:0, pe:0, pp:0, gf:0, gc:0, pts:49 },
+                    { nombre: "Villa Mitre",                     clase: "villamitre", pj:22, pg:0, pe:0, pp:0, gf:0, gc:0, pts:43 },
+                    { nombre: "Kimberley",                       clase: "kimberley",  pj:22, pg:0, pe:0, pp:0, gf:0, gc:0, pts:43 },
+                    { nombre: "Sarmiento (Ayacucho)",            clase: "",           pj:22, pg:0, pe:0, pp:0, gf:0, gc:0, pts:38 },
+                    { nombre: "América (Gral. Pirán)",           clase: "",           pj:22, pg:0, pe:0, pp:0, gf:0, gc:0, pts:32 },
+                    { nombre: "Ferro (Olavarría)",               clase: "",           pj:22, pg:0, pe:0, pp:0, gf:0, gc:0, pts:29 },
+                    { nombre: "Bella Vista",                     clase: "bellavista", pj:22, pg:0, pe:0, pp:0, gf:0, gc:0, pts:23 },
+                    { nombre: "Dep. Sarmiento (Cnel. Suárez)",   clase: "",           pj:22, pg:0, pe:0, pp:0, gf:0, gc:0, pts:21 },
+                    { nombre: "Racing (Olavarría)",              clase: "",           pj:22, pg:0, pe:0, pp:0, gf:0, gc:0, pts:17 },
+                    { nombre: "Def. Valeria del Mar",            clase: "",           pj:22, pg:0, pe:0, pp:0, gf:0, gc:0, pts:10 },
+                    { nombre: "Tres Algarrobos",                 clase: "",           pj:22, pg:0, pe:0, pp:0, gf:0, gc:0, pts:7  }
+                ],
+                partidos: [
+                    { condicion: "F1",  local: "Liniers",                     visitante: "Sansinena",                     gl: 0, gv: 2, goles_local: [], goles_visitante: [] },
+                    { condicion: "F2",  local: "Sansinena",                   visitante: "Sarmiento (Ayacucho)",          gl: 1, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F3",  local: "Def. Valeria del Mar",        visitante: "Sansinena",                     gl: 0, gv: 1, goles_local: [], goles_visitante: [] },
+                    { condicion: "F4",  local: "Villa Mitre",                 visitante: "Sansinena",                     gl: 0, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F5",  local: "Sansinena",                   visitante: "Racing (Olavarría)",            gl: 3, gv: 2, goles_local: [], goles_visitante: [] },
+                    { condicion: "F6",  local: "Dep. Sarmiento (Cnel. Suárez)",visitante: "Sansinena",                   gl: 0, gv: 1, goles_local: [], goles_visitante: [] },
+                    { condicion: "F7",  local: "Sansinena",                   visitante: "América (Gral. Pirán)",         gl: 5, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F8",  local: "Tres Algarrobos",             visitante: "Sansinena",                     gl: 1, gv: 5, goles_local: [], goles_visitante: [] },
+                    { condicion: "F9",  local: "Sansinena",                   visitante: "Kimberley",                     gl: 2, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F10", local: "Ferro (Olavarría)",           visitante: "Sansinena",                     gl: 2, gv: 2, goles_local: [], goles_visitante: [] },
+                    { condicion: "F11", local: "Sansinena",                   visitante: "Bella Vista",                   gl: 4, gv: 2, goles_local: [], goles_visitante: [] },
+                    { condicion: "F12", local: "Sansinena",                   visitante: "Liniers",                       gl: 2, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F13", local: "Sarmiento (Ayacucho)",        visitante: "Sansinena",                     gl: 2, gv: 1, goles_local: [], goles_visitante: [] },
+                    { condicion: "F14", local: "Sansinena",                   visitante: "Def. Valeria del Mar",          gl: 3, gv: 1, goles_local: [], goles_visitante: [] },
+                    { condicion: "F15", local: "Sansinena",                   visitante: "Villa Mitre",                   gl: 4, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F16", local: "Racing (Olavarría)",          visitante: "Sansinena",                     gl: 0, gv: 1, goles_local: [], goles_visitante: [] },
+                    { condicion: "F17", local: "Sansinena",                   visitante: "Dep. Sarmiento (Cnel. Suárez)", gl: 4, gv: 3, goles_local: [], goles_visitante: [] },
+                    { condicion: "F18", local: "América (Gral. Pirán)",       visitante: "Sansinena",                     gl: 0, gv: 1, goles_local: [], goles_visitante: [] },
+                    { condicion: "F19", local: "Sansinena",                   visitante: "Tres Algarrobos",               gl: 4, gv: 1, goles_local: [], goles_visitante: [] },
+                    { condicion: "F20", local: "Kimberley",                   visitante: "Sansinena",                     gl: 2, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F21", local: "Sansinena",                   visitante: "Ferro (Olavarría)",             gl: 3, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F22", local: "Bella Vista",                 visitante: "Sansinena",                     gl: 0, gv: 1, goles_local: [], goles_visitante: [] }
+                ]
+            },
+            {
+                nombre: "2° Fase — Zona A",
+                solo_puntos: true,
+                clasificados: 3,
+                equipos: [
+                    { nombre: "Villa Mitre",                  clase: "villamitre", pj:6, pg:0, pe:0, pp:0, gf:0, gc:0, pts:13 },
+                    { nombre: "Sansinena",                    clase: "sansinena",  pj:6, pg:0, pe:0, pp:0, gf:0, gc:0, pts:13 },
+                    { nombre: "Germinal",                     clase: "germinal",   pj:6, pg:0, pe:0, pp:0, gf:0, gc:0, pts:9  },
+                    { nombre: "Boxing Club",                  clase: "",           pj:6, pg:0, pe:0, pp:0, gf:0, gc:0, pts:9  },
+                    { nombre: "Huracán (Com. Rivadavia)",     clase: "",           pj:6, pg:0, pe:0, pp:0, gf:0, gc:0, pts:7  },
+                    { nombre: "Sol de Mayo",                  clase: "soldemayo",  pj:6, pg:0, pe:0, pp:0, gf:0, gc:0, pts:5  },
+                    { nombre: "Cruz del Sur (Bariloche)",     clase: "",           pj:6, pg:0, pe:0, pp:0, gf:0, gc:0, pts:3  }
+                ],
+                partidos: [
+                    { condicion: "F1", local: "Sansinena",              visitante: "Germinal",              gl: 3, gv: 1, goles_local: [], goles_visitante: [] },
+                    { condicion: "F2", local: "Cruz del Sur (Bariloche)",visitante: "Sansinena",             gl: 3, gv: 4, goles_local: [], goles_visitante: [] },
+                    { condicion: "F3", local: "Sansinena",              visitante: "Boxing Club",            gl: 4, gv: 2, goles_local: [], goles_visitante: [] },
+                    { condicion: "F4", local: "Sol de Mayo",            visitante: "Sansinena",              gl: 1, gv: 1, goles_local: [], goles_visitante: [] },
+                    { condicion: "F5", local: "Sansinena",              visitante: "Villa Mitre",            gl: 1, gv: 2, goles_local: [], goles_visitante: [] },
+                    { condicion: "F6", local: "Sansinena",              visitante: "— Fecha Libre —",        gl: null, gv: null, goles_local: [], goles_visitante: [] },
+                    { condicion: "F7", local: "Huracán (Com. Rivadavia)",visitante: "Sansinena",             gl: 0, gv: 1, goles_local: [], goles_visitante: [] }
+                ]
+            }
+        ],
+        fases: [
+            {
+                nombre: "Eliminatoria — Cuartos de final",
+                partidos: [
+                    { condicion: "Ida",    local: "Agropecuario", visitante: "Sansinena", gl: 0, gv: 1, goles_local: [], goles_visitante: [] },
+                    { condicion: "Vuelta", local: "Sansinena", visitante: "Agropecuario", gl: 1, gv: 1, goles_local: [], goles_visitante: [], nota: "Global: 2-1 Sansinena" }
+                ]
+            },
+            {
+                nombre: "Eliminatoria — Semifinales",
+                partidos: [
+                    { condicion: "Ida",    local: "Sansinena", visitante: "Sportivo Rivadavia", gl: 0, gv: 3, goles_local: [], goles_visitante: [] },
+                    { condicion: "Vuelta", local: "Sportivo Rivadavia", visitante: "Sansinena", gl: 1, gv: 3, goles_local: [], goles_visitante: [], nota: "Global: 4-3 Sportivo Rivadavia" }
+                ]
+            }
+        ]
+    },
+    "Sansinena|2015-16|Copa Argentina": {
+        fases: [
+            {
+                nombre: "Fase preliminar regional — Grupo B",
+                partidos: [
+                    { condicion: "Ida",    local: "Bella Vista", visitante: "Sansinena", gl: 6, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "Vuelta", local: "Sansinena", visitante: "Bella Vista", gl: 1, gv: 5, goles_local: [], goles_visitante: [], nota: "Global: 11-1 Bella Vista" }
+                ]
+            }
+        ]
+    },
+    "Sansinena|2016|Federal B 2016": {
+        zonas: [
+            {
+                nombre: "1° Fase — Zona 2",
+                solo_puntos: true,
+                clasificados: 3,
+                equipos: [
+                    { nombre: "Sansinena",          clase: "sansinena",  pj:10, pg:0, pe:0, pp:0, gf:0, gc:0, pts:14 },
+                    { nombre: "Agropecuario",       clase: "",           pj:10, pg:0, pe:0, pp:0, gf:0, gc:0, pts:13 },
+                    { nombre: "Bella Vista",        clase: "bellavista", pj:10, pg:0, pe:0, pp:0, gf:0, gc:0, pts:12 },
+                    { nombre: "Kimberley",          clase: "kimberley",  pj:10, pg:0, pe:0, pp:0, gf:0, gc:0, pts:7  },
+                    { nombre: "América (Gral. Pirán)",clase: "",         pj:10, pg:0, pe:0, pp:0, gf:0, gc:0, pts:6  }
+                ],
+                partidos: [
+                    { condicion: "F1",  local: "Bella Vista",        visitante: "Sansinena",  gl: 2, gv: 1, goles_local: [], goles_visitante: [] },
+                    { condicion: "F2",  local: "Sansinena",          visitante: "América (Gral. Pirán)", gl: 5, gv: 4, goles_local: [], goles_visitante: [] },
+                    { condicion: "F3",  local: "Sansinena",          visitante: "— Fecha Libre —",       gl: null, gv: null, goles_local: [], goles_visitante: [] },
+                    { condicion: "F4",  local: "Agropecuario",       visitante: "Sansinena",  gl: 2, gv: 2, goles_local: [], goles_visitante: [] },
+                    { condicion: "F5",  local: "Sansinena",          visitante: "Kimberley",  gl: 2, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F6",  local: "Sansinena",          visitante: "Bella Vista",gl: 3, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F7",  local: "América (Gral. Pirán)",visitante: "Sansinena",gl: 0, gv: 1, goles_local: [], goles_visitante: [] },
+                    { condicion: "F8",  local: "Sansinena",          visitante: "— Fecha Libre —",       gl: null, gv: null, goles_local: [], goles_visitante: [] },
+                    { condicion: "F9",  local: "Sansinena",          visitante: "Agropecuario",gl: 2, gv: 2, goles_local: [], goles_visitante: [] },
+                    { condicion: "F10", local: "Kimberley",          visitante: "Sansinena",  gl: 3, gv: 0, goles_local: [], goles_visitante: [] }
+                ]
+            }
+        ],
+        fases: [
+            {
+                nombre: "2° Fase — Octavos de final",
+                partidos: [
+                    { condicion: "Ida",    local: "Cruz del Sur", visitante: "Sansinena", gl: 0, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "Vuelta", local: "Sansinena", visitante: "Cruz del Sur", gl: 0, gv: 0, goles_local: [], goles_visitante: [],
+                      penales: { ganador: "Sansinena", resultado: "5-3", local_conv: ["Juan P. Scheffer", "Mariano McCoubrey", "Fabio Lucanera", "Braian Scalco", "Walter Linares"], local_fall: [], visitante_conv: [], visitante_fall: [] },
+                      nota: "Global: 0-0. Penales: 5-3 Sansinena"
+                    }
+                ]
+            },
+            {
+                nombre: "2° Fase — Cuartos de final",
+                partidos: [
+                    { condicion: "Ida",    local: "Bella Vista", visitante: "Sansinena", gl: 2, gv: 1, goles_local: [], goles_visitante: [] },
+                    { condicion: "Vuelta", local: "Sansinena", visitante: "Bella Vista", gl: 3, gv: 2, goles_local: [], goles_visitante: [],
+                      penales: { ganador: "Bella Vista", resultado: "3-4", local_conv: ["Mariano McCoubrey", "Juan P. Scheffer", "Marcelo Perugini"], local_fall: ["Brian Scalco", "Walter Linares"], visitante_conv: [], visitante_fall: [] },
+                      nota: "Global: 4-4. Penales: 4-3 Bella Vista"
+                    }
+                ]
+            }
+        ]
+    },
+    "Sansinena|2016|Federal B Complementario 2016": {
+        zonas: [
+            {
+                nombre: "1° Fase — Región Pampeana Sur — Zona A",
+                solo_puntos: true,
+                clasificados: 2,
+                clasificados_rojo: 1,
+                equipos: [
+                    { nombre: "Sansinena",           clase: "sansinena",  pj:12, pg:0, pe:0, pp:0, gf:0, gc:0, pts:21 },
+                    { nombre: "Bella Vista",         clase: "bellavista", pj:12, pg:0, pe:0, pp:0, gf:0, gc:0, pts:21 },
+                    { nombre: "Tiro Federal",        clase: "tirofederal",pj:12, pg:0, pe:0, pp:0, gf:0, gc:0, pts:17 },
+                    { nombre: "Liniers",             clase: "liniers",    pj:12, pg:0, pe:0, pp:0, gf:0, gc:0, pts:17 },
+                    { nombre: "All Boys (Sta. Rosa)",clase: "",           pj:12, pg:0, pe:0, pp:0, gf:0, gc:0, pts:16 },
+                    { nombre: "Ferro (Olavarría)",   clase: "",           pj:12, pg:0, pe:0, pp:0, gf:0, gc:0, pts:13 },
+                    { nombre: "Sarmiento (Suárez)",  clase: "",           pj:12, pg:0, pe:0, pp:0, gf:0, gc:0, pts:12 }
+                ],
+                partidos: [
+                    { condicion: "F1",  local: "Sansinena",          visitante: "Bella Vista",        gl: 1, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F2",  local: "Liniers",             visitante: "Sansinena",          gl: 0, gv: 1, goles_local: [], goles_visitante: [] },
+                    { condicion: "F3",  local: "Sansinena",          visitante: "Ferro (Olavarría)",   gl: 0, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F4",  local: "Sarmiento (Suárez)", visitante: "Sansinena",          gl: 0, gv: 1, goles_local: [], goles_visitante: [] },
+                    { condicion: "F5",  local: "Sansinena",          visitante: "Tiro Federal",       gl: 1, gv: 1, goles_local: [], goles_visitante: [] },
+                    { condicion: "F6",  local: "Sansinena",          visitante: "— Fecha Libre —",    gl: null, gv: null, goles_local: [], goles_visitante: [] },
+                    { condicion: "F7",  local: "All Boys (Sta. Rosa)",visitante: "Sansinena",         gl: 2, gv: 1, goles_local: [], goles_visitante: [] },
+                    { condicion: "F8",  local: "Bella Vista",        visitante: "Sansinena",          gl: 3, gv: 2, goles_local: [], goles_visitante: [] },
+                    { condicion: "F9",  local: "Sansinena",          visitante: "Liniers",            gl: 0, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F10", local: "Ferro (Olavarría)",  visitante: "Sansinena",          gl: 1, gv: 2, goles_local: [], goles_visitante: [] },
+                    { condicion: "F11", local: "Sansinena",          visitante: "Sarmiento (Suárez)", gl: 4, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F12", local: "Tiro Federal",       visitante: "Sansinena",          gl: 2, gv: 1, goles_local: [], goles_visitante: [] }
+                ]
+            }
+        ],
+        fases: [
+            {
+                nombre: "Fase final — Octavos de final",
+                partidos: [
+                    { condicion: "Ida",    local: "Germinal", visitante: "Sansinena", gl: 0, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "Vuelta", local: "Sansinena", visitante: "Germinal", gl: 2, gv: 0, goles_local: [], goles_visitante: [], nota: "Global: 2-0 Sansinena" }
+                ]
+            },
+            {
+                nombre: "Fase final — Cuartos de final",
+                partidos: [
+                    { condicion: "Ida",    local: "Kimberley", visitante: "Sansinena", gl: 1, gv: 1, goles_local: [], goles_visitante: [] },
+                    { condicion: "Vuelta", local: "Sansinena", visitante: "Kimberley", gl: 0, gv: 0, goles_local: [], goles_visitante: [],
+                      penales: { ganador: "Sansinena", resultado: "4-3", local_conv: ["Juan P. Scheffer", "Fabio Lucanera", "Axel Lischeske", "Walter Linares"], local_fall: ["Mariano McCoubrey"], visitante_conv: [], visitante_fall: [] },
+                      nota: "Global: 1-1. Penales: 4-3 Sansinena"
+                    }
+                ]
+            },
+            {
+                nombre: "Fase final — Semifinal",
+                partidos: [
+                    { condicion: "Ida",    local: "Sansinena", visitante: "Sarmiento (Ayacucho)", gl: 2, gv: 1, goles_local: [], goles_visitante: [] },
+                    { condicion: "Vuelta", local: "Sarmiento (Ayacucho)", visitante: "Sansinena", gl: 0, gv: 2, goles_local: [], goles_visitante: [], nota: "Partido suspendido a los 65' por invasión y agresión a los jueces. Sansinena ganaba 2-1. Global: 4-1 Sansinena" }
+                ]
+            }
+        ]
+    },
+    "Sansinena|2016-17|Copa Argentina": {
+        fases: [
+            {
+                nombre: "Fase preliminar regional — Grupo B",
+                partidos: [
+                    { condicion: "Ida",    local: "Bella Vista", visitante: "Sansinena", gl: 6, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "Vuelta", local: "Sansinena", visitante: "Bella Vista", gl: 1, gv: 5, goles_local: [], goles_visitante: [], nota: "Global: 11-1 Bella Vista" }
+                ]
+            }
+        ]
+    },
+    "Sansinena|2017-18|Federal A 2017-18": {
+        zonas: [
+            {
+                nombre: "1° Fase — Zona 1",
+                solo_puntos: true,
+                clasificados: 4,
+                clasificados_azul: 4,
+                equipos: [
+                    { nombre: "Alvarado",                 clase: "alvarado",   pj:16, pg:0, pe:0, pp:0, gf:0, gc:0, pts:29 },
+                    { nombre: "Villa Mitre",              clase: "villamitre", pj:16, pg:0, pe:0, pp:0, gf:0, gc:0, pts:26 },
+                    { nombre: "Dep. Roca",                clase: "",           pj:16, pg:0, pe:0, pp:0, gf:0, gc:0, pts:24 },
+                    { nombre: "Ferro (Gral. Pico)",       clase: "",           pj:16, pg:0, pe:0, pp:0, gf:0, gc:0, pts:23 },
+                    { nombre: "Cipolletti",               clase: "",           pj:16, pg:0, pe:0, pp:0, gf:0, gc:0, pts:23 },
+                    { nombre: "Independiente (Neuquén)",  clase: "",           pj:16, pg:0, pe:0, pp:0, gf:0, gc:0, pts:19 },
+                    { nombre: "Rivadavia (Lincoln)",      clase: "",           pj:16, pg:0, pe:0, pp:0, gf:0, gc:0, pts:17 },
+                    { nombre: "Sansinena",                clase: "sansinena",  pj:16, pg:0, pe:0, pp:0, gf:0, gc:0, pts:16 },
+                    { nombre: "Dep. Madryn",              clase: "",           pj:16, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0  }
+                ],
+                partidos: [
+                    { condicion: "F1",  local: "Sansinena",             visitante: "— Fecha Libre —",         gl: null, gv: null, goles_local: [], goles_visitante: [] },
+                    { condicion: "F2",  local: "Rivadavia (Lincoln)",   visitante: "Sansinena",               gl: 2, gv: 2, goles_local: [], goles_visitante: [] },
+                    { condicion: "F3",  local: "Sansinena",             visitante: "Ferro (Gral. Pico)",      gl: 0, gv: 2, goles_local: [], goles_visitante: [] },
+                    { condicion: "F4",  local: "Dep. Roca",             visitante: "Sansinena",               gl: 0, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F5",  local: "Sansinena",             visitante: "Independiente (Neuquén)", gl: 1, gv: 2, goles_local: [], goles_visitante: [] },
+                    { condicion: "F6",  local: "Villa Mitre",           visitante: "Sansinena",               gl: 0, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F7",  local: "Sansinena",             visitante: "Alvarado",                gl: 0, gv: 2, goles_local: [], goles_visitante: [] },
+                    { condicion: "F8",  local: "Dep. Madryn",           visitante: "Sansinena",               gl: 2, gv: 1, goles_local: [], goles_visitante: [] },
+                    { condicion: "F9",  local: "Sansinena",             visitante: "Cipolletti",              gl: 0, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F10", local: "Sansinena",             visitante: "— Fecha Libre —",         gl: null, gv: null, goles_local: [], goles_visitante: [] },
+                    { condicion: "F11", local: "Sansinena",             visitante: "Rivadavia (Lincoln)",     gl: 1, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F12", local: "Ferro (Gral. Pico)",    visitante: "Sansinena",               gl: 1, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F13", local: "Sansinena",             visitante: "Dep. Roca",               gl: 2, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F14", local: "Independiente (Neuquén)",visitante: "Sansinena",              gl: 0, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F15", local: "Sansinena",             visitante: "Villa Mitre",             gl: 1, gv: 1, goles_local: [], goles_visitante: [] },
+                    { condicion: "F16", local: "Alvarado",              visitante: "Sansinena",               gl: 1, gv: 1, goles_local: [], goles_visitante: [] },
+                    { condicion: "F17", local: "Sansinena",             visitante: "Dep. Madryn",             gl: 3, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F18", local: "Cipolletti",            visitante: "Sansinena",               gl: 3, gv: 0, goles_local: [], goles_visitante: [] }
+                ]
+            },
+            {
+                nombre: "Reválida — 1° Etapa — Zona A",
+                solo_puntos: true,
+                clasificados: 1,
+                equipos: [
+                    { nombre: "Dep. Madryn",             clase: "",          pj:8, pg:0, pe:0, pp:0, gf:0, gc:0, pts:17 },
+                    { nombre: "Sansinena",               clase: "sansinena", pj:8, pg:0, pe:0, pp:0, gf:0, gc:0, pts:14 },
+                    { nombre: "Independiente (Neuquén)", clase: "",          pj:8, pg:0, pe:0, pp:0, gf:0, gc:0, pts:9  },
+                    { nombre: "Rivadavia (Lincoln)",     clase: "",          pj:8, pg:0, pe:0, pp:0, gf:0, gc:0, pts:8  },
+                    { nombre: "Cipolletti",              clase: "",          pj:8, pg:0, pe:0, pp:0, gf:0, gc:0, pts:7  }
+                ],
+                partidos: [
+                    { condicion: "F1", local: "Cipolletti",             visitante: "Sansinena",               gl: 0, gv: 1, goles_local: [], goles_visitante: [] },
+                    { condicion: "F2", local: "Sansinena",              visitante: "Rivadavia (Lincoln)",     gl: 0, gv: 3, goles_local: [], goles_visitante: [] },
+                    { condicion: "F3", local: "Sansinena",              visitante: "— Fecha Libre —",         gl: null, gv: null, goles_local: [], goles_visitante: [] },
+                    { condicion: "F4", local: "Independiente (Neuquén)",visitante: "Sansinena",               gl: 1, gv: 1, goles_local: [], goles_visitante: [] },
+                    { condicion: "F5", local: "Sansinena",              visitante: "Dep. Madryn",             gl: 2, gv: 1, goles_local: [], goles_visitante: [] },
+                    { condicion: "F6", local: "Sansinena",              visitante: "Cipolletti",              gl: 3, gv: 1, goles_local: [], goles_visitante: [] },
+                    { condicion: "F7", local: "Rivadavia (Lincoln)",    visitante: "Sansinena",               gl: 0, gv: 2, goles_local: [], goles_visitante: [] },
+                    { condicion: "F8", local: "Sansinena",              visitante: "— Fecha Libre —",         gl: null, gv: null, goles_local: [], goles_visitante: [] },
+                    { condicion: "F9", local: "Sansinena",              visitante: "Independiente (Neuquén)", gl: 0, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F10",local: "Dep. Madryn",            visitante: "Sansinena",               gl: 1, gv: 0, goles_local: [], goles_visitante: [] }
+                ]
+            }
+        ]
+    },
+    "Sansinena|2017-18|Copa Argentina": {
+        fases: [
+            {
+                nombre: "Fase preliminar regional — 1° Fase — Grupo B",
+                partidos: [
+                    { condicion: "Ida",    local: "Sansinena", visitante: "Villa Mitre", gl: 4, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "Vuelta", local: "Villa Mitre", visitante: "Sansinena", gl: 0, gv: 0, goles_local: [], goles_visitante: [], nota: "Global: 4-0 Sansinena" }
+                ]
+            },
+            {
+                nombre: "Fase preliminar regional — 2° Fase",
+                partidos: [
+                    { condicion: "Ida",    local: "Sansinena", visitante: "Alvarado", gl: 0, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "Vuelta", local: "Alvarado", visitante: "Sansinena", gl: 1, gv: 0, goles_local: [], goles_visitante: [], nota: "Global: 1-0 Alvarado" }
+                ]
+            }
+        ]
+    },
+    "Sansinena|2018-19|Federal A 2018-19": {
+        zonas: [
+            {
+                nombre: "1° Fase — Zona 1",
+                solo_puntos: true,
+                clasificados: 4,
+                clasificados_azul: 4,
+                equipos: [
+                    { nombre: "Alvarado",                clase: "alvarado",   pj:16, pg:0, pe:0, pp:0, gf:0, gc:0, pts:32 },
+                    { nombre: "Villa Mitre",             clase: "villamitre", pj:16, pg:0, pe:0, pp:0, gf:0, gc:0, pts:27 },
+                    { nombre: "Sansinena",               clase: "sansinena",  pj:16, pg:0, pe:0, pp:0, gf:0, gc:0, pts:25 },
+                    { nombre: "Sol de Mayo",             clase: "soldemayo",  pj:16, pg:0, pe:0, pp:0, gf:0, gc:0, pts:24 },
+                    { nombre: "Dep. Madryn",             clase: "",           pj:16, pg:0, pe:0, pp:0, gf:0, gc:0, pts:22 },
+                    { nombre: "Cipolletti",              clase: "",           pj:16, pg:0, pe:0, pp:0, gf:0, gc:0, pts:19 },
+                    { nombre: "Dep. Roca",               clase: "",           pj:16, pg:0, pe:0, pp:0, gf:0, gc:0, pts:16 },
+                    { nombre: "Ferro (Gral. Pico)",      clase: "",           pj:16, pg:0, pe:0, pp:0, gf:0, gc:0, pts:16 },
+                    { nombre: "Independiente (Neuquén)", clase: "",           pj:16, pg:0, pe:0, pp:0, gf:0, gc:0, pts:10 }
+                ],
+                partidos: [
+                    { condicion: "F1",  local: "Ferro (Gral. Pico)",     visitante: "Sansinena",  gl: 1, gv: 1, goles_local: [], goles_visitante: [] },
+                    { condicion: "F2",  local: "Sansinena",              visitante: "Dep. Madryn",gl: 0, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F3",  local: "Sansinena",              visitante: "— Fecha Libre —", gl: null, gv: null, goles_local: [], goles_visitante: [] },
+                    { condicion: "F4",  local: "Sol de Mayo",            visitante: "Sansinena",  gl: 1, gv: 3, goles_local: [], goles_visitante: [] },
+                    { condicion: "F5",  local: "Sansinena",              visitante: "Independiente (Neuquén)", gl: 2, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F6",  local: "Cipolletti",             visitante: "Sansinena",  gl: 1, gv: 1, goles_local: [], goles_visitante: [] },
+                    { condicion: "F7",  local: "Sansinena",              visitante: "Villa Mitre",gl: 0, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F8",  local: "Alvarado",               visitante: "Sansinena",  gl: 1, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F9",  local: "Sansinena",              visitante: "Dep. Roca",  gl: 2, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F10", local: "Sansinena",              visitante: "Ferro (Gral. Pico)", gl: 0, gv: 1, goles_local: [], goles_visitante: [] },
+                    { condicion: "F11", local: "Dep. Madryn",            visitante: "Sansinena",  gl: 1, gv: 1, goles_local: [], goles_visitante: [] },
+                    { condicion: "F12", local: "Sansinena",              visitante: "— Fecha Libre —", gl: null, gv: null, goles_local: [], goles_visitante: [] },
+                    { condicion: "F13", local: "Sansinena",              visitante: "Sol de Mayo",gl: 0, gv: 1, goles_local: [], goles_visitante: [] },
+                    { condicion: "F14", local: "Independiente (Neuquén)",visitante: "Sansinena",  gl: 1, gv: 2, goles_local: [], goles_visitante: [] },
+                    { condicion: "F15", local: "Sansinena",              visitante: "Cipolletti", gl: 2, gv: 2, goles_local: [], goles_visitante: [] },
+                    { condicion: "F16", local: "Villa Mitre",            visitante: "Sansinena",  gl: 0, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F17", local: "Sansinena",              visitante: "Alvarado",   gl: 2, gv: 1, goles_local: [], goles_visitante: [] },
+                    { condicion: "F18", local: "Dep. Roca",              visitante: "Sansinena",  gl: 0, gv: 1, goles_local: [], goles_visitante: [] }
+                ]
+            },
+            {
+                nombre: "2° Fase — Zona A",
+                solo_puntos: true,
+                clasificados: 2,
+                clasificados_azul: 1,
+                equipos: [
+                    { nombre: "Alvarado",                    clase: "alvarado",   pj:7, pg:0, pe:0, pp:0, gf:0, gc:0, pts:12 },
+                    { nombre: "Def. Villa Ramallo",          clase: "",           pj:7, pg:0, pe:0, pp:0, gf:0, gc:0, pts:12 },
+                    { nombre: "Gimnasia (CdU)",              clase: "",           pj:7, pg:0, pe:0, pp:0, gf:0, gc:0, pts:11 },
+                    { nombre: "Sansinena",                   clase: "sansinena",  pj:7, pg:0, pe:0, pp:0, gf:0, gc:0, pts:11 },
+                    { nombre: "Villa Mitre",                 clase: "villamitre", pj:7, pg:0, pe:0, pp:0, gf:0, gc:0, pts:10 },
+                    { nombre: "Unión (Sunchales)",           clase: "",           pj:7, pg:0, pe:0, pp:0, gf:0, gc:0, pts:8  },
+                    { nombre: "Camioneros",                  clase: "",           pj:7, pg:0, pe:0, pp:0, gf:0, gc:0, pts:4  },
+                    { nombre: "Sol de Mayo",                 clase: "soldemayo",  pj:7, pg:0, pe:0, pp:0, gf:0, gc:0, pts:3  }
+                ],
+                partidos: [
+                    { condicion: "F1", local: "Villa Mitre",         visitante: "Sansinena",    gl: 0, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F2", local: "Sansinena",           visitante: "Alvarado",     gl: 1, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F3", local: "Sol de Mayo",         visitante: "Sansinena",    gl: 0, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F4", local: "Sansinena",           visitante: "Camioneros",   gl: 3, gv: 3, goles_local: [], goles_visitante: [] },
+                    { condicion: "F5", local: "Unión (Sunchales)",   visitante: "Sansinena",    gl: 1, gv: 3, goles_local: [], goles_visitante: [] },
+                    { condicion: "F6", local: "Def. Villa Ramallo",  visitante: "Sansinena",    gl: 0, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F7", local: "Sansinena",           visitante: "Gimnasia (CdU)",gl: 0, gv: 0, goles_local: [], goles_visitante: [] }
+                ]
+            }
+        ],
+        fases: [
+            {
+                nombre: "Reválida — 1° Fase",
+                partidos: [
+                    { condicion: "Ida",    local: "Sportivo Las Parejas", visitante: "Sansinena", gl: 0, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "Vuelta", local: "Sansinena", visitante: "Sportivo Las Parejas", gl: 0, gv: 0, goles_local: [], goles_visitante: [],
+                      penales: { ganador: "Las Parejas", resultado: "2-3", local_conv: ["Nicolás Palacio", "Juan M. Abaca"], local_fall: ["Juan P. Scheffer", "Bruno Nasta", "Cristian Villanueva"], visitante_conv: [], visitante_fall: [] },
+                      nota: "Global: 0-0. Penales: 3-2 Las Parejas"
+                    }
+                ]
+            }
+        ]
+    },
+    "Sansinena|2018-19|Copa Argentina": {
+        fases: [
+            {
+                nombre: "Fase preliminar regional — 2° Fase",
+                partidos: [
+                    { condicion: "Ida",    local: "Sansinena", visitante: "Villa Mitre", gl: 1, gv: 1, goles_local: [], goles_visitante: [] },
+                    { condicion: "Vuelta", local: "Villa Mitre", visitante: "Sansinena", gl: 3, gv: 0, goles_local: [], goles_visitante: [], nota: "Global: 4-1 Villa Mitre" }
+                ]
+            }
+        ]
+    },
+    "Sansinena|2019-20|Federal A 2019-20": {
+        zonas: [
+            {
+                nombre: "1° Fase — Zona B",
+                solo_puntos: true,
+                clasificados: 4,
+                clasificados_azul: 4,
+                equipos: [
+                    { nombre: "Villa Mitre",         clase: "villamitre", pj:22, pg:0, pe:0, pp:0, gf:0, gc:0, pts:19 },
+                    { nombre: "Dep. Maipú",          clase: "",           pj:22, pg:0, pe:0, pp:0, gf:0, gc:0, pts:39 },
+                    { nombre: "Huracán Las Heras",   clase: "",           pj:22, pg:0, pe:0, pp:0, gf:0, gc:0, pts:35 },
+                    { nombre: "Dep. Madryn",         clase: "",           pj:22, pg:0, pe:0, pp:0, gf:0, gc:0, pts:32 },
+                    { nombre: "Ferro (Gral. Pico)",  clase: "",           pj:22, pg:0, pe:0, pp:0, gf:0, gc:0, pts:31 },
+                    { nombre: "Juventud Unida",      clase: "",           pj:22, pg:0, pe:0, pp:0, gf:0, gc:0, pts:31 },
+                    { nombre: "Sansinena",           clase: "sansinena",  pj:22, pg:0, pe:0, pp:0, gf:0, gc:0, pts:31 },
+                    { nombre: "Olimpo",              clase: "olimpo",     pj:22, pg:0, pe:0, pp:0, gf:0, gc:0, pts:27 },
+                    { nombre: "Camioneros",          clase: "",           pj:22, pg:0, pe:0, pp:0, gf:0, gc:0, pts:25 },
+                    { nombre: "Estudiantes",         clase: "",           pj:22, pg:0, pe:0, pp:0, gf:0, gc:0, pts:25 },
+                    { nombre: "Cipolletti",          clase: "",           pj:22, pg:0, pe:0, pp:0, gf:0, gc:0, pts:25 },
+                    { nombre: "Círculo Dep.",        clase: "circulo",    pj:22, pg:0, pe:0, pp:0, gf:0, gc:0, pts:24 },
+                    { nombre: "Desamparados",        clase: "",           pj:22, pg:0, pe:0, pp:0, gf:0, gc:0, pts:24 },
+                    { nombre: "Sportivo Peñarol",    clase: "",           pj:22, pg:0, pe:0, pp:0, gf:0, gc:0, pts:22 },
+                    { nombre: "Sol de Mayo",         clase: "soldemayo",  pj:22, pg:0, pe:0, pp:0, gf:0, gc:0, pts:17 }
+                ],
+                partidos: [
+                    { condicion: "F1",  local: "Sansinena",        visitante: "Desamparados",    gl: 0, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F2",  local: "Juventud Unida",   visitante: "Sansinena",       gl: 1, gv: 1, goles_local: [], goles_visitante: [] },
+                    { condicion: "F3",  local: "Sansinena",        visitante: "Círculo Dep.",    gl: 1, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F4",  local: "Camioneros",       visitante: "Sansinena",       gl: 1, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F5",  local: "Sansinena",        visitante: "Villa Mitre",     gl: 2, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F6",  local: "Dep. Maipú",       visitante: "Sansinena",       gl: 2, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F7",  local: "Sansinena",        visitante: "Cipolletti",      gl: 1, gv: 3, goles_local: [], goles_visitante: [] },
+                    { condicion: "F8",  local: "Ferro (Gral. Pico)",visitante: "Sansinena",      gl: 1, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F9",  local: "Sansinena",        visitante: "Sportivo Peñarol",gl: 2, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F10", local: "Estudiantes",      visitante: "Sansinena",       gl: 1, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F11", local: "Sansinena",        visitante: "Dep. Madryn",     gl: 1, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F12", local: "Olimpo",           visitante: "Sansinena",       gl: 0, gv: 1, goles_local: [], goles_visitante: [] },
+                    { condicion: "F13", local: "Sansinena",        visitante: "Huracán Las Heras",gl: 1, gv: 1, goles_local: [], goles_visitante: [] },
+                    { condicion: "F14", local: "Sansinena",        visitante: "— Fecha Libre —", gl: null, gv: null, goles_local: [], goles_visitante: [] },
+                    { condicion: "F15", local: "Sol de Mayo",      visitante: "Sansinena",       gl: 0, gv: 1, goles_local: [], goles_visitante: [] },
+                    { condicion: "F16", local: "Desamparados",     visitante: "Sansinena",       gl: 2, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F17", local: "Sansinena",        visitante: "Juventud Unida",  gl: 0, gv: 3, goles_local: [], goles_visitante: [] },
+                    { condicion: "F18", local: "Círculo Dep.",     visitante: "Sansinena",       gl: 0, gv: 1, goles_local: [], goles_visitante: [] },
+                    { condicion: "F19", local: "Sansinena",        visitante: "Camioneros",      gl: 1, gv: 1, goles_local: [], goles_visitante: [] },
+                    { condicion: "F20", local: "Villa Mitre",      visitante: "Sansinena",       gl: 0, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F21", local: "Sansinena",        visitante: "Dep. Maipú",      gl: 1, gv: 1, goles_local: [], goles_visitante: [] },
+                    { condicion: "F22", local: "Cipolletti",       visitante: "Sansinena",       gl: 2, gv: 3, goles_local: [], goles_visitante: [] },
+                    { condicion: "F23", local: "Sansinena",        visitante: "Ferro (Gral. Pico)",gl: 1, gv: 1, goles_local: [], goles_visitante: [] }
+                ]
+            }
+        ],
+        zocalo: "Torneo suspendido por la pandemia de Coronavirus"
+    },
+    "Sansinena|2019-20|Copa Argentina": {
+        fases: [
+            {
+                nombre: "Fase preliminar regional",
+                partidos: [
+                    { condicion: "Ida",    local: "Sansinena", visitante: "Villa Mitre", gl: 2, gv: 2, goles_local: [], goles_visitante: [] },
+                    { condicion: "Vuelta", local: "Villa Mitre", visitante: "Sansinena", gl: 1, gv: 0, goles_local: [], goles_visitante: [], nota: "Global: 3-2 Villa Mitre" }
+                ]
+            }
+        ]
+    },
+    "Sansinena|2020|Federal A Transición 2020": {
+        zonas: [
+            {
+                nombre: "1° Fase — Grupo Sur",
+                solo_puntos: true,
+                clasificados: 1,
+                clasificados_azul: 6,
+                equipos: [
+                    { nombre: "Villa Mitre",        clase: "villamitre", pj:6, pg:0, pe:0, pp:0, gf:0, gc:0, pts:12 },
+                    { nombre: "Dep. Maipú",         clase: "",           pj:6, pg:0, pe:0, pp:0, gf:0, gc:0, pts:10 },
+                    { nombre: "Olimpo",             clase: "olimpo",     pj:6, pg:0, pe:0, pp:0, gf:0, gc:0, pts:10 },
+                    { nombre: "Juventud Unida",     clase: "",           pj:6, pg:0, pe:0, pp:0, gf:0, gc:0, pts:8  },
+                    { nombre: "Huracán Las Heras",  clase: "",           pj:6, pg:0, pe:0, pp:0, gf:0, gc:0, pts:7  },
+                    { nombre: "Dep. Madryn",        clase: "",           pj:6, pg:0, pe:0, pp:0, gf:0, gc:0, pts:7  },
+                    { nombre: "Sansinena",          clase: "sansinena",  pj:6, pg:0, pe:0, pp:0, gf:0, gc:0, pts:3  }
+                ],
+                partidos: [
+                    { condicion: "F1", local: "Olimpo",          visitante: "Sansinena",        gl: 0, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F2", local: "Sansinena",       visitante: "Villa Mitre",      gl: 0, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F3", local: "Dep. Madryn",     visitante: "Sansinena",        gl: 2, gv: 1, goles_local: [], goles_visitante: [] },
+                    { condicion: "F4", local: "Sansinena",       visitante: "Dep. Maipú",       gl: 1, gv: 1, goles_local: [], goles_visitante: [] },
+                    { condicion: "F5", local: "Huracán Las Heras",visitante: "Sansinena",       gl: 1, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F6", local: "Sansinena",       visitante: "Juventud Unida",   gl: 0, gv: 2, goles_local: [], goles_visitante: [] },
+                    { condicion: "F7", local: "Sansinena",       visitante: "— Fecha Libre —",  gl: null, gv: null, goles_local: [], goles_visitante: [] }
+                ]
+            }
+        ],
+        fases: [
+            {
+                nombre: "Reválida — Primera fase",
+                partidos: [
+                    { condicion: "Único", local: "Chaco For Ever", visitante: "Sansinena", gl: 2, gv: 0, goles_local: [], goles_visitante: [] }
+                ]
+            }
+        ]
+    },
+    "Sansinena|2021|Federal A 2021": {
+        zonas: [
+            {
+                nombre: "1° Fase — Zona A",
+                solo_puntos: true,
+                clasificados: 1,
+                clasificados_azul: 4,
+                clasificados_naranja: 3,
+                equipos: [
+                    { nombre: "Dep. Madryn",             clase: "",           pj:30, pg:0, pe:0, pp:0, gf:0, gc:0, pts:56 },
+                    { nombre: "Sol de Mayo",             clase: "soldemayo",  pj:30, pg:0, pe:0, pp:0, gf:0, gc:0, pts:50 },
+                    { nombre: "Cipolletti",              clase: "",           pj:30, pg:0, pe:0, pp:0, gf:0, gc:0, pts:49 },
+                    { nombre: "Sportivo Peñarol",        clase: "",           pj:30, pg:0, pe:0, pp:0, gf:0, gc:0, pts:49 },
+                    { nombre: "Olimpo",                  clase: "olimpo",     pj:30, pg:0, pe:0, pp:0, gf:0, gc:0, pts:49 },
+                    { nombre: "Independiente (Chivilcoy)",clase: "",          pj:30, pg:0, pe:0, pp:0, gf:0, gc:0, pts:48 },
+                    { nombre: "Juventud Unida",          clase: "",           pj:30, pg:0, pe:0, pp:0, gf:0, gc:0, pts:47 },
+                    { nombre: "Villa Mitre",             clase: "villamitre", pj:30, pg:0, pe:0, pp:0, gf:0, gc:0, pts:45 },
+                    { nombre: "Desamparados",            clase: "",           pj:30, pg:0, pe:0, pp:0, gf:0, gc:0, pts:43 },
+                    { nombre: "Ferro (Gral. Pico)",      clase: "",           pj:30, pg:0, pe:0, pp:0, gf:0, gc:0, pts:43 },
+                    { nombre: "Sansinena",               clase: "sansinena",  pj:30, pg:0, pe:0, pp:0, gf:0, gc:0, pts:40 },
+                    { nombre: "Bolívar",                 clase: "",           pj:30, pg:0, pe:0, pp:0, gf:0, gc:0, pts:38 },
+                    { nombre: "Huracán Las Heras",       clase: "",           pj:30, pg:0, pe:0, pp:0, gf:0, gc:0, pts:35 },
+                    { nombre: "Camioneros",              clase: "",           pj:30, pg:0, pe:0, pp:0, gf:0, gc:0, pts:29 },
+                    { nombre: "Estudiantes (SL)",        clase: "",           pj:30, pg:0, pe:0, pp:0, gf:0, gc:0, pts:15 },
+                    { nombre: "Círculo Dep.",            clase: "circulo",    pj:30, pg:0, pe:0, pp:0, gf:0, gc:0, pts:13 }
+                ],
+                partidos: [
+                    { condicion: "F1",  local: "Juventud Unida",          visitante: "Sansinena",    gl: 0, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F2",  local: "Sansinena",               visitante: "Camioneros",   gl: 2, gv: 1, goles_local: [], goles_visitante: [] },
+                    { condicion: "F3",  local: "Huracán Las Heras",       visitante: "Sansinena",    gl: 1, gv: 2, goles_local: [], goles_visitante: [] },
+                    { condicion: "F4",  local: "Sansinena",               visitante: "Sol de Mayo",  gl: 0, gv: 1, goles_local: [], goles_visitante: [] },
+                    { condicion: "F5",  local: "Dep. Madryn",             visitante: "Sansinena",    gl: 1, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F6",  local: "Sansinena",               visitante: "Olimpo",       gl: 1, gv: 4, goles_local: [], goles_visitante: [] },
+                    { condicion: "F7",  local: "Sportivo Peñarol",        visitante: "Sansinena",    gl: 3, gv: 3, goles_local: [], goles_visitante: [] },
+                    { condicion: "F8",  local: "Sansinena",               visitante: "Estudiantes (SL)", gl: 3, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F9",  local: "Independiente (Chivilcoy)",visitante: "Sansinena",   gl: 3, gv: 1, goles_local: [], goles_visitante: [] },
+                    { condicion: "F10", local: "Sansinena",               visitante: "Cipolletti",   gl: 0, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F11", local: "Círculo Dep.",            visitante: "Sansinena",    gl: 2, gv: 1, goles_local: [], goles_visitante: [] },
+                    { condicion: "F12", local: "Sansinena",               visitante: "Ferro (Gral. Pico)", gl: 3, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F13", local: "Villa Mitre",             visitante: "Sansinena",    gl: 2, gv: 2, goles_local: [], goles_visitante: [] },
+                    { condicion: "F14", local: "Sansinena",               visitante: "Desamparados", gl: 1, gv: 1, goles_local: [], goles_visitante: [] },
+                    { condicion: "F15", local: "Bolívar",                 visitante: "Sansinena",    gl: 0, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F16", local: "Sansinena",               visitante: "Juventud Unida",gl: 1, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F17", local: "Camioneros",              visitante: "Sansinena",    gl: 0, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F18", local: "Sansinena",               visitante: "Huracán Las Heras", gl: 3, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F19", local: "Sol de Mayo",             visitante: "Sansinena",    gl: 1, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F20", local: "Sansinena",               visitante: "Dep. Madryn",  gl: 1, gv: 1, goles_local: [], goles_visitante: [] },
+                    { condicion: "F21", local: "Olimpo",                  visitante: "Sansinena",    gl: 5, gv: 1, goles_local: [], goles_visitante: [] },
+                    { condicion: "F22", local: "Sansinena",               visitante: "Sportivo Peñarol", gl: 1, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F23", local: "Estudiantes (SL)",        visitante: "Sansinena",    gl: 1, gv: 2, goles_local: [], goles_visitante: [] },
+                    { condicion: "F24", local: "Sansinena",               visitante: "Independiente (Chivilcoy)", gl: 1, gv: 1, goles_local: [], goles_visitante: [] },
+                    { condicion: "F25", local: "Cipolletti",              visitante: "Sansinena",    gl: 1, gv: 1, goles_local: [], goles_visitante: [] },
+                    { condicion: "F26", local: "Sansinena",               visitante: "Círculo Dep.", gl: 3, gv: 1, goles_local: [], goles_visitante: [] },
+                    { condicion: "F27", local: "Ferro (Gral. Pico)",      visitante: "Sansinena",    gl: 3, gv: 2, goles_local: [], goles_visitante: [] },
+                    { condicion: "F28", local: "Sansinena",               visitante: "Villa Mitre",  gl: 0, gv: 1, goles_local: [], goles_visitante: [] },
+                    { condicion: "F29", local: "Desamparados",            visitante: "Sansinena",    gl: 1, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F30", local: "Sansinena",               visitante: "Bolívar",      gl: 3, gv: 2, goles_local: [], goles_visitante: [] }
+                ]
+            }
+        ]
+    },
+    "Sansinena|2022|Federal A": {
+        zonas: [
+            {
+                nombre: "Etapa Clasificatoria — Zona Sur",
+                solo_puntos: true,
+                clasificados: 5,
+                clasificados_azul: 3,
+                clasificados_rojo: 2,
+                equipos: [
+                    { nombre: "Olimpo",                    clase: "olimpo",     pj:32, pg:0, pe:0, pp:0, gf:0, gc:0, pts:73 },
+                    { nombre: "Villa Mitre",               clase: "villamitre", pj:32, pg:0, pe:0, pp:0, gf:0, gc:0, pts:57 },
+                    { nombre: "Bolívar",                   clase: "",           pj:32, pg:0, pe:0, pp:0, gf:0, gc:0, pts:49 },
+                    { nombre: "Independiente (Chivilcoy)", clase: "",           pj:32, pg:0, pe:0, pp:0, gf:0, gc:0, pts:47 },
+                    { nombre: "Sol de Mayo",               clase: "soldemayo",  pj:32, pg:0, pe:0, pp:0, gf:0, gc:0, pts:46 },
+                    { nombre: "Estudiantes (SL)",          clase: "",           pj:32, pg:0, pe:0, pp:0, gf:0, gc:0, pts:46 },
+                    { nombre: "Juventud Unida (SL)",       clase: "",           pj:32, pg:0, pe:0, pp:0, gf:0, gc:0, pts:45 },
+                    { nombre: "Sansinena",                 clase: "sansinena",  pj:32, pg:0, pe:0, pp:0, gf:0, gc:0, pts:42 },
+                    { nombre: "Argentino (Monte Maíz)",    clase: "",           pj:32, pg:0, pe:0, pp:0, gf:0, gc:0, pts:40 },
+                    { nombre: "Cipolletti",                clase: "",           pj:32, pg:0, pe:0, pp:0, gf:0, gc:0, pts:38 },
+                    { nombre: "Sportivo Peñarol",          clase: "",           pj:32, pg:0, pe:0, pp:0, gf:0, gc:0, pts:37 },
+                    { nombre: "Liniers",                   clase: "liniers",    pj:32, pg:0, pe:0, pp:0, gf:0, gc:0, pts:36 },
+                    { nombre: "Círculo Dep.",              clase: "circulo",    pj:32, pg:0, pe:0, pp:0, gf:0, gc:0, pts:36 },
+                    { nombre: "Huracán Las Heras",         clase: "",           pj:32, pg:0, pe:0, pp:0, gf:0, gc:0, pts:35 },
+                    { nombre: "Ferro (Gral. Pico)",        clase: "",           pj:32, pg:0, pe:0, pp:0, gf:0, gc:0, pts:35 },
+                    { nombre: "Desamparados",              clase: "",           pj:32, pg:0, pe:0, pp:0, gf:0, gc:0, pts:34 },
+                    { nombre: "Camioneros",                clase: "",           pj:32, pg:0, pe:0, pp:0, gf:0, gc:0, pts:31 }
+                ],
+                partidos: [
+                    { condicion: "F1",  local: "Bolívar",                  visitante: "Sansinena",              gl: 1, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F2",  local: "Sansinena",                visitante: "Villa Mitre",            gl: 1, gv: 2, goles_local: [], goles_visitante: [] },
+                    { condicion: "F3",  local: "Cipolletti",               visitante: "Sansinena",              gl: 1, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F4",  local: "Sansinena",                visitante: "Desamparados",           gl: 3, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F5",  local: "Camioneros",               visitante: "Sansinena",              gl: 3, gv: 1, goles_local: [], goles_visitante: [] },
+                    { condicion: "F6",  local: "Sansinena",                visitante: "Estudiantes (SL)",       gl: 0, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F7",  local: "Olimpo",                   visitante: "Sansinena",              gl: 3, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F8",  local: "Sansinena",                visitante: "Independiente (Chivilcoy)",gl: 2, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F9",  local: "Sol de Mayo",              visitante: "Sansinena",              gl: 0, gv: 4, goles_local: [], goles_visitante: [] },
+                    { condicion: "F10", local: "Sansinena",                visitante: "Argentino (Monte Maíz)", gl: 3, gv: 1, goles_local: [], goles_visitante: [] },
+                    { condicion: "F11", local: "Círculo Dep.",             visitante: "Sansinena",              gl: 1, gv: 2, goles_local: [], goles_visitante: [] },
+                    { condicion: "F12", local: "Sansinena",                visitante: "Liniers",                gl: 3, gv: 1, goles_local: [], goles_visitante: [] },
+                    { condicion: "F13", local: "Juventud Unida (SL)",      visitante: "Sansinena",              gl: 1, gv: 1, goles_local: [], goles_visitante: [] },
+                    { condicion: "F14", local: "Sansinena",                visitante: "Ferro (Gral. Pico)",     gl: 2, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F15", local: "Sportivo Peñarol",         visitante: "Sansinena",              gl: 2, gv: 1, goles_local: [], goles_visitante: [] },
+                    { condicion: "F16", local: "Sansinena",                visitante: "Huracán Las Heras",      gl: 2, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F17", local: "Sansinena",                visitante: "— Fecha Libre —",        gl: null, gv: null, goles_local: [], goles_visitante: [] },
+                    { condicion: "F18", local: "Sansinena",                visitante: "Bolívar",                gl: 0, gv: 3, goles_local: [], goles_visitante: [] },
+                    { condicion: "F19", local: "Villa Mitre",              visitante: "Sansinena",              gl: 3, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F20", local: "Sansinena",                visitante: "Cipolletti",             gl: 1, gv: 3, goles_local: [], goles_visitante: [] },
+                    { condicion: "F21", local: "Desamparados",             visitante: "Sansinena",              gl: 1, gv: 1, goles_local: [], goles_visitante: [] },
+                    { condicion: "F22", local: "Sansinena",                visitante: "Camioneros",             gl: 3, gv: 1, goles_local: [], goles_visitante: [] },
+                    { condicion: "F23", local: "Estudiantes (SL)",         visitante: "Sansinena",              gl: 1, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F24", local: "Sansinena",                visitante: "Olimpo",                 gl: 2, gv: 2, goles_local: [], goles_visitante: [] },
+                    { condicion: "F25", local: "Independiente (Chivilcoy)",visitante: "Sansinena",              gl: 2, gv: 1, goles_local: [], goles_visitante: [] },
+                    { condicion: "F26", local: "Sansinena",                visitante: "Sol de Mayo",            gl: 1, gv: 2, goles_local: [], goles_visitante: [] },
+                    { condicion: "F27", local: "Argentino (Monte Maíz)",   visitante: "Sansinena",              gl: 1, gv: 2, goles_local: [], goles_visitante: [] },
+                    { condicion: "F28", local: "Sansinena",                visitante: "Círculo Dep.",           gl: 1, gv: 1, goles_local: [], goles_visitante: [] },
+                    { condicion: "F29", local: "Liniers",                  visitante: "Sansinena",              gl: 2, gv: 2, goles_local: [], goles_visitante: [] },
+                    { condicion: "F30", local: "Sansinena",                visitante: "Juventud Unida (SL)",    gl: 3, gv: 1, goles_local: [], goles_visitante: [] },
+                    { condicion: "F31", local: "Ferro (Gral. Pico)",       visitante: "Sansinena",              gl: 2, gv: 1, goles_local: [], goles_visitante: [] },
+                    { condicion: "F32", local: "Sansinena",                visitante: "Sportivo Peñarol",       gl: 1, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F33", local: "Huracán Las Heras",        visitante: "Sansinena",              gl: 1, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F34", local: "Sansinena",                visitante: "— Fecha Libre —",        gl: null, gv: null, goles_local: [], goles_visitante: [] }
+                ]
+            }
+        ],
+        fases: [
+            {
+                nombre: "Octavos de final",
+                partidos: [
+                    { condicion: "Único", local: "Olimpo", visitante: "Sansinena", gl: 1, gv: 0, goles_local: [], goles_visitante: [] }
+                ]
+            }
+        ]
+    },
+    "Sansinena|2023|Federal A": {
+        zonas: [
+            {
+                nombre: "Etapa Clasificatoria — Zona A",
+                solo_puntos: true,
+                clasificados: 2,
+                clasificados_azul: 2,
+                clasificados_amarillo: 1,
+                equipos: [
+                    { nombre: "Olimpo",        clase: "olimpo",     pj:36, pg:0, pe:0, pp:0, gf:0, gc:0, pts:70 },
+                    { nombre: "Villa Mitre",   clase: "villamitre", pj:36, pg:0, pe:0, pp:0, gf:0, gc:0, pts:67 },
+                    { nombre: "Cipolletti",    clase: "",           pj:36, pg:0, pe:0, pp:0, gf:0, gc:0, pts:47 },
+                    { nombre: "Santamarina",   clase: "santamarina",pj:36, pg:0, pe:0, pp:0, gf:0, gc:0, pts:44 },
+                    { nombre: "Sansinena",     clase: "sansinena",  pj:36, pg:0, pe:0, pp:0, gf:0, gc:0, pts:43 },
+                    { nombre: "Sol de Mayo",   clase: "soldemayo",  pj:36, pg:0, pe:0, pp:0, gf:0, gc:0, pts:38 },
+                    { nombre: "Germinal",      clase: "germinal",   pj:36, pg:0, pe:0, pp:0, gf:0, gc:0, pts:34 },
+                    { nombre: "Círculo Dep.",  clase: "circulo",    pj:36, pg:0, pe:0, pp:0, gf:0, gc:0, pts:29 },
+                    { nombre: "Liniers",       clase: "liniers",    pj:36, pg:0, pe:0, pp:0, gf:0, gc:0, pts:24 }
+                ],
+                partidos: [
+                    { condicion: "F1",  local: "Santamarina",  visitante: "Sansinena", gl: 1, gv: 1, goles_local: [], goles_visitante: [] },
+                    { condicion: "F2",  local: "Sansinena",    visitante: "Cipolletti",gl: 2, gv: 1, goles_local: [], goles_visitante: [] },
+                    { condicion: "F3",  local: "Germinal",     visitante: "Sansinena", gl: 1, gv: 1, goles_local: [], goles_visitante: [] },
+                    { condicion: "F4",  local: "Sansinena",    visitante: "Sol de Mayo",gl: 2, gv: 1, goles_local: [], goles_visitante: [] },
+                    { condicion: "F5",  local: "Sansinena",    visitante: "Olimpo",    gl: 0, gv: 2, goles_local: [], goles_visitante: [] },
+                    { condicion: "F6",  local: "Sansinena",    visitante: "Círculo Dep.",gl: 2, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F7",  local: "Sansinena",    visitante: "— Fecha Libre —", gl: null, gv: null, goles_local: [], goles_visitante: [] },
+                    { condicion: "F8",  local: "Liniers",      visitante: "Sansinena", gl: 2, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F9",  local: "Sansinena",    visitante: "Villa Mitre",gl: 0, gv: 2, goles_local: [], goles_visitante: [] },
+                    { condicion: "F10", local: "Sansinena",    visitante: "Santamarina",gl: 2, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F11", local: "Cipolletti",   visitante: "Sansinena", gl: 3, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F12", local: "Sansinena",    visitante: "Germinal",  gl: 3, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F13", local: "Sol de Mayo",  visitante: "Sansinena", gl: 1, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F14", local: "Olimpo",       visitante: "Sansinena", gl: 1, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F15", local: "Círculo Dep.", visitante: "Sansinena", gl: 0, gv: 3, goles_local: [], goles_visitante: [] },
+                    { condicion: "F16", local: "Sansinena",    visitante: "— Fecha Libre —", gl: null, gv: null, goles_local: [], goles_visitante: [] },
+                    { condicion: "F17", local: "Sansinena",    visitante: "Liniers",   gl: 2, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F18", local: "Villa Mitre",  visitante: "Sansinena", gl: 0, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F19", local: "Santamarina",  visitante: "Sansinena", gl: 0, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F20", local: "Sansinena",    visitante: "Cipolletti",gl: 1, gv: 1, goles_local: [], goles_visitante: [] },
+                    { condicion: "F21", local: "Germinal",     visitante: "Sansinena", gl: 2, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F22", local: "Sansinena",    visitante: "Sol de Mayo",gl: 3, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F23", local: "Olimpo",       visitante: "Sansinena", gl: 2, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F24", local: "Sansinena",    visitante: "Círculo Dep.",gl: 1, gv: 2, goles_local: [], goles_visitante: [] },
+                    { condicion: "F25", local: "Sansinena",    visitante: "— Fecha Libre —", gl: null, gv: null, goles_local: [], goles_visitante: [] },
+                    { condicion: "F26", local: "Liniers",      visitante: "Sansinena", gl: 0, gv: 1, goles_local: [], goles_visitante: [] },
+                    { condicion: "F27", local: "Sansinena",    visitante: "Villa Mitre",gl: 2, gv: 4, goles_local: [], goles_visitante: [] },
+                    { condicion: "F28", local: "Sansinena",    visitante: "Santamarina",gl: 1, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F29", local: "Cipolletti",   visitante: "Sansinena", gl: 2, gv: 1, goles_local: [], goles_visitante: [] },
+                    { condicion: "F30", local: "Sansinena",    visitante: "Germinal",  gl: 1, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F31", local: "Sol de Mayo",  visitante: "Sansinena", gl: 4, gv: 2, goles_local: [], goles_visitante: [] },
+                    { condicion: "F32", local: "Sansinena",    visitante: "Olimpo",    gl: 1, gv: 1, goles_local: [], goles_visitante: [] },
+                    { condicion: "F33", local: "Círculo Dep.", visitante: "Sansinena", gl: 0, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F34", local: "Sansinena",    visitante: "— Fecha Libre —", gl: null, gv: null, goles_local: [], goles_visitante: [] },
+                    { condicion: "F35", local: "Sansinena",    visitante: "Liniers",   gl: 1, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F36", local: "Villa Mitre",  visitante: "Sansinena", gl: 4, gv: 0, goles_local: [], goles_visitante: [] }
+                ]
+            }
+        ]
+    },
+    "Sansinena|2024|Federal A": {
+        zonas: [
+            {
+                nombre: "Etapa Clasificatoria — Zona 1",
+                solo_puntos: true,
+                clasificados: 5,
+                clasificados_rojo: 1,
+                equipos: [
+                    { nombre: "Olimpo",        clase: "olimpo",     pj:12, pg:0, pe:0, pp:0, gf:0, gc:0, pts:36 },
+                    { nombre: "Villa Mitre",   clase: "villamitre", pj:12, pg:0, pe:0, pp:0, gf:0, gc:0, pts:34 },
+                    { nombre: "Germinal",      clase: "germinal",   pj:12, pg:0, pe:0, pp:0, gf:0, gc:0, pts:33 },
+                    { nombre: "Santamarina",   clase: "santamarina",pj:12, pg:0, pe:0, pp:0, gf:0, gc:0, pts:25 },
+                    { nombre: "Kimberley",     clase: "kimberley",  pj:12, pg:0, pe:0, pp:0, gf:0, gc:0, pts:25 },
+                    { nombre: "Círculo Dep.",  clase: "circulo",    pj:12, pg:0, pe:0, pp:0, gf:0, gc:0, pts:21 },
+                    { nombre: "Sol de Mayo",   clase: "soldemayo",  pj:12, pg:0, pe:0, pp:0, gf:0, gc:0, pts:21 },
+                    { nombre: "Rincón",        clase: "",           pj:12, pg:0, pe:0, pp:0, gf:0, gc:0, pts:20 },
+                    { nombre: "Cipolletti",    clase: "",           pj:12, pg:0, pe:0, pp:0, gf:0, gc:0, pts:17 },
+                    { nombre: "Sansinena",     clase: "sansinena",  pj:12, pg:0, pe:0, pp:0, gf:0, gc:0, pts:8  }
+                ],
+                partidos: [
+                    { condicion: "F1",  local: "Sansinena",   visitante: "Olimpo",        gl: 0, gv: 1, goles_local: [], goles_visitante: [] },
+                    { condicion: "F2",  local: "Villa Mitre", visitante: "Sansinena",     gl: 3, gv: 2, goles_local: [], goles_visitante: [] },
+                    { condicion: "F3",  local: "Sansinena",   visitante: "Cipolletti",    gl: 2, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F4",  local: "Germinal",    visitante: "Sansinena",     gl: 3, gv: 1, goles_local: [], goles_visitante: [] },
+                    { condicion: "F5",  local: "Sansinena",   visitante: "Rincón",        gl: 0, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F6",  local: "Sol de Mayo", visitante: "Sansinena",     gl: 2, gv: 1, goles_local: [], goles_visitante: [] },
+                    { condicion: "F7",  local: "Sansinena",   visitante: "Círculo Dep.",  gl: 1, gv: 1, goles_local: [], goles_visitante: [] },
+                    { condicion: "F8",  local: "Kimberley",   visitante: "Sansinena",     gl: 1, gv: 1, goles_local: [], goles_visitante: [] },
+                    { condicion: "F9",  local: "Sansinena",   visitante: "Santamarina",   gl: 0, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F10", local: "Olimpo",      visitante: "Sansinena",     gl: 2, gv: 0, goles_local: [], goles_visitante: [] },
+                    { condicion: "F11", local: "Sansinena",   visitante: "Villa Mitre",   gl: 0, gv: 2, goles_local: [], goles_visitante: [] },
+                    { condicion: "F12", local: "Cipolletti",  visitante: "Sansinena",     gl: 0, gv: 0, goles_local: [], goles_visitante: [] }
+                ]
+            }
+        ],
+        zocalo: "Sansinena abandonó tras la fecha 12 y descendió automáticamente"
+    },
     "Bella Vista|2005|Torneo del Interior": {
         zonas: [
             {
