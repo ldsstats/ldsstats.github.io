@@ -384,7 +384,7 @@
     box-sizing: border-box;
     line-height: 0;
     font-size: 0;
-    max-height: 80px;
+    max-height: 110px;
 ">
     <div id="banner-slide" style="width:100%; line-height:0; font-size:0;">
         <!-- Placeholder hasta que se carguen las imágenes -->
@@ -427,14 +427,17 @@
 // Ajustar padding-bottom según alto real del banner
 function ajustarPaddingBanner() {
     const banner = document.getElementById('banner-pub');
-    const body = document.body;
+    const cont = document.getElementById('container-principal');
     if (banner) {
         const h = banner.offsetHeight;
-        body.style.paddingBottom = (h + 10) + 'px';
+        document.body.style.paddingBottom = (h + 15) + 'px';
     }
 }
 window.addEventListener('load', ajustarPaddingBanner);
 window.addEventListener('resize', ajustarPaddingBanner);
+// Ajustar también cuando cambia la imagen del banner
+setTimeout(ajustarPaddingBanner, 500);
+setTimeout(ajustarPaddingBanner, 1500);
 </script>
 </body>
 </html>
