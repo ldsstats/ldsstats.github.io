@@ -1,0 +1,126 @@
+body { font-family: Arial, sans-serif; background-color: #729b3c; background-image: url('https://www.promiedos.com.ar/images/pasto.png'); margin: 0; padding: 10px; padding-bottom: 75px; display: flex; justify-content: center; }
+#container-principal { width: 100%; max-width: 900px; }
+#logo-header { background-color: #004d26; text-align: center; padding: 8px; border: 1px solid #000; margin-bottom: 8px; }
+#menu-grid { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 10px; }
+.bloque { background-color: #004d26; border: 1px solid #000; width: calc(16.66% - 5px); min-width: 120px; flex-shrink: 0; flex-grow: 1; align-self: flex-start; }
+.bloque-titulo { background-color: #00331a; color: #adff2f; font-size: 10px; font-weight: bold; padding: 5px; text-align: center; border-bottom: none; margin-bottom: 0; }
+.bloque a { color: white; text-decoration: none; font-size: 10.5px; font-weight: bold; text-align: center; display: block; padding: 4px 5px; line-height: 1.2; }
+.bloque a:hover { color: #adff2f; background: #00552b; }
+#contenido { background-color: white; border: 1px solid #000; }
+.header-t { background-color: #004d26; color: #ffff00; text-align: center; padding: 8px; font-size: 13px; font-weight: bold; margin-top: 15px; }
+table { width: 100%; border-collapse: collapse; font-size: 12px; table-layout: fixed; }
+th { background-color: #444; color: white; font-size: 10px; padding: 8px 2px; text-align: center; }
+td { height: 35px; color: black; border-bottom: 1px solid #ccc; text-align: center; }
+.c-pos { width: 25px; font-weight: bold; border-right: 1px solid #ccc; }
+.c-equipo { width: auto; text-align: left; padding-left: 8px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.c-stat { width: 30px; text-align: center; font-size: 11px; }
+
+.p-playoff { background-color: #d4edda !important; }
+.p-mejorquinto { background-color: #ffe5b4 !important; }
+.p-revalida { background-color: #cce5ff !important; }
+.p-naranja { background-color: #ffe0b2 !important; }
+.p-promo { background-color: #fff3cd !important; }
+.p-desc { background-color: #f8d7da !important; }
+.p-promocion { background-color: #fff3cd !important; }
+
+.nav-fechas { background-color: #ddd; padding: 8px; display: flex; flex-wrap: wrap; justify-content: center; gap: 4px; border-bottom: 1px solid #999; }
+.btn-f { background: white; border: 1px solid #777; width: 28px; height: 25px; display: flex; align-items: center; justify-content: center; font-size: 11px; cursor: pointer; font-weight: bold; }
+.btn-f.active { background: #004d26; color: white; }
+.c-loc { width: 42%; text-align: right; padding-right: 8px; }
+.c-res { width: 16%; font-weight: bold; background: #eee; border: 1px solid #ccc; }
+.c-vis { width: 42%; text-align: left; padding-left: 8px; }
+.msg-prox { padding: 80px; text-align: center; font-size: 22px; font-weight: bold; color: #bbb; }
+
+.escudo { width: 16px; height: 16px; display: inline-block; vertical-align: middle; border: 1px solid #666; margin: 0 4px; background: white; position: relative; overflow: hidden; text-align: center; line-height: 16px; }
+
+/* ESCUDOS */
+.olimpo { background: repeating-linear-gradient(90deg, #000, #000 3.2px, #ff0 3.2px, #ff0 6.4px); }
+.villamitre { background: linear-gradient(90deg, green 33%, white 33%, white 66%, black 66%); }
+.santamarina { background: repeating-linear-gradient(90deg, #ff0, #ff0 3.2px, #000 3.2px, #000 6.4px); }
+.germinal { background: repeating-linear-gradient(90deg, green, green 3.2px, white 3.2px, white 6.4px); }
+.circulo { background: repeating-linear-gradient(90deg, green, green 3.2px, #ff4500 3.2px, #ff4500 6.4px); }
+.kimberley { background: linear-gradient(90deg, green 50%, white 50%); display: inline-flex !important; align-items: center; justify-content: center; }
+.kimberley::before { content: "K"; color: black; font-size: 10px; font-weight: bold; z-index: 1; }
+.alvarado { background-color: #2a1db5; position: relative; }
+.alvarado::before { content: ""; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: linear-gradient(-45deg, transparent 46%, white 46%, white 54%, transparent 54%); }
+.gbrown { background-color: white; position: relative; }
+.gbrown::before { content: ""; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: linear-gradient(-45deg, transparent 46%, #2a1db5 46%, #2a1db5 54%, transparent 54%); }
+.soldemayo { background-color: #00f2ff; position: relative; }
+.soldemayo::before { content: ""; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: linear-gradient(-45deg, transparent 46%, white 46%, white 54%, transparent 54%); }
+.libertad { background: linear-gradient(90deg, #00f 20%, #fff 20%, #fff 40%, #00f 40%, #00f 60%, #fff 60%, #fff 80%, #00f 80%); }
+.liniers { background: linear-gradient(90deg, #000 20%, #fff 20%, #fff 40%, #000 40%, #000 60%, #fff 60%, #fff 80%, #000 80%); }
+.huracan::before { content: "H"; color: red; font-size: 11px; font-weight: bold; display: flex; align-items: center; justify-content: center; }
+.sanfrancisco { background-color: skyblue; }
+.sporting { background: linear-gradient(90deg, red 50%, black 50%); }
+.bellavista { background: linear-gradient(135deg, white 30%, green 30%, green 70%, white 70%); }
+.laarmonia::after { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: #004da6; clip-path: polygon(0 0, 50% 50%, 100% 0, 100% 25%, 50% 75%, 0 25%); }
+.dublin { background-color: red; }
+.rosario { background: linear-gradient(90deg, #318ce7 33%, #fff 33%, #fff 66%, #e30613 66%); }
+.comercial { background: linear-gradient(90deg, green 33%, yellow 33%, yellow 66%, green 66%); }
+.pacificobb { background-color: green; color: white; font-size: 11px; font-weight: bold; display: inline-flex !important; align-items: center; justify-content: center; }
+.pacificobb::before { content: "P"; }
+.pacificoc { background-color: green; color: white; font-size: 9px; font-weight: bold; display: inline-flex !important; align-items: center; justify-content: center; }
+.pacificoc::before { content: "PC"; }
+.sansinena { background: repeating-linear-gradient(90deg, #e30613, #e30613 3.2px, #fff 3.2px, #fff 6.4px); }
+.pacifico { background-color: #008000; color: white; font-size: 9px; font-weight: bold; display: inline-flex !important; align-items: center; justify-content: center; }
+.pacifico::before { content: "P"; }
+.rosariopb { background: linear-gradient(90deg, #003DA5 33.3%, #fff 33.3%, #fff 66.6%, #ED2939 66.6%); }
+.tirofederal { background: repeating-linear-gradient(90deg, #4b0082, #4b0082 3.2px, #ff0 3.2px, #ff0 6.4px); }
+.puertocomercial { background: linear-gradient(90deg, green 33%, #ff0 33%, #ff0 66%, green 66%); }
+tr[onclick]:hover td { background-color: #e8f5e9 !important; }
+
+/* MENÚ DESPLEGABLE */
+.bloque-titulo.sin-drop { cursor: pointer; }
+.bloque-titulo.sin-drop:hover { background-color: #004d26; color: white; }
+.bloque-titulo.con-drop { cursor: pointer; display: flex; justify-content: space-between; align-items: center; margin-bottom: 0; border-bottom: none; }
+.bloque-titulo.con-drop:hover { background-color: #004d26; }
+.flecha { font-size: 8px; margin-left: 4px; }
+.bloque-links { display: none; padding-bottom: 4px; }
+.bloque-links.abierto { display: block; }
+
+/* Femenino */
+.municipales { background: #2ecc40; position: relative; overflow: hidden; }
+.municipales::after { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: white; clip-path: polygon(0 0, 100% 0, 100% 40%, 50% 65%, 0 40%); }
+.empleados { background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16'%3E%3Crect width='16' height='16' fill='%232ecc40'/%3E%3Ctext x='2' y='8' font-size='7' font-weight='bold' fill='white' font-family='serif'%3EA%3C/text%3E%3Ctext x='10' y='8' font-size='7' font-weight='bold' fill='white' font-family='serif'%3EE%3C/text%3E%3Ctext x='6' y='15' font-size='7' font-weight='bold' fill='white' font-family='serif'%3EC%3C/text%3E%3C/svg%3E") no-repeat center/cover; }
+
+.estrellaoro { background: repeating-linear-gradient(180deg, #ffd700, #ffd700 5.3px, #000 5.3px, #000 10.6px, #ffd700 10.6px, #ffd700 16px); }
+.petroquimicos { background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16'%3E%3Crect width='16' height='16' fill='white'/%3E%3Ctext x='1' y='7' font-size='5' font-weight='bold' fill='%23008000' font-family='sans-serif'%3ESPIQ%3C/text%3E%3Ctext x='2' y='13' font-size='5' font-weight='bold' fill='%23008000' font-family='sans-serif'%3EPYA%3C/text%3E%3C/svg%3E") no-repeat center/cover; }
+
+/* Formativas */
+.liniersb { background: url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'16'%20height%3D'16'%3E%3Crect%20width%3D'16'%20height%3D'16'%20fill%3D'black'%2F%3E%3Crect%20x%3D'3.2'%20y%3D'0'%20width%3D'3.2'%20height%3D'16'%20fill%3D'white'%2F%3E%3Crect%20x%3D'9.6'%20y%3D'0'%20width%3D'3.2'%20height%3D'16'%20fill%3D'white'%2F%3E%3Ctext%20x%3D'50%25'%20y%3D'50%25'%20dominant-baseline%3D'middle'%20text-anchor%3D'middle'%20font-size%3D'11'%20font-weight%3D'bold'%20fill%3D'red'%20font-family%3D'sans-serif'%3EB%3C%2Ftext%3E%3C%2Fsvg%3E") no-repeat center/cover; }
+.liniersc { background: url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'16'%20height%3D'16'%3E%3Crect%20width%3D'16'%20height%3D'16'%20fill%3D'black'%2F%3E%3Crect%20x%3D'3.2'%20y%3D'0'%20width%3D'3.2'%20height%3D'16'%20fill%3D'white'%2F%3E%3Crect%20x%3D'9.6'%20y%3D'0'%20width%3D'3.2'%20height%3D'16'%20fill%3D'white'%2F%3E%3Ctext%20x%3D'50%25'%20y%3D'50%25'%20dominant-baseline%3D'middle'%20text-anchor%3D'middle'%20font-size%3D'11'%20font-weight%3D'bold'%20fill%3D'red'%20font-family%3D'sans-serif'%3EC%3C%2Ftext%3E%3C%2Fsvg%3E") no-repeat center/cover; }
+.bellavistab { background: url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'16'%20height%3D'16'%3E%3Crect%20width%3D'16'%20height%3D'16'%20fill%3D'white'%2F%3E%3Cpolygon%20points%3D'4.8%2C0%2016%2C0%2011.2%2C16%200%2C16'%20fill%3D'green'%2F%3E%3Ctext%20x%3D'50%25'%20y%3D'50%25'%20dominant-baseline%3D'middle'%20text-anchor%3D'middle'%20font-size%3D'11'%20font-weight%3D'bold'%20fill%3D'red'%20font-family%3D'sans-serif'%3EB%3C%2Ftext%3E%3C%2Fsvg%3E") no-repeat center/cover; }
+.olimpob { background: url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'16'%20height%3D'16'%3E%3Crect%20width%3D'16'%20height%3D'16'%20fill%3D'black'%2F%3E%3Crect%20x%3D'3.2'%20y%3D'0'%20width%3D'3.2'%20height%3D'16'%20fill%3D'gold'%2F%3E%3Crect%20x%3D'9.6'%20y%3D'0'%20width%3D'3.2'%20height%3D'16'%20fill%3D'gold'%2F%3E%3Ctext%20x%3D'50%25'%20y%3D'50%25'%20dominant-baseline%3D'middle'%20text-anchor%3D'middle'%20font-size%3D'11'%20font-weight%3D'bold'%20fill%3D'red'%20font-family%3D'sans-serif'%3EB%3C%2Ftext%3E%3C%2Fsvg%3E") no-repeat center/cover; }
+.tirofederalb { background: url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'16'%20height%3D'16'%3E%3Crect%20width%3D'16'%20height%3D'16'%20fill%3D'indigo'%2F%3E%3Crect%20x%3D'3.2'%20y%3D'0'%20width%3D'3.2'%20height%3D'16'%20fill%3D'gold'%2F%3E%3Crect%20x%3D'9.6'%20y%3D'0'%20width%3D'3.2'%20height%3D'16'%20fill%3D'gold'%2F%3E%3Ctext%20x%3D'50%25'%20y%3D'50%25'%20dominant-baseline%3D'middle'%20text-anchor%3D'middle'%20font-size%3D'11'%20font-weight%3D'bold'%20fill%3D'red'%20font-family%3D'sans-serif'%3EB%3C%2Ftext%3E%3C%2Fsvg%3E") no-repeat center/cover; }
+.juventudunida { background: white; position: relative; }
+.juventudunida::after { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: red; clip-path: polygon(0 0, 50% 50%, 100% 0, 100% 25%, 50% 75%, 0 25%); }
+
+/* Escudos Menores C */
+.bellavistac { background: url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'16'%20height%3D'16'%3E%3Crect%20width%3D'16'%20height%3D'16'%20fill%3D'white'%2F%3E%3Cpolygon%20points%3D'4.8%2C0%2016%2C0%2011.2%2C16%200%2C16'%20fill%3D'green'%2F%3E%3Ctext%20x%3D'50%25'%20y%3D'50%25'%20dominant-baseline%3D'middle'%20text-anchor%3D'middle'%20font-size%3D'11'%20font-weight%3D'bold'%20fill%3D'red'%20font-family%3D'sans-serif'%3EC%3C%2Ftext%3E%3C%2Fsvg%3E") no-repeat center/cover; }
+.libertadb { background: url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'16'%20height%3D'16'%3E%3Crect%20width%3D'16'%20height%3D'16'%20fill%3D'%230000ff'%2F%3E%3Crect%20x%3D'3.2'%20y%3D'0'%20width%3D'3.2'%20height%3D'16'%20fill%3D'white'%2F%3E%3Crect%20x%3D'9.6'%20y%3D'0'%20width%3D'3.2'%20height%3D'16'%20fill%3D'white'%2F%3E%3Ctext%20x%3D'50%25'%20y%3D'50%25'%20dominant-baseline%3D'middle'%20text-anchor%3D'middle'%20font-size%3D'11'%20font-weight%3D'bold'%20fill%3D'red'%20font-family%3D'sans-serif'%3EB%3C%2Ftext%3E%3C%2Fsvg%3E") no-repeat center/cover; }
+.liniersd { background: url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'16'%20height%3D'16'%3E%3Crect%20width%3D'16'%20height%3D'16'%20fill%3D'black'%2F%3E%3Crect%20x%3D'3.2'%20y%3D'0'%20width%3D'3.2'%20height%3D'16'%20fill%3D'white'%2F%3E%3Crect%20x%3D'9.6'%20y%3D'0'%20width%3D'3.2'%20height%3D'16'%20fill%3D'white'%2F%3E%3Ctext%20x%3D'50%25'%20y%3D'50%25'%20dominant-baseline%3D'middle'%20text-anchor%3D'middle'%20font-size%3D'11'%20font-weight%3D'bold'%20fill%3D'red'%20font-family%3D'sans-serif'%3ED%3C%2Ftext%3E%3C%2Fsvg%3E") no-repeat center/cover; }
+.tirofederalc { background: url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'16'%20height%3D'16'%3E%3Crect%20width%3D'16'%20height%3D'16'%20fill%3D'indigo'%2F%3E%3Crect%20x%3D'3.2'%20y%3D'0'%20width%3D'3.2'%20height%3D'16'%20fill%3D'gold'%2F%3E%3Crect%20x%3D'9.6'%20y%3D'0'%20width%3D'3.2'%20height%3D'16'%20fill%3D'gold'%2F%3E%3Ctext%20x%3D'50%25'%20y%3D'50%25'%20dominant-baseline%3D'middle'%20text-anchor%3D'middle'%20font-size%3D'11'%20font-weight%3D'bold'%20fill%3D'red'%20font-family%3D'sans-serif'%3EC%3C%2Ftext%3E%3C%2Fsvg%3E") no-repeat center/cover; }
+.laarmoniab { background: white; position: relative; }
+.laarmoniab::after { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: #004da6; clip-path: polygon(0 0, 50% 50%, 100% 0, 100% 25%, 50% 75%, 0 25%); }
+.laarmoniab::before { content: "B"; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); font-size: 7px; font-weight: bold; color: red; z-index: 2; line-height: 1; }
+.olimpoc { background: url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'16'%20height%3D'16'%3E%3Crect%20width%3D'16'%20height%3D'16'%20fill%3D'black'%2F%3E%3Crect%20x%3D'3.2'%20y%3D'0'%20width%3D'3.2'%20height%3D'16'%20fill%3D'gold'%2F%3E%3Crect%20x%3D'9.6'%20y%3D'0'%20width%3D'3.2'%20height%3D'16'%20fill%3D'gold'%2F%3E%3Ctext%20x%3D'50%25'%20y%3D'50%25'%20dominant-baseline%3D'middle'%20text-anchor%3D'middle'%20font-size%3D'11'%20font-weight%3D'bold'%20fill%3D'red'%20font-family%3D'sans-serif'%3EC%3C%2Ftext%3E%3C%2Fsvg%3E") no-repeat center/cover; }
+.villamitreb { background: url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'16'%20height%3D'16'%3E%3Crect%20width%3D'16'%20height%3D'16'%20fill%3D'green'%2F%3E%3Crect%20x%3D'5.3'%20y%3D'0'%20width%3D'5.4'%20height%3D'16'%20fill%3D'white'%2F%3E%3Ctext%20x%3D'50%25'%20y%3D'50%25'%20dominant-baseline%3D'middle'%20text-anchor%3D'middle'%20font-size%3D'11'%20font-weight%3D'bold'%20fill%3D'red'%20font-family%3D'sans-serif'%3EB%3C%2Ftext%3E%3C%2Fsvg%3E") no-repeat center/cover; }
+
+/* Sub 13/15/17 - Federal A */
+.balompie { background-color: #2abfc9; position: relative; }
+.balompie::before { content: "B"; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); color: white; font-weight: bold; font-size: 9px; z-index: 2; }
+.balompie::after { content: ""; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 60%; height: 60%; background: #4a0a21; border-radius: 50%; z-index: 1; }
+.macallister { background-color: #c8d90d; position: relative; }
+.macallister::before { content: "CDMA"; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); color: #d90d0d; font-weight: bold; font-size: 6px; z-index: 1; white-space: nowrap; }
+.p-azul { background-color: #d0e8f8 !important; }
+
+/* Futsal */
+.catamarca { background: linear-gradient(to right, #1a0da8 30%, #f5e800 30%, #f5e800 46%, #1a0da8 46%, #1a0da8 54%, #f5e800 54%, #f5e800 70%, #1a0da8 70%); }
+.laestacion { background-color: #000; position: relative; }
+.laestacion::after { content: "⚽"; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); font-size: 9px; }
+.depfutsal { background-color: #fff; position: relative; border: 1px solid #eee; overflow: hidden; }
+.depfutsal::before { content: "★"; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); color: #2832a0; font-size: 20px; line-height: 1; }
+.depfutsal::after { content: "CDF"; position: absolute; top: 52%; left: 50%; transform: translate(-50%,-50%); color: #000; font-weight: bold; font-size: 5px; z-index: 2; letter-spacing: 0.3px; }
+.los3chiflados { background-color: #000; position: relative; }
+.los3chiflados::before { content: "CL3"; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); color: #ffd700; font-weight: bold; font-size: 6px; }
+.laesperanza { background: linear-gradient(135deg, #fff 40%, #217a2f 40%, #217a2f 60%, #fff 60%); }
