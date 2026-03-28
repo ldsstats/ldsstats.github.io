@@ -66,7 +66,7 @@ const BD_EQUIPOS = {
 const idaOficial = [
     { fecha: 1, partidos: [{l:"Libertad", v:"Huracán", gl:3, gv:1, dia:"Dom 15/03/2026", hora:"16:00", goles_l:["Luciano Trídico","Mauro Sabatini","Matías Mayer"], goles_v:["Iván Agudiak"]}, {l:"Sporting", v:"La Armonía", gl:1, gv:2, dia:"Dom 15/03/2026", hora:"16:00", goles_l:["Jonathan Font"], goles_v:["Matías Malmoria","Matías Malmoria"]}, {l:"Bella Vista", v:"San Francisco", gl:3, gv:1, dia:"Dom 15/03/2026", hora:"16:00", goles_l:["Lucas Martínez","Alexis Vega","Gabino Bellegia"], goles_v:["Juan Romero"]}, {l:"Villa Mitre", v:"Liniers", gl:2, gv:0, dia:"Dom 15/03/2026", hora:"16:00", goles_l:["Santiago Gómez","Juan Acosta"], goles_v:[]}] },
     { fecha: 2, partidos: [{l:"La Armonía", v:"Villa Mitre", gl:0, gv:4, dia:"Dom 22/03", hora:"16:00", goles_l:[], goles_v:["Ramiro Gerk","Ramiro Gerk","Julián Monteverde","Diego Avit"]}, {l:"San Francisco", v:"Libertad", gl:1, gv:1, dia:"Dom 22/03", hora:"16:00", goles_l:["Federico Pinedo"], goles_v:["Mauro Sabatini"]}, {l:"Huracán", v:"Sporting", gl:3, gv:0, dia:"Lun 23/03", hora:"16:00", nota:"En cancha de Sansinena", goles_l:["Iván Agudiak","Agustín Seisdedos","Johan Munives Cortes"], goles_v:[]}, {l:"Bella Vista", v:"Liniers", gl:0, gv:1, dia:"Mar 24/03", hora:"16:00", goles_l:[], goles_v:["Rodrigo Phillips"]}] },
-    { fecha: 3, partidos: [{l:"Villa Mitre", v:"Huracán", gl:null, gv:null, dia:"Sáb 28/03", hora:"11:00"}, {l:"Sporting", v:"San Francisco", gl:null, gv:null, dia:"Dom 29/03", hora:"16:00"}, {l:"Liniers", v:"La Armonía", gl:null, gv:null, dia:"Dom 29/03", hora:"16:00"}, {l:"Libertad", v:"Bella Vista", gl:null, gv:null, dia:"Dom 29/03", hora:"16:00"}] },
+    { fecha: 3, partidos: [{l:"Villa Mitre", v:"Huracán", gl:0, gv:1, dia:"Sáb 28/03", hora:"11:00", goles_l:[], goles_v:["Agustín Seisdedos"]}, {l:"Sporting", v:"San Francisco", gl:null, gv:null, dia:"Dom 29/03", hora:"16:00"}, {l:"Liniers", v:"La Armonía", gl:null, gv:null, dia:"Dom 29/03", hora:"16:00"}, {l:"Libertad", v:"Bella Vista", gl:null, gv:null, dia:"Dom 29/03", hora:"16:00"}] },
     { fecha: 4, partidos: [{l:"La Armonía", v:"Huracán", gl:null, gv:null}, {l:"Villa Mitre", v:"San Francisco", gl:null, gv:null}, {l:"Sporting", v:"Bella Vista", gl:null, gv:null}, {l:"Liniers", v:"Libertad", gl:null, gv:null}] },
     { fecha: 5, partidos: [{l:"Libertad", v:"Sporting", gl:null, gv:null}, {l:"Bella Vista", v:"Villa Mitre", gl:null, gv:null}, {l:"San Francisco", v:"La Armonía", gl:null, gv:null}, {l:"Huracán", v:"Liniers", gl:null, gv:null, dia:"Sáb 28/03", hora:"16:00"}] },
     { fecha: 6, partidos: [{l:"Libertad", v:"Villa Mitre", gl:null, gv:null}, {l:"Bella Vista", v:"La Armonía", gl:null, gv:null}, {l:"San Francisco", v:"Huracán", gl:null, gv:null}, {l:"Sporting", v:"Liniers", gl:null, gv:null}] },
@@ -1422,7 +1422,7 @@ const BD_EQUIPOS_FUERA = [
     { anio: 2015,      equipo: "Bella Vista", clase: "bellavista", torneo: "Federal B",                      instancia: "Primera fase" },
     { anio: 2016,      equipo: "Bella Vista", clase: "bellavista", torneo: "Federal B",                      instancia: "Semifinal por ascender" },
     { anio: 2016,      equipo: "Bella Vista", clase: "bellavista", torneo: "Federal B Complementario",       instancia: "Segunda Fase" },
-    { anio: "2016-17", equipo: "Bella Vista", clase: "bellavista", torneo: "Copa Argentina",                 instancia: "Tercera fase" },
+    { anio: 2017,      equipo: "Bella Vista", clase: "bellavista", torneo: "Copa Argentina",                 instancia: "Tercera fase" },
     { anio: 2017,      equipo: "Bella Vista", clase: "bellavista", torneo: "Federal B",                      instancia: "Primera Fase Pampeana Sur" },
     { anio: 2019,      equipo: "Bella Vista", clase: "bellavista", torneo: "Torneo Regional Amateur",        instancia: "Primera Fase Pampeana Sur" },
     { anio: 2020,      equipo: "Bella Vista", clase: "bellavista", torneo: "Torneo Regional Amateur",        instancia: "Segunda fase Pampeana Sur" },
@@ -2979,7 +2979,7 @@ const BD_DETALLES_FUERA = {
             }
         ]
     },
-    "Bella Vista|2016-17|Copa Argentina": {
+    "Bella Vista|2017|Copa Argentina": {
         fases: [
             {
                 nombre: "Primera Fase — Grupo B",
@@ -15829,11 +15829,11 @@ function generarPerfilJugador(jugador, equipo) {
 const BD_POSICIONES = {
     oficial: {
         apertura: [
-            { nombre: "Villa Mitre",   clase: "villamitre",   pj:2, pg:2, pe:0, pp:0, gf:6, gc:0,  pts:6 },
+            { nombre: "Huracán",       clase: "huracan",      pj:3, pg:2, pe:0, pp:1, gf:5, gc:3,  pts:6 },
+            { nombre: "Villa Mitre",   clase: "villamitre",   pj:3, pg:2, pe:0, pp:1, gf:6, gc:1,  pts:6 },
             { nombre: "Libertad",      clase: "libertad",     pj:2, pg:1, pe:1, pp:0, gf:4, gc:2,  pts:4 },
             { nombre: "Bella Vista",   clase: "bellavista",   pj:2, pg:1, pe:0, pp:1, gf:3, gc:2,  pts:3 },
             { nombre: "La Armonía",    clase: "laarmonia",    pj:2, pg:1, pe:0, pp:1, gf:2, gc:5,  pts:3 },
-            { nombre: "Huracán",       clase: "huracan",      pj:2, pg:1, pe:0, pp:1, gf:4, gc:3,  pts:3 },
             { nombre: "Liniers",       clase: "liniers",      pj:2, pg:1, pe:0, pp:1, gf:1, gc:2,  pts:3 },
             { nombre: "San Francisco", clase: "sanfrancisco", pj:2, pg:0, pe:1, pp:1, gf:2, gc:4,  pts:1 },
             { nombre: "Sporting",      clase: "sporting",     pj:2, pg:0, pe:0, pp:2, gf:1, gc:4,  pts:0 }
