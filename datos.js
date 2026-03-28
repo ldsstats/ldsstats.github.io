@@ -14254,7 +14254,7 @@ function verDetalleTorneo(clave) {
                         const gl_vis2 = p.goles_visitante || [];
                         if (gl_loc2.length > 0 || gl_vis2.length > 0) {
                             const textoLoc2 = gl_loc2.length > 0 ? `⚽ ${gl_loc2.join(" · ")}` : "";
-                            const textoVis2 = gl_vis2.length > 0 ? `${gl_vis2.join(" · ")} ⚽` : "";
+                            const textoVis2 = gl_vis2.length > 0 ? `⚽ ${gl_vis2.join(" · ")}` : "";
                             h += `<tr style="background:#f0f0f0;">
                                 <td></td>
                                 <td style="text-align:right;padding-right:6px;font-size:10px;color:#444;width:42%;">${textoLoc2}</td>
@@ -14312,7 +14312,7 @@ function verDetalleTorneo(clave) {
                     const gl_vis = p.goles_visitante || [];
                     if (gl_loc.length > 0 || gl_vis.length > 0) {
                         const textoLoc = gl_loc.length > 0 ? `⚽ ${gl_loc.join(" · ")}` : "";
-                        const textoVis = gl_vis.length > 0 ? `${gl_vis.join(" · ")} ⚽` : "";
+                        const textoVis = gl_vis.length > 0 ? `⚽ ${gl_vis.join(" · ")}` : "";
                         h += `<tr style="background:#f0f0f0;">
                             <td></td>
                             <td style="text-align:right;padding-right:6px;font-size:10px;color:#444;width:42%;">${textoLoc}</td>
@@ -14420,7 +14420,7 @@ function verDetalleTorneo(clave) {
                 const gl_vis = p.goles_visitante || [];
                 if (gl_loc.length > 0 || gl_vis.length > 0) {
                     const textoLoc = gl_loc.length > 0 ? `⚽ ${gl_loc.join(" · ")}` : "";
-                    const textoVis = gl_vis.length > 0 ? `${gl_vis.join(" · ")} ⚽` : "";
+                    const textoVis = gl_vis.length > 0 ? `⚽ ${gl_vis.join(" · ")}` : "";
                     html += `<tr style="background:#f0f0f0;">
                         <td></td>
                         <td style="text-align:right;padding-right:6px;font-size:10px;color:#444;width:42%;">${textoLoc}</td>

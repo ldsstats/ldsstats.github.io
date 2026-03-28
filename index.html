@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>LdS Stats - 2026</title>
     <link rel="stylesheet" href="style.css?v=2">
     <link rel="manifest" href="manifest.json">
@@ -384,6 +384,7 @@
     box-sizing: border-box;
     line-height: 0;
     font-size: 0;
+    max-height: 80px;
 ">
     <div id="banner-slide" style="width:100%; line-height:0; font-size:0;">
         <!-- Placeholder hasta que se carguen las imágenes -->
@@ -421,5 +422,19 @@
     })();
 </script>
 
+
+<script>
+// Ajustar padding-bottom según alto real del banner
+function ajustarPaddingBanner() {
+    const banner = document.getElementById('banner-pub');
+    const body = document.body;
+    if (banner) {
+        const h = banner.offsetHeight;
+        body.style.paddingBottom = (h + 10) + 'px';
+    }
+}
+window.addEventListener('load', ajustarPaddingBanner);
+window.addEventListener('resize', ajustarPaddingBanner);
+</script>
 </body>
 </html>
