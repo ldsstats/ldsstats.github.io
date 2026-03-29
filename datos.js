@@ -136,7 +136,7 @@ const idaSegundaFemenino = [
 ];
 const BD_COPA_ARGENTINA_2026 = [
     { ronda: "32vos de Final", partidos: [
-        { l: "Olimpo", v: "Huracán", gl: null, gv: null, dia: "Dom 29/03", hora: "19:00", nota: "Jugado en cancha de Estudiantes de Caseros" }
+        { l: "Olimpo", v: "Huracán", gl: null, gv: null, dia: "Dom 29/03", hora: "18:00", nota: "Jugado en cancha de Estudiantes de Caseros" }
     ]}
 ];
 
@@ -787,7 +787,7 @@ function generarHome() {
                 {l:"Libertad",              v:"Huracán",        hora:"16:00"}
             ]},
             { nombre: "COPA ARGENTINA", cat: "oficial", partidos: [
-                {l:"Olimpo", v:"Huracán", hora:"19:00", nota:"32vos de Final — Cancha de Estudiantes de Caseros", claseL:"olimpo", claseV:"huracan"}
+                {l:"Olimpo", v:"Huracán", hora:"18:00", nota:"32vos de Final — Cancha de Estudiantes de Caseros", claseL:"olimpo", claseV:"huracan"}
             ]}
         ]}
     ];
