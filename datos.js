@@ -174,7 +174,7 @@ function generarCopaArgentina() {
 const BD_FIXTURES_FUTSAL_RESERVA = [
     { fecha: 1, partidos: [
         {l:"Dep. Futsal",     v:"Villa Mitre",     gl:null, gv:null, dia:"Miér 25/03", hora:"22:00"},
-        {l:"Pacífico BB",     v:"La Esperanza",    gl:6,    gv:6,    dia:"Miér 25/03", hora:"22:00"},
+        {l:"Pacífico BB",     v:"La Esperanza",    gl:6,    gv:6,    dia:"Miér 25/03", hora:"22:00", goles_l:[], goles_v:["Bruno Manso","Bruno Manso","Agustín Pascual","Felipe Cabanne","Lautaro Flores","Francisco Sauco"]},
         {l:"Huracán",         v:"Petroquímicos",   gl:0,    gv:8,    dia:"Jue 26/03",  hora:"22:00"},
         {l:"Dublin",          v:"Los 3 Chiflados", gl:0,    gv:7, dia:"Jue 26/03",  hora:"22:00"},
         {l:"Tiro Federal",    v:"La Estación",     gl:null, gv:null, dia:"Vie 27/03",  hora:"22:00"},
@@ -310,7 +310,7 @@ const BD_FIXTURES_FUTSAL_RESERVA = [
 const BD_FIXTURES_FUTSAL = [
     { fecha: 1, partidos: [
         {l:"Dep. Futsal", v:"Villa Mitre",     gl:null, gv:null, dia:"Miér 25/03", hora:"22:00"},
-        {l:"Pacífico BB", v:"La Esperanza",    gl:2, gv:6, dia:"Miér 25/03", hora:"22:00"},
+        {l:"Pacífico BB", v:"La Esperanza",    gl:2, gv:6, dia:"Miér 25/03", hora:"22:00", goles_l:[], goles_v:["Alexis Guiñez","Alexis Guiñez","Rodrigo Decoud","Rodrigo Decoud","Ignacio Cappelletti","Bruno Cronier"]},
         {l:"Huracán",     v:"Petroquímicos",   gl:3, gv:10, dia:"Jue 26/03", hora:"22:00"},
 
         {
@@ -466,7 +466,7 @@ const BD_FIXTURES_FUTSAL = [
 const idaSub15Fem = [
     { fecha: 1, partidos: [
         {l:"La Armonía",            v:"Sporting",         gl:3, gv:0, dia:"Sáb 28/03", hora:"11:00"},
-        {l:"Empleados de Comercio", v:"Bella Vista",      gl:null, gv:null, dia:"Dom 29/03", hora:"10:00"},
+        {l:"Empleados de Comercio", v:"Bella Vista",      gl:0, gv:4, dia:"Dom 29/03", hora:"10:00"},
         {l:"Villa Mitre",           v:"Tiro Federal",     gl:null, gv:null, dia:"Dom 29/03", hora:"15:00"},
         {l:"Libertad",              v:"Huracán",          gl:null, gv:null, dia:"Dom 29/03", hora:"16:00"},
         {l:"Olimpo",                v:"Liniers",          gl:null, gv:null, dia:"Dom 29/03", hora:"14:00"},
@@ -706,8 +706,8 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 1).partidos.forEach(p 
 BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 2).partidos.forEach(p => {
     if (p.l === "Sansinena" && p.v === "Rosario PB") { 
         p.gl = 1; p.gv = 3; 
-        p.goles_l = []; 
-        p.goles_v = ["Valentina Tobares"]
+        p.goles_l = ["Valentina Tobares"]; 
+        p.goles_v = []
     }
     if (p.l === "Huracán" && p.v === "Liniers") { p.gl = 1; p.gv = 7; }
 });
@@ -780,7 +780,7 @@ function generarHome() {
                 {l:"Olimpo",          v:"Pacífico (C)", hora:"16:00"}
             ]},
             { nombre: "SUB 15 FEM.", cat: "sub15fem", partidos: [
-                {l:"Empleados de Comercio", v:"Bella Vista",    hora:"10:00"},
+                {l:"Empleados de Comercio", v:"Bella Vista",    hora:"10:00", gl:0, gv:4},
                 {l:"San Francisco",         v:"Juventud Unida", hora:"10:00"},
                 {l:"Olimpo",                v:"Liniers",        hora:"14:00"},
                 {l:"Villa Mitre",           v:"Tiro Federal",   hora:"15:00"},
@@ -14917,9 +14917,9 @@ function generarFutsal(modo) {
 if ((p.goles_l && p.goles_l.length) || (p.goles_v && p.goles_v.length)) {
     html += `<tr>
         <td colspan="3" style="font-size:9px;color:#666;padding:2px 8px;font-style:italic;">
-            ${p.goles_l ? `⚽${p.l}: ${p.goles_l.join(", ")}` : ""}
-            ${(p.goles_l && p.goles_v) ? " | " : ""}
-            ${p.goles_v ? `⚽${p.v}: ${p.goles_v.join(", ")}` : ""}
+            ${p.goles_l?.length > 0 ? `⚽${p.l}: ${p.goles_l.join(", ")}` : ""}
+            ${(p.goles_l?.length > 0 && p.goles_v?.length > 0) ? " | " : ""}
+            ${p.goles_v?.length > 0 ? `⚽${p.v}: ${p.goles_v.join(", ")}` : ""}
         </td>
     </tr>`;
 }
