@@ -14599,8 +14599,8 @@ function generarReserva(cat) {
             {n:"Bella Vista",           cl:"bellavista", pj:2,pg:2, pe:0, pp:0, gf:8, gc:1, pts:6},
             {n:"Empleados de Comercio", cl:"empleados", pj:2, pg:1, pe:0, pp:0, gf:6, gc:0, pts:6},
             {n:"Municipales",           cl:"municipales",pj:2,pg:1, pe:0, pp:1, gf:2, gc:2, pts:3},
-            {n:"Tiro Federal",          cl:"tirofederal",pj:1,pg:0, pe:0, pp:1, gf:0, gc:4, pts:0},
             {n:"Sporting",              cl:"sporting",  pj:2, pg:0, pe:0, pp:2, gf:2, gc:4, pts:0},
+            {n:"Tiro Federal",          cl:"tirofederal",pj:1,pg:0, pe:0, pp:1, gf:0, gc:4, pts:0},
             {n:"La Armonía",            cl:"laarmonia",  pj:1,pg:0, pe:0, pp:1, gf:0, gc:4, pts:0},
             {n:"Libertad",              cl:"libertad",   pj:2,pg:0, pe:0, pp:2, gf:0, gc:8, pts:0}
         ]
