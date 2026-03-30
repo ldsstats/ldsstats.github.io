@@ -14608,17 +14608,17 @@ function generarReserva(cat) {
             {n:"Petroquímicos",       cl:"petroquimicos",   pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0},
             {n:"Estrella de Oro",     cl:"estrellaoro",     pj:1, pg:0, pe:0, pp:1, gf:1, gc:3, pts:0},
             {n:"Huracán",             cl:"huracan",         pj:1, pg:0, pe:0, pp:1, gf:1, gc:7, pts:0},
-            {n:"Sansinena",           cl:"sansinena",       pj:1, pg:0, pe:0, pp:1, gf:2, gc:7, pts:0}
+            {n:"Sansinena",           cl:"sansinena",       pj:2, pg:0, pe:0, pp:2, gf:2, gc:7, pts:0}
         ],
         'femenino':   [
             {n:"Villa Mitre",           cl:"villamitre", pj:2,pg:2, pe:0, pp:0, gf:5, gc:0, pts:6},
             {n:"Bella Vista",           cl:"bellavista", pj:2,pg:2, pe:0, pp:0, gf:8, gc:1, pts:6},
-            {n:"Empleados de Comercio", cl:"empleados", pj:2, pg:1, pe:0, pp:0, gf:6, gc:0, pts:6},
+            {n:"Empleados de Comercio", cl:"empleados", pj:2, pg:2, pe:0, pp:0, gf:6, gc:0, pts:6},
             {n:"Municipales",           cl:"municipales",pj:2,pg:1, pe:0, pp:1, gf:2, gc:2, pts:3},
-            {n:"Tiro Federal",          cl:"tirofederal",pj:2,pg:1, pe:0, pp:1, gf:4, gc:4, pts:3},
+            {n:"Tiro Federal",          cl:"tirofederal",pj:2,pg:1, pe:0, pp:1, gf:5, gc:4, pts:3},
             {n:"Sporting",              cl:"sporting",  pj:2, pg:0, pe:0, pp:2, gf:2, gc:4, pts:0},
-            {n:"La Armonía",            cl:"laarmonia",  pj:1,pg:0, pe:0, pp:1, gf:0, gc:4, pts:0},
-            {n:"Libertad",              cl:"libertad",   pj:2,pg:0, pe:0, pp:2, gf:0, gc:8, pts:0}
+            {n:"Libertad",              cl:"libertad",   pj:2,pg:0, pe:0, pp:2, gf:0, gc:8, pts:0},
+            {n:"La Armonía",            cl:"laarmonia",  pj:2,pg:0, pe:0, pp:2, gf:0, gc:9, pts:0}
         ]
     };
 
@@ -15863,21 +15863,21 @@ const BD_POSICIONES = {
             { nombre: "Villa Mitre",   clase: "villamitre",   pj:3, pg:2, pe:0, pp:1, gf:6, gc:1,  pts:6 },
             { nombre: "Huracán",       clase: "huracan",      pj:3, pg:2, pe:0, pp:1, gf:5, gc:3,  pts:6 },
             { nombre: "Liniers",       clase: "liniers",      pj:3, pg:2, pe:0, pp:1, gf:5, gc:3,  pts:6 },
-            { nombre: "Libertad",      clase: "libertad",     pj:3, pg:1, pe:2, pp:0, gf:4, gc:2,  pts:4 },
-            { nombre: "Bella Vista",   clase: "bellavista",   pj:3, pg:1, pe:1, pp:1, gf:3, gc:2,  pts:3 },
+            { nombre: "Libertad",      clase: "libertad",     pj:3, pg:1, pe:2, pp:0, gf:4, gc:2,  pts:5 },
+            { nombre: "Bella Vista",   clase: "bellavista",   pj:3, pg:1, pe:1, pp:1, gf:3, gc:2,  pts:4 },
             { nombre: "La Armonía",    clase: "laarmonia",    pj:3, pg:1, pe:0, pp:2, gf:3, gc:9,  pts:3 },
             { nombre: "San Francisco", clase: "sanfrancisco", pj:3, pg:0, pe:2, pp:1, gf:3, gc:5,  pts:2 },
-            { nombre: "Sporting",      clase: "sporting",     pj:3, pg:0, pe:1, pp:2, gf:2, gc:5,  pts:1 }
+            { nombre: "Sporting",      clase: "sporting",     pj:3, pg:0, pe:1, pp:2, gf:2, gc:6,  pts:1 }
         ]
     },
     promocional: {
         apertura: [
             { nombre: "Comercial",           clase: "comercial",       pj:3, pg:2, pe:1, pp:0, gf:3, gc:1, pts:7 },
             { nombre: "Tiro Federal",        clase: "tirofederal",     pj:3, pg:2, pe:0, pp:1, gf:4, gc:2, pts:6 },
+            { nombre: "Dublin",              clase: "dublin",          pj:3, pg:1, pe:2, pp:0, gf:3, gc:2, pts:5 },
             { nombre: "Rosario PB",          clase: "rosariopb",       pj:3, pg:1, pe:1, pp:1, gf:4, gc:4, pts:4 },
-            { nombre: "Dublin",              clase: "dublin",          pj:3, pg:1, pe:2, pp:0, gf:3, gc:2, pts:4 },
             { nombre: "Pacífico BB",         clase: "pacificobb",      pj:3, pg:1, pe:1, pp:1, gf:4, gc:5, pts:4 },
-            { nombre: "Sansinena",           clase: "sansinena",       pj:3, pg:0, pe:3, pp:0, gf:4, gc:4, pts:2 },
+            { nombre: "Sansinena",           clase: "sansinena",       pj:3, pg:0, pe:3, pp:0, gf:4, gc:4, pts:3 },
             { nombre: "Olimpo",              clase: "olimpo",          pj:3, pg:0, pe:1, pp:2, gf:1, gc:3, pts:1 },
             { nombre: "Pacífico (C)",        clase: "pacificocabildo", pj:3, pg:0, pe:1, pp:2, gf:6, gc:8, pts:1 }
         ]
@@ -15898,13 +15898,13 @@ const BD_POSICIONES = {
         torneo2026: [
             { nombre: "Rosario PB",          clase: "rosariopb",       pj:2, pg:2, pe:0, pp:0, gf:12, gc:3, pts:6 },
             { nombre: "Liniers",             clase: "liniers",         pj:2, pg:2, pe:0, pp:0, gf:9, gc:1, pts:6 },
+            { nombre: "San Francisco",       clase: "sanfrancisco",    pj:2, pg:1, pe:1, pp:0, gf:8, gc:5, pts:4 },
             { nombre: "Petroquímicos",       clase: "petroquimicos",   pj:1, pg:1, pe:0, pp:0, gf:5, gc:1, pts:3 },
-            { nombre: "San Francisco",       clase: "sanfrancisco",    pj:1, pg:1, pe:0, pp:0, gf:5, gc:2, pts:3 },
-            { nombre: "Estrella de Oro",     clase: "estrellaoro",     pj:1, pg:0, pe:0, pp:1, gf:1, gc:4, pts:0 },
-            { nombre: "Sansinena",           clase: "sansinena",       pj:1, pg:0, pe:0, pp:1, gf:2, gc:5, pts:0 },
             { nombre: "Olimpo",              clase: "olimpo",          pj:2, pg:1, pe:0, pp:1, gf:2, gc:5, pts:3 },
+            { nombre: "Estrella de Oro",     clase: "estrellaoro",     pj:2, pg:0, pe:1, pp:1, gf:4, gc:7, pts:1 },
             { nombre: "Pacífico (C)", clase: "pacificocabildo", pj:2, pg:0, pe:0, pp:2, gf:1, gc:6, pts:0 },
             { nombre: "Huracán",             clase: "huracan",         pj:1, pg:0, pe:0, pp:1, gf:0, gc:5, pts:0 },
+            { nombre: "Sansinena",           clase: "sansinena",       pj:2, pg:0, pe:0, pp:2, gf:4, gc:12, pts:0 },
         ]
     }
 };
