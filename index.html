@@ -24,7 +24,7 @@
     z-index: 999;
     pointer-events: none;
     letter-spacing: 0.3px;
-">🕐 Última actualización: Mar 31/03 — 12:50hs</div>
+">🕐 Última actualización: Mar 31/03 — 03:08hs</div>
 
 <div id="container-principal">
     <div id="logo-header"><img src="au11.png" style="height:80px;" alt="LdS Stats"></div>
@@ -39,6 +39,7 @@
                 <a href="#" onclick="navegar('apertura', 'oficial')">Apertura</a>
                 <a href="#" onclick="navegar('proximamente')">Clausura</a>
                 <a href="#" onclick="navegar('goleadores', 'oficial')">Goleadores</a>
+                <a href="#" onclick="navegar('arqueros', 'oficial')">Vallas invictas</a>
                 <a href="#" onclick="navegar('reserva', 'oficial')">Reserva</a>
             </div>
         </div>
@@ -48,6 +49,7 @@
                 <a href="#" onclick="navegar('apertura', 'promocional')">Apertura</a>
                 <a href="#" onclick="navegar('proximamente')">Clausura</a>
                 <a href="#" onclick="navegar('goleadores', 'promocional')">Goleadores</a>
+                <a href="#" onclick="navegar('arqueros', 'promocional')">Vallas invictas</a>
                 <a href="#" onclick="navegar('reserva', 'promocional')">Reserva</a>
             </div>
         </div>
@@ -152,7 +154,7 @@
 
     // Última actualización por sección — modificar según corresponda
     const ULTIMA_ACT = {
-        default:        "Mar 31/03 — 12:50",
+        default:        "Mar 31/03 — 03:08hs",
         equiposfuera:   "Dom 22/3 — 1:15 hs"
     };
 
@@ -214,9 +216,23 @@
             document.body.scrollTop = 0;
             return;
         }
+        if (tor === 'arqueros') {
+            estado.torneo = 'arqueros';
+            estado.categoria = cat;
+            try {
+                const html = generarArqueros(cat);
+                cont.innerHTML = html || "<div class='msg-prox'>Sin datos registrados</div>";
+            } catch(e) {
+                cont.innerHTML = "<div class='msg-prox'>Error: " + e.message + "</div>";
+            }
+            actualizarCartel();
+            document.documentElement.scrollTop = 0;
+            document.body.scrollTop = 0;
+            return;
+        }
         estado.torneo = tor;
         estado.categoria = cat;
-        estado.fecha = (tor === 'apertura' && (cat === 'oficial' || cat === 'promocional')) ? 4 : (tor === 'posiciones' && cat === 'federala') ? 2 : (tor === 'apertura' && cat === 'femenino') ? 2 : (tor === 'torneo2026' && cat === 'segundafemenino') ? 2 : (tor === 'futsal' || tor === 'futsalreserva' || tor === 'sub15fem') ? 2 : 1;
+        estado.fecha = (tor === 'apertura' && (cat === 'oficial' || cat === 'promocional')) ? 4 : (tor === 'posiciones' && cat === 'federala') ? 2 : (tor === 'apertura' && cat === 'femenino') ? 2 : (tor === 'torneo2026' && cat === 'segundafemenino') ? 2 : 1; 
         actualizarVista();
         document.documentElement.scrollTop = 0;
         document.body.scrollTop = 0;
@@ -351,13 +367,15 @@
             cont.innerHTML = generarSub();
         } else if (estado.torneo === 'goleadores') {
             cont.innerHTML = generarGoleadores(estado.categoria);
+        } else if (estado.torneo === 'arqueros') {
+            cont.innerHTML = generarArqueros(estado.categoria);
         } else if (estado.torneo === 'perfil_jugador') {
             cont.innerHTML = generarPerfilJugador(estado.perfil.jugador, estado.perfil.equipo);
         } else if (estado.categoria === 'federala') {
             cont.innerHTML = generarTablaFederal();
         } else if (estado.torneo === 'reserva') {
             if (!estado._reservaIniciada || estado._reservaCat !== estado.categoria) {
-                estado.fecha = (estado.categoria === 'oficial' || estado.categoria === 'promocional') ? 4 : (estado.categoria === 'femenino' || estado.categoria === 'segundafemenino') ? 2 : 1;
+                estado.fecha = (estado.categoria === 'oficial' || estado.categoria === 'promocional') ? 2 : (estado.categoria === 'femenino' || estado.categoria === 'segundafemenino') ? 2 : 1;
                 estado._reservaIniciada = true;
                 estado._reservaCat = estado.categoria;
             }

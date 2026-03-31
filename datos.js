@@ -769,17 +769,12 @@ function generarHome() {
     const agenda = [
         { id: "2026-04-01", label: "MIE 01/04", torneos: [
             { nombre: "FUTSAL", cat: "futsal", partidos: [
-                {l:"La Esperanza", v:"Catamarca", hora:"22:00"},
-                {l:"Comercial", v:"Dublin", hora:"22:00"},
-                {l:"Petroquímicos", v:"Dep. Futsal", hora:"22:00"}
+                {l:"La Esperanza", v:"Catamarca", hora:"22:00"}
             ]}
         ]},
         { id: "2026-04-02", label: "JUE 02/04", torneos: [
             { nombre: "TORNEO OFICIAL", cat: "oficial", partidos: [
                 {l:"Villa Mitre", v:"San Francisco", hora:"16:00"}
-            ]},
-            { nombre: "FUTSAL", cat: "futsal", partidos: [
-                {l:"La Estación", v:"Pacífico BB", hora:"22:00"}
             ]}
         ]},
         { id: "2026-04-03", label: "VIE 03/04", torneos: [
@@ -791,11 +786,6 @@ function generarHome() {
                 {l:"Olimpo",    v:"Rosario PB",      hora:"16:00"},
                 {l:"Tiro Federal",    v:"Pacífico (C)",      hora:"16:00"},
                 {l:"Pacífico BB", v:"Sansinena",  hora:"16:00"}
-            ]},
-            { nombre: "FUTSAL", cat: "futsal", partidos: [
-                {l:"Los 3 Chiflados", v:"Liniers", hora:"22:00"},
-                {l:"San Francisco", v:"Huracán", hora:"22:00"},
-                {l:"Villa Mitre", v:"Tiro Federal", hora:"22:00"}
             ]}
         ]},
         { id: "2026-04-04", label: "SÁB 04/04", torneos: [
@@ -15766,6 +15756,90 @@ function generarGoleadores(cat) {
 
     return renderTabla(`GOLEADORES — ${catLabel}`, lista) +
            renderTabla(`GOLES EN CONTRA — ${catLabel}`, listaEC);
+}
+
+// ── VALLAS INVICTAS ──────────────────────────────────────────────
+const BD_ARQUEROS = {
+    oficial: [
+        { jugador: "Lucas Oses", equipo: "Villa Mitre", partidos: [
+            { rival: "Liniers",    resultado: "Villa Mitre 2 - 0 Liniers",    fecha: 1 },
+            { rival: "La Armonía", resultado: "La Armonía 0 - 4 Villa Mitre", fecha: 2 }
+        ]},
+        { jugador: "Matías Salvarezza", equipo: "Huracán", partidos: [
+            { rival: "Sporting",    resultado: "Huracán 3 - 0 Sporting",    fecha: 2 },
+            { rival: "Villa Mitre", resultado: "Villa Mitre 0 - 1 Huracán", fecha: 3 }
+        ]},
+        { jugador: "Facundo Carnicero", equipo: "Libertad", partidos: [
+            { rival: "Bella Vista", resultado: "Libertad 0 - 0 Bella Vista", fecha: 3 }
+        ]},
+        { jugador: "Francisco Martínez", equipo: "Bella Vista", partidos: [
+            { rival: "Libertad", resultado: "Libertad 0 - 0 Bella Vista", fecha: 3 }
+        ]},
+        { jugador: "Andoni Mendiguibel", equipo: "Liniers", partidos: [
+            { rival: "Bella Vista", resultado: "Bella Vista 0 - 1 Liniers", fecha: 2 }
+        ]},
+    ],
+    promocional: [
+        { jugador: "Agustín Álvarez", equipo: "Comercial", partidos: [
+            { rival: "Tiro Federal", resultado: "Tiro Federal 0 - 1 Comercial", fecha: 1 },
+            { rival: "Olimpo",       resultado: "Comercial 1 - 0 Olimpo",       fecha: 3 }
+        ]},
+        { jugador: "Haziel Mastrandea", equipo: "Pacífico BB", partidos: [
+            { rival: "Olimpo", resultado: "Pacífico BB 0 - 0 Olimpo", fecha: 1 }
+        ]},
+        { jugador: "Jonathan Acosta", equipo: "Olimpo", partidos: [
+            { rival: "Pacífico BB", resultado: "Pacífico BB 0 - 0 Olimpo", fecha: 1 }
+        ]},
+        { jugador: "Bruno Arias", equipo: "Tiro Federal", partidos: [
+            { rival: "Rosario PB", resultado: "Tiro Federal 2 - 0 Rosario PB", fecha: 3 }
+        ]},
+        { jugador: "Inan Bauer", equipo: "Sansinena", partidos: [
+            { rival: "Dublin", resultado: "Sansinena 0 - 0 Dublin", fecha: 3 }
+        ]},
+        { jugador: "Valentín Valdez", equipo: "Dublin", partidos: [
+            { rival: "Sansinena", resultado: "Sansinena 0 - 0 Dublin", fecha: 3 }
+        ]},
+    ]
+};
+
+function generarArqueros(cat) {
+    const lista = (BD_ARQUEROS[cat] || []).slice().sort((a, b) => b.partidos.length - a.partidos.length || a.equipo.localeCompare(b.equipo) || a.jugador.localeCompare(b.jugador));
+    const catLabel = cat === 'oficial' ? 'TORNEO OFICIAL' : cat === 'promocional' ? 'TORNEO PROMOCIONAL' : cat.toUpperCase();
+
+    if (lista.length === 0) return `<div class="msg-prox">Sin datos registrados</div>`;
+
+    let h = `<div class="header-t">VALLAS INVICTAS — ${catLabel}</div><table>
+    <thead><tr>
+        <th style="width:25px;">#</th>
+        <th style="text-align:left;padding-left:8px;">Arquero</th>
+        <th style="text-align:left;padding-left:8px;">Equipo</th>
+        <th class="c-stat">Vallas</th>
+    </tr></thead><tbody>`;
+
+    let pos = 1, prevVallas = -1, realIdx = 0;
+    lista.forEach((g, i) => {
+        realIdx++;
+        if (g.partidos.length !== prevVallas) { pos = realIdx; prevVallas = g.partidos.length; }
+        const escudo = BD_EQUIPOS[cat]?.find(e => e.nombre === g.equipo)?.clase || '';
+        const rowId = `arq-${cat}-${i}`;
+        h += `<tr style="cursor:pointer;" onclick="
+            var d=document.getElementById('${rowId}');
+            d.style.display = d.style.display==='none' ? 'table-row' : 'none';
+        ">
+            <td class="c-pos">${pos}</td>
+            <td style="text-align:left;padding-left:8px;font-size:12px;font-weight:bold;color:#00331a;">${g.jugador} ▶</td>
+            <td style="text-align:left;padding-left:8px;font-size:11px;"><div class="escudo ${escudo}" style="display:inline-block;vertical-align:middle;margin-right:4px;"></div>${g.equipo}</td>
+            <td class="c-stat"><b>${g.partidos.length}</b></td>
+        </tr>
+        <tr id="${rowId}" style="display:none;background:#f0f7f0;">
+            <td colspan="4" style="padding:6px 12px;">
+                <div style="font-size:10px;font-weight:bold;color:#004d26;margin-bottom:4px;">PARTIDOS INVICTO:</div>
+                ${g.partidos.map(p => `<div style="font-size:11px;padding:2px 0;border-bottom:1px solid #ddd;">📅 Fecha ${p.fecha} — ${p.resultado}</div>`).join('')}
+            </td>
+        </tr>`;
+    });
+
+    return h + '</tbody></table>';
 }
 
 function generarPerfilJugador(jugador, equipo) {
