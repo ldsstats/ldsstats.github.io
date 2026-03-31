@@ -1387,7 +1387,7 @@ const BD_FORMATIVAS_POS = {
     }
 };
 
-function generarTablaFormativa(titulo, equipos) {
+function generarTablaFormativa(titulo, equipos, descenso) {
     let html = `<div class="header-t">${titulo}</div>
     <table><thead><tr>
         <th style="width:25px;">#</th>
@@ -1396,7 +1396,8 @@ function generarTablaFormativa(titulo, equipos) {
         <th class="c-stat">PP</th><th class="c-stat">Pts</th>
     </tr></thead><tbody>`;
     equipos.forEach((e, i) => {
-        html += `<tr>
+        const cl = (descenso && i >= equipos.length - 2) ? 'p-desc' : '';
+        html += `<tr class="${cl}">
             <td class="c-pos">${i+1}</td>
             <td class="c-equipo"><div class="escudo ${e.cl}" style="display:inline-block;vertical-align:middle;margin-right:4px;"></div>${e.n}</td>
             <td class="c-stat">${e.pj}</td><td class="c-stat">${e.pg}</td><td class="c-stat">${e.pe}</td>
@@ -1427,7 +1428,8 @@ function generarFormativas(cat) {
     html += `<div style="padding:4px 8px 6px; font-size:10px; text-align:right; color:#888; background:#f9f9f9; border-bottom:1px solid #eee;">
         🕐 Actualizado: ${data.act}
     </div>`;
-    html += generarTablaFormativa("TABLA GENERAL", data.general);
+    const conDescenso = (cat === 'juveniles-a' || cat === 'menores-a');
+    html += generarTablaFormativa("TABLA GENERAL", data.general, conDescenso);
     (data.cats || []).forEach(c => {
         html += generarTablaFormativa(c.nombre.toUpperCase(), c.equipos);
     });
@@ -14535,7 +14537,7 @@ function generarReserva(cat) {
     const fixtures = BD_FIXTURES[cat]?.reserva || [];
     const equipos = BD_EQUIPOS[cat] || [];
     const catLabel = cat === 'oficial' ? 'TORNEO OFICIAL' : cat === 'promocional' ? 'TORNEO PROMOCIONAL' : cat === 'femenino' ? '1° FEMENINO' : cat === 'segundafemenino' ? '2° FEMENINO' : cat.toUpperCase();
-    const maxFechas = 14;
+    const maxFechas = cat === 'segundafemenino' ? 27 : 14;
     const n = estado.fecha || 1;
 
     // Fixture — igual que generarFixture pero leyendo de reserva
@@ -14955,7 +14957,8 @@ if ((p.goles_l && p.goles_l.length) || (p.goles_v && p.goles_v.length)) {
     </tr></thead><tbody>`;
     posData.forEach((e, i) => {
         const dif = e.gf - e.gc;
-        html += `<tr>
+        const clFila = i < 8 ? 'p-playoff' : '';
+        html += `<tr class="${clFila}">
             <td class="c-pos">${i+1}</td>
             <td class="c-equipo"><div class="escudo ${e.cl}" style="display:inline-block;vertical-align:middle;margin-right:4px;"></div>${e.n}</td>
             <td class="c-stat">${e.pj}</td><td class="c-stat">${e.pg}</td><td class="c-stat">${e.pe}</td>
