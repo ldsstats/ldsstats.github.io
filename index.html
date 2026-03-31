@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>LdS Stats - 2026</title>
-    <link rel="stylesheet" href="style.css?v=2">
+    <link rel="stylesheet" href="style.css?v=7">
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#111111">
 </head>
@@ -24,7 +24,7 @@
     z-index: 999;
     pointer-events: none;
     letter-spacing: 0.3px;
-">🕐 Última actualización: Mar 31/03 — 03:08hs</div>
+">🕐 Última actualización: Mar 31/3 — 03:30 hs</div>
 
 <div id="container-principal">
     <div id="logo-header"><img src="au11.png" style="height:80px;" alt="LdS Stats"></div>
@@ -145,14 +145,14 @@
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-<script src="datos.js?v=2"></script>
+<script src="datos.js?v=7"></script>
 <script>
     let estado = { torneo: 'home', categoria: '', fecha: 1 };
     let estadoAnterior = { torneo: 'home', categoria: '', fecha: 1 };
 
     // Última actualización por sección — modificar según corresponda
     const ULTIMA_ACT = {
-        default:        "Mar 31/03 — 03:08hs",
+        default:        "Mar 31/3 — 03:30 hs",
         equiposfuera:   "Dom 22/3 — 1:15 hs"
     };
 
@@ -216,7 +216,7 @@
         }
         estado.torneo = tor;
         estado.categoria = cat;
-        estado.fecha = (tor === 'apertura' && (cat === 'oficial' || cat === 'promocional')) ? 4 : (tor === 'posiciones' && cat === 'federala') ? 2 : (tor === 'apertura' && cat === 'femenino') ? 2 : (tor === 'torneo2026' && cat === 'segundafemenino') ? 2 : 1; 
+        estado.fecha = (tor === 'apertura' && (cat === 'oficial' || cat === 'promocional')) ? 4 : (tor === 'posiciones' && cat === 'federala') ? 2 : (tor === 'apertura' && cat === 'femenino') ? 2 : (tor === 'torneo2026' && cat === 'segundafemenino') ? 2 : (tor === 'futsal' || tor === 'futsalreserva') ? 2 : (tor === 'sub15fem') ? 2 : 1;
         actualizarVista();
         document.documentElement.scrollTop = 0;
         document.body.scrollTop = 0;
@@ -357,7 +357,7 @@
             cont.innerHTML = generarTablaFederal();
         } else if (estado.torneo === 'reserva') {
             if (!estado._reservaIniciada || estado._reservaCat !== estado.categoria) {
-                estado.fecha = (estado.categoria === 'oficial' || estado.categoria === 'promocional') ? 2 : (estado.categoria === 'femenino' || estado.categoria === 'segundafemenino') ? 2 : 1;
+                estado.fecha = (estado.categoria === 'oficial' || estado.categoria === 'promocional') ? 4 : (estado.categoria === 'femenino' || estado.categoria === 'segundafemenino') ? 2 : 1;
                 estado._reservaIniciada = true;
                 estado._reservaCat = estado.categoria;
             }
@@ -384,6 +384,7 @@
     box-sizing: border-box;
     line-height: 0;
     font-size: 0;
+    max-height: 110px;
 ">
     <div id="banner-slide" style="width:100%; line-height:0; font-size:0;">
         <!-- Placeholder hasta que se carguen las imágenes -->
@@ -394,9 +395,9 @@
 <script>
     // Imágenes publicitarias — reemplazar src con las URLs reales
     const BD_PUBLICIDAD = [
-        { src: "Foto_One.jpg",   srcMobile: "Foto_One_mobile.jpg",   link: "" },
-        { src: "Foto_Two.jpg",   srcMobile: "Foto_Two_mobile.jpg",   link: "" },
-        { src: "Foto_Three.jpg", srcMobile: "Foto_Three_mobile.jpg", link: "" },
+        { src: "Foto_One.jpg", link: "" },
+        { src: "Foto_Two.jpg", link: "" },
+        { src: "Foto_Three.jpg", link: "" },
     ];
 
     (function() {
@@ -404,14 +405,11 @@
         const slide = document.getElementById('banner-slide');
         let idx = 0;
 
-        function esMobile() { return window.innerWidth <= 600; }
-
         function mostrar(i) {
             const pub = BD_PUBLICIDAD[i];
-            const img = esMobile() ? pub.srcMobile : pub.src;
             slide.innerHTML = pub.link
-                ? `<a href="${pub.link}" target="_blank" style="display:block;width:100%;"><img src="${img}" class="banner-img" /></a>`
-                : `<img src="${img}" class="banner-img" />`;
+                ? `<a href="${pub.link}" target="_blank" style="display:block;width:100%;"><img src="${pub.src}" style="width:100%;height:auto;display:block;vertical-align:bottom;" /></a>`
+                : `<img src="${pub.src}" style="width:100%;height:auto;display:block;vertical-align:bottom;" />`;
         }
 
         mostrar(0);
@@ -421,7 +419,6 @@
                 mostrar(idx);
             }, 5000);
         }
-        window.addEventListener('resize', () => mostrar(idx));
     })();
 </script>
 
