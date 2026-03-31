@@ -163,6 +163,24 @@ function generarCopaArgentina() {
                 </tr>`;
                 if (p.nota) html += `<tr style="background:#f5f5f5;"><td colspan="3" style="text-align:center;font-size:10px;color:#777;padding:3px 8px;font-style:italic;">📍 ${p.nota}</td></tr>`;
             }
+if (p.goles_l?.length || p.goles_v?.length) {
+    let textoGoles = "";
+
+    if (p.goles_l?.length) {
+        textoGoles += `<b>${p.l}:</b> ${p.goles_l.join(", ")}`;
+    }
+
+    if (p.goles_v?.length) {
+        if (textoGoles) textoGoles += " | ";
+        textoGoles += `<b>${p.v}:</b> ${p.goles_v.join(", ")}`;
+    }
+
+    html += `<tr>
+        <td colspan="3" style="font-size:10px;color:#555;padding:3px 6px;text-align:center;">
+            ⚽ ${textoGoles}
+        </td>
+    </tr>`;
+}
         });
         html += `</table>`;
     });
@@ -641,7 +659,7 @@ BD_FIXTURES.oficial.reserva.push(
         {l:"La Armonía",   v:"Villa Mitre",   gl:null, gv:null}
     ]},
     { fecha: 3, partidos: [
-        {l:"Villa Mitre",      v:"Huracán",      gl:null, gv:null},
+        {l:"Villa Mitre",      v:"Huracán",      gl:6, gv:0},
         {l:"Sporting",v:"San Francisco",      gl:4,    gv:0},
         {l:"Liniers",  v:"La Armonía",       gl:3,    gv:2},
         {l:"Libertad",   v:"Bella Vista",   gl:2, gv:2}
@@ -1523,6 +1541,7 @@ const BD_EQUIPOS_FUERA = [
     { anio: 2024,      equipo: "Olimpo", clase: "olimpo", torneo: "Federal A",                            instancia: "Reválida — 4° Etapa" },
     { anio: 2024,      equipo: "Olimpo", clase: "olimpo", torneo: "Copa Argentina",                       instancia: "32vos de final" },
     { anio: 2025,      equipo: "Olimpo", clase: "olimpo", torneo: "Federal A",                            instancia: "Reválida — 4° Etapa" },
+    { anio: 2026,      equipo: "Olimpo", clase: "olimpo", torneo: "Copa Argentina",                            instancia: "32vos de final" },
     // Villa Mitre
     { anio: 1944,      equipo: "Villa Mitre", clase: "villamitre", torneo: "Copa de la República",         instancia: "Cuartos de final" },
     { anio: "1992-93", equipo: "Villa Mitre", clase: "villamitre", torneo: "Torneo del Interior",          instancia: "2da ronda Subzona 2" },
@@ -10912,6 +10931,17 @@ const BD_DETALLES_FUERA = {
             }
         ]
     },
+    "Olimpo|2026|Copa Argentina": {
+        fases: [
+            {
+                nombre: "32vos de Final",
+                partidos: [
+                    { condicion: "Partido Único", local: "Olimpo", visitante: "Huracán", gl: 1, gv: 2,
+                      nota: "Jugado en cancha de Estudiantes de Caseros" }
+                ]
+            }
+        ]
+    },
     "Villa Mitre|1944|Copa de la República": {
         fases: [
             {
@@ -14555,12 +14585,12 @@ function generarReserva(cat) {
     // Tabla de posiciones — solo puntos, calculados desde fixtures
     const BD_RESERVA_POS = {
         'oficial':    [{n:"Liniers",       cl:"liniers",      pj:3, pg:2, pe:1, pp:0, gf:7, gc:5, pts:7},
+                       {n:"Villa Mitre",   cl:"villamitre",   pj:3, pg:2, pe:0, pp:1, gf:6, gc:1, pts:6},
                        {n:"Libertad",      cl:"libertad",     pj:3, pg:1, pe:2, pp:0, gf:7, gc:4, pts:5},
                        {n:"Sporting",      cl:"sporting",     pj:2, pg:1, pe:1, pp:0, gf:5, gc:1, pts:4},
-                       {n:"Villa Mitre",   cl:"villamitre",   pj:2, pg:1, pe:0, pp:1, gf:0, gc:1, pts:3},
                        {n:"Bella Vista",   cl:"bellavista",   pj:2, pg:0, pe:2, pp:0, gf:5, gc:5, pts:2},
-                       {n:"Huracán",       cl:"huracan",      pj:2, pg:0, pe:1, pp:1, gf:4, gc:7, pts:1},
                        {n:"La Armonía",    cl:"laarmonia",    pj:1, pg:0, pe:1, pp:0, gf:1, gc:1, pts:1},
+                       {n:"Huracán",       cl:"huracan",      pj:3, pg:0, pe:1, pp:2, gf:4, gc:13, pts:1},
                        {n:"San Francisco", cl:"sanfrancisco", pj:2, pg:0, pe:0, pp:2, gf:0, gc:7, pts:0}],
         'promocional':[{n:"Tiro Federal",        cl:"tirofederal",      pj:2, pg:2, pe:0, pp:0, gf:4, gc:2, pts:6},
                        {n:"Comercial",           cl:"comercial",        pj:2, pg:2, pe:0, pp:0, gf:3, gc:0, pts:6},
