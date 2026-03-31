@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>LdS Stats - 2026</title>
+    <link rel="stylesheet" href="style.css?v=12">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#111111">
+</head>
+<body>
+
+<!-- CARTEL ÚLTIMA ACTUALIZACIÓN -->
+<div id="cartel-act" style="
+    position: fixed;
+    top: 8px;
+    right: 8px;
+    background: rgba(0,51,26,0.88);
+    color: #adff2f;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 4px;
+    z-index: 999;
+    pointer-events: none;
+    letter-spacing: 0.3px;
+">🕐 Última actualización: Lun 30/3 — 21:00 hs</div>
+
+<div id="container-principal">
+    <div id="logo-header"><img src="au11.png" style="height:80px;" alt="LdS Stats"></div>
+
+    <div id="menu-grid">
+        <div class="bloque">
+            <div class="bloque-titulo sin-drop" onclick="navegar('home')">INICIO</div>
+        </div>
+        <div class="bloque">
+            <div class="bloque-titulo con-drop" onclick="toggleMenu(this)">TORNEO OFICIAL <span class="flecha">▼</span></div>
+            <div class="bloque-links">
+                <a href="#" onclick="navegar('apertura', 'oficial')">Apertura</a>
+                <a href="#" onclick="navegar('proximamente')">Clausura</a>
+                <a href="#" onclick="navegar('goleadores', 'oficial')">Goleadores</a>
+                <a href="#" onclick="navegar('reserva', 'oficial')">Reserva</a>
+            </div>
+        </div>
+        <div class="bloque">
+            <div class="bloque-titulo con-drop" onclick="toggleMenu(this)">PROMOCIONAL <span class="flecha">▼</span></div>
+            <div class="bloque-links">
+                <a href="#" onclick="navegar('apertura', 'promocional')">Apertura</a>
+                <a href="#" onclick="navegar('proximamente')">Clausura</a>
+                <a href="#" onclick="navegar('goleadores', 'promocional')">Goleadores</a>
+                <a href="#" onclick="navegar('reserva', 'promocional')">Reserva</a>
+            </div>
+        </div>
+        <div class="bloque">
+            <div class="bloque-titulo con-drop" onclick="toggleMenu(this)">FEDERAL A - JUV <span class="flecha">▼</span></div>
+            <div class="bloque-links">
+                <a href="#" onclick="navegar('posiciones', 'federala')">Temporada 2026</a>
+                <a href="#" onclick="navegar('goleadores', 'federala')">Goleadores</a>
+                <a href="#" onclick="navegar('sub131517')">Sub 13/15/17</a>
+            </div>
+        </div>
+        <div class="bloque">
+            <div class="bloque-titulo con-drop" onclick="toggleMenu(this)">REG. AMATEUR <span class="flecha">▼</span></div>
+            <div class="bloque-links">
+                <a href="#" onclick="navegar('proximamente')">Temporada 2026</a>
+                <a href="#" onclick="navegar('proximamente')">Goleadores</a>
+            </div>
+        </div>
+        <div class="bloque">
+            <div class="bloque-titulo sin-drop" onclick="navegar('copa_argentina')">COPA ARGENTINA</div>
+            <div class="bloque-links"></div>
+        </div>
+        <div class="bloque">
+            <div class="bloque-titulo con-drop" onclick="toggleMenu(this)">ESTADÍSTICAS <span class="flecha">▼</span></div>
+            <div class="bloque-links">
+                <a href="#" onclick="navegar('historial')">Historial LdS desde 2026</a>
+                <a href="#" onclick="navegar('equiposfuera')">Equipos fuera de la Liga del Sur</a>
+            </div>
+        </div>
+        <div class="bloque">
+            <div class="bloque-titulo con-drop" onclick="toggleMenu(this)">1° FEMENINO <span class="flecha">▼</span></div>
+            <div class="bloque-links">
+                <a href="#" onclick="navegar('apertura', 'femenino')">Apertura</a>
+                <a href="#" onclick="navegar('proximamente')">Clausura</a>
+                <a href="#" onclick="navegar('goleadores', 'femenino')">Goleadoras</a>
+                <a href="#" onclick="navegar('reserva', 'femenino')">Reserva</a>
+            </div>
+        </div>
+        <div class="bloque">
+            <div class="bloque-titulo con-drop" onclick="toggleMenu(this)">2° FEMENINO <span class="flecha">▼</span></div>
+            <div class="bloque-links">
+                <a href="#" onclick="navegar('torneo2026', 'segundafemenino')">Torneo 2026</a>
+                <a href="#" onclick="navegar('goleadores', 'segundafemenino')">Goleadoras</a>
+                <a href="#" onclick="navegar('reserva', 'segundafemenino')">Reserva</a>
+            </div>
+        </div>
+        <div class="bloque">
+            <div class="bloque-titulo con-drop" onclick="toggleMenu(this)">SUB 15 - FEM. <span class="flecha">▼</span></div>
+            <div class="bloque-links">
+                <a href="#" onclick="navegar('sub15fem')">Torneo 2026</a>
+            </div>
+        </div>
+        <div class="bloque">
+            <div class="bloque-titulo con-drop" onclick="toggleMenu(this)">FORMATIVAS <span class="flecha">▼</span></div>
+            <div class="bloque-links">
+                <a href="#" onclick="navegar('formativas', 'juveniles-a')">Juveniles Zona A</a>
+                <a href="#" onclick="navegar('formativas', 'juveniles-b')">Juveniles Zona B</a>
+                <a href="#" onclick="navegar('formativas', 'menores-a')">Menores Zona A</a>
+                <a href="#" onclick="navegar('formativas', 'menores-b')">Menores Zona B</a>
+                <a href="#" onclick="navegar('formativas', 'menores-c')">Menores Zona C</a>
+                <a href="#" onclick="navegar('formativas', 'infantil-a')">Infantil Zona A</a>
+                <a href="#" onclick="navegar('formativas', 'infantil-b')">Infantil Zona B</a>
+                <a href="#" onclick="navegar('formativas', 'infantil-c')">Infantil Zona C</a>
+            </div>
+        </div>
+        <div class="bloque">
+            <div class="bloque-titulo con-drop" onclick="toggleMenu(this)">FUTSAL <span class="flecha">▼</span></div>
+            <div class="bloque-links">
+                <a href="#" onclick="navegar('futsal')">Torneo 2026</a>
+                <a href="#" onclick="navegar('futsalreserva')">Reserva</a>
+            </div>
+        </div>
+        <div class="bloque">
+            <div class="bloque-titulo con-drop" onclick="toggleMenu(this)">SENIOR <span class="flecha">▼</span></div>
+            <div class="bloque-links">
+                <a href="#" onclick="navegar('proximamente')">Torneo 2026</a>
+            </div>
+        </div>
+        <div class="bloque">
+            <div class="bloque-titulo con-drop" onclick="toggleMenu(this)">BAHIENSES FUERA <span class="flecha">▼</span></div>
+            <div class="bloque-links">
+                <a href="#" onclick="navegar('proximamente')">Jugadores</a>
+                <a href="#" onclick="navegar('proximamente')">Entrenadores</a>
+            </div>
+        </div>
+        <div class="bloque">
+            <div class="bloque-titulo con-drop" onclick="toggleMenu(this)">QUIÉNES SOMOS <span class="flecha">▼</span></div>
+            <div class="bloque-links">
+                <a href="#" onclick="navegar('quienessomos')">Quiénes Somos</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="contenido"></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="datos.js?v=12"></script>
+<script>
+    let estado = { torneo: 'home', categoria: '', fecha: 1 };
+    let estadoAnterior = { torneo: 'home', categoria: '', fecha: 1 };
+
+    // Última actualización por sección — modificar según corresponda
+    const ULTIMA_ACT = {
+        default:        "Lun 30/3 — 21:00 hs",
+        equiposfuera:   "Dom 22/3 — 1:15 hs"
+    };
+
+    function getUltimaAct() {
+        const key = estado.torneo + (estado.categoria ? '_' + estado.categoria : '');
+        return ULTIMA_ACT[key] || ULTIMA_ACT.default;
+    }
+
+    function actualizarCartel() {
+        const cartel = document.getElementById('cartel-act');
+        if (cartel) cartel.textContent = '🕐 Última actualización: ' + getUltimaAct();
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        navegar('home');
+        document.addEventListener('click', function(e) {
+            const dentroDeMenu = e.target.closest('.bloque');
+            if (!dentroDeMenu) {
+                document.querySelectorAll('.bloque-links.abierto').forEach(el => el.classList.remove('abierto'));
+                document.querySelectorAll('.flecha').forEach(el => el.textContent = '▼');
+            }
+        });
+    });
+
+        function toggleMenu(titulo) {
+        const links = titulo.nextElementSibling;
+        const flecha = titulo.querySelector('.flecha');
+        const yaAbierto = links.classList.contains('abierto');
+        document.querySelectorAll('.bloque-links.abierto').forEach(el => el.classList.remove('abierto'));
+        document.querySelectorAll('.flecha').forEach(el => el.textContent = '▼');
+        if (!yaAbierto) {
+            links.classList.add('abierto');
+            flecha.textContent = '▲';
+        }
+    }
+
+    function navegar(tor, cat) {
+        // Cerrar todos los menús desplegables
+        document.querySelectorAll('.bloque-links.abierto').forEach(el => el.classList.remove('abierto'));
+        document.querySelectorAll('.flecha').forEach(el => el.textContent = '▼');
+
+        const cont = document.getElementById("contenido");
+        if (tor === 'proximamente') {
+            cont.innerHTML = "<div class='msg-prox'>PRÓXIMAMENTE</div>";
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            return;
+        }
+        if (tor === 'goleadores') {
+            estado.torneo = 'goleadores';
+            estado.categoria = cat;
+            try {
+                const html = generarGoleadores(cat);
+                cont.innerHTML = html || "<div class='msg-prox'>Sin goles registrados</div>";
+            } catch(e) {
+                cont.innerHTML = "<div class='msg-prox'>Error: " + e.message + "</div>";
+            }
+            actualizarCartel();
+            document.documentElement.scrollTop = 0;
+            document.body.scrollTop = 0;
+            return;
+        }
+        estado.torneo = tor;
+        estado.categoria = cat;
+        estado.fecha = (tor === 'apertura' && (cat === 'oficial' || cat === 'promocional')) ? 4 : (tor === 'posiciones' && cat === 'federala') ? 2 : (tor === 'apertura' && cat === 'femenino') ? 2 : (tor === 'torneo2026' && cat === 'segundafemenino') ? 2 : 1; 
+        actualizarVista();
+        document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0;
+    }
+
+    function verPerfilJugador(jugador, equipo) {
+        estadoAnterior = { ...estado };
+        estado.torneo = 'perfil_jugador';
+        estado.perfil = { jugador, equipo };
+        document.getElementById('contenido').innerHTML = generarPerfilJugador(jugador, equipo);
+        document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0;
+    }
+
+    function toggleSubCat(key) {
+        const body = document.getElementById('body-' + key);
+        const arr = document.getElementById('arr-' + key);
+        const isOpen = body.classList.contains('open');
+        body.classList.toggle('open', !isOpen);
+        arr.classList.toggle('open', !isOpen);
+    }
+
+    function cambiarFechaSub(n, key) {
+        estado[`fecha_${key}`] = n;
+        document.getElementById('contenido').innerHTML = generarSub();
+        // Reabrir la categoría activa
+        const body = document.getElementById('body-' + key);
+        const arr = document.getElementById('arr-' + key);
+        if (body) { body.classList.add('open'); arr.classList.add('open'); }
+    }
+
+    function generarFutsalVista(modo) {
+        estado.fecha = estado.fecha || 1;
+        document.getElementById('contenido').innerHTML = generarFutsal(modo);
+    }
+
+    function toggleQS(id) {
+        const body = document.getElementById(id);
+        const arr = document.getElementById('arr-' + id);
+        const isOpen = body.classList.contains('open');
+        body.classList.toggle('open', !isOpen);
+        arr.classList.toggle('open', !isOpen);
+    }
+
+    function enviarContacto() {
+        const nombre = document.getElementById('qs-nombre')?.value.trim();
+        const mail = document.getElementById('qs-mail')?.value.trim();
+        const mensaje = document.getElementById('qs-mensaje')?.value.trim();
+        const estado = document.getElementById('qs-estado');
+
+        if (!nombre) { estado.innerHTML = '⚠️ Por favor ingresá tu nombre.'; estado.style.color = '#c00'; return; }
+        if (!mensaje) { estado.innerHTML = '⚠️ Por favor escribí un mensaje.'; estado.style.color = '#c00'; return; }
+
+        estado.innerHTML = 'Enviando...';
+        estado.style.color = '#555';
+
+        emailjs.init('j4c1N_UVJR9ThWkI8');
+
+        emailjs.send('service_bkw9ogh', 'template_nbdpy1c', {
+            from_name: nombre,
+            from_email: mail || 'No proporcionado',
+            message: mensaje
+        }).then(() => {
+            estado.innerHTML = '✅ Mensaje enviado correctamente. ¡Gracias!';
+            estado.style.color = 'green';
+            document.getElementById('qs-nombre').value = '';
+            document.getElementById('qs-mail').value = '';
+            document.getElementById('qs-mensaje').value = '';
+        }).catch(() => {
+            estado.innerHTML = '❌ Error al enviar. Intentá de nuevo.';
+            estado.style.color = '#c00';
+        });
+    }
+
+    function verH2H(eq1, eq2, cls1, cls2, catKey) {
+        estado.torneo = 'h2h';
+        estado.h2h = { eq1, eq2, cls1, cls2, catKey };
+        document.getElementById('contenido').innerHTML = generarH2H(eq1, eq2, cls1, cls2, catKey);
+        document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0;
+    }
+
+    function toggleHistEquipo(id) {
+        const body = document.getElementById(id);
+        const arr = document.getElementById('arr_' + id);
+        const isOpen = body.classList.contains('open');
+        body.closest('.hist-seccion').querySelectorAll('.hist-equipo-body').forEach(b => b.classList.remove('open'));
+        body.closest('.hist-seccion').querySelectorAll('.hist-equipo-arrow').forEach(a => a.classList.remove('open'));
+        if (!isOpen) {
+            body.classList.add('open');
+            arr.classList.add('open');
+        }
+    }
+
+    function cambiarFechaReserva(n, cat) {
+        estado.fecha = n;
+        estado.categoria = cat;
+        estado.torneo = 'reserva';
+        document.getElementById('contenido').innerHTML = generarReserva(cat);
+    }
+
+    function cambiarFecha(n) {
+        estado.fecha = n;
+        actualizarVista();
+    }
+
+    function actualizarVista() {
+        const cont = document.getElementById("contenido");
+        actualizarCartel();
+        if (estado.torneo === 'home') {
+            cont.innerHTML = generarHome();
+        } else if (estado.torneo === 'quienessomos') {
+            cont.innerHTML = generarQuienesSomos();
+        } else if (estado.torneo === 'h2h') {
+            const h = estado.h2h;
+            cont.innerHTML = generarH2H(h.eq1, h.eq2, h.cls1, h.cls2, h.catKey);
+        } else if (estado.torneo === 'equiposfuera') {
+            cont.innerHTML = generarEquiposFuera();
+        } else if (estado.torneo === 'sub15fem') {
+            cont.innerHTML = generarSub15Fem();
+        } else if (estado.torneo === 'futsal') {
+            cont.innerHTML = generarFutsal('principal');
+        } else if (estado.torneo === 'futsalreserva') {
+            cont.innerHTML = generarFutsal('reserva');
+        } else if (estado.torneo === 'formativas') {
+            cont.innerHTML = generarFormativas(estado.categoria);
+        } else if (estado.torneo === 'copa_argentina') {
+            cont.innerHTML = generarCopaArgentina();
+        } else if (estado.torneo === 'historial') {
+            cont.innerHTML = generarHistorial();
+        } else if (estado.torneo === 'sub131517') {
+            cont.innerHTML = generarSub();
+        } else if (estado.torneo === 'goleadores') {
+            cont.innerHTML = generarGoleadores(estado.categoria);
+        } else if (estado.torneo === 'perfil_jugador') {
+            cont.innerHTML = generarPerfilJugador(estado.perfil.jugador, estado.perfil.equipo);
+        } else if (estado.categoria === 'federala') {
+            cont.innerHTML = generarTablaFederal();
+        } else if (estado.torneo === 'reserva') {
+            if (!estado._reservaIniciada || estado._reservaCat !== estado.categoria) {
+                estado.fecha = (estado.categoria === 'oficial' || estado.categoria === 'promocional') ? 2 : (estado.categoria === 'femenino' || estado.categoria === 'segundafemenino') ? 2 : 1;
+                estado._reservaIniciada = true;
+                estado._reservaCat = estado.categoria;
+            }
+            cont.innerHTML = generarReserva(estado.categoria);
+        } else {
+            const tablaAnual = (estado.categoria === 'femenino' || estado.categoria === 'segundafemenino') ? '' : generarTabla('anual', estado.categoria);
+            cont.innerHTML = generarFixture(estado.fecha, estado.torneo, estado.categoria) + 
+                             generarTabla(estado.torneo, estado.categoria) +
+                             tablaAnual;
+        }
+    }
+</script>
+<!-- BANNER PUBLICITARIO FIJO -->
+<div id="banner-pub" style="
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: transparent;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    line-height: 0;
+    font-size: 0;
+    max-height: 110px;
+">
+    <div id="banner-slide" style="width:100%; line-height:0; font-size:0;">
+        <!-- Placeholder hasta que se carguen las imágenes -->
+        <div style="color:#555; font-size:11px; letter-spacing:2px;">PUBLICIDAD</div>
+    </div>
+</div>
+
+<script>
+    // Imágenes publicitarias — reemplazar src con las URLs reales
+    const BD_PUBLICIDAD = [
+        { src: "Foto_One.jpg", link: "" },
+        { src: "Foto_Two.jpg", link: "" },
+        { src: "Foto_Three.jpg", link: "" },
+    ];
+
+    (function() {
+        if (BD_PUBLICIDAD.length === 0) return;
+        const slide = document.getElementById('banner-slide');
+        let idx = 0;
+
+        function mostrar(i) {
+            const pub = BD_PUBLICIDAD[i];
+            slide.innerHTML = pub.link
+                ? `<a href="${pub.link}" target="_blank" style="display:block;width:100%;"><img src="${pub.src}" style="width:100%;height:auto;display:block;vertical-align:bottom;" /></a>`
+                : `<img src="${pub.src}" style="width:100%;height:auto;display:block;vertical-align:bottom;" />`;
+        }
+
+        mostrar(0);
+        if (BD_PUBLICIDAD.length > 1) {
+            setInterval(() => {
+                idx = (idx + 1) % BD_PUBLICIDAD.length;
+                mostrar(idx);
+            }, 5000);
+        }
+    })();
+</script>
+
+
+<script>
+// Ajustar padding-bottom según alto real del banner
+function ajustarPaddingBanner() {
+    const banner = document.getElementById('banner-pub');
+    const cont = document.getElementById('container-principal');
+    if (banner) {
+        const h = banner.offsetHeight;
+        document.body.style.paddingBottom = (h + 15) + 'px';
+    }
+}
+window.addEventListener('load', ajustarPaddingBanner);
+window.addEventListener('resize', ajustarPaddingBanner);
+// Ajustar también cuando cambia la imagen del banner
+setTimeout(ajustarPaddingBanner, 500);
+setTimeout(ajustarPaddingBanner, 1500);
+</script>
+</body>
+</html>
