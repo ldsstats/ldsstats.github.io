@@ -214,7 +214,8 @@ tr[onclick]:hover td { background-color: #e8f5e9 !important; }
     .bloque a { font-size: 10px; padding: 6px 4px; }
     .bloque-titulo { font-size: 9px; }
 
-    /* BANNER: imagen mobile con proporciones propias */
-    #banner-pub { max-height: 160px; }
+    /* BANNER: imagen mobile sin restricción de altura */
+    body { padding-bottom: 215px; }
+    #banner-pub { max-height: none; }
     #banner-pub img { width: 100%; height: auto; display: block; }
 }
