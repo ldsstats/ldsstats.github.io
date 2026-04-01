@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>LdS Stats - 2026</title>
-    <link rel="stylesheet" href="style.css?v=12">
+    <link rel="stylesheet" href="style.css?v=1">
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#111111">
 </head>
@@ -24,7 +24,7 @@
     z-index: 999;
     pointer-events: none;
     letter-spacing: 0.3px;
-">🕐 Última actualización: Lun 30/3 — 21:00 hs</div>
+">🕐 Última actualización: Mar 31/03 — 23:00hs</div>
 
 <div id="container-principal">
     <div id="logo-header"><img src="au11.png" style="height:80px;" alt="LdS Stats"></div>
@@ -39,6 +39,7 @@
                 <a href="#" onclick="navegar('apertura', 'oficial')">Apertura</a>
                 <a href="#" onclick="navegar('proximamente')">Clausura</a>
                 <a href="#" onclick="navegar('goleadores', 'oficial')">Goleadores</a>
+                <a href="#" onclick="navegar('arqueros', 'oficial')">Vallas invictas</a>
                 <a href="#" onclick="navegar('reserva', 'oficial')">Reserva</a>
             </div>
         </div>
@@ -48,6 +49,7 @@
                 <a href="#" onclick="navegar('apertura', 'promocional')">Apertura</a>
                 <a href="#" onclick="navegar('proximamente')">Clausura</a>
                 <a href="#" onclick="navegar('goleadores', 'promocional')">Goleadores</a>
+                <a href="#" onclick="navegar('arqueros', 'promocional')">Vallas invictas</a>
                 <a href="#" onclick="navegar('reserva', 'promocional')">Reserva</a>
             </div>
         </div>
@@ -145,14 +147,14 @@
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-<script src="datos.js?v=12"></script>
+<script src="datos.js?v=1"></script>
 <script>
     let estado = { torneo: 'home', categoria: '', fecha: 1 };
     let estadoAnterior = { torneo: 'home', categoria: '', fecha: 1 };
 
     // Última actualización por sección — modificar según corresponda
     const ULTIMA_ACT = {
-        default:        "Lun 30/3 — 21:00 hs",
+        default:        "Mar 31/03 — 23:00hs",
         equiposfuera:   "Dom 22/3 — 1:15 hs"
     };
 
@@ -206,6 +208,20 @@
             try {
                 const html = generarGoleadores(cat);
                 cont.innerHTML = html || "<div class='msg-prox'>Sin goles registrados</div>";
+            } catch(e) {
+                cont.innerHTML = "<div class='msg-prox'>Error: " + e.message + "</div>";
+            }
+            actualizarCartel();
+            document.documentElement.scrollTop = 0;
+            document.body.scrollTop = 0;
+            return;
+        }
+        if (tor === 'arqueros') {
+            estado.torneo = 'arqueros';
+            estado.categoria = cat;
+            try {
+                const html = generarArqueros(cat);
+                cont.innerHTML = html || "<div class='msg-prox'>Sin datos registrados</div>";
             } catch(e) {
                 cont.innerHTML = "<div class='msg-prox'>Error: " + e.message + "</div>";
             }
@@ -351,6 +367,8 @@
             cont.innerHTML = generarSub();
         } else if (estado.torneo === 'goleadores') {
             cont.innerHTML = generarGoleadores(estado.categoria);
+        } else if (estado.torneo === 'arqueros') {
+            cont.innerHTML = generarArqueros(estado.categoria);
         } else if (estado.torneo === 'perfil_jugador') {
             cont.innerHTML = generarPerfilJugador(estado.perfil.jugador, estado.perfil.equipo);
         } else if (estado.categoria === 'federala') {
@@ -384,7 +402,6 @@
     box-sizing: border-box;
     line-height: 0;
     font-size: 0;
-    max-height: 110px;
 ">
     <div id="banner-slide" style="width:100%; line-height:0; font-size:0;">
         <!-- Placeholder hasta que se carguen las imágenes -->
@@ -395,9 +412,9 @@
 <script>
     // Imágenes publicitarias — reemplazar src con las URLs reales
     const BD_PUBLICIDAD = [
-        { src: "Foto_One.jpg", link: "" },
-        { src: "Foto_Two.jpg", link: "" },
-        { src: "Foto_Three.jpg", link: "" },
+        { src: "Foto_One.jpg",   srcMobile: "Foto_One_mobile.jpg",   link: "" },
+        { src: "Foto_Two.jpg",   srcMobile: "Foto_Two_mobile.jpg",   link: "" },
+        { src: "Foto_Three.jpg", srcMobile: "Foto_Three_mobile.jpg", link: "" },
     ];
 
     (function() {
@@ -405,11 +422,14 @@
         const slide = document.getElementById('banner-slide');
         let idx = 0;
 
+        function esMobile() { return window.innerWidth <= 600; }
+
         function mostrar(i) {
             const pub = BD_PUBLICIDAD[i];
+            const img = esMobile() ? pub.srcMobile : pub.src;
             slide.innerHTML = pub.link
-                ? `<a href="${pub.link}" target="_blank" style="display:block;width:100%;"><img src="${pub.src}" style="width:100%;height:auto;display:block;vertical-align:bottom;" /></a>`
-                : `<img src="${pub.src}" style="width:100%;height:auto;display:block;vertical-align:bottom;" />`;
+                ? `<a href="${pub.link}" target="_blank" style="display:block;width:100%;"><img src="${img}" class="banner-img" /></a>`
+                : `<img src="${img}" class="banner-img" />`;
         }
 
         mostrar(0);
@@ -419,6 +439,7 @@
                 mostrar(idx);
             }, 5000);
         }
+        window.addEventListener('resize', () => mostrar(idx));
     })();
 </script>
 

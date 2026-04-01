@@ -374,9 +374,9 @@ const BD_FIXTURES_FUTSAL = [
         {l:"Comercial",       v:"Dublin",          gl:null, gv:null, dia:"Mie 01/04", hora:"22:00"},
         {l:"Petroquímicos",   v:"Dep. Futsal",     gl:null, gv:null, dia:"Mie 01/04", hora:"22:00"},
         {l:"Los 3 Chiflados", v:"Liniers",         gl:null, gv:null, dia:"Jue 02/04", hora:"22:00"},
-        {l:"San Francisco",   v:"Huracán",         gl:null, gv:null, dia:"Vie 03/04", hora:"22:00"},
         {l:"La Estación",     v:"Pacífico BB",     gl:null, gv:null, dia:"Vie 03/04", hora:"22:00"},
         {l:"Villa Mitre",     v:"Tiro Federal",    gl:null, gv:null, dia:"Vie 03/04", hora:"22:00"},
+        {l:"San Francisco",   v:"Huracán",         gl:null, gv:null, dia:"Vie 03/04", hora:"22:30"},
     ]},
     { fecha: 3, partidos: [
         {l:"Dep. Futsal",     v:"San Francisco",   gl:null, gv:null},
@@ -769,12 +769,17 @@ function generarHome() {
     const agenda = [
         { id: "2026-04-01", label: "MIE 01/04", torneos: [
             { nombre: "FUTSAL", cat: "futsal", partidos: [
-                {l:"La Esperanza", v:"Catamarca", hora:"22:00"}
+                {l:"La Esperanza", v:"Catamarca", hora:"22:00", nota:"En Don Bosco"},
+                {l:"Comercial", v:"Dublin", hora:"22:00"},
+                {l:"Petroquímicos", v:"Dep. Futsal", hora:"22:00"}
             ]}
         ]},
         { id: "2026-04-02", label: "JUE 02/04", torneos: [
             { nombre: "TORNEO OFICIAL", cat: "oficial", partidos: [
                 {l:"Villa Mitre", v:"San Francisco", hora:"16:00"}
+            ]},
+            { nombre: "FUTSAL", cat: "futsal", partidos: [
+                {l:"Los 3 Chiflados", v:"Liniers", hora:"22:00", nota:"En Don Bosco"}
             ]}
         ]},
         { id: "2026-04-03", label: "VIE 03/04", torneos: [
@@ -786,6 +791,11 @@ function generarHome() {
                 {l:"Olimpo",    v:"Rosario PB",      hora:"16:00"},
                 {l:"Tiro Federal",    v:"Pacífico (C)",      hora:"16:00"},
                 {l:"Pacífico BB", v:"Sansinena",  hora:"16:00"}
+            ]},
+            { nombre: "FUTSAL", cat: "futsal", partidos: [
+                {l:"La Estación", v:"Pacífico BB", hora:"22:00", nota:"En La Curtiembre"},
+                {l:"Villa Mitre", v:"Tiro Federal", hora:"22:00", nota:"En Don Bosco"},
+                {l:"San Francisco", v:"Huracán", hora:"22:30", nota:"En cancha de Tiro Federal"}
             ]}
         ]},
         { id: "2026-04-04", label: "SÁB 04/04", torneos: [
