@@ -15761,7 +15761,7 @@ function generarGoleadores(cat) {
 // ── VALLAS INVICTAS ──────────────────────────────────────────────
 const BD_ARQUEROS = {
     oficial: [
-        { jugador: "Lucas Oses", equipo: "Villa Mitre", partidos: [
+        { jugador: "Tomás Manganaro", equipo: "Villa Mitre", partidos: [
             { rival: "Liniers",    resultado: "Villa Mitre 2 - 0 Liniers",    fecha: 1 },
             { rival: "La Armonía", resultado: "La Armonía 0 - 4 Villa Mitre", fecha: 2 }
         ]},
