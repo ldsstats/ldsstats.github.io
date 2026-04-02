@@ -120,7 +120,6 @@ tr[onclick]:hover td { background-color: #e8f5e9 !important; }
 .laestacion::after { content: "⚽"; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); font-size: 9px; }
 .depfutsal { background-color: #fff; position: relative; border: 1px solid #eee; overflow: hidden; }
 .depfutsal::before { content: "★"; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); color: #2832a0; font-size: 20px; line-height: 1; }
-.depfutsal::after { content: "CDF"; position: absolute; top: 52%; left: 50%; transform: translate(-50%,-50%); color: #000; font-weight: bold; font-size: 5px; z-index: 2; letter-spacing: 0.3px; }
 .los3chiflados { background-color: #000; position: relative; }
 .los3chiflados::before { content: "CL3"; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); color: #ffd700; font-weight: bold; font-size: 6px; }
 .laesperanza { background: linear-gradient(135deg, #fff 40%, #217a2f 40%, #217a2f 60%, #fff 60%); }
