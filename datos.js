@@ -99,7 +99,7 @@ const idaFederal = [
 const idaFemenino = [
     { fecha: 1,  partidos: [{l:"Sporting", v:"Municipales", gl:0, gv:0, dia:"Mar 24/03", hora:"16:00", goles_l:[], goles_v:[]}, {l:"Bella Vista", v:"Libertad", gl:0, gv:2, dia:"Mar 24/03", hora:"16:00", goles_l:[], goles_v:["Milagros Varas","Antonella De Vega"]}, {l:"La Armonía", v:"Villa Mitre", gl:1, gv:5, dia:"Mar 24/03", hora:"16:00", goles_l:["Natalia Morinigo"], goles_v:["Agustina Rodríguez","Agustina Rodríguez","Agustina Rodríguez","Morena Bouven","Camila Aliata"]}, {l:"Empleados de Comercio", v:"Tiro Federal", gl:2, gv:2, dia:"Dom 22/03", hora:"16:00", goles_l:["Marianela Santana","Trinidad Rivas"], goles_v:["Abril Saenz","Abril Saenz"]}] },
     { fecha: 2,  partidos: [{l:"Bella Vista", v:"Sporting", gl:2, gv:3, dia:"Sáb 28/03", hora:"16:00", goles_l:["Victoria Toloza","Mahia Romero"], goles_v:["Sofía Mattos","Sofía Mattos","Alexia Villani"]}, {l:"Villa Mitre", v:"Municipales", gl:1, gv:5, dia:"Sáb 28/03", hora:"16:00", goles_l:["Agustina Rodríguez"], goles_v:["Valeria Navarrete","Valeria Navarrete","Victoria Nervi","Ludmila Fernández","Stefania Sueyro"]}, {l:"Libertad", v:"Empleados de Comercio", gl:0, gv:5, dia:"Sáb 28/03", hora:"16:00", goles_l:[], goles_v:["Marianela Santana","Marianela Santana","Marianela Santana","Marianela Santana","Trinidad Rivas"]}, {l:"Tiro Federal", v:"La Armonía", gl:4, gv:0, dia:"Dom 29/03", hora:"16:00", goles_l:["Alfonsina Royo","Candela Salgado","Camila Odriozola","Gabriela Cabrera"], goles_v:[]}] },
-    { fecha: 3,  partidos: [{l:"Empleados de Comercio", v:"Bella Vista", gl:null, gv:null, dia:"Jue 02/04", hora:"16:00"}, {l:"Sporting", v:"Villa Mitre", gl:null, gv:null, dia:"Jue 02/04", hora:"16:00"}, {l:"Municipales", v:"Tiro Federal", gl:null, gv:null}, {l:"La Armonía", v:"Libertad", gl:null, gv:null}] },
+    { fecha: 3,  partidos: [{l:"Empleados de Comercio", v:"Bella Vista", gl:null, gv:null, dia:"Jue 02/04", hora:"16:00"}, {l:"Sporting", v:"Villa Mitre", gl:null, gv:null, dia:"Sáb 04/04", hora:"16:00"}, {l:"Municipales", v:"Tiro Federal", gl:null, gv:null}, {l:"La Armonía", v:"Libertad", gl:null, gv:null}] },
     { fecha: 4,  partidos: [{l:"Bella Vista", v:"La Armonía", gl:null, gv:null}, {l:"Libertad", v:"Municipales", gl:null, gv:null}, {l:"Tiro Federal", v:"Villa Mitre", gl:null, gv:null}, {l:"Empleados de Comercio", v:"Sporting", gl:null, gv:null}] },
     { fecha: 5,  partidos: [{l:"La Armonía", v:"Empleados de Comercio", gl:null, gv:null}, {l:"Municipales", v:"Bella Vista", gl:null, gv:null}, {l:"Sporting", v:"Tiro Federal", gl:null, gv:null}, {l:"Villa Mitre", v:"Libertad", gl:null, gv:null}] },
     { fecha: 6,  partidos: [{l:"Bella Vista", v:"Villa Mitre", gl:null, gv:null}, {l:"Libertad", v:"Tiro Federal", gl:null, gv:null}, {l:"La Armonía", v:"Sporting", gl:null, gv:null}, {l:"Empleados de Comercio", v:"Municipales", gl:null, gv:null}] },
@@ -216,7 +216,7 @@ const BD_FIXTURES_FUTSAL_RESERVA = [
         {l:"Catamarca",       v:"Comercial",       gl:6, gv:5, dia:"Vie 27/03",  hora:"22:00"}
     ]},
     { fecha: 2, partidos: [
-        {l:"La Esperanza",    v:"Catamarca",       gl:null, gv:null},
+        {l:"La Esperanza",    v:"Catamarca",       gl:4, gv:1},
         {l:"Comercial",       v:"Dublin",          gl:4, gv:5},
         {l:"Petroquímicos",   v:"Dep. Futsal",     gl:null, gv:null},
         {l:"Los 3 Chiflados", v:"Liniers",         gl:null, gv:null},
@@ -348,7 +348,20 @@ const BD_FIXTURES_FUTSAL = [
             ]
         },
 
-        {l:"Tiro Federal",v:"La Estación",     gl:1, gv:6, dia:"Vie 27/03", hora:"22:00"},
+        {
+            l:"La Estación",
+            v:"Tiro Federal",
+            gl:7,
+            gv:1,
+            dia:"Vie 27/03",
+            hora:"22:00",
+            goles_l:[
+                "Jonathan Carunchio (2)",
+                "Bernabe Storni (2)",
+                "Diego Romano (2)",
+                "Esteban Sabán"
+            ],
+        },
 
 {
             l:"Liniers",
@@ -397,13 +410,32 @@ const BD_FIXTURES_FUTSAL = [
             dia:"Miér 01/04",
             hora:"22:00",
             goles_l:[
+                "Jonathan Kipes (2)",
+                "Alejandro Moreno (2)",
+                "Leandro Weitt"
             ],
             goles_v:[
-                "Matías Palma"
+                "Matías Gigena"
             ],
         },
 
-        {l:"La Esperanza",    v:"Catamarca",       gl:null, gv:null, dia:"Mie 01/04", hora:"22:00"},
+{
+            l:"La Esperanza",
+            v:"Catamarca",
+            gl:7,
+            gv:3,
+            dia:"Miér 01/04",
+            hora:"22:00",
+            goles_l:[
+                "Bruno Decoud (3)",
+                "Jesús Abdala (2)",
+                "Rodrigo Decoud",
+                "Benjamín Martínez"
+            ],
+            goles_v:[
+            ],
+        },
+
         {l:"Petroquímicos",   v:"Dep. Futsal",     gl:null, gv:null, dia:"Mie 01/04", hora:"22:00"},
         {l:"Los 3 Chiflados", v:"Liniers",         gl:null, gv:null, dia:"Jue 02/04", hora:"22:00"},
         {l:"La Estación",     v:"Pacífico BB",     gl:null, gv:null, dia:"Vie 03/04", hora:"22:00"},
@@ -801,7 +833,7 @@ function generarHome() {
     const agenda = [
         { id: "2026-04-01", label: "MIE 01/04", torneos: [
             { nombre: "FUTSAL", cat: "futsal", partidos: [
-                {l:"La Esperanza", v:"Catamarca", hora:"22:00", nota:"En Don Bosco"},
+                {l:"La Esperanza", v:"Catamarca", hora:"22:00", gl:7, gv:3},
                 {l:"Comercial", v:"Dublin", hora:"22:00", gl:5, gv:1},
                 {l:"Petroquímicos", v:"Dep. Futsal", hora:"22:00"}
             ]}
@@ -809,16 +841,6 @@ function generarHome() {
         { id: "2026-04-02", label: "JUE 02/04", torneos: [
             { nombre: "TORNEO OFICIAL", cat: "oficial", partidos: [
                 {l:"Villa Mitre", v:"San Francisco", hora:"16:00"}
-            ]},
-            { nombre: "FEMENINO", cat: "femenino", partidos: [
-                {l:"Sporting", v:"Villa Mitre", hora:"16:00"},
-                {l:"Empleados de Comercio", v:"Bella Vista", hora:"16:00"}
-            ]},
-            { nombre: "2° FEMENINO", cat: "segundafemenino", partidos: [
-                {l:"Liniers", v:"Petroquímicos", hora:"16:00"}
-            ]},
-            { nombre: "SUB 15 - FEMENINO", cat: "sub15fem", partidos: [
-                {l:"Sporting", v:"Empleados de Comercio", hora:"11:00"}
             ]},
             { nombre: "FUTSAL", cat: "futsal", partidos: [
                 {l:"Los 3 Chiflados", v:"Liniers", hora:"22:00", nota:"En Don Bosco"}
@@ -834,9 +856,6 @@ function generarHome() {
                 {l:"Tiro Federal",    v:"Pacífico (C)",      hora:"16:00"},
                 {l:"Pacífico BB", v:"Sansinena",  hora:"16:00"}
             ]},
-            { nombre: "FEMENINO", cat: "segundafemenino", partidos: [
-                {l:"Sansinena", v:"Olimpo", hora:"16:00"}
-            ]},
             { nombre: "FUTSAL", cat: "futsal", partidos: [
                 {l:"La Estación", v:"Pacífico BB", hora:"22:00", nota:"En La Curtiembre"},
                 {l:"Villa Mitre", v:"Tiro Federal", hora:"22:00", nota:"En Don Bosco"},
@@ -846,6 +865,9 @@ function generarHome() {
         { id: "2026-04-04", label: "SÁB 04/04", torneos: [
             { nombre: "TORNEO OFICIAL", cat: "oficial", partidos: [
                 {l:"Liniers", v:"Libertad", hora:"16:00"}
+            ]},
+            { nombre: "FEMENINO", cat: "femenino", partidos: [
+                {l:"Sporting", v:"Villa Mitre", hora:"16:00"},
             ]},
         ]},
         { id: "2026-04-05", label: "DOM 05/04", torneos: [
@@ -14877,15 +14899,15 @@ function generarSub() {
 
 const BD_POS_FUTSAL = {
     principal: [
+        {n:"La Esperanza",    cl:"laesperanza",   pj:2,pg:2,pe:0,pp:0,gf:13, gc:5, pts:6},
         {n:"Comercial",       cl:"comercial",     pj:2,pg:1,pe:1,pp:0,gf:9, gc:4, pts:4},
         {n:"Petroquímicos",   cl:"petroquimicos", pj:1,pg:1,pe:0,pp:0,gf:10,gc:3, pts:3},
         {n:"La Estación",     cl:"laestacion",    pj:1,pg:1,pe:0,pp:0,gf:6, gc:1, pts:3},
         {n:"Dublin",          cl:"dublin",        pj:2,pg:1,pe:0,pp:1,gf:7, gc:7, pts:3},
-        {n:"La Esperanza",    cl:"laesperanza",   pj:1,pg:1,pe:0,pp:0,gf:6, gc:2, pts:3},
         {n:"Villa Mitre",     cl:"villamitre",    pj:1,pg:1,pe:0,pp:0,gf:4, gc:2, pts:3},
         {n:"Liniers",         cl:"liniers",       pj:1,pg:0,pe:1,pp:0,gf:2, gc:2, pts:1},
         {n:"San Francisco",   cl:"sanfrancisco",  pj:1,pg:0,pe:1,pp:0,gf:2, gc:2, pts:1},
-        {n:"Catamarca",       cl:"catamarca",     pj:1,pg:0,pe:1,pp:0,gf:4, gc:4, pts:1},
+        {n:"Catamarca",       cl:"catamarca",     pj:2,pg:0,pe:1,pp:1,gf:7, gc:11, pts:1},
         {n:"Dep. Futsal",     cl:"depfutsal",     pj:1,pg:0,pe:0,pp:1,gf:2, gc:4, pts:0},
         {n:"Pacífico BB",     cl:"pacificobb",    pj:1,pg:0,pe:0,pp:1,gf:2, gc:6, pts:0},
         {n:"Los 3 Chiflados", cl:"los3chiflados", pj:1,pg:0,pe:0,pp:1,gf:2, gc:6, pts:0},
@@ -14893,14 +14915,14 @@ const BD_POS_FUTSAL = {
         {n:"Huracán",         cl:"huracan",       pj:1,pg:0,pe:0,pp:1,gf:3, gc:10,pts:0}
     ],
     reserva: [
+        {n:"La Esperanza",    cl:"laesperanza",   pj:2,pg:1,pe:1,pp:0,gf:10, gc:7, pts:4},
         {n:"Dublin",          cl:"dublin",        pj:2,pg:1,pe:0,pp:1,gf:5, gc:12, pts:3},
         {n:"Petroquímicos",   cl:"petroquimicos", pj:1,pg:1,pe:0,pp:0,gf:8, gc:0, pts:3},
         {n:"Los 3 Chiflados", cl:"los3chiflados", pj:1,pg:1,pe:0,pp:0,gf:7, gc:0, pts:3},
         {n:"Villa Mitre",     cl:"villamitre",    pj:1,pg:1,pe:0,pp:0,gf:6, gc:2, pts:3},
         {n:"Liniers",         cl:"liniers",       pj:1,pg:1,pe:0,pp:0,gf:5, gc:1, pts:3},
-        {n:"Catamarca",       cl:"catamarca",     pj:1,pg:1,pe:0,pp:0,gf:6, gc:5, pts:3},
+        {n:"Catamarca",       cl:"catamarca",     pj:2,pg:1,pe:0,pp:1,gf:7, gc:9, pts:3},
         {n:"Pacífico BB",     cl:"pacificobb",    pj:1,pg:0,pe:1,pp:0,gf:6, gc:6, pts:1},
-        {n:"La Esperanza",    cl:"laesperanza",   pj:1,pg:0,pe:1,pp:0,gf:6, gc:6, pts:1},
         {n:"Tiro Federal",    cl:"tirofederal",   pj:1,pg:0,pe:1,pp:0,gf:1, gc:1, pts:1},
         {n:"La Estación",     cl:"laestacion",    pj:1,pg:0,pe:1,pp:0,gf:1, gc:1, pts:1},
         {n:"Dep. Futsal",     cl:"depfutsal",     pj:1,pg:0,pe:0,pp:1,gf:2, gc:6, pts:0},
