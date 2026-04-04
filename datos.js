@@ -67,7 +67,7 @@ const idaOficial = [
     { fecha: 1, partidos: [{l:"Libertad", v:"Huracán", gl:3, gv:1, dia:"Dom 15/03/2026", hora:"16:00", goles_l:["Luciano Trídico","Mauro Sabatini","Matías Mayer"], goles_v:["Iván Agudiak"]}, {l:"Sporting", v:"La Armonía", gl:1, gv:2, dia:"Dom 15/03/2026", hora:"16:00", goles_l:["Jonathan Font"], goles_v:["Matías Malmoria","Matías Malmoria"]}, {l:"Bella Vista", v:"San Francisco", gl:3, gv:1, dia:"Dom 15/03/2026", hora:"16:00", goles_l:["Lucas Martínez","Alexis Vega","Gabino Bellegia"], goles_v:["Juan Romero"]}, {l:"Villa Mitre", v:"Liniers", gl:2, gv:0, dia:"Dom 15/03/2026", hora:"16:00", goles_l:["Santiago Gómez","Juan Acosta"], goles_v:[]}] },
     { fecha: 2, partidos: [{l:"La Armonía", v:"Villa Mitre", gl:0, gv:4, dia:"Dom 22/03", hora:"16:00", goles_l:[], goles_v:["Ramiro Gerk","Ramiro Gerk","Julián Monteverde","Diego Avit"]}, {l:"San Francisco", v:"Libertad", gl:1, gv:1, dia:"Dom 22/03", hora:"16:00", goles_l:["Federico Pinedo"], goles_v:["Mauro Sabatini"]}, {l:"Huracán", v:"Sporting", gl:3, gv:0, dia:"Lun 23/03", hora:"16:00", nota:"En cancha de Sansinena", goles_l:["Iván Agudiak","Agustín Seisdedos","Johan Munives Cortes"], goles_v:[]}, {l:"Bella Vista", v:"Liniers", gl:0, gv:1, dia:"Mar 24/03", hora:"16:00", goles_l:[], goles_v:["Rodrigo Phillipp"]}] },
     { fecha: 3, partidos: [{l:"Villa Mitre", v:"Huracán", gl:0, gv:1, dia:"Sáb 28/03", hora:"11:00", goles_l:[], goles_v:["Agustín Seisdedos"]}, {l:"Sporting", v:"San Francisco", gl:1, gv:1, dia:"Dom 29/03", hora:"16:00", goles_l:["Jonathan Font"], goles_v:["Jonathan Ramírez"]}, {l:"Liniers", v:"La Armonía", gl:4, gv:1, dia:"Dom 29/03", hora:"16:00", goles_l:["Valentín Bertoni","Rodrigo Phillipp","Salvador Maio","Ramiro Ullmann"], goles_v:["Franco Cuello"]}, {l:"Libertad", v:"Bella Vista", gl:0, gv:0, dia:"Dom 29/03", hora:"16:00"}] },
-    { fecha: 4, partidos: [{l:"Villa Mitre", v:"San Francisco", gl:1, gv:0, dia:"Jue 02/04", hora:"16:00", goles_l:["Martín Aguirre"], goles_v:[]}, {l:"La Armonía", v:"Huracán", gl:2, gv:3, dia:"Vie 03/03", hora:"16:00", goles_l:["Enrique Narvay","Matías Malmoria"], goles_v:["Lautaro Cerato","Lautaro Cerato","Lautaro Cerato"]}, {l:"Liniers", v:"Libertad", gl:null, gv:null, dia:"Sab 04/04", hora:"16:00"}, {l:"Sporting", v:"Bella Vista", gl:null, gv:null, dia:"Dom 05/03", hora:"16:00"}] },
+    { fecha: 4, partidos: [{l:"Villa Mitre", v:"San Francisco", gl:1, gv:0, dia:"Jue 02/04", hora:"16:00", goles_l:["Martín Aguirre"], goles_v:[]}, {l:"La Armonía", v:"Huracán", gl:2, gv:3, dia:"Vie 03/03", hora:"16:00", goles_l:["Enrique Narvay","Matías Malmoria"], goles_v:["Lautaro Cerato","Lautaro Cerato","Lautaro Cerato"]}, {l:"Liniers", v:"Libertad", gl:0, gv:1, dia:"Sab 04/04", hora:"16:00", goles_l:[], goles_v:["Nahuel Sánchez"]}, {l:"Sporting", v:"Bella Vista", gl:null, gv:null, dia:"Dom 05/03", hora:"16:00"}] },
     { fecha: 5, partidos: [{l:"Libertad", v:"Sporting", gl:null, gv:null}, {l:"Bella Vista", v:"Villa Mitre", gl:null, gv:null}, {l:"San Francisco", v:"La Armonía", gl:null, gv:null}, {l:"Huracán", v:"Liniers", gl:null, gv:null, dia:"Sáb 28/03", hora:"16:00"}] },
     { fecha: 6, partidos: [{l:"Libertad", v:"Villa Mitre", gl:null, gv:null}, {l:"Bella Vista", v:"La Armonía", gl:null, gv:null}, {l:"San Francisco", v:"Huracán", gl:null, gv:null}, {l:"Sporting", v:"Liniers", gl:null, gv:null}] },
     { fecha: 7, partidos: [{l:"Huracán", v:"Bella Vista", gl:null, gv:null}, {l:"La Armonía", v:"Libertad", gl:null, gv:null}, {l:"Villa Mitre", v:"Sporting", gl:null, gv:null}, {l:"Liniers", v:"San Francisco", gl:null, gv:null}] }
@@ -86,7 +86,7 @@ const idaPromo = [
 const idaFederal = [
     { fecha: 1, libre: "Círculo Dep.", partidos: [{l:"Kimberley", v:"Villa Mitre", gl:1, gv:0, dia:"Dom 22/03", hora:"16:00", goles_l:["Rodrigo Ríos"], goles_v:[]}, {l:"Sol de Mayo", v:"Germinal", gl:1, gv:1, dia:"Dom 22/03", hora:"15:00", goles_l:["Héctor Morales"], goles_v:["Nicolás Macaroff"]}, {l:"Guillermo Brown", v:"Santamarina", gl:2, gv:2, dia:"Dom 22/03", hora:"16:00", goles_l:["Emanuel Moreno","Ignacio Zapulla"], goles_v:["Nicolás Franco","Luciano Domínguez"]}, {l:"Olimpo", v:"Alvarado", gl:2, gv:0, dia:"Dom 22/03", hora:"16:00", goles_l:["Martín Ferreyra","Diego Ramírez"], goles_v:[]}] },
     { fecha: 2, libre: "Olimpo", partidos: [{l:"Santamarina", v:"Sol de Mayo", gl:0, gv:2, dia:"Sáb 28/03", hora:"19:00", goles_l:["Ignacio Lucero (e/c)"], goles_v:["Santiago Jara"]}, {l:"Alvarado", v:"Guillermo Brown", gl:2, gv:0, dia:"Dom 29/03", hora:"15:30", goles_l:["Facundo Centurión","Tomás Fernández"], goles_v:[]}, {l:"Germinal", v:"Kimberley", gl:0, gv:0, dia:"Dom 29/03", hora:"15:00"}, {l:"Villa Mitre", v:"Círculo Dep.", gl:2, gv:0, dia:"Dom 29/03", hora:"16:00", goles_l:["Pablo Mujica","Marcos Escobar"], goles_v:[]}] },
-    { fecha: 3, libre: "Villa Mitre", partidos: [{l:"Sol de Mayo", v:"Alvarado", gl:0, gv:0, dia:"Vie 03/04", hora:"15:30"}, {l:"Círculo Dep.", v:"Germinal", gl:null, gv:null, dia:"Sáb 04/04", hora:"15:30"}, {l:"Kimberley", v:"Santamarina", gl:null, gv:null, dia:"Dom 05/04", hora:"15:30"}, {l:"Guillermo Brown", v:"Olimpo", gl:null, gv:null, dia:"Dom 05/04", hora:"15:30"}] },
+    { fecha: 3, libre: "Villa Mitre", partidos: [{l:"Sol de Mayo", v:"Alvarado", gl:0, gv:0, dia:"Vie 03/04", hora:"15:30"}, {l:"Círculo Dep.", v:"Germinal", gl:2, gv:1, dia:"Sáb 04/04", hora:"15:30", goles_l:["Quimey Marín","Imanol Iriberri"], goles_v:["Nicolás Ríos"]}, {l:"Kimberley", v:"Santamarina", gl:null, gv:null, dia:"Dom 05/04", hora:"15:30"}, {l:"Guillermo Brown", v:"Olimpo", gl:null, gv:null, dia:"Dom 05/04", hora:"15:30"}] },
     { fecha: 4, libre: "Guillermo Brown", partidos: [{l:"Olimpo", v:"Sol de Mayo", gl:null, gv:null}, {l:"Alvarado", v:"Kimberley", gl:null, gv:null}, {l:"Santamarina", v:"Círculo Dep.", gl:null, gv:null}, {l:"Germinal", v:"Villa Mitre", gl:null, gv:null}] },
     { fecha: 5, libre: "Germinal", partidos: [{l:"Villa Mitre", v:"Santamarina", gl:null, gv:null}, {l:"Círculo Dep.", v:"Alvarado", gl:null, gv:null}, {l:"Kimberley", v:"Olimpo", gl:null, gv:null}, {l:"Sol de Mayo", v:"Guillermo Brown", gl:null, gv:null}] },
     { fecha: 6, libre: "Sol de Mayo", partidos: [{l:"Guillermo Brown", v:"Kimberley", gl:null, gv:null}, {l:"Olimpo", v:"Círculo Dep.", gl:null, gv:null}, {l:"Alvarado", v:"Villa Mitre", gl:null, gv:null}, {l:"Santamarina", v:"Germinal", gl:null, gv:null}] },
@@ -940,7 +940,7 @@ function generarHome() {
         ]},
         { id: "2026-04-04", label: "SÁB 04/04", torneos: [
             { nombre: "TORNEO OFICIAL", cat: "oficial", partidos: [
-                {l:"Liniers", v:"Libertad", hora:"16:00"}
+                {l:"Liniers", v:"Libertad", hora:"16:00", gl:0, gv:1}
             ]},
             { nombre: "FEMENINO", cat: "femenino", partidos: [
                 {l:"Sporting", v:"Villa Mitre", hora:"16:00"},
@@ -16070,7 +16070,8 @@ const BD_ARQUEROS = {
             { rival: "Villa Mitre", resultado: "Villa Mitre 0 - 1 Huracán", fecha: 3 }
         ]},
         { jugador: "Facundo Carnicero", equipo: "Libertad", partidos: [
-            { rival: "Bella Vista", resultado: "Libertad 0 - 0 Bella Vista", fecha: 3 }
+            { rival: "Bella Vista", resultado: "Libertad 0 - 0 Bella Vista", fecha: 3 },
+            { rival: "Liniers", resultado: "Liniers 0 - 0 Libertad", fecha: 4 }
         ]},
         { jugador: "Francisco Martínez", equipo: "Bella Vista", partidos: [
             { rival: "Libertad", resultado: "Libertad 0 - 0 Bella Vista", fecha: 3 }
@@ -16253,8 +16254,8 @@ const BD_POSICIONES = {
         apertura: [
             { nombre: "Huracán",       clase: "huracan",      pj:4, pg:3, pe:0, pp:1, gf:8, gc:5,  pts:9 },
             { nombre: "Villa Mitre",   clase: "villamitre",   pj:4, pg:3, pe:0, pp:1, gf:7, gc:1,  pts:9 },
-            { nombre: "Liniers",       clase: "liniers",      pj:3, pg:2, pe:0, pp:1, gf:5, gc:3,  pts:6 },
-            { nombre: "Libertad",      clase: "libertad",     pj:3, pg:1, pe:2, pp:0, gf:4, gc:2,  pts:5 },
+            { nombre: "Libertad",      clase: "libertad",     pj:4, pg:2, pe:2, pp:0, gf:5, gc:2,  pts:6 },
+            { nombre: "Liniers",       clase: "liniers",      pj:4, pg:2, pe:0, pp:2, gf:5, gc:4,  pts:6 },
             { nombre: "Bella Vista",   clase: "bellavista",   pj:3, pg:1, pe:1, pp:1, gf:3, gc:2,  pts:4 },
             { nombre: "La Armonía",    clase: "laarmonia",    pj:4, pg:1, pe:0, pp:3, gf:5, gc:12,  pts:3 },
             { nombre: "San Francisco", clase: "sanfrancisco", pj:4, pg:0, pe:2, pp:2, gf:3, gc:6,  pts:2 },
