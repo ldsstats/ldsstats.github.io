@@ -16266,7 +16266,7 @@ const BD_POSICIONES = {
         apertura: [
             { nombre: "Huracán",       clase: "huracan",      pj:4, pg:3, pe:0, pp:1, gf:8, gc:5,  pts:9 },
             { nombre: "Villa Mitre",   clase: "villamitre",   pj:4, pg:3, pe:0, pp:1, gf:7, gc:1,  pts:9 },
-            { nombre: "Libertad",      clase: "libertad",     pj:4, pg:2, pe:2, pp:0, gf:5, gc:2,  pts:6 },
+            { nombre: "Libertad",      clase: "libertad",     pj:4, pg:2, pe:2, pp:0, gf:5, gc:2,  pts:8 },
             { nombre: "Liniers",       clase: "liniers",      pj:4, pg:2, pe:0, pp:2, gf:5, gc:4,  pts:6 },
             { nombre: "Bella Vista",   clase: "bellavista",   pj:3, pg:1, pe:1, pp:1, gf:3, gc:2,  pts:4 },
             { nombre: "La Armonía",    clase: "laarmonia",    pj:4, pg:1, pe:0, pp:3, gf:5, gc:12,  pts:3 },
