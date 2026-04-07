@@ -86,7 +86,7 @@ const idaPromo = [
 const idaFederal = [
     { fecha: 1, libre: "Círculo Dep.", partidos: [{l:"Kimberley", v:"Villa Mitre", gl:1, gv:0, dia:"Dom 22/03", hora:"16:00", goles_l:["Rodrigo Ríos"], goles_v:[]}, {l:"Sol de Mayo", v:"Germinal", gl:1, gv:1, dia:"Dom 22/03", hora:"15:00", goles_l:["Héctor Morales"], goles_v:["Nicolás Macaroff"]}, {l:"Guillermo Brown", v:"Santamarina", gl:2, gv:2, dia:"Dom 22/03", hora:"16:00", goles_l:["Emanuel Moreno","Ignacio Zapulla"], goles_v:["Nicolás Franco","Luciano Domínguez"]}, {l:"Olimpo", v:"Alvarado", gl:2, gv:0, dia:"Dom 22/03", hora:"16:00", goles_l:["Martín Ferreyra","Diego Ramírez"], goles_v:[]}] },
     { fecha: 2, libre: "Olimpo", partidos: [{l:"Santamarina", v:"Sol de Mayo", gl:0, gv:2, dia:"Sáb 28/03", hora:"19:00", goles_l:["Ignacio Lucero (e/c)"], goles_v:["Santiago Jara"]}, {l:"Alvarado", v:"Guillermo Brown", gl:2, gv:0, dia:"Dom 29/03", hora:"15:30", goles_l:["Facundo Centurión","Tomás Fernández"], goles_v:[]}, {l:"Germinal", v:"Kimberley", gl:0, gv:0, dia:"Dom 29/03", hora:"15:00"}, {l:"Villa Mitre", v:"Círculo Dep.", gl:2, gv:0, dia:"Dom 29/03", hora:"16:00", goles_l:["Pablo Mujica","Marcos Escobar"], goles_v:[]}] },
-    { fecha: 3, libre: "Villa Mitre", partidos: [{l:"Sol de Mayo", v:"Alvarado", gl:0, gv:0, dia:"Vie 03/04", hora:"15:30"}, {l:"Círculo Dep.", v:"Germinal", gl:2, gv:1, dia:"Sáb 04/04", hora:"15:30", goles_l:["Quimey Marín","Imanol Iriberri"], goles_v:["Nicolás Ríos"]}, {l:"Kimberley", v:"Santamarina", gl:0, gv:0, dia:"Dom 05/04", hora:"15:30"}, {l:"Guillermo Brown", v:"Olimpo", gl:0, gv:2, dia:"Dom 05/04", hora:"15:30", goles_l:[], goles_v:["Brian Guille","Enzo Coacci"]}] },
+    { fecha: 3, libre: "Villa Mitre", partidos: [{l:"Sol de Mayo", v:"Alvarado", gl:0, gv:0, dia:"Vie 03/04", hora:"15:30"}, {l:"Círculo Dep.", v:"Germinal", gl:2, gv:1, dia:"Sáb 04/04", hora:"15:30", goles_l:["Quimey Marín","Imanol Iriberri"], goles_v:["Nicolás Ríos"]}, {l:"Kimberley", v:"Santamarina", gl:0, gv:0, dia:"Dom 05/04", hora:"15:30"}, {l:"Guillermo Brown", v:"Olimpo", gl:0, gv:2, dia:"Dom 05/04", hora:"15:30", goles_l:[], goles_v:["","Enzo Coacci"]}] },
     { fecha: 4, libre: "Guillermo Brown", partidos: [{l:"Olimpo", v:"Sol de Mayo", gl:null, gv:null}, {l:"Alvarado", v:"Kimberley", gl:null, gv:null}, {l:"Santamarina", v:"Círculo Dep.", gl:null, gv:null}, {l:"Germinal", v:"Villa Mitre", gl:null, gv:null}] },
     { fecha: 5, libre: "Germinal", partidos: [{l:"Villa Mitre", v:"Santamarina", gl:null, gv:null}, {l:"Círculo Dep.", v:"Alvarado", gl:null, gv:null}, {l:"Kimberley", v:"Olimpo", gl:null, gv:null}, {l:"Sol de Mayo", v:"Guillermo Brown", gl:null, gv:null}] },
     { fecha: 6, libre: "Sol de Mayo", partidos: [{l:"Guillermo Brown", v:"Kimberley", gl:null, gv:null}, {l:"Olimpo", v:"Círculo Dep.", gl:null, gv:null}, {l:"Alvarado", v:"Villa Mitre", gl:null, gv:null}, {l:"Santamarina", v:"Germinal", gl:null, gv:null}] },
@@ -1102,7 +1102,8 @@ function generarTablaFederal() {
         { nombre: "Villa Mitre", pj:2, pg:1, pe:0, pp:2, gf:1, gc:3 },
         { nombre: "Sol de América (F)", pj:2, pg:1, pe:0, pp:1, gf:2, gc:2 }
     ];
-    html += `</tbody></table><div class="header-t">MEJORES 5° (ZONAS 2, 3 Y 4)</div>`;
+    html += `</tbody></table><div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>45</b> tras finalizar la fecha <b>3</b></div>`;
+    html += `<div class="header-t">MEJORES 5° (ZONAS 2, 3 Y 4)</div>`;
     html += `<table><thead><tr><th style="width:25px;">#</th><th style="text-align:left;padding-left:8px;">Equipo</th><th class="c-stat">PJ</th><th class="c-stat">PG</th><th class="c-stat">PE</th><th class="c-stat">PP</th><th class="c-stat">GF</th><th class="c-stat">GC</th><th class="c-stat">Dif</th><th class="c-stat">Pts</th></tr></thead><tbody>`;
     mejoresQuintos.forEach((e, i) => {
         const dif = e.gf - e.gc;
@@ -1550,7 +1551,7 @@ const BD_FORMATIVAS_POS = {
     }
 };
 
-function generarTablaFormativa(titulo, equipos, descenso) {
+function generarTablaFormativa(titulo, equipos, descenso, playoff) {
     let html = `<div class="header-t">${titulo}</div>
     <table><thead><tr>
         <th style="width:25px;">#</th>
@@ -1559,7 +1560,7 @@ function generarTablaFormativa(titulo, equipos, descenso) {
         <th class="c-stat">PP</th><th class="c-stat">Pts</th>
     </tr></thead><tbody>`;
     equipos.forEach((e, i) => {
-        const cl = (descenso && i >= equipos.length - 2) ? 'p-desc' : '';
+        const cl = (descenso && i >= equipos.length - 2) ? 'p-desc' : (playoff && i < 2) ? 'p-playoff' : '';
         html += `<tr class="${cl}">
             <td class="c-pos">${i+1}</td>
             <td class="c-equipo"><div class="escudo ${e.cl}" style="display:inline-block;vertical-align:middle;margin-right:4px;"></div>${e.n}</td>
@@ -1592,7 +1593,8 @@ function generarFormativas(cat) {
         🕐 Actualizado: ${data.act}
     </div>`;
     const conDescenso = (cat === 'juveniles-a' || cat === 'menores-a');
-    html += generarTablaFormativa("TABLA GENERAL", data.general, conDescenso);
+    const conPlayoff = (cat === 'juveniles-b' || cat === 'menores-b');
+    html += generarTablaFormativa("TABLA GENERAL", data.general, conDescenso, conPlayoff);
     (data.cats || []).forEach(c => {
         html += generarTablaFormativa(c.nombre.toUpperCase(), c.equipos);
     });
@@ -14807,6 +14809,15 @@ function generarReserva(cat) {
             </tr>`;
         });
         html += `</tbody></table>`;
+        if (cat === 'oficial') {
+            html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>30</b> tras finalizar la fecha <b>4</b></div>`;
+        } else if (cat === 'promocional') {
+            html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>30</b> tras finalizar la fecha <b>4</b></div>`;
+        } else if (cat === 'femenino') {
+            html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>33</b> tras finalizar la fecha <b>3</b></div>`;
+        } else if (cat === 'segundafemenino') {
+            html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>72</b> tras finalizar la fecha <b>3</b></div>`;
+        }
     }
     return html;
 }
@@ -14939,6 +14950,13 @@ function generarSub() {
             </tr>`;
         });
         html += `</tbody></table>`;
+        if (cat.key === 'sub13') {
+            html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>39</b> tras la finalización de la fecha <b>1</b></div>`;
+        } else if (cat.key === 'sub15') {
+            html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>39</b> tras la finalización de la fecha <b>1</b></div>`;
+        } else if (cat.key === 'sub17') {
+            html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>39</b> tras la finalización de la fecha <b>1</b></div>`;
+        }
 
         // Goleadores
         html += `<div class="header-t">GOLEADORES — ${cat.label}</div>`;
@@ -15062,6 +15080,7 @@ function generarSub15Fem() {
         </tr>`;
     });
     html += `</tbody></table>`;
+    html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>30</b> tras la finalización de la fecha <b>1</b></div>`;
     return html;
 }
 
@@ -15130,6 +15149,11 @@ if ((p.goles_l && p.goles_l.length) || (p.goles_v && p.goles_v.length)) {
         </tr>`;
     });
     html += `</tbody></table>`;
+    if (modo === 'principal') {
+        html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>33</b> tras finalizar la fecha <b>2</b></div>`;
+    } else if (modo === 'reserva') {
+        html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>33</b> tras finalizar la fecha <b>2</b></div>`;
+    }
     return html;
 }
 
@@ -15426,7 +15450,7 @@ function generarH2H(eq1, eq2, cls1, cls2, catKey) {
                 if ((p.l === eq1 && p.v === eq2) || (p.l === eq2 && p.v === eq1)) {
                     fixturePartidos.push({
                         fecha: p.dia || '',
-                        torneo: cat === 'oficial' ? 'Torneo Oficial' : cat === 'promocional' ? 'Torneo Promocional' : cat === 'femenino' ? '1° Femenino' : '2° Femenino',
+                        torneo: cat === 'oficial' ? 'Torneo Oficial' : cat === 'promocional' ? 'Torneo Promocional' : cat === 'femenino' ? '1° Femenino' : cat === 'segundafemenino' ? '2° Femenino' : 'Federal A',
                         l: p.l, v: p.v, gl: p.gl, gv: p.gv,
                         goles_l: p.goles_l || [], goles_v: p.goles_v || []
                     });
@@ -16336,5 +16360,17 @@ function generarTabla(tor, cat) {
         }
         html += `<tr class="${cl}"><td class="c-pos">${i+1}</td><td class="c-equipo">${e.nombre}</td><td class="c-stat">${e.pj}</td><td class="c-stat">${e.pg}</td><td class="c-stat">${e.pe}</td><td class="c-stat">${e.pp}</td><td class="c-stat">${e.gf}</td><td class="c-stat">${e.gc}</td><td class="c-stat">${e.gf-e.gc}</td><td class="c-stat"><b>${e.pts}</b></td></tr>`;
     });
+    if (tor === 'apertura' && cat === 'oficial') {
+        return html + "</tbody></table><div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>30</b> tras finalizar la fecha <b>4</b></div>";
+    }
+    if (tor === 'apertura' && cat === 'promocional') {
+        return html + "</tbody></table><div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>30</b> tras finalizar la fecha <b>4</b></div>";
+    }
+    if (tor === 'apertura' && cat === 'femenino') {
+        return html + "</tbody></table><div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>33</b> tras finalizar la fecha <b>3</b></div>";
+    }
+    if (tor === 'torneo2026' && cat === 'segundafemenino') {
+        return html + "</tbody></table><div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>72</b> tras finalizar la fecha <b>3</b></div>";
+    }
     return html + "</tbody></table>";
 }
