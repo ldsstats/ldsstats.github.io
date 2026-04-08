@@ -86,8 +86,8 @@ const idaPromo = [
 const idaFederal = [
     { fecha: 1, libre: "Círculo Dep.", partidos: [{l:"Kimberley", v:"Villa Mitre", gl:1, gv:0, dia:"Dom 22/03", hora:"16:00", goles_l:["Rodrigo Ríos"], goles_v:[]}, {l:"Sol de Mayo", v:"Germinal", gl:1, gv:1, dia:"Dom 22/03", hora:"15:00", goles_l:["Héctor Morales"], goles_v:["Nicolás Macaroff"]}, {l:"Guillermo Brown", v:"Santamarina", gl:2, gv:2, dia:"Dom 22/03", hora:"16:00", goles_l:["Emanuel Moreno","Ignacio Zapulla"], goles_v:["Nicolás Franco","Luciano Domínguez"]}, {l:"Olimpo", v:"Alvarado", gl:2, gv:0, dia:"Dom 22/03", hora:"16:00", goles_l:["Martín Ferreyra","Diego Ramírez"], goles_v:[]}] },
     { fecha: 2, libre: "Olimpo", partidos: [{l:"Santamarina", v:"Sol de Mayo", gl:0, gv:2, dia:"Sáb 28/03", hora:"19:00", goles_l:["Ignacio Lucero (e/c)"], goles_v:["Santiago Jara"]}, {l:"Alvarado", v:"Guillermo Brown", gl:2, gv:0, dia:"Dom 29/03", hora:"15:30", goles_l:["Facundo Centurión","Tomás Fernández"], goles_v:[]}, {l:"Germinal", v:"Kimberley", gl:0, gv:0, dia:"Dom 29/03", hora:"15:00"}, {l:"Villa Mitre", v:"Círculo Dep.", gl:2, gv:0, dia:"Dom 29/03", hora:"16:00", goles_l:["Pablo Mujica","Marcos Escobar"], goles_v:[]}] },
-    { fecha: 3, libre: "Villa Mitre", partidos: [{l:"Sol de Mayo", v:"Alvarado", gl:0, gv:0, dia:"Vie 03/04", hora:"15:30"}, {l:"Círculo Dep.", v:"Germinal", gl:2, gv:1, dia:"Sáb 04/04", hora:"15:30", goles_l:["Quimey Marín","Imanol Iriberri"], goles_v:["Nicolás Ríos"]}, {l:"Kimberley", v:"Santamarina", gl:0, gv:0, dia:"Dom 05/04", hora:"15:30"}, {l:"Guillermo Brown", v:"Olimpo", gl:0, gv:2, dia:"Dom 05/04", hora:"15:30", goles_l:[], goles_v:["","Enzo Coacci"]}] },
-    { fecha: 4, libre: "Guillermo Brown", partidos: [{l:"Olimpo", v:"Sol de Mayo", gl:null, gv:null}, {l:"Alvarado", v:"Kimberley", gl:null, gv:null}, {l:"Santamarina", v:"Círculo Dep.", gl:null, gv:null}, {l:"Germinal", v:"Villa Mitre", gl:null, gv:null}] },
+    { fecha: 3, libre: "Villa Mitre", partidos: [{l:"Sol de Mayo", v:"Alvarado", gl:0, gv:0, dia:"Vie 03/04", hora:"15:30"}, {l:"Círculo Dep.", v:"Germinal", gl:2, gv:1, dia:"Sáb 04/04", hora:"15:30", goles_l:["Quimey Marín","Imanol Iriberri"], goles_v:["Nicolás Ríos"]}, {l:"Kimberley", v:"Santamarina", gl:0, gv:0, dia:"Dom 05/04", hora:"15:30"}, {l:"Guillermo Brown", v:"Olimpo", gl:0, gv:2, dia:"Dom 05/04", hora:"15:30", goles_l:[], goles_v:["Brian Guille","Enzo Coacci"]}] },
+    { fecha: 4, libre: "Guillermo Brown", partidos: [{l:"Alvarado", v:"Kimberley", gl:null, gv:null, dia:"Sáb 11/04", hora:"15:30"}, {l:"Santamarina", v:"Círculo Dep.", gl:null, gv:null, dia:"Sáb 11/04", hora:"18:30"}, {l:"Germinal", v:"Villa Mitre", gl:null, gv:null, dia:"Dom 12/04", hora:"15:00"}, {l:"Olimpo", v:"Sol de Mayo", gl:null, gv:null, dia:"Dom 12/04", hora:"15:30"}] },
     { fecha: 5, libre: "Germinal", partidos: [{l:"Villa Mitre", v:"Santamarina", gl:null, gv:null}, {l:"Círculo Dep.", v:"Alvarado", gl:null, gv:null}, {l:"Kimberley", v:"Olimpo", gl:null, gv:null}, {l:"Sol de Mayo", v:"Guillermo Brown", gl:null, gv:null}] },
     { fecha: 6, libre: "Sol de Mayo", partidos: [{l:"Guillermo Brown", v:"Kimberley", gl:null, gv:null}, {l:"Olimpo", v:"Círculo Dep.", gl:null, gv:null}, {l:"Alvarado", v:"Villa Mitre", gl:null, gv:null}, {l:"Santamarina", v:"Germinal", gl:null, gv:null}] },
     { fecha: 7, libre: "Santamarina", partidos: [{l:"Germinal", v:"Alvarado", gl:null, gv:null}, {l:"Villa Mitre", v:"Olimpo", gl:null, gv:null}, {l:"Círculo Dep.", v:"Guillermo Brown", gl:null, gv:null}, {l:"Kimberley", v:"Sol de Mayo", gl:null, gv:null}] },
@@ -804,7 +804,7 @@ BD_FIXTURES.oficial.reserva.push(
 BD_FIXTURES.promocional.reserva.push(
     { fecha: 1, partidos: [
         {l:"Dublin",      v:"Rosario PB",          gl:0,   gv:1},
-        {l:"Sansinena",   v:"Pacífico (C)", gl:null, gv:null},
+        {l:"Sansinena",   v:"Pacífico (C)", gl:1, gv:0},
         {l:"Pacífico BB", v:"Olimpo",              gl:1,    gv:3},
         {l:"Tiro Federal",v:"Comercial",           gl:null, gv:null}
     ]},
@@ -821,7 +821,7 @@ BD_FIXTURES.promocional.reserva.push(
         {l:"Sansinena",v:"Dublin",           gl:1, gv:4}
     ]},
     { fecha: 4, partidos: [
-        {l:"Comercial",      v:"Dublin",          gl:null,   gv:null},
+        {l:"Comercial",      v:"Dublin",          gl:1,   gv:1},
         {l:"Olimpo",   v:"Rosario PB", gl:1,   gv:0},
         {l:"Tiro Federal", v:"Pacífico (C)",              gl:6,   gv:3},
         {l:"Pacífico BB",v:"Sansinena",           gl:2,   gv:0}
@@ -954,7 +954,11 @@ function generarHome() {
             ]},
             { nombre: "PROMOCIONAL", cat: "promocional", partidos: [
                 {l:"Rosario PB", v:"Comercial", hora:"15:30"}
-            ]}
+            ]},
+            { nombre: "FEDERAL A", cat: "federala", partidos: [
+                {l:"Germinal", v:"Villa Mitre", hora:"15:00"},
+                {l:"Olimpo", v:"Sol de Mayo", hora:"15:30"}
+            ]},
         ]},
     ];
 
@@ -14761,12 +14765,12 @@ function generarReserva(cat) {
                        {n:"Huracán",       cl:"huracan",      pj:4, pg:0, pe:1, pp:3, gf:3, gc:16, pts:1}],
         'promocional':[{n:"Tiro Federal",        cl:"tirofederal",      pj:3, pg:3, pe:0, pp:0, gf:10, gc:5, pts:9},
                        {n:"Pacífico BB",         cl:"pacificobb",       pj:4, pg:2, pe:1, pp:1, gf:6, gc:2, pts:7},
-                       {n:"Comercial",           cl:"comercial",        pj:2, pg:2, pe:0, pp:0, gf:3, gc:0, pts:6},
+                       {n:"Comercial",           cl:"comercial",        pj:3, pg:2, pe:1, pp:0, gf:4, gc:1, pts:7},
                        {n:"Olimpo",              cl:"olimpo",           pj:4, pg:2, pe:0, pp:2, gf:5, gc:4, pts:6},
                        {n:"Rosario PB",          cl:"rosariopb",        pj:4, pg:1, pe:1, pp:2, gf:3, gc:4, pts:4},
-                       {n:"Pacífico (C)", cl:"pacificocabildo",  pj:3, pg:1, pe:0, pp:2, gf:4, gc:9, pts:3},
-                       {n:"Dublin",              cl:"dublin",           pj:3, pg:1, pe:0, pp:2, gf:4, gc:3, pts:3},
-                       {n:"Sansinena",           cl:"sansinena",        pj:3, pg:0, pe:0, pp:3, gf:1, gc:8, pts:0}],
+                       {n:"Dublin",              cl:"dublin",           pj:4, pg:1, pe:1, pp:2, gf:5, gc:4, pts:4},
+                       {n:"Sansinena",           cl:"sansinena",        pj:4, pg:1, pe:0, pp:3, gf:2, gc:8, pts:3},
+                       {n:"Pacífico (C)", cl:"pacificocabildo",  pj:4, pg:1, pe:0, pp:3, gf:4, gc:10, pts:3},],
         'segundafemenino': [
             {n:"Liniers",             cl:"liniers",         pj:3, pg:3, pe:0, pp:0, gf:13, gc:3, pts:9},
             {n:"San Francisco",       cl:"sanfrancisco",    pj:3, pg:2, pe:1, pp:0, gf:7, gc:1, pts:7},
