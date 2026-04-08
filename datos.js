@@ -1223,7 +1223,7 @@ const BD_FORMATIVAS_POS = {
             {n:"Olimpo",        cl:"olimpo",       pj:16,pg:11,pe:1,pp:4,pts:34},
             {n:"Tiro Federal",  cl:"tirofederal",  pj:18,pg:7,pe:4,pp:7,pts:25},
             {n:"Liniers B",     cl:"liniersb",     pj:18,pg:6,pe:2,pp:10,pts:20},
-            {n:"Bella Vista",   cl:"bellavista",   pj:18,pg:5,pe:4,pp:9,pts:19},
+            {n:"Bella Vista",   cl:"bellavista",   pj:18,pg:5,pe:3,pp:10,pts:18},
             {n:"La Armonía",    cl:"laarmonia",    pj:16,pg:2,pe:1,pp:13,pts:7},
             {n:"Sporting",      cl:"sporting",     pj:16,pg:2,pe:0,pp:14,pts:6},
             {n:"San Francisco", cl:"sanfrancisco", pj:18,pg:1,pe:2,pp:15,pts:5}
@@ -1277,7 +1277,7 @@ const BD_FORMATIVAS_POS = {
             {n:"Olimpo",        cl:"olimpo",       pj:16,pg:11,pe:1,pp:4,pts:34},
             {n:"Tiro Federal",  cl:"tirofederal",  pj:18,pg:7,pe:4,pp:7,pts:25},
             {n:"Liniers B",     cl:"liniersb",     pj:18,pg:6,pe:2,pp:10,pts:20},
-            {n:"Bella Vista",   cl:"bellavista",   pj:18,pg:5,pe:4,pp:9,pts:19},
+            {n:"Bella Vista",   cl:"bellavista",   pj:18,pg:5,pe:3,pp:10,pts:18},
             {n:"La Armonía",    cl:"laarmonia",    pj:16,pg:2,pe:1,pp:13,pts:7},
             {n:"Sporting",      cl:"sporting",     pj:16,pg:2,pe:0,pp:14,pts:6},
             {n:"San Francisco", cl:"sanfrancisco", pj:18,pg:1,pe:2,pp:15,pts:5}
@@ -1325,9 +1325,9 @@ const BD_FORMATIVAS_POS = {
     "juveniles-b": {
         act: "Lun 06/04 — 08:00 hs — Extraoficial",
         general: [
-            {n:"Huracán",             cl:"huracan",       pj:20, pg:17,pe:0,pp:3,pts:51},
-            {n:"Tiro Federal B",      cl:"tirofederalb",  pj:21, pg:9,pe:5,pp:7,pts:32},
+            {n:"Huracán",             cl:"huracan",       pj:19, pg:16,pe:0,pp:3,pts:48},
             {n:"Libertad",            cl:"libertad",      pj:14, pg:9,pe:4,pp:1,pts:31},
+            {n:"Tiro Federal B",      cl:"tirofederalb",  pj:21, pg:9,pe:4,pp:8,pts:31},
             {n:"Olimpo B",            cl:"olimpob",       pj:13, pg:10,pe:1,pp:2,pts:31},
             {n:"Bella Vista B",       cl:"bellavistab",   pj:19, pg:8,pe:5,pp:6,pts:29},
             {n:"Comercial",           cl:"comercial",     pj:19, pg:8,pe:3,pp:8,pts:27},
@@ -1391,9 +1391,9 @@ const BD_FORMATIVAS_POS = {
     "menores-b": {
         act: "Lun 06/04 — 08:00 hs — Extraoficial",
         general: [
-            {n:"Huracán",             cl:"huracan",       pj:20, pg:17,pe:0,pp:3,pts:51},
-            {n:"Tiro Federal B",      cl:"tirofederalb",  pj:21, pg:9,pe:5,pp:7,pts:32},
+            {n:"Huracán",             cl:"huracan",       pj:19, pg:16,pe:0,pp:3,pts:48},
             {n:"Libertad",            cl:"libertad",      pj:14, pg:9,pe:4,pp:1,pts:31},
+            {n:"Tiro Federal B",      cl:"tirofederalb",  pj:21, pg:9,pe:4,pp:8,pts:31},
             {n:"Olimpo B",            cl:"olimpob",       pj:13, pg:10,pe:1,pp:2,pts:31},
             {n:"Bella Vista B",       cl:"bellavistab",   pj:19, pg:8,pe:5,pp:6,pts:29},
             {n:"Comercial",           cl:"comercial",     pj:19, pg:8,pe:3,pp:8,pts:27},
