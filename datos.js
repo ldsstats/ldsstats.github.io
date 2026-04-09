@@ -507,7 +507,20 @@ const BD_FIXTURES_FUTSAL = [
         },
     ]},
     { fecha: 3, partidos: [
-        {l:"Dep. Futsal",     v:"San Francisco",   gl:null, gv:null, dia:"Miér 08/04", hora:"22:00"},
+{
+            l:"Dep. Futsal",
+            v:"San Francisco",
+            gl:5,
+            gv:2,
+            dia:"Miér 09/04",
+            hora:"22:00",
+            goles_l:[
+            ],
+            goles_v:[
+                "Federico Schneider",
+                "Daniel Ojeda",
+            ],
+        },
 
 {
             l:"Liniers",
@@ -947,7 +960,7 @@ function generarHome() {
     const agenda = [
         { id: "2026-04-08", label: "MIÉR 08/04", torneos: [
             { nombre: "FUTSAL", cat: "futsal", partidos: [
-                {l:"Dep. Futsal", v:"San Francisco", hora:"22:00", nota:"En La Curtiembre"},
+                {l:"Dep. Futsal", v:"San Francisco", hora:"22:00", nota:"En La Curtiembre", gl:5, gv:2},
                 {l:"Liniers", v:"Comercial", hora:"22:00", nota:"En Don Bosco", gl:5, gv:5}
             ]},
         ]},
@@ -15201,9 +15214,9 @@ const BD_GOLEADORES_FUTSAL = [
     ]},
     { club: "Villa Mitre",     clase: "villamitre",    act: null,       goleadores: [] },
     { club: "Tiro Federal",    clase: "tirofederal",   act: null,       goleadores: [] },
-    { club: "San Francisco",   clase: "sanfrancisco",  act: "fecha 2",  goleadores: [
-        { nombre: "Daniel Ojeda",        goles: 4 },
-        { nombre: "Federico Schneider",  goles: 3 },
+    { club: "San Francisco",   clase: "sanfrancisco",  act: "fecha 3",  goleadores: [
+        { nombre: "Daniel Ojeda",        goles: 5 },
+        { nombre: "Federico Schneider",  goles: 4 },
         { nombre: "Jeremías Jerez",      goles: 1 },
         { nombre: "Fernando González",   goles: 1 },
         { nombre: "Thiago González",     goles: 1 },
