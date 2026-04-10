@@ -1031,7 +1031,7 @@ function generarHome() {
             { nombre: "FEMENINO", cat: "femenino", partidos: [
                 {l:"Bella Vista", v:"La Armonía", hora:"16:00"}
             ]},
-            { nombre: "FEMENINO", cat: "segundafemenino", partidos: [
+            { nombre: "2° FEMENINO", cat: "segundafemenino", partidos: [
                 {l:"Petroquímicos", v:"San Francisco", hora:"16:00"}
             ]},
             { nombre: "SUB 15 FEMENINO", cat: "sub15fem", partidos: [
@@ -1056,7 +1056,7 @@ function generarHome() {
                 {l:"Tiro Federal", v:"Villa Mitre", hora:"16:00"},
                 {l:"Empleados de Comercio", v:"Sporting", hora:"16:00"}
             ]},
-            { nombre: "FEMENINO", cat: "segundafemenino", partidos: [
+            { nombre: "2° FEMENINO", cat: "segundafemenino", partidos: [
                 {l:"Estrella de Oro", v:"Sansinena", hora:"16:00", nota:"En cancha auxiliar de Comercial"},
                 {l:"Pacífico (C)", v:"Liniers", hora:"16:00"},
                 {l:"Huracán", v:"Rosario PB", hora:"16:00"}
