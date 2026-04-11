@@ -230,8 +230,8 @@ const BD_FIXTURES_FUTSAL_RESERVA = [
         {l:"Huracán",         v:"Los 3 Chiflados", gl:0, gv:5},
         {l:"Dublin",          v:"La Esperanza",    gl:1, gv:2},
         {l:"Catamarca",       v:"La Estación",     gl:null, gv:null},
-        {l:"Petroquímicos",   v:"Villa Mitre",     gl:null, gv:null},
-        {l:"Pacífico BB",     v:"Tiro Federal",    gl:null, gv:null}
+        {l:"Petroquímicos",   v:"Villa Mitre",     gl:4, gv:4},
+        {l:"Pacífico BB",     v:"Tiro Federal",    gl:3, gv:4}
     ]},
     { fecha: 4, partidos: [
         {l:"La Esperanza",    v:"Liniers",         gl:null, gv:null},
@@ -583,9 +583,9 @@ const BD_FIXTURES_FUTSAL = [
                 "Benjamín Martínez"
             ]
         },
-        {l:"Catamarca",       v:"La Estación",     gl:null, gv:null, dia:"Jue 09/04", hora:"22:00"},
-        {l:"Petroquímicos",   v:"Villa Mitre",     gl:null, gv:null, dia:"Vie 10/04", hora:"22:00"},
-        {l:"Pacífico BB",     v:"Tiro Federal",    gl:null, gv:null, dia:"Vie 10/04", hora:"22:00"}
+        {l:"Catamarca",       v:"La Estación",     gl:0, gv:7, dia:"Jue 09/04", hora:"22:00"},
+        {l:"Petroquímicos",   v:"Villa Mitre",     gl:3, gv:6, dia:"Vie 10/04", hora:"22:00"},
+        {l:"Pacífico BB",     v:"Tiro Federal",    gl:2, gv:5, dia:"Vie 10/04", hora:"22:00"}
     ]},
     { fecha: 4, partidos: [
         {l:"La Esperanza",    v:"Liniers",         gl:null, gv:null},
@@ -1013,13 +1013,13 @@ function generarHome() {
             { nombre: "FUTSAL", cat: "futsal", partidos: [
                 {l:"Huracán", v:"Los 3 Chiflados", hora:"22:00", nota:"En La Estación", gl:2, gv:10},
                 {l:"Dublin", v:"La Esperanza", hora:"22:00", nota:"En Don Bosco", gl:0, gv:2},
-                {l:"Catamarca", v:"La Estación", hora:"22:00", nota:"En Petroquímicos"}
+                {l:"Catamarca", v:"La Estación", hora:"22:00", nota:"En Petroquímicos", gl:0, gv:7}
             ]}
         ]},
         { id: "2026-04-10", label: "VIE 10/04", torneos: [
             { nombre: "FUTSAL", cat: "futsal", partidos: [
-                {l:"Petroquímicos", v:"Villa Mitre", hora:"16:00"},
-                {l:"Pacífico BB", v:"Tiro Federal", hora:"22:00", nota:"En Don Bosco"}
+                {l:"Petroquímicos", v:"Villa Mitre", hora:"16:00", gl:6, gv:3},
+                {l:"Pacífico BB", v:"Tiro Federal", hora:"22:00", nota:"En Don Bosco", gl:2, gv:5}
             ]}
         ]},
         { id: "2026-04-11", label: "SÁB 11/04", torneos: [
@@ -14970,8 +14970,8 @@ const BD_POS_SUB = {
 const BD_GOL_SUB = {
     sub13: [
         {jugador:"Santiago Martínez", equipo:"Villa Mitre", clase:"villamitre", n:2},
+        {jugador:"Ringo Melcon",      equipo:"Villa Mitre", clase:"villamitre", n:2},
         {jugador:"Erick Schwaner",    equipo:"Villa Mitre", clase:"villamitre", n:1},
-        {jugador:"Ringo Melcon",      equipo:"Villa Mitre", clase:"villamitre", n:1},
         {jugador:"Santino Canales",   equipo:"Olimpo",      clase:"olimpo",     n:1},
         {jugador:"Leon Cáceres",      equipo:"Olimpo",      clase:"olimpo",     n:1},
         {jugador:"Juan Ignacio Aguado",      equipo:"Olimpo",      clase:"olimpo",     n:1}
@@ -15109,39 +15109,38 @@ function generarSub() {
 
 const BD_POS_FUTSAL = {
     principal: [
+        {n:"La Estación",     cl:"laestacion",    pj:3,pg:3,pe:0,pp:0,gf:21, gc:6, pts:9},
+        {n:"Villa Mitre",     cl:"villamitre",    pj:3,pg:3,pe:0,pp:0,gf:17, gc:6, pts:9},
         {n:"La Esperanza",    cl:"laesperanza",   pj:3,pg:3,pe:0,pp:0,gf:15, gc:5, pts:9},
-        {n:"Petroquímicos",   cl:"petroquimicos", pj:2,pg:2,pe:0,pp:0,gf:18,gc:7, pts:6},
-        {n:"La Estación",     cl:"laestacion",    pj:2,pg:2,pe:0,pp:0,gf:14, gc:6, pts:6},
-        {n:"Villa Mitre",     cl:"villamitre",    pj:2,pg:2,pe:0,pp:0,gf:11, gc:3, pts:6},
+        {n:"Petroquímicos",   cl:"petroquimicos", pj:3,pg:2,pe:0,pp:1,gf:21,gc:13, pts:6},
         {n:"Comercial",       cl:"comercial",     pj:3,pg:1,pe:2,pp:0,gf:14, gc:9, pts:5},
-        {n:"San Francisco",   cl:"sanfrancisco",  pj:3,pg:1,pe:1,pp:1,gf:11, gc:8, pts:4},
         {n:"Los 3 Chiflados", cl:"los3chiflados", pj:3,pg:1,pe:1,pp:1,gf:15, gc:11, pts:4},
+        {n:"San Francisco",   cl:"sanfrancisco",  pj:3,pg:1,pe:1,pp:1,gf:11, gc:8, pts:4},
+        {n:"Liniers",         cl:"liniers",       pj:3,pg:0,pe:3,pp:0,gf:10, gc:10, pts:3},
         {n:"Dublin",          cl:"dublin",        pj:3,pg:1,pe:0,pp:2,gf:7, gc:9, pts:3},
         {n:"Dep. Futsal",     cl:"depfutsal",     pj:3,pg:1,pe:0,pp:2,gf:6, gc:12, pts:3},
-        {n:"Liniers",         cl:"liniers",       pj:3,pg:0,pe:3,pp:0,gf:10, gc:10, pts:3},
-        {n:"Catamarca",       cl:"catamarca",     pj:2,pg:0,pe:1,pp:1,gf:7, gc:11, pts:1},
-        {n:"Pacífico BB",     cl:"pacificobb",    pj:2,pg:0,pe:0,pp:2,gf:7, gc:13, pts:0},
-        {n:"Tiro Federal",    cl:"tirofederal",   pj:2,pg:0,pe:0,pp:2,gf:2, gc:13, pts:0},
+        {n:"Tiro Federal",    cl:"tirofederal",   pj:3,pg:1,pe:0,pp:2,gf:7, gc:15, pts:3},
+        {n:"Catamarca",       cl:"catamarca",     pj:3,pg:0,pe:1,pp:2,gf:7, gc:18, pts:1},
+        {n:"Pacífico BB",     cl:"pacificobb",    pj:3,pg:0,pe:0,pp:3,gf:9, gc:18, pts:0},
         {n:"Huracán",         cl:"huracan",       pj:3,pg:0,pe:0,pp:3,gf:11, gc:29,pts:0}
     ],
     reserva: [
         {n:"Los 3 Chiflados", cl:"los3chiflados", pj:3,pg:3,pe:0,pp:0,gf:15, gc:1, pts:9},
+        {n:"Petroquímicos",   cl:"petroquimicos", pj:3,pg:2,pe:1,pp:0,gf:20, gc:8, pts:7},
+        {n:"Villa Mitre",     cl:"villamitre",    pj:3,pg:2,pe:1,pp:0,gf:14, gc:7, pts:7},
         {n:"La Esperanza",    cl:"laesperanza",   pj:3,pg:2,pe:1,pp:0,gf:12, gc:8, pts:7},
-        {n:"Petroquímicos",   cl:"petroquimicos", pj:2,pg:2,pe:0,pp:0,gf:16, gc:4, pts:6},
-        {n:"Villa Mitre",     cl:"villamitre",    pj:2,pg:2,pe:0,pp:0,gf:10, gc:3, pts:6},
         {n:"San Francisco",   cl:"sanfrancisco",  pj:3,pg:2,pe:0,pp:1,gf:7, gc:8, pts:6},
-        {n:"Pacífico BB",     cl:"pacificobb",    pj:2,pg:1,pe:1,pp:0,gf:10, gc:8, pts:4},
         {n:"Liniers",         cl:"liniers",       pj:3,pg:1,pe:1,pp:1,gf:7, gc:5, pts:4},
+        {n:"Pacífico BB",     cl:"pacificobb",    pj:3,pg:1,pe:1,pp:1,gf:13, gc:12, pts:4},
+        {n:"Tiro Federal",    cl:"tirofederal",   pj:3,pg:1,pe:1,pp:1,gf:6, gc:8, pts:4},
         {n:"Catamarca",       cl:"catamarca",     pj:2,pg:1,pe:0,pp:1,gf:7, gc:9, pts:3},
         {n:"Dublin",          cl:"dublin",        pj:3,pg:1,pe:0,pp:2,gf:6, gc:13, pts:3},
         {n:"La Estación",     cl:"laestacion",    pj:2,pg:0,pe:1,pp:1,gf:3, gc:5, pts:1},
-        {n:"Tiro Federal",    cl:"tirofederal",   pj:2,pg:0,pe:1,pp:1,gf:2, gc:5, pts:1},
         {n:"Comercial",       cl:"comercial",     pj:3,pg:0,pe:1,pp:2,gf:10, gc:12, pts:1},
         {n:"Dep. Futsal",     cl:"depfutsal",     pj:3,pg:0,pe:0,pp:3,gf:9, gc:18, pts:0},
         {n:"Huracán",         cl:"huracan",       pj:3,pg:0,pe:0,pp:3,gf:0, gc:15, pts:0}
     ]
 };
-
 function generarSub15Fem() {
     const equipos = BD_EQUIPOS.sub15fem;
     const n = estado.fecha || 1;
