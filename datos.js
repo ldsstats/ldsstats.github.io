@@ -919,8 +919,8 @@ BD_FIXTURES.oficial.reserva.push(
     ]},
     { fecha: 5, partidos: [
         {l:"Bella Vista",   v:"Villa Mitre",   gl:2, gv:1},
-        {l:"Libertad",   v:"Sporting",   gl:null, gv:null},
-        {l:"San Francisco",   v:"La Armonía",   gl:null, gv:null},
+        {l:"Libertad",   v:"Sporting",   gl:0, gv:1},
+        {l:"San Francisco",   v:"La Armonía",   gl:0, gv:2},
         {l:"Huracán",   v:"Liniers",   gl:null, gv:null}
     ]},
 );
@@ -14918,13 +14918,13 @@ function generarReserva(cat) {
 
     // Tabla de posiciones — solo puntos, calculados desde fixtures
     const BD_RESERVA_POS = {
-        'oficial':    [{n:"Sporting",      cl:"sporting",     pj:4, pg:3, pe:1, pp:0, gf:11, gc:3, pts:10},
+        'oficial':    [{n:"Sporting",      cl:"sporting",     pj:5, pg:4, pe:1, pp:0, gf:11, gc:3, pts:13},
                        {n:"Liniers",       cl:"liniers",      pj:4, pg:2, pe:2, pp:0, gf:7, gc:5, pts:8},
-                       {n:"Villa Mitre",   cl:"villamitre",   pj:4, pg:2, pe:0, pp:2, gf:9, gc:5, pts:6},
-                       {n:"Libertad",      cl:"libertad",     pj:4, pg:1, pe:3, pp:0, gf:7, gc:4, pts:6},
+                       {n:"La Armonía",    cl:"laarmonia",    pj:5, pg:2, pe:1, pp:2, gf:10, gc:7, pts:7},
+                       {n:"Villa Mitre",   cl:"villamitre",   pj:5, pg:2, pe:0, pp:3, gf:10, gc:7, pts:6},
+                       {n:"Libertad",      cl:"libertad",     pj:5, pg:1, pe:3, pp:1, gf:7, gc:5, pts:6},
                        {n:"Bella Vista",   cl:"bellavista",   pj:4, pg:1, pe:2, pp:1, gf:9, gc:9, pts:5},
-                       {n:"La Armonía",    cl:"laarmonia",    pj:4, pg:1, pe:1, pp:2, gf:8, gc:6, pts:4},
-                       {n:"San Francisco", cl:"sanfrancisco", pj:3, pg:1, pe:0, pp:2, gf:4, gc:9, pts:4},
+                       {n:"San Francisco", cl:"sanfrancisco", pj:4, pg:1, pe:0, pp:3, gf:5, gc:10, pts:3},
                        {n:"Huracán",       cl:"huracan",      pj:4, pg:0, pe:1, pp:3, gf:3, gc:16, pts:1}],
         'promocional':[{n:"Tiro Federal",        cl:"tirofederal",      pj:3, pg:3, pe:0, pp:0, gf:10, gc:5, pts:9},
                        {n:"Pacífico BB",         cl:"pacificobb",       pj:4, pg:2, pe:1, pp:1, gf:6, gc:2, pts:7},
