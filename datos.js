@@ -917,6 +917,12 @@ BD_FIXTURES.oficial.reserva.push(
         {l:"Liniers",   v:"Libertad",   gl:0, gv:0},
         {l:"Sporting",   v:"Bella Vista",   gl:3, gv:2}
     ]},
+    { fecha: 5, partidos: [
+        {l:"Bella Vista",   v:"Villa Mitre",   gl:2, gv:1},
+        {l:"Libertad",   v:"Sporting",   gl:null, gv:null},
+        {l:"San Francisco",   v:"La Armonía",   gl:null, gv:null},
+        {l:"Huracán",   v:"Liniers",   gl:null, gv:null}
+    ]},
 );
 
 // Reserva Promocional
@@ -14916,9 +14922,9 @@ function generarReserva(cat) {
                        {n:"Liniers",       cl:"liniers",      pj:4, pg:2, pe:2, pp:0, gf:7, gc:5, pts:8},
                        {n:"Villa Mitre",   cl:"villamitre",   pj:4, pg:2, pe:0, pp:2, gf:9, gc:5, pts:6},
                        {n:"Libertad",      cl:"libertad",     pj:4, pg:1, pe:3, pp:0, gf:7, gc:4, pts:6},
+                       {n:"Bella Vista",   cl:"bellavista",   pj:4, pg:1, pe:2, pp:1, gf:9, gc:9, pts:5},
                        {n:"La Armonía",    cl:"laarmonia",    pj:4, pg:1, pe:1, pp:2, gf:8, gc:6, pts:4},
                        {n:"San Francisco", cl:"sanfrancisco", pj:3, pg:1, pe:0, pp:2, gf:4, gc:9, pts:4},
-                       {n:"Bella Vista",   cl:"bellavista",   pj:3, pg:0, pe:2, pp:1, gf:7, gc:8, pts:2},
                        {n:"Huracán",       cl:"huracan",      pj:4, pg:0, pe:1, pp:3, gf:3, gc:16, pts:1}],
         'promocional':[{n:"Tiro Federal",        cl:"tirofederal",      pj:3, pg:3, pe:0, pp:0, gf:10, gc:5, pts:9},
                        {n:"Pacífico BB",         cl:"pacificobb",       pj:4, pg:2, pe:1, pp:1, gf:6, gc:2, pts:7},
@@ -15471,6 +15477,138 @@ function toggleFG(id) {
         body.classList.add('open');
         arr.classList.add('open');
     }
+}
+
+const BD_BONAERENSE_SUR = {
+    equipos: [
+        { nombre: "La Esperanza",      clase: "laesperanza" },
+        { nombre: "Los 3 Chiflados",   clase: "los3chiflados" },
+        { nombre: "Banco Provincia",   clase: "bancoprovincia" }
+    ],
+    fixture: [
+        { fecha: 1, libre: "Banco Provincia", dia: "Vie 01/05", partidos: [
+            { l: "La Esperanza", v: "Los 3 Chiflados", gl: null, gv: null }
+        ]},
+        { fecha: 2, libre: "Los 3 Chiflados", dia: "Vie 08/05", partidos: [
+            { l: "Banco Provincia", v: "La Esperanza", gl: null, gv: null }
+        ]},
+        { fecha: 3, libre: "La Esperanza", dia: "Vie 15/05", partidos: [
+            { l: "Los 3 Chiflados", v: "Banco Provincia", gl: null, gv: null }
+        ]},
+        { fecha: 4, libre: "Banco Provincia", dia: "Vie 22/05", partidos: [
+            { l: "Los 3 Chiflados", v: "La Esperanza", gl: null, gv: null }
+        ]},
+        { fecha: 5, libre: "Los 3 Chiflados", dia: "Vie 29/05", partidos: [
+            { l: "La Esperanza", v: "Banco Provincia", gl: null, gv: null }
+        ]},
+        { fecha: 6, libre: "La Esperanza", dia: "Vie 05/06", partidos: [
+            { l: "Banco Provincia", v: "Los 3 Chiflados", gl: null, gv: null }
+        ]}
+    ],
+    posicionesSur: [
+        { n: "La Esperanza",    cl: "laesperanza",    pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
+        { n: "Los 3 Chiflados", cl: "los3chiflados",  pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
+        { n: "Banco Provincia", cl: "bancoprovincia",  pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 }
+    ],
+    posicionesNorte: [
+        { n: "Eureka Pinamar",    cl: "eurekapinamar",    pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
+        { n: "Torino",            cl: "torino",           pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
+        { n: "CAJU San Bernardo", cl: "cajusanbernardo",  pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
+        { n: "Def. Villa Clelia", cl: "defvillaclelia",   pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 }
+    ],
+    goleadores: []
+};
+
+function generarFutsalBonaerense() {
+    const n = estado.fechaBonaerense || 1;
+    const f = BD_BONAERENSE_SUR.fixture.find(x => x.fecha === n) || { partidos: [], libre: null };
+
+    let html = `<div class="header-t">TORNEO BONAERENSE — PAMPEANA SUR</div>`;
+    html += `<div style="background:#1a3a1a; color:#adff2f; font-size:10px; text-align:center; padding:6px 10px; border-bottom:1px solid #005522;">
+        🏆 Los <b>2 primeros</b> de cada subregión clasifican a la final por un lugar en el <b>Torneo Nacional del Consejo Federal</b>
+    </div>`;
+
+    // Nav fechas
+    html += `<div class="nav-fechas">`;
+    for (let i = 1; i <= 6; i++) {
+        html += `<div class="btn-f ${i === n ? 'activa' : ''}" onclick="estado.fechaBonaerense=${i};document.getElementById('contenido').innerHTML=generarFutsalBonaerense()">${i}</div>`;
+    }
+    html += `</div>`;
+
+    // Fixture subregión sur
+    html += `<div class="header-t">SUBREGIÓN SUR — FECHA ${n}</div>`;
+    if (f.libre) html += `<div style="padding:5px 10px; font-size:11px; background:#f9f9f9; border-bottom:1px solid #eee;"><b>Fecha libre:</b> ${f.libre}</div>`;
+    html += `<table>`;
+    f.partidos.forEach(p => {
+        const escL = BD_BONAERENSE_SUR.equipos.find(e => e.nombre === p.l)?.clase || '';
+        const escV = BD_BONAERENSE_SUR.equipos.find(e => e.nombre === p.v)?.clase || '';
+        const res = p.gl !== null ? `${p.gl} - ${p.gv}` : `${f.dia || ''}`;
+        const resStyle = p.gl !== null ? '' : 'font-size:10px; color:#888;';
+        html += `<tr>
+            <td class="c-loc"><span style="direction:ltr;display:inline-flex;align-items:center;justify-content:flex-end;width:100%;">${p.l} <div class="escudo ${escL}" style="display:inline-block;vertical-align:middle;margin-left:4px;"></div></span></td>
+            <td class="c-res" style="${resStyle}">${res}</td>
+            <td class="c-vis"><div class="escudo ${escV}" style="display:inline-block;vertical-align:middle;margin-right:4px;"></div> ${p.v}</td>
+        </tr>`;
+    });
+    html += `</table>`;
+
+    // Tabla posiciones Sur
+    html += `<div class="header-t">POSICIONES — SUBREGIÓN SUR</div>`;
+    html += generarTablaPosBonaerense(BD_BONAERENSE_SUR.posicionesSur);
+
+    // Tabla posiciones Norte
+    html += `<div class="header-t">POSICIONES — SUBREGIÓN NORTE</div>`;
+    html += generarTablaPosBonaerense(BD_BONAERENSE_SUR.posicionesNorte);
+
+    // Goleadores
+    html += `<div class="header-t">GOLEADORES</div>`;
+    if (BD_BONAERENSE_SUR.goleadores.length === 0) {
+        html += `<div style="text-align:center; padding:12px; font-size:11px; color:#aaa; font-style:italic;">Sin goles registrados aún</div>`;
+    } else {
+        html += `<table><thead><tr>
+            <th style="width:25px;">#</th>
+            <th style="text-align:left;padding-left:8px;">Jugador</th>
+            <th style="text-align:left;padding-left:8px;">Equipo</th>
+            <th class="c-stat">⚽</th>
+        </tr></thead><tbody>`;
+        let pos = 1, prev = -1;
+        BD_BONAERENSE_SUR.goleadores.forEach((g, i) => {
+            if (g.goles !== prev) { pos = i + 1; prev = g.goles; }
+            const cl = BD_BONAERENSE_SUR.equipos.find(e => e.nombre === g.equipo)?.clase || '';
+            html += `<tr>
+                <td class="c-pos">${pos}</td>
+                <td style="font-size:11px; padding-left:8px;">${g.nombre}</td>
+                <td style="font-size:11px; padding-left:8px;"><div class="escudo ${cl}" style="display:inline-block;vertical-align:middle;margin-right:4px;"></div>${g.equipo}</td>
+                <td class="c-stat"><b>${g.goles}</b></td>
+            </tr>`;
+        });
+        html += `</tbody></table>`;
+    }
+
+    return html;
+}
+
+function generarTablaPosBonaerense(pos) {
+    let html = `<table><thead><tr>
+        <th style="width:25px;">#</th>
+        <th style="text-align:left;padding-left:8px;">Equipo</th>
+        <th class="c-stat">PJ</th><th class="c-stat">PG</th><th class="c-stat">PE</th>
+        <th class="c-stat">PP</th><th class="c-stat">GF</th><th class="c-stat">GC</th>
+        <th class="c-stat">Dif</th><th class="c-stat">Pts</th>
+    </tr></thead><tbody>`;
+    pos.forEach((e, i) => {
+        const dif = e.gf - e.gc;
+        const cl = i === 0 ? 'p-playoff' : '';
+        html += `<tr class="${cl}">
+            <td class="c-pos">${i+1}</td>
+            <td class="c-equipo"><div class="escudo ${e.cl}" style="display:inline-block;vertical-align:middle;margin-right:4px;"></div>${e.n}</td>
+            <td class="c-stat">${e.pj}</td><td class="c-stat">${e.pg}</td><td class="c-stat">${e.pe}</td>
+            <td class="c-stat">${e.pp}</td><td class="c-stat">${e.gf}</td><td class="c-stat">${e.gc}</td>
+            <td class="c-stat">${dif > 0 ? '+'+dif : dif}</td><td class="c-stat"><b>${e.pts}</b></td>
+        </tr>`;
+    });
+    html += `</tbody></table>`;
+    return html;
 }
 
 function generarQuienesSomos() {

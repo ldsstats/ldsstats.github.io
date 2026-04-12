@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>LdS Stats - 2026</title>
-    <link rel="stylesheet" href="style.css?v=1">
+    <link rel="stylesheet" href="style.css?v=77">
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#111111">
     <!-- Google Analytics -->
@@ -32,7 +32,7 @@
     z-index: 999;
     pointer-events: none;
     letter-spacing: 0.3px;
-">🕐 Última actualización: Dom 12/04 — 08:00hs</div>
+">🕐 Última actualización: Dom 12/04 — 11:30hs</div>
 
 <div id="container-principal">
     <div id="logo-header"><img src="au11.png" style="height:80px;" alt="LdS Stats"></div>
@@ -129,6 +129,7 @@
                 <a href="#" onclick="navegar('futsal')">Torneo 2026</a>
                 <a href="#" onclick="navegar('futsalgoleadores')">Goleadores por club</a>
                 <a href="#" onclick="navegar('futsalreserva')">Reserva</a>
+                <a href="#" onclick="navegar('futsalbonaerense')">Torneo Bonaerense Pampeana Sur</a>
             </div>
         </div>
         <div class="bloque">
@@ -145,7 +146,7 @@
             </div>
         </div>
         <div class="bloque">
-            <div class="bloque-titulo con-drop" onclick="toggleMenu(this)">QUIÉNES SOMOS <span class="flecha">▼</span></div>
+            <div class="bloque-titulo con-drop" onclick="toggleMenu(this)">LDS/CONTACTO <span class="flecha">▼</span></div>
             <div class="bloque-links">
                 <a href="#" onclick="navegar('quienessomos')">Quiénes Somos</a>
             </div>
@@ -156,20 +157,20 @@
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-<script src="datos.js?v=1"></script>
+<script src="datos.js?v=77"></script>
 <script>
     let estado = { torneo: 'home', categoria: '', fecha: 1 };
     let estadoAnterior = { torneo: 'home', categoria: '', fecha: 1 };
 
     // Última actualización por sección — modificar según corresponda
     const ULTIMA_ACT = {
-        default:        "Dom 12/04 — 08:00hs",
+        default:        "Dom 12/04 — 11:30hs",
         home:        "Dom 12/04 — 08:00hs",
         apertura_oficial:   "Jue 09/04 — 00:00hs",
         historial:   "Dom 05/04 — 20:20hs",
         goleadores_oficial:   "Dom 05/04 — 20:20hs",
         arqueros_oficial:   "Dom 05/04 — 20:20hs",
-        reserva_oficial:   "Mar 07/04 — 20:45hs",
+        reserva_oficial:   "Dom 12/04 — 11:30hs",
         apertura_promocional:   "Sáb 11/04 — 21:50hs",
         goleadores_promocional:   "Sáb 11/04 — 21:50hs",
         arqueros_promocional:   "Sáb 11/04 — 21:50hs",
@@ -190,7 +191,8 @@
         futsalgoleadores:   "Dom 12/04 — 08:00hs",
         futsalreserva:   "Dom 12/04 — 08:00hs",
         quienessomos:   "Miér 1/04 — 00:00hs",
-        equiposfuera:   "Dom 22/3 — 1:15hs"
+        equiposfuera:   "Dom 22/3 — 1:15hs",
+        futsalbonaerense:   "Dom 12/4 — 11:30hs"
     };
 
     function getUltimaAct() {
@@ -374,56 +376,73 @@
         actualizarVista();
     }
 
+    function cambiarContenido(generarFn) {
+        const cont = document.getElementById('contenido');
+        cont.classList.add('fade-out');
+        setTimeout(() => {
+            cont.innerHTML = generarFn();
+            cont.classList.remove('fade-out');
+        }, 250);
+    }
+
     function actualizarVista() {
         const cont = document.getElementById("contenido");
         actualizarCartel();
-        if (estado.torneo === 'home') {
-            cont.innerHTML = generarHome();
-        } else if (estado.torneo === 'quienessomos') {
-            cont.innerHTML = generarQuienesSomos();
-        } else if (estado.torneo === 'h2h') {
-            const h = estado.h2h;
-            cont.innerHTML = generarH2H(h.eq1, h.eq2, h.cls1, h.cls2, h.catKey);
-        } else if (estado.torneo === 'equiposfuera') {
-            cont.innerHTML = generarEquiposFuera();
-        } else if (estado.torneo === 'sub15fem') {
-            cont.innerHTML = generarSub15Fem();
-        } else if (estado.torneo === 'futsal') {
-            cont.innerHTML = generarFutsal('principal');
-        } else if (estado.torneo === 'futsalreserva') {
-            cont.innerHTML = generarFutsal('reserva');
-        } else if (estado.torneo === 'futsalgoleadores') {
-            cont.innerHTML = generarFutsalGoleadores();
-        } else if (estado.torneo === 'formativas') {
-            cont.innerHTML = generarFormativas(estado.categoria);
-        } else if (estado.torneo === 'copa_argentina') {
-            cont.innerHTML = generarCopaArgentina();
-        } else if (estado.torneo === 'historial') {
-            cont.innerHTML = generarHistorial();
-        } else if (estado.torneo === 'sub131517') {
-            cont.innerHTML = generarSub();
-        } else if (estado.torneo === 'goleadores') {
-            cont.innerHTML = generarGoleadores(estado.categoria);
-        } else if (estado.torneo === 'arqueros') {
-            cont.innerHTML = generarArqueros(estado.categoria);
-        } else if (estado.torneo === 'perfil_jugador') {
-            cont.innerHTML = generarPerfilJugador(estado.perfil.jugador, estado.perfil.equipo);
-        } else if (estado.categoria === 'federala') {
-            cont.innerHTML = generarTablaFederal();
-        } else if (estado.torneo === 'reserva') {
-            if (!estado._reservaIniciada || estado._reservaCat !== estado.categoria) {
-                estado.fecha = (estado.categoria === 'oficial' || estado.categoria === 'promocional') ? 5 : (estado.categoria === 'femenino' || estado.categoria === 'segundafemenino') ? 4 : 1;
-                estado._reservaIniciada = true;
-                estado._reservaCat = estado.categoria;
+        cont.classList.add('fade-out');
+        setTimeout(() => {
+            if (estado.torneo === 'home') {
+                cont.innerHTML = generarHome();
+            } else if (estado.torneo === 'quienessomos') {
+                cont.innerHTML = generarQuienesSomos();
+            } else if (estado.torneo === 'h2h') {
+                const h = estado.h2h;
+                cont.innerHTML = generarH2H(h.eq1, h.eq2, h.cls1, h.cls2, h.catKey);
+            } else if (estado.torneo === 'equiposfuera') {
+                cont.innerHTML = generarEquiposFuera();
+            } else if (estado.torneo === 'sub15fem') {
+                cont.innerHTML = generarSub15Fem();
+            } else if (estado.torneo === 'futsal') {
+                cont.innerHTML = generarFutsal('principal');
+            } else if (estado.torneo === 'futsalreserva') {
+                cont.innerHTML = generarFutsal('reserva');
+            } else if (estado.torneo === 'futsalgoleadores') {
+                cont.innerHTML = generarFutsalGoleadores();
+            } else if (estado.torneo === 'futsalbonaerense') {
+                cont.innerHTML = generarFutsalBonaerense();
+            } else if (estado.torneo === 'formativas') {
+                cont.innerHTML = generarFormativas(estado.categoria);
+            } else if (estado.torneo === 'copa_argentina') {
+                cont.innerHTML = generarCopaArgentina();
+            } else if (estado.torneo === 'historial') {
+                cont.innerHTML = generarHistorial();
+            } else if (estado.torneo === 'sub131517') {
+                cont.innerHTML = generarSub();
+            } else if (estado.torneo === 'goleadores') {
+                cont.innerHTML = generarGoleadores(estado.categoria);
+            } else if (estado.torneo === 'arqueros') {
+                cont.innerHTML = generarArqueros(estado.categoria);
+            } else if (estado.torneo === 'perfil_jugador') {
+                cont.innerHTML = generarPerfilJugador(estado.perfil.jugador, estado.perfil.equipo);
+            } else if (estado.categoria === 'federala') {
+                cont.innerHTML = generarTablaFederal();
+            } else if (estado.torneo === 'reserva') {
+                if (!estado._reservaIniciada || estado._reservaCat !== estado.categoria) {
+                    estado.fecha = (estado.categoria === 'oficial' || estado.categoria === 'promocional') ? 5 : (estado.categoria === 'femenino' || estado.categoria === 'segundafemenino') ? 4 : 1;
+                    estado._reservaIniciada = true;
+                    estado._reservaCat = estado.categoria;
+                }
+                cont.innerHTML = generarReserva(estado.categoria);
+            } else {
+                const tablaAnual = (estado.categoria === 'femenino' || estado.categoria === 'segundafemenino') ? '' : generarTabla('anual', estado.categoria);
+                cont.innerHTML = generarFixture(estado.fecha, estado.torneo, estado.categoria) +
+                                 generarTabla(estado.torneo, estado.categoria) +
+                                 tablaAnual;
             }
-            cont.innerHTML = generarReserva(estado.categoria);
-        } else {
-            const tablaAnual = (estado.categoria === 'femenino' || estado.categoria === 'segundafemenino') ? '' : generarTabla('anual', estado.categoria);
-            cont.innerHTML = generarFixture(estado.fecha, estado.torneo, estado.categoria) + 
-                             generarTabla(estado.torneo, estado.categoria) +
-                             tablaAnual;
-        }
+            cont.classList.remove('fade-out');
+            ajustarPaddingBanner();
+        }, 250);
     }
+</script>
 </script>
 <!-- BANNER PUBLICITARIO FIJO -->
 <div id="banner-pub" style="
