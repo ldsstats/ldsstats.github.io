@@ -68,7 +68,7 @@ const idaOficial = [
     { fecha: 2, partidos: [{l:"La Armonía", v:"Villa Mitre", gl:0, gv:4, dia:"Dom 22/03", hora:"16:00", goles_l:[], goles_v:["Ramiro Gerk","Ramiro Gerk","Julián Monteverde","Diego Avit"]}, {l:"San Francisco", v:"Libertad", gl:1, gv:1, dia:"Dom 22/03", hora:"16:00", goles_l:["Federico Pinedo"], goles_v:["Mauro Sabatini"]}, {l:"Huracán", v:"Sporting", gl:3, gv:0, dia:"Lun 23/03", hora:"16:00", nota:"En cancha de Sansinena", goles_l:["Iván Agudiak","Agustín Seisdedos","Johan Munives Cortes"], goles_v:[]}, {l:"Bella Vista", v:"Liniers", gl:0, gv:1, dia:"Mar 24/03", hora:"16:00", goles_l:[], goles_v:["Rodrigo Phillipp"]}] },
     { fecha: 3, partidos: [{l:"Villa Mitre", v:"Huracán", gl:0, gv:1, dia:"Sáb 28/03", hora:"11:00", goles_l:[], goles_v:["Agustín Seisdedos"]}, {l:"Sporting", v:"San Francisco", gl:1, gv:1, dia:"Dom 29/03", hora:"16:00", goles_l:["Jonathan Font"], goles_v:["Jonathan Ramírez"]}, {l:"Liniers", v:"La Armonía", gl:4, gv:1, dia:"Dom 29/03", hora:"16:00", goles_l:["Valentín Bertoni","Rodrigo Phillipp","Salvador Maio","Ramiro Ullmann"], goles_v:["Franco Cuello"]}, {l:"Libertad", v:"Bella Vista", gl:0, gv:0, dia:"Dom 29/03", hora:"16:00"}] },
     { fecha: 4, partidos: [{l:"Villa Mitre", v:"San Francisco", gl:1, gv:0, dia:"Jue 02/04", hora:"16:00", goles_l:["Martín Aguirre"], goles_v:[]}, {l:"La Armonía", v:"Huracán", gl:2, gv:3, dia:"Vie 03/03", hora:"16:00", goles_l:["Enrique Narvay","Matías Malmoria"], goles_v:["Lautaro Cerato","Lautaro Cerato","Lautaro Cerato"]}, {l:"Liniers", v:"Libertad", gl:0, gv:1, dia:"Sab 04/04", hora:"16:00", goles_l:[], goles_v:["Nahuel Sánchez"]}, {l:"Sporting", v:"Bella Vista", gl:3, gv:0, dia:"Dom 05/03", hora:"16:00", goles_l:["Jonathan Font","Jonathan Font","Matías Chamares"], goles_v:[]}] },
-    { fecha: 5, partidos: [{l:"Bella Vista", v:"Villa Mitre", gl:null, gv:null, dia:"Dom 12/04", hora:"11:15"}, {l:"Libertad", v:"Sporting", gl:null, gv:null, dia:"Dom 12/04", hora:"15:30"}, {l:"San Francisco", v:"La Armonía", gl:null, gv:null, dia:"Dom 12/04", hora:"15:30"}, {l:"Huracán", v:"Liniers", gl:null, gv:null, dia:"Dom 12/04", hora:"15:30"}] },
+    { fecha: 5, partidos: [{l:"Bella Vista", v:"Villa Mitre", gl:3, gv:0, dia:"Dom 12/04", hora:"11:15", goles_l:["Nahuel Bardella","Gabino Bellegia","Lucas Martínez"], goles_v:[]}, {l:"Libertad", v:"Sporting", gl:null, gv:null, dia:"Dom 12/04", hora:"15:30"}, {l:"San Francisco", v:"La Armonía", gl:null, gv:null, dia:"Dom 12/04", hora:"15:30"}, {l:"Huracán", v:"Liniers", gl:null, gv:null, dia:"Dom 12/04", hora:"15:30"}] },
     { fecha: 6, partidos: [{l:"Libertad", v:"Villa Mitre", gl:null, gv:null}, {l:"Bella Vista", v:"La Armonía", gl:null, gv:null}, {l:"San Francisco", v:"Huracán", gl:null, gv:null}, {l:"Sporting", v:"Liniers", gl:null, gv:null}] },
     { fecha: 7, partidos: [{l:"Huracán", v:"Bella Vista", gl:null, gv:null}, {l:"La Armonía", v:"Libertad", gl:null, gv:null}, {l:"Villa Mitre", v:"Sporting", gl:null, gv:null}, {l:"Liniers", v:"San Francisco", gl:null, gv:null}] }
 ];
@@ -1096,7 +1096,7 @@ function generarHome() {
         ]},
         { id: "2026-04-12", label: "DOM 12/04", torneos: [
             { nombre: "OFICIAL", cat: "oficial", partidos: [
-                {l:"Bella Vista", v:"Villa Mitre", hora:"11:15"},
+                {l:"Bella Vista", v:"Villa Mitre", hora:"11:15", gl:3, gv:0},
                 {l:"Libertad", v:"Sporting", hora:"15:30"},
                 {l:"San Francisco", v:"La Armonía", hora:"15:30"},
                 {l:"Huracán", v:"Liniers", hora:"15:30", nota:"En cancha de Sansinena y sin visitantes"}
@@ -15588,6 +15588,105 @@ function generarFutsalBonaerense() {
     return html;
 }
 
+const BD_BONAERENSE_PROMO = {
+    grupo1: {
+        equipos: [
+            { nombre: "Villa Mitre",  clase: "villamitre" },
+            { nombre: "La Estación", clase: "laestacion" }
+        ],
+        fixture: [
+            { fecha: 1, libre: null, dia: "Vie 01/05", partidos: [
+                { l: "Villa Mitre", v: "La Estación", gl: null, gv: null }
+            ]},
+            { fecha: 2, libre: null, dia: "Vie 08/05", partidos: [
+                { l: "La Estación", v: "Villa Mitre", gl: null, gv: null }
+            ]}
+        ],
+        posiciones: [
+            { n: "Villa Mitre",  cl: "villamitre",  pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
+            { n: "La Estación", cl: "laestacion", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 }
+        ]
+    },
+    grupo2: {
+        posiciones: [
+            { n: "SyD Argentinos del Sud", cl: "sydargentinos", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
+            { n: "Puerto Futsal",          cl: "puertofutsal",  pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
+            { n: "2 de Julio",             cl: "dedejulio",     pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 }
+        ]
+    },
+    goleadores: []
+};
+
+function generarFutsalBonaerensePromo() {
+    const n = estado.fechaBonaerensePromo || 1;
+    const f = BD_BONAERENSE_PROMO.grupo1.fixture.find(x => x.fecha === n) || { partidos: [], libre: null };
+
+    let html = `<div class="header-t">TORNEO BONAERENSE — PAMPEANA SUR PROMOCIONAL</div>`;
+    html += `<div style="background:#1a3a1a; color:#adff2f; font-size:10px; text-align:center; padding:6px 10px; border-bottom:1px solid #005522;">
+        🏆 El <b>1° de cada grupo</b> clasifica a la final por un lugar en el <b>Torneo Nacional del Consejo Federal</b>
+    </div>`;
+
+    // Nav fechas Grupo 1
+    html += `<div class="nav-fechas">`;
+    for (let i = 1; i <= 2; i++) {
+        html += `<div class="btn-f ${i === n ? 'activa' : ''}" onclick="estado.fechaBonaerensePromo=${i};document.getElementById('contenido').innerHTML=generarFutsalBonaerensePromo()">${i}</div>`;
+    }
+    html += `</div>`;
+
+    // Fixture Grupo 1
+    html += `<div class="header-t">GRUPO 1 — FECHA ${n}</div>`;
+    if (f.libre) html += `<div style="padding:5px 10px; font-size:11px; background:#f9f9f9; border-bottom:1px solid #eee;"><b>Fecha libre:</b> ${f.libre}</div>`;
+    html += `<table>`;
+    f.partidos.forEach(p => {
+        const escL = BD_BONAERENSE_PROMO.grupo1.equipos.find(e => e.nombre === p.l)?.clase || '';
+        const escV = BD_BONAERENSE_PROMO.grupo1.equipos.find(e => e.nombre === p.v)?.clase || '';
+        const res = p.gl !== null ? `${p.gl} - ${p.gv}` : `${f.dia || ''}`;
+        const resStyle = p.gl !== null ? '' : 'font-size:10px; color:#888;';
+        html += `<tr>
+            <td class="c-loc"><span style="direction:ltr;display:inline-flex;align-items:center;justify-content:flex-end;width:100%;">${p.l} <div class="escudo ${escL}" style="display:inline-block;vertical-align:middle;margin-left:4px;"></div></span></td>
+            <td class="c-res" style="${resStyle}">${res}</td>
+            <td class="c-vis"><div class="escudo ${escV}" style="display:inline-block;vertical-align:middle;margin-right:4px;"></div> ${p.v}</td>
+        </tr>`;
+    });
+    html += `</table>`;
+
+    // Posiciones Grupo 1
+    html += `<div class="header-t">POSICIONES — GRUPO 1</div>`;
+    html += generarTablaPosBonaerense(BD_BONAERENSE_PROMO.grupo1.posiciones);
+
+    // Posiciones Grupo 2
+    html += `<div class="header-t">POSICIONES — GRUPO 2</div>`;
+    html += generarTablaPosBonaerense(BD_BONAERENSE_PROMO.grupo2.posiciones);
+
+    // Goleadores
+    html += `<div class="header-t">GOLEADORES</div>`;
+    if (BD_BONAERENSE_PROMO.goleadores.length === 0) {
+        html += `<div style="text-align:center; padding:12px; font-size:11px; color:#aaa; font-style:italic;">Sin goles registrados aún</div>`;
+    } else {
+        const todosEquipos = [...BD_BONAERENSE_PROMO.grupo1.equipos, ...BD_BONAERENSE_PROMO.grupo2.posiciones.map(e => ({ nombre: e.n, clase: e.cl }))];
+        html += `<table><thead><tr>
+            <th style="width:25px;">#</th>
+            <th style="text-align:left;padding-left:8px;">Jugador</th>
+            <th style="text-align:left;padding-left:8px;">Equipo</th>
+            <th class="c-stat">⚽</th>
+        </tr></thead><tbody>`;
+        let pos = 1, prev = -1;
+        BD_BONAERENSE_PROMO.goleadores.forEach((g, i) => {
+            if (g.goles !== prev) { pos = i + 1; prev = g.goles; }
+            const cl = todosEquipos.find(e => e.nombre === g.equipo)?.clase || '';
+            html += `<tr>
+                <td class="c-pos">${pos}</td>
+                <td style="font-size:11px; padding-left:8px;">${g.nombre}</td>
+                <td style="font-size:11px; padding-left:8px;"><div class="escudo ${cl}" style="display:inline-block;vertical-align:middle;margin-right:4px;"></div>${g.equipo}</td>
+                <td class="c-stat"><b>${g.goles}</b></td>
+            </tr>`;
+        });
+        html += `</tbody></table>`;
+    }
+
+    return html;
+}
+
 function generarTablaPosBonaerense(pos) {
     let html = `<table><thead><tr>
         <th style="width:25px;">#</th>
@@ -16411,7 +16510,8 @@ const BD_ARQUEROS = {
             { rival: "Liniers", resultado: "Liniers 0 - 0 Libertad", fecha: 4 }
         ]},
         { jugador: "Francisco Martínez", equipo: "Bella Vista", partidos: [
-            { rival: "Libertad", resultado: "Libertad 0 - 0 Bella Vista", fecha: 3 }
+            { rival: "Libertad", resultado: "Libertad 0 - 0 Bella Vista", fecha: 3 },
+            { rival: "Villa Mitre", resultado: "Bella Vista 1 - 0 Villa Mitre", fecha: 5 }
         ]},
         { jugador: "Andoni Mendiguibel", equipo: "Liniers", partidos: [
             { rival: "Bella Vista", resultado: "Bella Vista 0 - 1 Liniers", fecha: 2 }
@@ -16605,11 +16705,11 @@ const BD_POSICIONES = {
     oficial: {
         apertura: [
             { nombre: "Huracán",       clase: "huracan",      pj:4, pg:3, pe:0, pp:1, gf:8, gc:5,  pts:9 },
-            { nombre: "Villa Mitre",   clase: "villamitre",   pj:4, pg:3, pe:0, pp:1, gf:7, gc:1,  pts:9 },
+            { nombre: "Villa Mitre",   clase: "villamitre",   pj:5, pg:3, pe:0, pp:2, gf:7, gc:4,  pts:9 },
             { nombre: "Libertad",      clase: "libertad",     pj:4, pg:2, pe:2, pp:0, gf:5, gc:2,  pts:8 },
+            { nombre: "Bella Vista",   clase: "bellavista",   pj:5, pg:2, pe:1, pp:2, gf:6, gc:5,  pts:7 },
             { nombre: "Liniers",       clase: "liniers",      pj:4, pg:2, pe:0, pp:2, gf:5, gc:4,  pts:6 },
             { nombre: "Sporting",      clase: "sporting",     pj:4, pg:1, pe:1, pp:2, gf:5, gc:6,  pts:4 },
-            { nombre: "Bella Vista",   clase: "bellavista",   pj:4, pg:1, pe:1, pp:2, gf:3, gc:5,  pts:4 },
             { nombre: "La Armonía",    clase: "laarmonia",    pj:4, pg:1, pe:0, pp:3, gf:5, gc:12,  pts:3 },
             { nombre: "San Francisco", clase: "sanfrancisco", pj:4, pg:0, pe:2, pp:2, gf:3, gc:6,  pts:2 }
         ]

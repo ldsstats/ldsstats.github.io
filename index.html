@@ -129,7 +129,8 @@
                 <a href="#" onclick="navegar('futsal')">Torneo 2026</a>
                 <a href="#" onclick="navegar('futsalgoleadores')">Goleadores por club</a>
                 <a href="#" onclick="navegar('futsalreserva')">Reserva</a>
-                <a href="#" onclick="navegar('futsalbonaerense')">Torneo Bonaerense Pampeana Sur</a>
+                <a href="#" onclick="navegar('futsalbonaerense')">Torneo Bonaerense Pampeana Sur - Zona Ascenso</a>
+                <a href="#" onclick="navegar('futsalbonaerensepromocional')">Torneo Bonaerense Pampeana Sur - Promocional</a>
             </div>
         </div>
         <div class="bloque">
@@ -409,6 +410,8 @@
                 cont.innerHTML = generarFutsalGoleadores();
             } else if (estado.torneo === 'futsalbonaerense') {
                 cont.innerHTML = generarFutsalBonaerense();
+            } else if (estado.torneo === 'futsalbonaerensepromocional') {
+                cont.innerHTML = generarFutsalBonaerensePromo();
             } else if (estado.torneo === 'formativas') {
                 cont.innerHTML = generarFormativas(estado.categoria);
             } else if (estado.torneo === 'copa_argentina') {

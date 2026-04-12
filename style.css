@@ -133,6 +133,9 @@ tr[onclick]:hover td { background-color: #e8f5e9 !important; }
 .torino { background-color: #6b0000; }
 .cajusanbernardo { background: linear-gradient(180deg, #fffb08 35%, #0bbf17 35%, #0bbf17 65%, #fffb08 65%); }
 .defvillaclelia { background: linear-gradient(90deg, #ff0 20%, #000 20%, #000 40%, #ff0 40%, #ff0 60%, #000 60%, #000 80%, #ff0 80%); }
+.sydargentinos { background-color: #11258c; }
+.puertofutsal { background: linear-gradient(180deg, #00a455 0%, #00a455 80%, #000 80%, #000 100%); }
+.dedejulio { background-color: #8c28c9; }
 
 * { box-sizing: border-box; }
 
