@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>LdS Stats - 2026</title>
-    <link rel="stylesheet" href="style.css?v=1">
+    <link rel="stylesheet" href="style.css?v=7">
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#111111">
     <!-- Google Analytics -->
@@ -32,7 +32,7 @@
     z-index: 999;
     pointer-events: none;
     letter-spacing: 0.3px;
-">🕐 Última actualización: Sáb 11/04 — 00:00hs</div>
+">🕐 Última actualización: Sáb 11/04 — 21:50hs</div>
 
 <div id="container-principal">
     <div id="logo-header"><img src="au11.png" style="height:80px;" alt="LdS Stats"></div>
@@ -156,36 +156,35 @@
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-<script src="datos.js?v=1"></script>
+<script src="datos.js?v=7"></script>
 <script>
     let estado = { torneo: 'home', categoria: '', fecha: 1 };
     let estadoAnterior = { torneo: 'home', categoria: '', fecha: 1 };
 
     // Última actualización por sección — modificar según corresponda
     const ULTIMA_ACT = {
-        default:        "Sáb 11/04 — 00:00hs",
-        home:        "Sáb 11/04 — 00:00hs",
+        default:        "Sáb 11/04 — 21:50hs",
+        home:        "Sáb 11/04 — 21:50hs",
         apertura_oficial:   "Jue 09/04 — 00:00hs",
         historial:   "Dom 05/04 — 20:20hs",
         goleadores_oficial:   "Dom 05/04 — 20:20hs",
         arqueros_oficial:   "Dom 05/04 — 20:20hs",
         reserva_oficial:   "Mar 07/04 — 20:45hs",
-        apertura_promocional:   "Jue 09/04 — 00:00hs",
-        goleadores_promocional:   "Sáb 04/04 — 00:00hs",
-        arqueros_promocional:   "Sáb 04/04 — 00:00hs",
+        apertura_promocional:   "Sáb 11/04 — 21:50hs",
+        goleadores_promocional:   "Sáb 11/04 — 21:50hs",
+        arqueros_promocional:   "Sáb 11/04 — 21:50hs",
         reserva_promocional:   "Miér 08/04 — 20:30hs",
-        apertura_promocional:   "Sáb 04/04 — 00:00hs",
-        posiciones_federala:   "Miér 08/04 — 20:30hs",
-        goleadores_federala:   "Dom 05/04 — 20:20hs",
+        posiciones_federala:   "Sáb 11/04 — 21:50hs",
+        goleadores_federala:   "Sáb 11/04 — 21:50hs",
         sub131517:   "Sáb 11/04 — 00:00hs",
         copa_argentina:   "Dom 29/3 — 21:00hs",
-        apertura_femenino:   "Vie 10/04 — 16:00hs",
-        goleadores_femenino:   "Lun 06/04 — 08:00hs",
+        apertura_femenino:   "Sáb 11/04 — 21:50hs",
+        goleadores_femenino:   "Sáb 11/04 — 21:50hs",
         reserva_femenino:   "Lun 06/04 — 08:00hs",
-        torneo2026_segundafemenino:   "Vie 10/04 — 16:00hs",
-        goleadores_segundafemenino:   "Lun 06/04 — 08:00hs",
+        torneo2026_segundafemenino:   "Sáb 11/04 — 21:50hs",
+        goleadores_segundafemenino:   "Sáb 11/04 — 21:50hs",
         reserva_segundafemenino:   "Lun 06/04 — 08:00hs",
-        sub15fem:   "Vie 10/04 — 16:00hs",
+        sub15fem:   "Sáb 11/04 — 21:50hs",
         torneo2026_senior:   "Miér 1/04 — 00:00hs",
         futsal:   "Sáb 11/04 — 00:00hs",
         futsalgoleadores:   "Vie 10/04 — 16:00hs",
