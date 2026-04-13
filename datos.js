@@ -1484,7 +1484,7 @@ const BD_FORMATIVAS_POS = {
         ],
         cats: [
             { nombre: "4ta División (2008)", equipos: [
-                {n:"Comercial",           cl:"comercial",     pj43,pg:4,pe:0,pp:0,pts:12},
+                {n:"Comercial",           cl:"comercial",     pj:43,pg:4,pe:0,pp:0,pts:12},
                 {n:"Libertad",            cl:"libertad",      pj:3,pg:3,pe:0,pp:0,pts:9},
                 {n:"Huracán",             cl:"huracan",       pj:4,pg:3,pe:0,pp:1,pts:9},
                 {n:"Sansinena",           cl:"sansinena",     pj:4,pg:2,pe:1,pp:1,pts:7},
