@@ -919,7 +919,7 @@ BD_FIXTURES.oficial.reserva.push(
         {l:"Bella Vista",   v:"Villa Mitre",   gl:2, gv:1},
         {l:"Libertad",   v:"Sporting",   gl:0, gv:1},
         {l:"San Francisco",   v:"La Armonía",   gl:0, gv:2},
-        {l:"Huracán",   v:"Liniers",   gl:null, gv:null}
+        {l:"Huracán",   v:"Liniers",   gl:1, gv:0}
     ]},
 );
 
@@ -951,7 +951,7 @@ BD_FIXTURES.promocional.reserva.push(
     ]},
     { fecha: 5, partidos: [
         {l:"Rosario PB",      v:"Comercial",          gl:1,   gv:1},
-        {l:"Sansinena",   v:"Tiro Federal", gl:null,   gv:null},
+        {l:"Sansinena",   v:"Tiro Federal", gl:1,   gv:2},
         {l:"Pacífico (C)", v:"Olimpo",              gl:0,   gv:1},
         {l:"Dublin",v:"Pacífico BB",           gl:2,   gv:0}
     ]},
@@ -1646,8 +1646,8 @@ const BD_FORMATIVAS_POS = {
             {n:"Liniers",       cl:"liniers",      pj:12,pg:11,pe:0,pp:1,pts:33},
             {n:"Villa Mitre",   cl:"villamitre",   pj:12,pg:8,pe:1,pp:3,pts:25},
             {n:"Rosario PB",    cl:"rosariopb",    pj:12,pg:5,pe:3,pp:4,pts:18},
-            {n:"Tiro Federal",  cl:"tirofederal",  pj:12,pg:5,pe:1,pp:6,pts:16},
             {n:"San Francisco", cl:"sanfrancisco", pj:12,pg:5,pe:1,pp:6,pts:16},
+            {n:"Tiro Federal",  cl:"tirofederal",  pj:12,pg:5,pe:1,pp:6,pts:16},
             {n:"Liniers B",     cl:"liniersb",     pj:12,pg:4,pe:2,pp:6,pts:14},
             {n:"Olimpo",        cl:"olimpo",       pj:12,pg:3,pe:0,pp:9,pts:9},
             {n:"La Armonía",    cl:"laarmonia",    pj:12,pg:2,pe:0,pp:10,pts:6},
@@ -1662,13 +1662,13 @@ const BD_FORMATIVAS_POS = {
             {n:"Bella Vista B",       cl:"bellavistab",   pj:12,pg:10,pe:1,pp:1,pts:31},
             {n:"Sansinena",           cl:"sansinena",     pj:12,pg:9,pe:3,pp:0,pts:30},
             {n:"Liniers C",           cl:"liniersc",      pj:15,pg:8,pe:4,pp:3,pts:28},
+            {n:"Rosario B",           cl:"rosariopb",     pj:12,pg:7,pe:2,pp:3,pts:23},
             {n:"Olimpo B",            cl:"olimpob",       pj:12,pg:7,pe:0,pp:5,pts:21},
             {n:"Huracán",             cl:"huracan",       pj:15,pg:5,pe:5,pp:5,pts:20},
             {n:"Juventud Unida",      cl:"juventudunida", pj:9,pg:5,pe:3,pp:1,pts:18},
-            {n:"Pacífico",            cl:"pacificobb",    pj:13,pg:5,pe:0,pp:8,pts:15},
             {n:"Libertad",            cl:"libertad",      pj:10,pg:4,pe:3,pp:3,pts:15},
+            {n:"Pacífico",            cl:"pacificobb",    pj:13,pg:5,pe:0,pp:8,pts:15},
             {n:"Dublin",              cl:"dublin",        pj:13,pg:4,pe:2,pp:7,pts:14},
-            {n:"Rosario B",           cl:"rosariopb",     pj:9,pg:4,pe:2,pp:3,pts:14},
             {n:"Tiro Federal B",      cl:"tirofederalb",  pj:10,pg:2,pe:3,pp:5,pts:9},
             {n:"Comercial",           cl:"comercial",     pj:15,pg:1,pe:0,pp:14,pts:3}
         ],
@@ -14895,20 +14895,20 @@ function generarReserva(cat) {
     // Tabla de posiciones — solo puntos, calculados desde fixtures
     const BD_RESERVA_POS = {
         'oficial':    [{n:"Sporting",      cl:"sporting",     pj:5, pg:4, pe:1, pp:0, gf:11, gc:3, pts:13},
-                       {n:"Liniers",       cl:"liniers",      pj:4, pg:2, pe:2, pp:0, gf:7, gc:5, pts:8},
+                       {n:"Liniers",       cl:"liniers",      pj:5, pg:2, pe:2, pp:1, gf:7, gc:6, pts:8},
                        {n:"La Armonía",    cl:"laarmonia",    pj:5, pg:2, pe:1, pp:2, gf:10, gc:7, pts:7},
                        {n:"Villa Mitre",   cl:"villamitre",   pj:5, pg:2, pe:0, pp:3, gf:10, gc:7, pts:6},
                        {n:"Libertad",      cl:"libertad",     pj:5, pg:1, pe:3, pp:1, gf:7, gc:5, pts:6},
                        {n:"Bella Vista",   cl:"bellavista",   pj:4, pg:1, pe:2, pp:1, gf:9, gc:9, pts:5},
-                       {n:"San Francisco", cl:"sanfrancisco", pj:4, pg:1, pe:0, pp:3, gf:5, gc:10, pts:3},
-                       {n:"Huracán",       cl:"huracan",      pj:4, pg:0, pe:1, pp:3, gf:3, gc:16, pts:1}],
-        'promocional':[{n:"Tiro Federal",        cl:"tirofederal",      pj:3, pg:3, pe:0, pp:0, gf:10, gc:5, pts:9},
+                       {n:"Huracán",       cl:"huracan",      pj:5, pg:1, pe:1, pp:3, gf:4, gc:16, pts:4},
+                       {n:"San Francisco", cl:"sanfrancisco", pj:4, pg:1, pe:0, pp:3, gf:5, gc:10, pts:3}],
+        'promocional':[{n:"Tiro Federal",        cl:"tirofederal",      pj:4, pg:4, pe:0, pp:0, gf:12, gc:6, pts:12},
                        {n:"Olimpo",              cl:"olimpo",           pj:5, pg:3, pe:0, pp:2, gf:6, gc:4, pts:9},
                        {n:"Comercial",           cl:"comercial",        pj:4, pg:2, pe:2, pp:0, gf:5, gc:2, pts:8},
                        {n:"Dublin",              cl:"dublin",           pj:5, pg:2, pe:1, pp:2, gf:7, gc:4, pts:7},
                        {n:"Pacífico BB",         cl:"pacificobb",       pj:5, pg:2, pe:1, pp:2, gf:6, gc:4, pts:7},
                        {n:"Rosario PB",          cl:"rosariopb",        pj:5, pg:1, pe:2, pp:2, gf:4, gc:5, pts:5},
-                       {n:"Sansinena",           cl:"sansinena",        pj:4, pg:1, pe:0, pp:3, gf:2, gc:8, pts:3},
+                       {n:"Sansinena",           cl:"sansinena",        pj:5, pg:1, pe:0, pp:4, gf:3, gc:10, pts:3},
                        {n:"Pacífico (C)", cl:"pacificocabildo",  pj:5, pg:1, pe:0, pp:4, gf:4, gc:12, pts:3},],
         'segundafemenino': [
             {n:"Liniers",             cl:"liniers",         pj:3, pg:3, pe:0, pp:0, gf:13, gc:3, pts:9},
