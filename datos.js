@@ -88,7 +88,7 @@ const idaFederal = [
     { fecha: 2, libre: "Olimpo", partidos: [{l:"Santamarina", v:"Sol de Mayo", gl:0, gv:2, dia:"Sáb 28/03", hora:"19:00", goles_l:["Ignacio Lucero (e/c)"], goles_v:["Santiago Jara"]}, {l:"Alvarado", v:"Guillermo Brown", gl:2, gv:0, dia:"Dom 29/03", hora:"15:30", goles_l:["Facundo Centurión","Tomás Fernández"], goles_v:[]}, {l:"Germinal", v:"Kimberley", gl:0, gv:0, dia:"Dom 29/03", hora:"15:00"}, {l:"Villa Mitre", v:"Círculo Dep.", gl:2, gv:0, dia:"Dom 29/03", hora:"16:00", goles_l:["Pablo Mujica","Marcos Escobar"], goles_v:[]}] },
     { fecha: 3, libre: "Villa Mitre", partidos: [{l:"Sol de Mayo", v:"Alvarado", gl:0, gv:0, dia:"Vie 03/04", hora:"15:30"}, {l:"Círculo Dep.", v:"Germinal", gl:2, gv:1, dia:"Sáb 04/04", hora:"15:30", goles_l:["Quimey Marín","Imanol Iriberri"], goles_v:["Nicolás Ríos"]}, {l:"Kimberley", v:"Santamarina", gl:0, gv:0, dia:"Dom 05/04", hora:"15:30"}, {l:"Guillermo Brown", v:"Olimpo", gl:0, gv:2, dia:"Dom 05/04", hora:"15:30", goles_l:[], goles_v:["Brian Guille","Enzo Coacci"]}] },
     { fecha: 4, libre: "Guillermo Brown", partidos: [{l:"Alvarado", v:"Kimberley", gl:0, gv:0, dia:"Sáb 11/04", hora:"15:30"}, {l:"Santamarina", v:"Círculo Dep.", gl:4, gv:0, dia:"Sáb 11/04", hora:"18:30", goles_l:["Mateo Ijurco","Diego Sosa","Diego Sosa","Nicolás Franco"], goles_v:[]}, {l:"Germinal", v:"Villa Mitre", gl:1, gv:0, dia:"Dom 12/04", hora:"15:00", goles_l:["Thomas Olivieri"], goles_v:[]}, {l:"Olimpo", v:"Sol de Mayo", gl:1, gv:0, dia:"Dom 12/04", hora:"15:30", goles_l:["Cristian Amarilla"], goles_v:[]}] },
-    { fecha: 5, libre: "Germinal", partidos: [{l:"Villa Mitre", v:"Santamarina", gl:null, gv:null}, {l:"Círculo Dep.", v:"Alvarado", gl:null, gv:null}, {l:"Kimberley", v:"Olimpo", gl:null, gv:null}, {l:"Sol de Mayo", v:"Guillermo Brown", gl:null, gv:null}] },
+    { fecha: 5, libre: "Germinal", partidos: [{l:"Círculo Dep.", v:"Alvarado", gl:null, gv:null, dia:"Sáb 18/04", hora:"15:00"}, {l:"Kimberley", v:"Olimpo", gl:null, gv:null, dia:"Sáb 18/04", hora:"15:30"}, {l:"Sol de Mayo", v:"Guillermo Brown", gl:null, gv:null, dia:"Dom 19/04", hora:"11:00"}, {l:"Villa Mitre", v:"Santamarina", gl:null, gv:null, dia:"Dom 19/04", hora:"15:00"}] },
     { fecha: 6, libre: "Sol de Mayo", partidos: [{l:"Guillermo Brown", v:"Kimberley", gl:null, gv:null}, {l:"Olimpo", v:"Círculo Dep.", gl:null, gv:null}, {l:"Alvarado", v:"Villa Mitre", gl:null, gv:null}, {l:"Santamarina", v:"Germinal", gl:null, gv:null}] },
     { fecha: 7, libre: "Santamarina", partidos: [{l:"Germinal", v:"Alvarado", gl:null, gv:null}, {l:"Villa Mitre", v:"Olimpo", gl:null, gv:null}, {l:"Círculo Dep.", v:"Guillermo Brown", gl:null, gv:null}, {l:"Kimberley", v:"Sol de Mayo", gl:null, gv:null}] },
     { fecha: 8, libre: "Kimberley", partidos: [{l:"Sol de Mayo", v:"Círculo Dep.", gl:null, gv:null}, {l:"Guillermo Brown", v:"Villa Mitre", gl:null, gv:null}, {l:"Olimpo", v:"Germinal", gl:null, gv:null}, {l:"Alvarado", v:"Santamarina", gl:null, gv:null}] },
@@ -1068,8 +1068,8 @@ function generarHome() {
         ]},
         { id: "2026-04-16", label: "JUE 16/04", torneos: [
             { nombre: "FUTSAL", cat: "futsal", partidos: [
-                {l:"La Estación", v:"Dublin", hora:"22:00", nota:"En Don Bosco"},
-                {l:"San Francisco", v:"Petroquímicos", hora:"21:30", nota:"En La Curtiembre"}
+                {l:"San Francisco", v:"Petroquímicos", hora:"21:30", nota:"En La Curtiembre"},
+                {l:"La Estación", v:"Dublin", hora:"22:00", nota:"En Don Bosco"}
             ]},
         ]},
         { id: "2026-04-17", label: "VIE 17/04", torneos: [
@@ -1089,6 +1089,9 @@ function generarHome() {
                 {l:"Dublin", v:"Tiro Federal", hora:"15:30", nota:"En cancha de Sansinena"},
                 {l:"Pacífico (C)", v:"Rosario PB", hora:"15:30"}
             ]},
+            { nombre: "FEDERAL A", cat: "federala", partidos: [
+                {l:"Kimberley", v:"Olimpo", hora:"15:30"}
+            ]},
         ]},
         { id: "2026-04-19", label: "DOM 19/04", torneos: [
             { nombre: "OFICIAL", cat: "oficial", partidos: [
@@ -1097,6 +1100,9 @@ function generarHome() {
             { nombre: "PROMOCIONAL", cat: "promocional", partidos: [
                 {l:"Sansinena", v:"Olimpo", hora:"14:30"},
                 {l:"Pacífico BB", v:"Comercial", hora:"14:30"}
+            ]},
+            { nombre: "FEDERAL A", cat: "federala", partidos: [
+                {l:"Villa Mitre", v:"Santamarina", hora:"15:00"}
             ]},
         ]},
     ];
