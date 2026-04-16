@@ -136,6 +136,7 @@ tr[onclick]:hover td { background-color: #e8f5e9 !important; }
 .sydargentinos { background-color: #11258c; }
 .puertofutsal { background: linear-gradient(180deg, #00a455 0%, #00a455 80%, #000 80%, #000 100%); }
 .dedejulio { background-color: #8c28c9; }
+.suteryh { background: linear-gradient(180deg, #3c3b89 35%, #fff 35%, #fff 65%, #3c3b89 65%); }
 
 * { box-sizing: border-box; }
 
