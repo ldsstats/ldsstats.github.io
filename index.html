@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>LdS Stats - 2026</title>
-    <link rel="stylesheet" href="style.css?v=1">
+    <link rel="stylesheet" href="style.css?v=77">
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#111111">
     <!-- Google Analytics -->
@@ -32,7 +32,7 @@
     z-index: 999;
     pointer-events: none;
     letter-spacing: 0.3px;
-">🕐 Última actualización: Vie 17/04 — 01:30hs</div>
+">🕐 Última actualización: Vie 17/04 — 17:00hs</div>
 
 <div id="container-principal">
     <div id="logo-header"><img src="au11.png" style="height:80px;" alt="LdS Stats"></div>
@@ -136,7 +136,9 @@
         <div class="bloque">
             <div class="bloque-titulo con-drop" onclick="toggleMenu(this)">SENIOR <span class="flecha">▼</span></div>
             <div class="bloque-links">
-                <a href="#" onclick="navegar('proximamente')">Torneo 2026</a>
+                <a href="#" onclick="navegar('seniorapertura')">Apertura</a>
+                <a href="#" onclick="navegar('proximamente')">Goleadores</a>
+                <a href="#" onclick="navegar('proximamente')">Clausura</a>
             </div>
         </div>
         <div class="bloque">
@@ -158,15 +160,15 @@
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-<script src="datos.js?v=1"></script>
+<script src="datos.js?v=77"></script>
 <script>
     let estado = { torneo: 'home', categoria: '', fecha: 1 };
     let estadoAnterior = { torneo: 'home', categoria: '', fecha: 1 };
 
     // Última actualización por sección — modificar según corresponda
     const ULTIMA_ACT = {
-        default:        "Vie 17/04 — 01:30hs",
-        home:        "Vie 17/04 — 01:30hs",
+        default:        "Vie 17/04 — 17:00hs",
+        home:        "Vie 17/04 — 17:00hs",
         apertura_oficial:   "Dom 12/04 — 18:25hs",
         historial:   "Dom 12/04 — 18:25hs",
         goleadores_oficial:   "Dom 12/04 — 18:25hs",
@@ -180,21 +182,23 @@
         goleadores_federala:   "Dom 12/04 — 21:20hs",
         sub131517:   "Jue 16/04 — 01:30hs",
         copa_argentina:   "Dom 29/3 — 21:00hs",
-        apertura_femenino:   "Dom 12/04 — 21:20hs",
+        apertura_femenino:   "Vie 17/04 — 17:00hs",
         goleadores_femenino:   "Dom 12/04 — 21:20hs",
-        reserva_femenino:   "Dom 12/04 — 21:20hs",
-        torneo2026_segundafemenino:   "Dom 12/04 — 21:20hs",
+        reserva_femenino:   "Vie 17/04 — 17:00hs",
+        torneo2026_segundafemenino:   "Vie 17/04 — 17:00hs",
         goleadores_segundafemenino:   "Dom 12/04 — 21:20hs",
-        reserva_segundafemenino:   "Dom 12/04 — 21:20hs",
+        reserva_segundafemenino:   "Vie 17/04 — 17:00hs",
         sub15fem:   "Lun 13/04 — 00:00hs",
         torneo2026_senior:   "Miér 1/04 — 00:00hs",
-        futsal:   "Vie 17/04 — 01:30hs",
+        futsal:   "Vie 17/04 — 17:00hs",
         futsalgoleadores:   "Vie 17/04 — 01:30hs",
-        futsalreserva:   "Vie 17/04 — 01:30hs",
+        futsalreserva:   "Vie 17/04 — 17:00hs",
         quienessomos:   "Miér 1/04 — 00:00hs",
         equiposfuera:   "Dom 22/3 — 1:15hs",
         futsalbonaerense:   "Dom 12/4 — 11:30hs",
-        futsalbonaerensepromocional: "Dom 12/4 — 11:30hs"
+        futsalbonaerensepromocional: "Dom 12/4 — 11:30hs",
+        seniorapertura: "Vie 17/04 — 17:00hs",
+        seniorgoleadores: "Vie 17/04 — 97:00hs"
     };
 
     function getUltimaAct() {
@@ -271,7 +275,7 @@
         }
         estado.torneo = tor;
         estado.categoria = cat;
-        estado.fecha = (tor === 'apertura' && (cat === 'oficial' || cat === 'promocional')) ? 6 : (tor === 'posiciones' && cat === 'federala') ? 5 : (tor === 'apertura' && cat === 'femenino') ? 4 : (tor === 'torneo2026' && cat === 'segundafemenino') ? 4 : (tor === 'futsal') ? 4 : (tor === 'futsalreserva') ? 4 : (tor === 'sub15fem') ? 2 : 1; 
+        estado.fecha = (tor === 'apertura' && (cat === 'oficial' || cat === 'promocional')) ? 6 : (tor === 'posiciones' && cat === 'federala') ? 5 : (tor === 'apertura' && cat === 'femenino') ? 5 : (tor === 'torneo2026' && cat === 'segundafemenino') ? 5 : (tor === 'futsal') ? 4 : (tor === 'futsalreserva') ? 4 : (tor === 'sub15fem') ? 3 : 1; 
         actualizarVista();
         document.documentElement.scrollTop = 0;
         document.body.scrollTop = 0;
@@ -413,6 +417,8 @@
                 cont.innerHTML = generarFutsalBonaerense();
             } else if (estado.torneo === 'futsalbonaerensepromocional') {
                 cont.innerHTML = generarFutsalBonaerensePromo();
+            } else if (estado.torneo === 'seniorapertura') {
+                cont.innerHTML = generarSeniorApertura();
             } else if (estado.torneo === 'formativas') {
                 cont.innerHTML = generarFormativas(estado.categoria);
             } else if (estado.torneo === 'copa_argentina') {
@@ -431,7 +437,7 @@
                 cont.innerHTML = generarTablaFederal();
             } else if (estado.torneo === 'reserva') {
                 if (!estado._reservaIniciada || estado._reservaCat !== estado.categoria) {
-                    estado.fecha = (estado.categoria === 'oficial' || estado.categoria === 'promocional') ? 5 : (estado.categoria === 'femenino' || estado.categoria === 'segundafemenino') ? 4 : 1;
+                    estado.fecha = (estado.categoria === 'oficial' || estado.categoria === 'promocional') ? 6 : (estado.categoria === 'femenino' || estado.categoria === 'segundafemenino') ? 5 : 1;
                     estado._reservaIniciada = true;
                     estado._reservaCat = estado.categoria;
                 }
