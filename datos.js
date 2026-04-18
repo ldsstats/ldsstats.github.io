@@ -239,7 +239,7 @@ const BD_FIXTURES_FUTSAL_RESERVA = [
         {l:"Tiro Federal",    v:"Catamarca",       gl:null, gv:null},
         {l:"San Francisco",   v:"Petroquímicos",   gl:1, gv:9},
         {l:"La Estación",     v:"Dublin",          gl:3, gv:1},
-        {l:"Villa Mitre",     v:"Pacífico BB",     gl:null, gv:null},
+        {l:"Villa Mitre",     v:"Pacífico BB",     gl:8, gv:5},
         {l:"Comercial",       v:"Huracán",         gl:2, gv:3}
     ]},
     { fecha: 5, partidos: [
@@ -670,7 +670,7 @@ const BD_FIXTURES_FUTSAL = [
             goles_v:[
             ],
         },
-        {l:"Villa Mitre",     v:"Pacífico BB",     gl:null, gv:null, dia:"Vier 17/04", hora:"22:00"},
+        {l:"Villa Mitre",     v:"Pacífico BB",     gl:3, gv:1, dia:"Vier 17/04", hora:"22:00"},
         {l:"Los 3 Chiflados", v:"Dep. Futsal",     gl:null, gv:null, dia:"Vier 17/04", hora:"22:00"},
         {l:"Tiro Federal",    v:"Catamarca",       gl:null, gv:null, dia:"Vier 17/04", hora:"22:30"}
     ]},
@@ -1088,7 +1088,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 4).partidos.forEach(p 
 });
 
 
-let diaSeleccionadoHome = "2026-04-17"; 
+let diaSeleccionadoHome = "2026-04-18"; 
 
 function seleccionarDiaHome(dia) {
     diaSeleccionadoHome = dia;
@@ -1122,7 +1122,7 @@ function generarHome() {
         ]},
         { id: "2026-04-17", label: "VIE 17/04", torneos: [
             { nombre: "FUTSAL", cat: "futsal", partidos: [
-                {l:"Villa Mitre", v:"Pacífico BB", hora:"22:00", nota:"En Don Bosco"},
+                {l:"Villa Mitre", v:"Pacífico BB", hora:"22:00", nota:"En Don Bosco", gl:3, gv:1},
                 {l:"Los 3 Chiflados", v:"Dep. Futsal", hora:"22:00", nota:"En La Curtiembre"},
                 {l:"Tiro Federal", v:"Catamarca", hora:"22:30"}
             ]},
@@ -15219,7 +15219,7 @@ function generarSub() {
 const BD_POS_FUTSAL = {
     principal: [
         {n:"La Estación",     cl:"laestacion",    pj:4,pg:4,pe:0,pp:0,gf:23, gc:6, pts:12},
-        {n:"Villa Mitre",     cl:"villamitre",    pj:3,pg:3,pe:0,pp:0,gf:17, gc:6, pts:9},
+        {n:"Villa Mitre",     cl:"villamitre",    pj:4,pg:4,pe:0,pp:0,gf:20, gc:7, pts:12},
         {n:"La Esperanza",    cl:"laesperanza",   pj:4,pg:3,pe:0,pp:1,gf:16, gc:12, pts:9},
         {n:"Comercial",       cl:"comercial",     pj:4,pg:2,pe:2,pp:0,gf:21, gc:11, pts:8},
         {n:"Petroquímicos",   cl:"petroquimicos", pj:4,pg:2,pe:1,pp:1,gf:24,gc:16, pts:7},
@@ -15230,18 +15230,18 @@ const BD_POS_FUTSAL = {
         {n:"Dep. Futsal",     cl:"depfutsal",     pj:3,pg:1,pe:0,pp:2,gf:6, gc:12, pts:3},
         {n:"Tiro Federal",    cl:"tirofederal",   pj:3,pg:1,pe:0,pp:2,gf:7, gc:15, pts:3},
         {n:"Catamarca",       cl:"catamarca",     pj:3,pg:0,pe:1,pp:2,gf:7, gc:18, pts:1},
-        {n:"Pacífico BB",     cl:"pacificobb",    pj:3,pg:0,pe:0,pp:3,gf:9, gc:18, pts:0},
+        {n:"Pacífico BB",     cl:"pacificobb",    pj:4,pg:0,pe:0,pp:4,gf:10, gc:21, pts:0},
         {n:"Huracán",         cl:"huracan",       pj:4,pg:0,pe:0,pp:4,gf:13, gc:36,pts:0}
     ],
     reserva: [
         {n:"Petroquímicos",   cl:"petroquimicos", pj:4,pg:3,pe:1,pp:0,gf:29, gc:9, pts:10},
+        {n:"Villa Mitre",     cl:"villamitre",    pj:4,pg:3,pe:1,pp:0,gf:22, gc:12, pts:10},
         {n:"Los 3 Chiflados", cl:"los3chiflados", pj:3,pg:3,pe:0,pp:0,gf:15, gc:1, pts:9},
-        {n:"Villa Mitre",     cl:"villamitre",    pj:3,pg:2,pe:1,pp:0,gf:14, gc:7, pts:7},
         {n:"Liniers",         cl:"liniers",       pj:4,pg:2,pe:1,pp:1,gf:13, gc:9, pts:7},
         {n:"La Esperanza",    cl:"laesperanza",   pj:4,pg:2,pe:1,pp:1,gf:16, gc:14, pts:7},
         {n:"La Estación",     cl:"laestacion",    pj:4,pg:2,pe:1,pp:1,gf:12, gc:11, pts:7},
         {n:"San Francisco",   cl:"sanfrancisco",  pj:4,pg:2,pe:0,pp:2,gf:8, gc:17, pts:6},
-        {n:"Pacífico BB",     cl:"pacificobb",    pj:3,pg:1,pe:1,pp:1,gf:13, gc:12, pts:4},
+        {n:"Pacífico BB",     cl:"pacificobb",    pj:4,pg:1,pe:1,pp:2,gf:18, gc:20, pts:4},
         {n:"Tiro Federal",    cl:"tirofederal",   pj:3,pg:1,pe:1,pp:1,gf:6, gc:8, pts:4},
         {n:"Catamarca",       cl:"catamarca",     pj:3,pg:1,pe:0,pp:2,gf:12, gc:15, pts:3},
         {n:"Dublin",          cl:"dublin",        pj:4,pg:1,pe:0,pp:3,gf:7, gc:16, pts:3},
