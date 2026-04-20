@@ -1332,9 +1332,9 @@ function generarTablaFederal() {
     });
     
     const mejoresQuintos = [
-        { nombre: "Tucumán Central", pj:3, pg:2, pe:0, pp:1, gf:3, gc:1 },
-        { nombre: "Sol de Mayo", pj:4, pg:1, pe:1, pp:2, gf:3, gc:2 },
-        { nombre: "San Martín (Mza)", pj:3, pg:1, pe:1, pp:1, gf:1, gc:3 }
+        { nombre: "Boca Unidos", pj:5, pg:2, pe:1, pp:2, gf:9, gc:8 },
+        { nombre: "Kimberley", pj:5, pg:1, pe:3, pp:1, gf:1, gc:1 },
+        { nombre: "Huracán Las Heras", pj:5, pg:1, pe:3, pp:1, gf:2, gc:3 }
     ];
     html += `</tbody></table><div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>33</b> tras finalizar la fecha <b>5</b></div>`;
     html += `<div class="header-t">MEJORES 5° (ZONAS 2, 3 Y 4)</div>`;
