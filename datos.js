@@ -1456,10 +1456,10 @@ const BD_FORMATIVAS_POS = {
             {n:"Olimpo",        cl:"olimpo",       pj:30,pg:18,pe:3,pp:9,pts:57},
             {n:"Tiro Federal",  cl:"tirofederal",  pj:30,pg:14,pe:7,pp:9,pts:49},
             {n:"Rosario PB",    cl:"rosariopb",    pj:29,pg:13,pe:5,pp:11,pts:44},
-            {n:"Liniers B",     cl:"liniersb",     pj:30,pg:11,pe:4,pp:15,pts:37},
+            {n:"Liniers B",     cl:"liniersb",     pj:30,pg:10,pe:4,pp:16,pts:34},
+            {n:"Sporting",      cl:"sporting",     pj:30,pg:8,pe:1,pp:21,pts:25},
             {n:"La Armonía",    cl:"laarmonia",    pj:30,pg:7,pe:3,pp:20,pts:24},
             {n:"Bella Vista",   cl:"bellavista",   pj:30,pg:6,pe:6,pp:18,pts:24},
-            {n:"Sporting",      cl:"sporting",     pj:30,pg:7,pe:1,pp:21,pts:22},
             {n:"San Francisco", cl:"sanfrancisco", pj:30,pg:6,pe:4,pp:20,pts:22}
         ],
         cats: [
@@ -1510,10 +1510,10 @@ const BD_FORMATIVAS_POS = {
             {n:"Olimpo",        cl:"olimpo",       pj:30,pg:18,pe:3,pp:9,pts:57},
             {n:"Tiro Federal",  cl:"tirofederal",  pj:30,pg:14,pe:7,pp:9,pts:49},
             {n:"Rosario PB",    cl:"rosariopb",    pj:29,pg:13,pe:5,pp:11,pts:44},
-            {n:"Liniers B",     cl:"liniersb",     pj:30,pg:11,pe:4,pp:15,pts:37},
+            {n:"Liniers B",     cl:"liniersb",     pj:30,pg:10,pe:4,pp:16,pts:34},
+            {n:"Sporting",      cl:"sporting",     pj:30,pg:8,pe:1,pp:21,pts:25},
             {n:"La Armonía",    cl:"laarmonia",    pj:30,pg:7,pe:3,pp:20,pts:24},
             {n:"Bella Vista",   cl:"bellavista",   pj:30,pg:6,pe:6,pp:18,pts:24},
-            {n:"Sporting",      cl:"sporting",     pj:30,pg:7,pe:1,pp:21,pts:22},
             {n:"San Francisco", cl:"sanfrancisco", pj:30,pg:6,pe:4,pp:20,pts:22}
         ],
         cats: [
@@ -1535,10 +1535,10 @@ const BD_FORMATIVAS_POS = {
                 {n:"Rosario PB",    cl:"rosariopb",    pj:5,pg:3,pe:1,pp:1,pts:10},
                 {n:"Villa Mitre",   cl:"villamitre",   pj:5,pg:3,pe:1,pp:1,pts:10},
                 {n:"Olimpo",        cl:"olimpo",       pj:5,pg:3,pe:1,pp:1,pts:10},
-                {n:"Liniers B",     cl:"liniersb",     pj:5,pg:2,pe:2,pp:1,pts:8},
+                {n:"Liniers B",     cl:"liniersb",     pj:5,pg:1,pe:2,pp:2,pts:5},
+                {n:"Sporting",      cl:"sporting",     pj:5,pg:1,pe:1,pp:3,pts:4},
                 {n:"Bella Vista",   cl:"bellavista",   pj:5,pg:1,pe:0,pp:4,pts:3},
                 {n:"San Francisco", cl:"sanfrancisco", pj:5,pg:0,pe:1,pp:4,pts:1},
-                {n:"Sporting",      cl:"sporting",     pj:5,pg:0,pe:1,pp:4,pts:1},
                 {n:"La Armonía",    cl:"laarmonia",    pj:5,pg:0,pe:1,pp:4,pts:1}
             ]},
             { nombre: "9na División (2013)", equipos: [
