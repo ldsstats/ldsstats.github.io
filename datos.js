@@ -1449,7 +1449,7 @@ const BD_FORMATIVAS = {
 const BD_FORMATIVAS_POS = {
 
     "juveniles-a": {
-        act: "Lun 20/04 — 08:00 hs — Extraoficial",
+        act: "Mar 21/04 — 21:20 hs — Extraoficial",
         general: [
             {n:"Liniers",       cl:"liniers",      pj:30,pg:24,pe:3,pp:3,pts:76},
             {n:"Villa Mitre",   cl:"villamitre",   pj:30,pg:24,pe:3,pp:3,pts:75},
@@ -1503,7 +1503,7 @@ const BD_FORMATIVAS_POS = {
     },
 
     "menores-a": {
-        act: "Lun 20/04 — 08:00 hs — Extraoficial",
+        act: "Mar 21/04 — 21:20 hs — Extraoficial",
         general: [
             {n:"Liniers",       cl:"liniers",      pj:30,pg:24,pe:3,pp:3,pts:76},
             {n:"Villa Mitre",   cl:"villamitre",   pj:30,pg:24,pe:3,pp:3,pts:75},
