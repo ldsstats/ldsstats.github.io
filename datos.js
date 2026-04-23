@@ -246,7 +246,7 @@ const BD_FIXTURES_FUTSAL_RESERVA = [
     ]},
     { fecha: 5, partidos: [
         {l:"Liniers",         v:"La Estación",     gl:3, gv:3},
-        {l:"Dep. Futsal",     v:"Comercial",       gl:null, gv:null},
+        {l:"Dep. Futsal",     v:"Comercial",       gl:4, gv:4},
         {l:"San Francisco",   v:"Villa Mitre",     gl:null, gv:null},
         {l:"Huracán",         v:"La Esperanza",    gl:null, gv:null},
         {l:"Petroquímicos",   v:"Los 3 Chiflados", gl:null, gv:null},
@@ -717,7 +717,24 @@ const BD_FIXTURES_FUTSAL = [
         },
     ]},
     { fecha: 5, partidos: [
-        {l:"Dep. Futsal",     v:"Comercial",       gl:1, gv:7, dia:"Miér 22/04", hora:"22:00"},
+        {
+            l:"Dep. Futsal",
+            v:"Comercial",
+            gl:1,
+            gv:8,
+            dia:"Miér 22/03",
+            hora:"22:00",
+            goles_l:[
+            ],
+            goles_v:[
+                "Ricardo Lagos (2)",
+                "Leonel Torres (2)",
+                "Juan Llanos",
+                "Gonzalo Schwam",
+                "Cristian Masson",
+                "Jonathan Kippes",
+            ],
+        },
         {
             l:"Liniers",
             v:"La Estación",
@@ -729,6 +746,12 @@ const BD_FIXTURES_FUTSAL = [
                 "Marcelo De Lucía (2)"
             ],
             goles_v:[
+                "Bernabé Storni (2)",
+                "Jonathan Carunchio",
+                "Gastón Ackermann",
+                "Eric Martin",
+                "Gastón Aravena",
+                "Diego Romano"
             ],
         },
         {l:"Dublin",          v:"Tiro Federal",    gl:null, gv:null, dia:"Jue 23/04", hora:"22:00"},
@@ -1187,7 +1210,7 @@ function generarHome() {
     const agenda = [
         { id: "2026-04-22", label: "MIÉR 22/04", torneos: [
             { nombre: "FUTSAL", cat: "futsal", partidos: [
-                {l:"Dep. Futsal", v:"Comercial", hora:"22:00", nota:"En La Curtiembre", gl:1, gv:7},
+                {l:"Dep. Futsal", v:"Comercial", hora:"22:00", nota:"En La Curtiembre", gl:1, gv:8},
                 {l:"Liniers", v:"La Estación", hora:"22:00", nota:"En Don Bosco", gl:2, gv:7}
             ]},
         ]},
@@ -15269,7 +15292,7 @@ const BD_POS_FUTSAL = {
     principal: [
         {n:"La Estación",     cl:"laestacion",    pj:5,pg:5,pe:0,pp:0,gf:30, gc:8, pts:15},
         {n:"Villa Mitre",     cl:"villamitre",    pj:4,pg:4,pe:0,pp:0,gf:20, gc:7, pts:12},
-        {n:"Comercial",       cl:"comercial",     pj:5,pg:3,pe:2,pp:0,gf:28, gc:12, pts:11},
+        {n:"Comercial",       cl:"comercial",     pj:5,pg:3,pe:2,pp:0,gf:29, gc:12, pts:11},
         {n:"La Esperanza",    cl:"laesperanza",   pj:4,pg:3,pe:0,pp:1,gf:16, gc:12, pts:9},
         {n:"Petroquímicos",   cl:"petroquimicos", pj:4,pg:2,pe:1,pp:1,gf:24,gc:16, pts:7},
         {n:"Los 3 Chiflados", cl:"los3chiflados", pj:4,pg:2,pe:1,pp:1,gf:23, gc:15, pts:7},
@@ -15277,7 +15300,7 @@ const BD_POS_FUTSAL = {
         {n:"Tiro Federal",    cl:"tirofederal",   pj:4,pg:2,pe:0,pp:2,gf:8, gc:15, pts:6},
         {n:"San Francisco",   cl:"sanfrancisco",  pj:4,pg:1,pe:2,pp:1,gf:14, gc:11, pts:5},
         {n:"Dublin",          cl:"dublin",        pj:4,pg:1,pe:0,pp:3,gf:7, gc:10, pts:3},
-        {n:"Dep. Futsal",     cl:"depfutsal",     pj:5,pg:1,pe:0,pp:4,gf:11, gc:27, pts:3},
+        {n:"Dep. Futsal",     cl:"depfutsal",     pj:5,pg:1,pe:0,pp:4,gf:11, gc:28, pts:3},
         {n:"Catamarca",       cl:"catamarca",     pj:4,pg:0,pe:1,pp:3,gf:7, gc:19, pts:1},
         {n:"Pacífico BB",     cl:"pacificobb",    pj:4,pg:0,pe:0,pp:4,gf:10, gc:21, pts:0},
         {n:"Huracán",         cl:"huracan",       pj:4,pg:0,pe:0,pp:4,gf:13, gc:36,pts:0}
@@ -15295,8 +15318,8 @@ const BD_POS_FUTSAL = {
         {n:"Tiro Federal",    cl:"tirofederal",   pj:4,pg:1,pe:1,pp:2,gf:8, gc:11, pts:4},
         {n:"Dublin",          cl:"dublin",        pj:4,pg:1,pe:0,pp:3,gf:7, gc:16, pts:3},
         {n:"Huracán",         cl:"huracan",       pj:4,pg:1,pe:0,pp:3,gf:3, gc:17, pts:3},
-        {n:"Comercial",       cl:"comercial",     pj:4,pg:0,pe:1,pp:3,gf:12, gc:15, pts:1},
-        {n:"Dep. Futsal",     cl:"depfutsal",     pj:4,pg:0,pe:0,pp:4,gf:9, gc:26, pts:0}
+        {n:"Comercial",       cl:"comercial",     pj:5,pg:0,pe:2,pp:3,gf:16, gc:19, pts:2},
+        {n:"Dep. Futsal",     cl:"depfutsal",     pj:5,pg:0,pe:1,pp:4,gf:13, gc:30, pts:1}
     ]
 };
 function generarSub15Fem() {
@@ -15464,16 +15487,17 @@ const BD_GOLEADORES_FUTSAL = [
         { nombre: "Andrés Guillen",  goles: 1 },
         { nombre: "Franco Freites",  goles: 1 }
     ]},
-    { club: "La Estación",     clase: "laestacion",    act: "fecha 4",  goleadores: [
-        { nombre: "Diego Romano",        goles: 5 },
-        { nombre: "Bernabé Storni",      goles: 5 },
-        { nombre: "Jonathan Carunchio",  goles: 3 },
+    { club: "La Estación",     clase: "laestacion",    act: "fecha 5",  goleadores: [
+        { nombre: "Bernabé Storni",      goles: 7 },
+        { nombre: "Diego Romano",        goles: 6 },
+        { nombre: "Jonathan Carunchio",  goles: 4 },
+        { nombre: "Gastón Ackermann",   goles: 4 },
         { nombre: "Mariano Sepúlveda",   goles: 3 },
-        { nombre: "Gastón Ackermann",   goles: 3 },
+        { nombre: "Eric Martin",       goles: 2 },
         { nombre: "Esteban Sabán",       goles: 1 },
-        { nombre: "Eric Martin",       goles: 1 },
         { nombre: "Tomás Ceminari",       goles: 1 },
-        { nombre: "Lautaro Gómez",       goles: 1 }
+        { nombre: "Lautaro Gómez",       goles: 1 },
+        { nombre: "Gastón Aravena",       goles: 1 }
     ]},
     { club: "Dep. Futsal",     clase: "depfutsal",     act: "fecha 3, sin datos sin datos de fecha 1 y 2",       goleadores: [
         { nombre: "Facundo Vega",        goles: 2 },
@@ -15491,17 +15515,18 @@ const BD_GOLEADORES_FUTSAL = [
         { nombre: "Fabián Sandoval",  goles: 1 },
         { nombre: "Francisco Colombi",  goles: 1 }
     ]},
-    { club: "Comercial",       clase: "comercial",     act: "fecha 4",  goleadores: [
+    { club: "Comercial",       clase: "comercial",     act: "fecha 5",  goleadores: [
+        { nombre: "Jonathan Kippes",   goles: 5 },
         { nombre: "Alejandro Moreno",  goles: 4 },
-        { nombre: "Jonathan Kippes",   goles: 4 },
+        { nombre: "Ricardo Lagos",     goles: 4 },
         { nombre: "Leandro Weitt",     goles: 3 },
+        { nombre: "Juan Llanos",     goles: 3 },
         { nombre: "Ivo Basich",     goles: 2 },
-        { nombre: "Juan Llanos",     goles: 2 },
-        { nombre: "Ricardo Lagos",     goles: 2 },
+        { nombre: "Leonel Torres",     goles: 2 },
         { nombre: "Agustín Haag",     goles: 1 },
-        { nombre: "Gonzalo Schwam",     goles: 1 },
+        { nombre: "Gonzalo Schwam",     goles: 2 },
         { nombre: "Franco Costa",     goles: 1 },
-        { nombre: "Cristian Masson",     goles: 1 }
+        { nombre: "Cristian Masson",     goles: 2 }
     ]},
     { club: "Pacífico BB",     clase: "pacificobb",    act: null,       goleadores: [] },
     { club: "Los 3 Chiflados", clase: "los3chiflados", act: "fecha 4, sin datos de la fecha 1",  goleadores: [
