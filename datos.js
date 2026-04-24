@@ -247,11 +247,11 @@ const BD_FIXTURES_FUTSAL_RESERVA = [
     { fecha: 5, partidos: [
         {l:"Liniers",         v:"La Estación",     gl:3, gv:3},
         {l:"Dep. Futsal",     v:"Comercial",       gl:4, gv:4},
+        {l:"Huracán",         v:"La Esperanza",    gl:1, gv:3},
+        {l:"Dublin",          v:"Tiro Federal",    gl:1, gv:1},
+        {l:"Catamarca",       v:"Pacífico BB",     gl:11, gv:1},
         {l:"San Francisco",   v:"Villa Mitre",     gl:null, gv:null},
-        {l:"Huracán",         v:"La Esperanza",    gl:null, gv:null},
-        {l:"Petroquímicos",   v:"Los 3 Chiflados", gl:null, gv:null},
-        {l:"Dublin",          v:"Tiro Federal",    gl:null, gv:null},
-        {l:"Catamarca",       v:"Pacífico BB",     gl:null, gv:null}
+        {l:"Petroquímicos",   v:"Los 3 Chiflados", gl:null, gv:null}
     ]},
     { fecha: 6, partidos: [
         {l:"La Esperanza",    v:"Dep. Futsal",     gl:null, gv:null},
@@ -736,6 +736,21 @@ const BD_FIXTURES_FUTSAL = [
             ],
         },
         {
+            l:"Dublin",
+            v:"Tiro Federal",
+            gl:3,
+            gv:1,
+            dia:"Jue 22/03",
+            hora:"22:00",
+            goles_l:[
+            ],
+            goles_v:[
+                "Matías Gigena",
+                "Agustín Miguel",
+                "Matías Palma"
+            ],
+        },
+        {
             l:"Liniers",
             v:"La Estación",
             gl:2,
@@ -754,9 +769,8 @@ const BD_FIXTURES_FUTSAL = [
                 "Diego Romano"
             ],
         },
-        {l:"Dublin",          v:"Tiro Federal",    gl:null, gv:null, dia:"Jue 23/04", hora:"22:00"},
-        {l:"Catamarca",       v:"Pacífico BB",     gl:null, gv:null, dia:"Jue 23/04", hora:"22:00"},
-        {l:"Huracán",         v:"La Esperanza",    gl:null, gv:null, dia:"Jue 23/04", hora:"22:30"},
+        {l:"Catamarca",       v:"Pacífico BB",     gl:2, gv:6, dia:"Jue 23/04", hora:"22:00"},
+        {l:"Huracán",         v:"La Esperanza",    gl:1, gv:5, dia:"Jue 23/04", hora:"22:30"},
         {l:"San Francisco",   v:"Villa Mitre",     gl:null, gv:null, dia:"Vie 24/04", hora:"22:00"},
         {l:"Petroquímicos",   v:"Los 3 Chiflados", gl:null, gv:null, dia:"Vie 24/04", hora:"22:00"}
     ]},
@@ -1188,7 +1202,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 5).partidos.forEach(p 
 });
 
 
-let diaSeleccionadoHome = "2026-04-23"; 
+let diaSeleccionadoHome = "2026-04-24"; 
 
 function seleccionarDiaHome(dia) {
     diaSeleccionadoHome = dia;
@@ -1216,9 +1230,9 @@ function generarHome() {
         ]},
         { id: "2026-04-23", label: "JUE 23/04", torneos: [
             { nombre: "FUTSAL", cat: "futsal", partidos: [
-                {l:"Catamarca", v:"Pacífico BB", hora:"22:00", nota:"En Petroquímicos"},
-                {l:"Dublin", v:"Tiro Federal", hora:"22:00", nota:"En Don Bosco"},
-                {l:"Huracán", v:"La Esperanza", hora:"22:30", nota:"En La Estación"}
+                {l:"Catamarca", v:"Pacífico BB", hora:"22:00", nota:"En Petroquímicos", gl:2, gv:6},
+                {l:"Dublin", v:"Tiro Federal", hora:"22:00", nota:"En Don Bosco", gl:3, gv:1},
+                {l:"Huracán", v:"La Esperanza", hora:"22:30", nota:"En La Estación", gl:1, gv:5}
             ]},
         ]},
         { id: "2026-04-24", label: "VIE 24/04", torneos: [
@@ -15292,32 +15306,32 @@ const BD_POS_FUTSAL = {
     principal: [
         {n:"La Estación",     cl:"laestacion",    pj:5,pg:5,pe:0,pp:0,gf:30, gc:8, pts:15},
         {n:"Villa Mitre",     cl:"villamitre",    pj:4,pg:4,pe:0,pp:0,gf:20, gc:7, pts:12},
+        {n:"La Esperanza",    cl:"laesperanza",   pj:5,pg:4,pe:0,pp:1,gf:21, gc:13, pts:12},
         {n:"Comercial",       cl:"comercial",     pj:5,pg:3,pe:2,pp:0,gf:29, gc:12, pts:11},
-        {n:"La Esperanza",    cl:"laesperanza",   pj:4,pg:3,pe:0,pp:1,gf:16, gc:12, pts:9},
         {n:"Petroquímicos",   cl:"petroquimicos", pj:4,pg:2,pe:1,pp:1,gf:24,gc:16, pts:7},
         {n:"Los 3 Chiflados", cl:"los3chiflados", pj:4,pg:2,pe:1,pp:1,gf:23, gc:15, pts:7},
         {n:"Liniers",         cl:"liniers",       pj:5,pg:1,pe:3,pp:1,gf:19, gc:18, pts:6},
-        {n:"Tiro Federal",    cl:"tirofederal",   pj:4,pg:2,pe:0,pp:2,gf:8, gc:15, pts:6},
+        {n:"Dublin",          cl:"dublin",        pj:5,pg:2,pe:0,pp:3,gf:10, gc:11, pts:6},
+        {n:"Tiro Federal",    cl:"tirofederal",   pj:5,pg:2,pe:0,pp:3,gf:9, gc:18, pts:6},
         {n:"San Francisco",   cl:"sanfrancisco",  pj:4,pg:1,pe:2,pp:1,gf:14, gc:11, pts:5},
-        {n:"Dublin",          cl:"dublin",        pj:4,pg:1,pe:0,pp:3,gf:7, gc:10, pts:3},
+        {n:"Pacífico BB",     cl:"pacificobb",    pj:5,pg:1,pe:0,pp:4,gf:16, gc:23, pts:3},
         {n:"Dep. Futsal",     cl:"depfutsal",     pj:5,pg:1,pe:0,pp:4,gf:11, gc:28, pts:3},
-        {n:"Catamarca",       cl:"catamarca",     pj:4,pg:0,pe:1,pp:3,gf:7, gc:19, pts:1},
-        {n:"Pacífico BB",     cl:"pacificobb",    pj:4,pg:0,pe:0,pp:4,gf:10, gc:21, pts:0},
-        {n:"Huracán",         cl:"huracan",       pj:4,pg:0,pe:0,pp:4,gf:13, gc:36,pts:0}
+        {n:"Catamarca",       cl:"catamarca",     pj:5,pg:0,pe:1,pp:4,gf:9, gc:25, pts:1},
+        {n:"Huracán",         cl:"huracan",       pj:5,pg:0,pe:0,pp:5,gf:14, gc:41,pts:0}
     ],
     reserva: [
         {n:"Los 3 Chiflados", cl:"los3chiflados", pj:4,pg:4,pe:0,pp:0,gf:23, gc:1, pts:12},
         {n:"Petroquímicos",   cl:"petroquimicos", pj:4,pg:3,pe:1,pp:0,gf:29, gc:9, pts:10},
         {n:"Villa Mitre",     cl:"villamitre",    pj:4,pg:3,pe:1,pp:0,gf:22, gc:12, pts:10},
+        {n:"La Esperanza",    cl:"laesperanza",   pj:5,pg:3,pe:1,pp:1,gf:19, gc:15, pts:10},
+        {n:"Catamarca",       cl:"catamarca",     pj:5,pg:3,pe:0,pp:2,gf:26, gc:18, pts:9},
         {n:"Liniers",         cl:"liniers",       pj:5,pg:2,pe:2,pp:1,gf:16, gc:12, pts:8},
         {n:"La Estación",     cl:"laestacion",    pj:5,pg:2,pe:2,pp:1,gf:15, gc:14, pts:8},
-        {n:"La Esperanza",    cl:"laesperanza",   pj:4,pg:2,pe:1,pp:1,gf:16, gc:14, pts:7},
         {n:"San Francisco",   cl:"sanfrancisco",  pj:4,pg:2,pe:0,pp:2,gf:8, gc:17, pts:6},
-        {n:"Catamarca",       cl:"catamarca",     pj:4,pg:2,pe:0,pp:2,gf:15, gc:17, pts:6},
-        {n:"Pacífico BB",     cl:"pacificobb",    pj:4,pg:1,pe:1,pp:2,gf:18, gc:20, pts:4},
-        {n:"Tiro Federal",    cl:"tirofederal",   pj:4,pg:1,pe:1,pp:2,gf:8, gc:11, pts:4},
-        {n:"Dublin",          cl:"dublin",        pj:4,pg:1,pe:0,pp:3,gf:7, gc:16, pts:3},
-        {n:"Huracán",         cl:"huracan",       pj:4,pg:1,pe:0,pp:3,gf:3, gc:17, pts:3},
+        {n:"Tiro Federal",    cl:"tirofederal",   pj:5,pg:1,pe:2,pp:2,gf:9, gc:12, pts:5},
+        {n:"Dublin",          cl:"dublin",        pj:5,pg:1,pe:1,pp:3,gf:8, gc:17, pts:4},
+        {n:"Pacífico BB",     cl:"pacificobb",    pj:5,pg:1,pe:1,pp:3,gf:19, gc:31, pts:4},
+        {n:"Huracán",         cl:"huracan",       pj:5,pg:1,pe:0,pp:4,gf:4, gc:20, pts:3},
         {n:"Comercial",       cl:"comercial",     pj:5,pg:0,pe:2,pp:3,gf:16, gc:19, pts:2},
         {n:"Dep. Futsal",     cl:"depfutsal",     pj:5,pg:0,pe:1,pp:4,gf:13, gc:30, pts:1}
     ]
@@ -15455,13 +15469,13 @@ if ((p.goles_l && p.goles_l.length) || (p.goles_v && p.goles_v.length)) {
 }
 
 const BD_GOLEADORES_FUTSAL = [
-    { club: "Dublin",          clase: "dublin",        act: "fecha 2",  goleadores: [
-        { nombre: "Agustín Miguel",      goles: 2 },
+    { club: "Dublin",          clase: "dublin",        act: "fecha 5",  goleadores: [
+        { nombre: "Agustín Miguel",      goles: 3 },
+        { nombre: "Matías Palma",        goles: 2 },
+        { nombre: "Matías Gigena",       goles: 2 },
         { nombre: "Rodrigo Gómez",       goles: 1 },
-        { nombre: "Matías Palma",        goles: 1 },
         { nombre: "Nicolás San Martín",  goles: 1 },
-        { nombre: "Facundo Miranda",     goles: 1 },
-        { nombre: "Matías Gigena",       goles: 1 }
+        { nombre: "Facundo Miranda",     goles: 1 }
     ]},
     { club: "Villa Mitre",     clase: "villamitre",    act: "fecha 4, sin datos de fechas 1, 2 y 3",       goleadores: [
         { nombre: "Agustín Pullini",      goles: 2 },
