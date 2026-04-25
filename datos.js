@@ -250,7 +250,7 @@ const BD_FIXTURES_FUTSAL_RESERVA = [
         {l:"Huracán",         v:"La Esperanza",    gl:1, gv:3},
         {l:"Dublin",          v:"Tiro Federal",    gl:1, gv:1},
         {l:"Catamarca",       v:"Pacífico BB",     gl:11, gv:1},
-        {l:"San Francisco",   v:"Villa Mitre",     gl:null, gv:null},
+        {l:"San Francisco",   v:"Villa Mitre",     gl:2, gv:4},
         {l:"Petroquímicos",   v:"Los 3 Chiflados", gl:null, gv:null}
     ]},
     { fecha: 6, partidos: [
@@ -771,7 +771,20 @@ const BD_FIXTURES_FUTSAL = [
         },
         {l:"Catamarca",       v:"Pacífico BB",     gl:2, gv:6, dia:"Jue 23/04", hora:"22:00"},
         {l:"Huracán",         v:"La Esperanza",    gl:1, gv:5, dia:"Jue 23/04", hora:"22:30"},
-        {l:"San Francisco",   v:"Villa Mitre",     gl:null, gv:null, dia:"Vie 24/04", hora:"22:00"},
+        {
+            l:"San Francisco",
+            v:"Villa Mitre",
+            gl:2,
+            gv:2,
+            dia:"Vier 24/03",
+            hora:"22:00",
+            goles_l:[
+                "Thiago González",
+                "Federico Schneider"
+                ],
+            goles_v:[
+            ],
+        },
         {l:"Petroquímicos",   v:"Los 3 Chiflados", gl:null, gv:null, dia:"Vie 24/04", hora:"22:00"}
     ]},
     { fecha: 6, partidos: [
@@ -1202,7 +1215,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 5).partidos.forEach(p 
 });
 
 
-let diaSeleccionadoHome = "2026-04-24"; 
+let diaSeleccionadoHome = "2026-04-25"; 
 
 function seleccionarDiaHome(dia) {
     diaSeleccionadoHome = dia;
@@ -1238,7 +1251,7 @@ function generarHome() {
         { id: "2026-04-24", label: "VIE 24/04", torneos: [
             { nombre: "FUTSAL", cat: "futsal", partidos: [
                 {l:"Petroquímicos", v:"Los 3 Chiflados", hora:"22:00", nota:"En Petroquímicos"},
-                {l:"San Francisco", v:"Villa Mitre", hora:"22:30", nota:"En Tiro Federal"}
+                {l:"San Francisco", v:"Villa Mitre", hora:"22:30", nota:"En Tiro Federal", gl:2, gv:2}
             ]},
         ]},
         { id: "2026-04-25", label: "SÁB 25/04", torneos: [
@@ -15331,29 +15344,29 @@ function generarSub() {
 const BD_POS_FUTSAL = {
     principal: [
         {n:"La Estación",     cl:"laestacion",    pj:5,pg:5,pe:0,pp:0,gf:30, gc:8, pts:15},
-        {n:"Villa Mitre",     cl:"villamitre",    pj:4,pg:4,pe:0,pp:0,gf:20, gc:7, pts:12},
+        {n:"Villa Mitre",     cl:"villamitre",    pj:5,pg:4,pe:1,pp:0,gf:22, gc:9, pts:13},
         {n:"La Esperanza",    cl:"laesperanza",   pj:5,pg:4,pe:0,pp:1,gf:21, gc:13, pts:12},
         {n:"Comercial",       cl:"comercial",     pj:5,pg:3,pe:2,pp:0,gf:29, gc:12, pts:11},
         {n:"Petroquímicos",   cl:"petroquimicos", pj:4,pg:2,pe:1,pp:1,gf:24,gc:16, pts:7},
         {n:"Los 3 Chiflados", cl:"los3chiflados", pj:4,pg:2,pe:1,pp:1,gf:23, gc:15, pts:7},
+        {n:"San Francisco",   cl:"sanfrancisco",  pj:5,pg:1,pe:3,pp:1,gf:15, gc:12, pts:6},
         {n:"Liniers",         cl:"liniers",       pj:5,pg:1,pe:3,pp:1,gf:19, gc:18, pts:6},
         {n:"Dublin",          cl:"dublin",        pj:5,pg:2,pe:0,pp:3,gf:10, gc:11, pts:6},
         {n:"Tiro Federal",    cl:"tirofederal",   pj:5,pg:2,pe:0,pp:3,gf:9, gc:18, pts:6},
-        {n:"San Francisco",   cl:"sanfrancisco",  pj:4,pg:1,pe:2,pp:1,gf:14, gc:11, pts:5},
         {n:"Pacífico BB",     cl:"pacificobb",    pj:5,pg:1,pe:0,pp:4,gf:16, gc:23, pts:3},
         {n:"Dep. Futsal",     cl:"depfutsal",     pj:5,pg:1,pe:0,pp:4,gf:11, gc:28, pts:3},
         {n:"Catamarca",       cl:"catamarca",     pj:5,pg:0,pe:1,pp:4,gf:9, gc:25, pts:1},
         {n:"Huracán",         cl:"huracan",       pj:5,pg:0,pe:0,pp:5,gf:14, gc:41,pts:0}
     ],
     reserva: [
+        {n:"Villa Mitre",     cl:"villamitre",    pj:5,pg:4,pe:1,pp:0,gf:26, gc:14, pts:13},
         {n:"Los 3 Chiflados", cl:"los3chiflados", pj:4,pg:4,pe:0,pp:0,gf:23, gc:1, pts:12},
         {n:"Petroquímicos",   cl:"petroquimicos", pj:4,pg:3,pe:1,pp:0,gf:29, gc:9, pts:10},
-        {n:"Villa Mitre",     cl:"villamitre",    pj:4,pg:3,pe:1,pp:0,gf:22, gc:12, pts:10},
         {n:"La Esperanza",    cl:"laesperanza",   pj:5,pg:3,pe:1,pp:1,gf:19, gc:15, pts:10},
         {n:"Catamarca",       cl:"catamarca",     pj:5,pg:3,pe:0,pp:2,gf:26, gc:18, pts:9},
         {n:"Liniers",         cl:"liniers",       pj:5,pg:2,pe:2,pp:1,gf:16, gc:12, pts:8},
         {n:"La Estación",     cl:"laestacion",    pj:5,pg:2,pe:2,pp:1,gf:15, gc:14, pts:8},
-        {n:"San Francisco",   cl:"sanfrancisco",  pj:4,pg:2,pe:0,pp:2,gf:8, gc:17, pts:6},
+        {n:"San Francisco",   cl:"sanfrancisco",  pj:5,pg:2,pe:0,pp:3,gf:10, gc:21, pts:6},
         {n:"Tiro Federal",    cl:"tirofederal",   pj:5,pg:1,pe:2,pp:2,gf:9, gc:12, pts:5},
         {n:"Dublin",          cl:"dublin",        pj:5,pg:1,pe:1,pp:3,gf:8, gc:17, pts:4},
         {n:"Pacífico BB",     cl:"pacificobb",    pj:5,pg:1,pe:1,pp:3,gf:19, gc:31, pts:4},
@@ -15513,12 +15526,12 @@ const BD_GOLEADORES_FUTSAL = [
         { nombre: "Marcelo Aguirre",     goles: 1 },
         { nombre: "Rocco Iervassi",     goles: 1 }
     ]},
-    { club: "San Francisco",   clase: "sanfrancisco",  act: "fecha 3",  goleadores: [
+    { club: "San Francisco",   clase: "sanfrancisco",  act: "fecha 5, a la espera de sanción de la fecha 4",  goleadores: [
         { nombre: "Daniel Ojeda",        goles: 5 },
-        { nombre: "Federico Schneider",  goles: 4 },
+        { nombre: "Federico Schneider",  goles: 5 },
+        { nombre: "Thiago González",     goles: 2 },
         { nombre: "Jeremías Jerez",      goles: 1 },
         { nombre: "Fernando González",   goles: 1 },
-        { nombre: "Thiago González",     goles: 1 },
         { nombre: "Joaquín Miranda",     goles: 1 }
     ]},
     { club: "Catamarca",       clase: "catamarca",     act: "fecha 1",  goleadores: [
