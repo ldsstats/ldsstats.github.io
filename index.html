@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>LdS Stats - 2026</title>
-    <link rel="stylesheet" href="style.css?v=7">
+    <link rel="stylesheet" href="style.css?v=77">
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#111111">
     <!-- Google Analytics -->
@@ -32,7 +32,7 @@
     z-index: 999;
     pointer-events: none;
     letter-spacing: 0.3px;
-">🕐 Última actualización: Sáb 25/4 23:30hs</div>
+">🕐 Última actualización: Dom 26/4 18:25hs</div>
 
 <div id="container-principal">
     <div id="logo-header"><img src="au11.png" style="height:80px;" alt="LdS Stats"></div>
@@ -160,15 +160,15 @@
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-<script src="datos.js?v=7"></script>
+<script src="datos.js?v=77"></script>
 <script>
     let estado = { torneo: 'home', categoria: '', fecha: 1 };
     let estadoAnterior = { torneo: 'home', categoria: '', fecha: 1 };
 
     // Última actualización por sección — modificar según corresponda
     const ULTIMA_ACT = {
-        default:        "Sáb 25/4 23:30hs",
-        home:        "Sáb 25/4 23:30hs",
+        default:        "Dom 26/4 18:25hs",
+        home:        "Dom 26/4 18:25hs",
         apertura_oficial:   "Sáb 25/4 23:30hs",
         historial:   "Sáb 25/4 23:30hs",
         goleadores_oficial:   "Sáb 25/4 23:30hs",
@@ -178,12 +178,12 @@
         goleadores_promocional:   "Sáb 25/4 23:30hs",
         arqueros_promocional:   "Sáb 25/4 23:30hs",
         reserva_promocional:   "Dom 19/04 — 21:00hs",
-        posiciones_federala:   "Sáb 25/4 23:30hs",
-        goleadores_federala:   "Dom 19/04 — 21:00hs",
+        posiciones_federala:   "Dom 26/4 18:25hs",
+        goleadores_federala:   "Dom 26/4 18:25hs",
         sub131517:   "Jue 16/04 — 01:30hs",
         copa_argentina:   "Dom 29/3 — 21:00hs",
         apertura_femenino:   "Sáb 25/4 23:30hs",
-        goleadores_femenino:   "Sáb 25/4 23:30hs",
+        goleadores_femenino:   "Dom 26/4 18:25hs",
         reserva_femenino:   "Sáb 25/4 23:30hs",
         torneo2026_segundafemenino:   "Sáb 25/4 23:30hs",
         goleadores_segundafemenino:   "Sáb 25/4 23:30hs",
@@ -275,7 +275,7 @@
         }
         estado.torneo = tor;
         estado.categoria = cat;
-        estado.fecha = (tor === 'apertura' && (cat === 'oficial' || cat === 'promocional')) ? 7 : (tor === 'posiciones' && cat === 'federala') ? 6 : (tor === 'apertura' && cat === 'femenino') ? 6 : (tor === 'torneo2026' && cat === 'segundafemenino') ? 5 : (tor === 'futsal') ? 5 : (tor === 'futsalreserva') ? 5 : (tor === 'sub15fem') ? 4 : 1; 
+        estado.fecha = (tor === 'apertura' && (cat === 'oficial' || cat === 'promocional')) ? 7 : (tor === 'posiciones' && cat === 'federala') ? 6 : (tor === 'apertura' && cat === 'femenino') ? 6 : (tor === 'torneo2026' && cat === 'segundafemenino') ? 6 : (tor === 'futsal') ? 5 : (tor === 'futsalreserva') ? 5 : (tor === 'sub15fem') ? 4 : 1; 
         actualizarVista();
         document.documentElement.scrollTop = 0;
         document.body.scrollTop = 0;
