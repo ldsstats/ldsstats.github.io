@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>LdS Stats - 2026</title>
-    <link rel="stylesheet" href="style.css?v=77">
+    <link rel="stylesheet" href="style.css?v=7">
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#111111">
     <!-- Google Analytics -->
@@ -32,7 +32,7 @@
     z-index: 999;
     pointer-events: none;
     letter-spacing: 0.3px;
-">🕐 Última actualización: Sáb 25/4 08:00hs</div>
+">🕐 Última actualización: Sáb 25/4 23:30hs</div>
 
 <div id="container-principal">
     <div id="logo-header"><img src="au11.png" style="height:80px;" alt="LdS Stats"></div>
@@ -160,39 +160,39 @@
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-<script src="datos.js?v=77"></script>
+<script src="datos.js?v=7"></script>
 <script>
     let estado = { torneo: 'home', categoria: '', fecha: 1 };
     let estadoAnterior = { torneo: 'home', categoria: '', fecha: 1 };
 
     // Última actualización por sección — modificar según corresponda
     const ULTIMA_ACT = {
-        default:        "Sáb 25/4 08:00hs",
-        home:        "Sáb 25/4 08:00hs",
-        apertura_oficial:   "Jue 23/04 — 08:00hs",
-        historial:   "Dom 19/04 — 21:00hs",
-        goleadores_oficial:   "Dom 19/04 — 21:00hs",
-        arqueros_oficial:   "Dom 19/04 — 21:00hs",
+        default:        "Sáb 25/4 23:30hs",
+        home:        "Sáb 25/4 23:30hs",
+        apertura_oficial:   "Sáb 25/4 23:30hs",
+        historial:   "Sáb 25/4 23:30hs",
+        goleadores_oficial:   "Sáb 25/4 23:30hs",
+        arqueros_oficial:   "Sáb 25/4 23:30hs",
         reserva_oficial:   "Dom 19/04 — 21:00hs",
-        apertura_promocional:   "Jue 23/04 — 08:00hs",
-        goleadores_promocional:   "Dom 19/04 — 21:00hs",
-        arqueros_promocional:   "Dom 19/04 — 21:00hs",
+        apertura_promocional:   "Sáb 25/4 23:30hs",
+        goleadores_promocional:   "Sáb 25/4 23:30hs",
+        arqueros_promocional:   "Sáb 25/4 23:30hs",
         reserva_promocional:   "Dom 19/04 — 21:00hs",
-        posiciones_federala:   "Miér 22/04 — 17:00hs",
+        posiciones_federala:   "Sáb 25/4 23:30hs",
         goleadores_federala:   "Dom 19/04 — 21:00hs",
         sub131517:   "Jue 16/04 — 01:30hs",
         copa_argentina:   "Dom 29/3 — 21:00hs",
-        apertura_femenino:   "Vie 24/4 10:30hs",
-        goleadores_femenino:   "Dom 19/04 — 21:00hs",
-        reserva_femenino:   "Dom 19/04 — 21:00hs",
-        torneo2026_segundafemenino:   "Vie 24/4 10:30hs",
-        goleadores_segundafemenino:   "Dom 19/04 — 21:00hs",
-        reserva_segundafemenino:   "Dom 19/04 — 21:00hs",
+        apertura_femenino:   "Sáb 25/4 23:30hs",
+        goleadores_femenino:   "Sáb 25/4 23:30hs",
+        reserva_femenino:   "Sáb 25/4 23:30hs",
+        torneo2026_segundafemenino:   "Sáb 25/4 23:30hs",
+        goleadores_segundafemenino:   "Sáb 25/4 23:30hs",
+        reserva_segundafemenino:   "Sáb 25/4 23:30hs",
         sub15fem:   "Dom 19/04 — 21:00hs",
         torneo2026_senior:   "Miér 1/04 — 00:00hs",
-        futsal:   "Sáb 25/4 08:00hs",
-        futsalgoleadores:   "Sáb 25/4 08:00hs",
-        futsalreserva:   "Sáb 25/4 08:00hs",
+        futsal:   "Sáb 25/4 23:30hs",
+        futsalgoleadores:   "Sáb 25/4 23:30hs",
+        futsalreserva:   "Sáb 25/4 23:30hs",
         quienessomos:   "Miér 1/04 — 00:00hs",
         equiposfuera:   "Dom 22/3 — 1:15hs",
         futsalbonaerense:   "Dom 12/4 — 11:30hs",
@@ -437,7 +437,7 @@
                 cont.innerHTML = generarTablaFederal();
             } else if (estado.torneo === 'reserva') {
                 if (!estado._reservaIniciada || estado._reservaCat !== estado.categoria) {
-                    estado.fecha = (estado.categoria === 'oficial' || estado.categoria === 'promocional') ? 6 : (estado.categoria === 'femenino' || estado.categoria === 'segundafemenino') ? 5 : 1;
+                    estado.fecha = (estado.categoria === 'oficial' || estado.categoria === 'promocional') ? 7 : (estado.categoria === 'femenino' || estado.categoria === 'segundafemenino') ? 6 : 1;
                     estado._reservaIniciada = true;
                     estado._reservaCat = estado.categoria;
                 }
