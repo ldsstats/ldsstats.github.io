@@ -768,7 +768,21 @@ const BD_FIXTURES_FUTSAL = [
             ],
         },
         {l:"Catamarca",       v:"Pacífico BB",     gl:2, gv:6, dia:"Jue 23/04", hora:"22:00"},
-        {l:"Huracán",         v:"La Esperanza",    gl:1, gv:5, dia:"Jue 23/04", hora:"22:30"},
+        {
+            l:"Huracán",
+            v:"La Esperanza",
+            gl:1,
+            gv:5,
+            dia:"Jue 23/03",
+            hora:"22:30",
+            goles_l:[
+                ],
+            goles_v:[
+                "Bruno Decoud (3)",
+                "Bruno Cronier",
+                "Benjamín Martínez"
+            ],
+        },
         {
             l:"San Francisco",
             v:"Villa Mitre",
@@ -15634,13 +15648,13 @@ const BD_GOLEADORES_FUTSAL = [
         { nombre: "Lino Bognanni",     goles: 1 },
         { nombre: "Enzo Biancucci",     goles: 1 }
     ]},
-    { club: "La Esperanza",    clase: "laesperanza",   act: "fecha 4",  goleadores: [
-        { nombre: "Bruno Decoud",         goles: 4 },
+    { club: "La Esperanza",    clase: "laesperanza",   act: "fecha 5",  goleadores: [
+        { nombre: "Bruno Decoud",         goles: 7 },
         { nombre: "Rodrigo Decoud",       goles: 3 },
+        { nombre: "Benjamín Martínez",    goles: 3 },
+        { nombre: "Bruno Cronier",        goles: 3 },
         { nombre: "Jesús Abdala",         goles: 2 },
         { nombre: "Alexis Guiñez",        goles: 2 },
-        { nombre: "Benjamín Martínez",    goles: 2 },
-        { nombre: "Bruno Cronier",        goles: 2 },
         { nombre: "Ignacio Cappelletti",  goles: 1 }
     ]},
     { club: "Huracán",         clase: "huracan",       act: null,       goleadores: [] },
