@@ -137,7 +137,7 @@
             <div class="bloque-titulo con-drop" onclick="toggleMenu(this)">SENIOR <span class="flecha">▼</span></div>
             <div class="bloque-links">
                 <a href="#" onclick="navegar('seniorapertura')">Apertura</a>
-                <a href="#" onclick="navegar('proximamente')">Goleadores</a>
+                <a href="#" onclick="navegar('seniorgoleadores')">Goleadores</a>
                 <a href="#" onclick="navegar('proximamente')">Clausura</a>
             </div>
         </div>
@@ -419,6 +419,8 @@
                 cont.innerHTML = generarFutsalBonaerensePromo();
             } else if (estado.torneo === 'seniorapertura') {
                 cont.innerHTML = generarSeniorApertura();
+            } else if (estado.torneo === 'seniorgoleadores') {
+                cont.innerHTML = generarSeniorGoleadores();
             } else if (estado.torneo === 'formativas') {
                 cont.innerHTML = generarFormativas(estado.categoria);
             } else if (estado.torneo === 'copa_argentina') {

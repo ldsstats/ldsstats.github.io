@@ -1107,7 +1107,7 @@ BD_FIXTURES.oficial.reserva.push(
     ]},
     { fecha: 6, partidos: [
         {l:"Libertad",   v:"Villa Mitre",   gl:0, gv:3},
-        {l:"San Francisco",   v:"Huracán",   gl:null, gv:null},
+        {l:"San Francisco",   v:"Huracán",   gl:5, gv:2},
         {l:"Sporting",   v:"Liniers",   gl:1, gv:0},
         {l:"Bella Vista",   v:"La Armonía",   gl:3, gv:1}
     ]},
@@ -1155,7 +1155,7 @@ BD_FIXTURES.promocional.reserva.push(
         {l:"Comercial",   v:"Pacífico (C)", gl:2,   gv:1},
         {l:"Olimpo",      v:"Dublin",          gl:null,   gv:null},
         {l:"Rosario PB", v:"Sansinena",              gl:null,   gv:null},
-        {l:"Tiro Federal",v:"Pacífico BB",           gl:null,   gv:null}
+        {l:"Tiro Federal",v:"Pacífico BB",           gl:2,   gv:2}
     ]},
 );
 
@@ -1264,7 +1264,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 6).partidos.forEach(p 
 });
 
 
-let diaSeleccionadoHome = "2026-04-28"; 
+let diaSeleccionadoHome = "2026-04-29"; 
 
 function seleccionarDiaHome(dia) {
     diaSeleccionadoHome = dia;
@@ -1294,7 +1294,7 @@ function generarHome() {
                 {l:"Bella Vista", v:"Pacífico (C)", hora:"20:00", nota:"En Empleados de Comercio"},
                 {l:"Sansinena", v:"Pacífico BB", hora:"20:00", nota:"En Tiro Federal"},
                 {l:"Tiro Federal", v:"Libertad", hora:"21:30", nota:"En Tiro Federal"},
-                {l:"Comercial", v:"Huracán", hora:"21:30", nota:"En Empleados de Comercio"},
+                {l:"Comercial", v:"Huracán", hora:"21:30", nota:"En Empleados de Comercio", gl:1, gv:3},
                 {l:"Sporting", v:"San Francisco", hora:"21:30", nota:"En Sporting"},
             ]},
         ]},
@@ -15129,14 +15129,14 @@ function generarReserva(cat) {
                        {n:"Villa Mitre",   cl:"villamitre",   pj:6, pg:3, pe:0, pp:3, gf:13, gc:7, pts:9},
                        {n:"Liniers",       cl:"liniers",      pj:6, pg:2, pe:2, pp:2, gf:7, gc:7, pts:8},
                        {n:"La Armonía",    cl:"laarmonia",    pj:6, pg:2, pe:1, pp:3, gf:10, gc:8, pts:7},
+                       {n:"San Francisco", cl:"sanfrancisco", pj:6, pg:2, pe:0, pp:4, gf:12, gc:14, pts:7},
                        {n:"Libertad",      cl:"libertad",     pj:6, pg:1, pe:3, pp:2, gf:7, gc:8, pts:6},
-                       {n:"San Francisco", cl:"sanfrancisco", pj:5, pg:1, pe:0, pp:4, gf:7, gc:12, pts:4},
-                       {n:"Huracán",       cl:"huracan",      pj:5, pg:1, pe:1, pp:3, gf:4, gc:16, pts:4}],
-        'promocional':[{n:"Tiro Federal",        cl:"tirofederal",      pj:5, pg:5, pe:0, pp:0, gf:15, gc:8, pts:15},
+                       {n:"Huracán",       cl:"huracan",      pj:6, pg:1, pe:1, pp:4, gf:6, gc:21, pts:4}],
+        'promocional':[{n:"Tiro Federal",        cl:"tirofederal",      pj:6, pg:5, pe:1, pp:0, gf:17, gc:10, pts:16},
                        {n:"Comercial",           cl:"comercial",        pj:6, pg:4, pe:2, pp:0, gf:8, gc:3, pts:14},
                        {n:"Olimpo",              cl:"olimpo",           pj:5, pg:3, pe:0, pp:2, gf:6, gc:4, pts:9},
+                       {n:"Pacífico BB",         cl:"pacificobb",       pj:7, pg:2, pe:2, pp:3, gf:8, gc:7, pts:8},
                        {n:"Dublin",              cl:"dublin",           pj:6, pg:2, pe:1, pp:3, gf:9, gc:7, pts:7},
-                       {n:"Pacífico BB",         cl:"pacificobb",       pj:6, pg:2, pe:1, pp:3, gf:6, gc:5, pts:7},
                        {n:"Rosario PB",          cl:"rosariopb",        pj:6, pg:1, pe:3, pp:2, gf:5, gc:6, pts:6},
                        {n:"Pacífico (C)", cl:"pacificocabildo",  pj:7, pg:1, pe:1, pp:5, gf:6, gc:15, pts:4},
                        {n:"Sansinena",           cl:"sansinena",        pj:5, pg:1, pe:0, pp:4, gf:3, gc:10, pts:3},],
@@ -15792,8 +15792,8 @@ function generarFutsalBonaerense() {
     } else {
         html += `<table><thead><tr>
             <th style="width:25px;">#</th>
-            <th style="text-align:left;padding-left:8px;">Jugador</th>
-            <th style="text-align:left;padding-left:8px;">Equipo</th>
+            <th style="text-align:center;padding-left:8px;">Jugador</th>
+            <th style="text-align:center;padding-left:8px;">Equipo</th>
             <th class="c-stat">⚽</th>
         </tr></thead><tbody>`;
         let pos = 1, prev = -1;
@@ -15891,8 +15891,8 @@ function generarFutsalBonaerensePromo() {
         const todosEquipos = [...BD_BONAERENSE_PROMO.grupo1.equipos, ...BD_BONAERENSE_PROMO.grupo2.posiciones.map(e => ({ nombre: e.n, clase: e.cl }))];
         html += `<table><thead><tr>
             <th style="width:25px;">#</th>
-            <th style="text-align:left;padding-left:8px;">Jugador</th>
-            <th style="text-align:left;padding-left:8px;">Equipo</th>
+            <th style="text-align:center;padding-left:8px;">Jugador</th>
+            <th style="text-align:center;padding-left:8px;">Equipo</th>
             <th class="c-stat">⚽</th>
         </tr></thead><tbody>`;
         let pos = 1, prev = -1;
@@ -15936,20 +15936,80 @@ function generarTablaPosBonaerense(pos) {
 }
 
 const BD_SENIOR_APERTURA = [
+    { n: "Huracán",           cl: "huracan",       pj: 1, pg: 1, pe: 0, pp: 0, gf: 3, gc: 1, pts: 3 },
     { n: "Bella Vista",       cl: "bellavista",    pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
-    { n: "Comercial",         cl: "comercial",     pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
-    { n: "Huracán",           cl: "huracan",       pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
     { n: "Libertad",          cl: "libertad",      pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
     { n: "Pacífico BB",       cl: "pacificobb",    pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
     { n: "Pacífico (C)",      cl: "pacificoc",     pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
     { n: "San Francisco",     cl: "sanfrancisco",  pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
     { n: "Sansinena",         cl: "sansinena",     pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
     { n: "Sporting",          cl: "sporting",      pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
-    { n: "Tiro Federal",      cl: "tirofederal",   pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 }
+    { n: "Tiro Federal",      cl: "tirofederal",   pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
+    { n: "Comercial",         cl: "comercial",     pj: 1, pg: 0, pe: 0, pp: 1, gf: 1, gc: 3, pts: 0 }
+];
+
+const BD_FIXTURES_SENIOR = [
+    { fecha: 1, dia: "Mar 28/04", partidos: [
+        { l: "Bella Vista",   v: "Pacífico (C)",  gl: null, gv: null, hora: "20:00" },
+        { l: "Comercial",     v: "Huracán",        gl: 1, gv: 3, hora: "21:30" },
+        { l: "Sansinena",     v: "Pacífico BB",    gl: null, gv: null, hora: "20:00" },
+        { l: "Tiro Federal",  v: "Libertad",       gl: null, gv: null, hora: "21:30" },
+        { l: "Sporting",      v: "San Francisco",  gl: null, gv: null, hora: "21:30" }
+    ]},
+    { fecha: 2, dia: "Mar 05/05", partidos: [
+        { l: "Huracán",   v: "Tiro Federal",  gl: null, gv: null }
+    ]},
+    { fecha: 3, libre: null, partidos: [] },
+    { fecha: 4, libre: null, partidos: [] },
+    { fecha: 5, libre: null, partidos: [] },
+    { fecha: 6, libre: null, partidos: [] },
+    { fecha: 7, libre: null, partidos: [] },
+    { fecha: 8, libre: null, partidos: [] },
+    { fecha: 9, libre: null, partidos: [] }
 ];
 
 function generarSeniorApertura() {
-    let html = `<div class="header-t">SENIOR — APERTURA 2026</div>`;
+    const n = estado.fechaSenior || 1;
+    const f = BD_FIXTURES_SENIOR.find(x => x.fecha === n) || { partidos: [], libre: null };
+    const equipos = BD_SENIOR_APERTURA.map(e => ({ nombre: e.n, clase: e.cl }));
+
+    // Nav fechas
+    let html = `<div class="nav-fechas">`;
+    for (let i = 1; i <= 9; i++) {
+        const tieneDatos = BD_FIXTURES_SENIOR.find(x => x.fecha === i)?.partidos.length > 0;
+        html += `<div class="btn-f ${i === n ? 'activa' : ''}" onclick="estado.fechaSenior=${i};document.getElementById('contenido').innerHTML=generarSeniorApertura()" style="${tieneDatos ? '' : 'color:#bbb;'}">${i}</div>`;
+    }
+    html += `</div>`;
+
+    // Fixture
+    html += `<div class="header-t">SENIOR — APERTURA 2026 — FECHA ${n}</div>`;
+    if (f.libre) html += `<div style="padding:5px 10px; font-size:11px; background:#f9f9f9; border-bottom:1px solid #eee;"><b>Fecha libre:</b> ${f.libre}</div>`;
+    if (f.partidos.length === 0) {
+        html += `<div class="msg-prox">Sin datos para esta fecha</div>`;
+    } else {
+        html += `<table>`;
+        f.partidos.forEach(p => {
+            const escL = equipos.find(e => e.nombre === p.l)?.clase || '';
+            const escV = equipos.find(e => e.nombre === p.v)?.clase || '';
+            if (p.gl === null) {
+                html += `<tr>
+                    <td class="c-loc"><span style="direction:ltr;display:inline-flex;align-items:center;justify-content:flex-end;width:100%;">${p.l} <div class="escudo ${escL}" style="display:inline-block;vertical-align:middle;margin-left:4px;"></div></span></td>
+                    <td class="c-res" style="font-size:10px;color:#888;">${f.dia ? f.dia + (p.hora ? '<br>' + p.hora : '') : '- -'}</td>
+                    <td class="c-vis"><div class="escudo ${escV}" style="display:inline-block;vertical-align:middle;margin-right:4px;"></div> ${p.v}</td>
+                </tr>`;
+            } else {
+                html += `<tr>
+                    <td class="c-loc"><span style="direction:ltr;display:inline-flex;align-items:center;justify-content:flex-end;width:100%;">${p.l} <div class="escudo ${escL}" style="display:inline-block;vertical-align:middle;margin-left:4px;"></div></span></td>
+                    <td class="c-res">${p.gl} - ${p.gv}</td>
+                    <td class="c-vis"><div class="escudo ${escV}" style="display:inline-block;vertical-align:middle;margin-right:4px;"></div> ${p.v}</td>
+                </tr>`;
+            }
+        });
+        html += `</table>`;
+    }
+
+    // Posiciones
+    html += `<div class="header-t">POSICIONES — SENIOR APERTURA 2026</div>`;
     html += `<table><thead><tr>
         <th style="width:25px;">#</th>
         <th style="text-align:left;padding-left:8px;">Equipo</th>
@@ -15957,7 +16017,7 @@ function generarSeniorApertura() {
         <th class="c-stat">PP</th><th class="c-stat">GF</th><th class="c-stat">GC</th>
         <th class="c-stat">Dif</th><th class="c-stat">Pts</th>
     </tr></thead><tbody>`;
-        BD_SENIOR_APERTURA.forEach((e, i) => {
+    BD_SENIOR_APERTURA.forEach((e, i) => {
         const dif = e.gf - e.gc;
         const cl = i === 0 ? 'p-playoff' : i < 3 ? 'p-promo' : i < 11 ? 'p-azul' : '';
         html += `<tr class="${cl}" ${i === 0 ? 'style="background:#0af725;"' : ''}>
@@ -15975,6 +16035,38 @@ function generarSeniorApertura() {
         <span style="display:inline-block;width:12px;height:12px;background:#2196F3;border-radius:2px;vertical-align:middle;margin-right:4px;margin-top:3px;"></span> Clasifica a <b>octavos de final</b>
     </div>`;
     html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>30</b> tras finalizar la fecha <b>0</b></div>`;
+    return html;
+}
+
+const BD_GOLEADORES_SENIOR = [
+    { nombre: "César Panduro", equipo: "Huracán", goles: 2 },
+    { nombre: "Sebastián Faila", equipo: "Huracán", goles: 1 }
+];
+
+function generarSeniorGoleadores() {
+    let html = `<div class="header-t">GOLEADORES — SENIOR APERTURA 2026</div>`;
+    if (BD_GOLEADORES_SENIOR.length === 0) {
+        html += `<div style="text-align:center; padding:12px; font-size:11px; color:#aaa; font-style:italic;">Sin goles registrados aún</div>`;
+    } else {
+        html += `<table><thead><tr>
+            <th style="width:25px;">#</th>
+            <th style="text-align:center;padding-left:8px;">Jugador</th>
+            <th style="text-align:center;padding-left:8px;">Equipo</th>
+            <th class="c-stat">⚽</th>
+        </tr></thead><tbody>`;
+        let pos = 1, prev = -1;
+        BD_GOLEADORES_SENIOR.forEach((g, i) => {
+            if (g.goles !== prev) { pos = i + 1; prev = g.goles; }
+            const cl = BD_SENIOR_APERTURA.find(e => e.n === g.equipo)?.cl || '';
+            html += `<tr>
+                <td class="c-pos">${pos}</td>
+                <td style="font-size:11px; text-align:center;">${g.nombre}</td>
+                <td style="font-size:11px; text-align:center;"><div class="escudo ${cl}" style="display:inline-block;vertical-align:middle;margin-right:4px;"></div>${g.equipo}</td>
+                <td class="c-stat"><b>${g.goles}</b></td>
+            </tr>`;
+        });
+        html += `</tbody></table>`;
+    }
     return html;
 }
 
