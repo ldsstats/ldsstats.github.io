@@ -1264,7 +1264,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 6).partidos.forEach(p 
 });
 
 
-let diaSeleccionadoHome = "2026-04-27"; 
+let diaSeleccionadoHome = "2026-04-28"; 
 
 function seleccionarDiaHome(dia) {
     diaSeleccionadoHome = dia;
@@ -1292,8 +1292,8 @@ function generarHome() {
         { id: "2026-04-28", label: "MAR 28/04", torneos: [
             { nombre: "SENIOR", cat: "seniorapertura", partidos: [
                 {l:"Bella Vista", v:"Pacífico (C)", hora:"20:00", nota:"En Empleados de Comercio"},
-                {l:"Tiro Federal", v:"Libertad", hora:"21:00", nota:"En Tiro Federal"},
-                {l:"Sansinena", v:"Pacífico BB", hora:"21:00", nota:"En Cerri"},
+                {l:"Sansinena", v:"Pacífico BB", hora:"20:00", nota:"En Tiro Federal"},
+                {l:"Tiro Federal", v:"Libertad", hora:"21:30", nota:"En Tiro Federal"},
                 {l:"Comercial", v:"Huracán", hora:"21:30", nota:"En Empleados de Comercio"},
                 {l:"Sporting", v:"San Francisco", hora:"21:30", nota:"En Sporting"},
             ]},
