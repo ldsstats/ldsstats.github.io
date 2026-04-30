@@ -252,8 +252,8 @@ const BD_FIXTURES_FUTSAL_RESERVA = [
         {l:"Petroquímicos",   v:"Los 3 Chiflados", gl:3, gv:3}
     ]},
     { fecha: 6, partidos: [
-        {l:"Pacífico BB",     v:"Dublin",          gl:null, gv:null},
-        {l:"Comercial",       v:"Petroquímicos",   gl:null, gv:null},
+        {l:"Pacífico BB",     v:"Dublin",          gl:5, gv:6},
+        {l:"Comercial",       v:"Petroquímicos",   gl:0, gv:3},
         {l:"Tiro Federal",    v:"Liniers",         gl:null, gv:null},
         {l:"La Esperanza",    v:"Dep. Futsal",     gl:null, gv:null},
         {l:"Los 3 Chiflados", v:"San Francisco",   gl:null, gv:null},
@@ -819,9 +819,37 @@ const BD_FIXTURES_FUTSAL = [
         },
     ]},
     { fecha: 6, partidos: [
-        {l:"Comercial",       v:"Petroquímicos",   gl:null, gv:null, dia:"Miér 29/04", hora:"22:00"},
-        {l:"Pacífico BB",     v:"Dublin",          gl:null, gv:null, dia:"Miér 29/04", hora:"22:00"},
-        {l:"Tiro Federal",    v:"Liniers",         gl:null, gv:null, dia:"Vie 01/05", hora:"22:30"},
+        {
+            l:"Comercial",
+            v:"Petroquímicos",
+            gl:3,
+            gv:0,
+            dia:"Miér 29/04",
+            hora:"22:00",
+            goles_l:[
+                "Ricardo Lagos",
+                "Leonel Torres",
+                "Jonathan Kippes"
+                ],
+            goles_v:[
+            ],
+        },
+        {
+            l:"Pacífico BB",
+            v:"Dublin",
+            gl:6,
+            gv:4,
+            dia:"Miér 29/04",
+            hora:"22:00",
+            goles_l:[
+                ],
+            goles_v:[
+                "Agustín Miguel (2)",
+                "Jesús Lucarelli",
+                "Nicolás San Martín"
+            ],
+        },
+        {l:"Tiro Federal",    v:"Liniers",         gl:null, gv:null, dia:"Jue 30/04", hora:"22:30"},
         {l:"La Esperanza",    v:"Dep. Futsal",     gl:null, gv:null},
         {l:"Los 3 Chiflados", v:"San Francisco",   gl:null, gv:null},
         {l:"Villa Mitre",     v:"Catamarca",       gl:null, gv:null},
@@ -1284,7 +1312,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 6).partidos.forEach(p 
 });
 
 
-let diaSeleccionadoHome = "2026-04-29"; 
+let diaSeleccionadoHome = "2026-04-30"; 
 
 function seleccionarDiaHome(dia) {
     diaSeleccionadoHome = dia;
@@ -1320,14 +1348,16 @@ function generarHome() {
         ]},
         { id: "2026-04-29", label: "MIÉR 29/04", torneos: [
             { nombre: "FUTSAL", cat: "futsal", partidos: [
-                {l:"Pacífico BB", v:"Dublin", hora:"22:00", nota:"En Don Bosco"},
-                {l:"Comercial", v:"Petroquímicos", hora:"22:00", nota:"En Comercial"}
+                {l:"Pacífico BB", v:"Dublin", hora:"22:00", nota:"En Don Bosco", gl:6, gv:4},
+                {l:"Comercial", v:"Petroquímicos", hora:"22:00", nota:"En Comercial", gl:3, gv:0}
             ]},
         ]},
-        { id: "2026-05-01", label: "VIER 01/05", torneos: [
+        { id: "2026-04-30", label: "JUE 30/04", torneos: [
             { nombre: "FUTSAL", cat: "futsal", partidos: [
                 {l:"Tiro Federal", v:"Liniers", hora:"22:30", nota:"En Tiro Federal"}
             ]},
+        ]},
+        { id: "2026-05-01", label: "VIER 01/05", torneos: [
             { nombre: "FUTSAL - PROMOCIONAL BONAERENSE", cat: "futsalbonaerensepromocional", partidos: [
                 {l:"Villa Mitre", v:"La Estación", hora:"20:30", nota:"En La Curtiembre"}
             ]},
@@ -15398,34 +15428,34 @@ function generarSub() {
 const BD_POS_FUTSAL = {
     principal: [
         {n:"La Estación",     cl:"laestacion",    pj:5,pg:5,pe:0,pp:0,gf:30, gc:8, pts:15},
+        {n:"Comercial",       cl:"comercial",     pj:6,pg:4,pe:2,pp:0,gf:32, gc:12, pts:14},
         {n:"Villa Mitre",     cl:"villamitre",    pj:5,pg:4,pe:1,pp:0,gf:22, gc:9, pts:13},
         {n:"La Esperanza",    cl:"laesperanza",   pj:5,pg:4,pe:0,pp:1,gf:21, gc:13, pts:12},
-        {n:"Comercial",       cl:"comercial",     pj:5,pg:3,pe:2,pp:0,gf:29, gc:12, pts:11},
         {n:"Los 3 Chiflados", cl:"los3chiflados", pj:5,pg:3,pe:1,pp:1,gf:34, gc:17, pts:10},
         {n:"Liniers",         cl:"liniers",       pj:5,pg:1,pe:3,pp:1,gf:19, gc:18, pts:6},
-        {n:"Dublin",          cl:"dublin",        pj:5,pg:2,pe:0,pp:3,gf:10, gc:11, pts:6},
+        {n:"Dublin",          cl:"dublin",        pj:6,pg:2,pe:0,pp:4,gf:14, gc:17, pts:6},
         {n:"Tiro Federal",    cl:"tirofederal",   pj:5,pg:2,pe:0,pp:3,gf:9, gc:18, pts:6},
-        {n:"Petroquímicos",   cl:"petroquimicos", pj:4,pg:2,pe:0,pp:2,gf:23,gc:24, pts:6},
+        {n:"Petroquímicos",   cl:"petroquimicos", pj:5,pg:2,pe:0,pp:3,gf:23,gc:27, pts:6},
+        {n:"Pacífico BB",     cl:"pacificobb",    pj:6,pg:2,pe:0,pp:4,gf:22, gc:27, pts:6},
         {n:"San Francisco",   cl:"sanfrancisco",  pj:4,pg:1,pe:2,pp:1,gf:12, gc:9, pts:5},
-        {n:"Pacífico BB",     cl:"pacificobb",    pj:5,pg:1,pe:0,pp:4,gf:16, gc:23, pts:3},
         {n:"Dep. Futsal",     cl:"depfutsal",     pj:5,pg:1,pe:0,pp:4,gf:11, gc:28, pts:3},
         {n:"Catamarca",       cl:"catamarca",     pj:5,pg:0,pe:1,pp:4,gf:9, gc:25, pts:1},
         {n:"Huracán",         cl:"huracan",       pj:5,pg:0,pe:0,pp:5,gf:14, gc:41,pts:0}
     ],
     reserva: [
+        {n:"Petroquímicos",   cl:"petroquimicos", pj:6,pg:4,pe:2,pp:0,gf:35, gc:12, pts:14},
         {n:"Villa Mitre",     cl:"villamitre",    pj:5,pg:4,pe:1,pp:0,gf:26, gc:14, pts:13},
         {n:"Los 3 Chiflados", cl:"los3chiflados", pj:5,pg:4,pe:1,pp:0,gf:26, gc:4, pts:13},
-        {n:"Petroquímicos",   cl:"petroquimicos", pj:5,pg:3,pe:2,pp:0,gf:32, gc:12, pts:11},
         {n:"La Esperanza",    cl:"laesperanza",   pj:5,pg:3,pe:1,pp:1,gf:19, gc:15, pts:10},
         {n:"Catamarca",       cl:"catamarca",     pj:5,pg:3,pe:0,pp:2,gf:26, gc:18, pts:9},
         {n:"Liniers",         cl:"liniers",       pj:5,pg:2,pe:2,pp:1,gf:16, gc:12, pts:8},
         {n:"La Estación",     cl:"laestacion",    pj:5,pg:2,pe:2,pp:1,gf:15, gc:14, pts:8},
+        {n:"Dublin",          cl:"dublin",        pj:6,pg:2,pe:1,pp:3,gf:14, gc:22, pts:7},
         {n:"San Francisco",   cl:"sanfrancisco",  pj:5,pg:2,pe:0,pp:3,gf:10, gc:21, pts:6},
         {n:"Tiro Federal",    cl:"tirofederal",   pj:5,pg:1,pe:2,pp:2,gf:9, gc:12, pts:5},
-        {n:"Dublin",          cl:"dublin",        pj:5,pg:1,pe:1,pp:3,gf:8, gc:17, pts:4},
-        {n:"Pacífico BB",     cl:"pacificobb",    pj:5,pg:1,pe:1,pp:3,gf:19, gc:31, pts:4},
+        {n:"Pacífico BB",     cl:"pacificobb",    pj:6,pg:1,pe:1,pp:4,gf:24, gc:37, pts:4},
         {n:"Huracán",         cl:"huracan",       pj:5,pg:1,pe:0,pp:4,gf:4, gc:20, pts:3},
-        {n:"Comercial",       cl:"comercial",     pj:5,pg:0,pe:2,pp:3,gf:16, gc:19, pts:2},
+        {n:"Comercial",       cl:"comercial",     pj:6,pg:0,pe:2,pp:4,gf:16, gc:22, pts:2},
         {n:"Dep. Futsal",     cl:"depfutsal",     pj:5,pg:0,pe:1,pp:4,gf:13, gc:30, pts:1}
     ]
 };
@@ -15562,13 +15592,15 @@ if ((p.goles_l && p.goles_l.length) || (p.goles_v && p.goles_v.length)) {
 }
 
 const BD_GOLEADORES_FUTSAL = [
-    { club: "Dublin",          clase: "dublin",        act: "fecha 5",  goleadores: [
-        { nombre: "Agustín Miguel",      goles: 3 },
+    { club: "Dublin",          clase: "dublin",        act: "fecha 6",  goleadores: [
+        { nombre: "Agustín Miguel",      goles: 5 },
         { nombre: "Matías Palma",        goles: 2 },
         { nombre: "Matías Gigena",       goles: 2 },
         { nombre: "Rodrigo Gómez",       goles: 1 },
         { nombre: "Nicolás San Martín",  goles: 1 },
-        { nombre: "Facundo Miranda",     goles: 1 }
+        { nombre: "Facundo Miranda",     goles: 1 },
+        { nombre: "Nicolás San Martín",     goles: 1 },
+        { nombre: "Jesús Lucarelli",     goles: 1 }
     ]},
     { club: "Villa Mitre",     clase: "villamitre",    act: "fecha 4, sin datos de fechas 1, 2 y 3",       goleadores: [
         { nombre: "Agustín Pullini",      goles: 2 },
@@ -15622,14 +15654,14 @@ const BD_GOLEADORES_FUTSAL = [
         { nombre: "Fabián Sandoval",  goles: 1 },
         { nombre: "Francisco Colombi",  goles: 1 }
     ]},
-    { club: "Comercial",       clase: "comercial",     act: "fecha 5",  goleadores: [
-        { nombre: "Jonathan Kippes",   goles: 5 },
+    { club: "Comercial",       clase: "comercial",     act: "fecha 6",  goleadores: [
+        { nombre: "Jonathan Kippes",   goles: 6 },
+        { nombre: "Ricardo Lagos",     goles: 5 },
         { nombre: "Alejandro Moreno",  goles: 4 },
-        { nombre: "Ricardo Lagos",     goles: 4 },
         { nombre: "Leandro Weitt",     goles: 3 },
         { nombre: "Juan Llanos",     goles: 3 },
+        { nombre: "Leonel Torres",     goles: 3 },
         { nombre: "Ivo Basich",     goles: 2 },
-        { nombre: "Leonel Torres",     goles: 2 },
         { nombre: "Agustín Haag",     goles: 1 },
         { nombre: "Gonzalo Schwam",     goles: 2 },
         { nombre: "Franco Costa",     goles: 1 },
@@ -15761,10 +15793,10 @@ const BD_BONAERENSE_SUR = {
         { n: "Banco Provincia", cl: "bancoprovincia",  pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 }
     ],
     posicionesNorte: [
-        { n: "Eureka Pinamar",    cl: "eurekapinamar",    pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
-        { n: "Torino",            cl: "torino",           pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
-        { n: "CAJU San Bernardo", cl: "cajusanbernardo",  pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
-        { n: "Def. Villa Clelia", cl: "defvillaclelia",   pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 }
+        { n: "Torino",            cl: "torino",           pj: 1, pg: 1, pe: 0, pp: 0, gf: 4, gc: 1, pts: 3 },
+        { n: "CAJU San Bernardo", cl: "cajusanbernardo",  pj: 1, pg: 0, pe: 1, pp: 0, gf: 5, gc: 5, pts: 1 },
+        { n: "Def. Villa Clelia", cl: "defvillaclelia",   pj: 1, pg: 0, pe: 1, pp: 0, gf: 5, gc: 5, pts: 1 },
+        { n: "Eureka Pinamar",    cl: "eurekapinamar",    pj: 1, pg: 0, pe: 0, pp: 1, gf: 1, gc: 4, pts: 0 }
     ],
     goleadores: []
 };
@@ -15859,9 +15891,9 @@ const BD_BONAERENSE_PROMO = {
     },
     grupo2: {
         posiciones: [
+            { n: "Puerto Futsal",          cl: "puertofutsal",  pj: 1, pg: 1, pe: 0, pp: 0, gf: 7, gc: 2, pts: 3 },
             { n: "SyD Argentinos del Sud", cl: "sydargentinos", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
-            { n: "Puerto Futsal",          cl: "puertofutsal",  pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
-            { n: "2 de Julio",             cl: "dedejulio",     pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 }
+            { n: "2 de Julio",             cl: "dedejulio",     pj: 1, pg: 0, pe: 0, pp: 1, gf: 2, gc: 7, pts: 0 }
         ]
     },
     goleadores: []
