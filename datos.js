@@ -70,7 +70,7 @@ const idaOficial = [
     { fecha: 4, partidos: [{l:"Villa Mitre", v:"San Francisco", gl:1, gv:0, dia:"Jue 02/04", hora:"16:00", goles_l:["Martín Aguirre"], goles_v:[]}, {l:"La Armonía", v:"Huracán", gl:2, gv:3, dia:"Vie 03/03", hora:"16:00", goles_l:["Enrique Narvay","Matías Malmoria"], goles_v:["Lautaro Cerato","Lautaro Cerato","Lautaro Cerato"]}, {l:"Liniers", v:"Libertad", gl:0, gv:1, dia:"Sab 04/04", hora:"16:00", goles_l:[], goles_v:["Nahuel Sánchez"]}, {l:"Sporting", v:"Bella Vista", gl:3, gv:0, dia:"Dom 05/03", hora:"16:00", goles_l:["Jonathan Font","Jonathan Font","Matías Chamares"], goles_v:[]}] },
     { fecha: 5, partidos: [{l:"Bella Vista", v:"Villa Mitre", gl:3, gv:0, dia:"Dom 12/04", hora:"11:15", goles_l:["Nahuel Bardella","Gabino Bellegia","Lucas Martínez"], goles_v:[]}, {l:"Libertad", v:"Sporting", gl:1, gv:1, dia:"Dom 12/04", hora:"15:30", goles_l:[], goles_v:["Luis De Los Santos","Federico López (e/c)"]}, {l:"San Francisco", v:"La Armonía", gl:1, gv:2, dia:"Dom 12/04", hora:"15:30", goles_l:["Federico Pinedo"], goles_v:["Enrique Narvay","Ezequiel Intrevado"]}, {l:"Huracán", v:"Liniers", gl:1, gv:0, dia:"Dom 12/04", hora:"15:30", goles_l:["Brian Scalco"], goles_v:[]}] },
     { fecha: 6, partidos: [{l:"Libertad", v:"Villa Mitre", gl:2, gv:1, dia:"Sáb 18/04", hora:"15:30", goles_l:["Franco Pane","Agustín Cocciarini"], goles_v:["Ramiro Gerk"]}, {l:"San Francisco", v:"Huracán", gl:0, gv:0, dia:"Sáb 18/04", hora:"15:30"}, {l:"Sporting", v:"Liniers", gl:0, gv:0, dia:"Sáb 18/04", hora:"15:30"}, {l:"Bella Vista", v:"La Armonía", gl:1, gv:0, dia:"Dom 19/04", hora:"14:00", goles_l:["Rodrigo Gómez"], goles_v:[]}] },
-    { fecha: 7, partidos: [{l:"Villa Mitre", v:"Sporting", gl:0, gv:2, dia:"Sáb 25/04", hora:"15:30", goles_l:[], goles_v:["Genaro Siracusa","Matías Chamares"]}, {l:"Huracán", v:"Bella Vista", gl:null, gv:null, dia:"Sáb 2/05", hora:"15:30"}, {l:"La Armonía", v:"Libertad", gl:null, gv:null, dia:"Sáb 2/05", hora:"15:30"}, {l:"Liniers", v:"San Francisco", gl:null, gv:null, dia:"Sáb 2/05", hora:"15:30"}] }
+    { fecha: 7, partidos: [{l:"Villa Mitre", v:"Sporting", gl:0, gv:2, dia:"Sáb 25/04", hora:"15:30", goles_l:[], goles_v:["Genaro Siracusa","Matías Chamares"]}, {l:"Huracán", v:"Bella Vista", gl:2, gv:2, dia:"Sáb 2/05", hora:"15:30", goles_l:["Lautaro Cerato","Walter Linares"], goles_v:["Maximiliano Gandolfo","Gabino Bellegia"]}, {l:"La Armonía", v:"Libertad", gl:1, gv:1, dia:"Sáb 2/05", hora:"15:30", goles_l:["Julio Acosta"], goles_v:["Mauro Sabatini"]}, {l:"Liniers", v:"San Francisco", gl:2, gv:0, dia:"Sáb 2/05", hora:"15:30", goles_l:["Massimo Monti","Massimo Monti"], goles_v:[]}] }
 ];
 
 const idaPromo = [
@@ -80,7 +80,7 @@ const idaPromo = [
     { fecha: 4, partidos: [{l:"Comercial", v:"Dublin", gl:1, gv:1, dia:"Vie 03/03", hora:"11:00", goles_l:["Emiliano Brizzi"], goles_v:["Marcos Pérez"]}, {l:"Olimpo", v:"Rosario PB", gl:2, gv:2, dia:"Vie 03/03", hora:"16:00", goles_l:["Nahuel Colmenares","Nahuel Colmenares"], goles_v:["Ezequiel Katz","Agustín Grippaudo"]}, {l:"Tiro Federal", v:"Pacífico (C)", gl:1, gv:1, dia:"Vie 03/03", hora:"16:00", goles_l:["Agustín Cabrera"], goles_v:["Gianni Ferrari"]}, {l:"Pacífico BB", v:"Sansinena", gl:1, gv:3, dia:"Vie 03/03", hora:"16:00", goles_l:["Agustín Guerra"], goles_v:["Manuel Stortini","Pablo González","Valentín Moral"]}] },
     { fecha: 5, partidos: [{l:"Rosario PB", v:"Comercial", gl:2, gv:0, dia:"Sáb 11/04", hora:"15:30", goles_l:["Sebastián Mendoza","Agustín Grippaudo"], goles_v:[]}, {l:"Sansinena", v:"Tiro Federal", gl:0, gv:0, dia:"Sáb 11/04", hora:"15:30"}, {l:"Pacífico (C)", v:"Olimpo", gl:0, gv:0, dia:"Sáb 11/04", hora:"15:30"}, {l:"Dublin", v:"Pacífico BB", gl:1, gv:0, dia:"Dom 12/04", hora:"15:30", goles_l:["Jonathan Arias"], goles_v:[]}] },
     { fecha: 6, partidos: [{l:"Dublin", v:"Tiro Federal", gl:1, gv:0, dia:"Sáb 18/04", hora:"15:30", goles_l:["Marcos Pérez"], goles_v:[]}, {l:"Pacífico (C)", v:"Rosario PB", gl:3, gv:3, dia:"Sáb 18/04", hora:"15:30", goles_l:["Donatello Scaringi","Donatello Scaringi","Emanuel López"], goles_v:["Ezequiel Katz","Ezequiel Katz","Sebastián Mendoza"]}, {l:"Sansinena", v:"Olimpo", gl:0, gv:1, dia:"Dom 19/04", hora:"14:30", goles_l:[], goles_v:["Marcos Acosta"]}, {l:"Pacífico BB", v:"Comercial", gl:0, gv:1, dia:"Dom 19/04", hora:"14:30", goles_l:[], goles_v:["Francisco Centeno"]}] },
-    { fecha: 7, partidos: [{l:"Olimpo", v:"Dublin", gl:3, gv:0, dia:"Sáb 25/04", hora:"15:30", goles_l:["William Vidal","Joaquín Vidal","Nahuel Colmenares"], goles_v:[]}, {l:"Tiro Federal", v:"Pacífico BB", gl:3, gv:0, dia:"Sáb 25/04", hora:"15:30", goles_l:["Diego Ocampo","Genaro Fraysse","Franco Fraysse"], goles_v:[]}, {l:"Comercial", v:"Pacífico (C)", gl:2, gv:1, dia:"Sáb 25/04", hora:"15:30", goles_l:["Juan Wunderlich","Mauricio Villalobos"], goles_v:["Gianni Ferrari"]}, {l:"Rosario PB", v:"Sansinena", gl:null, gv:null, dia:"Sáb 2/05", hora:"15:30"}] }
+    { fecha: 7, partidos: [{l:"Olimpo", v:"Dublin", gl:3, gv:0, dia:"Sáb 25/04", hora:"15:30", goles_l:["William Vidal","Joaquín Vidal","Nahuel Colmenares"], goles_v:[]}, {l:"Tiro Federal", v:"Pacífico BB", gl:3, gv:0, dia:"Sáb 25/04", hora:"15:30", goles_l:["Diego Ocampo","Genaro Fraysse","Franco Fraysse"], goles_v:[]}, {l:"Comercial", v:"Pacífico (C)", gl:2, gv:1, dia:"Sáb 25/04", hora:"15:30", goles_l:["Juan Wunderlich","Mauricio Villalobos"], goles_v:["Gianni Ferrari"]}, {l:"Rosario PB", v:"Sansinena", gl:4, gv:4, dia:"Sáb 2/05", hora:"15:30", goles_l:["Sebastián Mendoza","Favio Durán","Agustín Grippaudo","Nicolás Ovando"], goles_v:["Manuel Stortini","Manuel Stortini","Diego Romero","Diego Romero"]}] }
 ];
 
 const idaFederal = [
@@ -90,7 +90,7 @@ const idaFederal = [
     { fecha: 4, libre: "Guillermo Brown", partidos: [{l:"Alvarado", v:"Kimberley", gl:0, gv:0, dia:"Sáb 11/04", hora:"15:30"}, {l:"Santamarina", v:"Círculo Dep.", gl:4, gv:0, dia:"Sáb 11/04", hora:"18:30", goles_l:["Mateo Ijurco","Diego Sosa","Diego Sosa","Nicolás Franco"], goles_v:[]}, {l:"Germinal", v:"Villa Mitre", gl:1, gv:0, dia:"Dom 12/04", hora:"15:00", goles_l:["Thomas Olivieri"], goles_v:[]}, {l:"Olimpo", v:"Sol de Mayo", gl:1, gv:0, dia:"Dom 12/04", hora:"15:30", goles_l:["Cristian Amarilla"], goles_v:[]}] },
     { fecha: 5, libre: "Germinal", partidos: [{l:"Círculo Dep.", v:"Alvarado", gl:0, gv:1, dia:"Sáb 18/04", hora:"15:00", goles_l:[], goles_v:["Tomás Fernández"]}, {l:"Kimberley", v:"Olimpo", gl:0, gv:1, dia:"Sáb 18/04", hora:"15:30", goles_l:[], goles_v:["Cristian Ibarra"]}, {l:"Sol de Mayo", v:"Guillermo Brown", gl:1, gv:0, dia:"Dom 19/04", hora:"11:00", goles_l:["Santiago Jara"], goles_v:[]}, {l:"Villa Mitre", v:"Santamarina", gl:0, gv:0, dia:"Dom 19/04", hora:"15:00"}] },
     { fecha: 6, libre: "Sol de Mayo", partidos: [{l:"Santamarina", v:"Germinal", gl:0, gv:0, dia:"Sáb 24/04", hora:"18:30"}, {l:"Alvarado", v:"Villa Mitre", gl:1, gv:1, dia:"Dom 25/04", hora:"15:00", goles_l:["Santiago Gutiérrez"], goles_v:["Jerónimo Almada"]}, {l:"Guillermo Brown", v:"Kimberley", gl:3, gv:4, dia:"Dom 25/04", hora:"15:30", goles_l:["Martín Rivero","Emanuel Moreno","Ignacio Zapulla"], goles_v:["Santiago Castillo","Santiago Castillo","Leonel Iriarte","Leonel Iriarte"]}, {l:"Olimpo", v:"Círculo Dep.", gl:1, gv:0, dia:"Lun 26/04", hora:"15:30", goles_l:["Federico González"], goles_v:[]}] },
-    { fecha: 7, libre: "Santamarina", partidos: [{l:"Círculo Dep.", v:"Guillermo Brown", gl:null, gv:null, dia:"Sáb 02/05", hora:"15:00"}, {l:"Kimberley", v:"Sol de Mayo", gl:null, gv:null, dia:"Sáb 02/05", hora:"15:30"}, {l:"Villa Mitre", v:"Olimpo", gl:null, gv:null, dia:"Dom 03/05", hora:"15:00"}, {l:"Germinal", v:"Alvarado", gl:null, gv:null, dia:"Dom 03/05", hora:"15:30"}] },
+    { fecha: 7, libre: "Santamarina", partidos: [{l:"Círculo Dep.", v:"Guillermo Brown", gl:1, gv:1, dia:"Sáb 02/05", hora:"15:00", goles_l:["Ciro Rius"], goles_v:["Patricio Cucchi"]}, {l:"Kimberley", v:"Sol de Mayo", gl:0, gv:0, dia:"Sáb 02/05", hora:"15:30"}, {l:"Villa Mitre", v:"Olimpo", gl:null, gv:null, dia:"Dom 03/05", hora:"15:00"}, {l:"Germinal", v:"Alvarado", gl:null, gv:null, dia:"Dom 03/05", hora:"15:30"}] },
     { fecha: 8, libre: "Kimberley", partidos: [{l:"Sol de Mayo", v:"Círculo Dep.", gl:null, gv:null}, {l:"Guillermo Brown", v:"Villa Mitre", gl:null, gv:null}, {l:"Olimpo", v:"Germinal", gl:null, gv:null}, {l:"Alvarado", v:"Santamarina", gl:null, gv:null}] },
     { fecha: 9, libre: "Alvarado", partidos: [{l:"Santamarina", v:"Olimpo", gl:null, gv:null}, {l:"Germinal", v:"Guillermo Brown", gl:null, gv:null}, {l:"Villa Mitre", v:"Sol de Mayo", gl:null, gv:null}, {l:"Círculo Dep.", v:"Kimberley", gl:null, gv:null}] }
 ];
@@ -111,7 +111,7 @@ const idaSegundaFemenino = [
     { fecha: 3, libre: "Pacífico (C)", partidos: [{l:"Liniers", v:"Petroquímicos", gl:4, gv:2, dia:"Sab 04/04", hora:"16:00", goles_l:["Paulina Acevedo","Cindy Paillamilla","Ailén Márquez","Iara Schwab"], goles_v:["Nicole Montenegro","Paola Vallejos"]}, {l:"Sansinena", v:"Olimpo", gl:2, gv:1, dia:"Dom 05/04", hora:"16:00", goles_l:["Estefanía Arapey","Melina Gómez"], goles_v:["Flavia Curín"]}, {l:"San Francisco", v:"Huracán", gl:10, gv:0, dia:"Dom 05/04",hora:"16:00", goles_l:["Clara Iturrioz","Clara Iturrioz","Clara Iturrioz","Clara Iturrioz","Julieta Coronel","Julieta Coronel","Ailín Randisi","Ailín Randisi","Luciana Sosa","Rocío de Mirta"], goles_v:[]}, {l:"Rosario PB", v:"Estrella de Oro", gl:3, gv:3, dia:"Dom 05/04", hora:"16:00", goles_l:["Juliana Ruiz","Juliana Ruiz","Bárbara Aguirre"], goles_v:["Mariana González","Mariana González","Constanza Franco"]}] },
     { fecha: 4, libre: "Olimpo", partidos: [{l:"Petroquímicos", v:"San Francisco", gl:0, gv:1, dia:"Sáb 11/04", hora:"16:00", goles_l:[], goles_v:["Clara Iturrioz"]}, {l:"Estrella de Oro", v:"Sansinena", gl:1, gv:0, dia:"Dom 12/04", hora:"16:00", goles_l:["Aldana Fuentes"], goles_v:[]}, {l:"Pacífico (C)", v:"Liniers", gl:0, gv:4, dia:"Dom 12/04", hora:"16:00", goles_l:[], goles_v:["Liz Marcolini","Isabela Pezzutti","Lucía Julián","Lola Podestá"]}, {l:"Huracán", v:"Rosario PB", gl:1, gv:10, dia:"Dom 12/04", hora:"16:00", goles_l:["Natasha Mella"], goles_v:["Celeste Medina","Celeste Medina","Bárbara Aguirre","Bárbara Aguirre","Carolina Díaz","Juliana Ruiz","Julieta Díaz","Noemí Benítez","Valentina Cavalli","María Arroyo"]}] },
     { fecha: 5, libre: "Liniers", partidos: [{l:"Rosario PB", v:"Petroquímicos", gl:0, gv:2, dia:"Sáb 18/04", hora:"15:30", goles_l:[], goles_v:["Paola Vallejos","Paula Rodríguez"]}, {l:"Sansinena", v:"Huracán", gl:3, gv:0, dia:"Dom 19/04", hora:"11:00", goles_l:["Daniela Abello","Marisol Huenupi","Melina Gómez"], goles_v:[]}, {l:"Estrella de Oro", v:"Olimpo", gl:5, gv:1, dia:"Dom 19/04", hora:"14:30", goles_l:["Mariana González","Mariana González","Mariana González","Agustina Coronel","Agustina Coronel"], goles_v:["Lourdes Antonietti"]}, {l:"San Francisco", v:"Pacífico (C)", gl:7, gv:0, dia:"Dom 19/04", hora:"15:30", goles_l:["Milagros Fernández","Milagros Fernández","Milagros Fernández","Ariana Adassus","Ariana Adassus","Clara Iturrioz","Ailín Randisi"], goles_v:[]}] },
-    { fecha: 6, libre: "San Francisco", partidos: [{l:"Huracán", v:"Estrella de Oro", gl:0, gv:2, dia:"Sáb 25/04", hora:"16:00", goles_l:[], goles_v:["Mariana González","Luana Anfossi"]}, {l:"Olimpo", v:"Liniers", gl:null, gv:null, dia:"Dom 26/04", hora:"15:30"}, {l:"Pacífico (C)", v:"Rosario PB", gl:null, gv:null, dia:"Dom 26/04", hora:"15:30"},{l:"Petroquímicos", v:"Sansinena", gl:null, gv:null, dia:"Dom 26/04", hora:"16:00"}] },
+    { fecha: 6, libre: "San Francisco", partidos: [{l:"Huracán", v:"Estrella de Oro", gl:0, gv:2, dia:"Sáb 25/04", hora:"16:00", goles_l:[], goles_v:["Mariana González","Luana Anfossi"]}, {l:"Pacífico (C)", v:"Rosario PB", gl:0, gv:9, dia:"Sáb 02/05", hora:"15:30", goles_l:[], goles_v:["Bárbara Aguirre","Bárbara Aguirre","Bárbara Aguirre","Bárbara Aguirre","Carolina Díaz","Carolina Díaz","Carolina Díaz","Julieta Díaz","Juliana Ruiz"]},{l:"Petroquímicos", v:"Sansinena", gl:3, gv:0, dia:"Sáb 02/05", hora:"15:30", goles_l:["Sofía Trejo","Renata Segovia","Paula Rodríguez"], goles_v:[]}, {l:"Olimpo", v:"Liniers", gl:null, gv:null, dia:"Dom 03/05", hora:"15:30"}] },
     { fecha: 7, libre: "Rosario PB", partidos: [{l:"Sansinena", v:"Pacífico (C)", gl:null, gv:null}, {l:"Estrella de Oro", v:"Petroquímicos", gl:null, gv:null}, {l:"San Francisco", v:"Liniers", gl:null, gv:null}, {l:"Huracán", v:"Olimpo", gl:null, gv:null}] },
     { fecha: 8, libre: "Sansinena", partidos: [{l:"San Francisco", v:"Olimpo", gl:null, gv:null}, {l:"Liniers", v:"Rosario PB", gl:null, gv:null}, {l:"Pacífico (C)", v:"Estrella de Oro", gl:null, gv:null}, {l:"Petroquímicos", v:"Huracán", gl:null, gv:null}] },
     { fecha: 9, libre: "Estrella de Oro", partidos: [{l:"Huracán", v:"Pacífico (C)", gl:null, gv:null}, {l:"Rosario PB", v:"San Francisco", gl:null, gv:null}, {l:"Olimpo", v:"Petroquímicos", gl:null, gv:null}, {l:"Sansinena", v:"Liniers", gl:null, gv:null}] },
@@ -971,9 +971,9 @@ const idaSub15Fem = [
         {l:"Tiro Federal",          v:"Empleados de Comercio", gl:null, gv:null}
     ]},
     { fecha: 5, partidos: [
+        {l:"Libertad",              v:"Tiro Federal",     gl:0, gv:2},
         {l:"Liniers",               v:"Bella Vista",      gl:null, gv:null},
         {l:"Empleados de Comercio", v:"Villa Mitre",      gl:null, gv:null},
-        {l:"Libertad",              v:"Tiro Federal",     gl:null, gv:null},
         {l:"Olimpo",                v:"Juventud Unida",   gl:null, gv:null},
         {l:"Huracán",               v:"Sporting",         gl:null, gv:null},
         {l:"La Armonía",            v:"San Francisco",    gl:null, gv:null}
@@ -1323,11 +1323,11 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 5).partidos.forEach(p 
 // Reserva 2° Femenino - resultados F6
 BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 6).partidos.forEach(p => {
     if (p.l === "Huracán" && p.v === "Estrella de Oro") { p.gl = 0; p.gv = 1; }
-    if (p.l === "Petroquímicos" && p.v === "Sansinena") { p.gl = null; p.gv = null; }
+    if (p.l === "Petroquímicos" && p.v === "Sansinena") { p.gl = 2; p.gv = 2; }
 });
 
 
-let diaSeleccionadoHome = "2026-05-01"; 
+let diaSeleccionadoHome = "2026-05-03"; 
 
 function seleccionarDiaHome(dia) {
     diaSeleccionadoHome = dia;
@@ -1374,10 +1374,10 @@ function generarHome() {
         ]},
         { id: "2026-05-01", label: "VIER 01/05", torneos: [
             { nombre: "FUTSAL - PROMOCIONAL BONAERENSE", cat: "futsalbonaerensepromocional", partidos: [
-                {l:"Villa Mitre", v:"La Estación", hora:"20:30", nota:"En La Curtiembre"}
+                {l:"Villa Mitre", v:"La Estación", hora:"20:30", nota:"En La Curtiembre", gl:2, gv:5}
             ]},
             { nombre: "FUTSAL - ASCENSO BONAERENSE", cat: "futsalbonaerense", partidos: [
-                {l:"La Esperanza", v:"Los 3 Chiflados", hora:"22:00", nota:"En La Curtiembre"}
+                {l:"La Esperanza", v:"Los 3 Chiflados", hora:"22:00", nota:"En La Curtiembre", gl:8, gv:2}
             ]},
         ]},
         { id: "2026-05-02", label: "SÁB 02/05", torneos: [
@@ -1390,8 +1390,8 @@ function generarHome() {
                 {l:"Rosario PB", v:"Sansinena", hora:"15:30"}
             ]},
             { nombre: "2° FEMENINO", cat: "segundafemenino", partidos: [
-                {l:"Petroquímicos", v:"Sansinena", hora:"15:30", nota:"En cancha de Libertad"},
-                {l:"Pacífico (C)", v:"Rosario PB", hora:"15:30"}
+                {l:"Petroquímicos", v:"Sansinena", hora:"15:30", nota:"En cancha de Libertad", gl:3, gv:0},
+                {l:"Pacífico (C)", v:"Rosario PB", hora:"15:30", gl:0, gv:9}
             ]},
             { nombre: "SUB 15 FEMENINNO", cat: "sub15fem", partidos: [
                 {l:"Libertad", v:"Tiro Federal", hora:"09:00"},
@@ -1564,8 +1564,8 @@ function generarTablaFederal() {
     
     const mejoresQuintos = [
         { nombre: "Santamarina", pj:6, pg:1, pe:4, pp:1, gf:6, gc:4 },
-        { nombre: "Sol de América", pj:5, pg:2, pe:1, pp:2, gf:4, gc:4 },
-        { nombre: "Argentino de Monte Maiz", pj:5, pg:1, pe:3, pp:1, gf:2, gc:3 }
+        { nombre: "Costa Brava", pj:7, pg:1, pe:1, pp:4, gf:6, gc:5 },
+        { nombre: "Sol de América", pj:5, pg:2, pe:1, pp:2, gf:4, gc:4 }
     ];
     html += `</tbody></table><div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>30</b> tras finalizar la fecha <b>6</b></div>`;
     html += `<div class="header-t">MEJORES 5° (ZONAS 2, 3 Y 4)</div>`;
@@ -15237,8 +15237,8 @@ function generarReserva(cat) {
             {n:"Liniers",             cl:"liniers",         pj:3, pg:3, pe:0, pp:0, gf:13, gc:3, pts:9},
             {n:"San Francisco",       cl:"sanfrancisco",    pj:4, pg:3, pe:0, pp:1, gf:10, gc:4, pts:9},
             {n:"Estrella de Oro",     cl:"estrellaoro",     pj:5, pg:3, pe:0, pp:2, gf:8, gc:8, pts:9},
-            {n:"Petroquímicos",       cl:"petroquimicos",   pj:3, pg:0, pe:0, pp:3, gf:2, gc:7, pts:0},
-            {n:"Sansinena",           cl:"sansinena",       pj:3, pg:0, pe:0, pp:3, gf:3, gc:10, pts:0},
+            {n:"Petroquímicos",       cl:"petroquimicos",   pj:4, pg:0, pe:1, pp:3, gf:4, gc:9, pts:1},
+            {n:"Sansinena",           cl:"sansinena",       pj:4, pg:0, pe:1, pp:3, gf:5, gc:12, pts:1},
             {n:"Huracán",             cl:"huracan",         pj:4, pg:0, pe:0, pp:4, gf:1, gc:15, pts:0}
         ],
         'femenino':   [
@@ -15365,7 +15365,7 @@ function generarSub() {
 
     categorias.forEach(cat => {
         const fixtures = BD_FIXTURES_SUB[cat.key] || [];
-        const n = estado[`fecha_${cat.key}`] || 2;
+        const n = estado[`fecha_${cat.key}`] || 3;
         const f = fixtures.find(x => x.fecha === n) || { partidos: [], libre: null };
 
         // Posiciones manuales
@@ -15808,7 +15808,7 @@ const BD_BONAERENSE_SUR = {
     ],
     fixture: [
         { fecha: 1, libre: "Banco Provincia", dia: "Vie 01/05", partidos: [
-            { l: "La Esperanza", v: "Los 3 Chiflados", gl: null, gv: null, hora: "22:00" }
+            { l: "La Esperanza", v: "Los 3 Chiflados", gl: 8, gv: 2, hora: "22:00" }
         ]},
         { fecha: 2, libre: "Los 3 Chiflados", dia: "Vie 08/05", partidos: [
             { l: "Banco Provincia", v: "La Esperanza", gl: null, gv: null }
@@ -15827,9 +15827,9 @@ const BD_BONAERENSE_SUR = {
         ]}
     ],
     posicionesSur: [
-        { n: "La Esperanza",    cl: "laesperanza",    pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
-        { n: "Los 3 Chiflados", cl: "los3chiflados",  pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
-        { n: "Banco Provincia", cl: "bancoprovincia",  pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 }
+        { n: "La Esperanza",    cl: "laesperanza",    pj: 1, pg: 1, pe: 0, pp: 0, gf: 8, gc: 2, pts: 3 },
+        { n: "Banco Provincia", cl: "bancoprovincia",  pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
+        { n: "Los 3 Chiflados", cl: "los3chiflados",  pj: 1, pg: 0, pe: 0, pp: 1, gf: 2, gc: 8, pts: 0 }
     ],
     posicionesNorte: [
         { n: "Torino",            cl: "torino",           pj: 1, pg: 1, pe: 0, pp: 0, gf: 4, gc: 1, pts: 3 },
@@ -15837,8 +15837,13 @@ const BD_BONAERENSE_SUR = {
         { n: "Def. Villa Clelia", cl: "defvillaclelia",   pj: 1, pg: 0, pe: 1, pp: 0, gf: 5, gc: 5, pts: 1 },
         { n: "Eureka Pinamar",    cl: "eurekapinamar",    pj: 1, pg: 0, pe: 0, pp: 1, gf: 1, gc: 4, pts: 0 }
     ],
-    goleadores: []
-};
+    goleadores: [
+    { nombre: "Bruno Decoud",          equipo: "La Esperanza",   goles: 3 },
+    { nombre: "Alexis Vera",           equipo: "La Esperanza",   goles: 2 },
+    { nombre: "Emiliano Etchepareborda", equipo: "La Esperanza", goles: 1 },
+    { nombre: "Jesús Abdala",          equipo: "La Esperanza",   goles: 1 },
+    { nombre: "Andrés Haidt",          equipo: "La Esperanza",   goles: 1 }
+]};
 
 function generarFutsalBonaerense() {
     const n = estado.fechaBonaerense || 1;
@@ -15917,15 +15922,15 @@ const BD_BONAERENSE_PROMO = {
         ],
         fixture: [
             { fecha: 1, libre: null, dia: "Vie 01/05", partidos: [
-                { l: "Villa Mitre", v: "La Estación", gl: null, gv: null, hora: "20:30" }
+                { l: "Villa Mitre", v: "La Estación", gl: 2, gv: 5, hora: "20:30" }
             ]},
             { fecha: 2, libre: null, dia: "Vie 08/05", partidos: [
                 { l: "La Estación", v: "Villa Mitre", gl: null, gv: null }
             ]}
         ],
         posiciones: [
-            { n: "Villa Mitre",  cl: "villamitre",  pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
-            { n: "La Estación", cl: "laestacion", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 }
+            { n: "La Estación", cl: "laestacion", pj: 1, pg: 1, pe: 0, pp: 0, gf: 5, gc: 2, pts: 3 },
+            { n: "Villa Mitre",  cl: "villamitre",  pj: 1, pg: 0, pe: 0, pp: 1, gf: 2, gc: 5, pts: 0 }
         ]
     },
     grupo2: {
@@ -16981,13 +16986,14 @@ const BD_ARQUEROS = {
             { rival: "Liniers", resultado: "Sporting 0 - 0 Liniers", fecha: 6 },
             { rival: "Villa Mitre", resultado: "Villa Mitre 0 - 2 Sporting", fecha: 7 }
         ]},
+        { jugador: "Andoni Mendiguibel", equipo: "Liniers", partidos: [
+            { rival: "Bella Vista", resultado: "Bella Vista 0 - 1 Liniers", fecha: 2 },
+            { rival: "Sporting", resultado: "Sporting 0 - 0 Liniers", fecha: 6 },
+            { rival: "San Francisco", resultado: "Liniers 2 - 0 San Francisco", fecha: 7 }
+        ]},
         { jugador: "Facundo Carnicero", equipo: "Libertad", partidos: [
             { rival: "Bella Vista", resultado: "Libertad 0 - 0 Bella Vista", fecha: 3 },
             { rival: "Liniers", resultado: "Liniers 0 - 0 Libertad", fecha: 4 }
-        ]},
-        { jugador: "Andoni Mendiguibel", equipo: "Liniers", partidos: [
-            { rival: "Bella Vista", resultado: "Bella Vista 0 - 1 Liniers", fecha: 2 },
-            { rival: "Sporting", resultado: "Sporting 0 - 0 Liniers", fecha: 6 }
         ]},
         { jugador: "Valentino Torres", equipo: "San Francisco", partidos: [
             { rival: "San Francisco", resultado: "San Francisco 0 - 0 Huracán", fecha: 6 }
@@ -17184,14 +17190,14 @@ function generarPerfilJugador(jugador, equipo) {
 const BD_POSICIONES = {
     oficial: {
         apertura: [
-            { nombre: "Huracán",       clase: "huracan",      pj:6, pg:4, pe:1, pp:1, gf:10, gc:6,  pts:13 },
-            { nombre: "Libertad",      clase: "libertad",     pj:6, pg:3, pe:3, pp:0, gf:8, gc:4,  pts:12 },
-            { nombre: "Bella Vista",   clase: "bellavista",   pj:6, pg:3, pe:1, pp:2, gf:7, gc:5,  pts:10 },
+            { nombre: "Huracán",       clase: "huracan",      pj:7, pg:4, pe:2, pp:1, gf:12, gc:8,  pts:14 },
+            { nombre: "Libertad",      clase: "libertad",     pj:7, pg:3, pe:4, pp:0, gf:9, gc:5,  pts:13 },
+            { nombre: "Bella Vista",   clase: "bellavista",   pj:7, pg:3, pe:2, pp:2, gf:9, gc:7,  pts:11 },
+            { nombre: "Liniers",       clase: "liniers",      pj:7, pg:3, pe:1, pp:3, gf:7, gc:5,  pts:10 },
             { nombre: "Sporting",      clase: "sporting",     pj:7, pg:2, pe:3, pp:2, gf:8, gc:7,  pts:9 },
             { nombre: "Villa Mitre",   clase: "villamitre",   pj:7, pg:3, pe:0, pp:4, gf:8, gc:8,  pts:9 },
-            { nombre: "Liniers",       clase: "liniers",      pj:6, pg:2, pe:1, pp:3, gf:5, gc:5,  pts:7 },
-            { nombre: "La Armonía",    clase: "laarmonia",    pj:6, pg:2, pe:0, pp:4, gf:7, gc:14,  pts:6 },
-            { nombre: "San Francisco", clase: "sanfrancisco", pj:6, pg:0, pe:3, pp:3, gf:4, gc:8,  pts:3 }
+            { nombre: "La Armonía",    clase: "laarmonia",    pj:7, pg:2, pe:1, pp:4, gf:8, gc:15,  pts:7 },
+            { nombre: "San Francisco", clase: "sanfrancisco", pj:7, pg:0, pe:3, pp:4, gf:4, gc:10,  pts:3 }
         ]
     },
     promocional: {
@@ -17199,9 +17205,9 @@ const BD_POSICIONES = {
             { nombre: "Comercial",           clase: "comercial",       pj:7, pg:4, pe:2, pp:1, gf:7, gc:5, pts:14 },
             { nombre: "Dublin",              clase: "dublin",          pj:7, pg:3, pe:3, pp:1, gf:6, gc:6, pts:12 },
             { nombre: "Tiro Federal",        clase: "tirofederal",     pj:7, pg:3, pe:2, pp:2, gf:8, gc:4, pts:11 },
-            { nombre: "Rosario PB",          clase: "rosariopb",       pj:6, pg:2, pe:3, pp:1, gf:11, gc:9, pts:9 },
-            { nombre: "Sansinena",           clase: "sansinena",       pj:6, pg:1, pe:4, pp:1, gf:7, gc:6, pts:7 },
+            { nombre: "Rosario PB",          clase: "rosariopb",       pj:7, pg:2, pe:4, pp:1, gf:15, gc:13, pts:10 },
             { nombre: "Olimpo",              clase: "olimpo",          pj:7, pg:2, pe:3, pp:2, gf:7, gc:5, pts:9 },
+            { nombre: "Sansinena",           clase: "sansinena",       pj:7, pg:1, pe:5, pp:1, gf:11, gc:10, pts:8 },
             { nombre: "Pacífico BB",         clase: "pacificobb",      pj:7, pg:1, pe:1, pp:5, gf:5, gc:13, pts:4 },
             { nombre: "Pacífico (C)",        clase: "pacificocabildo", pj:7, pg:0, pe:4, pp:3, gf:11, gc:15, pts:4 }
         ]
@@ -17221,13 +17227,13 @@ const BD_POSICIONES = {
     segundafemenino: {
         torneo2026: [
             { nombre: "San Francisco",       clase: "sanfrancisco",    pj:5, pg:4, pe:1, pp:0, gf:26, gc:5, pts:13 },
+            { nombre: "Rosario PB",          clase: "rosariopb",       pj:6, pg:4, pe:1, pp:1, gf:34, gc:8, pts:13 },
             { nombre: "Liniers",             clase: "liniers",         pj:4, pg:4, pe:0, pp:0, gf:17, gc:3, pts:12 },
             { nombre: "Estrella de Oro",     clase: "estrellaoro",     pj:6, pg:3, pe:2, pp:1, gf:15, gc:11, pts:11 },
-            { nombre: "Rosario PB",          clase: "rosariopb",       pj:5, pg:3, pe:1, pp:1, gf:25, gc:8, pts:10 },
-            { nombre: "Petroquímicos",       clase: "petroquimicos",   pj:4, pg:2, pe:0, pp:2, gf:9, gc:5, pts:6 },
-            { nombre: "Sansinena",           clase: "sansinena",       pj:5, pg:2, pe:0, pp:3, gf:9, gc:14, pts:6 },
+            { nombre: "Petroquímicos",       clase: "petroquimicos",   pj:5, pg:3, pe:0, pp:2, gf:12, gc:5, pts:9 },
+            { nombre: "Sansinena",           clase: "sansinena",       pj:6, pg:2, pe:0, pp:4, gf:9, gc:17, pts:6 },
             { nombre: "Olimpo",              clase: "olimpo",          pj:3, pg:1, pe:0, pp:2, gf:4, gc:12, pts:3 },
-            { nombre: "Pacífico (C)", clase: "pacificocabildo", pj:3, pg:0, pe:0, pp:3, gf:1, gc:17, pts:0 },
+            { nombre: "Pacífico (C)", clase: "pacificocabildo", pj:4, pg:0, pe:0, pp:4, gf:1, gc:26, pts:0 },
             { nombre: "Huracán",             clase: "huracan",         pj:5, pg:0, pe:0, pp:5, gf:1, gc:30, pts:0 },
         ]
     }
@@ -17277,10 +17283,10 @@ function generarTabla(tor, cat) {
         html += `<tr class="${cl}"><td class="c-pos">${i+1}</td><td class="c-equipo">${e.nombre}</td><td class="c-stat">${e.pj}</td><td class="c-stat">${e.pg}</td><td class="c-stat">${e.pe}</td><td class="c-stat">${e.pp}</td><td class="c-stat">${e.gf}</td><td class="c-stat">${e.gc}</td><td class="c-stat">${e.gf-e.gc}</td><td class="c-stat"><b>${e.pts}</b></td></tr>`;
     });
     if (tor === 'apertura' && cat === 'oficial') {
-        return html + "</tbody></table><div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>24</b> tras finalizar la fecha <b>6</b></div>";
+        return html + "</tbody></table><div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>21</b> tras finalizar la fecha <b>7</b></div>";
     }
     if (tor === 'apertura' && cat === 'promocional') {
-        return html + "</tbody></table><div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>24</b> tras finalizar la fecha <b>6</b></div>";
+        return html + "</tbody></table><div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>21</b> tras finalizar la fecha <b>7</b></div>";
     }
     if (tor === 'apertura' && cat === 'femenino') {
         return html + "</tbody></table><div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>27</b> tras finalizar la fecha <b>5</b></div>";
