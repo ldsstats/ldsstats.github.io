@@ -972,11 +972,11 @@ const idaSub15Fem = [
     ]},
     { fecha: 5, partidos: [
         {l:"Libertad",              v:"Tiro Federal",     gl:0, gv:2},
-        {l:"Liniers",               v:"Bella Vista",      gl:null, gv:null},
-        {l:"Empleados de Comercio", v:"Villa Mitre",      gl:null, gv:null},
-        {l:"Olimpo",                v:"Juventud Unida",   gl:null, gv:null},
         {l:"Huracán",               v:"Sporting",         gl:null, gv:null},
-        {l:"La Armonía",            v:"San Francisco",    gl:null, gv:null}
+        {l:"La Armonía",            v:"San Francisco",    gl:1, gv:2},
+        {l:"Empleados de Comercio", v:"Villa Mitre",      gl:null, gv:null},
+        {l:"Liniers",               v:"Bella Vista",      gl:null, gv:null},
+        {l:"Olimpo",                v:"Juventud Unida",   gl:null, gv:null}
     ]},
     { fecha: 6, partidos: [
         {l:"Sporting",              v:"Bella Vista",      gl:null, gv:null},
