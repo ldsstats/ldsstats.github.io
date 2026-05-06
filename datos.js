@@ -1355,7 +1355,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 6).partidos.forEach(p 
 });
 
 
-let diaSeleccionadoHome = "2026-05-03"; 
+let diaSeleccionadoHome = "2026-05-06"; 
 
 function seleccionarDiaHome(dia) {
     diaSeleccionadoHome = dia;
