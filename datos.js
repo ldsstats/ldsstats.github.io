@@ -1381,7 +1381,7 @@ function generarHome() {
                 {l:"Huracán", v:"Tiro Federal", hora:"20:00", nota:"En cancha de Tiro Federal", gl:6, gv:1},
                 {l:"Libertad", v:"Bella Vista", hora:"21:30", nota:"En cancha de Libertad"},
                 {l:"Pacífico (C)", v:"Sporting", hora:"21:30", nota:"En cancha de Sansinena", gl:0, gv:3},
-                {l:"Sansinena", v:"San Francisco", hora:"21:30", nota:"En cancha de Sansinena"}
+                {l:"Sansinena", v:"San Francisco", hora:"21:30", nota:"En cancha de Sansinena", gl:1, gv:1}
             ]},
             { nombre: "FUTSAL", cat: "futsal", partidos: [
                 {l:"Los 3 Chiflados", v:"San Francisco", hora:"22:00", nota:"En cancha de Don Bosco", gl:8, gv:4},
@@ -16063,8 +16063,8 @@ const BD_SENIOR_APERTURA = [
     { n: "Pacífico BB",       cl: "pacificobb",    pj: 1, pg: 1, pe: 0, pp: 0, gf: 1, gc: 0, pts: 3 },
     { n: "Libertad",          cl: "libertad",      pj: 1, pg: 0, pe: 1, pp: 0, gf: 2, gc: 2, pts: 1 },
     { n: "Tiro Federal",      cl: "tirofederal",   pj: 2, pg: 0, pe: 1, pp: 1, gf: 3, gc: 8, pts: 1 },
-    { n: "San Francisco",     cl: "sanfrancisco",  pj: 1, pg: 0, pe: 0, pp: 1, gf: 0, gc: 1, pts: 0 },
-    { n: "Sansinena",         cl: "sansinena",     pj: 1, pg: 0, pe: 0, pp: 1, gf: 0, gc: 1, pts: 0 },
+    { n: "San Francisco",     cl: "sanfrancisco",  pj: 2, pg: 0, pe: 0, pp: 2, gf: 1, gc: 2, pts: 1 },
+    { n: "Sansinena",         cl: "sansinena",     pj: 2, pg: 0, pe: 1, pp: 1, gf: 1, gc: 2, pts: 1 },
     { n: "Bella Vista",       cl: "bellavista",    pj: 1, pg: 0, pe: 0, pp: 1, gf: 0, gc: 2, pts: 0 },
     { n: "Comercial",         cl: "comercial",     pj: 1, pg: 0, pe: 0, pp: 1, gf: 1, gc: 3, pts: 0 }
 ];
@@ -16082,7 +16082,7 @@ const BD_FIXTURES_SENIOR = [
         { l: "Huracán",   v: "Tiro Federal",  gl: 6, gv: 1 },
         { l: "Libertad",   v: "Bella Vista",  gl: null, gv: null },
         { l: "Pacífico (C)",   v: "Sporting",  gl: 0, gv: 3 },
-        { l: "Sansinena",   v: "San Francisco",  gl: null, gv: null }
+        { l: "Sansinena",   v: "San Francisco",  gl: 1, gv: 1 }
     ]},
     { fecha: 3, libre: null, partidos: [] },
     { fecha: 4, libre: null, partidos: [] },
@@ -16177,7 +16177,9 @@ const BD_GOLEADORES_SENIOR = [
     { nombre: "Gabriel Bernengo", equipo: "Sporting", goles: 1 },
     { nombre: "Marcos Cossu", equipo: "Sporting", goles: 1 },
     { nombre: "Paolo Quiroga", equipo: "Sporting", goles: 1 },
-    { nombre: "Maximiliano Rodríguez", equipo: "Sporting", goles: 1 }
+    { nombre: "Maximiliano Rodríguez", equipo: "Sporting", goles: 1 },
+    { nombre: "Patricio Muñoz", equipo: "San Francisco", goles: 1 },
+    { nombre: "Emiliano Jofré", equipo: "Sansinena", goles: 1 }
 ];
 
 function generarSeniorGoleadores() {
