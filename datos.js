@@ -1223,7 +1223,7 @@ BD_FIXTURES.promocional.reserva.push(
     { fecha: 7, partidos: [
         {l:"Comercial",   v:"Pacífico (C)", gl:2,   gv:1},
         {l:"Olimpo",      v:"Dublin",          gl:3,   gv:1},
-        {l:"Rosario PB", v:"Sansinena",              gl:null,   gv:null},
+        {l:"Rosario PB", v:"Sansinena",              gl:1,   gv:0},
         {l:"Tiro Federal",v:"Pacífico BB",           gl:2,   gv:2}
     ]},
 );
@@ -1362,9 +1362,9 @@ function generarHome() {
         { id: "2026-05-05", label: "MAR 05/05", torneos: [
             { nombre: "SENIOR", cat: "seniorapertura", partidos: [
                 {l:"Pacífico BB", v:"Comercial", hora:"20:00", nota:"En cancha de Libertad"},
-                {l:"Huracán", v:"Tiro Federal", hora:"20:00", nota:"En cancha de Tiro Federal"},
+                {l:"Huracán", v:"Tiro Federal", hora:"20:00", nota:"En cancha de Tiro Federal", gl:6, gv:1},
                 {l:"Libertad", v:"Bella Vista", hora:"21:30", nota:"En cancha de Libertad"},
-                {l:"Pacífico (C)", v:"Sporting", hora:"21:30", nota:"En cancha de Sansinena"},
+                {l:"Pacífico (C)", v:"Sporting", hora:"21:30", nota:"En cancha de Sansinena", gl:0, gv:3},
                 {l:"Sansinena", v:"San Francisco", hora:"21:30", nota:"En cancha de Sansinena"}
             ]},
             { nombre: "FUTSAL", cat: "futsal", partidos: [
@@ -15222,9 +15222,9 @@ function generarReserva(cat) {
                        {n:"Olimpo",              cl:"olimpo",           pj:6, pg:4, pe:0, pp:2, gf:9, gc:5, pts:12},
                        {n:"Pacífico BB",         cl:"pacificobb",       pj:7, pg:2, pe:2, pp:3, gf:8, gc:7, pts:8},
                        {n:"Dublin",              cl:"dublin",           pj:7, pg:2, pe:1, pp:4, gf:10, gc:10, pts:7},
-                       {n:"Rosario PB",          cl:"rosariopb",        pj:6, pg:1, pe:3, pp:2, gf:5, gc:6, pts:6},
-                       {n:"Pacífico (C)", cl:"pacificocabildo",  pj:7, pg:1, pe:1, pp:5, gf:6, gc:15, pts:4},
-                       {n:"Sansinena",           cl:"sansinena",        pj:5, pg:1, pe:0, pp:4, gf:3, gc:10, pts:3},],
+                       {n:"Sansinena",           cl:"sansinena",        pj:6, pg:2, pe:0, pp:4, gf:3, gc:10, pts:6},
+                       {n:"Rosario PB",          cl:"rosariopb",        pj:7, pg:1, pe:3, pp:3, gf:5, gc:7, pts:6},
+                       {n:"Pacífico (C)", cl:"pacificocabildo",  pj:7, pg:1, pe:1, pp:5, gf:6, gc:15, pts:4},],
         'segundafemenino': [
             {n:"Rosario PB",          cl:"rosariopb",       pj:4, pg:4, pe:0, pp:0, gf:12, gc:2, pts:12},
             {n:"Liniers",             cl:"liniers",         pj:3, pg:3, pe:0, pp:0, gf:13, gc:3, pts:9},
@@ -16036,12 +16036,12 @@ function generarTablaPosBonaerense(pos) {
 }
 
 const BD_SENIOR_APERTURA = [
-    { n: "Huracán",           cl: "huracan",       pj: 1, pg: 1, pe: 0, pp: 0, gf: 3, gc: 1, pts: 3 },
-    { n: "Pacífico (C)",      cl: "pacificoc",     pj: 1, pg: 1, pe: 0, pp: 0, gf: 2, gc: 0, pts: 3 },
+    { n: "Huracán",           cl: "huracan",       pj: 2, pg: 2, pe: 0, pp: 0, gf: 9, gc: 2, pts: 6 },
+    { n: "Pacífico (C)",      cl: "pacificoc",     pj: 2, pg: 1, pe: 0, pp: 1, gf: 2, gc: 3, pts: 3 },
     { n: "Pacífico BB",       cl: "pacificobb",    pj: 1, pg: 1, pe: 0, pp: 0, gf: 1, gc: 0, pts: 3 },
-    { n: "Sporting",          cl: "sporting",      pj: 1, pg: 1, pe: 0, pp: 0, gf: 1, gc: 0, pts: 3 },
+    { n: "Sporting",          cl: "sporting",      pj: 2, pg: 2, pe: 0, pp: 0, gf: 4, gc: 0, pts: 6 },
     { n: "Libertad",          cl: "libertad",      pj: 1, pg: 0, pe: 1, pp: 0, gf: 2, gc: 2, pts: 1 },
-    { n: "Tiro Federal",      cl: "tirofederal",   pj: 1, pg: 0, pe: 1, pp: 0, gf: 2, gc: 2, pts: 1 },
+    { n: "Tiro Federal",      cl: "tirofederal",   pj: 2, pg: 0, pe: 1, pp: 1, gf: 3, gc: 8, pts: 1 },
     { n: "San Francisco",     cl: "sanfrancisco",  pj: 1, pg: 0, pe: 0, pp: 1, gf: 0, gc: 1, pts: 0 },
     { n: "Sansinena",         cl: "sansinena",     pj: 1, pg: 0, pe: 0, pp: 1, gf: 0, gc: 1, pts: 0 },
     { n: "Bella Vista",       cl: "bellavista",    pj: 1, pg: 0, pe: 0, pp: 1, gf: 0, gc: 2, pts: 0 },
@@ -16058,9 +16058,9 @@ const BD_FIXTURES_SENIOR = [
     ]},
     { fecha: 2, dia: "Mar 05/05", partidos: [
         { l: "Pacífico BB",   v: "Comercial",  gl: null, gv: null },
-        { l: "Huracán",   v: "Tiro Federal",  gl: null, gv: null },
+        { l: "Huracán",   v: "Tiro Federal",  gl: 6, gv: 1 },
         { l: "Libertad",   v: "Bella Vista",  gl: null, gv: null },
-        { l: "Pacífico (C)",   v: "Sporting",  gl: null, gv: null },
+        { l: "Pacífico (C)",   v: "Sporting",  gl: 0, gv: 3 },
         { l: "Sansinena",   v: "San Francisco",  gl: null, gv: null }
     ]},
     { fecha: 3, libre: null, partidos: [] },
@@ -16143,7 +16143,8 @@ function generarSeniorApertura() {
 }
 
 const BD_GOLEADORES_SENIOR = [
-    { nombre: "César Panduro", equipo: "Huracán", goles: 2 },
+    { nombre: "César Panduro", equipo: "Huracán", goles: 5 },
+    { nombre: "Felipe Hipperdinger", equipo: "Huracán", goles: 3 },
     { nombre: "Juan José Dietz", equipo: "Tiro Federal", goles: 2 },
     { nombre: "Sebastián Faila", equipo: "Huracán", goles: 1 },
     { nombre: "Mariano Moreno", equipo: "Libertad", goles: 1 },
@@ -16152,7 +16153,10 @@ const BD_GOLEADORES_SENIOR = [
     { nombre: "Leandro Duelle", equipo: "Pacífico (C)", goles: 1 },
     { nombre: "Ramón López", equipo: "Pacífico BB", goles: 1 },
     { nombre: "Sebastián Aristi", equipo: "Comercial", goles: 1 },
-    { nombre: "Gabriel Bernengo", equipo: "Sporting", goles: 1 }
+    { nombre: "Gabriel Bernengo", equipo: "Sporting", goles: 1 },
+    { nombre: "Marcos Cossu", equipo: "Sporting", goles: 1 },
+    { nombre: "Paolo Quiroga", equipo: "Sporting", goles: 1 },
+    { nombre: "Maximiliano Rodríguez", equipo: "Sporting", goles: 1 }
 ];
 
 function generarSeniorGoleadores() {
