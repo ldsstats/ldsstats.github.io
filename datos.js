@@ -15856,10 +15856,10 @@ const BD_BONAERENSE_SUR = {
         { n: "Los 3 Chiflados", cl: "los3chiflados",  pj: 1, pg: 0, pe: 0, pp: 1, gf: 2, gc: 8, pts: 0 }
     ],
     posicionesNorte: [
+        { n: "CAJU San Bernardo", cl: "cajusanbernardo",  pj: 2, pg: 1, pe: 1, pp: 0, gf: 11, gc: 8, pts: 4 },
         { n: "Torino",            cl: "torino",           pj: 1, pg: 1, pe: 0, pp: 0, gf: 4, gc: 1, pts: 3 },
-        { n: "CAJU San Bernardo", cl: "cajusanbernardo",  pj: 1, pg: 0, pe: 1, pp: 0, gf: 5, gc: 5, pts: 1 },
         { n: "Def. Villa Clelia", cl: "defvillaclelia",   pj: 1, pg: 0, pe: 1, pp: 0, gf: 5, gc: 5, pts: 1 },
-        { n: "Eureka Pinamar",    cl: "eurekapinamar",    pj: 1, pg: 0, pe: 0, pp: 1, gf: 1, gc: 4, pts: 0 }
+        { n: "Eureka Pinamar",    cl: "eurekapinamar",    pj: 2, pg: 0, pe: 0, pp: 2, gf: 4, gc: 10, pts: 0 }
     ],
     goleadores: [
     { nombre: "Bruno Decoud",          equipo: "La Esperanza",   goles: 3 },
