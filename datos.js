@@ -1122,7 +1122,7 @@ BD_FIXTURES_SUB.sub15.find(f=>f.fecha===3).partidos.forEach(p=>{
 BD_FIXTURES_SUB.sub15.find(f=>f.fecha===4).partidos.forEach(p=>{
     if(p.l==="Kimberley"&&p.v==="Villa Mitre"){p.gl=2;p.gv=1;}
     if(p.l==="Mac Allister"&&p.v==="Olimpo"){p.gl=null;p.gv=null;}
-    if(p.l==="Alvarado"&&p.v==="Balompié"){p.gl=null;p.gv=null;}
+    if(p.l==="Alvarado"&&p.v==="Balompié"){p.gl=1;p.gv=0;}
 });
 BD_FIXTURES_SUB.sub17.find(f=>f.fecha===1).partidos.forEach(p=>{
     if(p.l==="Villa Mitre"&&p.v==="Olimpo"){p.gl=1;p.gv=1;p.goles_l=["Mateo Luzuriaga"];p.goles_v=["Benicio Hernández"];}
@@ -1142,7 +1142,7 @@ BD_FIXTURES_SUB.sub17.find(f=>f.fecha===3).partidos.forEach(p=>{
 BD_FIXTURES_SUB.sub17.find(f=>f.fecha===4).partidos.forEach(p=>{
     if(p.l==="Kimberley"&&p.v==="Villa Mitre"){p.gl=1;p.gv=1;}
     if(p.l==="Mac Allister"&&p.v==="Olimpo"){p.gl=null;p.gv=null;}
-    if(p.l==="Alvarado"&&p.v==="Balompié"){p.gl=null;p.gv=null;}
+    if(p.l==="Alvarado"&&p.v==="Balompié"){p.gl=2;p.gv=1;}
 });
 
 
@@ -1414,10 +1414,10 @@ function generarHome() {
         ]},
         { id: "2026-05-09", label: "SÁB 09/05", torneos: [
             { nombre: "OFICIAL", cat: "oficial", partidos: [
-                {l:"Huracán", v:"Libertad", hora:"15:30", nota:"En cancha de San Francisco"},
+                {l:"Huracán", v:"Libertad", hora:"15:30", nota:"en cancha de San Francisco y sin visitantes"},
             ]},
             { nombre: "PROMOCIONAL", cat: "promocional", partidos: [
-                {l:"Comercial", v:"Tiro Federal", hora:"15:30"},
+                {l:"Comercial", v:"Tiro Federal", hora:"15:30", nota:"sin visitantes"},
                 {l:"Olimpo", v:"Pacífico BB", hora:"15:30", nota:"En cancha de Liniers"}
             ]},
             { nombre: "FUTSAL BONAERENSE - ASCENSO", cat: "futsalbonaerense", partidos: [
@@ -15323,17 +15323,17 @@ const BD_POS_SUB = {
     sub15: [
         {nombre:"Mac Allister", clase:"macallister", pj:3,pg:3,pe:0,pp:0,gf:4,gc:0,pts:9},
         {nombre:"Kimberley",    clase:"kimberley",   pj:3,pg:2,pe:1,pp:0,gf:4,gc:2,pts:7},
-        {nombre:"Alvarado",     clase:"alvarado",    pj:3,pg:1,pe:1,pp:1,gf:9,gc:3,pts:4},
-        {nombre:"Balompié",     clase:"balompie",    pj:2,pg:1,pe:0,pp:1,gf:4,gc:3,pts:3},
+        {nombre:"Alvarado",     clase:"alvarado",    pj:4,pg:2,pe:1,pp:1,gf:10,gc:3,pts:7},
+        {nombre:"Balompié",     clase:"balompie",    pj:3,pg:1,pe:0,pp:2,gf:4,gc:4,pts:3},
         {nombre:"Olimpo",       clase:"olimpo",      pj:2,pg:1,pe:0,pp:1,gf:3,gc:5,pts:3},
         {nombre:"Villa Mitre",  clase:"villamitre",  pj:4,pg:1,pe:0,pp:3,gf:4,gc:6,pts:3},
         {nombre:"Santamarina",  clase:"santamarina", pj:3,pg:0,pe:0,pp:3,gf:0,gc:9,pts:0}
     ],
     sub17: [
+        {nombre:"Alvarado",     clase:"alvarado",    pj:4,pg:3,pe:0,pp:1,gf:9,gc:5,pts:9},
         {nombre:"Kimberley",    clase:"kimberley",   pj:3,pg:2,pe:1,pp:0,gf:4,gc:2,pts:7},
-        {nombre:"Alvarado",     clase:"alvarado",    pj:3,pg:2,pe:0,pp:1,gf:7,gc:4,pts:6},
         {nombre:"Mac Allister", clase:"macallister", pj:3,pg:1,pe:2,pp:0,gf:4,gc:3,pts:5},
-        {nombre:"Balompié",     clase:"balompie",    pj:2,pg:1,pe:1,pp:0,gf:6,gc:5,pts:4},
+        {nombre:"Balompié",     clase:"balompie",    pj:3,pg:1,pe:1,pp:1,gf:7,gc:7,pts:4},
         {nombre:"Villa Mitre",  clase:"villamitre",  pj:4,pg:0,pe:3,pp:1,gf:3,gc:5,pts:3},
         {nombre:"Olimpo",       clase:"olimpo",      pj:2,pg:0,pe:1,pp:1,gf:3,gc:4,pts:1},
         {nombre:"Santamarina",  clase:"santamarina", pj:3,pg:0,pe:0,pp:3,gf:1,gc:5,pts:0}
@@ -15342,9 +15342,9 @@ const BD_POS_SUB = {
 
 const BD_GOL_SUB = {
     sub13: [
-        {jugador:"Santiago Martínez", equipo:"Villa Mitre", clase:"villamitre", n:4},
+        {jugador:"Santiago Martínez", equipo:"Villa Mitre", clase:"villamitre", n:5},
+        {jugador:"Valentino Altfater",    equipo:"Villa Mitre", clase:"villamitre", n:3},
         {jugador:"Ringo Melcon",      equipo:"Villa Mitre", clase:"villamitre", n:2},
-        {jugador:"Valentino Altfater",    equipo:"Villa Mitre", clase:"villamitre", n:2},
         {jugador:"Erick Schwaner",    equipo:"Villa Mitre", clase:"villamitre", n:1},
         {jugador:"Vergara",    equipo:"Villa Mitre", clase:"villamitre", n:1},
         {jugador:"Santino Canales",   equipo:"Olimpo",      clase:"olimpo",     n:1},
@@ -15356,13 +15356,15 @@ const BD_GOL_SUB = {
         {jugador:"Thiago Alfredo",    equipo:"Olimpo",      clase:"olimpo",     n:1},
         {jugador:"Galo Martínez",     equipo:"Olimpo",      clase:"olimpo",     n:1},
         {jugador:"Ciro Barra",     equipo:"Olimpo",      clase:"olimpo",     n:1},
-        {jugador:"Cardozo",    equipo:"Villa Mitre", clase:"villamitre", n:1}
+        {jugador:"Cardozo",    equipo:"Villa Mitre", clase:"villamitre", n:1},
+        {jugador:"Schfer",    equipo:"Villa Mitre", clase:"villamitre", n:1}
     ],
     sub17: [
         {jugador:"Benicio Hernández", equipo:"Olimpo",      clase:"olimpo",     n:2},
         {jugador:"Valentino Kurtz", equipo:"Olimpo",      clase:"olimpo",     n:1},
         {jugador:"Kraemer",    equipo:"Villa Mitre", clase:"villamitre", n:1},
-        {jugador:"Mateo Luzuriaga",   equipo:"Villa Mitre", clase:"villamitre", n:1}
+        {jugador:"Mateo Luzuriaga",   equipo:"Villa Mitre", clase:"villamitre", n:1},
+        {jugador:"Rodríguez",   equipo:"Villa Mitre", clase:"villamitre", n:1}
     ]
 };
 
