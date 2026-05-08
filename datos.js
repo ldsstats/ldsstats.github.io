@@ -261,13 +261,13 @@ const BD_FIXTURES_FUTSAL_RESERVA = [
         {l:"La Estación",     v:"Huracán",         gl:null, gv:null}
     ]},
     { fecha: 7, partidos: [
-        {l:"Los 3 Chiflados", v:"Villa Mitre",     gl:null, gv:null},
+        {l:"Los 3 Chiflados", v:"Villa Mitre",     gl:4, gv:3},
+        {l:"Dublin",          v:"Catamarca",       gl:4, gv:2},
         {l:"San Francisco",   v:"Comercial",       gl:null, gv:null},
         {l:"Dep. Futsal",     v:"La Estación",     gl:null, gv:null},
         {l:"Huracán",         v:"Tiro Federal",    gl:null, gv:null},
         {l:"Liniers",         v:"Pacífico BB",     gl:null, gv:null},
-        {l:"Petroquímicos",   v:"La Esperanza",    gl:null, gv:null},
-        {l:"Dublin",          v:"Catamarca",       gl:null, gv:null}
+        {l:"Petroquímicos",   v:"La Esperanza",    gl:null, gv:null}
     ]},
     { fecha: 8, partidos: [
         {l:"La Esperanza",    v:"San Francisco",   gl:null, gv:null},
@@ -885,7 +885,7 @@ const BD_FIXTURES_FUTSAL = [
         {l:"La Estación",     v:"Huracán",         gl:null, gv:null}
     ]},
     { fecha: 7, partidos: [
-        {l:"Los 3 Chiflados", v:"Villa Mitre",     gl:null, gv:null},
+        {l:"Los 3 Chiflados", v:"Villa Mitre",     gl:7, gv:2},
         {l:"San Francisco",   v:"Comercial",       gl:null, gv:null},
         {l:"Dep. Futsal",     v:"La Estación",     gl:null, gv:null},
         {l:"Huracán",         v:"Tiro Federal",    gl:null, gv:null},
@@ -1368,7 +1368,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 6).partidos.forEach(p 
 });
 
 
-let diaSeleccionadoHome = "2026-05-07"; 
+let diaSeleccionadoHome = "2026-05-08"; 
 
 function seleccionarDiaHome(dia) {
     diaSeleccionadoHome = dia;
@@ -1403,7 +1403,7 @@ function generarHome() {
         { id: "2026-05-07", label: "JUE 07/05", torneos: [
             { nombre: "FUTSAL", cat: "futsal", partidos: [
                 {l:"Dublin", v:"Catamarca", hora:"22:00", nota:"En cancha de Don Bosco"},
-                {l:"Los 3 Chiflados", v:"Villa Mitre", hora:"22:00", nota:"En cancha de La Curtiembre"},
+                {l:"Los 3 Chiflados", v:"Villa Mitre", hora:"22:00", nota:"En cancha de La Curtiembre", gl:7, gv:2},
                 {l:"Huracán", v:"Tiro Federal", hora:"22:30", nota:"En cancha de La Estación"}
             ]},
         ]},
@@ -15488,10 +15488,10 @@ function generarSub() {
 
 const BD_POS_FUTSAL = {
     principal: [
+        {n:"Los 3 Chiflados", cl:"los3chiflados", pj:7,pg:5,pe:1,pp:1,gf:49, gc:23, pts:16},
         {n:"La Estación",     cl:"laestacion",    pj:5,pg:5,pe:0,pp:0,gf:30, gc:8, pts:15},
         {n:"Comercial",       cl:"comercial",     pj:6,pg:4,pe:2,pp:0,gf:32, gc:12, pts:14},
-        {n:"Villa Mitre",     cl:"villamitre",    pj:5,pg:4,pe:1,pp:0,gf:22, gc:9, pts:13},
-        {n:"Los 3 Chiflados", cl:"los3chiflados", pj:6,pg:4,pe:1,pp:1,gf:42, gc:21, pts:13},
+        {n:"Villa Mitre",     cl:"villamitre",    pj:6,pg:4,pe:1,pp:1,gf:24, gc:16, pts:13},
         {n:"La Esperanza",    cl:"laesperanza",   pj:5,pg:4,pe:0,pp:1,gf:21, gc:13, pts:12},
         {n:"Liniers",         cl:"liniers",       pj:6,pg:2,pe:3,pp:1,gf:23, gc:20, pts:9},
         {n:"Petroquímicos",   cl:"petroquimicos", pj:6,pg:3,pe:0,pp:3,gf:26,gc:27, pts:9},
@@ -15504,14 +15504,14 @@ const BD_POS_FUTSAL = {
         {n:"Huracán",         cl:"huracan",       pj:5,pg:0,pe:0,pp:5,gf:14, gc:41,pts:0}
     ],
     reserva: [
-        {n:"Los 3 Chiflados", cl:"los3chiflados", pj:6,pg:5,pe:1,pp:0,gf:32, gc:4, pts:16},
+        {n:"Los 3 Chiflados", cl:"los3chiflados", pj:7,pg:6,pe:1,pp:0,gf:36, gc:7, pts:19},
         {n:"Petroquímicos",   cl:"petroquimicos", pj:6,pg:4,pe:2,pp:0,gf:35, gc:12, pts:14},
-        {n:"Villa Mitre",     cl:"villamitre",    pj:5,pg:4,pe:1,pp:0,gf:26, gc:14, pts:13},
+        {n:"Villa Mitre",     cl:"villamitre",    pj:6,pg:4,pe:1,pp:1,gf:29, gc:18, pts:13},
         {n:"Liniers",         cl:"liniers",       pj:6,pg:3,pe:2,pp:1,gf:23, gc:14, pts:11},
         {n:"La Esperanza",    cl:"laesperanza",   pj:5,pg:3,pe:1,pp:1,gf:19, gc:15, pts:10},
-        {n:"Catamarca",       cl:"catamarca",     pj:5,pg:3,pe:0,pp:2,gf:26, gc:18, pts:9},
+        {n:"Dublin",          cl:"dublin",        pj:7,pg:3,pe:1,pp:3,gf:18, gc:24, pts:10},
+        {n:"Catamarca",       cl:"catamarca",     pj:6,pg:3,pe:0,pp:3,gf:28, gc:22, pts:9},
         {n:"La Estación",     cl:"laestacion",    pj:5,pg:2,pe:2,pp:1,gf:15, gc:14, pts:8},
-        {n:"Dublin",          cl:"dublin",        pj:6,pg:2,pe:1,pp:3,gf:14, gc:22, pts:7},
         {n:"San Francisco",   cl:"sanfrancisco",  pj:6,pg:2,pe:0,pp:4,gf:11, gc:27, pts:6},
         {n:"Tiro Federal",    cl:"tirofederal",   pj:6,pg:1,pe:2,pp:3,gf:11, gc:19, pts:5},
         {n:"Pacífico BB",     cl:"pacificobb",    pj:6,pg:1,pe:1,pp:4,gf:24, gc:37, pts:4},
@@ -15733,17 +15733,17 @@ const BD_GOLEADORES_FUTSAL = [
         { nombre: "Cristian Masson",     goles: 2 }
     ]},
     { club: "Pacífico BB",     clase: "pacificobb",    act: null,       goleadores: [] },
-    { club: "Los 3 Chiflados", clase: "los3chiflados", act: "fecha 5, sin datos de la fecha 1",  goleadores: [
+    { club: "Los 3 Chiflados", clase: "los3chiflados", act: "fecha 6, sin datos de la fecha 1",  goleadores: [
         { nombre: "Iván Zapata",          goles: 8 },
-        { nombre: "Agustín Zas",          goles: 5 },
+        { nombre: "Agustín Zas",          goles: 8 },
         { nombre: "Blas Gomez",     goles: 4 },
-        { nombre: "Lucas Raya",          goles: 4 },
+        { nombre: "Lucas Raya",          goles: 5 },
         { nombre: "Martín Kloberdans",  goles: 3 },
         { nombre: "Yonatan Santiváñez",  goles: 3 },
-        { nombre: "Diego Santiváñez",     goles: 2 },
-        { nombre: "Dylan Schlebuch",     goles: 1 },
-        { nombre: "Lino Bognanni",     goles: 1 },
-        { nombre: "Enzo Biancucci",     goles: 1 }
+        { nombre: "Diego Santiváñez",     goles: 3 },
+        { nombre: "Enzo Biancucci",     goles: 3 },
+        { nombre: "Lino Bognanni",     goles: 2 },
+        { nombre: "Dylan Schlebuch",     goles: 1 }
     ]},
     { club: "La Esperanza",    clase: "laesperanza",   act: "fecha 5",  goleadores: [
         { nombre: "Bruno Decoud",         goles: 7 },
