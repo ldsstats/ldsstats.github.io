@@ -267,7 +267,7 @@ const BD_FIXTURES_FUTSAL_RESERVA = [
         {l:"Dep. Futsal",     v:"La Estación",     gl:null, gv:null},
         {l:"Huracán",         v:"Tiro Federal",    gl:null, gv:null},
         {l:"Liniers",         v:"Pacífico BB",     gl:null, gv:null},
-        {l:"Petroquímicos",   v:"La Esperanza",    gl:null, gv:null}
+        {l:"Petroquímicos",   v:"La Esperanza",    gl:2, gv:6}
     ]},
     { fecha: 8, partidos: [
         {l:"La Esperanza",    v:"San Francisco",   gl:null, gv:null},
@@ -914,11 +914,24 @@ const BD_FIXTURES_FUTSAL = [
             goles_v:[
             ],
         },
+        {
+            l:"Petroquímicos",
+            v:"La Esperanza",
+            gl:2,
+            gv:3,
+            dia:"Jue 07/05",
+            hora:"22:00",
+            goles_l:[
+                ],
+            goles_v:[
+                "Bruno Decoud (2)",
+                "Emiliano Etchepareborda"
+            ],
+        },
         {l:"San Francisco",   v:"Comercial",       gl:null, gv:null},
         {l:"Dep. Futsal",     v:"La Estación",     gl:null, gv:null},
         {l:"Huracán",         v:"Tiro Federal",    gl:null, gv:null},
         {l:"Liniers",         v:"Pacífico BB",     gl:null, gv:null},
-        {l:"Petroquímicos",   v:"La Esperanza",    gl:null, gv:null}
     ]},
     { fecha: 8, partidos: [
         {l:"La Esperanza",    v:"San Francisco",   gl:null, gv:null},
@@ -1395,7 +1408,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 6).partidos.forEach(p 
 });
 
 
-let diaSeleccionadoHome = "2026-05-08"; 
+let diaSeleccionadoHome = "2026-05-09"; 
 
 function seleccionarDiaHome(dia) {
     diaSeleccionadoHome = dia;
@@ -1432,11 +1445,6 @@ function generarHome() {
                 {l:"Dublin", v:"Catamarca", hora:"22:00", nota:"En cancha de Don Bosco", gl:2, gv:5},
                 {l:"Los 3 Chiflados", v:"Villa Mitre", hora:"22:00", nota:"En cancha de La Curtiembre", gl:7, gv:2},
                 {l:"Huracán", v:"Tiro Federal", hora:"22:30", nota:"En cancha de La Estación"}
-            ]},
-        ]},
-        { id: "2026-05-08", label: "VIE 08/05", torneos: [
-            { nombre: "FUTSAL", cat: "futsal", partidos: [
-                {l:"San Francisco", v:"Comercial", hora:"22:30", nota:"En cancha de Tiro Federal"}
             ]},
         ]},
         { id: "2026-05-09", label: "SÁB 09/05", torneos: [
@@ -15517,11 +15525,11 @@ const BD_POS_FUTSAL = {
     principal: [
         {n:"Los 3 Chiflados", cl:"los3chiflados", pj:7,pg:5,pe:1,pp:1,gf:49, gc:23, pts:16},
         {n:"La Estación",     cl:"laestacion",    pj:5,pg:5,pe:0,pp:0,gf:30, gc:8, pts:15},
+        {n:"La Esperanza",    cl:"laesperanza",   pj:6,pg:5,pe:0,pp:1,gf:24, gc:15, pts:15},
         {n:"Comercial",       cl:"comercial",     pj:6,pg:4,pe:2,pp:0,gf:32, gc:12, pts:14},
         {n:"Villa Mitre",     cl:"villamitre",    pj:6,pg:4,pe:1,pp:1,gf:24, gc:16, pts:13},
-        {n:"La Esperanza",    cl:"laesperanza",   pj:5,pg:4,pe:0,pp:1,gf:21, gc:13, pts:12},
         {n:"Liniers",         cl:"liniers",       pj:6,pg:2,pe:3,pp:1,gf:23, gc:20, pts:9},
-        {n:"Petroquímicos",   cl:"petroquimicos", pj:6,pg:3,pe:0,pp:3,gf:26,gc:27, pts:9},
+        {n:"Petroquímicos",   cl:"petroquimicos", pj:7,pg:3,pe:0,pp:4,gf:28,gc:30, pts:9},
         {n:"Pacífico BB",     cl:"pacificobb",    pj:6,pg:2,pe:0,pp:4,gf:22, gc:27, pts:6},
         {n:"Dublin",          cl:"dublin",        pj:7,pg:2,pe:0,pp:5,gf:16, gc:22, pts:6},
         {n:"Tiro Federal",    cl:"tirofederal",   pj:6,pg:2,pe:0,pp:4,gf:11, gc:22, pts:6},
@@ -15532,10 +15540,10 @@ const BD_POS_FUTSAL = {
     ],
     reserva: [
         {n:"Los 3 Chiflados", cl:"los3chiflados", pj:7,pg:6,pe:1,pp:0,gf:36, gc:7, pts:19},
-        {n:"Petroquímicos",   cl:"petroquimicos", pj:6,pg:4,pe:2,pp:0,gf:35, gc:12, pts:14},
+        {n:"Petroquímicos",   cl:"petroquimicos", pj:7,pg:4,pe:2,pp:1,gf:37, gc:18, pts:14},
         {n:"Villa Mitre",     cl:"villamitre",    pj:6,pg:4,pe:1,pp:1,gf:29, gc:18, pts:13},
+        {n:"La Esperanza",    cl:"laesperanza",   pj:6,pg:4,pe:1,pp:1,gf:25, gc:17, pts:13},
         {n:"Liniers",         cl:"liniers",       pj:6,pg:3,pe:2,pp:1,gf:23, gc:14, pts:11},
-        {n:"La Esperanza",    cl:"laesperanza",   pj:5,pg:3,pe:1,pp:1,gf:19, gc:15, pts:10},
         {n:"Dublin",          cl:"dublin",        pj:7,pg:3,pe:1,pp:3,gf:18, gc:24, pts:10},
         {n:"Catamarca",       cl:"catamarca",     pj:6,pg:3,pe:0,pp:3,gf:28, gc:22, pts:9},
         {n:"La Estación",     cl:"laestacion",    pj:5,pg:2,pe:2,pp:1,gf:15, gc:14, pts:8},
