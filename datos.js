@@ -1408,7 +1408,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 6).partidos.forEach(p 
 });
 
 
-let diaSeleccionadoHome = "2026-05-09"; 
+let diaSeleccionadoHome = "2026-05-10"; 
 
 function seleccionarDiaHome(dia) {
     diaSeleccionadoHome = dia;
@@ -1447,28 +1447,7 @@ function generarHome() {
                 {l:"Huracán", v:"Tiro Federal", hora:"22:30", nota:"En cancha de La Estación"}
             ]},
         ]},
-        { id: "2026-05-09", label: "SÁB 09/05", torneos: [
-            { nombre: "OFICIAL", cat: "oficial", partidos: [
-                {l:"Huracán", v:"Libertad", hora:"15:30", nota:"en cancha de San Francisco y sin visitantes"},
-            ]},
-            { nombre: "PROMOCIONAL", cat: "promocional", partidos: [
-                {l:"Comercial", v:"Tiro Federal", hora:"15:30", nota:"sin visitantes"},
-                {l:"Olimpo", v:"Pacífico BB", hora:"15:30", nota:"En cancha de Liniers"}
-            ]},
-            { nombre: "FUTSAL BONAERENSE - ASCENSO", cat: "futsalbonaerense", partidos: [
-                {l:"Banco Provincia", v:"La Esperanza", hora:"15:30"}
-            ]},
-        ]},
         { id: "2026-05-10", label: "DOM 10/05", torneos: [
-            { nombre: "OFICIAL", cat: "oficial", partidos: [
-                {l:"San Francisco", v:"Bella Vista", hora:"15:30"},
-                {l:"Liniers", v:"Villa Mitre", hora:"15:30"},
-                {l:"La Armonía", v:"Sporting", hora:"15:30"}
-            ]},
-            { nombre: "PROMOCIONAL", cat: "promocional", partidos: [
-                {l:"Rosario PB", v:"Dublin", hora:"15:30"},
-                {l:"Pacífico (C)", v:"Sansinena", hora:"15:30"}
-            ]},
             { nombre: "FEDERAL A", cat: "federala", partidos: [
                 {l:"Guillermo Brown", v:"Villa Mitre", hora:"15:00"},
                 {l:"Olimpo", v:"Germinal", hora:"15:30"}
