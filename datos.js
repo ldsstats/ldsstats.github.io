@@ -882,7 +882,7 @@ const BD_FIXTURES_FUTSAL = [
         },
         {l:"La Esperanza",    v:"Dep. Futsal",     gl:null, gv:null},
         {l:"Villa Mitre",     v:"Catamarca",       gl:null, gv:null},
-        {l:"La Estación",     v:"Huracán",         gl:null, gv:null}
+        {l:"La Estación",     v:"Huracán",         gl:5, gv:2}
     ]},
     { fecha: 7, partidos: [
         {
@@ -1036,7 +1036,7 @@ const idaSub15Fem = [
         {l:"Villa Mitre",           v:"Libertad",         gl:3, gv:1},
         {l:"San Francisco",         v:"Empleados de Comercio", gl:5, gv:0},
         {l:"Tiro Federal",          v:"Olimpo",           gl:0, gv:0},
-        {l:"Juventud Unida",        v:"Huracán",          gl:null, gv:null},
+        {l:"Juventud Unida",        v:"Huracán",          gl:2, gv:0},
         {l:"Sporting",              v:"Bella Vista",      gl:null, gv:null},
         {l:"La Armonía",            v:"Liniers",          gl:null, gv:null}
     ]},
@@ -1414,7 +1414,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 6).partidos.forEach(p 
 });
 
 
-let diaSeleccionadoHome = "2026-05-10"; 
+let diaSeleccionadoHome = "2026-05-11"; 
 
 function seleccionarDiaHome(dia) {
     diaSeleccionadoHome = dia;
@@ -1434,29 +1434,29 @@ const BD_FECHA_META = {
 
 function generarHome() {
     const agenda = [
-        { id: "2026-05-05", label: "MAR 05/05", torneos: [
-            { nombre: "SENIOR", cat: "seniorapertura", partidos: [
-                {l:"Pacífico BB", v:"Comercial", hora:"20:00", nota:"En cancha de Libertad", gl:1, gv:5},
-                {l:"Huracán", v:"Tiro Federal", hora:"20:00", nota:"En cancha de Tiro Federal", gl:6, gv:1},
-                {l:"Libertad", v:"Bella Vista", hora:"21:30", nota:"En cancha de Libertad", gl:1, gv:2},
-                {l:"Pacífico (C)", v:"Sporting", hora:"21:30", nota:"En cancha de Sansinena", gl:0, gv:3},
-                {l:"Sansinena", v:"San Francisco", hora:"21:30", nota:"En cancha de Sansinena", gl:1, gv:1}
-            ]},
+        { id: "2026-05-11", label: "LUN 11/05", torneos: [
             { nombre: "FUTSAL", cat: "futsal", partidos: [
-                {l:"Los 3 Chiflados", v:"San Francisco", hora:"22:00", nota:"En cancha de Don Bosco", gl:8, gv:4},
+                {l:"La Estación", v:"Huracán", hora:"22:00", gl:5, gv:2}
             ]},
         ]},
-        { id: "2026-05-07", label: "JUE 07/05", torneos: [
-            { nombre: "FUTSAL", cat: "futsal", partidos: [
-                {l:"Dublin", v:"Catamarca", hora:"22:00", nota:"En cancha de Don Bosco", gl:2, gv:5},
-                {l:"Los 3 Chiflados", v:"Villa Mitre", hora:"22:00", nota:"En cancha de La Curtiembre", gl:7, gv:2},
-                {l:"Huracán", v:"Tiro Federal", hora:"22:30", nota:"En cancha de La Estación"}
+        { id: "2026-05-16", label: "SÁB 16/05", torneos: [
+            { nombre: "OFICIAL", cat: "oficial", partidos: [
+                {l:"San Francisco", v:"Bella Vista", hora:"15:00"},
+                {l:"Liniers", v:"Villa Mitre", hora:"15:00"},
+                {l:"Huracán", v:"Libertad", hora:"15:30", nota:"en cancha de Pacífico de Cabildo"},
+            ]},
+            { nombre: "PROMOCIONAL", cat: "promocional", partidos: [
+                {l:"Comercial", v:"Tiro Federal", hora:"15:00", nota:"en cancha de Liniers"}
             ]},
         ]},
-        { id: "2026-05-10", label: "DOM 10/05", torneos: [
-            { nombre: "FEDERAL A", cat: "federala", partidos: [
-                {l:"Guillermo Brown", v:"Villa Mitre", hora:"15:00"},
-                {l:"Olimpo", v:"Germinal", hora:"15:30"}
+        { id: "2026-05-17", label: "DOM 17/05", torneos: [
+            { nombre: "OFICIAL", cat: "oficial", partidos: [
+                {l:"La Armonía", v:"Sporting", hora:"15:00"}
+            ]},
+            { nombre: "PROMOCIONAL", cat: "promocional", partidos: [
+                {l:"Olimpo", v:"Pacífico BB", hora:"15:00"},
+                {l:"Rosario PB", v:"Dublin", hora:"15:00"},
+                {l:"Pacífico (C)", v:"Sansinena", hora:"15:00"}
             ]},
         ]},
     ];
@@ -1722,337 +1722,337 @@ const BD_FORMATIVAS = {
 const BD_FORMATIVAS_POS = {
 
     "juveniles-a": {
-        act: "Lun 27/04 — 08:00 hs — Extraoficial",
+        act: "Lun 11/05 — 21:00 hs — Extraoficial",
         general: [
-            {n:"Villa Mitre",   cl:"villamitre",   pj:33,pg:25,pe:5,pp:3,pts:80},
-            {n:"Liniers",       cl:"liniers",      pj:30,pg:24,pe:5,pp:4,pts:77},
-            {n:"Olimpo",        cl:"olimpo",       pj:33,pg:20,pe:4,pp:9,pts:64},
-            {n:"Tiro Federal",  cl:"tirofederal",  pj:33,pg:17,pe:7,pp:9,pts:58},
-            {n:"Rosario PB",    cl:"rosariopb",    pj:32,pg:14,pe:5,pp:13,pts:47},
-            {n:"Liniers B",     cl:"liniersb",     pj:33,pg:10,pe:4,pp:19,pts:34},
-            {n:"Bella Vista",   cl:"bellavista",   pj:33,pg:8,pe:6,pp:19,pts:30},
-            {n:"Sporting",      cl:"sporting",     pj:33,pg:9,pe:2,pp:22,pts:29},
-            {n:"La Armonía",    cl:"laarmonia",    pj:33,pg:8,pe:4,pp:21,pts:28},
-            {n:"San Francisco", cl:"sanfrancisco", pj:33,pg:6,pe:6,pp:21,pts:24}
+            {n:"Villa Mitre",   cl:"villamitre",   pj:39,pg:28,pe:6,pp:5,pts:90},
+            {n:"Liniers",       cl:"liniers",      pj:39,pg:26,pe:6,pp:7,pts:84},
+            {n:"Olimpo",        cl:"olimpo",       pj:40,pg:24,pe:5,pp:11,pts:77},
+            {n:"Tiro Federal",  cl:"tirofederal",  pj:39,pg:22,pe:8,pp:9,pts:74},
+            {n:"Rosario PB",    cl:"rosariopb",    pj:39,pg:16,pe:6,pp:17,pts:54},
+            {n:"Liniers B",     cl:"liniersb",     pj:39,pg:12,pe:5,pp:22,pts:41},
+            {n:"Bella Vista",   cl:"bellavista",   pj:39,pg:11,pe:7,pp:21,pts:40},
+            {n:"La Armonía",    cl:"laarmonia",    pj:39,pg:11,pe:6,pp:22,pts:39},
+            {n:"Sporting",      cl:"sporting",     pj:39,pg:9,pe:3,pp:27,pts:30},
+            {n:"San Francisco", cl:"sanfrancisco", pj:39,pg:7,pe:8,pp:24,pts:29}
         ],
         cats: [
             { nombre: "4ta División (2008)", equipos: [
-                {n:"Villa Mitre",   cl:"villamitre",   pj:6,pg:5,pe:1,pp:0,pts:16},
-                {n:"Tiro Federal",  cl:"tirofederal",  pj:6,pg:4,pe:2,pp:0,pts:14},
-                {n:"Rosario PB",    cl:"rosariopb",    pj:6,pg:4,pe:0,pp:2,pts:12},
-                {n:"Olimpo",        cl:"olimpo",       pj:6,pg:4,pe:0,pp:2,pts:12},
-                {n:"Liniers",       cl:"liniers",      pj:6,pg:2,pe:2,pp:2,pts:8},
-                {n:"San Francisco", cl:"sanfrancisco", pj:6,pg:2,pe:1,pp:3,pts:7},
-                {n:"Sporting",      cl:"sporting",     pj:6,pg:2,pe:1,pp:3,pts:7},
-                {n:"La Armonía",    cl:"laarmonia",    pj:6,pg:2,pe:1,pp:3,pts:7},
-                {n:"Bella Vista",   cl:"bellavista",   pj:6,pg:0,pe:2,pp:4,pts:2},
-                {n:"Liniers B",     cl:"liniersb",     pj:6,pg:0,pe:0,pp:6,pts:0}
+                {n:"Villa Mitre",   cl:"villamitre",   pj:7,pg:6,pe:1,pp:0,pts:19},
+                {n:"Tiro Federal",  cl:"tirofederal",  pj:7,pg:5,pe:2,pp:0,pts:17},
+                {n:"Olimpo",        cl:"olimpo",       pj:7,pg:5,pe:0,pp:2,pts:15},
+                {n:"Rosario PB",    cl:"rosariopb",    pj:7,pg:4,pe:0,pp:3,pts:12},
+                {n:"Liniers",       cl:"liniers",      pj:7,pg:2,pe:2,pp:3,pts:8},
+                {n:"San Francisco", cl:"sanfrancisco", pj:7,pg:2,pe:2,pp:3,pts:8},
+                {n:"La Armonía",    cl:"laarmonia",    pj:7,pg:2,pe:2,pp:3,pts:8},
+                {n:"Sporting",      cl:"sporting",     pj:7,pg:2,pe:1,pp:4,pts:7},
+                {n:"Bella Vista",   cl:"bellavista",   pj:7,pg:1,pe:2,pp:4,pts:5},
+                {n:"Liniers B",     cl:"liniersb",     pj:7,pg:0,pe:0,pp:7,pts:0}
             ]},
             { nombre: "5ta División (2009)", equipos: [
-                {n:"Villa Mitre",   cl:"villamitre",   pj:6,pg:5,pe:1,pp:0,pts:16},
-                {n:"Liniers",       cl:"liniers",      pj:6,pg:3,pe:3,pp:0,pts:12},
-                {n:"Tiro Federal",  cl:"tirofederal",  pj:6,pg:4,pe:0,pp:2,pts:12},
-                {n:"Sporting",      cl:"sporting",     pj:6,pg:4,pe:0,pp:2,pts:12},
-                {n:"Bella Vista",   cl:"bellavista",   pj:6,pg:2,pe:2,pp:2,pts:8},
-                {n:"La Armonía",    cl:"laarmonia",    pj:6,pg:2,pe:1,pp:3,pts:7},
-                {n:"Liniers B",     cl:"liniersb",     pj:6,pg:2,pe:0,pp:4,pts:6},
-                {n:"San Francisco", cl:"sanfrancisco", pj:6,pg:1,pe:2,pp:3,pts:5},
-                {n:"Olimpo",        cl:"olimpo",       pj:6,pg:1,pe:2,pp:3,pts:5},
-                {n:"Rosario PB",    cl:"rosariopb",    pj:5,pg:0,pe:1,pp:4,pts:1}
+                {n:"Villa Mitre",   cl:"villamitre",   pj:7,pg:5,pe:2,pp:0,pts:17},
+                {n:"Liniers",       cl:"liniers",      pj:7,pg:3,pe:4,pp:0,pts:13},
+                {n:"Tiro Federal",  cl:"tirofederal",  pj:7,pg:4,pe:1,pp:2,pts:13},
+                {n:"Sporting",      cl:"sporting",     pj:7,pg:4,pe:1,pp:2,pts:13},
+                {n:"Bella Vista",   cl:"bellavista",   pj:7,pg:3,pe:2,pp:2,pts:11},
+                {n:"La Armonía",    cl:"laarmonia",    pj:7,pg:3,pe:1,pp:3,pts:10},
+                {n:"Liniers B",     cl:"liniersb",     pj:7,pg:2,pe:0,pp:5,pts:6},
+                {n:"San Francisco", cl:"sanfrancisco", pj:7,pg:1,pe:2,pp:4,pts:5},
+                {n:"Olimpo",        cl:"olimpo",       pj:7,pg:1,pe:2,pp:4,pts:5},
+                {n:"Rosario PB",    cl:"rosariopb",    pj:7,pg:1,pe:1,pp:5,pts:4}
             ]},
             { nombre: "6ta División (2010)", equipos: [
-                {n:"Olimpo",        cl:"olimpo",       pj:6,pg:6,pe:0,pp:0,pts:18},
-                {n:"Liniers",       cl:"liniers",      pj:6,pg:5,pe:0,pp:1,pts:15},
-                {n:"Villa Mitre",   cl:"villamitre",   pj:6,pg:4,pe:1,pp:1,pts:13},
-                {n:"Rosario PB",    cl:"rosariopb",    pj:6,pg:3,pe:1,pp:2,pts:10},
-                {n:"La Armonía",    cl:"laarmonia",    pj:6,pg:3,pe:0,pp:3,pts:9},
-                {n:"San Francisco", cl:"sanfrancisco", pj:6,pg:2,pe:1,pp:3,pts:7},
-                {n:"Bella Vista",   cl:"bellavista",   pj:6,pg:2,pe:1,pp:3,pts:7},
-                {n:"Tiro Federal",  cl:"tirofederal",  pj:6,pg:1,pe:2,pp:3,pts:5},
-                {n:"Liniers B",     cl:"liniersb",     pj:6,pg:1,pe:0,pp:5,pts:3},
-                {n:"Sporting",      cl:"sporting",     pj:6,pg:0,pe:0,pp:6,pts:0}
+                {n:"Olimpo",        cl:"olimpo",       pj:7,pg:6,pe:0,pp:1,pts:18},
+                {n:"Villa Mitre",   cl:"villamitre",   pj:7,pg:5,pe:1,pp:1,pts:16},
+                {n:"Liniers",       cl:"liniers",      pj:7,pg:5,pe:0,pp:2,pts:15},
+                {n:"Rosario PB",    cl:"rosariopb",    pj:7,pg:4,pe:1,pp:2,pts:13},
+                {n:"La Armonía",    cl:"laarmonia",    pj:7,pg:4,pe:0,pp:3,pts:12},
+                {n:"Bella Vista",   cl:"bellavista",   pj:7,pg:2,pe:2,pp:3,pts:8},
+                {n:"Tiro Federal",  cl:"tirofederal",  pj:7,pg:2,pe:2,pp:3,pts:8},
+                {n:"San Francisco", cl:"sanfrancisco", pj:7,pg:2,pe:1,pp:4,pts:7},
+                {n:"Liniers B",     cl:"liniersb",     pj:7,pg:1,pe:1,pp:5,pts:4},
+                {n:"Sporting",      cl:"sporting",     pj:7,pg:0,pe:0,pp:7,pts:0}
             ]}
         ]
     },
 
     "menores-a": {
-        act: "Lun 27/04 — 08:00 hs — Extraoficial",
+        act: "Lun 11/05 — 21:00 hs — Extraoficial",
         general: [
-            {n:"Villa Mitre",   cl:"villamitre",   pj:33,pg:25,pe:5,pp:3,pts:80},
-            {n:"Liniers",       cl:"liniers",      pj:30,pg:24,pe:5,pp:4,pts:77},
-            {n:"Olimpo",        cl:"olimpo",       pj:33,pg:20,pe:4,pp:9,pts:64},
-            {n:"Tiro Federal",  cl:"tirofederal",  pj:33,pg:17,pe:7,pp:9,pts:58},
-            {n:"Rosario PB",    cl:"rosariopb",    pj:32,pg:14,pe:5,pp:13,pts:47},
-            {n:"Liniers B",     cl:"liniersb",     pj:33,pg:10,pe:4,pp:19,pts:34},
-            {n:"Bella Vista",   cl:"bellavista",   pj:33,pg:8,pe:6,pp:19,pts:30},
-            {n:"Sporting",      cl:"sporting",     pj:33,pg:9,pe:2,pp:22,pts:29},
-            {n:"La Armonía",    cl:"laarmonia",    pj:33,pg:8,pe:4,pp:21,pts:28},
-            {n:"San Francisco", cl:"sanfrancisco", pj:33,pg:6,pe:6,pp:21,pts:24}
+            {n:"Villa Mitre",   cl:"villamitre",   pj:39,pg:28,pe:6,pp:5,pts:90},
+            {n:"Liniers",       cl:"liniers",      pj:39,pg:26,pe:6,pp:7,pts:84},
+            {n:"Olimpo",        cl:"olimpo",       pj:40,pg:24,pe:5,pp:11,pts:77},
+            {n:"Tiro Federal",  cl:"tirofederal",  pj:39,pg:22,pe:8,pp:9,pts:74},
+            {n:"Rosario PB",    cl:"rosariopb",    pj:39,pg:16,pe:6,pp:17,pts:54},
+            {n:"Liniers B",     cl:"liniersb",     pj:39,pg:12,pe:5,pp:22,pts:41},
+            {n:"Bella Vista",   cl:"bellavista",   pj:39,pg:11,pe:7,pp:21,pts:40},
+            {n:"La Armonía",    cl:"laarmonia",    pj:39,pg:11,pe:6,pp:22,pts:39},
+            {n:"Sporting",      cl:"sporting",     pj:39,pg:9,pe:3,pp:27,pts:30},
+            {n:"San Francisco", cl:"sanfrancisco", pj:39,pg:7,pe:8,pp:24,pts:29}
         ],
         cats: [
             { nombre: "7ma División (2011)", equipos: [
-                {n:"Liniers",       cl:"liniers",      pj:5,pg:4,pe:0,pp:1,pts:12},
-                {n:"Villa Mitre",   cl:"villamitre",   pj:5,pg:4,pe:0,pp:1,pts:12},
-                {n:"Rosario PB",    cl:"rosariopb",    pj:5,pg:3,pe:1,pp:1,pts:10},
-                {n:"Olimpo",        cl:"olimpo",       pj:5,pg:3,pe:1,pp:1,pts:10},
-                {n:"Tiro Federal",  cl:"tirofederal",  pj:5,pg:3,pe:1,pp:1,pts:10},
-                {n:"Liniers B",     cl:"liniersb",     pj:5,pg:3,pe:1,pp:1,pts:10},
-                {n:"San Francisco", cl:"sanfrancisco", pj:5,pg:1,pe:0,pp:4,pts:3},
-                {n:"Bella Vista",   cl:"bellavista",   pj:5,pg:1,pe:0,pp:4,pts:3},
-                {n:"La Armonía",    cl:"laarmonia",    pj:5,pg:1,pe:0,pp:4,pts:3},
-                {n:"Sporting",      cl:"sporting",     pj:5,pg:0,pe:0,pp:5,pts:0}
+                {n:"Liniers",       cl:"liniers",      pj:6,pg:5,pe:0,pp:1,pts:15},
+                {n:"Tiro Federal",  cl:"tirofederal",  pj:6,pg:4,pe:1,pp:1,pts:13},
+                {n:"Liniers B",     cl:"liniersb",     pj:6,pg:4,pe:1,pp:1,pts:13},
+                {n:"Villa Mitre",   cl:"villamitre",   pj:6,pg:4,pe:0,pp:2,pts:12},
+                {n:"Rosario PB",    cl:"rosariopb",    pj:6,pg:3,pe:2,pp:1,pts:11},
+                {n:"Olimpo",        cl:"olimpo",       pj:6,pg:3,pe:2,pp:1,pts:11},
+                {n:"San Francisco", cl:"sanfrancisco", pj:6,pg:1,pe:1,pp:4,pts:4},
+                {n:"La Armonía",    cl:"laarmonia",    pj:6,pg:1,pe:1,pp:4,pts:4},
+                {n:"Bella Vista",   cl:"bellavista",   pj:6,pg:1,pe:0,pp:5,pts:3},
+                {n:"Sporting",      cl:"sporting",     pj:6,pg:0,pe:0,pp:6,pts:0}
             ]},
             { nombre: "8va División (2012)", equipos: [
-                {n:"Liniers",       cl:"liniers",      pj:5,pg:5,pe:0,pp:0,pts:15},
-                {n:"Tiro Federal",  cl:"tirofederal",  pj:5,pg:4,pe:0,pp:1,pts:12},
-                {n:"Rosario PB",    cl:"rosariopb",    pj:5,pg:3,pe:1,pp:1,pts:10},
-                {n:"Villa Mitre",   cl:"villamitre",   pj:5,pg:3,pe:1,pp:1,pts:10},
-                {n:"Olimpo",        cl:"olimpo",       pj:5,pg:3,pe:1,pp:1,pts:10},
-                {n:"Liniers B",     cl:"liniersb",     pj:5,pg:1,pe:2,pp:2,pts:5},
-                {n:"Sporting",      cl:"sporting",     pj:5,pg:1,pe:1,pp:3,pts:4},
-                {n:"Bella Vista",   cl:"bellavista",   pj:5,pg:1,pe:0,pp:4,pts:3},
-                {n:"San Francisco", cl:"sanfrancisco", pj:5,pg:0,pe:1,pp:4,pts:1},
-                {n:"La Armonía",    cl:"laarmonia",    pj:5,pg:0,pe:1,pp:4,pts:1}
+                {n:"Liniers",       cl:"liniers",      pj:6,pg:6,pe:0,pp:0,pts:18},
+                {n:"Tiro Federal",  cl:"tirofederal",  pj:6,pg:5,pe:0,pp:1,pts:15},
+                {n:"Olimpo",        cl:"olimpo",       pj:6,pg:4,pe:1,pp:1,pts:13},
+                {n:"Rosario PB",    cl:"rosariopb",    pj:6,pg:3,pe:1,pp:2,pts:10},
+                {n:"Villa Mitre",   cl:"villamitre",   pj:6,pg:3,pe:1,pp:2,pts:10},
+                {n:"Bella Vista",   cl:"bellavista",   pj:6,pg:2,pe:0,pp:4,pts:6},
+                {n:"Liniers B",     cl:"liniersb",     pj:6,pg:1,pe:2,pp:3,pts:5},
+                {n:"Sporting",      cl:"sporting",     pj:6,pg:1,pe:1,pp:4,pts:4},
+                {n:"San Francisco", cl:"sanfrancisco", pj:6,pg:1,pe:1,pp:4,pts:4},
+                {n:"La Armonía",    cl:"laarmonia",    pj:6,pg:0,pe:1,pp:5,pts:1}
             ]},
             { nombre: "9na División (2013)", equipos: [
-                {n:"Liniers",       cl:"liniers",      pj:5,pg:5,pe:0,pp:0,pts:15},
-                {n:"Villa Mitre",   cl:"villamitre",   pj:5,pg:4,pe:1,pp:0,pts:13},
-                {n:"Liniers B",     cl:"liniersb",     pj:5,pg:3,pe:1,pp:1,pts:10},
-                {n:"Olimpo",        cl:"olimpo",       pj:5,pg:3,pe:0,pp:2,pts:9},
-                {n:"Bella Vista",   cl:"bellavista",   pj:5,pg:2,pe:1,pp:2,pts:7},
-                {n:"Sporting",      cl:"sporting",     pj:5,pg:2,pe:0,pp:3,pts:6},
-                {n:"Tiro Federal",  cl:"tirofederal",  pj:5,pg:1,pe:2,pp:2,pts:5},
-                {n:"Rosario PB",    cl:"rosariopb",    pj:5,pg:1,pe:1,pp:3,pts:4},
-                {n:"La Armonía",    cl:"laarmonia",    pj:5,pg:0,pe:1,pp:4,pts:1},
-                {n:"San Francisco", cl:"sanfrancisco", pj:5,pg:0,pe:1,pp:4,pts:1}
+                {n:"Villa Mitre",   cl:"villamitre",   pj:6,pg:5,pe:1,pp:0,pts:16},
+                {n:"Liniers",       cl:"liniers",      pj:6,pg:5,pe:0,pp:1,pts:15},
+                {n:"Olimpo",        cl:"olimpo",       pj:7,pg:5,pe:0,pp:2,pts:15},
+                {n:"Liniers B",     cl:"liniersb",     pj:6,pg:4,pe:1,pp:1,pts:13},
+                {n:"Tiro Federal",  cl:"tirofederal",  pj:6,pg:2,pe:2,pp:2,pts:8},
+                {n:"Bella Vista",   cl:"bellavista",   pj:6,pg:2,pe:1,pp:3,pts:7},
+                {n:"Sporting",      cl:"sporting",     pj:6,pg:2,pe:0,pp:4,pts:6},
+                {n:"Rosario PB",    cl:"rosariopb",    pj:6,pg:1,pe:1,pp:4,pts:4},
+                {n:"La Armonía",    cl:"laarmonia",    pj:6,pg:1,pe:1,pp:4,pts:4},
+                {n:"San Francisco", cl:"sanfrancisco", pj:6,pg:0,pe:1,pp:5,pts:1}
             ]}
         ]
     },
 
     "juveniles-b": {
-        act: "Lun 27/04 — 08:00 hs — Extraoficial",
+        act: "Lun 11/05 — 21:00 hs — Extraoficial",
         general: [
-            {n:"Bella Vista B",       cl:"bellavistab",   pj:34, pg:21,pe:6,pp:7,pts:69},
-            {n:"Olimpo B",            cl:"olimpob",       pj:28, pg:19,pe:4,pp:5,pts:61},
-            {n:"Huracán",             cl:"huracan",       pj:27, pg:19,pe:2,pp:6,pts:59},
-            {n:"Pacífico",            cl:"pacificobb",    pj:32, pg:16,pe:4,pp:12,pts:52},
-            {n:"Comercial",           cl:"comercial",     pj:31, pg:15,pe:5,pp:11,pts:50},
-            {n:"Libertad",            cl:"libertad",      pj:25, pg:14,pe:8,pp:3,pts:50},
-            {n:"Sansinena",           cl:"sansinena",     pj:34, pg:14,pe:5,pp:15,pts:47},
-            {n:"Tiro Federal B",      cl:"tirofederalb",  pj:30, pg:12,pe:8,pp:10,pts:44},
-            {n:"Liniers C",           cl:"liniersc",      pj:33, pg:9,pe:10,pp:14,pts:37},
-            {n:"Juventud Unida",      cl:"juventudunida", pj:28, pg:10,pe:5,pp:13,pts:35},
-            {n:"Dublin",              cl:"dublin",        pj:35, pg:7,pe:5,pp:23,pts:26},
-            {n:"Rosario B",           cl:"rosariopb",     pj:32, pg:5,pe:2,pp:25,pts:17},
-            {n:"Pacífico de Cabildo", cl:"pacificoc",     pj:30, pg:5,pe:2,pp:23,pts:17}
+            {n:"Bella Vista B",       cl:"bellavistab",   pj:43,pg:27,pe:8,pp:8,pts:89},
+            {n:"Huracán",             cl:"huracan",       pj:37,pg:24,pe:4,pp:9,pts:76},
+            {n:"Olimpo B",            cl:"olimpob",       pj:37,pg:21,pe:8,pp:8,pts:71},
+            {n:"Comercial",           cl:"comercial",     pj:40,pg:21,pe:6,pp:13,pts:69},
+            {n:"Libertad",            cl:"libertad",      pj:33,pg:20,pe:9,pp:4,pts:69},
+            {n:"Sansinena",           cl:"sansinena",     pj:44,pg:19,pe:7,pp:18,pts:64},
+            {n:"Pacífico",            cl:"pacificobb",    pj:43,pg:18,pe:7,pp:18,pts:61},
+            {n:"Juventud Unida",      cl:"juventudunida", pj:39,pg:16,pe:6,pp:17,pts:54},
+            {n:"Tiro Federal B",      cl:"tirofederalb",  pj:39,pg:15,pe:8,pp:16,pts:53},
+            {n:"Liniers C",           cl:"liniersc",      pj:37,pg:10,pe:11,pp:16,pts:41},
+            {n:"Dublin",              cl:"dublin",        pj:42,pg:7,pe:6,pp:29,pts:27},
+            {n:"Pacífico de Cabildo", cl:"pacificoc",     pj:42,pg:6,pe:4,pp:32,pts:22},
+            {n:"Rosario B",           cl:"rosariopb",     pj:38,pg:4,pe:3,pp:31,pts:15}
         ],
         cats: [
             { nombre: "4ta División (2008)", equipos: [
-                {n:"Comercial",           cl:"comercial",     pj:5,pg:4,pe:1,pp:0,pts:13},
-                {n:"Sansinena",           cl:"sansinena",     pj:6,pg:4,pe:1,pp:1,pts:13},
-                {n:"Huracán",             cl:"huracan",       pj:5,pg:4,pe:0,pp:1,pts:12},
-                {n:"Libertad",            cl:"libertad",      pj:4,pg:3,pe:1,pp:0,pts:10},
-                {n:"Pacífico",            cl:"pacificobb",    pj:6,pg:3,pe:1,pp:2,pts:10},
-                {n:"Bella Vista B",       cl:"bellavistab",   pj:6,pg:3,pe:0,pp:3,pts:9},
-                {n:"Olimpo B",            cl:"olimpob",       pj:5,pg:3,pe:0,pp:2,pts:9},
-                {n:"Tiro Federal B",      cl:"tirofederalb",  pj:6,pg:2,pe:3,pp:1,pts:9},
+                {n:"Sansinena",           cl:"sansinena",     pj:8,pg:6,pe:1,pp:1,pts:19},
+                {n:"Comercial",           cl:"comercial",     pj:6,pg:5,pe:1,pp:0,pts:16},
+                {n:"Libertad",            cl:"libertad",      pj:5,pg:4,pe:1,pp:0,pts:13},
+                {n:"Huracán",             cl:"huracan",       pj:6,pg:4,pe:0,pp:2,pts:12},
+                {n:"Bella Vista B",       cl:"bellavistab",   pj:7,pg:4,pe:0,pp:3,pts:12},
+                {n:"Pacífico",            cl:"pacificobb",    pj:7,pg:3,pe:1,pp:3,pts:10},
+                {n:"Tiro Federal B",      cl:"tirofederalb",  pj:7,pg:2,pe:3,pp:2,pts:9},
+                {n:"Juventud Unida",      cl:"juventudunida", pj:7,pg:2,pe:1,pp:4,pts:7},
+                {n:"Olimpo B",            cl:"olimpob",       pj:6,pg:2,pe:0,pp:4,pts:6},
                 {n:"Liniers C",           cl:"liniersc",      pj:6,pg:1,pe:1,pp:4,pts:4},
-                {n:"Juventud Unida",      cl:"juventudunida", pj:6,pg:1,pe:1,pp:4,pts:4},
-                {n:"Rosario B",           cl:"rosariopb",     pj:6,pg:1,pe:1,pp:4,pts:4},
-                {n:"Dublin",              cl:"dublin",        pj:6,pg:0,pe:1,pp:5,pts:1},
-                {n:"Pacífico de Cabildo", cl:"pacificoc",     pj:5,pg:0,pe:0,pp:5,pts:0}
+                {n:"Dublin",              cl:"dublin",        pj:7,pg:0,pe:2,pp:5,pts:2},
+                {n:"Rosario B",           cl:"rosariopb",     pj:6,pg:0,pe:1,pp:5,pts:1},
+                {n:"Pacífico de Cabildo", cl:"pacificoc",     pj:7,pg:0,pe:1,pp:6,pts:1}
             ]},
             { nombre: "5ta División (2009)", equipos: [
-                {n:"Huracán",             cl:"huracan",       pj:5,pg:5,pe:0,pp:0,pts:15},
-                {n:"Sansinena",           cl:"sansinena",     pj:6,pg:4,pe:0,pp:2,pts:12},
-                {n:"Comercial",           cl:"comercial",     pj:5,pg:3,pe:2,pp:0,pts:11},
+                {n:"Huracán",             cl:"huracan",       pj:7,pg:7,pe:0,pp:0,pts:21},
+                {n:"Comercial",           cl:"comercial",     pj:7,pg:5,pe:2,pp:0,pts:17},
+                {n:"Olimpo B",            cl:"olimpob",       pj:7,pg:5,pe:1,pp:1,pts:16},
+                {n:"Sansinena",           cl:"sansinena",     pj:7,pg:5,pe:0,pp:2,pts:15},
+                {n:"Bella Vista B",       cl:"bellavistab",   pj:8,pg:4,pe:2,pp:2,pts:14},
                 {n:"Dublin",              cl:"dublin",        pj:7,pg:3,pe:2,pp:2,pts:11},
-                {n:"Bella Vista B",       cl:"bellavistab",   pj:6,pg:3,pe:2,pp:1,pts:11},
-                {n:"Olimpo B",            cl:"olimpob",       pj:5,pg:3,pe:1,pp:1,pts:10},
-                {n:"Libertad",            cl:"libertad",      pj:4,pg:3,pe:0,pp:1,pts:9},
-                {n:"Tiro Federal B",      cl:"tirofederalb",  pj:6,pg:2,pe:2,pp:2,pts:8},
-                {n:"Pacífico",            cl:"pacificobb",    pj:6,pg:2,pe:1,pp:3,pts:7},
-                {n:"Pacífico de Cabildo", cl:"pacificoc",     pj:6,pg:1,pe:1,pp:4,pts:4},
-                {n:"Juventud Unida",      cl:"juventudunida", pj:5,pg:1,pe:0,pp:4,pts:3},
-                {n:"Liniers C",           cl:"liniersc",      pj:6,pg:0,pe:1,pp:6,pts:1},
-                {n:"Rosario B",           cl:"rosariopb",     pj:6,pg:0,pe:0,pp:6,pts:0}
+                {n:"Pacífico",            cl:"pacificobb",    pj:8,pg:3,pe:1,pp:4,pts:10},
+                {n:"Libertad",            cl:"libertad",      pj:5,pg:3,pe:0,pp:2,pts:9},
+                {n:"Tiro Federal B",      cl:"tirofederalb",  pj:7,pg:2,pe:2,pp:3,pts:8},
+                {n:"Juventud Unida",      cl:"juventudunida", pj:7,pg:2,pe:0,pp:5,pts:6},
+                {n:"Pacífico de Cabildo", cl:"pacificoc",     pj:7,pg:1,pe:1,pp:5,pts:4},
+                {n:"Liniers C",           cl:"liniersc",      pj:7,pg:0,pe:1,pp:6,pts:1},
+                {n:"Rosario B",           cl:"rosariopb",     pj:7,pg:0,pe:0,pp:7,pts:0}
             ]},
             { nombre: "6ta División (2010)", equipos: [
-                {n:"Bella Vista B",       cl:"bellavistab",   pj:7,pg:5,pe:1,pp:1,pts:16},
-                {n:"Comercial",           cl:"comercial",     pj:6,pg:4,pe:1,pp:1,pts:13},
-                {n:"Olimpo B",            cl:"olimpob",       pj:6,pg:4,pe:1,pp:1,pts:13},
-                {n:"Huracán",             cl:"huracan",       pj:5,pg:4,pe:1,pp:0,pts:13},
+                {n:"Bella Vista B",       cl:"bellavistab",   pj:8,pg:6,pe:1,pp:1,pts:19},
+                {n:"Huracán",             cl:"huracan",       pj:7,pg:6,pe:1,pp:0,pts:19},
+                {n:"Comercial",           cl:"comercial",     pj:7,pg:5,pe:1,pp:1,pts:16},
+                {n:"Olimpo B",            cl:"olimpob",       pj:7,pg:5,pe:1,pp:1,pts:16},
                 {n:"Liniers C",           cl:"liniersc",      pj:7,pg:2,pe:4,pp:1,pts:10},
-                {n:"Sansinena",           cl:"sansinena",     pj:7,pg:3,pe:0,pp:4,pts:9},
-                {n:"Tiro Federal B",      cl:"tirofederalb",  pj:6,pg:2,pe:1,pp:3,pts:7},
-                {n:"Juventud Unida",      cl:"juventudunida", pj:6,pg:2,pe:1,pp:3,pts:7},
-                {n:"Pacífico",            cl:"pacificobb",    pj:7,pg:2,pe:1,pp:4,pts:7},
-                {n:"Pacífico de Cabildo", cl:"pacificoc",     pj:5,pg:2,pe:0,pp:3,pts:6},
+                {n:"Juventud Unida",      cl:"juventudunida", pj:7,pg:3,pe:1,pp:3,pts:10},
+                {n:"Sansinena",           cl:"sansinena",     pj:8,pg:3,pe:0,pp:5,pts:9},
+                {n:"Tiro Federal B",      cl:"tirofederalb",  pj:7,pg:2,pe:1,pp:4,pts:7},
+                {n:"Pacífico",            cl:"pacificobb",    pj:8,pg:2,pe:1,pp:5,pts:7},
+                {n:"Pacífico de Cabildo", cl:"pacificoc",     pj:7,pg:2,pe:0,pp:5,pts:6},
                 {n:"Libertad",            cl:"libertad",      pj:5,pg:1,pe:3,pp:1,pts:6},
                 {n:"Dublin",              cl:"dublin",        pj:7,pg:1,pe:1,pp:5,pts:4},
-                {n:"Rosario B",           cl:"rosariopb",     pj:6,pg:0,pe:1,pp:5,pts:1}
+                {n:"Rosario B",           cl:"rosariopb",     pj:7,pg:0,pe:1,pp:6,pts:1}
             ]}
         ]
     },
 
     "menores-b": {
-        act: "Lun 27/04 — 08:00 hs — Extraoficial",
+        act: "Lun 11/05 — 21:00 hs — Extraoficial",
         general: [
-            {n:"Bella Vista B",       cl:"bellavistab",   pj:34, pg:21,pe:6,pp:7,pts:69},
-            {n:"Olimpo B",            cl:"olimpob",       pj:28, pg:19,pe:4,pp:5,pts:61},
-            {n:"Huracán",             cl:"huracan",       pj:27, pg:19,pe:2,pp:6,pts:59},
-            {n:"Pacífico",            cl:"pacificobb",    pj:32, pg:16,pe:4,pp:12,pts:52},
-            {n:"Comercial",           cl:"comercial",     pj:31, pg:15,pe:5,pp:11,pts:50},
-            {n:"Libertad",            cl:"libertad",      pj:25, pg:14,pe:8,pp:3,pts:50},
-            {n:"Sansinena",           cl:"sansinena",     pj:34, pg:14,pe:5,pp:15,pts:47},
-            {n:"Tiro Federal B",      cl:"tirofederalb",  pj:30, pg:12,pe:8,pp:10,pts:44},
-            {n:"Liniers C",           cl:"liniersc",      pj:33, pg:9,pe:10,pp:14,pts:37},
-            {n:"Juventud Unida",      cl:"juventudunida", pj:28, pg:10,pe:5,pp:13,pts:35},
-            {n:"Dublin",              cl:"dublin",        pj:35, pg:7,pe:5,pp:23,pts:26},
-            {n:"Rosario B",           cl:"rosariopb",     pj:32, pg:5,pe:2,pp:25,pts:17},
-            {n:"Pacífico de Cabildo", cl:"pacificoc",     pj:30, pg:5,pe:2,pp:23,pts:17}
+            {n:"Bella Vista B",       cl:"bellavistab",   pj:43,pg:27,pe:8,pp:8,pts:89},
+            {n:"Huracán",             cl:"huracan",       pj:37,pg:24,pe:4,pp:9,pts:76},
+            {n:"Olimpo B",            cl:"olimpob",       pj:37,pg:21,pe:8,pp:8,pts:71},
+            {n:"Comercial",           cl:"comercial",     pj:40,pg:21,pe:6,pp:13,pts:69},
+            {n:"Libertad",            cl:"libertad",      pj:33,pg:20,pe:9,pp:4,pts:69},
+            {n:"Sansinena",           cl:"sansinena",     pj:44,pg:19,pe:7,pp:18,pts:64},
+            {n:"Pacífico",            cl:"pacificobb",    pj:43,pg:18,pe:7,pp:18,pts:61},
+            {n:"Juventud Unida",      cl:"juventudunida", pj:39,pg:16,pe:6,pp:17,pts:54},
+            {n:"Tiro Federal B",      cl:"tirofederalb",  pj:39,pg:15,pe:8,pp:16,pts:53},
+            {n:"Liniers C",           cl:"liniersc",      pj:37,pg:10,pe:11,pp:16,pts:41},
+            {n:"Dublin",              cl:"dublin",        pj:42,pg:7,pe:6,pp:29,pts:27},
+            {n:"Pacífico de Cabildo", cl:"pacificoc",     pj:42,pg:6,pe:4,pp:32,pts:22},
+            {n:"Rosario B",           cl:"rosariopb",     pj:38,pg:4,pe:3,pp:31,pts:15}
         ],
         cats: [
             { nombre: "7ma División (2011)", equipos: [
-                {n:"Pacífico",            cl:"pacificobb",    pj:5,pg:4,pe:0,pp:1,pts:12},
-                {n:"Bella Vista B",       cl:"bellavistab",   pj:5,pg:3,pe:2,pp:0,pts:11},
-                {n:"Sansinena",           cl:"sansinena",     pj:5,pg:3,pe:1,pp:1,pts:10},
-                {n:"Rosario B",           cl:"rosariopb",     pj:5,pg:3,pe:0,pp:2,pts:9},
-                {n:"Olimpo B",            cl:"olimpob",       pj:4,pg:2,pe:2,pp:0,pts:8},
-                {n:"Libertad",            cl:"libertad",      pj:4,pg:2,pe:2,pp:0,pts:8},
-                {n:"Liniers C",           cl:"liniersc",      pj:5,pg:2,pe:1,pp:2,pts:7},
-                {n:"Huracán",             cl:"huracan",       pj:4,pg:2,pe:0,pp:2,pts:6},
-                {n:"Juventud Unida",      cl:"juventudunida", pj:3,pg:2,pe:0,pp:1,pts:6},
-                {n:"Pacífico de Cabildo", cl:"pacificoc",     pj:5,pg:1,pe:1,pp:3,pts:4},
-                {n:"Tiro Federal B",      cl:"tirofederalb",  pj:4,pg:1,pe:1,pp:2,pts:4},
-                {n:"Dublin",              cl:"dublin",        pj:5,pg:0,pe:0,pp:5,pts:0},
-                {n:"Comercial",           cl:"comercial",     pj:5,pg:0,pe:0,pp:5,pts:0}
+                {n:"Bella Vista B",       cl:"bellavistab",   pj:7,pg:4,pe:3,pp:0,pts:15},
+                {n:"Pacífico",            cl:"pacificobb",    pj:7,pg:4,pe:2,pp:1,pts:14},
+                {n:"Sansinena",           cl:"sansinena",     pj:7,pg:4,pe:1,pp:2,pts:13},
+                {n:"Olimpo B",            cl:"olimpob",       pj:6,pg:3,pe:3,pp:0,pts:12},
+                {n:"Libertad",            cl:"libertad",      pj:6,pg:3,pe:3,pp:0,pts:12},
+                {n:"Rosario B",           cl:"rosariopb",     pj:6,pg:3,pe:1,pp:2,pts:10},
+                {n:"Liniers C",           cl:"liniersc",      pj:6,pg:3,pe:1,pp:2,pts:10},
+                {n:"Huracán",             cl:"huracan",       pj:6,pg:2,pe:2,pp:2,pts:8},
+                {n:"Pacífico de Cabildo", cl:"pacificoc",     pj:7,pg:2,pe:2,pp:3,pts:8},
+                {n:"Juventud Unida",      cl:"juventudunida", pj:6,pg:2,pe:1,pp:3,pts:7},
+                {n:"Tiro Federal B",      cl:"tirofederalb",  pj:6,pg:2,pe:1,pp:3,pts:7},
+                {n:"Dublin",              cl:"dublin",        pj:7,pg:0,pe:0,pp:7,pts:0},
+                {n:"Comercial",           cl:"comercial",     pj:7,pg:0,pe:0,pp:7,pts:0}
             ]},
             { nombre: "8va División (2012)", equipos: [
-                {n:"Pacífico",            cl:"pacificobb",    pj:4,pg:4,pe:0,pp:0,pts:12},
-                {n:"Tiro Federal B",      cl:"tirofederalb",  pj:4,pg:4,pe:0,pp:0,pts:12},
-                {n:"Libertad",            cl:"libertad",      pj:4,pg:4,pe:0,pp:0,pts:12},
-                {n:"Bella Vista B",       cl:"bellavistab",   pj:5,pg:4,pe:0,pp:1,pts:12},
-                {n:"Olimpo B",            cl:"olimpob",       pj:4,pg:3,pe:0,pp:1,pts:9},
-                {n:"Huracán",             cl:"huracan",       pj:4,pg:2,pe:1,pp:1,pts:7},
-                {n:"Juventud Unida",      cl:"juventudunida", pj:4,pg:1,pe:2,pp:1,pts:5},
-                {n:"Dublin",              cl:"dublin",        pj:5,pg:1,pe:1,pp:3,pts:4},
-                {n:"Rosario B",           cl:"rosariopb",     pj:4,pg:1,pe:0,pp:3,pts:3},
-                {n:"Comercial",           cl:"comercial",     pj:5,pg:1,pe:0,pp:4,pts:3},
-                {n:"Liniers C",           cl:"liniersc",      pj:4,pg:0,pe:2,pp:2,pts:2},
-                {n:"Sansinena",           cl:"sansinena",     pj:5,pg:0,pe:1,pp:4,pts:1},
-                {n:"Pacífico de Cabildo", cl:"pacificoc",     pj:4,pg:0,pe:0,pp:4,pts:0}
+                {n:"Libertad",            cl:"libertad",      pj:6,pg:6,pe:0,pp:0,pts:18},
+                {n:"Tiro Federal B",      cl:"tirofederalb",  pj:6,pg:4,pe:0,pp:1,pts:15},
+                {n:"Pacífico",            cl:"pacificobb",    pj:6,pg:4,pe:1,pp:1,pts:13},
+                {n:"Bella Vista B",       cl:"bellavistab",   pj:6,pg:4,pe:1,pp:1,pts:13},
+                {n:"Juventud Unida",      cl:"juventudunida", pj:6,pg:3,pe:2,pp:1,pts:11},
+                {n:"Olimpo B",            cl:"olimpob",       pj:5,pg:2,pe:2,pp:1,pts:8},
+                {n:"Huracán",             cl:"huracan",       pj:5,pg:2,pe:1,pp:2,pts:7},
+                {n:"Comercial",           cl:"comercial",     pj:6,pg:2,pe:0,pp:4,pts:6},
+                {n:"Dublin",              cl:"dublin",        pj:7,pg:1,pe:1,pp:5,pts:4},
+                {n:"Rosario B",           cl:"rosariopb",     pj:6,pg:1,pe:0,pp:5,pts:3},
+                {n:"Liniers C",           cl:"liniersc",      pj:5,pg:0,pe:2,pp:3,pts:2},
+                {n:"Sansinena",           cl:"sansinena",     pj:7,pg:0,pe:2,pp:5,pts:2},
+                {n:"Pacífico de Cabildo", cl:"pacificoc",     pj:7,pg:0,pe:0,pp:7,pts:0}
             ]},
             { nombre: "9na División (2013)", equipos: [
-                {n:"Liniers C",           cl:"liniersc",      pj:5,pg:4,pe:1,pp:0,pts:13},
-                {n:"Olimpo B",            cl:"olimpob",       pj:4,pg:4,pe:0,pp:0,pts:12},
-                {n:"Comercial",           cl:"comercial",     pj:5,pg:3,pe:1,pp:1,pts:10},
-                {n:"Bella Vista B",       cl:"bellavistab",   pj:5,pg:3,pe:1,pp:1,pts:10},
-                {n:"Juventud Unida",      cl:"juventudunida", pj:4,pg:3,pe:1,pp:0,pts:10},
-                {n:"Huracán",             cl:"huracan",       pj:4,pg:2,pe:0,pp:2,pts:6},
-                {n:"Dublin",              cl:"dublin",        pj:5,pg:2,pe:0,pp:3,pts:6},
-                {n:"Libertad",            cl:"libertad",      pj:4,pg:1,pe:2,pp:1,pts:5},
-                {n:"Pacífico",            cl:"pacificobb",    pj:4,pg:1,pe:1,pp:2,pts:4},
-                {n:"Tiro Federal B",      cl:"tirofederalb",  pj:4,pg:1,pe:1,pp:2,pts:4},
-                {n:"Pacífico de Cabildo", cl:"pacificoc",     pj:5,pg:1,pe:0,pp:4,pts:3},
-                {n:"Sansinena",           cl:"sansinena",     pj:5,pg:0,pe:2,pp:3,pts:2},
-                {n:"Rosario B",           cl:"rosariopb",     pj:5,pg:0,pe:0,pp:5,pts:0},
+                {n:"Bella Vista B",       cl:"bellavistab",   pj:7,pg:5,pe:1,pp:1,pts:16},
+                {n:"Liniers C",           cl:"liniersc",      pj:6,pg:4,pe:2,pp:0,pts:14},
+                {n:"Comercial",           cl:"comercial",     pj:7,pg:5,pe:2,pp:1,pts:14},
+                {n:"Olimpo B",            cl:"olimpob",       pj:6,pg:4,pe:1,pp:1,pts:13},
+                {n:"Juventud Unida",      cl:"juventudunida", pj:6,pg:4,pe:1,pp:1,pts:13},
+                {n:"Libertad",            cl:"libertad",      pj:6,pg:3,pe:2,pp:1,pts:11},
+                {n:"Huracán",             cl:"huracan",       pj:6,pg:3,pe:0,pp:3,pts:9},
+                {n:"Pacífico",            cl:"pacificobb",    pj:7,pg:2,pe:1,pp:4,pts:7},
+                {n:"Tiro Federal B",      cl:"tirofederalb",  pj:6,pg:2,pe:1,pp:3,pts:7},
+                {n:"Dublin",              cl:"dublin",        pj:7,pg:2,pe:0,pp:5,pts:6},
+                {n:"Sansinena",           cl:"sansinena",     pj:7,pg:1,pe:3,pp:3,pts:6},
+                {n:"Pacífico de Cabildo", cl:"pacificoc",     pj:7,pg:1,pe:0,pp:6,pts:3},
+                {n:"Rosario B",           cl:"rosariopb",     pj:6,pg:0,pe:0,pp:6,pts:0}
             ]}
         ]
     },
 
     "menores-c": {
-        act: "Lun 27/04 — 08:00 hs — Extraoficial",
+        act: "Lun 11/05 — 21:00 hs — Extraoficial",
         general: [
             {n:"Tiro Federal C", cl:"tirofederalc",  pj:18,pg:10,pe:4,pp:4,pts:34},
-            {n:"Villa Mitre B",  cl:"villamitreb",   pj:15,pg:7,pe:4,pp:4,pts:25},
-            {n:"La Armonía B",   cl:"laarmoniab",    pj:15,pg:7,pe:2,pp:6,pts:23},
-            {n:"Liniers D",      cl:"liniersd",      pj:15,pg:6,pe:5,pp:4,pts:23},
-            {n:"Bella Vista C",  cl:"bellavistac",   pj:13,pg:7,pe:0,pp:6,pts:21},
-            {n:"Olimpo C",       cl:"olimpoc",       pj:15,pg:4,pe:1,pp:10,pts:13},
-            {n:"Libertad B",     cl:"libertadb",     pj:13,pg:1,pe:4,pp:8,pts:7}
+            {n:"Liniers D",      cl:"liniersd",      pj:18,pg:8,pe:6,pp:4,pts:30},
+            {n:"La Armonía B",   cl:"laarmoniab",    pj:18,pg:9,pe:2,pp:7,pts:29},
+            {n:"Villa Mitre B",  cl:"villamitreb",   pj:18,pg:8,pe:4,pp:6,pts:28},
+            {n:"Olimpo C",       cl:"olimpoc",       pj:18,pg:7,pe:1,pp:10,pts:22},
+            {n:"Bella Vista C",  cl:"bellavistac",   pj:16,pg:7,pe:1,pp:8,pts:22},
+            {n:"Libertad B",     cl:"libertadb",     pj:16,pg:1,pe:4,pp:11,pts:7}
         ],
         cats: [
             { nombre: "7ma División (2011)", equipos: [
                 {n:"Tiro Federal C", cl:"tirofederalc",  pj:6,pg:5,pe:0,pp:1,pts:15},
-                {n:"Villa Mitre B",  cl:"villamitreb",   pj:5,pg:3,pe:2,pp:0,pts:11},
-                {n:"La Armonía B",   cl:"laarmoniab",    pj:5,pg:3,pe:1,pp:1,pts:10},
-                {n:"Liniers D",      cl:"liniersd",      pj:5,pg:1,pe:2,pp:2,pts:5},
-                {n:"Olimpo C",       cl:"olimpoc",       pj:5,pg:1,pe:1,pp:3,pts:4},
-                {n:"Bella Vista C",  cl:"bellavistac",   pj:5,pg:1,pe:0,pp:4,pts:3},
-                {n:"Libertad B",     cl:"libertadb",     pj:5,pg:0,pe:2,pp:3,pts:2}
+                {n:"La Armonía B",   cl:"laarmoniab",    pj:6,pg:4,pe:1,pp:1,pts:13},
+                {n:"Villa Mitre B",  cl:"villamitreb",   pj:6,pg:3,pe:2,pp:1,pts:11},
+                {n:"Olimpo C",       cl:"olimpoc",       pj:6,pg:2,pe:1,pp:3,pts:7},
+                {n:"Liniers D",      cl:"liniersd",      pj:6,pg:1,pe:3,pp:2,pts:6},
+                {n:"Bella Vista C",  cl:"bellavistac",   pj:6,pg:1,pe:1,pp:4,pts:4},
+                {n:"Libertad B",     cl:"libertadb",     pj:6,pg:0,pe:2,pp:4,pts:2}
             ]},
             { nombre: "8va División (2012)", equipos: [
+                {n:"La Armonía B",   cl:"laarmoniab",    pj:6,pg:3,pe:1,pp:2,pts:10},
+                {n:"Liniers D",      cl:"liniersd",      pj:6,pg:3,pe:1,pp:2,pts:10},
                 {n:"Tiro Federal C", cl:"tirofederalc",  pj:6,pg:2,pe:3,pp:1,pts:9},
-                {n:"Villa Mitre B",  cl:"villamitreb",   pj:5,pg:2,pe:1,pp:2,pts:7},
-                {n:"La Armonía B",   cl:"laarmoniab",    pj:5,pg:2,pe:1,pp:2,pts:7},
-                {n:"Liniers D",      cl:"liniersd",      pj:5,pg:2,pe:1,pp:2,pts:7},
-                {n:"Olimpo C",       cl:"olimpoc",       pj:5,pg:2,pe:0,pp:3,pts:6},
-                {n:"Bella Vista C",  cl:"bellavistac",   pj:4,pg:2,pe:0,pp:2,pts:6},
-                {n:"Libertad B",     cl:"libertadb",     pj:4,pg:1,pe:2,pp:1,pts:5}
+                {n:"Olimpo C",       cl:"olimpoc",       pj:6,pg:3,pe:0,pp:3,pts:9},
+                {n:"Villa Mitre B",  cl:"villamitreb",   pj:6,pg:2,pe:1,pp:3,pts:7},
+                {n:"Bella Vista C",  cl:"bellavistac",   pj:5,pg:2,pe:0,pp:3,pts:6},
+                {n:"Libertad B",     cl:"libertadb",     pj:5,pg:1,pe:2,pp:2,pts:5}
             ]},
             { nombre: "9na División (2013)", equipos: [
-                {n:"Bella Vista C",  cl:"bellavistac",   pj:4,pg:4,pe:0,pp:0,pts:12},
-                {n:"Liniers D",      cl:"liniersd",      pj:5,pg:3,pe:2,pp:0,pts:11},
+                {n:"Liniers D",      cl:"liniersd",      pj:6,pg:4,pe:2,pp:0,pts:14},
+                {n:"Bella Vista C",  cl:"bellavistac",   pj:5,pg:4,pe:0,pp:1,pts:12},
                 {n:"Tiro Federal C", cl:"tirofederalc",  pj:6,pg:3,pe:1,pp:2,pts:10},
-                {n:"Villa Mitre B",  cl:"villamitreb",   pj:5,pg:2,pe:1,pp:2,pts:7},
-                {n:"La Armonía B",   cl:"laarmoniab",    pj:5,pg:2,pe:0,pp:3,pts:6},
-                {n:"Olimpo C",       cl:"olimpoc",       pj:5,pg:1,pe:0,pp:4,pts:3},
-                {n:"Libertad B",     cl:"libertadb",     pj:4,pg:0,pe:0,pp:4,pts:0}
+                {n:"Villa Mitre B",  cl:"villamitreb",   pj:6,pg:3,pe:1,pp:2,pts:10},
+                {n:"La Armonía B",   cl:"laarmoniab",    pj:6,pg:2,pe:0,pp:4,pts:6},
+                {n:"Olimpo C",       cl:"olimpoc",       pj:6,pg:2,pe:0,pp:4,pts:6},
+                {n:"Libertad B",     cl:"libertadb",     pj:5,pg:0,pe:0,pp:5,pts:0}
             ]}
         ]
     },
 
     "infantil-a": {
-        act: "Lun 27/04 — 08:00 hs — Extraoficial",
+        act: "Lun 11/05 — 21:00 hs — Extraoficial",
         general: [
-            {n:"Liniers",       cl:"liniers",      pj:18,pg:16,pe:0,pp:2,pts:48},
-            {n:"Bella Vista",   cl:"bellavista",   pj:15,pg:12,pe:0,pp:3,pts:36},
-            {n:"Villa Mitre",   cl:"villamitre",   pj:15,pg:10,pe:2,pp:3,pts:32},
-            {n:"Tiro Federal",  cl:"tirofederal",  pj:15,pg:7,pe:1,pp:7,pts:22},
-            {n:"Rosario PB",    cl:"rosariopb",    pj:15,pg:6,pe:3,pp:6,pts:21},
-            {n:"Liniers B",     cl:"liniersb",     pj:15,pg:6,pe:3,pp:6,pts:21},
-            {n:"Sporting",      cl:"sporting",     pj:18,pg:5,pe:3,pp:10,pts:18},
-            {n:"San Francisco", cl:"sanfrancisco", pj:15,pg:5,pe:2,pp:8,pts:17},
-            {n:"Olimpo",        cl:"olimpo",       pj:18,pg:3,pe:1,pp:14,pts:10},
-            {n:"La Armonía",    cl:"laarmonia",    pj:18,pg:3,pe:1,pp:14,pts:10}
+            {n:"Liniers",       cl:"liniers",      pj:21,pg:17,pe:0,pp:4,pts:51},
+            {n:"Bella Vista",   cl:"bellavista",   pj:18,pg:15,pe:0,pp:3,pts:45},
+            {n:"Villa Mitre",   cl:"villamitre",   pj:18,pg:12,pe:2,pp:4,pts:38},
+            {n:"Tiro Federal",  cl:"tirofederal",  pj:18,pg:9,pe:2,pp:7,pts:29},
+            {n:"Rosario PB",    cl:"rosariopb",    pj:18,pg:8,pe:4,pp:6,pts:28},
+            {n:"San Francisco", cl:"sanfrancisco", pj:18,pg:7,pe:3,pp:8,pts:24},
+            {n:"Liniers B",     cl:"liniersb",     pj:18,pg:6,pe:3,pp:9,pts:21},
+            {n:"Sporting",      cl:"sporting",     pj:21,pg:5,pe:4,pp:12,pts:19},
+            {n:"Olimpo",        cl:"olimpo",       pj:21,pg:3,pe:2,pp:16,pts:11},
+            {n:"La Armonía",    cl:"laarmonia",    pj:21,pg:3,pe:2,pp:16,pts:11}
         ],
         cats: []
     },
 
     "infantil-b": {
-        act: "Vie 01/05 — 21:00 hs — Extraoficial",
+        act: "Lun 11/05 — 21:00 hs — Extraoficial",
         general: [
-            {n:"Sansinena",           cl:"sansinena",     pj:18,pg:13,pe:5,pp:0,pts:44},
-            {n:"Olimpo B",            cl:"olimpob",       pj:21,pg:13,pe:3,pp:5,pts:42},
+            {n:"Sansinena",           cl:"sansinena",     pj:21,pg:15,pe:6,pp:0,pts:51},
+            {n:"Libertad",            cl:"libertad",      pj:22,pg:13,pe:5,pp:4,pts:44},
+            {n:"Olimpo B",            cl:"olimpob",       pj:21,pg:13,pe:4,pp:4,pts:43},
+            {n:"Bella Vista B",       cl:"bellavistab",   pj:18,pg:13,pe:3,pp:2,pts:42},
             {n:"Liniers C",           cl:"liniersc",      pj:21,pg:12,pe:5,pp:4,pts:41},
-            {n:"Libertad",            cl:"libertad",      pj:18,pg:11,pe:4,pp:3,pts:37},
-            {n:"Bella Vista B",       cl:"bellavistab",   pj:15,pg:10,pe:3,pp:2,pts:33},
-            {n:"Rosario B",           cl:"rosariopb",     pj:18,pg:9,pe:4,pp:5,pts:31},
-            {n:"Juventud Unida",      cl:"juventudunida", pj:15,pg:7,pe:4,pp:4,pts:25},
-            {n:"Tiro Federal B",      cl:"tirofederalb",  pj:16,pg:5,pe:5,pp:6,pts:20},
-            {n:"Huracán",             cl:"huracan",       pj:18,pg:5,pe:5,pp:8,pts:20},
-            {n:"Pacífico",            cl:"pacificobb",    pj:19,pg:6,pe:1,pp:12,pts:19},
-            {n:"Dublin",              cl:"dublin",        pj:21,pg:4,pe:5,pp:12,pts:17},
-            {n:"Comercial",           cl:"comercial",     pj:18,pg:1,pe:0,pp:17,pts:3}
+            {n:"Rosario B",           cl:"rosariopb",     pj:21,pg:10,pe:5,pp:6,pts:35},
+            {n:"Juventud Unida",      cl:"juventudunida", pj:18,pg:8,pe:5,pp:5,pts:29},
+            {n:"Huracán",             cl:"huracan",       pj:21,pg:7,pe:5,pp:9,pts:26},
+            {n:"Pacífico",            cl:"pacificobb",    pj:22,pg:7,pe:1,pp:14,pts:22},
+            {n:"Tiro Federal B",      cl:"tirofederalb",  pj:19,pg:5,pe:5,pp:9,pts:20},
+            {n:"Dublin",              cl:"dublin",        pj:24,pg:4,pe:6,pp:14,pts:18},
+            {n:"Comercial",           cl:"comercial",     pj:21,pg:4,pe:0,pp:17,pts:12}
         ],
         cats: []
     },
 
     "infantil-c": {
-        act: "Vie 01/05 — 21:00 hs — Extraoficial",
+        act: "Lun 11/05 — 21:00 hs — Extraoficial",
         general: [
-            {n:"Villa Mitre B",cl:"villamitre", pj:15,pg:12,pe:3,pp:0,pts:39},
-            {n:"La Armonía B",   cl:"laarmoniab",   pj:15,pg:11,pe:2,pp:2,pts:35},
-            {n:"Bella Vista C",  cl:"bellavistac",  pj:11,pg:7,pe:1,pp:3,pts:22},
-            {n:"Bella Vista D",  cl:"bellavistac",  pj:14,pg:6,pe:3,pp:5,pts:21},
-            {n:"Olimpo C",       cl:"olimpoc",      pj:15,pg:6,pe:2,pp:7,pts:20},
-            {n:"Tiro Federal C", cl:"tirofederalc", pj:18,pg:4,pe:4,pp:10,pts:16},
-            {n:"Libertad B",     cl:"libertadb",    pj:18,pg:5,pe:1,pp:12,pts:16},
-            {n:"Olimpo D",       cl:"olimpoc",      pj:15,pg:4,pe:3,pp:8,pts:16},
-            {n:"San Francisco B",cl:"sanfrancisco", pj:12,pg:4,pe:2,pp:6,pts:14},
-            {n:"Liniers D",      cl:"liniersd",     pj:15,pg:3,pe:3,pp:9,pts:12},
-            {n:"Liniers E",      cl:"liniersd",     pj:6,pg:0,pe:0,pp:6,pts:0}
+            {n:"Villa Mitre B",  cl:"villamitre",   pj:18,pg:14,pe:4,pp:0,pts:46},
+            {n:"La Armonía B",   cl:"laarmoniab",   pj:18,pg:13,pe:3,pp:2,pts:42},
+            {n:"Bella Vista D",  cl:"bellavistac",  pj:18,pg:9,pe:3,pp:6,pts:30},
+            {n:"Bella Vista C",  cl:"bellavistac",  pj:15,pg:8,pe:2,pp:5,pts:26},
+            {n:"Olimpo C",       cl:"olimpoc",      pj:18,pg:6,pe:5,pp:7,pts:23},
+            {n:"Olimpo D",       cl:"olimpoc",      pj:18,pg:5,pe:4,pp:9,pts:19},
+            {n:"Tiro Federal C", cl:"tirofederalc", pj:21,pg:4,pe:5,pp:12,pts:17},
+            {n:"San Francisco B",cl:"sanfrancisco", pj:15,pg:4,pe:5,pp:6,pts:17},
+            {n:"Libertad B",     cl:"libertadb",    pj:21,pg:5,pe:1,pp:15,pts:16},
+            {n:"Liniers D",      cl:"liniersd",     pj:18,pg:4,pe:4,pp:10,pts:16},
+            {n:"Liniers E",      cl:"liniersd",     pj:0,pg:0,pe:0,pp:0,pts:0}
         ],
         cats: []
     }
@@ -15260,9 +15260,9 @@ function generarReserva(cat) {
     const BD_RESERVA_POS = {
         'oficial':    [{n:"Sporting",      cl:"sporting",     pj:7, pg:6, pe:1, pp:0, gf:16, gc:6, pts:19},
                        {n:"Bella Vista",   cl:"bellavista",   pj:7, pg:2, pe:4, pp:1, gf:13, gc:12, pts:10},
+                       {n:"La Armonía",    cl:"laarmonia",    pj:7, pg:3, pe:1, pp:3, gf:13, gc:8, pts:10},
                        {n:"Villa Mitre",   cl:"villamitre",   pj:7, pg:3, pe:0, pp:4, gf:16, gc:11, pts:9},
                        {n:"Liniers",       cl:"liniers",      pj:7, pg:2, pe:3, pp:2, gf:7, gc:7, pts:9},
-                       {n:"La Armonía",    cl:"laarmonia",    pj:7, pg:3, pe:1, pp:3, gf:13, gc:8, pts:10},
                        {n:"San Francisco", cl:"sanfrancisco", pj:7, pg:2, pe:1, pp:4, gf:12, gc:14, pts:8},
                        {n:"Libertad",      cl:"libertad",     pj:7, pg:1, pe:3, pp:3, gf:7, gc:11, pts:6},
                        {n:"Huracán",       cl:"huracan",      pj:7, pg:1, pe:2, pp:4, gf:7, gc:22, pts:4}],
@@ -15366,7 +15366,7 @@ const BD_GOL_SUB = {
         {jugador:"Valentino Altfater",    equipo:"Villa Mitre", clase:"villamitre", n:3},
         {jugador:"Ringo Melcon",      equipo:"Villa Mitre", clase:"villamitre", n:2},
         {jugador:"Erick Schwaner",    equipo:"Villa Mitre", clase:"villamitre", n:1},
-        {jugador:"Vergara",    equipo:"Villa Mitre", clase:"villamitre", n:1},
+        {jugador:"Martiniano Vergara",    equipo:"Villa Mitre", clase:"villamitre", n:1},
         {jugador:"Santino Canales",   equipo:"Olimpo",      clase:"olimpo",     n:1},
         {jugador:"Leon Cáceres",      equipo:"Olimpo",      clase:"olimpo",     n:1},
         {jugador:"Juan Ignacio Aguado",      equipo:"Olimpo",      clase:"olimpo",     n:1}
@@ -15377,7 +15377,7 @@ const BD_GOL_SUB = {
         {jugador:"Galo Martínez",     equipo:"Olimpo",      clase:"olimpo",     n:1},
         {jugador:"Ciro Barra",     equipo:"Olimpo",      clase:"olimpo",     n:1},
         {jugador:"Cardozo",    equipo:"Villa Mitre", clase:"villamitre", n:1},
-        {jugador:"Schfer",    equipo:"Villa Mitre", clase:"villamitre", n:1}
+        {jugador:"Schefer",    equipo:"Villa Mitre", clase:"villamitre", n:1}
     ],
     sub17: [
         {jugador:"Benicio Hernández", equipo:"Olimpo",      clase:"olimpo",     n:2},
@@ -15508,8 +15508,8 @@ function generarSub() {
 
 const BD_POS_FUTSAL = {
     principal: [
+        {n:"La Estación",     cl:"laestacion",    pj:6,pg:6,pe:0,pp:0,gf:35, gc:10, pts:18},
         {n:"Los 3 Chiflados", cl:"los3chiflados", pj:7,pg:5,pe:1,pp:1,gf:49, gc:23, pts:16},
-        {n:"La Estación",     cl:"laestacion",    pj:5,pg:5,pe:0,pp:0,gf:30, gc:8, pts:15},
         {n:"La Esperanza",    cl:"laesperanza",   pj:6,pg:5,pe:0,pp:1,gf:24, gc:15, pts:15},
         {n:"Comercial",       cl:"comercial",     pj:6,pg:4,pe:2,pp:0,gf:32, gc:12, pts:14},
         {n:"Villa Mitre",     cl:"villamitre",    pj:6,pg:4,pe:1,pp:1,gf:24, gc:16, pts:13},
@@ -15521,7 +15521,7 @@ const BD_POS_FUTSAL = {
         {n:"San Francisco",   cl:"sanfrancisco",  pj:6,pg:1,pe:2,pp:3,gf:16, gc:20, pts:5},
         {n:"Catamarca",       cl:"catamarca",     pj:6,pg:1,pe:1,pp:4,gf:14, gc:27, pts:4},
         {n:"Dep. Futsal",     cl:"depfutsal",     pj:5,pg:1,pe:0,pp:4,gf:11, gc:28, pts:3},
-        {n:"Huracán",         cl:"huracan",       pj:5,pg:0,pe:0,pp:5,gf:14, gc:41,pts:0}
+        {n:"Huracán",         cl:"huracan",       pj:6,pg:0,pe:0,pp:6,gf:16, gc:46,pts:0}
     ],
     reserva: [
         {n:"Los 3 Chiflados", cl:"los3chiflados", pj:7,pg:6,pe:1,pp:0,gf:36, gc:7, pts:19},
