@@ -1414,7 +1414,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 6).partidos.forEach(p 
 });
 
 
-let diaSeleccionadoHome = "2026-05-11"; 
+let diaSeleccionadoHome = "2026-05-12"; 
 
 function seleccionarDiaHome(dia) {
     diaSeleccionadoHome = dia;
@@ -1437,6 +1437,15 @@ function generarHome() {
         { id: "2026-05-11", label: "LUN 11/05", torneos: [
             { nombre: "FUTSAL", cat: "futsal", partidos: [
                 {l:"La Estación", v:"Huracán", hora:"22:00", gl:5, gv:2}
+            ]},
+        ]},
+        { id: "2026-05-12", label: "MAR 12/05", torneos: [
+            { nombre: "SENIOR", cat: "seniorapertura", partidos: [
+                {l:"Bella Vista", v:"Huracán", hora:"20:00", nota:"en cancha de Sansinena"},
+                {l:"Pacífico (C)", v:"San Francisco", hora:"20:00", nota:"en cancha de Tiro Federal"},
+                {l:"Comercial", v:"Sansinena", hora:"21:30", nota:"en cancha de Sansinena"},
+                {l:"Tiro Federal", v:"Pacífico BB", hora:"21:30", nota:"en cancha de Tiro Federal"},
+                {l:"Sporting", v:"Libertad", hora:"21:30", nota:"en cancha de Sporting"},
             ]},
         ]},
         { id: "2026-05-16", label: "SÁB 16/05", torneos: [
@@ -16117,7 +16126,13 @@ const BD_FIXTURES_SENIOR = [
         { l: "Pacífico (C)",   v: "Sporting",  gl: 0, gv: 3 },
         { l: "Sansinena",   v: "San Francisco",  gl: 1, gv: 1 }
     ]},
-    { fecha: 3, libre: null, partidos: [] },
+    { fecha: 3, dia: "Mar 12/05", partidos: [
+        { l: "Bella Vista",   v: "Huracán",  gl: null, gv: null },
+        { l: "Pacífico (C)",   v: "San Francisco",  gl: null, gv: null },
+        { l: "Comercial",   v: "Sansinena",  gl: null, gv: null },
+        { l: "Tiro Federal",   v: "Pacífico BB",  gl: null, gv: null },
+        { l: "Sporting",   v: "Libertad",  gl: null, gv: null }
+    ]},
     { fecha: 4, libre: null, partidos: [] },
     { fecha: 5, libre: null, partidos: [] },
     { fecha: 6, libre: null, partidos: [] },
@@ -16127,7 +16142,7 @@ const BD_FIXTURES_SENIOR = [
 ];
 
 function generarSeniorApertura() {
-    const n = estado.fechaSenior || 2;
+    const n = estado.fechaSenior || 3;
     const f = BD_FIXTURES_SENIOR.find(x => x.fecha === n) || { partidos: [], libre: null };
     const equipos = BD_SENIOR_APERTURA.map(e => ({ nombre: e.n, clase: e.cl }));
 
