@@ -271,10 +271,10 @@ const BD_FIXTURES_FUTSAL_RESERVA = [
     ]},
     { fecha: 8, partidos: [
         {l:"La Esperanza",    v:"San Francisco",   gl:null, gv:null},
+        {l:"Comercial",       v:"Los 3 Chiflados", gl:null, gv:null},
         {l:"Tiro Federal",    v:"Dep. Futsal",     gl:null, gv:null},
         {l:"Villa Mitre",     v:"Dublin",          gl:null, gv:null},
         {l:"La Estación",     v:"Petroquímicos",   gl:null, gv:null},
-        {l:"Comercial",       v:"Los 3 Chiflados", gl:null, gv:null},
         {l:"Catamarca",       v:"Liniers",         gl:null, gv:null},
         {l:"Pacífico BB",     v:"Huracán",         gl:null, gv:null}
     ]},
@@ -935,10 +935,10 @@ const BD_FIXTURES_FUTSAL = [
     ]},
     { fecha: 8, partidos: [
         {l:"La Esperanza",    v:"San Francisco",   gl:null, gv:null},
+        {l:"Comercial",       v:"Los 3 Chiflados", gl:null, gv:null},
         {l:"Tiro Federal",    v:"Dep. Futsal",     gl:null, gv:null},
         {l:"Villa Mitre",     v:"Dublin",          gl:null, gv:null},
         {l:"La Estación",     v:"Petroquímicos",   gl:null, gv:null},
-        {l:"Comercial",       v:"Los 3 Chiflados", gl:null, gv:null},
         {l:"Catamarca",       v:"Liniers",         gl:null, gv:null},
         {l:"Pacífico BB",     v:"Huracán",         gl:null, gv:null}
     ]},
@@ -1037,7 +1037,7 @@ const idaSub15Fem = [
         {l:"San Francisco",         v:"Empleados de Comercio", gl:5, gv:0},
         {l:"Tiro Federal",          v:"Olimpo",           gl:0, gv:0},
         {l:"Juventud Unida",        v:"Huracán",          gl:2, gv:0},
-        {l:"Sporting",              v:"Bella Vista",      gl:null, gv:null},
+        {l:"Sporting",              v:"Bella Vista",      gl:0, gv:2},
         {l:"La Armonía",            v:"Liniers",          gl:null, gv:null}
     ]},
     { fecha: 7, partidos: [
@@ -1414,7 +1414,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 6).partidos.forEach(p 
 });
 
 
-let diaSeleccionadoHome = "2026-05-12"; 
+let diaSeleccionadoHome = "2026-05-13"; 
 
 function seleccionarDiaHome(dia) {
     diaSeleccionadoHome = dia;
@@ -1441,11 +1441,17 @@ function generarHome() {
         ]},
         { id: "2026-05-12", label: "MAR 12/05", torneos: [
             { nombre: "SENIOR", cat: "seniorapertura", partidos: [
-                {l:"Bella Vista", v:"Huracán", hora:"20:00", nota:"en cancha de Sansinena"},
+                {l:"Bella Vista", v:"Huracán", hora:"20:00", nota:"en cancha de Sansinena", gl:1, gv:0},
                 {l:"Pacífico (C)", v:"San Francisco", hora:"20:00", nota:"en cancha de Tiro Federal"},
                 {l:"Comercial", v:"Sansinena", hora:"21:30", nota:"en cancha de Sansinena"},
                 {l:"Tiro Federal", v:"Pacífico BB", hora:"21:30", nota:"en cancha de Tiro Federal"},
-                {l:"Sporting", v:"Libertad", hora:"21:30", nota:"en cancha de Sporting"},
+                {l:"Sporting", v:"Libertad", hora:"21:30", nota:"en cancha de Sporting", gl:2, gv:1},
+            ]},
+        ]},
+        { id: "2026-05-13", label: "MIÉR 13/05", torneos: [
+            { nombre: "FUTSAL", cat: "futsal", partidos: [
+                {l:"Comercial", v:"Los 3 Chiflados", hora:"22:00", nota:"en cancha de Comercial"},
+                {l:"La Esperanza", v:"San Francisco", hora:"22:00", nota:"en cancha de Don Bosco"}
             ]},
         ]},
         { id: "2026-05-16", label: "SÁB 16/05", torneos: [
@@ -16099,16 +16105,16 @@ function generarTablaPosBonaerense(pos) {
 }
 
 const BD_SENIOR_APERTURA = [
-    { n: "Huracán",           cl: "huracan",       pj: 2, pg: 2, pe: 0, pp: 0, gf: 9, gc: 2, pts: 6 },
-    { n: "Sporting",          cl: "sporting",      pj: 2, pg: 2, pe: 0, pp: 0, gf: 4, gc: 0, pts: 6 },
+    { n: "Sporting",          cl: "sporting",      pj: 3, pg: 3, pe: 0, pp: 0, gf: 6, gc: 1, pts: 9 },
+    { n: "Huracán",           cl: "huracan",       pj: 3, pg: 2, pe: 0, pp: 1, gf: 9, gc: 3, pts: 6 },
+    { n: "Bella Vista",       cl: "bellavista",    pj: 3, pg: 2, pe: 0, pp: 1, gf: 3, gc: 3, pts: 6 },
+    { n: "Comercial",         cl: "comercial",     pj: 2, pg: 1, pe: 0, pp: 1, gf: 6, gc: 4, pts: 3 },
     { n: "Pacífico (C)",      cl: "pacificoc",     pj: 2, pg: 1, pe: 0, pp: 1, gf: 2, gc: 3, pts: 3 },
     { n: "Pacífico BB",       cl: "pacificobb",    pj: 2, pg: 1, pe: 0, pp: 1, gf: 2, gc: 5, pts: 3 },
-    { n: "Bella Vista",       cl: "bellavista",    pj: 2, pg: 1, pe: 0, pp: 1, gf: 2, gc: 3, pts: 3 },
-    { n: "Comercial",         cl: "comercial",     pj: 2, pg: 1, pe: 0, pp: 1, gf: 6, gc: 4, pts: 3 },
-    { n: "Libertad",          cl: "libertad",      pj: 2, pg: 0, pe: 1, pp: 1, gf: 3, gc: 4, pts: 1 },
-    { n: "Tiro Federal",      cl: "tirofederal",   pj: 2, pg: 0, pe: 1, pp: 1, gf: 3, gc: 8, pts: 1 },
     { n: "San Francisco",     cl: "sanfrancisco",  pj: 2, pg: 0, pe: 0, pp: 2, gf: 1, gc: 2, pts: 1 },
-    { n: "Sansinena",         cl: "sansinena",     pj: 2, pg: 0, pe: 1, pp: 1, gf: 1, gc: 2, pts: 1 }
+    { n: "Sansinena",         cl: "sansinena",     pj: 2, pg: 0, pe: 1, pp: 1, gf: 1, gc: 2, pts: 1 },
+    { n: "Libertad",          cl: "libertad",      pj: 3, pg: 0, pe: 1, pp: 2, gf: 4, gc: 6, pts: 1 },
+    { n: "Tiro Federal",      cl: "tirofederal",   pj: 2, pg: 0, pe: 1, pp: 1, gf: 3, gc: 8, pts: 1 }
 ];
 
 const BD_FIXTURES_SENIOR = [
@@ -16127,11 +16133,11 @@ const BD_FIXTURES_SENIOR = [
         { l: "Sansinena",   v: "San Francisco",  gl: 1, gv: 1 }
     ]},
     { fecha: 3, dia: "Mar 12/05", partidos: [
-        { l: "Bella Vista",   v: "Huracán",  gl: null, gv: null },
+        { l: "Bella Vista",   v: "Huracán",  gl: 1, gv: 0 },
         { l: "Pacífico (C)",   v: "San Francisco",  gl: null, gv: null },
         { l: "Comercial",   v: "Sansinena",  gl: null, gv: null },
         { l: "Tiro Federal",   v: "Pacífico BB",  gl: null, gv: null },
-        { l: "Sporting",   v: "Libertad",  gl: null, gv: null }
+        { l: "Sporting",   v: "Libertad",  gl: 2, gv: 1 }
     ]},
     { fecha: 4, libre: null, partidos: [] },
     { fecha: 5, libre: null, partidos: [] },
