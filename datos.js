@@ -1486,10 +1486,10 @@ function generarHome() {
             { nombre: "OFICIAL", cat: "oficial", partidos: [
                 {l:"San Francisco", v:"Bella Vista", hora:"15:00"},
                 {l:"Liniers", v:"Villa Mitre", hora:"15:00"},
-                {l:"Huracán", v:"Libertad", hora:"15:30", nota:"en cancha de Pacífico de Cabildo"},
+                {l:"Huracán", v:"Libertad", hora:"15:30", nota:"en cancha de Pacífico de Cabildo y sin visitantes"},
             ]},
             { nombre: "PROMOCIONAL", cat: "promocional", partidos: [
-                {l:"Comercial", v:"Tiro Federal", hora:"15:00", nota:"en cancha de Liniers"}
+                {l:"Comercial", v:"Tiro Federal", hora:"15:00", nota:"sin visitantes"}
             ]},
         ]},
         { id: "2026-05-17", label: "DOM 17/05", torneos: [
@@ -1497,7 +1497,7 @@ function generarHome() {
                 {l:"La Armonía", v:"Sporting", hora:"15:00"}
             ]},
             { nombre: "PROMOCIONAL", cat: "promocional", partidos: [
-                {l:"Olimpo", v:"Pacífico BB", hora:"15:00"},
+                {l:"Olimpo", v:"Pacífico BB", hora:"15:00", nota:"en cancha de Liniers"},
                 {l:"Rosario PB", v:"Dublin", hora:"15:00"},
                 {l:"Pacífico (C)", v:"Sansinena", hora:"15:00"}
             ]},
@@ -15927,8 +15927,8 @@ const BD_BONAERENSE_SUR = {
     ],
     posicionesNorte: [
         { n: "CAJU San Bernardo", cl: "cajusanbernardo",  pj: 2, pg: 1, pe: 1, pp: 0, gf: 11, gc: 8, pts: 4 },
-        { n: "Torino",            cl: "torino",           pj: 1, pg: 1, pe: 0, pp: 0, gf: 4, gc: 1, pts: 3 },
-        { n: "Def. Villa Clelia", cl: "defvillaclelia",   pj: 1, pg: 0, pe: 1, pp: 0, gf: 5, gc: 5, pts: 1 },
+        { n: "Torino",            cl: "torino",           pj: 2, pg: 1, pe: 1, pp: 0, gf: 6, gc: 3, pts: 4 },
+        { n: "Def. Villa Clelia", cl: "defvillaclelia",   pj: 2, pg: 0, pe: 2, pp: 0, gf: 7, gc: 7, pts: 2 },
         { n: "Eureka Pinamar",    cl: "eurekapinamar",    pj: 2, pg: 0, pe: 0, pp: 2, gf: 4, gc: 10, pts: 0 }
     ],
     goleadores: [
