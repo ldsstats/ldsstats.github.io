@@ -270,7 +270,7 @@ const BD_FIXTURES_FUTSAL_RESERVA = [
         {l:"Liniers",         v:"Pacífico BB",     gl:null, gv:null}
     ]},
     { fecha: 8, partidos: [
-        {l:"La Esperanza",    v:"San Francisco",   gl:null, gv:null},
+        {l:"La Esperanza",    v:"San Francisco",   gl:4, gv:2},
         {l:"Comercial",       v:"Los 3 Chiflados", gl:null, gv:null},
         {l:"Tiro Federal",    v:"Dep. Futsal",     gl:null, gv:null},
         {l:"Villa Mitre",     v:"Dublin",          gl:null, gv:null},
@@ -1429,7 +1429,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 6).partidos.forEach(p 
 });
 
 
-let diaSeleccionadoHome = "2026-05-13"; 
+let diaSeleccionadoHome = "2026-05-14"; 
 
 function seleccionarDiaHome(dia) {
     diaSeleccionadoHome = dia;
@@ -15568,14 +15568,14 @@ const BD_POS_FUTSAL = {
     ],
     reserva: [
         {n:"Los 3 Chiflados", cl:"los3chiflados", pj:7,pg:6,pe:1,pp:0,gf:36, gc:7, pts:19},
+        {n:"La Esperanza",    cl:"laesperanza",   pj:7,pg:5,pe:1,pp:1,gf:29, gc:19, pts:16},
         {n:"Petroquímicos",   cl:"petroquimicos", pj:7,pg:4,pe:2,pp:1,gf:37, gc:18, pts:14},
         {n:"Villa Mitre",     cl:"villamitre",    pj:6,pg:4,pe:1,pp:1,gf:29, gc:18, pts:13},
-        {n:"La Esperanza",    cl:"laesperanza",   pj:6,pg:4,pe:1,pp:1,gf:25, gc:17, pts:13},
         {n:"Liniers",         cl:"liniers",       pj:6,pg:3,pe:2,pp:1,gf:23, gc:14, pts:11},
         {n:"Dublin",          cl:"dublin",        pj:7,pg:3,pe:1,pp:3,gf:18, gc:24, pts:10},
         {n:"Catamarca",       cl:"catamarca",     pj:6,pg:3,pe:0,pp:3,gf:28, gc:22, pts:9},
         {n:"La Estación",     cl:"laestacion",    pj:6,pg:2,pe:3,pp:1,gf:20, gc:19, pts:9},
-        {n:"San Francisco",   cl:"sanfrancisco",  pj:6,pg:2,pe:0,pp:4,gf:11, gc:27, pts:6},
+        {n:"San Francisco",   cl:"sanfrancisco",  pj:7,pg:2,pe:0,pp:6,gf:13, gc:31, pts:6},
         {n:"Tiro Federal",    cl:"tirofederal",   pj:6,pg:1,pe:2,pp:3,gf:11, gc:19, pts:5},
         {n:"Pacífico BB",     cl:"pacificobb",    pj:6,pg:1,pe:1,pp:4,gf:24, gc:37, pts:4},
         {n:"Huracán",         cl:"huracan",       pj:6,pg:1,pe:1,pp:4,gf:9, gc:25, pts:4},
