@@ -1156,7 +1156,7 @@ BD_FIXTURES_SUB.sub13.find(f=>f.fecha===3).partidos.forEach(p=>{
 });
 BD_FIXTURES_SUB.sub13.find(f=>f.fecha===4).partidos.forEach(p=>{
     if(p.l==="Kimberley"&&p.v==="Villa Mitre"){p.gl=1;p.gv=2;}
-    if(p.l==="Mac Allister"&&p.v==="Olimpo"){p.gl=null;p.gv=null;}
+    if(p.l==="Mac Allister"&&p.v==="Olimpo"){p.gl=4;p.gv=0;}
     if(p.l==="Alvarado"&&p.v==="Balompié"){p.gl=2;p.gv=3;}
 });
 BD_FIXTURES_SUB.sub15.find(f=>f.fecha===1).partidos.forEach(p=>{
@@ -1176,7 +1176,7 @@ BD_FIXTURES_SUB.sub15.find(f=>f.fecha===3).partidos.forEach(p=>{
 });
 BD_FIXTURES_SUB.sub15.find(f=>f.fecha===4).partidos.forEach(p=>{
     if(p.l==="Kimberley"&&p.v==="Villa Mitre"){p.gl=2;p.gv=1;}
-    if(p.l==="Mac Allister"&&p.v==="Olimpo"){p.gl=null;p.gv=null;}
+    if(p.l==="Mac Allister"&&p.v==="Olimpo"){p.gl=1;p.gv=0;}
     if(p.l==="Alvarado"&&p.v==="Balompié"){p.gl=1;p.gv=0;}
 });
 BD_FIXTURES_SUB.sub17.find(f=>f.fecha===1).partidos.forEach(p=>{
@@ -1196,7 +1196,7 @@ BD_FIXTURES_SUB.sub17.find(f=>f.fecha===3).partidos.forEach(p=>{
 });
 BD_FIXTURES_SUB.sub17.find(f=>f.fecha===4).partidos.forEach(p=>{
     if(p.l==="Kimberley"&&p.v==="Villa Mitre"){p.gl=1;p.gv=1;}
-    if(p.l==="Mac Allister"&&p.v==="Olimpo"){p.gl=null;p.gv=null;}
+    if(p.l==="Mac Allister"&&p.v==="Olimpo"){p.gl=3;p.gv=0;}
     if(p.l==="Alvarado"&&p.v==="Balompié"){p.gl=2;p.gv=1;}
 });
 
@@ -1301,7 +1301,7 @@ BD_FIXTURES.promocional.reserva.push(
     { fecha: 6, partidos: [
         {l:"Dublin",      v:"Tiro Federal",          gl:2,   gv:3},
         {l:"Pacífico (C)",   v:"Rosario PB", gl:1,   gv:1},
-        {l:"Sansinena", v:"Olimpo",              gl:null,   gv:null},
+        {l:"Sansinena", v:"Olimpo",              gl:2,   gv:5},
         {l:"Pacífico BB",v:"Comercial",           gl:0,   gv:1}
     ]},
     { fecha: 7, partidos: [
@@ -15311,11 +15311,11 @@ function generarReserva(cat) {
                        {n:"Huracán",       cl:"huracan",      pj:7, pg:1, pe:2, pp:4, gf:7, gc:22, pts:4}],
         'promocional':[{n:"Tiro Federal",        cl:"tirofederal",      pj:7, pg:5, pe:2, pp:0, gf:19, gc:12, pts:17},
                        {n:"Comercial",           cl:"comercial",        pj:7, pg:4, pe:3, pp:0, gf:10, gc:5, pts:15},
-                       {n:"Olimpo",              cl:"olimpo",           pj:6, pg:4, pe:0, pp:2, gf:9, gc:5, pts:12},
+                       {n:"Olimpo",              cl:"olimpo",           pj:7, pg:5, pe:0, pp:2, gf:14, gc:7, pts:15},
                        {n:"Pacífico BB",         cl:"pacificobb",       pj:7, pg:2, pe:2, pp:3, gf:8, gc:7, pts:8},
                        {n:"Dublin",              cl:"dublin",           pj:7, pg:2, pe:1, pp:4, gf:10, gc:10, pts:7},
-                       {n:"Sansinena",           cl:"sansinena",        pj:6, pg:2, pe:0, pp:4, gf:3, gc:10, pts:6},
                        {n:"Rosario PB",          cl:"rosariopb",        pj:7, pg:1, pe:3, pp:3, gf:5, gc:7, pts:6},
+                       {n:"Sansinena",           cl:"sansinena",        pj:7, pg:2, pe:0, pp:5, gf:5, gc:15, pts:6},
                        {n:"Pacífico (C)", cl:"pacificocabildo",  pj:7, pg:1, pe:1, pp:5, gf:6, gc:15, pts:4},],
         'segundafemenino': [
             {n:"Rosario PB",          cl:"rosariopb",       pj:4, pg:4, pe:0, pp:0, gf:12, gc:2, pts:12},
@@ -15376,29 +15376,29 @@ function generarReserva(cat) {
 const BD_POS_SUB = {
     sub13: [
         {nombre:"Villa Mitre",  clase:"villamitre",  pj:4,pg:4,pe:0,pp:0,gf:12,gc:4,pts:12},
+        {nombre:"Mac Allister", clase:"macallister", pj:4,pg:3,pe:0,pp:1,gf:7,gc:2,pts:9},
         {nombre:"Kimberley",    clase:"kimberley",   pj:3,pg:2,pe:0,pp:1,gf:5,gc:3,pts:6},
-        {nombre:"Mac Allister", clase:"macallister", pj:3,pg:2,pe:0,pp:1,gf:3,gc:2,pts:6},
         {nombre:"Balompié",     clase:"balompie",    pj:3,pg:2,pe:0,pp:1,gf:6,gc:4,pts:6},
         {nombre:"Alvarado",     clase:"alvarado",    pj:4,pg:1,pe:0,pp:3,gf:7,gc:11,pts:3},
         {nombre:"Santamarina",  clase:"santamarina", pj:3,pg:0,pe:0,pp:3,gf:2,gc:7,pts:0},
-        {nombre:"Olimpo",       clase:"olimpo",      pj:2,pg:0,pe:0,pp:2,gf:3,gc:7,pts:0}
+        {nombre:"Olimpo",       clase:"olimpo",      pj:3,pg:0,pe:0,pp:3,gf:3,gc:11,pts:0}
     ],
     sub15: [
-        {nombre:"Mac Allister", clase:"macallister", pj:3,pg:3,pe:0,pp:0,gf:4,gc:0,pts:9},
+        {nombre:"Mac Allister", clase:"macallister", pj:4,pg:4,pe:0,pp:0,gf:5,gc:0,pts:12},
         {nombre:"Kimberley",    clase:"kimberley",   pj:3,pg:2,pe:1,pp:0,gf:4,gc:2,pts:7},
         {nombre:"Alvarado",     clase:"alvarado",    pj:4,pg:2,pe:1,pp:1,gf:10,gc:3,pts:7},
         {nombre:"Balompié",     clase:"balompie",    pj:3,pg:1,pe:0,pp:2,gf:4,gc:4,pts:3},
-        {nombre:"Olimpo",       clase:"olimpo",      pj:2,pg:1,pe:0,pp:1,gf:3,gc:5,pts:3},
+        {nombre:"Olimpo",       clase:"olimpo",      pj:3,pg:1,pe:0,pp:2,gf:3,gc:6,pts:3},
         {nombre:"Villa Mitre",  clase:"villamitre",  pj:4,pg:1,pe:0,pp:3,gf:4,gc:6,pts:3},
         {nombre:"Santamarina",  clase:"santamarina", pj:3,pg:0,pe:0,pp:3,gf:0,gc:9,pts:0}
     ],
     sub17: [
         {nombre:"Alvarado",     clase:"alvarado",    pj:4,pg:3,pe:0,pp:1,gf:9,gc:5,pts:9},
+        {nombre:"Mac Allister", clase:"macallister", pj:4,pg:2,pe:2,pp:0,gf:7,gc:3,pts:8},
         {nombre:"Kimberley",    clase:"kimberley",   pj:3,pg:2,pe:1,pp:0,gf:4,gc:2,pts:7},
-        {nombre:"Mac Allister", clase:"macallister", pj:3,pg:1,pe:2,pp:0,gf:4,gc:3,pts:5},
         {nombre:"Balompié",     clase:"balompie",    pj:3,pg:1,pe:1,pp:1,gf:7,gc:7,pts:4},
         {nombre:"Villa Mitre",  clase:"villamitre",  pj:4,pg:0,pe:3,pp:1,gf:3,gc:5,pts:3},
-        {nombre:"Olimpo",       clase:"olimpo",      pj:2,pg:0,pe:1,pp:1,gf:3,gc:4,pts:1},
+        {nombre:"Olimpo",       clase:"olimpo",      pj:3,pg:0,pe:1,pp:2,gf:3,gc:7,pts:1},
         {nombre:"Santamarina",  clase:"santamarina", pj:3,pg:0,pe:0,pp:3,gf:1,gc:5,pts:0}
     ]
 };
