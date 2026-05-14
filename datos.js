@@ -92,7 +92,7 @@ const idaFederal = [
     { fecha: 6, libre: "Sol de Mayo", partidos: [{l:"Santamarina", v:"Germinal", gl:0, gv:0, dia:"Sáb 24/04", hora:"18:30"}, {l:"Alvarado", v:"Villa Mitre", gl:1, gv:1, dia:"Dom 25/04", hora:"15:00", goles_l:["Santiago Gutiérrez"], goles_v:["Jerónimo Almada"]}, {l:"Guillermo Brown", v:"Kimberley", gl:3, gv:4, dia:"Dom 25/04", hora:"15:30", goles_l:["Martín Rivero","Emanuel Moreno","Ignacio Zapulla"], goles_v:["Santiago Castillo","Santiago Castillo","Leonel Iriarte","Leonel Iriarte"]}, {l:"Olimpo", v:"Círculo Dep.", gl:1, gv:0, dia:"Lun 26/04", hora:"15:30", goles_l:["Federico González"], goles_v:[]}] },
     { fecha: 7, libre: "Santamarina", partidos: [{l:"Círculo Dep.", v:"Guillermo Brown", gl:1, gv:1, dia:"Sáb 02/05", hora:"15:00", goles_l:["Ciro Rius"], goles_v:["Patricio Cucchi"]}, {l:"Kimberley", v:"Sol de Mayo", gl:0, gv:0, dia:"Sáb 02/05", hora:"15:30"}, {l:"Villa Mitre", v:"Olimpo", gl:0, gv:0, dia:"Dom 03/05", hora:"15:00"}, {l:"Germinal", v:"Alvarado", gl:1, gv:0, dia:"Dom 03/05", hora:"15:30", goles_l:["Gerónimo Núñez"], goles_v:[]}] },
     { fecha: 8, libre: "Kimberley", partidos: [{l:"Guillermo Brown", v:"Villa Mitre", gl:1, gv:0, dia:"Dom 10/05", hora:"15:00", goles_l:["Ignacio Vallejos"], goles_v:[]}, {l:"Sol de Mayo", v:"Círculo Dep.", gl:0, gv:0, dia:"Dom 10/05", hora:"15:00"}, {l:"Alvarado", v:"Santamarina", gl:3, gv:0, dia:"Dom 10/05", hora:"15:00", goles_l:["Matías Mansilla","Germán Cervera","Germán Cervera"], goles_v:[]}, {l:"Olimpo", v:"Germinal", gl:1, gv:0, dia:"Dom 10/05", hora:"15:30", goles_l:["Joaquín Susvielles"], goles_v:[]}] },
-    { fecha: 9, libre: "Alvarado", partidos: [{l:"Santamarina", v:"Olimpo", gl:null, gv:null}, {l:"Germinal", v:"Guillermo Brown", gl:null, gv:null}, {l:"Villa Mitre", v:"Sol de Mayo", gl:null, gv:null}, {l:"Círculo Dep.", v:"Kimberley", gl:null, gv:null}] }
+    { fecha: 9, libre: "Alvarado", partidos: [{l:"Germinal", v:"Guillermo Brown", gl:null, gv:null, dia:"Dom 17/05", hora:"15:00"}, {l:"Villa Mitre", v:"Sol de Mayo", gl:null, gv:null, dia:"Dom 17/05", hora:"15:00"}, {l:"Círculo Dep.", v:"Kimberley", gl:null, gv:null, dia:"Dom 17/05", hora:"15:00"}, {l:"Santamarina", v:"Olimpo", gl:null, gv:null, dia:"Dom 17/05", hora:"18:10"}] }
 ];
 
 
@@ -1500,6 +1500,10 @@ function generarHome() {
                 {l:"Olimpo", v:"Pacífico BB", hora:"15:00"},
                 {l:"Rosario PB", v:"Dublin", hora:"15:00"},
                 {l:"Pacífico (C)", v:"Sansinena", hora:"15:00"}
+            ]},
+            { nombre: "FEDERAL A", cat: "federala", partidos: [
+                {l:"Villa Mitre", v:"Sol de Mayo", hora:"15:00"},
+                {l:"Santamarina", v:"Olimpo", hora:"18:10"}
             ]},
         ]},
     ];
