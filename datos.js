@@ -271,7 +271,7 @@ const BD_FIXTURES_FUTSAL_RESERVA = [
     ]},
     { fecha: 8, partidos: [
         {l:"La Esperanza",    v:"San Francisco",   gl:4, gv:2},
-        {l:"Comercial",       v:"Los 3 Chiflados", gl:null, gv:null},
+        {l:"Comercial",       v:"Los 3 Chiflados", gl:4, gv:6},
         {l:"Tiro Federal",    v:"Dep. Futsal",     gl:null, gv:null},
         {l:"Villa Mitre",     v:"Dublin",          gl:null, gv:null},
         {l:"La Estación",     v:"Petroquímicos",   gl:null, gv:null},
@@ -950,7 +950,22 @@ const BD_FIXTURES_FUTSAL = [
     ]},
     { fecha: 8, partidos: [
         {l:"La Esperanza",    v:"San Francisco",   gl:null, gv:null},
-        {l:"Comercial",       v:"Los 3 Chiflados", gl:null, gv:null},
+        {
+            l:"Comercial",
+            v:"Los 3 Chiflados",
+            gl:3,
+            gv:7,
+            dia:"Miér 13/05",
+            hora:"22:00",
+            goles_l:[
+                ],
+            goles_v:[
+                "Blas Gómez (2)",
+                "Iván Zapata (2)",
+                "Diego Santiváñez (2)",
+                "Lucas Raya"
+            ],
+        },
         {l:"Tiro Federal",    v:"Dep. Futsal",     gl:null, gv:null},
         {l:"Villa Mitre",     v:"Dublin",          gl:null, gv:null},
         {l:"La Estación",     v:"Petroquímicos",   gl:null, gv:null},
@@ -1465,7 +1480,7 @@ function generarHome() {
         ]},
         { id: "2026-05-13", label: "MIÉR 13/05", torneos: [
             { nombre: "FUTSAL", cat: "futsal", partidos: [
-                {l:"Comercial", v:"Los 3 Chiflados", hora:"22:00", nota:"en cancha de Comercial"},
+                {l:"Comercial", v:"Los 3 Chiflados", hora:"22:00", nota:"en cancha de Comercial", gl:3, gv:7},
                 {l:"La Esperanza", v:"San Francisco", hora:"22:00", nota:"en cancha de Don Bosco"}
             ]},
         ]},
@@ -15555,10 +15570,10 @@ function generarSub() {
 
 const BD_POS_FUTSAL = {
     principal: [
+        {n:"Los 3 Chiflados", cl:"los3chiflados", pj:8,pg:6,pe:1,pp:1,gf:56, gc:26, pts:19},
         {n:"La Estación",     cl:"laestacion",    pj:6,pg:6,pe:0,pp:0,gf:35, gc:10, pts:18},
-        {n:"Los 3 Chiflados", cl:"los3chiflados", pj:7,pg:5,pe:1,pp:1,gf:49, gc:23, pts:16},
         {n:"La Esperanza",    cl:"laesperanza",   pj:6,pg:5,pe:0,pp:1,gf:24, gc:15, pts:15},
-        {n:"Comercial",       cl:"comercial",     pj:6,pg:4,pe:2,pp:0,gf:32, gc:12, pts:14},
+        {n:"Comercial",       cl:"comercial",     pj:7,pg:4,pe:2,pp:1,gf:35, gc:19, pts:14},
         {n:"Villa Mitre",     cl:"villamitre",    pj:6,pg:4,pe:1,pp:1,gf:24, gc:16, pts:13},
         {n:"Liniers",         cl:"liniers",       pj:6,pg:2,pe:3,pp:1,gf:23, gc:20, pts:9},
         {n:"Petroquímicos",   cl:"petroquimicos", pj:7,pg:3,pe:0,pp:4,gf:28,gc:30, pts:9},
@@ -15571,7 +15586,7 @@ const BD_POS_FUTSAL = {
         {n:"Huracán",         cl:"huracan",       pj:6,pg:0,pe:0,pp:6,gf:16, gc:46,pts:0}
     ],
     reserva: [
-        {n:"Los 3 Chiflados", cl:"los3chiflados", pj:7,pg:6,pe:1,pp:0,gf:36, gc:7, pts:19},
+        {n:"Los 3 Chiflados", cl:"los3chiflados", pj:8,pg:7,pe:1,pp:0,gf:42, gc:11, pts:22},
         {n:"La Esperanza",    cl:"laesperanza",   pj:7,pg:5,pe:1,pp:1,gf:29, gc:19, pts:16},
         {n:"Petroquímicos",   cl:"petroquimicos", pj:7,pg:4,pe:2,pp:1,gf:37, gc:18, pts:14},
         {n:"Villa Mitre",     cl:"villamitre",    pj:6,pg:4,pe:1,pp:1,gf:29, gc:18, pts:13},
@@ -15583,7 +15598,7 @@ const BD_POS_FUTSAL = {
         {n:"Tiro Federal",    cl:"tirofederal",   pj:6,pg:1,pe:2,pp:3,gf:11, gc:19, pts:5},
         {n:"Pacífico BB",     cl:"pacificobb",    pj:6,pg:1,pe:1,pp:4,gf:24, gc:37, pts:4},
         {n:"Huracán",         cl:"huracan",       pj:6,pg:1,pe:1,pp:4,gf:9, gc:25, pts:4},
-        {n:"Comercial",       cl:"comercial",     pj:6,pg:0,pe:2,pp:4,gf:16, gc:22, pts:2},
+        {n:"Comercial",       cl:"comercial",     pj:7,pg:0,pe:2,pp:5,gf:20, gc:28, pts:2},
         {n:"Dep. Futsal",     cl:"depfutsal",     pj:5,pg:0,pe:1,pp:4,gf:13, gc:30, pts:1}
     ]
 };
@@ -15800,14 +15815,14 @@ const BD_GOLEADORES_FUTSAL = [
         { nombre: "Cristian Masson",     goles: 2 }
     ]},
     { club: "Pacífico BB",     clase: "pacificobb",    act: null,       goleadores: [] },
-    { club: "Los 3 Chiflados", clase: "los3chiflados", act: "fecha 7, sin datos de la fecha 1",  goleadores: [
-        { nombre: "Iván Zapata",          goles: 12 },
+    { club: "Los 3 Chiflados", clase: "los3chiflados", act: "fecha 8, sin datos de la fecha 1",  goleadores: [
+        { nombre: "Iván Zapata",          goles: 14 },
         { nombre: "Agustín Zas",          goles: 8 },
-        { nombre: "Lucas Raya",          goles: 6 },
-        { nombre: "Blas Gomez",     goles: 4 },
+        { nombre: "Lucas Raya",          goles: 7 },
+        { nombre: "Blas Gomez",     goles: 6 },
+        { nombre: "Diego Santiváñez",     goles: 5 },
         { nombre: "Yonatan Santiváñez",  goles: 4 },
         { nombre: "Martín Kloberdans",  goles: 3 },
-        { nombre: "Diego Santiváñez",     goles: 3 },
         { nombre: "Enzo Biancucci",     goles: 3 },
         { nombre: "Lino Bognanni",     goles: 2 },
         { nombre: "Dylan Schlebuch",     goles: 1 },
@@ -16032,8 +16047,8 @@ const BD_BONAERENSE_PROMO = {
     grupo2: {
         posiciones: [
             { n: "Puerto Futsal",          cl: "puertofutsal",  pj: 1, pg: 1, pe: 0, pp: 0, gf: 7, gc: 2, pts: 3 },
-            { n: "SyD Argentinos del Sud", cl: "sydargentinos", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
-            { n: "2 de Julio",             cl: "dedejulio",     pj: 1, pg: 0, pe: 0, pp: 1, gf: 2, gc: 7, pts: 0 }
+            { n: "SyD Argentinos del Sud", cl: "sydargentinos", pj: 1, pg: 1, pe: 0, pp: 0, gf: 4, gc: 0, pts: 3 },
+            { n: "2 de Julio",             cl: "dedejulio",     pj: 2, pg: 0, pe: 0, pp: 2, gf: 2, gc: 11, pts: 0 }
         ]
     },
     goleadores: [
