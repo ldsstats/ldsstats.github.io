@@ -966,11 +966,11 @@ const BD_FIXTURES_FUTSAL = [
                 "Lucas Raya"
             ],
         },
-        {l:"Tiro Federal",    v:"Dep. Futsal",     gl:null, gv:null},
-        {l:"Villa Mitre",     v:"Dublin",          gl:null, gv:null},
+        {l:"Catamarca",       v:"Liniers",         gl:4, gv:7},
+        {l:"Pacífico BB",     v:"Huracán",         gl:8, gv:3},
         {l:"La Estación",     v:"Petroquímicos",   gl:null, gv:null},
-        {l:"Catamarca",       v:"Liniers",         gl:null, gv:null},
-        {l:"Pacífico BB",     v:"Huracán",         gl:null, gv:null}
+        {l:"Villa Mitre",     v:"Dublin",          gl:null, gv:null},
+        {l:"Tiro Federal",    v:"Dep. Futsal",     gl:null, gv:null}
     ]},
     { fecha: 9, partidos: [
         {l:"Los 3 Chiflados", v:"La Esperanza",    gl:null, gv:null},
@@ -1444,7 +1444,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 6).partidos.forEach(p 
 });
 
 
-let diaSeleccionadoHome = "2026-05-14"; 
+let diaSeleccionadoHome = "2026-05-15"; 
 
 function seleccionarDiaHome(dia) {
     diaSeleccionadoHome = dia;
@@ -1487,8 +1487,8 @@ function generarHome() {
         { id: "2026-05-14", label: "JUE 14/05", torneos: [
             { nombre: "FUTSAL", cat: "futsal", partidos: [
                 {l:"La Estación", v:"Petroquímicos", hora:"22:00", nota:"en cancha de Don Bosco"},
-                {l:"Catamarca", v:"Liniers", hora:"22:00", nota:"en cancha de Petroquímicos"},
-                {l:"Huracán", v:"Pacífico BB", hora:"22:30", nota:"en cancha de La Estación"}
+                {l:"Catamarca", v:"Liniers", hora:"22:00", nota:"en cancha de Petroquímicos", gl:4, gv:7},
+                {l:"Huracán", v:"Pacífico BB", hora:"22:30", nota:"en cancha de La Estación", gl:3, gv:8}
             ]},
         ]},
         { id: "2026-05-15", label: "VIE 15/05", torneos: [
@@ -15575,15 +15575,15 @@ const BD_POS_FUTSAL = {
         {n:"La Esperanza",    cl:"laesperanza",   pj:6,pg:5,pe:0,pp:1,gf:24, gc:15, pts:15},
         {n:"Comercial",       cl:"comercial",     pj:7,pg:4,pe:2,pp:1,gf:35, gc:19, pts:14},
         {n:"Villa Mitre",     cl:"villamitre",    pj:6,pg:4,pe:1,pp:1,gf:24, gc:16, pts:13},
-        {n:"Liniers",         cl:"liniers",       pj:6,pg:2,pe:3,pp:1,gf:23, gc:20, pts:9},
+        {n:"Liniers",         cl:"liniers",       pj:7,pg:3,pe:3,pp:1,gf:30, gc:24, pts:12},
+        {n:"Pacífico BB",     cl:"pacificobb",    pj:7,pg:3,pe:0,pp:4,gf:30, gc:30, pts:9},
         {n:"Petroquímicos",   cl:"petroquimicos", pj:7,pg:3,pe:0,pp:4,gf:28,gc:30, pts:9},
-        {n:"Pacífico BB",     cl:"pacificobb",    pj:6,pg:2,pe:0,pp:4,gf:22, gc:27, pts:6},
         {n:"Dublin",          cl:"dublin",        pj:7,pg:2,pe:0,pp:5,gf:16, gc:22, pts:6},
         {n:"Tiro Federal",    cl:"tirofederal",   pj:6,pg:2,pe:0,pp:4,gf:11, gc:22, pts:6},
         {n:"San Francisco",   cl:"sanfrancisco",  pj:6,pg:1,pe:2,pp:3,gf:16, gc:20, pts:5},
-        {n:"Catamarca",       cl:"catamarca",     pj:6,pg:1,pe:1,pp:4,gf:14, gc:27, pts:4},
+        {n:"Catamarca",       cl:"catamarca",     pj:7,pg:1,pe:1,pp:5,gf:18, gc:34, pts:4},
         {n:"Dep. Futsal",     cl:"depfutsal",     pj:5,pg:1,pe:0,pp:4,gf:11, gc:28, pts:3},
-        {n:"Huracán",         cl:"huracan",       pj:6,pg:0,pe:0,pp:6,gf:16, gc:46,pts:0}
+        {n:"Huracán",         cl:"huracan",       pj:7,pg:0,pe:0,pp:7,gf:19, gc:54,pts:0}
     ],
     reserva: [
         {n:"Los 3 Chiflados", cl:"los3chiflados", pj:8,pg:7,pe:1,pp:0,gf:42, gc:11, pts:22},
