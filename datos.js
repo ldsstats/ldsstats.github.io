@@ -272,11 +272,11 @@ const BD_FIXTURES_FUTSAL_RESERVA = [
     { fecha: 8, partidos: [
         {l:"La Esperanza",    v:"San Francisco",   gl:4, gv:2},
         {l:"Comercial",       v:"Los 3 Chiflados", gl:4, gv:6},
-        {l:"Tiro Federal",    v:"Dep. Futsal",     gl:null, gv:null},
-        {l:"Villa Mitre",     v:"Dublin",          gl:null, gv:null},
+        {l:"Catamarca",       v:"Liniers",         gl:6, gv:9},
+        {l:"Pacífico BB",     v:"Huracán",         gl:6, gv:4},
         {l:"La Estación",     v:"Petroquímicos",   gl:null, gv:null},
-        {l:"Catamarca",       v:"Liniers",         gl:null, gv:null},
-        {l:"Pacífico BB",     v:"Huracán",         gl:null, gv:null}
+        {l:"Villa Mitre",     v:"Dublin",          gl:null, gv:null},
+        {l:"Tiro Federal",    v:"Dep. Futsal",     gl:null, gv:null}
     ]},
     { fecha: 9, partidos: [
         {l:"Los 3 Chiflados", v:"La Esperanza",    gl:null, gv:null},
@@ -1229,10 +1229,10 @@ const BD_FIXTURES = { oficial: { apertura: [], reserva: [] }, promocional: { ape
 
 expandirFixture(idaOficial, BD_FIXTURES.oficial.apertura, 14);
 BD_FIXTURES.oficial.apertura.find(f => f.fecha === 8).partidos = [
-    {l:"Huracán",       v:"Libertad",    gl:null, gv:null, dia:"Sáb 09/05", hora:"15:30"},
-    {l:"San Francisco", v:"Bella Vista", gl:null, gv:null, dia:"Dom 10/05", hora:"15:30"},
-    {l:"Liniers",       v:"Villa Mitre", gl:null, gv:null, dia:"Dom 10/05", hora:"15:30"},
-    {l:"La Armonía",    v:"Sporting",    gl:null, gv:null, dia:"Dom 10/05", hora:"15:30"}
+    {l:"San Francisco", v:"Bella Vista", gl:null, gv:null, dia:"Sáb 16/05", hora:"15:00"},
+    {l:"Liniers",       v:"Villa Mitre", gl:null, gv:null, dia:"Sáb 16/05", hora:"15:00"},
+    {l:"Huracán",       v:"Libertad",    gl:null, gv:null, dia:"Sáb 16/05", hora:"15:30"},
+    {l:"La Armonía",    v:"Sporting",    gl:null, gv:null, dia:"Dom 17/05", hora:"15:00"}
 ];
 
 // Reserva Oficial
@@ -1329,10 +1329,10 @@ BD_FIXTURES.promocional.reserva.push(
 
 expandirFixture(idaPromo, BD_FIXTURES.promocional.apertura, 14);
 BD_FIXTURES.promocional.apertura.find(f => f.fecha === 8).partidos = [
-    {l:"Olimpo",       v:"Pacífico BB", gl:null, gv:null, dia:"Sáb 09/05", hora:"15:30"},
-    {l:"Comercial",    v:"Tiro Federal", gl:null, gv:null, dia:"Sáb 09/05", hora:"15:30"},
-    {l:"Rosario PB",   v:"Dublin",      gl:null, gv:null, dia:"Dom 10/05", hora:"15:30"},
-    {l:"Pacífico (C)", v:"Sansinena",   gl:null, gv:null, dia:"Dom 10/05", hora:"15:30"}
+    {l:"Comercial",    v:"Tiro Federal", gl:null, gv:null, dia:"Sáb 16/05", hora:"15:00"},
+    {l:"Olimpo",       v:"Pacífico BB", gl:null, gv:null, dia:"Sáb 16/05", hora:"15:00"},
+    {l:"Rosario PB",   v:"Dublin",      gl:null, gv:null, dia:"Sáb 16/05", hora:"15:00"},
+    {l:"Pacífico (C)", v:"Sansinena",   gl:null, gv:null, dia:"Dom 17/05", hora:"15:00"}
 ];
 expandirFixture(idaFederal, BD_FIXTURES.federala.posiciones, 18);
 expandirFixture(idaFemenino, BD_FIXTURES.femenino.apertura, 14);
@@ -15590,14 +15590,14 @@ const BD_POS_FUTSAL = {
         {n:"La Esperanza",    cl:"laesperanza",   pj:7,pg:5,pe:1,pp:1,gf:29, gc:19, pts:16},
         {n:"Petroquímicos",   cl:"petroquimicos", pj:7,pg:4,pe:2,pp:1,gf:37, gc:18, pts:14},
         {n:"Villa Mitre",     cl:"villamitre",    pj:6,pg:4,pe:1,pp:1,gf:29, gc:18, pts:13},
-        {n:"Liniers",         cl:"liniers",       pj:6,pg:3,pe:2,pp:1,gf:23, gc:14, pts:11},
+        {n:"Liniers",         cl:"liniers",       pj:7,pg:4,pe:2,pp:1,gf:32, gc:20, pts:14},
         {n:"Dublin",          cl:"dublin",        pj:7,pg:3,pe:1,pp:3,gf:18, gc:24, pts:10},
-        {n:"Catamarca",       cl:"catamarca",     pj:6,pg:3,pe:0,pp:3,gf:28, gc:22, pts:9},
+        {n:"Catamarca",       cl:"catamarca",     pj:7,pg:3,pe:0,pp:4,gf:32, gc:31, pts:9},
         {n:"La Estación",     cl:"laestacion",    pj:6,pg:2,pe:3,pp:1,gf:20, gc:19, pts:9},
+        {n:"Pacífico BB",     cl:"pacificobb",    pj:7,pg:2,pe:1,pp:4,gf:30, gc:41, pts:7},
         {n:"San Francisco",   cl:"sanfrancisco",  pj:7,pg:2,pe:0,pp:6,gf:13, gc:31, pts:6},
         {n:"Tiro Federal",    cl:"tirofederal",   pj:6,pg:1,pe:2,pp:3,gf:11, gc:19, pts:5},
-        {n:"Pacífico BB",     cl:"pacificobb",    pj:6,pg:1,pe:1,pp:4,gf:24, gc:37, pts:4},
-        {n:"Huracán",         cl:"huracan",       pj:6,pg:1,pe:1,pp:4,gf:9, gc:25, pts:4},
+        {n:"Huracán",         cl:"huracan",       pj:7,pg:1,pe:1,pp:5,gf:13, gc:31, pts:4},
         {n:"Comercial",       cl:"comercial",     pj:7,pg:0,pe:2,pp:5,gf:20, gc:28, pts:2},
         {n:"Dep. Futsal",     cl:"depfutsal",     pj:5,pg:0,pe:1,pp:4,gf:13, gc:30, pts:1}
     ]
