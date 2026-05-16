@@ -275,7 +275,7 @@ const BD_FIXTURES_FUTSAL_RESERVA = [
         {l:"Catamarca",       v:"Liniers",         gl:6, gv:9},
         {l:"Pacífico BB",     v:"Huracán",         gl:6, gv:4},
         {l:"La Estación",     v:"Petroquímicos",   gl:3, gv:2},
-        {l:"Villa Mitre",     v:"Dublin",          gl:null, gv:null},
+        {l:"Villa Mitre",     v:"Dublin",          gl:5, gv:1},
         {l:"Tiro Federal",    v:"Dep. Futsal",     gl:null, gv:null}
     ]},
     { fecha: 9, partidos: [
@@ -998,7 +998,20 @@ const BD_FIXTURES_FUTSAL = [
             goles_v:[
             ],
         },
-        {l:"Villa Mitre",     v:"Dublin",          gl:null, gv:null},
+        {
+            l:"Villa Mitre",
+            v:"Dublin",
+            gl:4,
+            gv:2,
+            dia:"Vie 15/05",
+            hora:"22:00",
+            goles_l:[
+                ],
+            goles_v:[
+                "Agustín Miguel",
+                "Matías Gigena",
+            ],
+        },
         {l:"Tiro Federal",    v:"Dep. Futsal",     gl:null, gv:null}
     ]},
     { fecha: 9, partidos: [
@@ -1479,7 +1492,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 6).partidos.forEach(p 
 });
 
 
-let diaSeleccionadoHome = "2026-05-15"; 
+let diaSeleccionadoHome = "2026-05-16"; 
 
 function seleccionarDiaHome(dia) {
     diaSeleccionadoHome = dia;
@@ -1528,7 +1541,7 @@ function generarHome() {
         ]},
         { id: "2026-05-15", label: "VIE 15/05", torneos: [
             { nombre: "FUTSAL", cat: "futsal", partidos: [
-                {l:"Villa Mitre", v:"Dublin", hora:"22:00", nota:"en cancha de Don Bosco"},
+                {l:"Villa Mitre", v:"Dublin", hora:"22:00", nota:"en cancha de Don Bosco", gl:4, gv:2},
                 {l:"Tiro Federal", v:"Dep. Futsal", hora:"22:30", nota:"en cancha de Tiro Federal"}
             ]},
         ]},
@@ -1547,6 +1560,9 @@ function generarHome() {
             { nombre: "SUB 15 FEMENINO", cat: "sub15fem", partidos: [
                 {l:"Bella Vista", v:"Juventud Unida", hora:"15:00"},
                 {l:"Empleados de Comercio", v:"La Armonía", hora:"16:00", nota:"en cancha de La Armonía"}
+            ]},
+            { nombre: "FUTSAL BONAERENSE - ASCENSO", cat: "futsalbonaerense", partidos: [
+                {l:"Banco Provincia", v:"La Esperanza", hora:"15:30"}
             ]},
         ]},
         { id: "2026-05-17", label: "DOM 17/05", torneos: [
@@ -15631,13 +15647,13 @@ const BD_POS_FUTSAL = {
     principal: [
         {n:"La Estación",     cl:"laestacion",    pj:7,pg:7,pe:0,pp:0,gf:39, gc:11, pts:21},
         {n:"Los 3 Chiflados", cl:"los3chiflados", pj:8,pg:6,pe:1,pp:1,gf:56, gc:26, pts:19},
+        {n:"Villa Mitre",     cl:"villamitre",    pj:7,pg:5,pe:1,pp:1,gf:28, gc:18, pts:16},
         {n:"La Esperanza",    cl:"laesperanza",   pj:6,pg:5,pe:0,pp:1,gf:24, gc:15, pts:15},
         {n:"Comercial",       cl:"comercial",     pj:7,pg:4,pe:2,pp:1,gf:35, gc:19, pts:14},
-        {n:"Villa Mitre",     cl:"villamitre",    pj:6,pg:4,pe:1,pp:1,gf:24, gc:16, pts:13},
         {n:"Liniers",         cl:"liniers",       pj:7,pg:3,pe:3,pp:1,gf:30, gc:24, pts:12},
         {n:"Pacífico BB",     cl:"pacificobb",    pj:7,pg:3,pe:0,pp:4,gf:30, gc:30, pts:9},
         {n:"Petroquímicos",   cl:"petroquimicos", pj:8,pg:3,pe:0,pp:5,gf:29,gc:34, pts:9},
-        {n:"Dublin",          cl:"dublin",        pj:7,pg:2,pe:0,pp:5,gf:16, gc:22, pts:6},
+        {n:"Dublin",          cl:"dublin",        pj:8,pg:2,pe:0,pp:6,gf:18, gc:26, pts:6},
         {n:"Tiro Federal",    cl:"tirofederal",   pj:6,pg:2,pe:0,pp:4,gf:11, gc:22, pts:6},
         {n:"San Francisco",   cl:"sanfrancisco",  pj:6,pg:1,pe:2,pp:3,gf:16, gc:20, pts:5},
         {n:"Catamarca",       cl:"catamarca",     pj:7,pg:1,pe:1,pp:5,gf:18, gc:34, pts:4},
@@ -15647,11 +15663,11 @@ const BD_POS_FUTSAL = {
     reserva: [
         {n:"Los 3 Chiflados", cl:"los3chiflados", pj:8,pg:7,pe:1,pp:0,gf:42, gc:11, pts:22},
         {n:"La Esperanza",    cl:"laesperanza",   pj:7,pg:5,pe:1,pp:1,gf:29, gc:19, pts:16},
+        {n:"Villa Mitre",     cl:"villamitre",    pj:7,pg:5,pe:1,pp:1,gf:28, gc:18, pts:16},
         {n:"Petroquímicos",   cl:"petroquimicos", pj:8,pg:4,pe:2,pp:2,gf:39, gc:21, pts:14},
         {n:"Liniers",         cl:"liniers",       pj:7,pg:4,pe:2,pp:1,gf:32, gc:20, pts:14},
-        {n:"Villa Mitre",     cl:"villamitre",    pj:6,pg:4,pe:1,pp:1,gf:29, gc:18, pts:13},
         {n:"La Estación",     cl:"laestacion",    pj:7,pg:3,pe:3,pp:1,gf:23, gc:21, pts:12},
-        {n:"Dublin",          cl:"dublin",        pj:7,pg:3,pe:1,pp:3,gf:18, gc:24, pts:10},
+        {n:"Dublin",          cl:"dublin",        pj:8,pg:3,pe:1,pp:4,gf:19, gc:29, pts:10},
         {n:"Catamarca",       cl:"catamarca",     pj:7,pg:3,pe:0,pp:4,gf:32, gc:31, pts:9},
         {n:"Pacífico BB",     cl:"pacificobb",    pj:7,pg:2,pe:1,pp:4,gf:30, gc:41, pts:7},
         {n:"San Francisco",   cl:"sanfrancisco",  pj:7,pg:2,pe:0,pp:6,gf:13, gc:31, pts:6},
@@ -15716,7 +15732,7 @@ function generarSub15Fem() {
         </tr>`;
     });
     html += `</tbody></table>`;
-    html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>18</b> tras la finalización de la fecha <b>5</b></div>`;
+    html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>15</b> tras la finalización de la fecha <b>6</b></div>`;
     return html;
 }
 
@@ -15786,19 +15802,19 @@ if ((p.goles_l && p.goles_l.length) || (p.goles_v && p.goles_v.length)) {
     });
     html += `</tbody></table>`;
     if (modo === 'principal') {
-        html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>24</b> tras finalizar la fecha <b>5</b></div>`;
+        html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>15</b> tras finalizar la fecha <b>8</b></div>`;
     } else if (modo === 'reserva') {
-        html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>24</b> tras finalizar la fecha <b>5</b></div>`;
+        html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>15</b> tras finalizar la fecha <b>8</b></div>`;
     }
     return html;
 }
 
 const BD_GOLEADORES_FUTSAL = [
-    { club: "Dublin",          clase: "dublin",        act: "fecha 7",  goleadores: [
-        { nombre: "Agustín Miguel",      goles: 5 },
+    { club: "Dublin",          clase: "dublin",        act: "fecha 8",  goleadores: [
+        { nombre: "Agustín Miguel",      goles: 6 },
         { nombre: "Jesús Lucarelli",     goles: 3 },
+        { nombre: "Matías Gigena",       goles: 3 },
         { nombre: "Matías Palma",        goles: 2 },
-        { nombre: "Matías Gigena",       goles: 2 },
         { nombre: "Rodrigo Gómez",       goles: 1 },
         { nombre: "Nicolás San Martín",  goles: 1 },
         { nombre: "Facundo Miranda",     goles: 1 },
@@ -16003,10 +16019,10 @@ const BD_BONAERENSE_SUR = {
         { n: "Los 3 Chiflados", cl: "los3chiflados",  pj: 1, pg: 0, pe: 0, pp: 1, gf: 2, gc: 8, pts: 0 }
     ],
     posicionesNorte: [
-        { n: "CAJU San Bernardo", cl: "cajusanbernardo",  pj: 2, pg: 1, pe: 1, pp: 0, gf: 11, gc: 8, pts: 4 },
-        { n: "Torino",            cl: "torino",           pj: 2, pg: 1, pe: 1, pp: 0, gf: 6, gc: 3, pts: 4 },
-        { n: "Def. Villa Clelia", cl: "defvillaclelia",   pj: 2, pg: 0, pe: 2, pp: 0, gf: 7, gc: 7, pts: 2 },
-        { n: "Eureka Pinamar",    cl: "eurekapinamar",    pj: 2, pg: 0, pe: 0, pp: 2, gf: 4, gc: 10, pts: 0 }
+        { n: "CAJU San Bernardo", cl: "cajusanbernardo",  pj: 3, pg: 2, pe: 1, pp: 0, gf: 14, gc: 10, pts: 7 },
+        { n: "Torino",            cl: "torino",           pj: 3, pg: 1, pe: 1, pp: 1, gf: 8, gc: 6, pts: 4 },
+        { n: "Eureka Pinamar",    cl: "eurekapinamar",    pj: 3, pg: 1, pe: 0, pp: 2, gf: 10, gc: 13, pts: 3 },
+        { n: "Def. Villa Clelia", cl: "defvillaclelia",   pj: 3, pg: 0, pe: 2, pp: 1, gf: 10, gc: 13, pts: 2 }
     ],
     goleadores: [
     { nombre: "Bruno Decoud",          equipo: "La Esperanza",   goles: 3 },
@@ -17494,7 +17510,7 @@ function generarTabla(tor, cat) {
         return html + "</tbody></table><div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>21</b> tras finalizar la fecha <b>7</b></div>";
     }
     if (tor === 'apertura' && cat === 'femenino') {
-        return html + "</tbody></table><div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>24</b> tras finalizar la fecha <b>6</b></div>";
+        return html + "</tbody></table><div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>21</b> tras finalizar la fecha <b>7</b></div>";
     }
     if (tor === 'torneo2026' && cat === 'segundafemenino') {
         return html + "</tbody></table><div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>54</b> para los equipos que jugaron 6 partidos y <b>57</b> para los equipos que jugaron 5 partidos</div>";
