@@ -1570,7 +1570,7 @@ function generarHome() {
             ]},
             { nombre: "PROMOCIONAL (Tentativo)", cat: "promocional", partidos: [
                 {l:"Dublin", v:"Pacífico (C)", hora:"15:00", nota:"en cancha de Comercial"},
-                {l:"Pacífico de BB", v:"Rosario", hora:"15:00"}
+                {l:"Pacífico  BB", v:"Rosario PB", hora:"15:00"}
             ]},
         ]},
         { id: "2026-05-25", label: "LUN 25/05", torneos: [
