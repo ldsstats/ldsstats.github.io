@@ -1574,12 +1574,12 @@ function generarHome() {
         ]},
         { id: "2026-05-24", label: "DOM 24/05", torneos: [
             { nombre: "OFICIAL (Tentativo)", cat: "oficial", partidos: [
-                {l:"Villa Mitre", v:"La Armonía", hora:"15:00"},
-                {l:"Liniers", v:"Bella Vista", hora:"15:00"}
+                {l:"Liniers", v:"Bella Vista", hora:"11:00"},
+                {l:"Villa Mitre", v:"La Armonía", hora:"12:30"}
             ]},
             { nombre: "PROMOCIONAL (Tentativo)", cat: "promocional", partidos: [
-                {l:"Dublin", v:"Pacífico (C)", hora:"15:00", nota:"en cancha de Comercial"},
-                {l:"Pacífico BB", v:"Rosario PB", hora:"15:00"}
+                {l:"Dublin", v:"Pacífico (C)", hora:"11:00", nota:"en cancha de Comercial"},
+                {l:"Pacífico BB", v:"Rosario PB", hora:"11:00"}
             ]},
         ]},
         { id: "2026-05-25", label: "LUN 25/05", torneos: [
