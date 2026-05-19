@@ -1537,7 +1537,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 8).partidos.forEach(p 
 });
 
 
-let diaSeleccionadoHome = "2026-05-23"; 
+let diaSeleccionadoHome = "2026-05-19"; 
 
 function seleccionarDiaHome(dia) {
     diaSeleccionadoHome = dia;
@@ -1557,6 +1557,15 @@ const BD_FECHA_META = {
 
 function generarHome() {
     const agenda = [
+        { id: "2026-05-19", label: "MAR 19/05", torneos: [
+            { nombre: "SENIOR", cat: "seniorapertura", partidos: [
+                {l:"Libertad", v:"Pacífico (C)", hora:"20:00", nota:"en cancha de Libertad"},
+                {l:"Pacífico BB", v:"Bella Vista", hora:"20:00", nota:"en cancha de Sansinena"},
+                {l:"San Francisco", v:"Comercial", hora:"21:00", nota:"en cancha de Tiro Federal"},
+                {l:"Huracán", v:"Sporting", hora:"21:30", nota:"en cancha de Libertad"},
+                {l:"Sansinena", v:"Tiro Federal", hora:"21:30", nota:"en cancha de Sansinena"}
+            ]},
+        ]},
         { id: "2026-05-23", label: "SÁB 23/05", torneos: [
             { nombre: "PROMOCIONAL (Tentativo)", cat: "promocional", partidos: [
                 {l:"Tiro Federal", v:"Olimpo", hora:"15:00"},
@@ -15638,9 +15647,9 @@ const BD_POS_FUTSAL = {
         {n:"Tiro Federal",    cl:"tirofederal",   pj:7,pg:2,pe:0,pp:5,gf:19, gc:23, pts:9},
         {n:"Petroquímicos",   cl:"petroquimicos", pj:8,pg:3,pe:0,pp:5,gf:29,gc:34, pts:9},
         {n:"Dublin",          cl:"dublin",        pj:8,pg:2,pe:0,pp:6,gf:18, gc:26, pts:6},
-        {n:"San Francisco",   cl:"sanfrancisco",  pj:7,pg:1,pe:2,pp:4,gf:20, gc:27, pts:5},
         {n:"Catamarca",       cl:"catamarca",     pj:7,pg:1,pe:1,pp:5,gf:18, gc:34, pts:4},
         {n:"Dep. Futsal",     cl:"depfutsal",     pj:6,pg:1,pe:0,pp:5,gf:12, gc:36, pts:3},
+        {n:"San Francisco*",   cl:"sanfrancisco",  pj:7,pg:1,pe:2,pp:4,gf:20, gc:27, pts:2},
         {n:"Huracán",         cl:"huracan",       pj:7,pg:0,pe:0,pp:7,gf:19, gc:54,pts:0}
     ],
     reserva: [
@@ -15785,7 +15794,8 @@ if ((p.goles_l && p.goles_l.length) || (p.goles_v && p.goles_v.length)) {
     });
     html += `</tbody></table>`;
     if (modo === 'principal') {
-        html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>15</b> tras finalizar la fecha <b>8</b></div>`;
+        html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>*Se le descontaron tres puntos.
+📌 Puntos en juego: <b>15</b> tras finalizar la fecha <b>8</b></div>`;
     } else if (modo === 'reserva') {
         html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>15</b> tras finalizar la fecha <b>8</b></div>`;
     }
@@ -16247,7 +16257,13 @@ const BD_FIXTURES_SENIOR = [
         { l: "Tiro Federal",   v: "Pacífico BB",  gl: 2, gv: 2 },
         { l: "Sporting",   v: "Libertad",  gl: 2, gv: 1 }
     ]},
-    { fecha: 4, libre: null, partidos: [] },
+    { fecha: 4, dia: "Mar 19/05", partidos: [
+        { l: "Libertad",   v: "Pacífico (C)",  gl: null, gv: null },
+        { l: "Pacífico BB",   v: "Bella Vista",  gl: null, gv: null },
+        { l: "San Francisco",   v: "Comercial",  gl: null, gv: null },
+        { l: "Huracán",   v: "Sporting",  gl: null, gv: null },
+        { l: "Sansinena",   v: "Tiro Federal",  gl: null, gv: null }
+    ]},
     { fecha: 5, libre: null, partidos: [] },
     { fecha: 6, libre: null, partidos: [] },
     { fecha: 7, libre: null, partidos: [] },
