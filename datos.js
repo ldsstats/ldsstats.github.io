@@ -1418,8 +1418,8 @@ BD_FIXTURES.promocional.reserva.push(
     { fecha: 8, partidos: [
         {l:"Pacífico (C)",   v:"Sansinena", gl:2,   gv:3},
         {l:"Rosario PB",      v:"Dublin",          gl:2,   gv:1},
-        {l:"Olimpo", v:"Pacífico BB",              gl:null,   gv:null},
-        {l:"Comercial",v:"Tiro Federal",           gl:null,   gv:null}
+        {l:"Comercial",v:"Tiro Federal",           gl:2,   gv:2},
+        {l:"Olimpo", v:"Pacífico BB",              gl:1,   gv:1}
     ]},
 );
 
@@ -1604,8 +1604,8 @@ function generarHome() {
                 {l:"Huracán", v:"Libertad", hora:"15:30", gl:0, gv:4}
             ]},
             { nombre: "RESERVA PROMOCIONAL", cat: "reserva_promocional", partidos: [
-                {l:"Comercial", v:"Tiro Federal", hora:"15:30"},
-                {l:"Olimpo", v:"Pacífico BB", hora:"15:30"}
+                {l:"Comercial", v:"Tiro Federal", hora:"15:30", gl:2, gv:2},
+                {l:"Olimpo", v:"Pacífico BB", hora:"15:30", gl:1, gv:1}
             ]},
         ]},
         { id: "2026-05-20", label: "MIÉ 20/05", torneos: [
@@ -15450,12 +15450,12 @@ function generarReserva(cat) {
                        {n:"Liniers",       cl:"liniers",      pj:8, pg:2, pe:3, pp:3, gf:7, gc:8, pts:9},
                        {n:"Libertad",      cl:"libertad",     pj:8, pg:2, pe:3, pp:3, gf:11, gc:11, pts:9},
                        {n:"Huracán",       cl:"huracan",      pj:8, pg:1, pe:2, pp:5, gf:7, gc:26, pts:5}],
-        'promocional':[{n:"Tiro Federal",        cl:"tirofederal",      pj:7, pg:5, pe:2, pp:0, gf:19, gc:12, pts:17},
-                       {n:"Comercial",           cl:"comercial",        pj:7, pg:4, pe:3, pp:0, gf:10, gc:5, pts:15},
-                       {n:"Olimpo",              cl:"olimpo",           pj:7, pg:5, pe:0, pp:2, gf:14, gc:7, pts:15},
+        'promocional':[{n:"Tiro Federal",        cl:"tirofederal",      pj:8, pg:5, pe:3, pp:0, gf:21, gc:14, pts:18},
+                       {n:"Comercial",           cl:"comercial",        pj:8, pg:4, pe:4, pp:0, gf:12, gc:7, pts:16},
+                       {n:"Olimpo",              cl:"olimpo",           pj:8, pg:5, pe:1, pp:2, gf:15, gc:8, pts:16},
+                       {n:"Pacífico BB",         cl:"pacificobb",       pj:8, pg:2, pe:3, pp:3, gf:9, gc:8, pts:9},
                        {n:"Rosario PB",          cl:"rosariopb",        pj:8, pg:2, pe:3, pp:3, gf:7, gc:7, pts:9},
                        {n:"Sansinena",           cl:"sansinena",        pj:8, pg:3, pe:0, pp:5, gf:8, gc:17, pts:9},
-                       {n:"Pacífico BB",         cl:"pacificobb",       pj:7, pg:2, pe:2, pp:3, gf:8, gc:7, pts:8},
                        {n:"Dublin",              cl:"dublin",           pj:8, pg:2, pe:1, pp:5, gf:10, gc:12, pts:7},
                        {n:"Pacífico (C)", cl:"pacificocabildo",  pj:8, pg:1, pe:1, pp:6, gf:8, gc:18, pts:4},],
         'segundafemenino': [
