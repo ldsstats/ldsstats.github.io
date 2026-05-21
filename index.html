@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>LdS Stats - 2026</title>
-    <link rel="stylesheet" href="style.css?v=77">
+    <link rel="stylesheet" href="style.css?v=777">
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#111111">
     <!-- Google Analytics -->
@@ -32,7 +32,7 @@
     z-index: 999;
     pointer-events: none;
     letter-spacing: 0.3px;
-">🕐 Última actualización: Miér 20/05 21:15hs</div>
+">🕐 Última actualización: Miér 20/05 23:30hs</div>
 
 <div id="container-principal">
     <div id="logo-header"><img src="au11.png" style="height:80px;" alt="LdS Stats"></div>
@@ -160,15 +160,15 @@
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-<script src="datos.js?v=77"></script>
+<script src="datos.js?v=777"></script>
 <script>
     let estado = { torneo: 'home', categoria: '', fecha: 1 };
     let estadoAnterior = { torneo: 'home', categoria: '', fecha: 1 };
 
     // Última actualización por sección — modificar según corresponda
     const ULTIMA_ACT = {
-        default:        "Miér 13/05 21:15hs",
-        home:        "Miér 20/05 17:00hs",
+        default:        "Miér 20/05 23:30hs",
+        home:        "Miér 20/05 23:30hs",
         apertura_oficial:   "Lun 18/05 08:00hs",
         historial:   "Lun 18/05 08:00hs",
         goleadores_oficial:   "Lun 18/05 08:00hs",
@@ -180,7 +180,7 @@
         reserva_promocional:   "Miér 20/05 00:00hs",
         posiciones_federala:   "Lun 18/05 08:00hs",
         goleadores_federala:   "Lun 18/05 08:00hs",
-        sub131517:   "Miér 13/05 21:15hs",
+        sub131517:   "Miér 20/05 23:30hs",
         copa_argentina:   "Dom 29/3 — 21:00hs",
         apertura_femenino:   "Dom 17/05 18:30hs",
         goleadores_femenino:   "Dom 17/05 18:30hs",
@@ -192,7 +192,7 @@
         torneo2026_senior:   "Lun 04/05 08:00hs",
         futsal:   "Miér 20/05 17:00hs",
         futsalgoleadores:   "Lun 18/05 08:00hs",
-        futsalreserva:   "Miér 20/05 17:00hs",
+        futsalreserva:   "Miér 20/05 23:30hs",
         quienessomos:   "Miér 1/04 — 00:00hs",
         equiposfuera:   "Dom 22/3 — 1:15hs",
         futsalbonaerense:   "Sáb 16/05 22:00hs",
@@ -275,7 +275,7 @@
         }
         estado.torneo = tor;
         estado.categoria = cat;
-        estado.fecha = (tor === 'apertura' && (cat === 'oficial' || cat === 'promocional')) ? 8 : (tor === 'posiciones' && cat === 'federala') ? 9 : (tor === 'apertura' && cat === 'femenino') ? 8 : (tor === 'torneo2026' && cat === 'segundafemenino') ? 8 : (tor === 'futsal') ? 9 : (tor === 'futsalreserva') ? 9 : (tor === 'sub15fem') ? 7 : 1; 
+        estado.fecha = (tor === 'apertura' && (cat === 'oficial' || cat === 'promocional')) ? 9 : (tor === 'posiciones' && cat === 'federala') ? 10 : (tor === 'apertura' && cat === 'femenino') ? 8 : (tor === 'torneo2026' && cat === 'segundafemenino') ? 8 : (tor === 'futsal') ? 9 : (tor === 'futsalreserva') ? 9 : (tor === 'sub15fem') ? 7 : 1; 
         actualizarVista();
         document.documentElement.scrollTop = 0;
         document.body.scrollTop = 0;

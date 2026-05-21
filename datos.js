@@ -280,7 +280,7 @@ const BD_FIXTURES_FUTSAL_RESERVA = [
     ]},
     { fecha: 9, partidos: [
         {l:"Comercial",       v:"Villa Mitre",     gl:null, gv:null},
-        {l:"Dep. Futsal",     v:"Pacífico BB",     gl:null, gv:null},
+        {l:"Dep. Futsal",     v:"Pacífico BB",     gl:1, gv:1},
         {l:"Liniers",         v:"Dublin",          gl:null, gv:null},
         {l:"Huracán",         v:"Catamarca",       gl:null, gv:null},
         {l:"Petroquímicos",   v:"Tiro Federal",    gl:null, gv:null},
@@ -1258,6 +1258,12 @@ BD_FIXTURES_SUB.sub13.find(f=>f.fecha===4).partidos.forEach(p=>{
     if(p.l==="Mac Allister"&&p.v==="Olimpo"){p.gl=4;p.gv=0;}
     if(p.l==="Alvarado"&&p.v==="Balompié"){p.gl=2;p.gv=3;}
 });
+BD_FIXTURES_SUB.sub13.find(f=>f.fecha===5).partidos.forEach(p=>{
+    if(p.l==="Olimpo"&&p.v==="Alvarado"){p.gl=2;p.gv=0;}
+    if(p.l==="Balompié"&&p.v==="Kimberley"){p.gl=1;p.gv=1;}
+    if(p.l==="Villa Mitre"&&p.v==="Santamarina"){p.gl=null;p.gv=null;}
+});
+
 BD_FIXTURES_SUB.sub15.find(f=>f.fecha===1).partidos.forEach(p=>{
     if(p.l==="Villa Mitre"&&p.v==="Olimpo"){p.gl=1;p.gv=2;p.goles_l=["Santiago Sánchez"];p.goles_v=["Thiago Alfredo","Galo Martínez"];}
     if(p.l==="Kimberley"&&p.v==="Alvarado"){p.gl=1;p.gv=1;}
@@ -1278,6 +1284,12 @@ BD_FIXTURES_SUB.sub15.find(f=>f.fecha===4).partidos.forEach(p=>{
     if(p.l==="Mac Allister"&&p.v==="Olimpo"){p.gl=1;p.gv=0;}
     if(p.l==="Alvarado"&&p.v==="Balompié"){p.gl=1;p.gv=0;}
 });
+BD_FIXTURES_SUB.sub15.find(f=>f.fecha===5).partidos.forEach(p=>{
+    if(p.l==="Olimpo"&&p.v==="Alvarado"){p.gl=2;p.gv=2;}
+    if(p.l==="Balompié"&&p.v==="Kimberley"){p.gl=3;p.gv=1;}
+    if(p.l==="Villa Mitre"&&p.v==="Santamarina"){p.gl=null;p.gv=null;}
+});
+
 BD_FIXTURES_SUB.sub17.find(f=>f.fecha===1).partidos.forEach(p=>{
     if(p.l==="Villa Mitre"&&p.v==="Olimpo"){p.gl=1;p.gv=1;p.goles_l=["Mateo Luzuriaga"];p.goles_v=["Benicio Hernández"];}
     if(p.l==="Kimberley"&&p.v==="Alvarado"){p.gl=2;p.gv=1;}
@@ -1299,7 +1311,7 @@ BD_FIXTURES_SUB.sub17.find(f=>f.fecha===4).partidos.forEach(p=>{
     if(p.l==="Alvarado"&&p.v==="Balompié"){p.gl=2;p.gv=1;}
 });
 BD_FIXTURES_SUB.sub17.find(f=>f.fecha===5).partidos.forEach(p=>{
-    if(p.l==="Olimpo"&&p.v==="Alvarado"){p.gl=null;p.gv=null;}
+    if(p.l==="Olimpo"&&p.v==="Alvarado"){p.gl=2;p.gv=0;}
     if(p.l==="Balompié"&&p.v==="Kimberley"){p.gl=0;p.gv=3;}
     if(p.l==="Villa Mitre"&&p.v==="Santamarina"){p.gl=null;p.gv=null;}
 });
@@ -1322,6 +1334,12 @@ BD_FIXTURES.oficial.apertura.find(f => f.fecha === 8).partidos = [
     {l:"Liniers",       v:"Villa Mitre", gl:1, gv:1, dia:"Sáb 16/05", hora:"15:00", goles_l:[], goles_v:["Thiago Uicala (e/c)","Constanzo Palacio"]},
     {l:"Huracán",       v:"Libertad",    gl:3, gv:1, dia:"Sáb 16/05", hora:"15:30", goles_l:["Ivan Agudiak","Brian Scalco"], goles_v:["Gianluca Falcioni (e/c)", "Franco Pane"]},
     {l:"La Armonía",    v:"Sporting",    gl:3, gv:1, dia:"Dom 17/05", hora:"15:00", goles_l:["Enrique Narvay","Ezequiel Intrevado","Alex Muzi"], goles_v:["Jonathan Font"]}
+];
+BD_FIXTURES.oficial.apertura.find(f => f.fecha === 9).partidos = [
+    {l:"Villa Mitre", v:"La Armonía", gl:null, gv:null, dia:"Dom 24/05", hora:"12:30"},
+    {l:"Liniers", v:"Bella Vista", gl:null, gv:null, dia:"Dom 24/05", hora:"13:00"},
+    {l:"Sporting", v:"Huracán", gl:null, gv:null, dia:"Lun 25/05", hora:"15:00"},
+    {l:"Libertad", v:"San Francisco", gl:null, gv:null, dia:"Lun 25/05", hora:"15:00"},
 ];
 
 // Reserva Oficial
@@ -1435,7 +1453,21 @@ BD_FIXTURES.promocional.apertura.find(f => f.fecha === 8).partidos = [
     {l:"Rosario PB",   v:"Dublin",      gl:2, gv:0, dia:"Sáb 16/05", hora:"15:00", goles_l:["Pedro Fernández","Agustín Grippaudo"], goles_v:[]},
     {l:"Pacífico (C)", v:"Sansinena",   gl:1, gv:2, dia:"Dom 17/05", hora:"15:00", goles_l:["Jonathan Fidalgo"], goles_v:["Manuel Stortini","Diego Romero"]}
 ];
+BD_FIXTURES.promocional.apertura.find(f => f.fecha === 9).partidos = [
+    {l:"Tiro Federal",    v:"Olimpo", gl:null, gv:null, dia:"Sáb 23/05", hora:"15:00"},
+    {l:"Comercial",    v:"Sansinena", gl:null, gv:null, dia:"Sáb 23/05", hora:"15:00"},
+    {l:"Pacífico BB",    v:"Rosario PB", gl:null, gv:null, dia:"Dom 24/05", hora:"11:00"},
+    {l:"Dublin",    v:"Pacífico (C)", gl:null, gv:null, dia:"Dom 24/05", hora:"13:00"},
+];
+
 expandirFixture(idaFederal, BD_FIXTURES.federala.posiciones, 18);
+BD_FIXTURES.federala.posiciones.find(f => f.fecha === 10).partidos = [
+    {l:"Santamarina",   v:"Guillermo Brown", gl:null, gv:null, dia:"Dom 24/05", hora:"11:00"},
+    {l:"Alvarado",      v:"Olimpo",          gl:null, gv:null, dia:"Dom 24/05", hora:"12:15"},
+    {l:"Germinal",      v:"Sol de Mayo",     gl:null, gv:null, dia:"Dom 24/05", hora:"15:00"},
+    {l:"Villa Mitre",   v:"Kimberley",       gl:null, gv:null, dia:"Lun 25/05", hora:"15:00"}
+];
+
 expandirFixture(idaFemenino, BD_FIXTURES.femenino.apertura, 14);
 BD_FIXTURES.femenino.apertura.find(f => f.fecha === 8).partidos = [
     {l:"Municipales", v:"Sporting", gl:6, gv:2, dia:"Dom 17/05", hora:"15:30", goles_l:["Carolina Paz","Yanina Suárez","Victoria Nervi","Stefania Sueyro","Rosario Damiani","Tania Espíndola"], goles_v:["Sofía Mattos","Yazmín Fehrenbacher"]},
@@ -1632,7 +1664,7 @@ function generarHome() {
             ]},
         ]},
         { id: "2026-05-23", label: "SÁB 23/05", torneos: [
-            { nombre: "PROMOCIONAL (Tentativo)", cat: "promocional", partidos: [
+            { nombre: "PROMOCIONAL", cat: "promocional", partidos: [
                 {l:"Tiro Federal", v:"Olimpo", hora:"15:00"},
                 {l:"Comercial", v:"Sansinena", hora:"15:00"}
             ]},
@@ -1641,19 +1673,25 @@ function generarHome() {
             ]},
         ]},
         { id: "2026-05-24", label: "DOM 24/05", torneos: [
-            { nombre: "OFICIAL (Tentativo)", cat: "oficial", partidos: [
+            { nombre: "OFICIAL", cat: "oficial", partidos: [
                 {l:"Villa Mitre", v:"La Armonía", hora:"12:30"},
                 {l:"Liniers", v:"Bella Vista", hora:"13:00"}
             ]},
-            { nombre: "PROMOCIONAL (Tentativo)", cat: "promocional", partidos: [
+            { nombre: "PROMOCIONAL", cat: "promocional", partidos: [
                 {l:"Pacífico BB", v:"Rosario PB", hora:"11:00"},
-                {l:"Dublin", v:"Pacífico (C)", hora:"15:00", nota:"en cancha de Comercial"}
+                {l:"Dublin", v:"Pacífico (C)", hora:"13:00", nota:"en cancha de Comercial"}
+            ]},
+            { nombre: "FEDERAL A", cat: "federala", partidos: [
+                {l:"Alvarado", v:"Olimpo", hora:"12:15"}
             ]},
         ]},
         { id: "2026-05-25", label: "LUN 25/05", torneos: [
-            { nombre: "OFICIAL (Tentativo)", cat: "oficial", partidos: [
+            { nombre: "OFICIAL", cat: "oficial", partidos: [
                 {l:"Sporting", v:"Huracán", hora:"15:00"},
                 {l:"Libertad", v:"San Francisco", hora:"15:00"}
+            ]},
+            { nombre: "FEDERAL A", cat: "federala", partidos: [
+                {l:"Villa Mitre", v:"Kimberley", hora:"15:00"}
             ]},
         ]},
 ];
@@ -15536,28 +15574,28 @@ const BD_POS_SUB = {
     sub13: [
         {nombre:"Villa Mitre",  clase:"villamitre",  pj:4,pg:4,pe:0,pp:0,gf:12,gc:4,pts:12},
         {nombre:"Mac Allister", clase:"macallister", pj:4,pg:3,pe:0,pp:1,gf:7,gc:2,pts:9},
-        {nombre:"Kimberley",    clase:"kimberley",   pj:3,pg:2,pe:0,pp:1,gf:5,gc:3,pts:6},
-        {nombre:"Balompié",     clase:"balompie",    pj:3,pg:2,pe:0,pp:1,gf:6,gc:4,pts:6},
-        {nombre:"Alvarado",     clase:"alvarado",    pj:4,pg:1,pe:0,pp:3,gf:7,gc:11,pts:3},
-        {nombre:"Santamarina",  clase:"santamarina", pj:3,pg:0,pe:0,pp:3,gf:2,gc:7,pts:0},
-        {nombre:"Olimpo",       clase:"olimpo",      pj:3,pg:0,pe:0,pp:3,gf:3,gc:11,pts:0}
+        {nombre:"Kimberley",    clase:"kimberley",   pj:4,pg:2,pe:1,pp:1,gf:6,gc:4,pts:7},
+        {nombre:"Balompié",     clase:"balompie",    pj:4,pg:2,pe:1,pp:1,gf:7,gc:5,pts:7},
+        {nombre:"Olimpo",       clase:"olimpo",      pj:4,pg:1,pe:0,pp:3,gf:5,gc:11,pts:3},
+        {nombre:"Alvarado",     clase:"alvarado",    pj:5,pg:1,pe:0,pp:4,gf:7,gc:13,pts:3},
+        {nombre:"Santamarina",  clase:"santamarina", pj:3,pg:0,pe:0,pp:3,gf:2,gc:7,pts:0}
     ],
     sub15: [
         {nombre:"Mac Allister", clase:"macallister", pj:4,pg:4,pe:0,pp:0,gf:5,gc:0,pts:12},
-        {nombre:"Kimberley",    clase:"kimberley",   pj:3,pg:2,pe:1,pp:0,gf:4,gc:2,pts:7},
-        {nombre:"Alvarado",     clase:"alvarado",    pj:4,pg:2,pe:1,pp:1,gf:10,gc:3,pts:7},
-        {nombre:"Balompié",     clase:"balompie",    pj:3,pg:1,pe:0,pp:2,gf:4,gc:4,pts:3},
-        {nombre:"Olimpo",       clase:"olimpo",      pj:3,pg:1,pe:0,pp:2,gf:3,gc:6,pts:3},
+        {nombre:"Kimberley",    clase:"kimberley",   pj:4,pg:2,pe:1,pp:1,gf:5,gc:5,pts:7},
+        {nombre:"Alvarado",     clase:"alvarado",    pj:5,pg:2,pe:2,pp:1,gf:12,gc:5,pts:8},
+        {nombre:"Balompié",     clase:"balompie",    pj:4,pg:2,pe:0,pp:2,gf:7,gc:5,pts:6},
+        {nombre:"Olimpo",       clase:"olimpo",      pj:4,pg:1,pe:1,pp:2,gf:5,gc:8,pts:4},
         {nombre:"Villa Mitre",  clase:"villamitre",  pj:4,pg:1,pe:0,pp:3,gf:4,gc:6,pts:3},
         {nombre:"Santamarina",  clase:"santamarina", pj:3,pg:0,pe:0,pp:3,gf:0,gc:9,pts:0}
     ],
     sub17: [
         {nombre:"Kimberley",    clase:"kimberley",   pj:4,pg:3,pe:1,pp:0,gf:7,gc:2,pts:10},
-        {nombre:"Alvarado",     clase:"alvarado",    pj:4,pg:3,pe:0,pp:1,gf:9,gc:5,pts:9},
+        {nombre:"Alvarado",     clase:"alvarado",    pj:5,pg:3,pe:0,pp:2,gf:9,gc:7,pts:9},
         {nombre:"Mac Allister", clase:"macallister", pj:4,pg:2,pe:2,pp:0,gf:7,gc:3,pts:8},
+        {nombre:"Olimpo",       clase:"olimpo",      pj:4,pg:1,pe:1,pp:2,gf:5,gc:7,pts:4},
         {nombre:"Balompié",     clase:"balompie",    pj:4,pg:1,pe:1,pp:2,gf:7,gc:11,pts:4},
         {nombre:"Villa Mitre",  clase:"villamitre",  pj:4,pg:0,pe:3,pp:1,gf:3,gc:5,pts:3},
-        {nombre:"Olimpo",       clase:"olimpo",      pj:3,pg:0,pe:1,pp:2,gf:3,gc:7,pts:1},
         {nombre:"Santamarina",  clase:"santamarina", pj:3,pg:0,pe:0,pp:3,gf:1,gc:5,pts:0}
     ]
 };
@@ -15567,22 +15605,25 @@ const BD_GOL_SUB = {
         {jugador:"Santiago Martínez", equipo:"Villa Mitre", clase:"villamitre", n:5},
         {jugador:"Valentino Altfater",    equipo:"Villa Mitre", clase:"villamitre", n:3},
         {jugador:"Ringo Melcon",      equipo:"Villa Mitre", clase:"villamitre", n:2},
+        {jugador:"Leon Cáceres",      equipo:"Olimpo",      clase:"olimpo",     n:2},
         {jugador:"Erick Schwaner",    equipo:"Villa Mitre", clase:"villamitre", n:1},
         {jugador:"Martiniano Vergara",    equipo:"Villa Mitre", clase:"villamitre", n:1},
         {jugador:"Santino Canales",   equipo:"Olimpo",      clase:"olimpo",     n:1},
-        {jugador:"Leon Cáceres",      equipo:"Olimpo",      clase:"olimpo",     n:1},
-        {jugador:"Juan Ignacio Aguado",      equipo:"Olimpo",      clase:"olimpo",     n:1}
+        {jugador:"Juan Ignacio Aguado",      equipo:"Olimpo",      clase:"olimpo",     n:1},
+        {jugador:"Santino Figueroa",      equipo:"Olimpo",      clase:"olimpo",     n:1}
     ],
     sub15: [
         {jugador:"Santiago Sánchez",  equipo:"Villa Mitre", clase:"villamitre", n:2},
+        {jugador:"Galo Martínez",     equipo:"Olimpo",      clase:"olimpo",     n:2},
         {jugador:"Thiago Alfredo",    equipo:"Olimpo",      clase:"olimpo",     n:1},
-        {jugador:"Galo Martínez",     equipo:"Olimpo",      clase:"olimpo",     n:1},
         {jugador:"Ciro Barra",     equipo:"Olimpo",      clase:"olimpo",     n:1},
+        {jugador:"Simón Schmid",     equipo:"Olimpo",      clase:"olimpo",     n:1},
         {jugador:"Cardozo",    equipo:"Villa Mitre", clase:"villamitre", n:1},
         {jugador:"Schefer",    equipo:"Villa Mitre", clase:"villamitre", n:1}
     ],
     sub17: [
         {jugador:"Benicio Hernández", equipo:"Olimpo",      clase:"olimpo",     n:2},
+        {jugador:"Agustín Dolagaray", equipo:"Olimpo",      clase:"olimpo",     n:2},
         {jugador:"Valentino Kurtz", equipo:"Olimpo",      clase:"olimpo",     n:1},
         {jugador:"Kraemer",    equipo:"Villa Mitre", clase:"villamitre", n:1},
         {jugador:"Mateo Luzuriaga",   equipo:"Villa Mitre", clase:"villamitre", n:1},
@@ -15735,9 +15776,9 @@ const BD_POS_FUTSAL = {
         {n:"Dublin",          cl:"dublin",        pj:8,pg:3,pe:1,pp:4,gf:19, gc:29, pts:10},
         {n:"Catamarca",       cl:"catamarca",     pj:7,pg:3,pe:0,pp:4,gf:32, gc:31, pts:9},
         {n:"Tiro Federal",    cl:"tirofederal",   pj:8,pg:2,pe:2,pp:4,gf:16, gc:22, pts:8},
-        {n:"Pacífico BB",     cl:"pacificobb",    pj:7,pg:2,pe:1,pp:4,gf:30, gc:41, pts:7},
+        {n:"Pacífico BB",     cl:"pacificobb",    pj:8,pg:3,pe:2,pp:4,gf:31, gc:42, pts:8},
         {n:"San Francisco",   cl:"sanfrancisco",  pj:7,pg:2,pe:0,pp:6,gf:13, gc:31, pts:6},
-        {n:"Dep. Futsal",     cl:"depfutsal",     pj:6,pg:1,pe:1,pp:4,gf:16, gc:31, pts:4},
+        {n:"Dep. Futsal",     cl:"depfutsal",     pj:7,pg:1,pe:2,pp:4,gf:17, gc:32, pts:5},
         {n:"Huracán",         cl:"huracan",       pj:8,pg:1,pe:1,pp:6,gf:13, gc:35, pts:4},
         {n:"Comercial",       cl:"comercial",     pj:7,pg:0,pe:2,pp:5,gf:20, gc:28, pts:2}
     ]
