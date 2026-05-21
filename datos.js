@@ -1261,7 +1261,7 @@ BD_FIXTURES_SUB.sub13.find(f=>f.fecha===4).partidos.forEach(p=>{
 BD_FIXTURES_SUB.sub13.find(f=>f.fecha===5).partidos.forEach(p=>{
     if(p.l==="Olimpo"&&p.v==="Alvarado"){p.gl=2;p.gv=0;}
     if(p.l==="Balompié"&&p.v==="Kimberley"){p.gl=1;p.gv=1;}
-    if(p.l==="Villa Mitre"&&p.v==="Santamarina"){p.gl=null;p.gv=null;}
+    if(p.l==="Villa Mitre"&&p.v==="Santamarina"){p.gl=4;p.gv=0;}
 });
 
 BD_FIXTURES_SUB.sub15.find(f=>f.fecha===1).partidos.forEach(p=>{
@@ -1287,7 +1287,7 @@ BD_FIXTURES_SUB.sub15.find(f=>f.fecha===4).partidos.forEach(p=>{
 BD_FIXTURES_SUB.sub15.find(f=>f.fecha===5).partidos.forEach(p=>{
     if(p.l==="Olimpo"&&p.v==="Alvarado"){p.gl=2;p.gv=2;}
     if(p.l==="Balompié"&&p.v==="Kimberley"){p.gl=3;p.gv=1;}
-    if(p.l==="Villa Mitre"&&p.v==="Santamarina"){p.gl=null;p.gv=null;}
+    if(p.l==="Villa Mitre"&&p.v==="Santamarina"){p.gl=0;p.gv=2;}
 });
 
 BD_FIXTURES_SUB.sub17.find(f=>f.fecha===1).partidos.forEach(p=>{
@@ -1313,7 +1313,7 @@ BD_FIXTURES_SUB.sub17.find(f=>f.fecha===4).partidos.forEach(p=>{
 BD_FIXTURES_SUB.sub17.find(f=>f.fecha===5).partidos.forEach(p=>{
     if(p.l==="Olimpo"&&p.v==="Alvarado"){p.gl=2;p.gv=0;}
     if(p.l==="Balompié"&&p.v==="Kimberley"){p.gl=0;p.gv=3;}
-    if(p.l==="Villa Mitre"&&p.v==="Santamarina"){p.gl=null;p.gv=null;}
+    if(p.l==="Villa Mitre"&&p.v==="Santamarina"){p.gl=2;p.gv=1;}
 });
 
 
@@ -15572,13 +15572,13 @@ function generarReserva(cat) {
 
 const BD_POS_SUB = {
     sub13: [
-        {nombre:"Villa Mitre",  clase:"villamitre",  pj:4,pg:4,pe:0,pp:0,gf:12,gc:4,pts:12},
+        {nombre:"Villa Mitre",  clase:"villamitre",  pj:5,pg:5,pe:0,pp:0,gf:16,gc:4,pts:15},
         {nombre:"Mac Allister", clase:"macallister", pj:4,pg:3,pe:0,pp:1,gf:7,gc:2,pts:9},
         {nombre:"Kimberley",    clase:"kimberley",   pj:4,pg:2,pe:1,pp:1,gf:6,gc:4,pts:7},
         {nombre:"Balompié",     clase:"balompie",    pj:4,pg:2,pe:1,pp:1,gf:7,gc:5,pts:7},
         {nombre:"Olimpo",       clase:"olimpo",      pj:4,pg:1,pe:0,pp:3,gf:5,gc:11,pts:3},
         {nombre:"Alvarado",     clase:"alvarado",    pj:5,pg:1,pe:0,pp:4,gf:7,gc:13,pts:3},
-        {nombre:"Santamarina",  clase:"santamarina", pj:3,pg:0,pe:0,pp:3,gf:2,gc:7,pts:0}
+        {nombre:"Santamarina",  clase:"santamarina", pj:4,pg:0,pe:0,pp:4,gf:2,gc:11,pts:0}
     ],
     sub15: [
         {nombre:"Mac Allister", clase:"macallister", pj:4,pg:4,pe:0,pp:0,gf:5,gc:0,pts:12},
@@ -15586,28 +15586,29 @@ const BD_POS_SUB = {
         {nombre:"Alvarado",     clase:"alvarado",    pj:5,pg:2,pe:2,pp:1,gf:12,gc:5,pts:8},
         {nombre:"Balompié",     clase:"balompie",    pj:4,pg:2,pe:0,pp:2,gf:7,gc:5,pts:6},
         {nombre:"Olimpo",       clase:"olimpo",      pj:4,pg:1,pe:1,pp:2,gf:5,gc:8,pts:4},
-        {nombre:"Villa Mitre",  clase:"villamitre",  pj:4,pg:1,pe:0,pp:3,gf:4,gc:6,pts:3},
-        {nombre:"Santamarina",  clase:"santamarina", pj:3,pg:0,pe:0,pp:3,gf:0,gc:9,pts:0}
+        {nombre:"Santamarina",  clase:"santamarina", pj:4,pg:1,pe:0,pp:3,gf:2,gc:9,pts:3},
+        {nombre:"Villa Mitre",  clase:"villamitre",  pj:5,pg:1,pe:0,pp:4,gf:4,gc:8,pts:3}
     ],
     sub17: [
         {nombre:"Kimberley",    clase:"kimberley",   pj:4,pg:3,pe:1,pp:0,gf:7,gc:2,pts:10},
         {nombre:"Alvarado",     clase:"alvarado",    pj:5,pg:3,pe:0,pp:2,gf:9,gc:7,pts:9},
         {nombre:"Mac Allister", clase:"macallister", pj:4,pg:2,pe:2,pp:0,gf:7,gc:3,pts:8},
+        {nombre:"Villa Mitre",  clase:"villamitre",  pj:5,pg:1,pe:3,pp:1,gf:5,gc:6,pts:6},
         {nombre:"Olimpo",       clase:"olimpo",      pj:4,pg:1,pe:1,pp:2,gf:5,gc:7,pts:4},
         {nombre:"Balompié",     clase:"balompie",    pj:4,pg:1,pe:1,pp:2,gf:7,gc:11,pts:4},
-        {nombre:"Villa Mitre",  clase:"villamitre",  pj:4,pg:0,pe:3,pp:1,gf:3,gc:5,pts:3},
-        {nombre:"Santamarina",  clase:"santamarina", pj:3,pg:0,pe:0,pp:3,gf:1,gc:5,pts:0}
+        {nombre:"Santamarina",  clase:"santamarina", pj:4,pg:0,pe:0,pp:4,gf:2,gc:7,pts:0}
     ]
 };
 
 const BD_GOL_SUB = {
     sub13: [
-        {jugador:"Santiago Martínez", equipo:"Villa Mitre", clase:"villamitre", n:5},
+        {jugador:"Santiago Martínez", equipo:"Villa Mitre", clase:"villamitre", n:8},
         {jugador:"Valentino Altfater",    equipo:"Villa Mitre", clase:"villamitre", n:3},
         {jugador:"Ringo Melcon",      equipo:"Villa Mitre", clase:"villamitre", n:2},
         {jugador:"Leon Cáceres",      equipo:"Olimpo",      clase:"olimpo",     n:2},
         {jugador:"Erick Schwaner",    equipo:"Villa Mitre", clase:"villamitre", n:1},
         {jugador:"Martiniano Vergara",    equipo:"Villa Mitre", clase:"villamitre", n:1},
+        {jugador:"Enzo Rossi",    equipo:"Villa Mitre", clase:"villamitre", n:1},
         {jugador:"Santino Canales",   equipo:"Olimpo",      clase:"olimpo",     n:1},
         {jugador:"Juan Ignacio Aguado",      equipo:"Olimpo",      clase:"olimpo",     n:1},
         {jugador:"Santino Figueroa",      equipo:"Olimpo",      clase:"olimpo",     n:1}
@@ -15627,7 +15628,8 @@ const BD_GOL_SUB = {
         {jugador:"Valentino Kurtz", equipo:"Olimpo",      clase:"olimpo",     n:1},
         {jugador:"Kraemer",    equipo:"Villa Mitre", clase:"villamitre", n:1},
         {jugador:"Mateo Luzuriaga",   equipo:"Villa Mitre", clase:"villamitre", n:1},
-        {jugador:"Rodríguez",   equipo:"Villa Mitre", clase:"villamitre", n:1}
+        {jugador:"Rodríguez",   equipo:"Villa Mitre", clase:"villamitre", n:1},
+        {jugador:"Alejo Albarracín",   equipo:"Villa Mitre", clase:"villamitre", n:1}
     ]
 };
 
@@ -16234,8 +16236,8 @@ const BD_BONAERENSE_PROMO = {
     grupo2: {
         posiciones: [
             { n: "SyD Argentinos del Sud", cl: "sydargentinos", pj: 2, pg: 2, pe: 0, pp: 0, gf: 7, gc: 2, pts: 6 },
-            { n: "Puerto Futsal",          cl: "puertofutsal",  pj: 2, pg: 1, pe: 0, pp: 1, gf: 9, gc: 5, pts: 3 },
-            { n: "2 de Julio",             cl: "dedejulio",     pj: 2, pg: 0, pe: 0, pp: 2, gf: 2, gc: 11, pts: 0 }
+            { n: "Puerto Futsal",          cl: "puertofutsal",  pj: 3, pg: 1, pe: 0, pp: 2, gf: 14, gc: 14, pts: 3 },
+            { n: "2 de Julio",             cl: "dedejulio",     pj: 3, pg: 1, pe: 0, pp: 2, gf: 11, gc: 16, pts: 3 }
         ]
     },
     goleadores: [
