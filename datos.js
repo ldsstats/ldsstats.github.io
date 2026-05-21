@@ -1057,8 +1057,8 @@ const BD_FIXTURES_FUTSAL = [
         },
     ]},
     { fecha: 9, partidos: [
-        {l:"Comercial",       v:"Villa Mitre",     gl:null, gv:null},
-        {l:"Dep. Futsal",     v:"Pacífico BB",     gl:null, gv:null},
+        {l:"Comercial",       v:"Villa Mitre",     gl:5, gv:6},
+        {l:"Dep. Futsal",     v:"Pacífico BB",     gl:4, gv:6},
         {l:"Liniers",         v:"Dublin",          gl:null, gv:null},
         {l:"Huracán",         v:"Catamarca",       gl:null, gv:null},
         {l:"Petroquímicos",   v:"Tiro Federal",    gl:null, gv:null},
@@ -1600,7 +1600,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 8).partidos.forEach(p 
 });
 
 
-let diaSeleccionadoHome = "2026-05-20"; 
+let diaSeleccionadoHome = "2026-05-21"; 
 
 function seleccionarDiaHome(dia) {
     diaSeleccionadoHome = dia;
@@ -1647,8 +1647,8 @@ function generarHome() {
         ]},
         { id: "2026-05-20", label: "MIÉ 20/05", torneos: [
             { nombre: "FUTSAL", cat: "futsal", partidos: [
-                {l:"Comercial", v:"Villa Mitre", hora:"22:00", nota:"en cancha de Comercial"},
-                {l:"Dep. Futsal", v:"Pacífico BB", hora:"22:00", nota:"en La Curtiembre"}
+                {l:"Comercial", v:"Villa Mitre", hora:"22:00", nota:"en cancha de Comercial", gl:5, gv:6},
+                {l:"Dep. Futsal", v:"Pacífico BB", hora:"22:00", nota:"en La Curtiembre", gl:4, gv:6}
             ]},
         ]},
        { id: "2026-05-21", label: "JUE 21/05", torneos: [
@@ -15753,16 +15753,16 @@ const BD_POS_FUTSAL = {
     principal: [
         {n:"La Estación",     cl:"laestacion",    pj:7,pg:7,pe:0,pp:0,gf:39, gc:11, pts:21},
         {n:"Los 3 Chiflados", cl:"los3chiflados", pj:8,pg:6,pe:1,pp:1,gf:56, gc:26, pts:19},
+        {n:"Villa Mitre",     cl:"villamitre",    pj:8,pg:6,pe:1,pp:1,gf:34, gc:23, pts:19},
         {n:"La Esperanza",    cl:"laesperanza",   pj:7,pg:6,pe:0,pp:1,gf:31, gc:19, pts:18},
-        {n:"Villa Mitre",     cl:"villamitre",    pj:7,pg:5,pe:1,pp:1,gf:28, gc:18, pts:16},
-        {n:"Comercial",       cl:"comercial",     pj:7,pg:4,pe:2,pp:1,gf:35, gc:19, pts:14},
+        {n:"Comercial",       cl:"comercial",     pj:8,pg:4,pe:2,pp:2,gf:40, gc:25, pts:14},
         {n:"Liniers",         cl:"liniers",       pj:7,pg:3,pe:3,pp:1,gf:30, gc:24, pts:12},
+        {n:"Pacífico BB",     cl:"pacificobb",    pj:8,pg:4,pe:0,pp:4,gf:36, gc:34, pts:12},
         {n:"Tiro Federal",    cl:"tirofederal",   pj:8,pg:3,pe:0,pp:5,gf:21, gc:24, pts:12},
-        {n:"Pacífico BB",     cl:"pacificobb",    pj:7,pg:3,pe:0,pp:4,gf:30, gc:30, pts:9},
         {n:"Petroquímicos",   cl:"petroquimicos", pj:8,pg:3,pe:0,pp:5,gf:29,gc:34, pts:9},
         {n:"Dublin",          cl:"dublin",        pj:8,pg:2,pe:0,pp:6,gf:18, gc:26, pts:6},
         {n:"Catamarca",       cl:"catamarca",     pj:7,pg:1,pe:1,pp:5,gf:18, gc:34, pts:4},
-        {n:"Dep. Futsal",     cl:"depfutsal",     pj:6,pg:1,pe:0,pp:5,gf:12, gc:36, pts:3},
+        {n:"Dep. Futsal",     cl:"depfutsal",     pj:7,pg:1,pe:0,pp:6,gf:16, gc:40, pts:3},
         {n:"San Francisco*",   cl:"sanfrancisco",  pj:7,pg:1,pe:2,pp:4,gf:20, gc:27, pts:2},
         {n:"Huracán",         cl:"huracan",       pj:8,pg:0,pe:0,pp:8,gf:20, gc:56,pts:0}
     ],
@@ -16128,10 +16128,10 @@ const BD_BONAERENSE_SUR = {
         { n: "Los 3 Chiflados", cl: "los3chiflados",  pj: 1, pg: 0, pe: 0, pp: 1, gf: 2, gc: 8, pts: 0 }
     ],
     posicionesNorte: [
-        { n: "CAJU San Bernardo", cl: "cajusanbernardo",  pj: 3, pg: 2, pe: 1, pp: 0, gf: 14, gc: 10, pts: 7 },
+        { n: "CAJU San Bernardo", cl: "cajusanbernardo",  pj: 4, pg: 3, pe: 1, pp: 0, gf: 22, gc: 13, pts: 10 },
         { n: "Torino",            cl: "torino",           pj: 3, pg: 1, pe: 1, pp: 1, gf: 8, gc: 6, pts: 4 },
         { n: "Eureka Pinamar",    cl: "eurekapinamar",    pj: 3, pg: 1, pe: 0, pp: 2, gf: 10, gc: 13, pts: 3 },
-        { n: "Def. Villa Clelia", cl: "defvillaclelia",   pj: 3, pg: 0, pe: 2, pp: 1, gf: 10, gc: 13, pts: 2 }
+        { n: "Def. Villa Clelia", cl: "defvillaclelia",   pj: 4, pg: 0, pe: 2, pp: 2, gf: 13, gc: 21, pts: 2 }
     ],
     goleadores: [
     { nombre: "Bruno Decoud",          equipo: "La Esperanza",   goles: 4 },
@@ -16233,8 +16233,8 @@ const BD_BONAERENSE_PROMO = {
     },
     grupo2: {
         posiciones: [
-            { n: "Puerto Futsal",          cl: "puertofutsal",  pj: 1, pg: 1, pe: 0, pp: 0, gf: 7, gc: 2, pts: 3 },
-            { n: "SyD Argentinos del Sud", cl: "sydargentinos", pj: 1, pg: 1, pe: 0, pp: 0, gf: 4, gc: 0, pts: 3 },
+            { n: "SyD Argentinos del Sud", cl: "sydargentinos", pj: 2, pg: 2, pe: 0, pp: 0, gf: 7, gc: 2, pts: 6 },
+            { n: "Puerto Futsal",          cl: "puertofutsal",  pj: 2, pg: 1, pe: 0, pp: 1, gf: 9, gc: 5, pts: 3 },
             { n: "2 de Julio",             cl: "dedejulio",     pj: 2, pg: 0, pe: 0, pp: 2, gf: 2, gc: 11, pts: 0 }
         ]
     },
