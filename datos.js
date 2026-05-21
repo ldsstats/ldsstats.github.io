@@ -1298,6 +1298,11 @@ BD_FIXTURES_SUB.sub17.find(f=>f.fecha===4).partidos.forEach(p=>{
     if(p.l==="Mac Allister"&&p.v==="Olimpo"){p.gl=3;p.gv=0;}
     if(p.l==="Alvarado"&&p.v==="Balompié"){p.gl=2;p.gv=1;}
 });
+BD_FIXTURES_SUB.sub17.find(f=>f.fecha===5).partidos.forEach(p=>{
+    if(p.l==="Olimpo"&&p.v==="Alvarado"){p.gl=null;p.gv=null;}
+    if(p.l==="Balompié"&&p.v==="Kimberley"){p.gl=0;p.gv=3;}
+    if(p.l==="Villa Mitre"&&p.v==="Santamarina"){p.gl=null;p.gv=null;}
+});
 
 
 
@@ -1366,7 +1371,7 @@ BD_FIXTURES.oficial.reserva.push(
     { fecha: 8, partidos: [
         {l:"La Armonía",   v:"Sporting",   gl:1, gv:1},
         {l:"San Francisco",   v:"Bella Vista",   gl:4, gv:0},
-        {l:"Liniers",   v:"Villa Mitre",   gl:0, gv:1},
+        {l:"Liniers",   v:"Villa Mitre",   gl:1, gv:2},
         {l:"Huracán",   v:"Libertad",   gl:0, gv:4}
     ]},
 );
@@ -1586,7 +1591,7 @@ function generarHome() {
         { id: "2026-05-18", label: "LUN 18/05", torneos: [
             { nombre: "RESERVA OFICIAL", cat: "reserva_oficial", partidos: [
                 {l:"San Francisco", v:"Bella Vista", hora:"15:30", gl:4, gv:0},
-                {l:"Liniers", v:"Villa Mitre", hora:"15:30", gl:0, gv:1}
+                {l:"Liniers", v:"Villa Mitre", hora:"15:30", gl:1, gv:2}
             ]},
         ]},
         { id: "2026-05-19", label: "MAR 19/05", torneos: [
@@ -15456,11 +15461,11 @@ function generarReserva(cat) {
     // Tabla de posiciones — solo puntos, calculados desde fixtures
     const BD_RESERVA_POS = {
         'oficial':    [{n:"Sporting",      cl:"sporting",     pj:8, pg:6, pe:2, pp:0, gf:17, gc:7, pts:20},
-                       {n:"Villa Mitre",   cl:"villamitre",   pj:8, pg:4, pe:0, pp:4, gf:17, gc:11, pts:12},
+                       {n:"Villa Mitre",   cl:"villamitre",   pj:8, pg:4, pe:0, pp:4, gf:18, gc:12, pts:12},
                        {n:"La Armonía",    cl:"laarmonia",    pj:8, pg:3, pe:2, pp:3, gf:14, gc:9, pts:11},
                        {n:"San Francisco", cl:"sanfrancisco", pj:8, pg:3, pe:1, pp:4, gf:16, gc:14, pts:11},
                        {n:"Bella Vista",   cl:"bellavista",   pj:8, pg:2, pe:4, pp:2, gf:13, gc:16, pts:10},
-                       {n:"Liniers",       cl:"liniers",      pj:8, pg:2, pe:3, pp:3, gf:7, gc:8, pts:9},
+                       {n:"Liniers",       cl:"liniers",      pj:8, pg:2, pe:3, pp:3, gf:8, gc:9, pts:9},
                        {n:"Libertad",      cl:"libertad",     pj:8, pg:2, pe:3, pp:3, gf:11, gc:11, pts:9},
                        {n:"Huracán",       cl:"huracan",      pj:8, pg:1, pe:2, pp:5, gf:7, gc:26, pts:5}],
         'promocional':[{n:"Tiro Federal",        cl:"tirofederal",      pj:8, pg:5, pe:3, pp:0, gf:21, gc:14, pts:18},
@@ -15547,10 +15552,10 @@ const BD_POS_SUB = {
         {nombre:"Santamarina",  clase:"santamarina", pj:3,pg:0,pe:0,pp:3,gf:0,gc:9,pts:0}
     ],
     sub17: [
+        {nombre:"Kimberley",    clase:"kimberley",   pj:4,pg:3,pe:1,pp:0,gf:7,gc:2,pts:10},
         {nombre:"Alvarado",     clase:"alvarado",    pj:4,pg:3,pe:0,pp:1,gf:9,gc:5,pts:9},
         {nombre:"Mac Allister", clase:"macallister", pj:4,pg:2,pe:2,pp:0,gf:7,gc:3,pts:8},
-        {nombre:"Kimberley",    clase:"kimberley",   pj:3,pg:2,pe:1,pp:0,gf:4,gc:2,pts:7},
-        {nombre:"Balompié",     clase:"balompie",    pj:3,pg:1,pe:1,pp:1,gf:7,gc:7,pts:4},
+        {nombre:"Balompié",     clase:"balompie",    pj:4,pg:1,pe:1,pp:2,gf:7,gc:11,pts:4},
         {nombre:"Villa Mitre",  clase:"villamitre",  pj:4,pg:0,pe:3,pp:1,gf:3,gc:5,pts:3},
         {nombre:"Olimpo",       clase:"olimpo",      pj:3,pg:0,pe:1,pp:2,gf:3,gc:7,pts:1},
         {nombre:"Santamarina",  clase:"santamarina", pj:3,pg:0,pe:0,pp:3,gf:1,gc:5,pts:0}
@@ -15606,7 +15611,7 @@ function generarSub() {
 
     categorias.forEach(cat => {
         const fixtures = BD_FIXTURES_SUB[cat.key] || [];
-        const n = estado[`fecha_${cat.key}`] || 4;
+        const n = estado[`fecha_${cat.key}`] || 5;
         const f = fixtures.find(x => x.fecha === n) || { partidos: [], libre: null };
 
         // Posiciones manuales
