@@ -1680,8 +1680,8 @@ function generarHome() {
         ]},
        { id: "2026-05-21", label: "JUE 21/05", torneos: [
             { nombre: "FUTSAL", cat: "futsal", partidos: [
-                {l:"Liniers", v:"Dublin", hora:"22:00", nota:"en Don Bosco", gl:3, gv:5},
-                {l:"Huracán", v:"Catamarca", hora:"22:00", nota:"en La Estación", gl:7, gv:3}
+                {l:"Liniers", v:"Dublin", hora:"22:00", nota:"en Don Bosco", gl:5, gv:3},
+                {l:"Huracán", v:"Catamarca", hora:"22:00", nota:"en La Estación", gl:3, gv:7}
             ]},
         ]},
       { id: "2026-05-22", label: "VIE 22/05", torneos: [
