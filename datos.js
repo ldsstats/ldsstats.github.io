@@ -15947,7 +15947,7 @@ if ((p.goles_l && p.goles_l.length) || (p.goles_v && p.goles_v.length)) {
 
 const BD_GOLEADORES_FUTSAL = [
     { club: "Dublin",          clase: "dublin",        act: "fecha 9",  goleadores: [
-        { nombre: "Agustín Miguel",      goles: 8 },
+        { nombre: "Agustín Miguel",      goles: 9 },
         { nombre: "Jesús Lucarelli",     goles: 3 },
         { nombre: "Matías Gigena",       goles: 3 },
         { nombre: "Matías Palma",        goles: 2 },
