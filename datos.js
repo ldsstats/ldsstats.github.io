@@ -1488,6 +1488,12 @@ BD_FIXTURES.promocional.reserva.push(
         {l:"Comercial",v:"Tiro Federal",           gl:2,   gv:2},
         {l:"Olimpo", v:"Pacífico BB",              gl:1,   gv:1}
     ]},
+    { fecha: 9, partidos: [
+        {l:"Tiro Federal",   v:"Olimpo", gl:1,   gv:2},
+        {l:"Comercial",      v:"Sansinena",          gl:1,   gv:1},
+        {l:"Pacífico BB",v:"Rosario PB",           gl:null,   gv:null},
+        {l:"Dublin", v:"Pacífico (C)",              gl:null,   gv:null}
+    ]},
 );
 
 expandirFixture(idaPromo, BD_FIXTURES.promocional.apertura, 14);
@@ -1498,8 +1504,8 @@ BD_FIXTURES.promocional.apertura.find(f => f.fecha === 8).partidos = [
     {l:"Pacífico (C)", v:"Sansinena",   gl:1, gv:2, dia:"Dom 17/05", hora:"15:00", goles_l:["Jonathan Fidalgo"], goles_v:["Manuel Stortini","Diego Romero"]}
 ];
 BD_FIXTURES.promocional.apertura.find(f => f.fecha === 9).partidos = [
-    {l:"Tiro Federal",    v:"Olimpo", gl:null, gv:null, dia:"Sáb 23/05", hora:"15:00"},
-    {l:"Comercial",    v:"Sansinena", gl:null, gv:null, dia:"Sáb 23/05", hora:"15:00"},
+    {l:"Tiro Federal",    v:"Olimpo", gl:0, gv:1, dia:"Sáb 23/05", hora:"15:00", goles_l:[], goles_v:["Marcos Acosta"]},
+    {l:"Comercial",    v:"Sansinena", gl:0, gv:1, dia:"Sáb 23/05", hora:"15:00", goles_l:[], goles_v:["Manuel Stortini"]},
     {l:"Pacífico BB",    v:"Rosario PB", gl:null, gv:null, dia:"Dom 24/05", hora:"11:00"},
     {l:"Dublin",    v:"Pacífico (C)", gl:null, gv:null, dia:"Dom 24/05", hora:"13:00"},
 ];
@@ -1716,8 +1722,8 @@ function generarHome() {
         ]},
         { id: "2026-05-23", label: "SÁB 23/05", torneos: [
             { nombre: "PROMOCIONAL", cat: "promocional", partidos: [
-                {l:"Tiro Federal", v:"Olimpo", hora:"15:00"},
-                {l:"Comercial", v:"Sansinena", hora:"15:00"}
+                {l:"Tiro Federal", v:"Olimpo", hora:"15:00", gl:0, gv:1},
+                {l:"Comercial", v:"Sansinena", hora:"15:00", gl:0, gv:1}
             ]},
             { nombre: "1°FEMENINO", cat: "femenino", partidos: [
                 {l:"La Armonía", v:"Tiro Federal", hora:"15:30"}
@@ -15593,12 +15599,12 @@ function generarReserva(cat) {
                        {n:"Liniers",       cl:"liniers",      pj:8, pg:2, pe:3, pp:3, gf:8, gc:9, pts:9},
                        {n:"Libertad",      cl:"libertad",     pj:8, pg:2, pe:3, pp:3, gf:11, gc:11, pts:9},
                        {n:"Huracán",       cl:"huracan",      pj:8, pg:1, pe:2, pp:5, gf:7, gc:26, pts:5}],
-        'promocional':[{n:"Tiro Federal",        cl:"tirofederal",      pj:8, pg:5, pe:3, pp:0, gf:21, gc:14, pts:18},
-                       {n:"Comercial",           cl:"comercial",        pj:8, pg:4, pe:4, pp:0, gf:12, gc:7, pts:16},
-                       {n:"Olimpo",              cl:"olimpo",           pj:8, pg:5, pe:1, pp:2, gf:15, gc:8, pts:16},
+        'promocional':[                       {n:"Olimpo",              cl:"olimpo",           pj:9, pg:6, pe:1, pp:2, gf:17, gc:9, pts:19},
+                       {n:"Tiro Federal",        cl:"tirofederal",      pj:9, pg:5, pe:3, pp:1, gf:22, gc:16, pts:18},
+                       {n:"Comercial",           cl:"comercial",        pj:9, pg:4, pe:5, pp:0, gf:13, gc:8, pts:17},
+                       {n:"Sansinena",           cl:"sansinena",        pj:9, pg:3, pe:1, pp:5, gf:9, gc:18, pts:10},
                        {n:"Pacífico BB",         cl:"pacificobb",       pj:8, pg:2, pe:3, pp:3, gf:9, gc:8, pts:9},
                        {n:"Rosario PB",          cl:"rosariopb",        pj:8, pg:2, pe:3, pp:3, gf:7, gc:7, pts:9},
-                       {n:"Sansinena",           cl:"sansinena",        pj:8, pg:3, pe:0, pp:5, gf:8, gc:17, pts:9},
                        {n:"Dublin",              cl:"dublin",           pj:8, pg:2, pe:1, pp:5, gf:10, gc:12, pts:7},
                        {n:"Pacífico (C)", cl:"pacificocabildo",  pj:8, pg:1, pe:1, pp:6, gf:8, gc:18, pts:4},],
         'segundafemenino': [
@@ -17447,19 +17453,21 @@ const BD_ARQUEROS = {
             { rival: "Pacífico BB",       resultado: "Pacífico BB 0 - 1 Comercial",       fecha: 6 },
             { rival: "Tiro Federal",       resultado: "Comercial 0 - 0 Tiro Federal",       fecha: 8 }
         ]},
+        { jugador: "Jonathan Acosta", equipo: "Olimpo", partidos: [
+            { rival: "Pacífico BB", resultado: "Pacífico BB 0 - 0 Olimpo", fecha: 1 },
+            { rival: "Pacífico (C)", resultado: "Pacífico (C) 0 - 0 Olimpo", fecha: 5 },
+            { rival: "Sansinena", resultado: "Sansinena 0 - 1 Olimpo", fecha: 6 },
+            { rival: "Tiro Federal", resultado: "Tiro Federal 0 - 1 Olimpo", fecha: 9 }
+        ]},
         { jugador: "Valentín Valdez", equipo: "Dublin", partidos: [
             { rival: "Sansinena", resultado: "Sansinena 0 - 0 Dublin", fecha: 3 },
             { rival: "Pacífico BB", resultado: "Dublin 1 - 0 Pacífico BB", fecha: 5 },
             { rival: "Tiro Federal", resultado: "Dublin 1 - 0 Tiro Federal", fecha: 6 }
         ]},
-        { jugador: "Jonathan Acosta", equipo: "Olimpo", partidos: [
-            { rival: "Pacífico BB", resultado: "Pacífico BB 0 - 0 Olimpo", fecha: 1 },
-            { rival: "Pacífico (C)", resultado: "Pacífico (C) 0 - 0 Olimpo", fecha: 5 },
-            { rival: "Sansinena", resultado: "Sansinena 0 - 1 Olimpo", fecha: 6 }
-        ]},
         { jugador: "Inan Bauer", equipo: "Sansinena", partidos: [
             { rival: "Dublin", resultado: "Sansinena 0 - 0 Dublin", fecha: 3 },
-            { rival: "Tiro Federal", resultado: "Sansinena 0 - 0 Tiro Federal", fecha: 5 }
+            { rival: "Tiro Federal", resultado: "Sansinena 0 - 0 Tiro Federal", fecha: 5 },
+            { rival: "Comercial", resultado: "Comercial 0 - 1 Sansinena", fecha: 9 }
         ]},
         { jugador: "Bruno Arias", equipo: "Tiro Federal", partidos: [
             { rival: "Rosario PB", resultado: "Tiro Federal 2 - 0 Rosario PB", fecha: 3 },
@@ -17646,12 +17654,12 @@ const BD_POSICIONES = {
     },
     promocional: {
         apertura: [
-            { nombre: "Comercial",           clase: "comercial",       pj:8, pg:4, pe:3, pp:1, gf:7, gc:5, pts:15 },
+            { nombre: "Comercial",           clase: "comercial",       pj:9, pg:4, pe:3, pp:2, gf:7, gc:6, pts:15 },
+            { nombre: "Sansinena",           clase: "sansinena",       pj:9, pg:3, pe:5, pp:1, gf:14, gc:11, pts:14 },
+            { nombre: "Olimpo",              clase: "olimpo",          pj:9, pg:3, pe:4, pp:2, gf:10, gc:7, pts:13 },
             { nombre: "Rosario PB",          clase: "rosariopb",       pj:8, pg:3, pe:4, pp:1, gf:17, gc:13, pts:13 },
             { nombre: "Dublin",              clase: "dublin",          pj:8, pg:3, pe:3, pp:2, gf:6, gc:8, pts:12 },
-            { nombre: "Tiro Federal",        clase: "tirofederal",     pj:8, pg:3, pe:3, pp:2, gf:8, gc:4, pts:12 },
-            { nombre: "Sansinena",           clase: "sansinena",       pj:8, pg:2, pe:5, pp:1, gf:13, gc:11, pts:11 },
-            { nombre: "Olimpo",              clase: "olimpo",          pj:8, pg:2, pe:4, pp:2, gf:9, gc:7, pts:10 },
+            { nombre: "Tiro Federal",        clase: "tirofederal",     pj:9, pg:3, pe:3, pp:3, gf:8, gc:5, pts:12 },
             { nombre: "Pacífico BB",         clase: "pacificobb",      pj:8, pg:1, pe:2, pp:5, gf:7, gc:15, pts: 5},
             { nombre: "Pacífico (C)",        clase: "pacificocabildo", pj:8, pg:0, pe:4, pp:4, gf:12, gc:17, pts:4 }
         ]
