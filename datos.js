@@ -283,7 +283,7 @@ const BD_FIXTURES_FUTSAL_RESERVA = [
         {l:"Dep. Futsal",     v:"Pacífico BB",     gl:1, gv:1},
         {l:"Liniers",         v:"Dublin",          gl:5, gv:3},
         {l:"Huracán",         v:"Catamarca",       gl:4, gv:3},
-        {l:"Petroquímicos",   v:"Tiro Federal",    gl:null, gv:null},
+        {l:"Petroquímicos",   v:"Tiro Federal",    gl:8, gv:3},
         {l:"San Francisco",   v:"La Estación",     gl:null, gv:null},
         {l:"Los 3 Chiflados", v:"La Esperanza",    gl:null, gv:null}
     ]},
@@ -1091,7 +1091,21 @@ const BD_FIXTURES_FUTSAL = [
             goles_v:[
                 ],
         },
-        {l:"Petroquímicos",   v:"Tiro Federal",    gl:null, gv:null},
+        {
+            l:"Petroquímicos",
+            v:"Tiro Federal",
+            gl:1,
+            gv:3,
+            dia:"Vie 23/05",
+            hora:"22:00",
+            goles_l:[
+                ],
+            goles_v:[
+                "Iñaki Iriarte",
+                "Marcelo Aguirre",
+                "Nicolás Romano"
+                ],
+        },
         {l:"San Francisco",   v:"La Estación",     gl:null, gv:null},
         {l:"Los 3 Chiflados", v:"La Esperanza",    gl:null, gv:null}
     ]},
@@ -1637,7 +1651,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 8).partidos.forEach(p 
 });
 
 
-let diaSeleccionadoHome = "2026-05-22"; 
+let diaSeleccionadoHome = "2026-05-23"; 
 
 function seleccionarDiaHome(dia) {
     diaSeleccionadoHome = dia;
@@ -1696,7 +1710,7 @@ function generarHome() {
         ]},
       { id: "2026-05-22", label: "VIE 22/05", torneos: [
             { nombre: "FUTSAL", cat: "futsal", partidos: [
-                {l:"Petroquímicos", v:"Tiro Federal", hora:"22:00", nota:"en Petroquímicos"},
+                {l:"Petroquímicos", v:"Tiro Federal", hora:"22:00", nota:"en Petroquímicos", gl:1, gv:3},
                 {l:"San Francisco", v:"La Estación", hora:"22:30", nota:"en Tiro Federal"}
             ]},
         ]},
@@ -15831,10 +15845,10 @@ const BD_POS_FUTSAL = {
         {n:"Villa Mitre",     cl:"villamitre",    pj:8,pg:6,pe:1,pp:1,gf:34, gc:23, pts:19},
         {n:"La Esperanza",    cl:"laesperanza",   pj:7,pg:6,pe:0,pp:1,gf:31, gc:19, pts:18},
         {n:"Liniers",         cl:"liniers",       pj:8,pg:4,pe:3,pp:1,gf:35, gc:27, pts:15},
+        {n:"Tiro Federal",    cl:"tirofederal",   pj:9,pg:4,pe:0,pp:5,gf:24, gc:25, pts:15},
         {n:"Comercial",       cl:"comercial",     pj:8,pg:4,pe:2,pp:2,gf:40, gc:25, pts:14},
         {n:"Pacífico BB",     cl:"pacificobb",    pj:8,pg:4,pe:0,pp:4,gf:36, gc:34, pts:12},
-        {n:"Tiro Federal",    cl:"tirofederal",   pj:8,pg:3,pe:0,pp:5,gf:21, gc:24, pts:12},
-        {n:"Petroquímicos",   cl:"petroquimicos", pj:8,pg:3,pe:0,pp:5,gf:29,gc:34, pts:9},
+        {n:"Petroquímicos",   cl:"petroquimicos", pj:9,pg:3,pe:0,pp:6,gf:30,gc:37, pts:9},
         {n:"Catamarca",       cl:"catamarca",     pj:8,pg:2,pe:1,pp:5,gf:25, gc:37, pts:7},
         {n:"Dublin",          cl:"dublin",        pj:9,pg:2,pe:0,pp:7,gf:21, gc:31, pts:6},
         {n:"Dep. Futsal",     cl:"depfutsal",     pj:7,pg:1,pe:0,pp:6,gf:16, gc:40, pts:3},
@@ -15844,16 +15858,16 @@ const BD_POS_FUTSAL = {
     reserva: [
         {n:"Los 3 Chiflados", cl:"los3chiflados", pj:8,pg:7,pe:1,pp:0,gf:42, gc:11, pts:22},
         {n:"Liniers",         cl:"liniers",       pj:8,pg:5,pe:2,pp:1,gf:37, gc:23, pts:17},
+        {n:"Petroquímicos",   cl:"petroquimicos", pj:9,pg:5,pe:2,pp:2,gf:47, gc:24, pts:17},
         {n:"La Esperanza",    cl:"laesperanza",   pj:7,pg:5,pe:1,pp:1,gf:29, gc:19, pts:16},
         {n:"Villa Mitre",     cl:"villamitre",    pj:7,pg:5,pe:1,pp:1,gf:28, gc:18, pts:16},
-        {n:"Petroquímicos",   cl:"petroquimicos", pj:8,pg:4,pe:2,pp:2,gf:39, gc:21, pts:14},
         {n:"La Estación",     cl:"laestacion",    pj:7,pg:3,pe:3,pp:1,gf:23, gc:21, pts:12},
         {n:"Dublin",          cl:"dublin",        pj:9,pg:3,pe:1,pp:5,gf:22, gc:34, pts:10},
         {n:"Catamarca",       cl:"catamarca",     pj:8,pg:3,pe:0,pp:5,gf:35, gc:5, pts:9},
-        {n:"Tiro Federal",    cl:"tirofederal",   pj:8,pg:2,pe:2,pp:4,gf:16, gc:22, pts:8},
+        {n:"Tiro Federal",    cl:"tirofederal",   pj:9,pg:2,pe:2,pp:5,gf:19, gc:30, pts:8},
         {n:"Pacífico BB",     cl:"pacificobb",    pj:8,pg:3,pe:2,pp:4,gf:31, gc:42, pts:8},
         {n:"Huracán",         cl:"huracan",       pj:9,pg:2,pe:1,pp:6,gf:17, gc:38, pts:7},
-        {n:"San Francisco",   cl:"sanfrancisco",  pj:7,pg:2,pe:0,pp:6,gf:13, gc:31, pts:6},
+        {n:"San Francisco",   cl:"sanfrancisco",  pj:7,pg:2,pe:0,pp:5,gf:13, gc:31, pts:6},
         {n:"Dep. Futsal",     cl:"depfutsal",     pj:7,pg:1,pe:2,pp:4,gf:17, gc:32, pts:5},
         {n:"Comercial",       cl:"comercial",     pj:7,pg:0,pe:2,pp:5,gf:20, gc:28, pts:2}
     ]
@@ -16007,10 +16021,11 @@ const BD_GOLEADORES_FUTSAL = [
         { nombre: "B. Martínez",  goles: 1 }
     ]},
     { club: "Tiro Federal", clase: "tirofederal", act: "-", goleadores: [
-        { nombre: "Nicolás Romano",      goles: 4 },
+        { nombre: "Nicolás Romano",      goles: 5 },
         { nombre: "Alejandro Saldívar",  goles: 2 },
-        { nombre: "Marcelo Aguirre",     goles: 1 },
-        { nombre: "Rocco Iervassi",     goles: 1 }
+        { nombre: "Marcelo Aguirre",     goles: 2 },
+        { nombre: "Rocco Iervassi",     goles: 1 },
+        { nombre: "Iñaki Iriarte",     goles: 1 }
     ]},
     { club: "San Francisco",   clase: "sanfrancisco",  act: "fecha 6",  goleadores: [
         { nombre: "Daniel Ojeda",        goles: 5 },
@@ -16210,8 +16225,8 @@ const BD_BONAERENSE_SUR = {
     ],
     posicionesNorte: [
         { n: "CAJU San Bernardo", cl: "cajusanbernardo",  pj: 4, pg: 3, pe: 1, pp: 0, gf: 22, gc: 13, pts: 10 },
-        { n: "Torino",            cl: "torino",           pj: 3, pg: 1, pe: 1, pp: 1, gf: 8, gc: 6, pts: 4 },
-        { n: "Eureka Pinamar",    cl: "eurekapinamar",    pj: 3, pg: 1, pe: 0, pp: 2, gf: 10, gc: 13, pts: 3 },
+        { n: "Torino",            cl: "torino",           pj: 4, pg: 2, pe: 1, pp: 1, gf: 14, gc: 9, pts: 7 },
+        { n: "Eureka Pinamar",    cl: "eurekapinamar",    pj: 4, pg: 1, pe: 0, pp: 3, gf: 13, gc: 19, pts: 3 },
         { n: "Def. Villa Clelia", cl: "defvillaclelia",   pj: 4, pg: 0, pe: 2, pp: 2, gf: 13, gc: 21, pts: 2 }
     ],
     goleadores: [
