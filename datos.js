@@ -115,7 +115,7 @@ const idaSegundaFemenino = [
     { fecha: 6, libre: "San Francisco", partidos: [{l:"Huracán", v:"Estrella de Oro", gl:0, gv:2, dia:"Sáb 25/04", hora:"16:00", goles_l:[], goles_v:["Mariana González","Luana Anfossi"]}, {l:"Pacífico (C)", v:"Rosario PB", gl:0, gv:9, dia:"Sáb 02/05", hora:"15:30", goles_l:[], goles_v:["Bárbara Aguirre","Bárbara Aguirre","Bárbara Aguirre","Bárbara Aguirre","Carolina Díaz","Carolina Díaz","Carolina Díaz","Julieta Díaz","Juliana Ruiz"]},{l:"Petroquímicos", v:"Sansinena", gl:3, gv:0, dia:"Sáb 02/05", hora:"15:30", goles_l:["Sofía Trejo","Renata Segovia","Paula Rodríguez"], goles_v:[]}, {l:"Olimpo", v:"Liniers", gl:0, gv:6, dia:"Dom 03/05", hora:"15:30", goles_l:[], goles_v:["Isabella Pezzutti","Isabella Pezzutti","Isabella Pezzutti","Ailén Márquez","Lola Podestá","Paulina Acevedo"]}] },
     { fecha: 7, libre: "Rosario PB", partidos: [{l:"Huracán", v:"Olimpo", gl:0, gv:0}, {l:"San Francisco", v:"Liniers", gl:null, gv:null, dia:"Lun 25/05", hora:"15:30"}, {l:"Sansinena", v:"Pacífico (C)", gl:null, gv:null, dia:"Lun 25/05", hora:"16:00"}, {l:"Estrella de Oro", v:"Petroquímicos", gl:null, gv:null, dia:"Lun 25/05", hora:"16:30"}] },
     { fecha: 8, libre: "Sansinena", partidos: [{l:"Liniers", v:"Rosario PB", gl:2, gv:0, dia:"Sáb 16/05", hora:"15:30", goles_l:["Paulina Acevedo","Iara Schwab"], goles_v:[]}, {l:"Pacífico (C)", v:"Estrella de Oro", gl:0, gv:1, dia:"Dom 17/05", hora:"10:30", goles_l:[], goles_v:["Constanza Franco"]}, {l:"Petroquímicos", v:"Huracán", gl:1, gv:1, dia:"Dom 17/05", hora:"14:30", goles_l:["Renata Segovia"], goles_v:["Keila Iglesias"]}, {l:"San Francisco", v:"Olimpo", gl:4, gv:0, dia:"Dom 17/05", hora:"15:30", goles_l:["Rocío de Mirta","Rocío de Mirta","Ariana Adassus","Julieta Coronel"], goles_v:[]}] },
-    { fecha: 9, libre: "Estrella de Oro", partidos: [{l:"Huracán", v:"Pacífico (C)", gl:3, gv:1, dia:"Sáb 23/05", hora:"15:30"}, {l:"Olimpo", v:"Petroquímicos", gl:0, gv:0, dia:"Sáb 23/05", hora:"15:30"}, {l:"Rosario PB", v:"San Francisco", gl:0, gv:4, dia:"Sáb 23/05", hora:"16:00"}, {l:"Sansinena", v:"Liniers", gl:0, gv:3, dia:"Sáb 23/05", hora:"17:30", goles_l:[], goles_v:["Paulina Acevedo","Paulina Acevedo","Paz Cutrín"]}] },
+    { fecha: 9, libre: "Estrella de Oro", partidos: [{l:"Huracán", v:"Pacífico (C)", gl:3, gv:1, dia:"Sáb 23/05", hora:"15:30", goles_l:["Keila Iglesias","Keila Iglesias","Keila Iglesias"], goles_v:[]}, {l:"Olimpo", v:"Petroquímicos", gl:0, gv:0, dia:"Sáb 23/05", hora:"15:30"}, {l:"Rosario PB", v:"San Francisco", gl:0, gv:4, dia:"Sáb 23/05", hora:"16:00", goles_l:[], goles_v:["Ariana Adassus","Ariana Adassus","Florencia Sorbellini","Julieta Viera"]}, {l:"Sansinena", v:"Liniers", gl:0, gv:3, dia:"Sáb 23/05", hora:"17:30", goles_l:[], goles_v:["Paulina Acevedo","Paulina Acevedo","Paz Cutrín"]}] },
     { fecha: 10, libre: "Huracán", partidos: [{l:"Estrella de Oro", v:"Liniers", gl:0, gv:3}, {l:"Olimpo", v:"Rosario PB", gl:null, gv:null}, {l:"Petroquímicos", v:"Pacífico (C)", gl:null, gv:null}, {l:"Sansinena", v:"San Francisco", gl:null, gv:null}] },
     { fecha: 11, libre: "Petroquímicos", partidos: [{l:"San Francisco", v:"Estrella de Oro", gl:null, gv:null}, {l:"Pacífico (C)", v:"Olimpo", gl:null, gv:null}, {l:"Rosario PB", v:"Sansinena", gl:null, gv:null}, {l:"Liniers", v:"Huracán", gl:null, gv:null}] },
     { fecha: 12, libre: "Pacífico (C)", partidos: [{l:"Huracán", v:"San Francisco", gl:null, gv:null}, {l:"Olimpo", v:"Sansinena", gl:null, gv:null}, {l:"Petroquímicos", v:"Liniers", gl:null, gv:null}, {l:"Estrella de Oro", v:"Rosario PB", gl:null, gv:null}] },
@@ -1669,7 +1669,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 9).partidos.forEach(p 
 });
 
 
-let diaSeleccionadoHome = "2026-05-23"; 
+let diaSeleccionadoHome = "2026-05-24"; 
 
 function seleccionarDiaHome(dia) {
     diaSeleccionadoHome = dia;
@@ -1950,7 +1950,7 @@ function generarTablaFederal() {
     });
     
     const mejoresQuintos = [
-        { nombre: "Deportivo Rincón", pj:8, pg:2, pe:4, pp:2, gf:8, gc:8 },
+        { nombre: "Cipolletti", pj:8, pg:3, pe:2, pp:3, gf:10, gc:10 },
         { nombre: "Defensores Pto. Vilellas", pj:8, pg:3, pe:1, pp:4, gf:12, gc:13 },
         { nombre: "Germinal", pj:8, pg:2, pe:4, pp:2, gf:5, gc:5 }
     ];
