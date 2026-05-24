@@ -1209,8 +1209,8 @@ const idaSub15Fem = [
     ]},
     { fecha: 8, partidos: [
         {l:"Empleados de Comercio", v:"Liniers",          gl:null, gv:null},
-        {l:"Villa Mitre",           v:"Huracán",          gl:null, gv:null},
-        {l:"San Francisco",         v:"Olimpo",           gl:null, gv:null},
+        {l:"Villa Mitre",           v:"Huracán",          gl:1, gv:0},
+        {l:"San Francisco",         v:"Olimpo",           gl:1, gv:0},
         {l:"Juventud Unida",        v:"Sporting",         gl:null, gv:null},
         {l:"Tiro Federal",          v:"Bella Vista",      gl:null, gv:null},
         {l:"La Armonía",            v:"Libertad",         gl:null, gv:null}
@@ -1775,8 +1775,8 @@ function generarHome() {
                 {l:"Municipales", v:"Villa Mitre", hora:"13:00", gl:2, gv:2}
             ]},
             { nombre: "SUB 15 FEMENINO", cat: "sub15fem", partidos: [
-                {l:"San Francisco", v:"Olimpo", hora:"11:00"},
-                {l:"Villa Mitre", v:"Huracán", hora:"11:00"},
+                {l:"San Francisco", v:"Olimpo", hora:"11:00", gl:1, gv:0},
+                {l:"Villa Mitre", v:"Huracán", hora:"11:00", gl:1, gv:0},
                 {l:"Juventud Unida", v:"Sporting", hora:"12:00"},
                 {l:"La Armonía", v:"Libertad", hora:"15:00"}
             ]},
