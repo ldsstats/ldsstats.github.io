@@ -280,7 +280,7 @@ const BD_FIXTURES_FUTSAL_RESERVA = [
         {l:"Tiro Federal",    v:"Dep. Futsal",     gl:1, gv:3}
     ]},
     { fecha: 9, partidos: [
-        {l:"Comercial",       v:"Villa Mitre",     gl:null, gv:null},
+        {l:"Comercial",       v:"Villa Mitre",     gl:1, gv:5},
         {l:"Dep. Futsal",     v:"Pacífico BB",     gl:1, gv:1},
         {l:"Liniers",         v:"Dublin",          gl:5, gv:3},
         {l:"Huracán",         v:"Catamarca",       gl:4, gv:3},
@@ -15881,10 +15881,10 @@ const BD_POS_FUTSAL = {
     ],
     reserva: [
         {n:"Los 3 Chiflados", cl:"los3chiflados", pj:8,pg:7,pe:1,pp:0,gf:42, gc:11, pts:22},
+        {n:"Villa Mitre",     cl:"villamitre",    pj:8,pg:6,pe:1,pp:1,gf:33, gc:19, pts:19},
         {n:"Liniers",         cl:"liniers",       pj:8,pg:5,pe:2,pp:1,gf:37, gc:23, pts:17},
         {n:"Petroquímicos",   cl:"petroquimicos", pj:9,pg:5,pe:2,pp:2,gf:47, gc:24, pts:17},
         {n:"La Esperanza",    cl:"laesperanza",   pj:7,pg:5,pe:1,pp:1,gf:29, gc:19, pts:16},
-        {n:"Villa Mitre",     cl:"villamitre",    pj:7,pg:5,pe:1,pp:1,gf:28, gc:18, pts:16},
         {n:"La Estación",     cl:"laestacion",    pj:8,pg:3,pe:4,pp:1,gf:25, gc:23, pts:13},
         {n:"Dublin",          cl:"dublin",        pj:9,pg:3,pe:1,pp:5,gf:22, gc:34, pts:10},
         {n:"Catamarca",       cl:"catamarca",     pj:8,pg:3,pe:0,pp:5,gf:35, gc:5, pts:9},
@@ -15893,7 +15893,7 @@ const BD_POS_FUTSAL = {
         {n:"Huracán",         cl:"huracan",       pj:9,pg:2,pe:1,pp:6,gf:17, gc:38, pts:7},
         {n:"San Francisco",   cl:"sanfrancisco",  pj:8,pg:2,pe:1,pp:5,gf:15, gc:33, pts:7},
         {n:"Dep. Futsal",     cl:"depfutsal",     pj:7,pg:1,pe:2,pp:4,gf:17, gc:32, pts:5},
-        {n:"Comercial",       cl:"comercial",     pj:7,pg:0,pe:2,pp:5,gf:20, gc:28, pts:2}
+        {n:"Comercial",       cl:"comercial",     pj:8,pg:0,pe:2,pp:6,gf:21, gc:33, pts:2}
     ]
 };
 function generarSub15Fem() {
