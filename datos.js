@@ -1383,8 +1383,8 @@ BD_FIXTURES.oficial.apertura.find(f => f.fecha === 8).partidos = [
 BD_FIXTURES.oficial.apertura.find(f => f.fecha === 9).partidos = [
     {l:"Villa Mitre", v:"La Armonía", gl:2, gv:1, dia:"Dom 24/05", hora:"12:30", goles_l:["Rodrigo Cardoso","Rodrigo Cardoso"], goles_v:["Juan González"]},
     {l:"Liniers", v:"Bella Vista", gl:0, gv:0, dia:"Dom 24/05", hora:"13:00"},
-    {l:"Sporting", v:"Huracán", gl:null, gv:null, dia:"Lun 25/05", hora:"15:00"},
-    {l:"Libertad", v:"San Francisco", gl:null, gv:null, dia:"Lun 25/05", hora:"15:00"},
+    {l:"Sporting", v:"Huracán", gl:1, gv:3, dia:"Lun 25/05", hora:"15:00", goles_l:["Jonathan Font"], goles_v:["Brian Scalco","Brian Scalco","Facundo Reynoso"]},
+    {l:"Libertad", v:"San Francisco", gl:2, gv:0, dia:"Lun 25/05", hora:"15:00", goles_l:["Alan Gigena","Matías Mayer"], goles_v:[]},
 ];
 
 // Reserva Oficial
@@ -1439,9 +1439,9 @@ BD_FIXTURES.oficial.reserva.push(
     ]},
     { fecha: 9, partidos: [
         {l:"Liniers",   v:"Bella Vista",   gl:1, gv:3},
-        {l:"Villa Mitre",   v:"La Armonía",   gl:null, gv:null},
-        {l:"Sporting",   v:"Huracán",   gl:null, gv:null},
-        {l:"Libertad",   v:"San Francisco",   gl:null, gv:null}
+        {l:"Sporting",   v:"Huracán",   gl:2, gv:2},
+        {l:"Libertad",   v:"San Francisco",   gl:2, gv:0},
+        {l:"Villa Mitre",   v:"La Armonía",   gl:null, gv:null}
     ]},
 );
 
@@ -1522,7 +1522,7 @@ BD_FIXTURES.federala.posiciones.find(f => f.fecha === 10).partidos = [
     {l:"Santamarina",   v:"Guillermo Brown", gl:0, gv:2, dia:"Dom 24/05", hora:"11:00", goles_l:[], goles_v:["Martín Rivero","Branco Mera"]},
     {l:"Alvarado",      v:"Olimpo",          gl:2, gv:0, dia:"Dom 24/05", hora:"12:15", goles_l:["Santiago Gutiérrez","Santiago Gutiérrez"], goles_v:[]},
     {l:"Germinal",      v:"Sol de Mayo",     gl:1, gv:0, dia:"Dom 24/05", hora:"15:00", goles_l:["Jorge Velázquez"], goles_v:[]},
-    {l:"Villa Mitre",   v:"Kimberley",       gl:null, gv:null, dia:"Lun 25/05", hora:"15:00"}
+    {l:"Villa Mitre",   v:"Kimberley",       gl:0, gv:0, dia:"Lun 25/05", hora:"15:00"}
 ];
 
 expandirFixture(idaFemenino, BD_FIXTURES.femenino.apertura, 14);
@@ -1868,8 +1868,8 @@ function generarTablaFederal() {
     
     const mejoresQuintos = [
         { nombre: "Deportivo Rincón", pj:8, pg:3, pe:3, pp:2, gf:9, gc:8 },
-        { nombre: "Defensores Pto. Vilellas", pj:8, pg:3, pe:1, pp:4, gf:12, gc:13 },
-        { nombre: "Sol de Mayo", pj:9, pg:2, pe:4, pp:3, gf:5, gc:5 }
+        { nombre: "Villa Mitre", pj:8, pg:2, pe:4, pp:3, gf:5, gc:5 },
+        { nombre: "Defensores Pto. Vilelas", pj:9, pg:3, pe:1, pp:5, gf:13, gc:16 }
     ];
     html += `</tbody></table><div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>21</b> tras finalizar la fecha <b>9</b></div>`;
     html += `<div class="header-t">MEJORES 5° (ZONAS 2, 3 Y 4)</div>`;
@@ -15520,14 +15520,14 @@ function generarReserva(cat) {
 
     // Tabla de posiciones — solo puntos, calculados desde fixtures
     const BD_RESERVA_POS = {
-        'oficial':    [{n:"Sporting",      cl:"sporting",     pj:8, pg:6, pe:2, pp:0, gf:17, gc:7, pts:20},
+        'oficial':    [{n:"Sporting",      cl:"sporting",     pj:9, pg:6, pe:3, pp:0, gf:19, gc:9, pts:21},
                        {n:"Bella Vista",   cl:"bellavista",   pj:9, pg:3, pe:4, pp:2, gf:16, gc:17, pts:13},
                        {n:"Villa Mitre",   cl:"villamitre",   pj:8, pg:4, pe:0, pp:4, gf:18, gc:12, pts:12},
+                       {n:"Libertad",      cl:"libertad",     pj:9, pg:3, pe:3, pp:3, gf:13, gc:11, pts:12},
                        {n:"La Armonía",    cl:"laarmonia",    pj:8, pg:3, pe:2, pp:3, gf:14, gc:9, pts:11},
-                       {n:"San Francisco", cl:"sanfrancisco", pj:8, pg:3, pe:1, pp:4, gf:16, gc:14, pts:11},
+                       {n:"San Francisco", cl:"sanfrancisco", pj:9, pg:3, pe:1, pp:5, gf:16, gc:16, pts:11},
                        {n:"Liniers",       cl:"liniers",      pj:9, pg:2, pe:3, pp:4, gf:9, gc:12, pts:9},
-                       {n:"Libertad",      cl:"libertad",     pj:8, pg:2, pe:3, pp:3, gf:11, gc:11, pts:9},
-                       {n:"Huracán",       cl:"huracan",      pj:8, pg:1, pe:2, pp:5, gf:7, gc:26, pts:5}],
+                       {n:"Huracán",       cl:"huracan",      pj:9, pg:1, pe:3, pp:5, gf:9, gc:28, pts:6}],
         'promocional':[                       {n:"Olimpo",              cl:"olimpo",           pj:9, pg:6, pe:1, pp:2, gf:17, gc:9, pts:19},
                        {n:"Tiro Federal",        cl:"tirofederal",      pj:9, pg:5, pe:3, pp:1, gf:22, gc:16, pts:18},
                        {n:"Comercial",           cl:"comercial",        pj:9, pg:4, pe:5, pp:0, gf:13, gc:8, pts:17},
@@ -17371,7 +17371,8 @@ const BD_ARQUEROS = {
 
         { jugador: "Facundo Carnicero", equipo: "Libertad", partidos: [
             { rival: "Bella Vista", resultado: "Libertad 0 - 0 Bella Vista", fecha: 3 },
-            { rival: "Liniers", resultado: "Liniers 0 - 0 Libertad", fecha: 4 }
+            { rival: "Liniers", resultado: "Liniers 0 - 0 Libertad", fecha: 4 },
+            { rival: "Libertad", resultado: "Libertad 2 - 0 San Francisco", fecha: 9 }
         ]},
         { jugador: "Valentino Torres", equipo: "San Francisco", partidos: [
             { rival: "San Francisco", resultado: "San Francisco 0 - 0 Huracán", fecha: 6 }
@@ -17575,14 +17576,14 @@ function generarPerfilJugador(jugador, equipo) {
 const BD_POSICIONES = {
     oficial: {
         apertura: [
-            { nombre: "Huracán",       clase: "huracan",      pj:8, pg:5, pe:2, pp:1, gf:15, gc:9,  pts:17 },
-            { nombre: "Libertad",      clase: "libertad",     pj:8, pg:3, pe:4, pp:1, gf:10, gc:8,  pts:13 },
+            { nombre: "Huracán",       clase: "huracan",      pj:9, pg:6, pe:2, pp:1, gf:18, gc:10,  pts:20 },
+            { nombre: "Libertad",      clase: "libertad",     pj:9, pg:4, pe:4, pp:1, gf:12, gc:8,  pts:16 },
             { nombre: "Villa Mitre",   clase: "villamitre",   pj:9, pg:4, pe:1, pp:4, gf:11, gc:10,  pts:13 },
             { nombre: "Liniers",       clase: "liniers",      pj:9, pg:3, pe:3, pp:3, gf:8, gc:6,  pts:12 },
             { nombre: "Bella Vista",   clase: "bellavista",   pj:9, pg:3, pe:3, pp:3, gf:10, gc:9,  pts:12 },
             { nombre: "La Armonía",    clase: "laarmonia",    pj:9, pg:3, pe:1, pp:5, gf:12, gc:18,  pts:10 },
-            { nombre: "Sporting",      clase: "sporting",     pj:8, pg:2, pe:3, pp:3, gf:9, gc:10,  pts:9 },
-            { nombre: "San Francisco", clase: "sanfrancisco", pj:8, pg:1, pe:3, pp:4, gf:6, gc:11,  pts:6 }
+            { nombre: "Sporting",      clase: "sporting",     pj:9, pg:2, pe:3, pp:4, gf:10, gc:13,  pts:9 },
+            { nombre: "San Francisco", clase: "sanfrancisco", pj:9, pg:1, pe:3, pp:5, gf:6, gc:13,  pts:6 }
         ]
     },
     promocional: {
@@ -17668,7 +17669,7 @@ function generarTabla(tor, cat) {
         html += `<tr class="${cl}"><td class="c-pos">${i+1}</td><td class="c-equipo">${e.nombre}</td><td class="c-stat">${e.pj}</td><td class="c-stat">${e.pg}</td><td class="c-stat">${e.pe}</td><td class="c-stat">${e.pp}</td><td class="c-stat">${e.gf}</td><td class="c-stat">${e.gc}</td><td class="c-stat">${e.gf-e.gc}</td><td class="c-stat"><b>${e.pts}</b></td></tr>`;
     });
     if (tor === 'apertura' && cat === 'oficial') {
-        return html + "</tbody></table><div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>18</b> tras finalizar la fecha <b>8</b></div>";
+        return html + "</tbody></table><div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>15</b> tras finalizar la fecha <b>9</b></div>";
     }
     if (tor === 'apertura' && cat === 'promocional') {
         return html + "</tbody></table><div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>18</b> tras finalizar la fecha <b>8</b></div>";
