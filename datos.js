@@ -1222,7 +1222,7 @@ const idaSub15Fem = [
         {l:"Huracán",               v:"Tiro Federal",     gl:0, gv:3}
     ]},
     { fecha: 8, partidos: [
-        {l:"Empleados de Comercio", v:"Liniers",          gl:null, gv:null},
+        {l:"Empleados de Comercio", v:"Liniers",          gl:0, gv:10},
         {l:"Villa Mitre",           v:"Huracán",          gl:1, gv:0},
         {l:"San Francisco",         v:"Olimpo",           gl:1, gv:0},
         {l:"Juventud Unida",        v:"Sporting",         gl:2, gv:2},
