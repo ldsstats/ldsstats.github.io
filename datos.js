@@ -1893,7 +1893,7 @@ function generarTablaFederal() {
         { nombre: "Villa Mitre", pj:8, pg:2, pe:4, pp:3, gf:5, gc:5 },
         { nombre: "Defensores Pto. Vilelas", pj:9, pg:3, pe:1, pp:5, gf:13, gc:16 }
     ];
-    html += `</tbody></table><div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>21</b> tras finalizar la fecha <b>9</b></div>`;
+    html += `</tbody></table><div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>18</b> tras finalizar la fecha <b>10</b></div>`;
     html += `<div class="header-t">MEJORES 5° (ZONAS 2, 3 Y 4)</div>`;
     html += `<table><thead><tr><th style="width:25px;">#</th><th style="text-align:left;padding-left:8px;">Equipo</th><th class="c-stat">PJ</th><th class="c-stat">PG</th><th class="c-stat">PE</th><th class="c-stat">PP</th><th class="c-stat">GF</th><th class="c-stat">GC</th><th class="c-stat">Dif</th><th class="c-stat">Pts</th></tr></thead><tbody>`;
     mejoresQuintos.forEach((e, i) => {
@@ -15605,9 +15605,9 @@ function generarReserva(cat) {
         } else if (cat === 'promocional') {
             html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>15</b> tras finalizar la fecha <b>9</b></div>`;
         } else if (cat === 'femenino') {
-            html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>24</b> tras finalizar la fecha <b>6</b></div>`;
+            html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>15</b> tras finalizar la fecha <b>9</b></div>`;
         } else if (cat === 'segundafemenino') {
-            html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>39</b> para equipos que jugaron 5 partidos y <b>42</b> para equipos que jugaron 4 partidos</div>`;
+            html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>36</b> para equipos que jugaron 4 partidos y <b>39</b> para equipos que jugaron 5 partidos</div>`;
         }
     }
     return html;
@@ -15884,7 +15884,7 @@ function generarSub15Fem() {
         </tr>`;
     });
     html += `</tbody></table>`;
-    html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>12</b> tras la finalización de la fecha <b>7</b></div>`;
+    html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>8</b> tras la finalización de la fecha <b>8</b></div>`;
     return html;
 }
 
@@ -17694,13 +17694,13 @@ function generarTabla(tor, cat) {
         return html + "</tbody></table><div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>15</b> tras finalizar la fecha <b>9</b></div>";
     }
     if (tor === 'apertura' && cat === 'promocional') {
-        return html + "</tbody></table><div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>18</b> tras finalizar la fecha <b>8</b></div>";
+        return html + "</tbody></table><div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>15</b> tras finalizar la fecha <b>9</b></div>";
     }
     if (tor === 'apertura' && cat === 'femenino') {
-        return html + "</tbody></table><div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>18</b> tras finalizar la fecha <b>8</b></div>";
+        return html + "</tbody></table><div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>15</b> tras finalizar la fecha <b>9</b></div>";
     }
     if (tor === 'torneo2026' && cat === 'segundafemenino') {
-        return html + "</tbody></table><div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>51</b> para los equipos que jugaron 7 partidos y <b>54</b> para los equipos que jugaron 6 partidos</div>";
+        return html + "</tbody></table><div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>48</b> para los equipos que jugaron 8 partidos</div>";
     }
     return html + "</tbody></table>";
 }
