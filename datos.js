@@ -1107,7 +1107,21 @@ const BD_FIXTURES_FUTSAL = [
                 "Nicolás Romano"
                 ],
         },
-        {l:"San Francisco",   v:"La Estación",     gl:4, gv:5},
+        {
+            l:"San Francisco",
+            v:"La Estación",
+            gl:4,
+            gv:5,
+            dia:"Vie 23/05",
+            hora:"22:00",
+            goles_l:[
+                ],
+            goles_v:[
+                "Gastón Ackermann (2)",
+                "Mariano Sepúlveda",
+                "Julián Hidalgo"
+                ],
+        },
         {l:"Los 3 Chiflados", v:"La Esperanza",    gl:null, gv:null}
     ]},
     { fecha: 10, partidos: [
@@ -1535,8 +1549,8 @@ BD_FIXTURES.femenino.apertura.find(f => f.fecha === 8).partidos = [
 BD_FIXTURES.femenino.apertura.find(f => f.fecha === 9).partidos = [
     {l:"La Armonía", v:"Tiro Federal", gl:0, gv:2, dia:"Sáb 23/05", hora:"15:30", goles_l:[], goles_v:["Abril Sáenz","Abril Sáenz"]},
     {l:"Municipales", v:"Villa Mitre", gl:2, gv:2, dia:"Dom 24/05", hora:"13:00", goles_l:["Stefanía Sueyro","Valeria Navarrete"], goles_v:["Jéssica Mella","Sol Menéndez Perrone"]},
-    {l:"Empleados de Comercio", v:"Libertad", gl:4, gv:0, dia:"Lun 25/05", hora:"15:30"},
-    {l:"Sporting", v:"Bella Vista", gl:4, gv:1, dia:"Lun 25/05", hora:"17:30"}
+    {l:"Empleados de Comercio", v:"Libertad", gl:4, gv:0, dia:"Lun 25/05", hora:"15:30", goles_l:["Marianela Santana","Marianela Santana","Marianela Santana","Alison Guerrero"], goles_v:[]},
+    {l:"Sporting", v:"Bella Vista", gl:4, gv:1, dia:"Lun 25/05", hora:"17:30", goles_l:["Sofía Mattos","Sofía Mattos","Lucía Aranda","Yazmín Fehrenbacher"], goles_v:["Victoria Toloza"]}
 ];
 
 // Reserva femenino: mismos partidos pero siempre con gl/gv null
@@ -1675,7 +1689,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 9).partidos.forEach(p 
 });
 
 
-let diaSeleccionadoHome = "2026-05-25"; 
+let diaSeleccionadoHome = "2026-05-26"; 
 
 function seleccionarDiaHome(dia) {
     diaSeleccionadoHome = dia;
@@ -1714,6 +1728,15 @@ function generarHome() {
             ]},
             { nombre: "FEDERAL A", cat: "federala", partidos: [
                 {l:"Villa Mitre", v:"Kimberley", hora:"15:00"}
+            ]},
+        ]},
+        { id: "2026-05-26", label: "MAR 26/05", torneos: [
+            { nombre: "SENIOR", cat: "seniorapertura", partidos: [
+                {l:"Bella Vista", v:"Sansinena", hora:"20:00", nota:"en cancha de Empleados de Comercio"},
+                {l:"Tiro Federal", v:"Comercial", hora:"20:00", nota:"en cancha de Tiro Federal"},
+                {l:"Libertad", v:"San Francisco", hora:"20:00", nota:"en cancha de Libertad"},
+                {l:"Pacífico (C)", v:"Huracán", hora:"21:30", nota:"en cancha de Empleados de Comercio"},
+                {l:"Sporting", v:"Pacífico BB", hora:"21:30", nota:"en cancha de Sporting"}
             ]},
         ]},
         { id: "2026-05-30", label: "SÁB 30/05", torneos: [
@@ -1890,7 +1913,7 @@ function generarTablaFederal() {
     
     const mejoresQuintos = [
         { nombre: "Deportivo Rincón", pj:8, pg:3, pe:3, pp:2, gf:9, gc:8 },
-        { nombre: "Villa Mitre", pj:8, pg:2, pe:4, pp:3, gf:5, gc:5 },
+        { nombre: "Villa Mitre", pj:9, pg:2, pe:4, pp:3, gf:5, gc:5 },
         { nombre: "Defensores Pto. Vilelas", pj:9, pg:3, pe:1, pp:5, gf:13, gc:16 }
     ];
     html += `</tbody></table><div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>18</b> tras finalizar la fecha <b>10</b></div>`;
@@ -15964,7 +15987,7 @@ if ((p.goles_l && p.goles_l.length) || (p.goles_v && p.goles_v.length)) {
 
 const BD_GOLEADORES_FUTSAL = [
     { club: "Dublin",          clase: "dublin",        act: "fecha 9",  goleadores: [
-        { nombre: "Agustín Miguel",      goles: 9 },
+        { nombre: "Agustín Miguel",      goles: 8 },
         { nombre: "Jesús Lucarelli",     goles: 3 },
         { nombre: "Matías Gigena",       goles: 3 },
         { nombre: "Matías Palma",        goles: 2 },
@@ -15973,7 +15996,7 @@ const BD_GOLEADORES_FUTSAL = [
         { nombre: "Facundo Miranda",     goles: 1 },
         { nombre: "Nicolás San Martín",     goles: 1 }
     ]},
-    { club: "Villa Mitre",     clase: "villamitre",    act: "fecha 4, sin datos de fechas 1, 2 y 3",       goleadores: [
+    { club: "Villa Mitre",     clase: "villamitre",    act: "-",       goleadores: [
         { nombre: "Agustín Pullini",      goles: 2 },
         { nombre: "B. Martínez",  goles: 1 }
     ]},
@@ -16000,18 +16023,18 @@ const BD_GOLEADORES_FUTSAL = [
         { nombre: "Andrés Guillen",  goles: 1 },
         { nombre: "Franco Freites",  goles: 1 }
     ]},
-    { club: "La Estación",     clase: "laestacion",    act: "fecha 8, con la fecha 7 postergada",  goleadores: [
+    { club: "La Estación",     clase: "laestacion",    act: "fecha 9, con la fecha 7 postergada",  goleadores: [
         { nombre: "Bernabé Storni",      goles: 8 },
         { nombre: "Jonathan Carunchio",  goles: 8 },
+        { nombre: "Gastón Ackermann",   goles: 7 },
         { nombre: "Diego Romano",        goles: 6 },
-        { nombre: "Gastón Ackermann",   goles: 5 },
-        { nombre: "Mariano Sepúlveda",   goles: 4 },
+        { nombre: "Mariano Sepúlveda",   goles: 5 },
         { nombre: "Eric Martin",       goles: 3 },
+        { nombre: "Julián Hidalgo",       goles: 2 },
         { nombre: "Esteban Sabán",       goles: 1 },
         { nombre: "Tomás Ceminari",       goles: 1 },
         { nombre: "Lautaro Gómez",       goles: 1 },
-        { nombre: "Gastón Aravena",       goles: 1 },
-        { nombre: "Julián Hidalgo",       goles: 1 }
+        { nombre: "Gastón Aravena",       goles: 1 }
     ]},
     { club: "Dep. Futsal",     clase: "depfutsal",     act: "fecha 3, sin datos sin datos de fecha 1 y 2",       goleadores: [
         { nombre: "Facundo Vega",        goles: 2 },
@@ -16432,7 +16455,13 @@ const BD_FIXTURES_SENIOR = [
         { l: "Sansinena",   v: "Tiro Federal",  gl: 2, gv: 1 },
         { l: "Pacífico BB",   v: "Bella Vista",  gl: null, gv: null }
     ]},
-    { fecha: 5, libre: null, partidos: [] },
+    { fecha: 5, dia: "Mar 26/05", partidos: [
+        { l: "Bella Vista",   v: "Sansinena",  gl: null, gv: null },
+        { l: "Tiro Federal",   v: "Comercial",  gl: null, gv: null },
+        { l: "Libertad",   v: "San Francisco",  gl: null, gv: null },
+        { l: "Pacífico (C)",   v: "Huracán",  gl: null, gv: null },
+        { l: "Sporting",   v: "Pacífico BB",  gl: null, gv: null },
+    ]},
     { fecha: 6, libre: null, partidos: [] },
     { fecha: 7, libre: null, partidos: [] },
     { fecha: 8, libre: null, partidos: [] },
@@ -16440,7 +16469,7 @@ const BD_FIXTURES_SENIOR = [
 ];
 
 function generarSeniorApertura() {
-    const n = estado.fechaSenior || 4;
+    const n = estado.fechaSenior || 5;
     const f = BD_FIXTURES_SENIOR.find(x => x.fecha === n) || { partidos: [], libre: null };
     const equipos = BD_SENIOR_APERTURA.map(e => ({ nombre: e.n, clase: e.cl }));
 
