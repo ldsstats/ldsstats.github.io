@@ -1938,7 +1938,7 @@ function generarTablaFederal() {
         { nombre: "Villa Mitre", pj:9, pg:2, pe:4, pp:3, gf:5, gc:5 },
         { nombre: "Defensores Pto. Vilelas", pj:9, pg:3, pe:1, pp:5, gf:13, gc:16 }
     ];
-    html += `</tbody></table><div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>18</b> tras finalizar la fecha <b>10</b></div>`;
+    html += `</tbody></table><div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>24</b> para quienes tengan 8 partidos jugados y <b>21</b> para quienes tengan 9 partidos jugados y</div>`;
     html += `<div class="header-t">MEJORES 5° (ZONAS 2, 3 Y 4)</div>`;
     html += `<table><thead><tr><th style="width:25px;">#</th><th style="text-align:left;padding-left:8px;">Equipo</th><th class="c-stat">PJ</th><th class="c-stat">PG</th><th class="c-stat">PE</th><th class="c-stat">PP</th><th class="c-stat">GF</th><th class="c-stat">GC</th><th class="c-stat">Dif</th><th class="c-stat">Pts</th></tr></thead><tbody>`;
     mejoresQuintos.forEach((e, i) => {
@@ -15854,8 +15854,8 @@ const BD_POS_FUTSAL = {
         {n:"Catamarca",       cl:"catamarca",     pj:8,pg:2,pe:1,pp:5,gf:25, gc:37, pts:7},
         {n:"Dublin",          cl:"dublin",        pj:9,pg:2,pe:0,pp:7,gf:21, gc:31, pts:6},
         {n:"Dep. Futsal",     cl:"depfutsal",     pj:7,pg:1,pe:0,pp:6,gf:16, gc:40, pts:3},
-        {n:"San Francisco*",   cl:"sanfrancisco",  pj:8,pg:1,pe:2,pp:5,gf:24, gc:32, pts:2},
-        {n:"Huracán",         cl:"huracan",       pj:9,pg:0,pe:0,pp:9,gf:23, gc:63,pts:0}
+        {n:"San Francisco<b>*<b>",   cl:"sanfrancisco",  pj:8,pg:1,pe:2,pp:5,gf:24, gc:32, pts:2},
+        {n:"Huracán <b>(X)<b>",         cl:"huracan",       pj:9,pg:0,pe:0,pp:9,gf:23, gc:63,pts:0}
     ],
     reserva: [
         {n:"Los 3 Chiflados", cl:"los3chiflados", pj:8,pg:7,pe:1,pp:0,gf:42, gc:11, pts:22},
@@ -15999,8 +15999,7 @@ if ((p.goles_l && p.goles_l.length) || (p.goles_v && p.goles_v.length)) {
     });
     html += `</tbody></table>`;
     if (modo === 'principal') {
-        html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>*Se le descontaron tres puntos.
-📌 Puntos en juego: <b>12</b> para quienes hayan completado todos los partidos hasta la fecha <b>9</b></div>`;
+        html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'><b>(X)</b> Ya eliminado - <b>*</b> Se le descontaron tres puntos - 📌 Puntos en juego: <b>12</b> para quienes hayan completado todos los partidos hasta la fecha <b>9</b></div>`;
     } else if (modo === 'reserva') {
         html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>12</b> para quienes hayan completado todos los partidos hasta la fecha <b>9</b></div>`;
     }
