@@ -1400,6 +1400,12 @@ BD_FIXTURES.oficial.apertura.find(f => f.fecha === 9).partidos = [
     {l:"Sporting", v:"Huracán", gl:1, gv:3, dia:"Lun 25/05", hora:"15:00", goles_l:["Jonathan Font"], goles_v:["Brian Scalco","Brian Scalco","Facundo Reynoso"]},
     {l:"Libertad", v:"San Francisco", gl:2, gv:0, dia:"Lun 25/05", hora:"15:00", goles_l:["Alan Gigena","Matías Mayer"], goles_v:[]},
 ];
+BD_FIXTURES.oficial.apertura.find(f => f.fecha === 10).partidos = [
+    {l:"San Francisco",    v:"Sporting", gl:null, gv:null, dia:"Dom 31/05", hora:"15:00", goles_l:[], goles_v:[]},
+    {l:"La Armonía",    v:"Liniers", gl:null, gv:null, dia:"Dom 31/05", hora:"15:00", goles_l:[], goles_v:[]},
+    {l:"Bella Vista",    v:"Libertad", gl:null, gv:null, dia:"Dom 31/05", hora:"15:00", goles_l:[], goles_v:[]},
+    {l:"Huracán",    v:"Villa Mitre", gl:null, gv:null, dia:"Lun 01/06", hora:"15:00", goles_l:[], goles_v:[]},
+];
 
 // Reserva Oficial
 BD_FIXTURES.oficial.reserva.push(
@@ -1530,6 +1536,12 @@ BD_FIXTURES.promocional.apertura.find(f => f.fecha === 9).partidos = [
     {l:"Pacífico BB",    v:"Rosario PB", gl:0, gv:0, dia:"Dom 24/05", hora:"11:00"},
     {l:"Dublin",    v:"Pacífico (C)", gl:3, gv:1, dia:"Dom 24/05", hora:"13:00", goles_l:["Jonathan Arias","Jonathan Arias","Tomás Coronel"], goles_v:["Luca Lucas"]},
 ];
+BD_FIXTURES.promocional.apertura.find(f => f.fecha === 10).partidos = [
+    {l:"Olimpo",    v:"Comercial", gl:null, gv:null, dia:"Sáb 30/05", hora:"15:00", goles_l:[], goles_v:[]},
+    {l:"Dublin",    v:"Sansinena", gl:null, gv:null, dia:"Dom 31/05", hora:"15:00", goles_l:[], goles_v:[]},
+    {l:"Pacífico (C)",    v:"Pacífico BB", gl:null, gv:null, dia:"Dom 31/05", hora:"15:00", goles_l:[], goles_v:[]},
+    {l:"Rosario PB",    v:"Tiro Federal", gl:null, gv:null, dia:"Dom 31/05", hora:"15:00", goles_l:[], goles_v:[]},
+];
 
 expandirFixture(idaFederal, BD_FIXTURES.federala.posiciones, 18);
 BD_FIXTURES.federala.posiciones.find(f => f.fecha === 10).partidos = [
@@ -1538,6 +1550,13 @@ BD_FIXTURES.federala.posiciones.find(f => f.fecha === 10).partidos = [
     {l:"Germinal",      v:"Sol de Mayo",     gl:1, gv:0, dia:"Dom 24/05", hora:"15:00", goles_l:["Jorge Velázquez"], goles_v:[]},
     {l:"Villa Mitre",   v:"Kimberley",       gl:0, gv:0, dia:"Lun 25/05", hora:"15:00"}
 ];
+BD_FIXTURES.federala.posiciones.find(f => f.fecha === 11).partidos = [
+    {l:"Kimberley",   v:"Germinal", gl:null, gv:null, dia:"Sáb 30/05", hora:"15:30", goles_l:[], goles_v:[]},
+    {l:"Círculo Dep.",      v:"Villa Mitre",          gl:null, gv:null, dia:"Dom 31/05", hora:"15:00", goles_l:[], goles_v:[]},
+    {l:"Guillermo Brown",      v:"Alvarado",     gl:null, gv:null, dia:"Dom 31/05", hora:"15:00", goles_l:[], goles_v:[]},
+    {l:"Sol de Mayo",   v:"Santamarina",       gl:null, gv:null, dia:"Dom 31/05", hora:"15:00", goles_l:[], goles_v:[]}
+];
+
 
 expandirFixture(idaFemenino, BD_FIXTURES.femenino.apertura, 14);
 BD_FIXTURES.femenino.apertura.find(f => f.fecha === 8).partidos = [
@@ -1762,24 +1781,27 @@ function generarHome() {
             ]},
         ]},
         { id: "2026-05-30", label: "SÁB 30/05", torneos: [
-            { nombre: "PROMOCIONAL (TENTATIVO)", cat: "promocional", partidos: [
+            { nombre: "PROMOCIONAL", cat: "promocional", partidos: [
                 {l:"Olimpo", v:"Comercial", hora:"15:00", nota:"en cancha de San Francisco"}
             ]},
         ]},
         { id: "2026-05-31", label: "DOM 31/05", torneos: [
-            { nombre: "OFICIAL (TENTATIVO)", cat: "oficial", partidos: [
+            { nombre: "OFICIAL", cat: "oficial", partidos: [
                 {l:"San Francisco", v:"Sporting", hora:"15:00"},
                 {l:"La Armonía", v:"Liniers", hora:"15:00"},
                 {l:"Bella Vista", v:"Libertad", hora:"15:00"}
             ]},
-            { nombre: "PROMOCIONAL (TENTATIVO)", cat: "promocional", partidos: [
+            { nombre: "PROMOCIONAL", cat: "promocional", partidos: [
                 {l:"Dublin", v:"Sansinena", hora:"15:00", nota:"en cancha de Comercial"},
                 {l:"Pacífico (C)", v:"Pacífico BB", hora:"15:00"},
                 {l:"Rosario PB", v:"Tiro Federal", hora:"15:00"}
             ]},
+            { nombre: "FEDERAL A", cat: "federala", partidos: [
+                {l:"Círculo Dep.", v:"Villa Mitre", hora:"15:00"}
+            ]},
         ]},
         { id: "2026-06-01", label: "LUN 01/06", torneos: [
-            { nombre: "OFICIAL (TENTATIVO)", cat: "oficial", partidos: [
+            { nombre: "OFICIAL", cat: "oficial", partidos: [
                 {l:"Huracán", v:"Villa Mitre", hora:"15:00", nota:"en cancha de San Francisco"}
             ]},
         ]},
