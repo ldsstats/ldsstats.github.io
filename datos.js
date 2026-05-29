@@ -116,7 +116,7 @@ const idaSegundaFemenino = [
     { fecha: 7, libre: "Rosario PB", partidos: [{l:"Huracán", v:"Olimpo", gl:0, gv:0}, {l:"San Francisco", v:"Liniers", gl:3, gv:3, dia:"Lun 25/05", hora:"15:30", goles_l:["Florencia Sorbellini","Julieta Coronel","Ariana Adassus"], goles_v:["Iara Schwab","Agustina Borda","Paulina Acevedo"]}, {l:"Sansinena", v:"Pacífico (C)", gl:3, gv:0, dia:"Lun 25/05", hora:"16:00", goles_l:["Melina Gómez","Jocelyn Zarza","Daniela Abello"], goles_v:[]}, {l:"Estrella de Oro", v:"Petroquímicos", gl:0, gv:6, dia:"Lun 25/05", hora:"16:30", goles_l:[], goles_v:["Renata Segovia","Renata Segovia","Nicole Montenegro","Nicole Montenegro","Romina Zarza","Romina Zarza"]}] },
     { fecha: 8, libre: "Sansinena", partidos: [{l:"Liniers", v:"Rosario PB", gl:2, gv:0, dia:"Sáb 16/05", hora:"15:30", goles_l:["Paulina Acevedo","Iara Schwab"], goles_v:[]}, {l:"Pacífico (C)", v:"Estrella de Oro", gl:0, gv:1, dia:"Dom 17/05", hora:"10:30", goles_l:[], goles_v:["Constanza Franco"]}, {l:"Petroquímicos", v:"Huracán", gl:1, gv:1, dia:"Dom 17/05", hora:"14:30", goles_l:["Renata Segovia"], goles_v:["Keila Iglesias"]}, {l:"San Francisco", v:"Olimpo", gl:4, gv:0, dia:"Dom 17/05", hora:"15:30", goles_l:["Rocío de Mirta","Rocío de Mirta","Ariana Adassus","Julieta Coronel"], goles_v:[]}] },
     { fecha: 9, libre: "Estrella de Oro", partidos: [{l:"Huracán", v:"Pacífico (C)", gl:3, gv:1, dia:"Sáb 23/05", hora:"15:30", goles_l:["Keila Iglesias","Keila Iglesias","Keila Iglesias"], goles_v:["Carolina Delorte"]}, {l:"Olimpo", v:"Petroquímicos", gl:0, gv:0, dia:"Sáb 23/05", hora:"15:30"}, {l:"Rosario PB", v:"San Francisco", gl:0, gv:4, dia:"Sáb 23/05", hora:"16:00", goles_l:[], goles_v:["Ariana Adassus","Ariana Adassus","Florencia Sorbellini","Julieta Viera"]}, {l:"Sansinena", v:"Liniers", gl:0, gv:3, dia:"Sáb 23/05", hora:"17:30", goles_l:[], goles_v:["Paulina Acevedo","Paulina Acevedo","Paz Cutrín"]}] },
-    { fecha: 10, libre: "Huracán", partidos: [{l:"Estrella de Oro", v:"Liniers", gl:null, gv:null}, {l:"Olimpo", v:"Rosario PB", gl:null, gv:null}, {l:"Petroquímicos", v:"Pacífico (C)", gl:null, gv:null}, {l:"Sansinena", v:"San Francisco", gl:null, gv:null}] },
+    { fecha: 10, libre: "Huracán", partidos: [{l:"Petroquímicos", v:"Pacífico (C)", gl:null, gv:null, dia:"Sáb 29/05", hora:"15:30"}, {l:"Estrella de Oro", v:"Liniers", gl:null, gv:null, dia:"Dom 30/05", hora:"15:30"}, {l:"Olimpo", v:"Rosario PB", gl:null, gv:null, dia:"Dom 30/05", hora:"15:30"}, {l:"Sansinena", v:"San Francisco", gl:null, gv:null, dia:"Dom 30/05", hora:"15:30"}] },
     { fecha: 11, libre: "Petroquímicos", partidos: [{l:"San Francisco", v:"Estrella de Oro", gl:null, gv:null}, {l:"Pacífico (C)", v:"Olimpo", gl:null, gv:null}, {l:"Rosario PB", v:"Sansinena", gl:null, gv:null}, {l:"Liniers", v:"Huracán", gl:null, gv:null}] },
     { fecha: 12, libre: "Pacífico (C)", partidos: [{l:"Huracán", v:"San Francisco", gl:null, gv:null}, {l:"Olimpo", v:"Sansinena", gl:null, gv:null}, {l:"Petroquímicos", v:"Liniers", gl:null, gv:null}, {l:"Estrella de Oro", v:"Rosario PB", gl:null, gv:null}] },
     { fecha: 13, libre: "Olimpo", partidos: [{l:"Sansinena", v:"Estrella de Oro", gl:null, gv:null}, {l:"Liniers", v:"Pacífico (C)", gl:null, gv:null}, {l:"San Francisco", v:"Petroquímicos", gl:null, gv:null}, {l:"Rosario PB", v:"Huracán", gl:null, gv:null}] },
@@ -1246,12 +1246,12 @@ const idaSub15Fem = [
         {l:"La Armonía",            v:"Libertad",         gl:2, gv:0}
     ]},
     { fecha: 9, partidos: [
+        {l:"Huracán",               v:"San Francisco",    gl:null, gv:null},
         {l:"Liniers",               v:"Juventud Unida",   gl:null, gv:null},
         {l:"Bella Vista",           v:"Villa Mitre",      gl:null, gv:null},
-        {l:"Sporting",              v:"Tiro Federal",     gl:null, gv:null},
         {l:"Libertad",              v:"Empleados de Comercio", gl:null, gv:null},
         {l:"Olimpo",                v:"La Armonía",       gl:null, gv:null},
-        {l:"Huracán",               v:"San Francisco",    gl:null, gv:null}
+        {l:"Sporting",              v:"Tiro Federal",     gl:null, gv:null}
     ]},
     { fecha: 10, partidos: [
         {l:"Empleados de Comercio", v:"Olimpo",           gl:null, gv:null},
@@ -1587,6 +1587,13 @@ BD_FIXTURES.femenino.apertura.find(f => f.fecha === 9).partidos = [
     {l:"Empleados de Comercio", v:"Libertad", gl:4, gv:0, dia:"Lun 25/05", hora:"15:30", goles_l:["Marianela Santana","Marianela Santana","Marianela Santana","Alison Guerrero"], goles_v:[]},
     {l:"Sporting", v:"Bella Vista", gl:4, gv:1, dia:"Lun 25/05", hora:"17:30", goles_l:["Sofía Mattos","Sofía Mattos","Lucía Aranda","Yazmín Fehrenbacher"], goles_v:["Victoria Toloza"]}
 ];
+BD_FIXTURES.femenino.apertura.find(f => f.fecha === 10).partidos = [
+    {l:"Tiro Federal", v:"Municipales", gl:null, gv:null, dia:"Sáb 30/05", hora:"15:30", goles_l:[], goles_v:[]},
+    {l:"Libertad", v:"La Armonía", gl:null, gv:null, dia:"Dom 31/05", hora:"15:30", goles_l:[], goles_v:[]},
+    {l:"Bella Vista", v:"Empleados de Comercio", gl:null, gv:null, dia:"Dom 31/05", hora:"15:30", goles_l:[], goles_v:[]},
+    {l:"Villa Mitre", v:"Sporting", gl:null, gv:null, dia:"Dom 31/05", hora:"15:30", goles_l:[], goles_v:[]}
+];
+
 
 // Reserva femenino: mismos partidos pero siempre con gl/gv null
 idaFemenino.forEach(f => {
@@ -1800,6 +1807,17 @@ function generarHome() {
             { nombre: "PROMOCIONAL", cat: "promocional", partidos: [
                 {l:"Olimpo", v:"Comercial", hora:"15:00", nota:"en cancha de San Francisco"}
             ]},
+            { nombre: "1° FEMENINO", cat: "femenino", partidos: [
+                {l:"Tiro Federal", v:"Municipales", hora:"15:30"}
+            ]},
+            { nombre: "2° FEMENINO", cat: "segundafemenino", partidos: [
+                {l:"Petroquímicos", v:"Pacífico (C)", hora:"15:30", nota:"en cancha de Sansinena"},
+            ]},
+            { nombre: "SUB 15 FEMENINO", cat: "sub15fem", partidos: [
+                {l:"Huracán", v:"San Francisco", hora:"11:00"},
+                {l:"Liniers", v:"Juventud Unida", hora:"15:00"},
+                {l:"Bella Vista", v:"Villa Mitre", hora:"16:00"},
+            ]},
         ]},
         { id: "2026-05-31", label: "DOM 31/05", torneos: [
             { nombre: "OFICIAL", cat: "oficial", partidos: [
@@ -1811,6 +1829,21 @@ function generarHome() {
                 {l:"Dublin", v:"Sansinena", hora:"15:00", nota:"en cancha de Comercial"},
                 {l:"Pacífico (C)", v:"Pacífico BB", hora:"15:00"},
                 {l:"Rosario PB", v:"Tiro Federal", hora:"15:00"}
+            ]},
+            { nombre: "1° FEMENINO", cat: "femenino", partidos: [
+                {l:"Libertad", v:"La Armonía", hora:"15:30"},
+                {l:"Bella Vista", v:"Empleados de Comercio", hora:"15:30"},
+                {l:"Villa Mitre", v:"Sporting", hora:"15:30"}
+            ]},
+            { nombre: "2° FEMENINO", cat: "segundafemenino", partidos: [
+                {l:"Estrella de Oro", v:"Liniers", hora:"15:30", nota:"en cancha de Municipales"},
+                {l:"Olimpo", v:"Rosario PB", hora:"15:30"},
+                {l:"Sansinena", v:"San Francisco", hora:"15:30"},
+            ]},
+            { nombre: "SUB 15 FEMENINO", cat: "sub15fem", partidos: [
+                {l:"Libertad", v:"Empleados de Comercio", hora:"10:30"},
+                {l:"Olimpo", v:"La Armonía", hora:"12:30"},
+                {l:"Sporting", v:"Tiro Federal", hora:"15:00"},
             ]},
             { nombre: "FEDERAL A", cat: "federala", partidos: [
                 {l:"Círculo Dep.", v:"Villa Mitre", hora:"15:00"}
