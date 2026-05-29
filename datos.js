@@ -290,7 +290,7 @@ const BD_FIXTURES_FUTSAL_RESERVA = [
     ]},
     { fecha: 10, partidos: [
         {l:"La Esperanza",    v:"Comercial",       gl:4, gv:1},
-        {l:"Dublin",          v:"Huracán",         gl:null, gv:null},
+        {l:"Dublin",          v:"Huracán",         gl:4, gv:2},
         {l:"Pacífico BB",     v:"Petroquímicos",   gl:null, gv:null},
         {l:"Tiro Federal",    v:"San Francisco",   gl:null, gv:null},
         {l:"Villa Mitre",     v:"Liniers",         gl:null, gv:null},
@@ -1126,7 +1126,23 @@ const BD_FIXTURES_FUTSAL = [
     ]},
     { fecha: 10, partidos: [
         {l:"La Esperanza",    v:"Comercial",       gl:5, gv:4},
-        {l:"Dublin",          v:"Huracán",         gl:null, gv:null},
+        {
+            l:"Dublin",
+            v:"Huracán",
+            gl:8,
+            gv:1,
+            dia:"Jue 28/05",
+            hora:"22:00",
+            goles_l:[
+                "Rodrigo Gómez (3)",
+                "Agustín Miguel (2)",
+                "Alejandro Bernal",
+                "Facundo Miranda",
+                "Matías Fonollosa"
+                ],
+            goles_v:[
+                ],
+        },
         {l:"Pacífico BB",     v:"Petroquímicos",   gl:null, gv:null},
         {l:"Tiro Federal",    v:"San Francisco",   gl:null, gv:null},
         {l:"Villa Mitre",     v:"Liniers",         gl:null, gv:null},
@@ -1708,7 +1724,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 9).partidos.forEach(p 
 });
 
 
-let diaSeleccionadoHome = "2026-05-28"; 
+let diaSeleccionadoHome = "2026-05-29"; 
 
 function seleccionarDiaHome(dia) {
     diaSeleccionadoHome = dia;
@@ -1765,7 +1781,7 @@ function generarHome() {
         ]},
         { id: "2026-05-28", label: "JUE 28/05", torneos: [
             { nombre: "FUTSAL", cat: "futsal", partidos: [
-                {l:"Dublin", v:"Huracán", hora:"22:00", nota:"en cancha de Don Bosco"}
+                {l:"Dublin", v:"Huracán", hora:"22:00", nota:"en cancha de Don Bosco", gl:8, gv:1}
             ]},
         ]},
         { id: "2026-05-29", label: "VIE 29/05", torneos: [
@@ -15872,12 +15888,12 @@ const BD_POS_FUTSAL = {
         {n:"Tiro Federal",    cl:"tirofederal",   pj:9,pg:4,pe:0,pp:5,gf:24, gc:25, pts:15},
         {n:"Comercial",       cl:"comercial",     pj:9,pg:4,pe:2,pp:3,gf:44, gc:29, pts:14},
         {n:"Pacífico BB",     cl:"pacificobb",    pj:8,pg:4,pe:0,pp:4,gf:36, gc:34, pts:12},
+        {n:"Dublin",          cl:"dublin",        pj:10,pg:3,pe:0,pp:7,gf:29, gc:32, pts:9},
         {n:"Petroquímicos",   cl:"petroquimicos", pj:9,pg:3,pe:0,pp:6,gf:30,gc:37, pts:9},
         {n:"Catamarca",       cl:"catamarca",     pj:8,pg:2,pe:1,pp:5,gf:25, gc:37, pts:7},
-        {n:"Dublin",          cl:"dublin",        pj:9,pg:2,pe:0,pp:7,gf:21, gc:31, pts:6},
         {n:"Dep. Futsal",     cl:"depfutsal",     pj:7,pg:1,pe:0,pp:6,gf:16, gc:40, pts:3},
         {n:"San Francisco<b>*<b>",   cl:"sanfrancisco",  pj:8,pg:1,pe:2,pp:5,gf:24, gc:32, pts:2},
-        {n:"Huracán <b>(X)<b>",         cl:"huracan",       pj:9,pg:0,pe:0,pp:9,gf:23, gc:63,pts:0}
+        {n:"Huracán <b>(X)<b>",         cl:"huracan",       pj:10,pg:0,pe:0,pp:10,gf:24, gc:71,pts:0}
     ],
     reserva: [
         {n:"Los 3 Chiflados", cl:"los3chiflados", pj:8,pg:7,pe:1,pp:0,gf:42, gc:11, pts:22},
@@ -15886,11 +15902,11 @@ const BD_POS_FUTSAL = {
         {n:"Liniers",         cl:"liniers",       pj:8,pg:5,pe:2,pp:1,gf:37, gc:23, pts:17},
         {n:"Petroquímicos",   cl:"petroquimicos", pj:9,pg:5,pe:2,pp:2,gf:47, gc:24, pts:17},
         {n:"La Estación",     cl:"laestacion",    pj:8,pg:3,pe:4,pp:1,gf:25, gc:23, pts:13},
-        {n:"Dublin",          cl:"dublin",        pj:9,pg:3,pe:1,pp:5,gf:22, gc:34, pts:10},
+        {n:"Dublin",          cl:"dublin",        pj:10,pg:4,pe:1,pp:5,gf:26, gc:36, pts:13},
         {n:"Catamarca",       cl:"catamarca",     pj:8,pg:3,pe:0,pp:5,gf:35, gc:5, pts:9},
         {n:"Tiro Federal",    cl:"tirofederal",   pj:9,pg:2,pe:2,pp:5,gf:19, gc:30, pts:8},
         {n:"Pacífico BB",     cl:"pacificobb",    pj:8,pg:3,pe:2,pp:4,gf:31, gc:42, pts:8},
-        {n:"Huracán",         cl:"huracan",       pj:9,pg:2,pe:1,pp:6,gf:17, gc:38, pts:7},
+        {n:"Huracán",         cl:"huracan",       pj:10,pg:2,pe:1,pp:7,gf:19, gc:42, pts:7},
         {n:"San Francisco",   cl:"sanfrancisco",  pj:8,pg:2,pe:1,pp:5,gf:15, gc:33, pts:7},
         {n:"Dep. Futsal",     cl:"depfutsal",     pj:7,pg:1,pe:2,pp:4,gf:17, gc:32, pts:5},
         {n:"Comercial",       cl:"comercial",     pj:9,pg:0,pe:2,pp:7,gf:22, gc:37, pts:2}
@@ -16021,7 +16037,7 @@ if ((p.goles_l && p.goles_l.length) || (p.goles_v && p.goles_v.length)) {
     });
     html += `</tbody></table>`;
     if (modo === 'principal') {
-        html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'><b>(X)</b> Ya eliminado - <b>*</b> Se le descontaron tres puntos - 📌 Puntos en juego: <b>12</b> para quienes hayan completado todos los partidos hasta la fecha <b>9</b></div>`;
+        html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'><b>(X)</b> Ya eliminado<br><b>*</b> Se le descontaron tres puntos<br>📌 Puntos en juego: <b>12</b> para quienes hayan completado todos los partidos hasta la fecha <b>9</b></div>`;
     } else if (modo === 'reserva') {
         html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>12</b> para quienes hayan completado todos los partidos hasta la fecha <b>9</b></div>`;
     }
@@ -16029,15 +16045,16 @@ if ((p.goles_l && p.goles_l.length) || (p.goles_v && p.goles_v.length)) {
 }
 
 const BD_GOLEADORES_FUTSAL = [
-    { club: "Dublin",          clase: "dublin",        act: "fecha 9",  goleadores: [
-        { nombre: "Agustín Miguel",      goles: 8 },
+    { club: "Dublin",          clase: "dublin",        act: "fecha 10",  goleadores: [
+        { nombre: "Agustín Miguel",      goles: 10 },
+        { nombre: "Rodrigo Gómez",       goles: 5 },
         { nombre: "Jesús Lucarelli",     goles: 3 },
         { nombre: "Matías Gigena",       goles: 3 },
         { nombre: "Matías Palma",        goles: 2 },
-        { nombre: "Rodrigo Gómez",       goles: 2 },
-        { nombre: "Nicolás San Martín",  goles: 1 },
-        { nombre: "Facundo Miranda",     goles: 1 },
-        { nombre: "Nicolás San Martín",     goles: 1 }
+        { nombre: "Nicolás San Martín",  goles: 2 },
+        { nombre: "Facundo Miranda",     goles: 2 },
+        { nombre: "Alejandro Bernal",     goles: 1 },
+        { nombre: "Matías Fonollosa",     goles: 1 }
     ]},
     { club: "Villa Mitre",     clase: "villamitre",    act: "-",       goleadores: [
         { nombre: "Agustín Pullini",      goles: 2 },
