@@ -16368,8 +16368,8 @@ const BD_BONAERENSE_PROMO = {
     },
     grupo2: {
         posiciones: [
-            { n: "SyD Argentinos del Sud", cl: "sydargentinos", pj: 2, pg: 2, pe: 0, pp: 0, gf: 7, gc: 2, pts: 6 },
-            { n: "Puerto Futsal",          cl: "puertofutsal",  pj: 3, pg: 1, pe: 0, pp: 2, gf: 14, gc: 14, pts: 3 },
+            { n: "SyD Argentinos del Sud", cl: "sydargentinos", pj: 3, pg: 3, pe: 0, pp: 0, gf: 10, gc: 4, pts: 9 },
+            { n: "Puerto Futsal",          cl: "puertofutsal",  pj: 4, pg: 1, pe: 0, pp: 3, gf: 16, gc: 17, pts: 3 },
             { n: "2 de Julio",             cl: "dedejulio",     pj: 3, pg: 1, pe: 0, pp: 2, gf: 11, gc: 16, pts: 3 }
         ]
     },
