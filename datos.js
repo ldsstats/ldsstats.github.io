@@ -1581,7 +1581,7 @@ BD_FIXTURES.federala.posiciones.find(f => f.fecha === 10).partidos = [
     {l:"Villa Mitre",   v:"Kimberley",       gl:0, gv:0, dia:"Lun 25/05", hora:"15:00"}
 ];
 BD_FIXTURES.federala.posiciones.find(f => f.fecha === 11).partidos = [
-    {l:"Kimberley",   v:"Germinal", gl:null, gv:null, dia:"Sáb 30/05", hora:"15:30", goles_l:[], goles_v:[]},
+    {l:"Kimberley",   v:"Germinal", gl:1, gv:0, dia:"Sáb 30/05", hora:"15:30", goles_l:["Santiago Castillo"], goles_v:[]},
     {l:"Círculo Dep.",      v:"Villa Mitre",          gl:null, gv:null, dia:"Dom 31/05", hora:"15:00", goles_l:[], goles_v:[]},
     {l:"Guillermo Brown",      v:"Alvarado",     gl:null, gv:null, dia:"Dom 31/05", hora:"15:00", goles_l:[], goles_v:[]},
     {l:"Sol de Mayo",   v:"Santamarina",       gl:null, gv:null, dia:"Dom 31/05", hora:"15:00", goles_l:[], goles_v:[]}
