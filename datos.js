@@ -1196,12 +1196,12 @@ const BD_FIXTURES_FUTSAL = [
 
 const idaSub15Fem = [
     { fecha: 1, partidos: [
-        {l:"La Armonía",            v:"Sporting",         gl:3, gv:0, dia:"Sáb 28/03", hora:"11:00"},
-        {l:"Empleados de Comercio", v:"Bella Vista",      gl:0, gv:4, dia:"Dom 29/03", hora:"10:00"},
-        {l:"Villa Mitre",           v:"Tiro Federal",     gl:1, gv:2, dia:"Dom 29/03", hora:"15:00"},
-        {l:"Libertad",              v:"Huracán",          gl:0, gv:8, dia:"Dom 29/03", hora:"16:00"},
-        {l:"Olimpo",                v:"Liniers",          gl:0, gv:12, dia:"Dom 29/03", hora:"14:00"},
-        {l:"San Francisco",         v:"Juventud Unida",   gl:0, gv:3, dia:"Dom 29/03", hora:"10:00"},
+        {l:"La Armonía",            v:"Sporting",         gl:3, gv:0},
+        {l:"Empleados de Comercio", v:"Bella Vista",      gl:0, gv:4},
+        {l:"Villa Mitre",           v:"Tiro Federal",     gl:1, gv:2},
+        {l:"Libertad",              v:"Huracán",          gl:0, gv:8},
+        {l:"Olimpo",                v:"Liniers",          gl:0, gv:12},
+        {l:"San Francisco",         v:"Juventud Unida",   gl:0, gv:3},
     ]},
     { fecha: 2, partidos: [
         {l:"Sporting",              v:"Empleados de Comercio", gl:2, gv:1},
@@ -1260,7 +1260,7 @@ const idaSub15Fem = [
         {l:"La Armonía",            v:"Libertad",         gl:2, gv:0}
     ]},
     { fecha: 9, partidos: [
-        {l:"Huracán",               v:"San Francisco",    gl:null, gv:null},
+        {l:"Huracán",               v:"San Francisco",    gl:1, gv:2},
         {l:"Liniers",               v:"Juventud Unida",   gl:null, gv:null},
         {l:"Bella Vista",           v:"Villa Mitre",      gl:null, gv:null},
         {l:"Libertad",              v:"Empleados de Comercio", gl:null, gv:null},
@@ -16316,13 +16316,14 @@ const BD_BONAERENSE_SUR = {
         { n: "Def. Villa Clelia <b>(X)</b>", cl: "defvillaclelia",   pj: 5, pg: 0, pe: 2, pp: 3, gf: 16, gc: 27, pts: 2 }
     ],
     goleadores: [
-    { nombre: "Bruno Decoud",          equipo: "La Esperanza",   goles: 4 },
+    { nombre: "Bruno Decoud",          equipo: "La Esperanza",   goles: 5 },
+    { nombre: "Emiliano Etchepareborda", equipo: "La Esperanza", goles: 3 },
     { nombre: "Alexis Vera",           equipo: "La Esperanza",   goles: 2 },
-    { nombre: "Emiliano Etchepareborda", equipo: "La Esperanza", goles: 2 },
     { nombre: "Daniel Cheiles",          equipo: "Los 3 Chiflados",   goles: 2 },
     { nombre: "Lino Bognanini",          equipo: "Los 3 Chiflados",   goles: 2 },
     { nombre: "Jesús Abdala",          equipo: "La Esperanza",   goles: 1 },
-    { nombre: "Andrés Haidt",          equipo: "La Esperanza",   goles: 1 }
+    { nombre: "Andrés Haidt",          equipo: "La Esperanza",   goles: 1 },
+    { nombre: "Rodrigo Decoud",          equipo: "La Esperanza",   goles: 1 }
 ]};
 
 function generarFutsalBonaerense() {
