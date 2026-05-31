@@ -1602,7 +1602,7 @@ BD_FIXTURES.femenino.apertura.find(f => f.fecha === 9).partidos = [
     {l:"Sporting", v:"Bella Vista", gl:4, gv:1, dia:"Lun 25/05", hora:"17:30", goles_l:["Sofía Mattos","Sofía Mattos","Lucía Aranda","Yazmín Fehrenbacher"], goles_v:["Victoria Toloza"]}
 ];
 BD_FIXTURES.femenino.apertura.find(f => f.fecha === 10).partidos = [
-    {l:"Tiro Federal", v:"Municipales", gl:3, gv:2, dia:"Sáb 30/05", hora:"15:30", goles_l:[], goles_v:[]},
+    {l:"Tiro Federal", v:"Municipales", gl:3, gv:2, dia:"Sáb 30/05", hora:"15:30", goles_l:["Abril Sáenz","Abril Sáenz","Gabriela Cabrera"], goles_v:["Luana Villanueva","Victoria Nervi"]},
     {l:"Libertad", v:"La Armonía", gl:null, gv:null, dia:"Dom 31/05", hora:"15:30", goles_l:[], goles_v:[]},
     {l:"Bella Vista", v:"Empleados de Comercio", gl:null, gv:null, dia:"Dom 31/05", hora:"15:30", goles_l:[], goles_v:[]},
     {l:"Villa Mitre", v:"Sporting", gl:null, gv:null, dia:"Dom 31/05", hora:"15:30", goles_l:[], goles_v:[]}
