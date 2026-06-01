@@ -1434,7 +1434,7 @@ BD_FIXTURES.oficial.apertura.find(f => f.fecha === 10).partidos = [
     {l:"San Francisco",    v:"Sporting", gl:1, gv:0, dia:"Dom 31/05", hora:"15:00", goles_l:["Juan Romero"], goles_v:[]},
     {l:"La Armonía",    v:"Liniers", gl:0, gv:0, dia:"Dom 31/05", hora:"15:00", goles_l:[], goles_v:[]},
     {l:"Bella Vista",    v:"Libertad", gl:2, gv:0, dia:"Dom 31/05", hora:"15:00", goles_l:["Gabino Bellegia","Rodrigo Gómez"], goles_v:[]},
-    {l:"Huracán",    v:"Villa Mitre", gl:null, gv:null, dia:"Lun 01/06", hora:"15:00", goles_l:[], goles_v:[]},
+    {l:"Huracán",    v:"Villa Mitre", gl:0, gv:0, dia:"Lun 01/06", hora:"15:00", goles_l:[], goles_v:[]},
 ];
 
 // Reserva Oficial
@@ -2046,7 +2046,7 @@ function generarTablaFederal() {
         { nombre: "Germinal", pj:10, pg:3, pe:4, pp:3, gf:6, gc:6 },
         { nombre: "Tucumán Central", pj:10, pg:4, pe:1, pp:5, gf:8, gc:10 }
     ];
-    html += `</tbody></table><div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>24</b> para quienes tengan 8 partidos jugados y <b>21</b> para quienes tengan 9 partidos jugados y</div>`;
+    html += `</tbody></table><div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>21</b> para quienes tengan 9 partidos jugados y <b>18</b> para quienes tengan 10 partidos jugados</div>`;
     html += `<div class="header-t">MEJORES 5° (ZONAS 2, 3 Y 4)</div>`;
     html += `<table><thead><tr><th style="width:25px;">#</th><th style="text-align:left;padding-left:8px;">Equipo</th><th class="c-stat">PJ</th><th class="c-stat">PG</th><th class="c-stat">PE</th><th class="c-stat">PP</th><th class="c-stat">GF</th><th class="c-stat">GC</th><th class="c-stat">Dif</th><th class="c-stat">Pts</th></tr></thead><tbody>`;
     mejoresQuintos.forEach((e, i) => {
@@ -15754,7 +15754,7 @@ function generarReserva(cat) {
         });
         html += `</tbody></table>`;
         if (cat === 'oficial') {
-            html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>18</b> tras finalizar la fecha <b>8</b></div>`;
+            html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>15</b> tras finalizar la fecha <b>9</b></div>`;
         } else if (cat === 'promocional') {
             html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>15</b> tras finalizar la fecha <b>9</b></div>`;
         } else if (cat === 'femenino') {
@@ -16037,7 +16037,7 @@ function generarSub15Fem() {
         </tr>`;
     });
     html += `</tbody></table>`;
-    html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>8</b> tras la finalización de la fecha <b>8</b></div>`;
+    html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>6</b> tras la finalización de la fecha <b>9</b></div>`;
     return html;
 }
 
@@ -16107,7 +16107,7 @@ if ((p.goles_l && p.goles_l.length) || (p.goles_v && p.goles_v.length)) {
     });
     html += `</tbody></table>`;
     if (modo === 'principal') {
-        html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'><b>(X)</b> Ya eliminado<br><b>*</b> Se le descontaron tres puntos<br>📌 Puntos en juego: <b>12</b> para quienes hayan completado todos los partidos hasta la fecha <b>9</b></div>`;
+        html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'><b>(X)</b> Ya eliminado<br><b>*</b> Se le descontaron tres puntos<br>📌 Puntos en juego: <b>9</b> para quienes hayan completado todos los partidos hasta la fecha <b>10</b></div>`;
     } else if (modo === 'reserva') {
         html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>9</b> para quienes hayan completado todos los partidos hasta la fecha <b>10</b></div>`;
     }
@@ -17572,7 +17572,8 @@ const BD_ARQUEROS = {
             { rival: "Sporting",    resultado: "Huracán 3 - 0 Sporting",    fecha: 2 },
             { rival: "Villa Mitre", resultado: "Villa Mitre 0 - 1 Huracán", fecha: 3 },
             { rival: "Liniers", resultado: "Huracán 1 - 0 Liniers", fecha: 5 },
-            { rival: "San Francisco", resultado: "San Francisco 0 - 0 Huracán", fecha: 6 }
+            { rival: "San Francisco", resultado: "San Francisco 0 - 0 Huracán", fecha: 6 },
+            { rival: "Villa Mitre", resultado: "Huracán 0 - 0 Villa Mitre", fecha: 10 }
         ]},
         { jugador: "Francisco Martínez", equipo: "Bella Vista", partidos: [
             { rival: "Libertad", resultado: "Libertad 0 - 0 Bella Vista", fecha: 3 },
@@ -17591,7 +17592,8 @@ const BD_ARQUEROS = {
         { jugador: "Tomás Manganaro", equipo: "Villa Mitre", partidos: [
             { rival: "Liniers",    resultado: "Villa Mitre 2 - 0 Liniers",    fecha: 1 },
             { rival: "La Armonía", resultado: "La Armonía 0 - 4 Villa Mitre", fecha: 2 },
-            { rival: "San Francisco", resultado: "Villa Mitre 1 - 0 San Francisco", fecha: 4 }
+            { rival: "San Francisco", resultado: "Villa Mitre 1 - 0 San Francisco", fecha: 4 },
+            { rival: "Huracán", resultado: "Huracán 0 - 0 Villa Mitre", fecha: 10 }
         ]},
         { jugador: "Facundo Tavoliere", equipo: "Sporting", partidos: [
             { rival: "Bella Vista", resultado: "Sporting 3 - 0 Bella Vista", fecha: 4 },
@@ -17813,10 +17815,10 @@ function generarPerfilJugador(jugador, equipo) {
 const BD_POSICIONES = {
     oficial: {
         apertura: [
-            { nombre: "Huracán",       clase: "huracan",      pj:9, pg:6, pe:2, pp:1, gf:18, gc:10,  pts:20 },
+            { nombre: "Huracán",       clase: "huracan",      pj:10, pg:6, pe:3, pp:1, gf:18, gc:10,  pts:21 },
             { nombre: "Libertad",      clase: "libertad",     pj:10, pg:4, pe:4, pp:2, gf:12, gc:10,  pts:16 },
             { nombre: "Bella Vista",   clase: "bellavista",   pj:10, pg:4, pe:3, pp:3, gf:12, gc:9,  pts:15 },
-            { nombre: "Villa Mitre",   clase: "villamitre",   pj:9, pg:4, pe:1, pp:4, gf:11, gc:10,  pts:13 },
+            { nombre: "Villa Mitre",   clase: "villamitre",   pj:10, pg:4, pe:2, pp:4, gf:11, gc:10,  pts:14 },
             { nombre: "Liniers",       clase: "liniers",      pj:10, pg:3, pe:4, pp:3, gf:8, gc:6,  pts:13 },
             { nombre: "La Armonía",    clase: "laarmonia",    pj:10, pg:3, pe:2, pp:5, gf:12, gc:18,  pts:11 },
             { nombre: "San Francisco", clase: "sanfrancisco", pj:10, pg:2, pe:3, pp:5, gf:7, gc:13,  pts:9 },
@@ -17906,10 +17908,10 @@ function generarTabla(tor, cat) {
         html += `<tr class="${cl}"><td class="c-pos">${i+1}</td><td class="c-equipo">${e.nombre}</td><td class="c-stat">${e.pj}</td><td class="c-stat">${e.pg}</td><td class="c-stat">${e.pe}</td><td class="c-stat">${e.pp}</td><td class="c-stat">${e.gf}</td><td class="c-stat">${e.gc}</td><td class="c-stat">${e.gf-e.gc}</td><td class="c-stat"><b>${e.pts}</b></td></tr>`;
     });
     if (tor === 'apertura' && cat === 'oficial') {
-        return html + "</tbody></table><div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>15</b> tras finalizar la fecha <b>9</b></div>";
+        return html + "</tbody></table><div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>12</b> tras finalizar la fecha <b>10</b></div>";
     }
     if (tor === 'apertura' && cat === 'promocional') {
-        return html + "</tbody></table><div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>15</b> tras finalizar la fecha <b>9</b></div>";
+        return html + "</tbody></table><div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>12</b> tras finalizar la fecha <b>10</b></div>";
     }
     if (tor === 'apertura' && cat === 'femenino') {
         return html + "</tbody></table><div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>12</b> tras finalizar la fecha <b>10</b></div>";
