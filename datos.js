@@ -1768,7 +1768,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 10).partidos.forEach(p
 });
 
 
-let diaSeleccionadoHome = "2026-06-01"; 
+let diaSeleccionadoHome = "2026-06-02"; 
 
 function seleccionarDiaHome(dia) {
     diaSeleccionadoHome = dia;
@@ -1788,107 +1788,37 @@ const BD_FECHA_META = {
 
 function generarHome() {
     const agenda = [
-        { id: "2026-05-25", label: "LUN 25/05", torneos: [
-            { nombre: "OFICIAL", cat: "oficial", partidos: [
-                {l:"Sporting", v:"Huracán", hora:"15:00"},
-                {l:"Libertad", v:"San Francisco", hora:"15:00"}
+        { id: "2026-06-02", label: "MAR 02/06", torneos: [
+            { nombre: "FUTSAL", cat: "futsal", partidos: [
+                {l:"La Esperanza", v:"Villa Mitre", hora:"22:00", nota:"en cancha de Don Bosco"}
             ]},
-            { nombre: "1°FEMENINO", cat: "femenino", partidos: [
-                {l:"Empleados de Comercio", v:"Libertad", hora:"15:30"},
-                {l:"Sporting", v:"Bella Vista", hora:"17:30"}
-            ]},
-            { nombre: "2°FEMENINO (PARTIDOS REPROGRAMADOS)", cat: "segundafemenino", partidos: [
-                {l:"San Francisco", v:"Liniers", hora:"15:30"},
-                {l:"Sansinena", v:"Pacífico (C)", hora:"16:00"},
-                {l:"Estrella de Oro", v:"Petroquímicos", hora:"16:30"}
-            ]},
-            { nombre: "SUB 15 FEMENINO", cat: "sub15fem", partidos: [
-                {l:"Empleados de Comercio", v:"Liniers", hora:"10:30"}
-            ]},
-            { nombre: "FEDERAL A", cat: "federala", partidos: [
-                {l:"Villa Mitre", v:"Kimberley", hora:"15:00"}
-            ]},
-        ]},
-        { id: "2026-05-26", label: "MAR 26/05", torneos: [
             { nombre: "SENIOR", cat: "seniorapertura", partidos: [
-                {l:"Bella Vista", v:"Sansinena", hora:"20:00", nota:"en cancha de Empleados de Comercio", gl:3, gv:1},
-                {l:"Tiro Federal", v:"Comercial", hora:"20:00", nota:"en cancha de Tiro Federal", gl:2, gv:2},
-                {l:"Libertad", v:"San Francisco", hora:"20:00", nota:"en cancha de Libertad", gl:3, gv:0},
-                {l:"Pacífico (C)", v:"Huracán", hora:"21:30", nota:"en cancha de Empleados de Comercio", gl:4, gv:8},
-                {l:"Sporting", v:"Pacífico BB", hora:"21:30", nota:"en cancha de Sporting", gl:1, gv:0}
+                {l:"Huracán", v:"Libertad", hora:"20:00", nota:"en cancha de Libertad"},
+                {l:"San Francisco", v:"Tiro Federal", hora:"20:00", nota:"en cancha de Empleados de Comercio"},
+                {l:"Sansinena", v:"Sporting", hora:"21:00", nota:"en cancha de Sansinena"},
+                {l:"Comercial", v:"Bella Vista", hora:"21:30", nota:"en cancha de Libertad"},
+                {l:"Pacífico BB", v:"Pacífico (C)", hora:"21:30", nota:"en cancha de Empleados de Comercio"}
             ]},
         ]},
-        { id: "2026-05-27", label: "MIÉR 27/05", torneos: [
+        { id: "2026-06-03", label: "MÍER 03/06", torneos: [
             { nombre: "FUTSAL", cat: "futsal", partidos: [
-                {l:"La Esperanza", v:"Comercial", hora:"22:00", nota:"en cancha de Don Bosco", gl:5, gv:4}
+                {l:"Dep. Futsal", v:"Dublin", hora:"22:00", nota:"en La Curtiembre"},
+                {l:"Comercial", v:"La Estación", hora:"22:00", nota:"en cancha de Comercial"}
             ]},
         ]},
-        { id: "2026-05-28", label: "JUE 28/05", torneos: [
+            { id: "2026-06-04", label: "JUE 04/06", torneos: [
             { nombre: "FUTSAL", cat: "futsal", partidos: [
-                {l:"Dublin", v:"Huracán", hora:"22:00", nota:"en cancha de Don Bosco", gl:8, gv:1}
+                {l:"Huracán", v:"Liniers", hora:"22:30", nota:"en La Estación"}
+            ]},
+            { nombre: "SENIOR (REPROGRAMADO)", cat: "seniorapertura", partidos: [
+                {l:"Pacífico BB", v:"Bella Vista", hora:"21:00", nota:"en cancha de Bella Vista"}
             ]},
         ]},
-        { id: "2026-05-29", label: "VIE 29/05", torneos: [
+        { id: "2026-06-05", label: "VIE 05/06", torneos: [
             { nombre: "FUTSAL", cat: "futsal", partidos: [
-                {l:"Pacífico BB", v:"Petroquímicos", hora:"22:00", nota:"en cancha de Don Bosco", gl:6, gv:3},
-                {l:"Tiro Federal", v:"San Francisco", hora:"22:30", nota:"en cancha de Tiro Federal", gl:5, gv:5}
-            ]},
-            { nombre: "FUTSAL BONAERENSE - PROMOCIONAL", cat: "futsalbonaerensepromocional", partidos: [
-                {l:"La Estación", v:"Villa Mitre", hora:"20:30", nota:"en La Curtiembre", gl:5, gv:4}
-            ]},
-            { nombre: "FUTSAL BONAERENSE - ASCENSO", cat: "futsalbonaerense", partidos: [
-                {l:"Los 3 Chiflados", v:"La Esperanza", hora:"22:15", nota:"en La Curtiembre", gl:2, gv:3}
-            ]},
-        ]},
-        { id: "2026-05-30", label: "SÁB 30/05", torneos: [
-            { nombre: "PROMOCIONAL", cat: "promocional", partidos: [
-                {l:"Olimpo", v:"Comercial", hora:"15:00", nota:"en cancha de San Francisco"}
-            ]},
-            { nombre: "1° FEMENINO", cat: "femenino", partidos: [
-                {l:"Tiro Federal", v:"Municipales", hora:"15:30"}
-            ]},
-            { nombre: "2° FEMENINO", cat: "segundafemenino", partidos: [
-                {l:"Petroquímicos", v:"Pacífico (C)", hora:"15:30", nota:"en cancha de Sansinena"},
-            ]},
-            { nombre: "SUB 15 FEMENINO", cat: "sub15fem", partidos: [
-                {l:"Huracán", v:"San Francisco", hora:"11:00"},
-                {l:"Liniers", v:"Juventud Unida", hora:"15:00"},
-                {l:"Bella Vista", v:"Villa Mitre", hora:"16:00"},
-            ]},
-        ]},
-        { id: "2026-05-31", label: "DOM 31/05", torneos: [
-            { nombre: "OFICIAL", cat: "oficial", partidos: [
-                {l:"San Francisco", v:"Sporting", hora:"15:00"},
-                {l:"La Armonía", v:"Liniers", hora:"15:00"},
-                {l:"Bella Vista", v:"Libertad", hora:"15:00"}
-            ]},
-            { nombre: "PROMOCIONAL", cat: "promocional", partidos: [
-                {l:"Dublin", v:"Sansinena", hora:"15:00", nota:"en cancha de Comercial"},
-                {l:"Pacífico (C)", v:"Pacífico BB", hora:"15:00"},
-                {l:"Rosario PB", v:"Tiro Federal", hora:"15:00"}
-            ]},
-            { nombre: "1° FEMENINO", cat: "femenino", partidos: [
-                {l:"Bella Vista", v:"Empleados de Comercio", hora:"15:30"},
-                {l:"Villa Mitre", v:"Sporting", hora:"15:30"},
-                {l:"Libertad", v:"La Armonía", hora:"15:30"}
-            ]},
-            { nombre: "2° FEMENINO", cat: "segundafemenino", partidos: [
-                {l:"Estrella de Oro", v:"Liniers", hora:"15:30", nota:"en cancha de Municipales"},
-                {l:"Olimpo", v:"Rosario PB", hora:"15:30"},
-                {l:"Sansinena", v:"San Francisco", hora:"15:30"},
-            ]},
-            { nombre: "SUB 15 FEMENINO", cat: "sub15fem", partidos: [
-                {l:"Libertad", v:"Empleados de Comercio", hora:"10:30"},
-                {l:"Olimpo", v:"La Armonía", hora:"12:30"},
-                {l:"Sporting", v:"Tiro Federal", hora:"15:00"},
-            ]},
-            { nombre: "FEDERAL A", cat: "federala", partidos: [
-                {l:"Círculo Dep.", v:"Villa Mitre", hora:"15:00"}
-            ]},
-        ]},
-        { id: "2026-06-01", label: "LUN 01/06", torneos: [
-            { nombre: "OFICIAL", cat: "oficial", partidos: [
-                {l:"Huracán", v:"Villa Mitre", hora:"15:00", nota:"en cancha de San Francisco"}
+                {l:"Petroquímicos", v:"Catamarca", hora:"22:00", nota:"en Petroquímicos"},
+                {l:"Los 3 Chiflados", v:"Tiro Federal", hora:"22:00", nota:"en La Curtiembre"},
+                {l:"San Francisco", v:"Pacífico BB", hora:"22:30", nota:"en Tiro Federal"}
             ]},
         ]},
 ];
