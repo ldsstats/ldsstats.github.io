@@ -1497,7 +1497,7 @@ BD_FIXTURES.oficial.reserva.push(
         {l:"Bella Vista",   v:"Libertad",   gl:0, gv:2},
         {l:"San Francisco",   v:"Sporting",   gl:0, gv:0},
         {l:"La Armonía",   v:"Liniers",   gl:3, gv:1},
-        {l:"Huracán",   v:"Villa Mitre",   gl:null, gv:null}
+        {l:"Huracán",   v:"Villa Mitre",   gl:1, gv:1}
     ]},
 );
 
@@ -1561,7 +1561,7 @@ BD_FIXTURES.promocional.reserva.push(
         {l:"Dublin",      v:"Sansinena",          gl:2,   gv:3},
         {l:"Pacífico (C)", v:"Pacífico BB",              gl:1,   gv:1},
         {l:"Rosario PB",v:"Tiro Federal",           gl:1,   gv:0},
-        {l:"Olimpo",   v:"Comercial", gl:null,   gv:null}
+        {l:"Olimpo",   v:"Comercial", gl:2,   gv:1}
     ]},
 );
 
@@ -1799,6 +1799,12 @@ function generarHome() {
                 {l:"Comercial", v:"Bella Vista", hora:"21:30", nota:"en cancha de Libertad"},
                 {l:"Pacífico BB", v:"Pacífico (C)", hora:"21:30", nota:"en cancha de Empleados de Comercio"}
             ]},
+            { nombre: "RESERVA OFICIAL", cat: "reserva_oficial", partidos: [
+                {l:"Huracán", v:"Villa Mitre", hora:"15:00", gl: 1, gv: 1}
+            ]},
+            { nombre: "RESERVA PROMOCIONAL", cat: "reserva_promocional", partidos: [
+                {l:"Olimpo", v:"Comercial", hora:"15:00", gl: 2, gv: 1}
+            ]},
         ]},
         { id: "2026-06-03", label: "MÍER 03/06", torneos: [
             { nombre: "FUTSAL", cat: "futsal", partidos: [
@@ -1819,6 +1825,11 @@ function generarHome() {
                 {l:"Petroquímicos", v:"Catamarca", hora:"22:00", nota:"en Petroquímicos"},
                 {l:"Los 3 Chiflados", v:"Tiro Federal", hora:"22:00", nota:"en La Curtiembre"},
                 {l:"San Francisco", v:"Pacífico BB", hora:"22:30", nota:"en Tiro Federal"}
+            ]},
+        ]},
+        { id: "2026-06-06", label: "SÁB 06/06", torneos: [
+            { nombre: "FUTSAL BONAERENSE - ASCENSO", cat: "futsalbonaerense", partidos: [
+                {l:"La Esperanza", v:"Banco Provincia", hora:"15:30", nota:"en La Curtiembre"}
             ]},
         ]},
 ];
@@ -15628,14 +15639,14 @@ function generarReserva(cat) {
         'oficial':    [{n:"Sporting",      cl:"sporting",     pj:10, pg:6, pe:4, pp:0, gf:19, gc:9, pts:22},
                        {n:"Libertad",      cl:"libertad",     pj:10, pg:4, pe:3, pp:3, gf:15, gc:11, pts:15},
                        {n:"La Armonía",    cl:"laarmonia",    pj:10, pg:4, pe:3, pp:3, gf:18, gc:11, pts:15},
-                       {n:"Bella Vista",   cl:"bellavista",   pj:9, pg:3, pe:4, pp:3, gf:16, gc:19, pts:13},
-                       {n:"Villa Mitre",   cl:"villamitre",   pj:10, pg:4, pe:1, pp:5, gf:20, gc:16, pts:13},
+                       {n:"Villa Mitre",   cl:"villamitre",   pj:10, pg:4, pe:1, pp:5, gf:20, gc:16, pts:14},
+                       {n:"Bella Vista",   cl:"bellavista",   pj:10, pg:3, pe:4, pp:3, gf:16, gc:19, pts:13},
                        {n:"San Francisco", cl:"sanfrancisco", pj:10, pg:3, pe:2, pp:5, gf:16, gc:16, pts:12},
-                       {n:"Liniers",       cl:"liniers",      pj:9, pg:2, pe:3, pp:4, gf:9, gc:12, pts:9},
-                       {n:"Huracán",       cl:"huracan",      pj:9, pg:1, pe:3, pp:5, gf:9, gc:28, pts:6}],
-        'promocional':[                       {n:"Olimpo",              cl:"olimpo",           pj:9, pg:6, pe:1, pp:2, gf:17, gc:9, pts:19},
+                       {n:"Liniers",       cl:"liniers",      pj:10, pg:2, pe:3, pp:5, gf:10, gc:15, pts:9},
+                       {n:"Huracán",       cl:"huracan",      pj:10, pg:1, pe:4, pp:5, gf:9, gc:28, pts:7}],
+        'promocional':[                       {n:"Olimpo",              cl:"olimpo",           pj:10, pg:7, pe:1, pp:2, gf:19, gc:10, pts:22},
                        {n:"Tiro Federal",        cl:"tirofederal",      pj:10, pg:5, pe:3, pp:2, gf:22, gc:17, pts:18},
-                       {n:"Comercial",           cl:"comercial",        pj:9, pg:4, pe:5, pp:0, gf:13, gc:8, pts:17},
+                       {n:"Comercial",           cl:"comercial",        pj:10, pg:4, pe:5, pp:1, gf:14, gc:10, pts:17},
                        {n:"Rosario PB",          cl:"rosariopb",        pj:10, pg:4, pe:3, pp:3, gf:12, gc:7, pts:15},
                        {n:"Sansinena",           cl:"sansinena",        pj:10, pg:4, pe:1, pp:5, gf:12, gc:20, pts:13},
                        {n:"Pacífico BB",         cl:"pacificobb",       pj:10, pg:2, pe:4, pp:4, gf:10, gc:13, pts:10},
@@ -17764,7 +17775,7 @@ const BD_POSICIONES = {
             { nombre: "Rosario PB",          clase: "rosariopb",       pj:10, pg:3, pe:5, pp:2, gf:17, gc:16, pts:14 },
             { nombre: "Olimpo",              clase: "olimpo",          pj:10, pg:3, pe:4, pp:3, gf:11, gc:9, pts:13 },
             { nombre: "Pacífico BB",         clase: "pacificobb",      pj:10, pg:1, pe:4, pp:5, gf:7, gc:15, pts: 7},
-            { nombre: "Pacífico (C)",        clase: "pacificocabildo", pj:10, pg:0, pe:5, pp:5, gf:13, gc:20, pts:5 }
+            { nombre: "Pacífico (C)",        clase: "pacificocabildo", pj:10, pg:0, pe:5, pp:5, gf:13, gc:19, pts:5 }
         ]
     },
     femenino: {
