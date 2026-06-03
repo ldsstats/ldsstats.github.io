@@ -1125,7 +1125,21 @@ const BD_FIXTURES_FUTSAL = [
         {l:"Los 3 Chiflados", v:"La Esperanza",    gl:null, gv:null}
     ]},
     { fecha: 10, partidos: [
-        {l:"La Esperanza",    v:"Comercial",       gl:5, gv:4},
+        {
+            l:"La Esperanza",
+            v:"Comercial",
+            gl:5,
+            gv:4,
+            dia:"Miér 27/05",
+            hora:"22:00",
+            goles_l:[
+                "Alexis Vera (3)",
+                "Rodrigo Decoud (2)",
+                "Bruno Decoud"
+                ],
+            goles_v:[
+                ],
+        },
         {
             l:"Dublin",
             v:"Huracán",
@@ -1164,7 +1178,7 @@ const BD_FIXTURES_FUTSAL = [
         {l:"Catamarca",       v:"Dep. Futsal",     gl:null, gv:null}
     ]},
     { fecha: 11, partidos: [
-        {l:"La Esperanza",    v:"Villa Mitre",     gl:null, gv:null},
+        {l:"La Esperanza",    v:"Villa Mitre",     gl:7, gv:3},
         {l:"Los 3 Chiflados", v:"Tiro Federal",    gl:null, gv:null},
         {l:"San Francisco",   v:"Pacífico BB",     gl:null, gv:null},
         {l:"Dep. Futsal",     v:"Dublin",          gl:null, gv:null},
@@ -1790,12 +1804,12 @@ function generarHome() {
     const agenda = [
         { id: "2026-06-02", label: "MAR 02/06", torneos: [
             { nombre: "FUTSAL", cat: "futsal", partidos: [
-                {l:"La Esperanza", v:"Villa Mitre", hora:"22:00", nota:"en cancha de Don Bosco"}
+                {l:"La Esperanza", v:"Villa Mitre", hora:"22:00", nota:"en cancha de Don Bosco", gl: 7, gv: 3}
             ]},
             { nombre: "SENIOR", cat: "seniorapertura", partidos: [
-                {l:"Huracán", v:"Libertad", hora:"20:00", nota:"en cancha de Libertad"},
+                {l:"Huracán", v:"Libertad", hora:"20:00", nota:"en cancha de Libertad", gl: 3, gv: 2},
                 {l:"San Francisco", v:"Tiro Federal", hora:"20:00", nota:"en cancha de Empleados de Comercio"},
-                {l:"Sansinena", v:"Sporting", hora:"21:00", nota:"en cancha de Sansinena"},
+                {l:"Sansinena", v:"Sporting", hora:"21:00", nota:"en cancha de Sansinena", gl: 3, gv: 1},
                 {l:"Comercial", v:"Bella Vista", hora:"21:30", nota:"en cancha de Libertad"},
                 {l:"Pacífico BB", v:"Pacífico (C)", hora:"21:30", nota:"en cancha de Empleados de Comercio"}
             ]},
@@ -15695,9 +15709,9 @@ function generarReserva(cat) {
         });
         html += `</tbody></table>`;
         if (cat === 'oficial') {
-            html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>15</b> tras finalizar la fecha <b>9</b></div>`;
+            html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>12</b> tras finalizar la fecha <b>10</b></div>`;
         } else if (cat === 'promocional') {
-            html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>15</b> tras finalizar la fecha <b>9</b></div>`;
+            html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>12</b> tras finalizar la fecha <b>10</b></div>`;
         } else if (cat === 'femenino') {
             html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>12</b> tras finalizar la fecha <b>10</b></div>`;
         } else if (cat === 'segundafemenino') {
@@ -15892,9 +15906,9 @@ function generarSub() {
 const BD_POS_FUTSAL = {
     principal: [
         {n:"La Estación",     cl:"laestacion",    pj:8,pg:8,pe:0,pp:0,gf:44, gc:15, pts:24},
-        {n:"La Esperanza",    cl:"laesperanza",   pj:8,pg:7,pe:0,pp:1,gf:36, gc:23, pts:21},
+        {n:"La Esperanza",    cl:"laesperanza",   pj:9,pg:8,pe:0,pp:1,gf:43, gc:26, pts:24},
         {n:"Los 3 Chiflados", cl:"los3chiflados", pj:8,pg:6,pe:1,pp:1,gf:56, gc:26, pts:19},
-        {n:"Villa Mitre",     cl:"villamitre",    pj:8,pg:6,pe:1,pp:1,gf:34, gc:23, pts:19},
+        {n:"Villa Mitre",     cl:"villamitre",    pj:9,pg:6,pe:1,pp:2,gf:37, gc:30, pts:19},
         {n:"Tiro Federal",    cl:"tirofederal",   pj:10,pg:4,pe:1,pp:5,gf:29, gc:30, pts:16},
         {n:"Liniers",         cl:"liniers",       pj:8,pg:4,pe:3,pp:1,gf:35, gc:27, pts:15},
         {n:"Pacífico BB",     cl:"pacificobb",    pj:9,pg:5,pe:0,pp:4,gf:42, gc:37, pts:15},
@@ -16155,16 +16169,16 @@ const BD_GOLEADORES_FUTSAL = [
         { nombre: "Dylan Schlebuch",     goles: 1 },
         { nombre: "Daniel Cheiles",     goles: 1 }
     ]},
-    { club: "La Esperanza",    clase: "laesperanza",   act: "fecha 8",  goleadores: [
-        { nombre: "Bruno Decoud",         goles: 10 },
-        { nombre: "Rodrigo Decoud",       goles: 3 },
+    { club: "La Esperanza",    clase: "laesperanza",   act: "fecha 10",  goleadores: [
+        { nombre: "Bruno Decoud",         goles: 11 },
+        { nombre: "Rodrigo Decoud",       goles: 5 },
         { nombre: "Benjamín Martínez",    goles: 3 },
         { nombre: "Bruno Cronier",        goles: 3 },
         { nombre: "Emiliano Etchepareborda",       goles: 3 },
+        { nombre: "Alexis Vera",  goles: 3 },
         { nombre: "Jesús Abdala",         goles: 2 },
         { nombre: "Alexis Guiñez",        goles: 2 },
-        { nombre: "Ignacio Cappelletti",  goles: 1 },
-        { nombre: "Alexis Vera",  goles: 1 }
+        { nombre: "Ignacio Cappelletti",  goles: 1 }
     ]},
     { club: "Huracán",         clase: "huracan",       act: null,       goleadores: [
         { nombre: "Kevin Vince",         goles: 1 },
@@ -16489,11 +16503,11 @@ function generarTablaPosBonaerense(pos) {
 }
 
 const BD_SENIOR_APERTURA = [
-    { n: "Sporting",          cl: "sporting",      pj: 5, pg: 5, pe: 0, pp: 0, gf: 12, gc: 2, pts: 15 },
-    { n: "Huracán",           cl: "huracan",       pj: 5, pg: 3, pe: 0, pp: 2, gf: 18, gc: 12, pts: 9 },
+    { n: "Sporting",          cl: "sporting",      pj: 6, pg: 5, pe: 0, pp: 1, gf: 13, gc: 5, pts: 15 },
+    { n: "Huracán",           cl: "huracan",       pj: 6, pg: 4, pe: 0, pp: 2, gf: 21, gc: 14, pts: 12 },
+    { n: "Sansinena",         cl: "sansinena",     pj: 6, pg: 3, pe: 1, pp: 2, gf: 10, gc: 7, pts: 10 },
     { n: "Bella Vista",       cl: "bellavista",    pj: 4, pg: 3, pe: 0, pp: 1, gf: 6, gc: 4, pts: 9 },
-    { n: "Sansinena",         cl: "sansinena",     pj: 5, pg: 2, pe: 1, pp: 2, gf: 7, gc: 6, pts: 7 },
-    { n: "Libertad",          cl: "libertad",      pj: 5, pg: 2, pe: 1, pp: 2, gf: 12, gc: 7, pts: 7 },
+    { n: "Libertad",          cl: "libertad",      pj: 6, pg: 2, pe: 1, pp: 3, gf: 14, gc: 10, pts: 7 },
     { n: "Comercial",         cl: "comercial",     pj: 5, pg: 2, pe: 1, pp: 2, gf: 10, gc: 10, pts: 7 },
     { n: "Pacífico (C)",      cl: "pacificoc",     pj: 5, pg: 2, pe: 0, pp: 3, gf: 9, gc: 17, pts: 6 },
     { n: "Pacífico BB",       cl: "pacificobb",    pj: 4, pg: 1, pe: 1, pp: 2, gf: 4, gc: 8, pts: 4 },
@@ -16537,14 +16551,20 @@ const BD_FIXTURES_SENIOR = [
         { l: "Tiro Federal",   v: "Comercial",  gl: 2, gv: 2, goles_l:["Juan José Dietz","Mauricio Oldani"], goles_v:["Luciano Bellini (e/c)","Jonathan Bravo de Laguna"] },
         { l: "Libertad",   v: "San Francisco",  gl: 3, gv: 0, goles_l:["Mariano Moreno","Gustavo Peña","Ariel Paredes"], goles_v:[] },
     ]},
-    { fecha: 6, libre: null, partidos: [] },
+    { fecha: 6, libre: null, partidos: [
+        { l: "Huracán",   v: "Libertad",  gl: 3, gv: 2, goles_l:["César Panduro","César Panduro","Omar Rivas"], goles_v:[] },
+        { l: "San Francisco",   v: "Tiro Federal",  gl: null, gv: null },
+        { l: "Sansinena",   v: "Sporting",  gl: 3, gv: 1 },
+        { l: "Comercial",   v: "Bella Vista",  gl: null, gv: null },
+        { l: "Pacífico BB",   v: "Pacífico (C)",  gl: null, gv: null },
+    ]},
     { fecha: 7, libre: null, partidos: [] },
     { fecha: 8, libre: null, partidos: [] },
     { fecha: 9, libre: null, partidos: [] }
 ];
 
 function generarSeniorApertura() {
-    const n = estado.fechaSenior || 5;
+    const n = estado.fechaSenior || 6;
     const f = BD_FIXTURES_SENIOR.find(x => x.fecha === n) || { partidos: [], libre: null };
     const equipos = BD_SENIOR_APERTURA.map(e => ({ nombre: e.n, clase: e.cl }));
 
@@ -16620,7 +16640,7 @@ function generarSeniorApertura() {
 }
 
 const BD_GOLEADORES_SENIOR = [
-    { nombre: "César Panduro", equipo: "Huracán", goles: 8 },
+    { nombre: "César Panduro", equipo: "Huracán", goles: 10 },
     { nombre: "Juan José Dietz", equipo: "Tiro Federal", goles: 6 },
     { nombre: "Felipe Hipperdinger", equipo: "Huracán", goles: 4 },
     { nombre: "Marcos Cossu", equipo: "Sporting", goles: 4 },
@@ -16649,6 +16669,7 @@ const BD_GOLEADORES_SENIOR = [
     { nombre: "Jonathan Bravo de Laguna", equipo: "Comercial", goles: 1 },
     { nombre: "Gabriel Brendel", equipo: "Huracán", goles: 1 },
     { nombre: "Javier Bicciconti", equipo: "Huracán", goles: 1 },
+    { nombre: "Omar Rivas", equipo: "Huracán", goles: 1 },
     { nombre: "Darío Dieser", equipo: "Libertad", goles: 1 },
     { nombre: "Nicolás Herrera", equipo: "Libertad", goles: 1 },
     { nombre: "Rodrigo García", equipo: "Libertad", goles: 1 },
