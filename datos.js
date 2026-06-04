@@ -16131,7 +16131,7 @@ const BD_GOLEADORES_FUTSAL = [
     ]},
     { club: "Tiro Federal", clase: "tirofederal", act: "-", goleadores: [
         { nombre: "Nicolás Romano",      goles: 6 },
-        { nombre: "Alejandro Saldívar",  goles: 5 },
+        { nombre: "Alejandro Saldívar",  goles: 6 },
         { nombre: "Marcelo Aguirre",     goles: 3 },
         { nombre: "Rocco Iervassi",     goles: 1 },
         { nombre: "Iñaki Iriarte",     goles: 1 }
@@ -16332,10 +16332,10 @@ const BD_BONAERENSE_SUR = {
         { n: "Los 3 Chiflados <b>(X)</b>", cl: "los3chiflados",  pj: 3, pg: 0, pe: 0, pp: 3, gf: 6, gc: 15, pts: 0 }
     ],
     posicionesNorte: [
-        { n: "CAJU San Bernardo", cl: "cajusanbernardo",  pj: 5, pg: 4, pe: 1, pp: 0, gf: 31, gc: 20, pts: 13 },
-        { n: "Torino",            cl: "torino",           pj: 5, pg: 3, pe: 1, pp: 1, gf: 20, gc: 12, pts: 10 },
-        { n: "Eureka Pinamar <b>(X)</b>",    cl: "eurekapinamar",    pj: 5, pg: 1, pe: 0, pp: 4, gf: 20, gc: 28, pts: 3 },
-        { n: "Def. Villa Clelia <b>(X)</b>", cl: "defvillaclelia",   pj: 5, pg: 0, pe: 2, pp: 3, gf: 16, gc: 27, pts: 2 }
+        { n: "<b>Torino</b>",            cl: "torino",           pj: 6, pg: 4, pe: 1, pp: 1, gf: 27, gc: 14, pts: 13 },
+        { n: "CAJU San Bernardo", cl: "cajusanbernardo",  pj: 6, pg: 4, pe: 1, pp: 1, gf: 33, gc: 27, pts: 13 },
+        { n: "Eureka Pinamar",    cl: "eurekapinamar",    pj: 6, pg: 1, pe: 1, pp: 4, gf: 25, gc: 33, pts: 4 },
+        { n: "Def. Villa Clelia", cl: "defvillaclelia",   pj: 6, pg: 0, pe: 3, pp: 3, gf: 19, gc: 30, pts: 3 }
     ],
     goleadores: [
     { nombre: "Bruno Decoud",          equipo: "La Esperanza",   goles: 5 },
@@ -16389,6 +16389,7 @@ function generarFutsalBonaerense() {
     // Tabla posiciones Norte
     html += `<div class="header-t">POSICIONES — SUBREGIÓN NORTE</div>`;
     html += generarTablaPosBonaerense(BD_BONAERENSE_SUR.posicionesNorte);
+    html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>🏆 <b>Torino</b> ganó la zona y jugará la final pampeana sur</div>`;
 
     // Goleadores
     html += `<div class="header-t">GOLEADORES</div>`;
