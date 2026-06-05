@@ -1193,7 +1193,25 @@ const BD_FIXTURES_FUTSAL = [
                 "Marcelo Achinelli"
                 ],
         },
-        {l:"Comercial",       v:"La Estación",     gl:3, gv:8},
+        {
+            l:"Comercial",
+            v:"La Estación",
+            gl:3,
+            gv:8,
+            dia:"Miér 03/06",
+            hora:"22:00",
+            goles_l:[
+                ],
+            goles_v:[
+                "Gastón Ackermann (2)",
+                "Bernabé Storni",
+                "Julián Hidalgo",
+                "Octavio Kerman",
+                "Mariano Sepúlveda",
+                "Franco Juárez",
+                "Diego Romano",
+                ],
+        },
         {l:"Huracán",         v:"Liniers",         gl:null, gv:null},
         {l:"Los 3 Chiflados", v:"Tiro Federal",    gl:null, gv:null},
         {l:"San Francisco",   v:"Pacífico BB",     gl:null, gv:null},
@@ -1379,6 +1397,11 @@ BD_FIXTURES_SUB.sub13.find(f=>f.fecha===5).partidos.forEach(p=>{
     if(p.l==="Balompié"&&p.v==="Kimberley"){p.gl=1;p.gv=1;}
     if(p.l==="Villa Mitre"&&p.v==="Santamarina"){p.gl=4;p.gv=0;}
 });
+BD_FIXTURES_SUB.sub13.find(f=>f.fecha===6).partidos.forEach(p=>{
+    if(p.l==="Kimberley"&&p.v==="Olimpo"){p.gl=2;p.gv=1;}
+    if(p.l==="Santamarina"&&p.v==="Balompié"){p.gl=null;p.gv=null;}
+    if(p.l==="Alvarado"&&p.v==="Mac Allister"){p.gl=0;p.gv=3;}
+});
 
 BD_FIXTURES_SUB.sub15.find(f=>f.fecha===1).partidos.forEach(p=>{
     if(p.l==="Villa Mitre"&&p.v==="Olimpo"){p.gl=1;p.gv=2;p.goles_l=["Santiago Sánchez"];p.goles_v=["Thiago Alfredo","Galo Martínez"];}
@@ -1405,6 +1428,11 @@ BD_FIXTURES_SUB.sub15.find(f=>f.fecha===5).partidos.forEach(p=>{
     if(p.l==="Balompié"&&p.v==="Kimberley"){p.gl=3;p.gv=1;}
     if(p.l==="Villa Mitre"&&p.v==="Santamarina"){p.gl=0;p.gv=2;}
 });
+BD_FIXTURES_SUB.sub15.find(f=>f.fecha===6).partidos.forEach(p=>{
+    if(p.l==="Kimberley"&&p.v==="Olimpo"){p.gl=2;p.gv=0;}
+    if(p.l==="Santamarina"&&p.v==="Balompié"){p.gl=null;p.gv=null;}
+    if(p.l==="Alvarado"&&p.v==="Mac Allister"){p.gl=1;p.gv=3;}
+});
 
 BD_FIXTURES_SUB.sub17.find(f=>f.fecha===1).partidos.forEach(p=>{
     if(p.l==="Villa Mitre"&&p.v==="Olimpo"){p.gl=1;p.gv=1;p.goles_l=["Mateo Luzuriaga"];p.goles_v=["Benicio Hernández"];}
@@ -1430,6 +1458,11 @@ BD_FIXTURES_SUB.sub17.find(f=>f.fecha===5).partidos.forEach(p=>{
     if(p.l==="Olimpo"&&p.v==="Alvarado"){p.gl=2;p.gv=0;}
     if(p.l==="Balompié"&&p.v==="Kimberley"){p.gl=0;p.gv=3;}
     if(p.l==="Villa Mitre"&&p.v==="Santamarina"){p.gl=2;p.gv=1;}
+});
+BD_FIXTURES_SUB.sub17.find(f=>f.fecha===6).partidos.forEach(p=>{
+    if(p.l==="Kimberley"&&p.v==="Olimpo"){p.gl=2;p.gv=0;}
+    if(p.l==="Alvarado"&&p.v==="Mac Allister"){p.gl=1;p.gv=1;}
+    if(p.l==="Santamarina"&&p.v==="Balompié"){p.gl=null;p.gv=null;}
 });
 
 
@@ -15768,28 +15801,28 @@ function generarReserva(cat) {
 const BD_POS_SUB = {
     sub13: [
         {nombre:"Villa Mitre",  clase:"villamitre",  pj:5,pg:5,pe:0,pp:0,gf:16,gc:4,pts:15},
+        {nombre:"Kimberley",    clase:"kimberley",   pj:5,pg:3,pe:1,pp:1,gf:8,gc:5,pts:10},
         {nombre:"Mac Allister", clase:"macallister", pj:4,pg:3,pe:0,pp:1,gf:7,gc:2,pts:9},
-        {nombre:"Kimberley",    clase:"kimberley",   pj:4,pg:2,pe:1,pp:1,gf:6,gc:4,pts:7},
         {nombre:"Balompié",     clase:"balompie",    pj:4,pg:2,pe:1,pp:1,gf:7,gc:5,pts:7},
-        {nombre:"Olimpo",       clase:"olimpo",      pj:4,pg:1,pe:0,pp:3,gf:5,gc:11,pts:3},
+        {nombre:"Olimpo",       clase:"olimpo",      pj:5,pg:1,pe:0,pp:4,gf:6,gc:13,pts:3},
         {nombre:"Alvarado",     clase:"alvarado",    pj:5,pg:1,pe:0,pp:4,gf:7,gc:13,pts:3},
         {nombre:"Santamarina",  clase:"santamarina", pj:4,pg:0,pe:0,pp:4,gf:2,gc:11,pts:0}
     ],
     sub15: [
         {nombre:"Mac Allister", clase:"macallister", pj:4,pg:4,pe:0,pp:0,gf:5,gc:0,pts:12},
+        {nombre:"Kimberley",    clase:"kimberley",   pj:5,pg:3,pe:1,pp:1,gf:7,gc:5,pts:10},
         {nombre:"Alvarado",     clase:"alvarado",    pj:5,pg:2,pe:2,pp:1,gf:12,gc:5,pts:8},
-        {nombre:"Kimberley",    clase:"kimberley",   pj:4,pg:2,pe:1,pp:1,gf:5,gc:5,pts:7},
         {nombre:"Balompié",     clase:"balompie",    pj:4,pg:2,pe:0,pp:2,gf:7,gc:5,pts:6},
-        {nombre:"Olimpo",       clase:"olimpo",      pj:4,pg:1,pe:1,pp:2,gf:5,gc:8,pts:4},
+        {nombre:"Olimpo",       clase:"olimpo",      pj:5,pg:1,pe:1,pp:3,gf:5,gc:10,pts:4},
         {nombre:"Santamarina",  clase:"santamarina", pj:4,pg:1,pe:0,pp:3,gf:2,gc:9,pts:3},
         {nombre:"Villa Mitre",  clase:"villamitre",  pj:5,pg:1,pe:0,pp:4,gf:4,gc:8,pts:3}
     ],
     sub17: [
-        {nombre:"Kimberley",    clase:"kimberley",   pj:4,pg:3,pe:1,pp:0,gf:7,gc:2,pts:10},
+        {nombre:"Kimberley",    clase:"kimberley",   pj:5,pg:4,pe:1,pp:0,gf:9,gc:2,pts:13},
         {nombre:"Alvarado",     clase:"alvarado",    pj:5,pg:3,pe:0,pp:2,gf:9,gc:7,pts:9},
         {nombre:"Mac Allister", clase:"macallister", pj:4,pg:2,pe:2,pp:0,gf:7,gc:3,pts:8},
         {nombre:"Villa Mitre",  clase:"villamitre",  pj:5,pg:1,pe:3,pp:1,gf:5,gc:6,pts:6},
-        {nombre:"Olimpo",       clase:"olimpo",      pj:4,pg:1,pe:1,pp:2,gf:5,gc:7,pts:4},
+        {nombre:"Olimpo",       clase:"olimpo",      pj:5,pg:1,pe:1,pp:3,gf:5,gc:9,pts:4},
         {nombre:"Balompié",     clase:"balompie",    pj:4,pg:1,pe:1,pp:2,gf:7,gc:11,pts:4},
         {nombre:"Santamarina",  clase:"santamarina", pj:4,pg:0,pe:0,pp:4,gf:2,gc:7,pts:0}
     ]
@@ -15806,7 +15839,8 @@ const BD_GOL_SUB = {
         {jugador:"Enzo Rossi",    equipo:"Villa Mitre", clase:"villamitre", n:1},
         {jugador:"Santino Canales",   equipo:"Olimpo",      clase:"olimpo",     n:1},
         {jugador:"Juan Ignacio Aguado",      equipo:"Olimpo",      clase:"olimpo",     n:1},
-        {jugador:"Santino Figueroa",      equipo:"Olimpo",      clase:"olimpo",     n:1}
+        {jugador:"Santino Figueroa",      equipo:"Olimpo",      clase:"olimpo",     n:1},
+        {jugador:"Lucio González",      equipo:"Olimpo",      clase:"olimpo",     n:1}
     ],
     sub15: [
         {jugador:"Santiago Sánchez",  equipo:"Villa Mitre", clase:"villamitre", n:2},
@@ -15969,15 +16003,15 @@ const BD_POS_FUTSAL = {
         {n:"La Esperanza",    cl:"laesperanza",   pj:8,pg:6,pe:1,pp:1,gf:33, gc:20, pts:19},
         {n:"Petroquímicos",   cl:"petroquimicos", pj:10,pg:5,pe:3,pp:2,gf:49, gc:26, pts:18},
         {n:"Liniers",         cl:"liniers",       pj:8,pg:5,pe:2,pp:1,gf:37, gc:23, pts:17},
-        {n:"La Estación",     cl:"laestacion",    pj:8,pg:3,pe:4,pp:1,gf:25, gc:23, pts:13},
         {n:"Dublin",          cl:"dublin",        pj:11,pg:4,pe:2,pp:5,gf:29, gc:39, pts:14},
+        {n:"La Estación",     cl:"laestacion",    pj:9,pg:3,pe:4,pp:2,gf:29, gc:29, pts:13},
         {n:"San Francisco",   cl:"sanfrancisco",  pj:9,pg:3,pe:1,pp:5,gf:20, gc:35, pts:10},
         {n:"Catamarca",       cl:"catamarca",     pj:8,pg:3,pe:0,pp:5,gf:35, gc:35, pts:9},
         {n:"Pacífico BB",     cl:"pacificobb",    pj:9,pg:2,pe:3,pp:4,gf:33, gc:44, pts:9},
         {n:"Tiro Federal",    cl:"tirofederal",   pj:10,pg:2,pe:2,pp:6,gf:21, gc:35, pts:8},
         {n:"Huracán",         cl:"huracan",       pj:10,pg:2,pe:1,pp:7,gf:19, gc:42, pts:7},
         {n:"Dep. Futsal",     cl:"depfutsal",     pj:8,pg:1,pe:3,pp:4,gf:20, gc:35, pts:6},
-        {n:"Comercial",       cl:"comercial",     pj:9,pg:0,pe:2,pp:7,gf:22, gc:37, pts:2}
+        {n:"Comercial",       cl:"comercial",     pj:10,pg:1,pe:2,pp:7,gf:28, gc:41, pts:5}
     ]
 };
 function generarSub15Fem() {
@@ -16153,17 +16187,19 @@ const BD_GOLEADORES_FUTSAL = [
         { nombre: "Franco Freites",  goles: 1 }
     ]},
     { club: "La Estación",     clase: "laestacion",    act: "fecha 9, con la fecha 7 postergada",  goleadores: [
-        { nombre: "Bernabé Storni",      goles: 8 },
+        { nombre: "Bernabé Storni",      goles: 9 },
+        { nombre: "Gastón Ackermann",   goles: 9 },
         { nombre: "Jonathan Carunchio",  goles: 8 },
-        { nombre: "Gastón Ackermann",   goles: 7 },
-        { nombre: "Diego Romano",        goles: 6 },
-        { nombre: "Mariano Sepúlveda",   goles: 5 },
+        { nombre: "Diego Romano",        goles: 7 },
+        { nombre: "Mariano Sepúlveda",   goles: 6 },
         { nombre: "Eric Martin",       goles: 3 },
-        { nombre: "Julián Hidalgo",       goles: 2 },
+        { nombre: "Julián Hidalgo",       goles: 3 },
         { nombre: "Esteban Sabán",       goles: 1 },
         { nombre: "Tomás Ceminari",       goles: 1 },
         { nombre: "Lautaro Gómez",       goles: 1 },
-        { nombre: "Gastón Aravena",       goles: 1 }
+        { nombre: "Gastón Aravena",       goles: 1 },
+        { nombre: "Octavio Kerman",       goles: 1 },
+        { nombre: "Franco Juárez",       goles: 1 }
     ]},
     { club: "Dep. Futsal",     clase: "depfutsal",     act: "fecha 3, sin datos sin datos de fecha 1 y 2",       goleadores: [
         { nombre: "Facundo Vega",        goles: 2 },
