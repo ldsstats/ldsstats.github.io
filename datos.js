@@ -117,7 +117,7 @@ const idaSegundaFemenino = [
     { fecha: 8, libre: "Sansinena", partidos: [{l:"Liniers", v:"Rosario PB", gl:2, gv:0, dia:"Sáb 16/05", hora:"15:30", goles_l:["Paulina Acevedo","Iara Schwab"], goles_v:[]}, {l:"Pacífico (C)", v:"Estrella de Oro", gl:0, gv:1, dia:"Dom 17/05", hora:"10:30", goles_l:[], goles_v:["Constanza Franco"]}, {l:"Petroquímicos", v:"Huracán", gl:1, gv:1, dia:"Dom 17/05", hora:"14:30", goles_l:["Renata Segovia"], goles_v:["Keila Iglesias"]}, {l:"San Francisco", v:"Olimpo", gl:4, gv:0, dia:"Dom 17/05", hora:"15:30", goles_l:["Rocío de Mirta","Rocío de Mirta","Ariana Adassus","Julieta Coronel"], goles_v:[]}] },
     { fecha: 9, libre: "Estrella de Oro", partidos: [{l:"Huracán", v:"Pacífico (C)", gl:3, gv:1, dia:"Sáb 23/05", hora:"15:30", goles_l:["Keila Iglesias","Keila Iglesias","Keila Iglesias"], goles_v:["Carolina Delorte"]}, {l:"Olimpo", v:"Petroquímicos", gl:0, gv:0, dia:"Sáb 23/05", hora:"15:30"}, {l:"Rosario PB", v:"San Francisco", gl:0, gv:4, dia:"Sáb 23/05", hora:"16:00", goles_l:[], goles_v:["Ariana Adassus","Ariana Adassus","Florencia Sorbellini","Julieta Viera"]}, {l:"Sansinena", v:"Liniers", gl:0, gv:3, dia:"Sáb 23/05", hora:"17:30", goles_l:[], goles_v:["Paulina Acevedo","Paulina Acevedo","Paz Cutrín"]}] },
     { fecha: 10, libre: "Huracán", partidos: [{l:"Petroquímicos", v:"Pacífico (C)", gl:4, gv:0, dia:"Sáb 29/05", hora:"15:30", goles_l:["Paula Rodríguez","Paula Rodríguez","Paula Rodríguez","Nicole Montenegro"], goles_v:[]}, {l:"Estrella de Oro", v:"Liniers", gl:0, gv:2, dia:"Dom 30/05", hora:"15:30", goles_l:[], goles_v:["Paulina Acevedo","Isabella Pezzutti"]}, {l:"Olimpo", v:"Rosario PB", gl:0, gv:3, dia:"Dom 30/05", hora:"15:30", goles_l:[], goles_v:["Bárbara Aguirre","Celeste Medina","Ayelén Zeballos"]}, {l:"Sansinena", v:"San Francisco", gl:1, gv:6, dia:"Dom 30/05", hora:"15:30", goles_l:["Daniela Abello"], goles_v:["Milagros Opazo","Milagros Opazo","Milagros Opazo","Milagros Opazo","Florencia Sorbellini","Milagros Fernández"]}] },
-    { fecha: 11, libre: "Petroquímicos", partidos: [{l:"San Francisco", v:"Estrella de Oro", gl:null, gv:null, dia:"Sáb 06/06", hora:"15:30"}, {l:"Liniers", v:"Huracán", gl:null, gv:null, dia:"Dom 07/06", hora:"11:00"}, {l:"Pacífico (C)", v:"Olimpo", gl:null, gv:null, dia:"Dom 07/06", hora:"15:30"}, {l:"Rosario PB", v:"Sansinena", gl:null, gv:null, dia:"Dom 07/06", hora:"15:30"}] },
+    { fecha: 11, libre: "Petroquímicos", partidos: [{l:"San Francisco", v:"Estrella de Oro", gl:3, gv:1, dia:"Sáb 06/06", hora:"15:30", goles_l:["Florencia Sorbellini","Clara Iturrioz","Ariana Adassus"], goles_v:[]}, {l:"Liniers", v:"Huracán", gl:null, gv:null, dia:"Dom 07/06", hora:"11:00"}, {l:"Pacífico (C)", v:"Olimpo", gl:null, gv:null, dia:"Dom 07/06", hora:"15:30"}, {l:"Rosario PB", v:"Sansinena", gl:null, gv:null, dia:"Dom 07/06", hora:"15:30"}] },
     { fecha: 12, libre: "Pacífico (C)", partidos: [{l:"Huracán", v:"San Francisco", gl:null, gv:null, dia:"Sáb 06/05", hora:"15:30"}, {l:"Olimpo", v:"Sansinena", gl:null, gv:null}, {l:"Petroquímicos", v:"Liniers", gl:null, gv:null}, {l:"Estrella de Oro", v:"Rosario PB", gl:null, gv:null}] },
     { fecha: 13, libre: "Olimpo", partidos: [{l:"Sansinena", v:"Estrella de Oro", gl:null, gv:null}, {l:"Liniers", v:"Pacífico (C)", gl:null, gv:null}, {l:"San Francisco", v:"Petroquímicos", gl:null, gv:null}, {l:"Rosario PB", v:"Huracán", gl:null, gv:null}] },
     { fecha: 14, libre: "Liniers", partidos: [{l:"Petroquímicos", v:"Rosario PB", gl:null, gv:null}, {l:"Pacífico (C)", v:"San Francisco", gl:null, gv:null}, {l:"Huracán", v:"Sansinena", gl:null, gv:null}, {l:"Olimpo", v:"Estrella de Oro", gl:null, gv:null}] },
@@ -1937,7 +1937,7 @@ function generarHome() {
                 {l:"Sporting", v:"Empleados de Comercio", hora:"15:30"}
             ]},
             { nombre: "2° FEMENINO", cat: "segundafemenino", partidos: [
-                {l:"San Francisco", v:"Estrella de Oro", hora:"15:30"}
+                {l:"San Francisco", v:"Estrella de Oro", hora:"15:30", gl: 3, gv: 1}
             ]},
             { nombre: "SUB 15 FEMENINO", cat: "sub15fem", partidos: [
                 {l:"La Armonía", v:"Huracán", hora:"09:00"},
@@ -16484,15 +16484,15 @@ const BD_BONAERENSE_SUR = {
             { l: "Los 3 Chiflados", v: "La Esperanza", gl: 3, gv: 4 }
         ]},
         { fecha: 5, libre: "Los 3 Chiflados", dia: "Vie 29/05", partidos: [
-            { l: "La Esperanza", v: "Banco Provincia", gl: null, gv: null }
+            { l: "La Esperanza", v: "Banco Provincia", gl: 4, gv: 3 }
         ]},
         { fecha: 6, libre: "La Esperanza", dia: "Vie 05/06", partidos: [
             { l: "Banco Provincia", v: "Los 3 Chiflados", gl: null, gv: null }
         ]}
     ],
     posicionesSur: [
-        { n: "Banco Provincia", cl: "bancoprovincia",  pj: 2, pg: 2, pe: 0, pp: 0, gf: 11, gc: 4, pts: 6 },
-        { n: "La Esperanza",    cl: "laesperanza",    pj: 3, pg: 2, pe: 0, pp: 1, gf: 13, gc: 11, pts: 6 },
+        { n: "La Esperanza",    cl: "laesperanza",    pj: 4, pg: 3, pe: 0, pp: 1, gf: 17, gc: 14, pts: 9 },
+        { n: "Banco Provincia", cl: "bancoprovincia",  pj: 3, pg: 2, pe: 0, pp: 1, gf: 14, gc: 7, pts: 6 },
         { n: "Los 3 Chiflados <b>(X)</b>", cl: "los3chiflados",  pj: 3, pg: 0, pe: 0, pp: 3, gf: 6, gc: 15, pts: 0 }
     ],
     posicionesNorte: [
@@ -16502,8 +16502,8 @@ const BD_BONAERENSE_SUR = {
         { n: "Def. Villa Clelia", cl: "defvillaclelia",   pj: 6, pg: 0, pe: 3, pp: 3, gf: 19, gc: 30, pts: 3 }
     ],
     goleadores: [
-    { nombre: "Bruno Decoud",          equipo: "La Esperanza",   goles: 5 },
-    { nombre: "Emiliano Etchepareborda", equipo: "La Esperanza", goles: 3 },
+    { nombre: "Bruno Decoud",          equipo: "La Esperanza",   goles: 7 },
+    { nombre: "Emiliano Etchepareborda", equipo: "La Esperanza", goles: 5 },
     { nombre: "Alexis Vera",           equipo: "La Esperanza",   goles: 2 },
     { nombre: "Lino Bognanini",          equipo: "Los 3 Chiflados",   goles: 3 },
     { nombre: "Daniel Cheiles",          equipo: "Los 3 Chiflados",   goles: 2 },
@@ -18032,11 +18032,11 @@ const BD_POSICIONES = {
     },
     segundafemenino: {
         torneo2026: [
+            { nombre: "San Francisco",       clase: "sanfrancisco",    pj:10, pg:8, pe:2, pp:0, gf:46, gc:10, pts:26 },
             { nombre: "Liniers",             clase: "liniers",         pj:9, pg:8, pe:1, pp:0, gf:33, gc:6, pts:25 },
-            { nombre: "San Francisco",       clase: "sanfrancisco",    pj:9, pg:7, pe:2, pp:0, gf:43, gc:9, pts:23 },
             { nombre: "Petroquímicos",       clase: "petroquimicos",   pj:9, pg:5, pe:2, pp:2, gf:23, gc:7, pts:17 },
             { nombre: "Rosario PB",          clase: "rosariopb",       pj:9, pg:5, pe:1, pp:3, gf:37, gc:15, pts:16 },
-            { nombre: "Estrella de Oro",     clase: "estrellaoro",     pj:9, pg:4, pe:2, pp:3, gf:16, gc:19, pts:14 },
+            { nombre: "Estrella de Oro",     clase: "estrellaoro",     pj:10, pg:4, pe:2, pp:4, gf:17, gc:22, pts:14 },
             { nombre: "Sansinena",           clase: "sansinena",       pj:9, pg:3, pe:0, pp:6, gf:13, gc:25, pts:9 },
             { nombre: "Olimpo",              clase: "olimpo",          pj:9, pg:1, pe:2, pp:6, gf:4, gc:25, pts:5 },
             { nombre: "Huracán",             clase: "huracan",         pj:8, pg:1, pe:2, pp:5, gf:5, gc:32, pts:5 },
