@@ -302,7 +302,7 @@ const BD_FIXTURES_FUTSAL_RESERVA = [
         {l:"Dep. Futsal",     v:"Dublin",          gl:1, gv:1},
         {l:"Comercial",       v:"La Estación",     gl:6, gv:4},
         {l:"Los 3 Chiflados", v:"Tiro Federal",    gl:4, gv:0},
-        {l:"San Francisco",   v:"Pacífico BB",     gl:null, gv:null},
+        {l:"San Francisco",   v:"Pacífico BB",     gl:4, gv:2},
         {l:"Huracán",         v:"Liniers",         gl:null, gv:null},
         {l:"Petroquímicos",   v:"Catamarca",       gl:null, gv:null}
     ]},
@@ -1227,7 +1227,7 @@ const BD_FIXTURES_FUTSAL = [
                 ],
         },
         {l:"Huracán",         v:"Liniers",         gl:null, gv:null},
-        {l:"San Francisco",   v:"Pacífico BB",     gl:null, gv:null},
+        {l:"San Francisco",   v:"Pacífico BB",     gl:5, gv:5},
         {l:"Petroquímicos",   v:"Catamarca",       gl:null, gv:null}
     ]},
     { fecha: 12, partidos: [
@@ -1865,7 +1865,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 10).partidos.forEach(p
 });
 
 
-let diaSeleccionadoHome = "2026-06-05"; 
+let diaSeleccionadoHome = "2026-06-06"; 
 
 function seleccionarDiaHome(dia) {
     diaSeleccionadoHome = dia;
@@ -1921,7 +1921,7 @@ function generarHome() {
         { id: "2026-06-05", label: "VIE 05/06", torneos: [
             { nombre: "FUTSAL", cat: "futsal", partidos: [
                 {l:"Petroquímicos", v:"Catamarca", hora:"22:00", nota:"en Petroquímicos"},
-                {l:"San Francisco", v:"Pacífico BB", hora:"22:30", nota:"en Tiro Federal"}
+                {l:"San Francisco", v:"Pacífico BB", hora:"22:30", nota:"en Tiro Federal", gl: 5, gv:5}
             ]},
         ]},
         { id: "2026-06-06", label: "SÁB 06/06", torneos: [
@@ -16115,14 +16115,14 @@ const BD_POS_FUTSAL = {
         {n:"Los 3 Chiflados", cl:"los3chiflados", pj:9,pg:7,pe:1,pp:1,gf:59, gc:26, pts:22},
         {n:"Villa Mitre",     cl:"villamitre",    pj:9,pg:6,pe:1,pp:2,gf:37, gc:30, pts:19},
         {n:"Tiro Federal",    cl:"tirofederal",   pj:11,pg:4,pe:1,pp:6,gf:29, gc:33, pts:16},
+        {n:"Pacífico BB",     cl:"pacificobb",    pj:10,pg:5,pe:1,pp:4,gf:47, gc:42, pts:16},
         {n:"Liniers",         cl:"liniers",       pj:8,pg:4,pe:3,pp:1,gf:35, gc:27, pts:15},
-        {n:"Pacífico BB",     cl:"pacificobb",    pj:9,pg:5,pe:0,pp:4,gf:42, gc:37, pts:15},
         {n:"Comercial",       cl:"comercial",     pj:10,pg:4,pe:2,pp:4,gf:47, gc:37, pts:14},
         {n:"Dublin",          cl:"dublin",        pj:11,pg:3,pe:0,pp:8,gf:31, gc:35, pts:9},
         {n:"Petroquímicos",   cl:"petroquimicos", pj:10,pg:3,pe:0,pp:7,gf:33,gc:43, pts:9},
         {n:"Catamarca",       cl:"catamarca",     pj:8,pg:2,pe:1,pp:5,gf:25, gc:37, pts:7},
         {n:"Dep. Futsal",     cl:"depfutsal",     pj:8,pg:2,pe:0,pp:6,gf:19, gc:42, pts:6},
-        {n:"San Francisco<b>*<b>",   cl:"sanfrancisco",  pj:9,pg:1,pe:3,pp:5,gf:29, gc:37, pts:3},
+        {n:"San Francisco<b>*<b>",   cl:"sanfrancisco",  pj:10,pg:1,pe:4,pp:5,gf:34, gc:42, pts:4},
         {n:"Huracán <b>(X)<b>",         cl:"huracan",       pj:10,pg:0,pe:0,pp:10,gf:24, gc:71,pts:0}
     ],
     reserva: [
@@ -16133,9 +16133,9 @@ const BD_POS_FUTSAL = {
         {n:"Liniers",         cl:"liniers",       pj:8,pg:5,pe:2,pp:1,gf:37, gc:23, pts:17},
         {n:"Dublin",          cl:"dublin",        pj:11,pg:4,pe:2,pp:5,gf:29, gc:39, pts:14},
         {n:"La Estación",     cl:"laestacion",    pj:9,pg:3,pe:4,pp:2,gf:29, gc:29, pts:13},
-        {n:"San Francisco",   cl:"sanfrancisco",  pj:9,pg:3,pe:1,pp:5,gf:20, gc:35, pts:10},
+        {n:"San Francisco",   cl:"sanfrancisco",  pj:10,pg:4,pe:1,pp:5,gf:24, gc:36, pts:13},
         {n:"Catamarca",       cl:"catamarca",     pj:8,pg:3,pe:0,pp:5,gf:35, gc:35, pts:9},
-        {n:"Pacífico BB",     cl:"pacificobb",    pj:9,pg:2,pe:3,pp:4,gf:33, gc:44, pts:9},
+        {n:"Pacífico BB",     cl:"pacificobb",    pj:10,pg:2,pe:3,pp:5,gf:35, gc:48, pts:9},
         {n:"Tiro Federal",    cl:"tirofederal",   pj:11,pg:2,pe:2,pp:7,gf:21, gc:39, pts:8},
         {n:"Huracán",         cl:"huracan",       pj:10,pg:2,pe:1,pp:7,gf:19, gc:42, pts:7},
         {n:"Dep. Futsal",     cl:"depfutsal",     pj:8,pg:1,pe:3,pp:4,gf:20, gc:35, pts:6},
