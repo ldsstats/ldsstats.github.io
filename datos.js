@@ -1326,7 +1326,7 @@ const idaSub15Fem = [
         {l:"Sporting",              v:"Tiro Federal",     gl:0, gv:1}
     ]},
     { fecha: 10, partidos: [
-        {l:"Empleados de Comercio", v:"Olimpo",           gl:null, gv:null},
+        {l:"Empleados de Comercio", v:"Olimpo",           gl:0, gv:1},
         {l:"Villa Mitre",           v:"Sporting",         gl:null, gv:null},
         {l:"Libertad",              v:"Liniers",          gl:0, gv:8},
         {l:"San Francisco",         v:"Bella Vista",      gl:null, gv:null},
@@ -1941,7 +1941,7 @@ function generarHome() {
             ]},
             { nombre: "SUB 15 FEMENINO", cat: "sub15fem", partidos: [
                 {l:"La Armonía", v:"Huracán", hora:"09:00", gl: 1, gv: 0},
-                {l:"Empleados de Comercio", v:"Olimpo", hora:"10:00"},
+                {l:"Empleados de Comercio", v:"Olimpo", hora:"10:00", gl: 0, gv: 1},
                 {l:"Libertad", v:"Liniers", hora:"15:00", gl: 0, gv:8},
                 {l:"Tiro Federal", v:"Juventud Unida", hora:"15:00", gl: 2, gv:1}
             ]},
