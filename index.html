@@ -272,7 +272,7 @@
         }
         estado.torneo = tor;
         estado.categoria = cat;
-        estado.fecha = (tor === 'apertura' && (cat === 'oficial' || cat === 'promocional')) ? 11 : (tor === 'posiciones' && cat === 'federala') ? 12 : (tor === 'apertura' && cat === 'femenino') ? 11 : (tor === 'torneo2026' && cat === 'segundafemenino') ? 10 : (tor === 'futsal') ? 11 : (tor === 'futsalreserva') ? 11 : (tor === 'sub15fem') ? 9 : 1; 
+        estado.fecha = (tor === 'apertura' && (cat === 'oficial' || cat === 'promocional')) ? 11 : (tor === 'posiciones' && cat === 'federala') ? 12 : (tor === 'apertura' && cat === 'femenino') ? 11 : (tor === 'torneo2026' && cat === 'segundafemenino') ? 10 : (tor === 'futsal') ? 11 : (tor === 'futsalreserva') ? 11 : (tor === 'sub15fem') ? 10 : 1; 
         actualizarVista();
         document.documentElement.scrollTop = 0;
         document.body.scrollTop = 0;

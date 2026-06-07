@@ -1328,10 +1328,10 @@ const idaSub15Fem = [
     { fecha: 10, partidos: [
         {l:"Empleados de Comercio", v:"Olimpo",           gl:null, gv:null},
         {l:"Villa Mitre",           v:"Sporting",         gl:null, gv:null},
-        {l:"Libertad",              v:"Liniers",          gl:null, gv:null},
+        {l:"Libertad",              v:"Liniers",          gl:0, gv:8},
         {l:"San Francisco",         v:"Bella Vista",      gl:null, gv:null},
         {l:"Tiro Federal",          v:"Juventud Unida",   gl:2, gv:1},
-        {l:"La Armonía",            v:"Huracán",          gl:null, gv:null}
+        {l:"La Armonía",            v:"Huracán",          gl:1, gv:0}
     ]},
     { fecha: 11, partidos: [
         {l:"Liniers",               v:"Tiro Federal",     gl:null, gv:null},
@@ -1865,7 +1865,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 10).partidos.forEach(p
 });
 
 
-let diaSeleccionadoHome = "2026-06-06"; 
+let diaSeleccionadoHome = "2026-06-07"; 
 
 function seleccionarDiaHome(dia) {
     diaSeleccionadoHome = dia;
@@ -1940,9 +1940,9 @@ function generarHome() {
                 {l:"San Francisco", v:"Estrella de Oro", hora:"15:30", gl: 3, gv: 1}
             ]},
             { nombre: "SUB 15 FEMENINO", cat: "sub15fem", partidos: [
-                {l:"La Armonía", v:"Huracán", hora:"09:00"},
+                {l:"La Armonía", v:"Huracán", hora:"09:00", gl: 1, gv: 0},
                 {l:"Empleados de Comercio", v:"Olimpo", hora:"10:00"},
-                {l:"Libertad", v:"Liniers", hora:"15:00"},
+                {l:"Libertad", v:"Liniers", hora:"15:00", gl: 0, gv:8},
                 {l:"Tiro Federal", v:"Juventud Unida", hora:"15:00", gl: 2, gv:1}
             ]},
             { nombre: "FUTSAL BONAERENSE - ASCENSO", cat: "futsalbonaerense", partidos: [
@@ -16514,7 +16514,7 @@ const BD_BONAERENSE_SUR = {
 ]};
 
 function generarFutsalBonaerense() {
-    const n = estado.fechaBonaerense || 4;
+    const n = estado.fechaBonaerense || 5;
     const f = BD_BONAERENSE_SUR.fixture.find(x => x.fecha === n) || { partidos: [], libre: null };
 
     let html = `<div class="header-t">TORNEO BONAERENSE — PAMPEANA SUR</div>`;
@@ -18010,9 +18010,9 @@ const BD_POSICIONES = {
         apertura: [
             { nombre: "Comercial",           clase: "comercial",       pj:11, pg:6, pe:3, pp:2, gf:10, gc:7, pts:21 },
             { nombre: "Tiro Federal",        clase: "tirofederal",     pj:11, pg:5, pe:3, pp:3, gf:13, gc:6, pts:18 },
+            { nombre: "Rosario PB",          clase: "rosariopb",       pj:11, pg:4, pe:5, pp:2, gf:18, gc:16, pts:17 },
             { nombre: "Dublin",              clase: "dublin",          pj:11, pg:4, pe:4, pp:3, gf:11, gc:12, pts:16 },
             { nombre: "Sansinena",           clase: "sansinena",       pj:10, pg:3, pe:6, pp:1, gf:16, gc:13, pts:15 },
-            { nombre: "Rosario PB",          clase: "rosariopb",       pj:11, pg:4, pe:5, pp:2, gf:18, gc:16, pts:17 },
             { nombre: "Olimpo",              clase: "olimpo",          pj:11, pg:3, pe:4, pp:4, gf:11, gc:10, pts:13 },
             { nombre: "Pacífico BB",         clase: "pacificobb",      pj:10, pg:1, pe:4, pp:5, gf:7, gc:15, pts: 7},
             { nombre: "Pacífico (C)",        clase: "pacificocabildo", pj:11, pg:0, pe:5, pp:6, gf:14, gc:2, pts:5 }
