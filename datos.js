@@ -15892,7 +15892,7 @@ function generarReserva(cat) {
                        {n:"Dublin",              cl:"dublin",           pj:11, pg:2, pe:2, pp:7, gf:13, gc:20, pts:8},
                        {n:"Pacífico (C)", cl:"pacificocabildo",  pj:10, pg:1, pe:3, pp:6, gf:10, gc:20, pts:6},],
         'segundafemenino': [
-            {n:"Liniers",             cl:"liniers",         pj:7, pg:6, pe:1, pp:0, gf:32, gc:5, pts:19},
+            {n:"Liniers",             cl:"liniers",         pj:8, pg:7, pe:1, pp:0, gf:33, gc:5, pts:22},
             {n:"San Francisco",       cl:"sanfrancisco",    pj:8, pg:5, pe:1, pp:2, gf:16, gc:6, pts:16},
             {n:"Rosario PB",          cl:"rosariopb",       pj:7, pg:5, pe:1, pp:1, gf:18, gc:8, pts:16},
             {n:"Estrella de Oro",     cl:"estrellaoro",     pj:8, pg:4, pe:1, pp:3, gf:11, gc:11, pts:13},
@@ -15906,8 +15906,8 @@ function generarReserva(cat) {
             {n:"Bella Vista",           cl:"bellavista", pj:11,pg:6, pe:3, pp:2, gf:29, gc:9, pts:21},
             {n:"Empleados de Comercio", cl:"empleados", pj:11, pg:5, pe:5, pp:1, gf:16, gc:4, pts:20},
             {n:"Municipales",           cl:"municipales",pj:11,pg:5, pe:4, pp:2, gf:31, gc:12, pts:19},
-            {n:"Sporting",              cl:"sporting",  pj:11, pg:1, pe:2, pp:8, gf:9, gc:28, pts:8},
             {n:"La Armonía",            cl:"laarmonia",  pj:11,pg:1, pe:3, pp:7, gf:8, gc:32, pts:6},
+            {n:"Sporting",              cl:"sporting",  pj:11, pg:1, pe:2, pp:8, gf:9, gc:28, pts:5},
             {n:"Libertad",              cl:"libertad",   pj:11,pg:1, pe:0, pp:10, gf:4, gc:42, pts:3}
         ]
     };
@@ -16135,7 +16135,7 @@ const BD_POS_FUTSAL = {
         {n:"La Esperanza <b>(C)<b>",    cl:"laesperanza",   pj:9,pg:8,pe:0,pp:1,gf:43, gc:26, pts:24},
         {n:"Los 3 Chiflados <b>(C)<b>", cl:"los3chiflados", pj:9,pg:7,pe:1,pp:1,gf:59, gc:26, pts:22},
         {n:"Villa Mitre <b>(C)<b>",     cl:"villamitre",    pj:9,pg:6,pe:1,pp:2,gf:37, gc:30, pts:19},
-        {n:"Tiro Federal",    cl:"tirofederal",   pj:11,pg:4,pe:1,pp:6,gf:29, gc:33, pts:16},
+        {n:"Tiro Federal",    cl:"tirofederal",   pj:11,pg:5,pe:1,pp:4,gf:29, gc:33, pts:16},
         {n:"Pacífico BB",     cl:"pacificobb",    pj:10,pg:5,pe:1,pp:4,gf:47, gc:42, pts:16},
         {n:"Liniers",         cl:"liniers",       pj:8,pg:4,pe:3,pp:1,gf:35, gc:27, pts:15},
         {n:"Comercial",       cl:"comercial",     pj:10,pg:4,pe:2,pp:4,gf:47, gc:37, pts:14},
@@ -16147,7 +16147,7 @@ const BD_POS_FUTSAL = {
         {n:"Huracán <b>(X)<b>",         cl:"huracan",       pj:10,pg:0,pe:0,pp:10,gf:24, gc:71,pts:0}
     ],
     reserva: [
-        {n:"Los 3 Chiflados", cl:"los3chiflados", pj:10,pg:9,pe:1,pp:0,gf:46, gc:11, pts:29},
+        {n:"Los 3 Chiflados", cl:"los3chiflados", pj:9,pg:8,pe:1,pp:0,gf:46, gc:11, pts:25},
         {n:"Petroquímicos",   cl:"petroquimicos", pj:11,pg:6,pe:3,pp:2,gf:61, gc:26, pts:21},
         {n:"Villa Mitre",     cl:"villamitre",    pj:8,pg:6,pe:1,pp:1,gf:33, gc:19, pts:19},
         {n:"La Esperanza",    cl:"laesperanza",   pj:8,pg:6,pe:1,pp:1,gf:33, gc:20, pts:19},
@@ -17780,7 +17780,8 @@ const BD_ARQUEROS = {
             { rival: "Villa Mitre", resultado: "Bella Vista 1 - 0 Villa Mitre", fecha: 5 },
             { rival: "La Armonía", resultado: "Bella Vista 1 - 0 La Armonía", fecha: 6 },
             { rival: "Liniers", resultado: "Liniers 0 - 0 Bella Vista", fecha: 9 },
-            { rival: "Libertad", resultado: "Bella Vista 2 - 0 Libertad", fecha: 10 }
+            { rival: "Libertad", resultado: "Bella Vista 2 - 0 Libertad", fecha: 10 },
+            { rival: "Sporting", resultado: "Bella Vista 3 - 0 Sporting", fecha: 11 }
         ]},
         { jugador: "Andoni Mendiguibel", equipo: "Liniers", partidos: [
             { rival: "Bella Vista", resultado: "Bella Vista 0 - 1 Liniers", fecha: 2 },
@@ -18057,15 +18058,15 @@ const BD_POSICIONES = {
     },
     segundafemenino: {
         torneo2026: [
+            { nombre: "Liniers",             clase: "liniers",         pj:10, pg:9, pe:1, pp:0, gf:40, gc:6, pts:30 },
             { nombre: "San Francisco",       clase: "sanfrancisco",    pj:10, pg:8, pe:2, pp:0, gf:46, gc:10, pts:26 },
-            { nombre: "Liniers",             clase: "liniers",         pj:9, pg:8, pe:1, pp:0, gf:33, gc:6, pts:25 },
+            { nombre: "Rosario PB",          clase: "rosariopb",       pj:10, pg:6, pe:1, pp:3, gf:43, gc:15, pts:19 },
             { nombre: "Petroquímicos",       clase: "petroquimicos",   pj:9, pg:5, pe:2, pp:2, gf:23, gc:7, pts:17 },
-            { nombre: "Rosario PB",          clase: "rosariopb",       pj:9, pg:5, pe:1, pp:3, gf:37, gc:15, pts:16 },
             { nombre: "Estrella de Oro",     clase: "estrellaoro",     pj:10, pg:4, pe:2, pp:4, gf:17, gc:22, pts:14 },
-            { nombre: "Sansinena",           clase: "sansinena",       pj:9, pg:3, pe:0, pp:6, gf:13, gc:25, pts:9 },
-            { nombre: "Olimpo",              clase: "olimpo",          pj:9, pg:1, pe:2, pp:6, gf:4, gc:25, pts:5 },
-            { nombre: "Huracán",             clase: "huracan",         pj:8, pg:1, pe:2, pp:5, gf:5, gc:32, pts:5 },
-            { nombre: "Pacífico (C)", clase: "pacificocabildo", pj:9, pg:0, pe:0, pp:9, gf:2, gc:37, pts:0 },
+            { nombre: "Sansinena",           clase: "sansinena",       pj:10, pg:3, pe:0, pp:7, gf:13, gc:31, pts:9 },
+            { nombre: "Olimpo",              clase: "olimpo",          pj:10, pg:2, pe:2, pp:6, gf:8, gc:27, pts:8 },
+            { nombre: "Huracán",             clase: "huracan",         pj:9, pg:1, pe:2, pp:6, gf:5, gc:39, pts:5 },
+            { nombre: "Pacífico (C)", clase: "pacificocabildo", pj:10, pg:0, pe:0, pp:10, gf:4, gc:39, pts:0 },
         ]
     }
 };
