@@ -18021,7 +18021,7 @@ function generarPerfilJugador(jugador, equipo) {
 const BD_POSICIONES = {
     oficial: {
         apertura: [
-            { nombre: "Huracán",       clase: "huracan",      pj:11, pg:7, pe:3, pp:1, gf:21, gc:10,  pts:24 },
+            { nombre: "Huracán <b>(C)</b>",       clase: "huracan",      pj:11, pg:7, pe:3, pp:1, gf:21, gc:10,  pts:24 },
             { nombre: "Bella Vista",   clase: "bellavista",   pj:11, pg:5, pe:3, pp:3, gf:15, gc:9,  pts:18 },
             { nombre: "Villa Mitre",   clase: "villamitre",   pj:11, pg:5, pe:2, pp:4, gf:13, gc:10,  pts:17 },
             { nombre: "Liniers",       clase: "liniers",      pj:11, pg:4, pe:4, pp:3, gf:13, gc:7,  pts:16 },
@@ -18039,8 +18039,8 @@ const BD_POSICIONES = {
             { nombre: "Rosario PB",          clase: "rosariopb",       pj:11, pg:4, pe:5, pp:2, gf:18, gc:16, pts:17 },
             { nombre: "Dublin",              clase: "dublin",          pj:11, pg:4, pe:4, pp:3, gf:11, gc:12, pts:16 },
             { nombre: "Olimpo",              clase: "olimpo",          pj:11, pg:3, pe:4, pp:4, gf:11, gc:10, pts:13 },
-            { nombre: "Pacífico BB",         clase: "pacificobb",      pj:11, pg:1, pe:4, pp:6, gf:7, gc:16, pts: 7},
-            { nombre: "Pacífico (C)",        clase: "pacificocabildo", pj:11, pg:0, pe:5, pp:6, gf:14, gc:2, pts:5 }
+            { nombre: "Pacífico BB <b>(X)</b>",         clase: "pacificobb",      pj:11, pg:1, pe:4, pp:6, gf:7, gc:16, pts: 7},
+            { nombre: "Pacífico (C) <b>(X)</b>",        clase: "pacificocabildo", pj:11, pg:0, pe:5, pp:6, gf:14, gc:2, pts:5 }
         ]
     },
     femenino: {
@@ -18113,12 +18113,12 @@ function generarTabla(tor, cat) {
         }
         html += `<tr class="${cl}"><td class="c-pos">${i+1}</td><td class="c-equipo">${e.nombre}</td><td class="c-stat">${e.pj}</td><td class="c-stat">${e.pg}</td><td class="c-stat">${e.pe}</td><td class="c-stat">${e.pp}</td><td class="c-stat">${e.gf}</td><td class="c-stat">${e.gc}</td><td class="c-stat">${e.gf-e.gc}</td><td class="c-stat"><b>${e.pts}</b></td></tr>`;
     });
-    if (tor === 'apertura' && cat === 'oficial') {
-        return html + "</tbody></table><div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>9</b> tras finalizar la fecha <b>11</b></div>";
-    }
-    if (tor === 'apertura' && cat === 'promocional') {
-        return html + "</tbody></table><div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>9</b> tras finalizar la fecha <b>11</b></div>";
-    }
+if (tor === 'apertura' && cat === 'oficial') {
+    return html + "</tbody></table><div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'><b>(C)</b> Clasificado<br>📌 Puntos en juego: <b>9</b> tras finalizar la fecha <b>11</b></div>";
+}
+if (tor === 'apertura' && cat === 'promocional') {
+    return html + "</tbody></table><div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'><b>(X)</b> Eliminado<br>📌 Puntos en juego: <b>9</b> tras finalizar la fecha <b>11</b></div>";
+}
     if (tor === 'apertura' && cat === 'femenino') {
         return html + "</tbody></table><div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>9</b> tras finalizar la fecha <b>11</b></div>";
     }
