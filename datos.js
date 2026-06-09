@@ -16156,11 +16156,11 @@ const BD_POS_FUTSAL = {
         {n:"Dublin",          cl:"dublin",        pj:11,pg:4,pe:2,pp:5,gf:29, gc:39, pts:14},
         {n:"San Francisco",   cl:"sanfrancisco",  pj:10,pg:4,pe:1,pp:5,gf:24, gc:36, pts:13},
         {n:"Catamarca",       cl:"catamarca",     pj:10,pg:4,pe:0,pp:6,gf:35, gc:47, pts:12},
-        {n:"Pacífico BB",     cl:"pacificobb",    pj:10,pg:2,pe:3,pp:5,gf:35, gc:48, pts:9},
-        {n:"Tiro Federal",    cl:"tirofederal",   pj:11,pg:2,pe:2,pp:7,gf:21, gc:39, pts:8},
+        {n:"Pacífico BB",     cl:"pacificobb",    pj:10,pg:3,pe:2,pp:5,gf:35, gc:48, pts:11},
+        {n:"Tiro Federal",    cl:"tirofederal",   pj:11,pg:3,pe:2,pp:6,gf:21, gc:39, pts:11},
         {n:"Huracán",         cl:"huracan",       pj:10,pg:2,pe:1,pp:7,gf:19, gc:42, pts:7},
-        {n:"Dep. Futsal",     cl:"depfutsal",     pj:10,pg:1,pe:3,pp:6,gf:20, gc:35, pts:6},
-        {n:"Comercial",       cl:"comercial",     pj:10,pg:1,pe:2,pp:7,gf:28, gc:41, pts:5}
+        {n:"Comercial",       cl:"comercial",     pj:10,pg:1,pe:2,pp:7,gf:28, gc:41, pts:5},
+        {n:"Dep. Futsal",     cl:"depfutsal",     pj:10,pg:0,pe:2,pp:8,gf:20, gc:35, pts:2}
     ]
 };
 function generarSub15Fem() {
@@ -16288,9 +16288,9 @@ if ((p.goles_l && p.goles_l.length) || (p.goles_v && p.goles_v.length)) {
     });
     html += `</tbody></table>`;
     if (modo === 'principal') {
-html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'><b>(C)</b> Clasificado a playoffs<br><b>(X)</b> Eliminado<br><b>*</b> Se le descontaron tres puntos<br><b>📌 Puntos en juego:</b> <b>6</b> para quienes hayan completado todos los partidos hasta la fecha <b>11</b></div>`;
+html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'><b>📌 Puntos en juego:</b> <b>6</b> para quienes hayan completado todos los partidos hasta la fecha <b>11</b><br><b>(C)</b> Clasificado a playoffs<br><b>(X)</b> Eliminado<br><b>*</b> Se le descontaron tres puntos<br><b>●</b>La Estación y Catamarca recibieron los puntos de los partidos no disputados ante Deportivo Futsal</div>`;
     } else if (modo === 'reserva') {
-        html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>6</b> para quienes hayan completado todos los partidos hasta la fecha <b>11</b></div>`;
+        html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>6</b> para quienes hayan completado todos los partidos hasta la fecha <b>11</b><br><b>●</b> La Estación y Catamarca recibieron los puntos de los partidos no disputados ante Deportivo Futsal<br><b>●</b> Pese a no ganar los partidos, Tiro Federal y Pacífico recibieron los tres puntos de sus duelos ante Deportivo Futsal<br></div>`;
     }
     return html;
 }
@@ -18127,4 +18127,105 @@ if (tor === 'apertura' && cat === 'promocional') {
         return html + "</tbody></table><div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>48</b> para los equipos que jugaron 8 partidos, <b>45</b> para los equipos que jugaron 9 partidos y <b>42</b> para los equipos que jugaron 10 partidos</div>";
     }
     return html + "</tbody></table>";
+}
+/* ══════════════════════════════════════════════════════════
+   REG. AMATEUR — FEMENINO 2026
+   Región Bonaerense Pampeana Sur
+   ══════════════════════════════════════════════════════════ */
+const BD_REG_AMATEUR_FEM = {
+    fases: [
+        {
+            id: "primera-ronda",
+            nombre: "Primera Ronda",
+            duelos: [
+                {
+                    ida:    { local: "Villa Mitre",                  clL: "villamitre",        visitante: "Municipales",               clV: "municipales" },
+                    vuelta: { local: "Municipales",                  clL: "municipales",       visitante: "Villa Mitre",               clV: "villamitre" }
+                },
+                {
+                    ida:    { local: "Racing de Fortín Olavarría",   clL: "racingfortin",      visitante: "Huracán de Pellegrini",      clV: "huracan" },
+                    vuelta: { local: "Huracán de Pellegrini",        clL: "huracan",           visitante: "Racing de Fortín Olavarría", clV: "racingfortin" }
+                },
+                {
+                    ida:    { local: "Estudiantes Unidos",           clL: "estudiantesunidos", visitante: "Ciudad de Olavarría",        clV: "ciudadolavarria" },
+                    vuelta: { local: "Ciudad de Olavarría",          clL: "ciudadolavarria",   visitante: "Estudiantes Unidos",         clV: "estudiantesunidos" }
+                },
+                {
+                    ida:    { local: "Alumni Azuleño",               clL: "alumniazuleno",     visitante: "San José de Azul",           clV: "sanjoseazul" },
+                    vuelta: { local: "San José de Azul",             clL: "sanjoseazul",       visitante: "Alumni Azuleño",             clV: "alumniazuleno" }
+                },
+                {
+                    ida:    { local: "Juventud Unida de Tandil",     clL: "juventudunidatandil", visitante: "Dep. San José de Tandil",  clV: "depsanjose" },
+                    vuelta: { local: "Dep. San José de Tandil",      clL: "depsanjose",          visitante: "Juventud Unida de Tandil", clV: "juventudunidatandil" }
+                },
+                {
+                    ida:    { local: "San Lorenzo (MdP)",            clL: "sanlorenzomgp",     visitante: "Alvarado",                  clV: "alvarado" },
+                    vuelta: { local: "Alvarado",                     clL: "alvarado",           visitante: "San Lorenzo (MdP)",         clV: "sanlorenzomgp" }
+                }
+            ]
+        }
+    ]
+};
+
+function generarRegAmateurFem() {
+    const faseActual = BD_REG_AMATEUR_FEM.fases[0];
+
+    let botones = `<div style="display:flex;gap:6px;flex-wrap:wrap;padding:8px 8px 4px;">`;
+    BD_REG_AMATEUR_FEM.fases.forEach((f, idx) => {
+        const activo = idx === 0;
+        botones += `<button onclick="verFaseRegAmateurFem(${idx})" id="btn-ramfem-${idx}"
+            style="font-size:10px;padding:4px 10px;border:1px solid #1a4a2e;border-radius:12px;cursor:pointer;
+                   background:${activo ? '#1a4a2e' : '#fff'};color:${activo ? '#fff' : '#1a4a2e'};font-weight:bold;">
+            ${f.nombre}
+        </button>`;
+    });
+    botones += `</div>`;
+
+    let html = `<div class="header-t">REG. AMATEUR — FEMENINO 2026</div>`;
+    html += `<div style="background:#1a4a2e;color:#fff;text-align:center;font-size:10px;font-weight:bold;padding:5px 8px;letter-spacing:0.5px;">
+        🏆 REGIÓN BONAERENSE PAMPEANA SUR
+    </div>`;
+    html += botones;
+    html += `<div id="contenido-ramfem">` + _renderFaseRegAmateurFem(faseActual) + `</div>`;
+
+    return html;
+}
+
+function _renderFaseRegAmateurFem(fase) {
+    let html = `<div class="header-t" style="font-size:11px;background:#2c6e49;">${fase.nombre.toUpperCase()}</div>`;
+
+    fase.duelos.forEach((duelo, idx) => {
+        if (idx > 0) html += `<div style="height:10px;background:#f0f0f0;border-top:1px solid #ddd;border-bottom:1px solid #ddd;"></div>`;
+        html += _renderPartidoRAF(duelo.ida);
+        html += _renderPartidoRAF(duelo.vuelta);
+    });
+
+    return html;
+}
+
+function _renderPartidoRAF(p) {
+    return `<table style="width:100%;"><tbody><tr>
+        <td class="c-loc">
+            <span style="direction:ltr;display:inline-flex;align-items:center;justify-content:flex-end;width:100%;">
+                ${p.local}
+                <div class="escudo ${p.clL}" style="display:inline-block;vertical-align:middle;margin-left:4px;"></div>
+            </span>
+        </td>
+        <td class="c-res" style="font-size:10px;color:#aaa;">vs</td>
+        <td class="c-vis">
+            <div class="escudo ${p.clV}" style="display:inline-block;vertical-align:middle;margin-right:4px;"></div>
+            ${p.visitante}
+        </td>
+    </tr></tbody></table>`;
+}
+
+function verFaseRegAmateurFem(idx) {
+    const fase = BD_REG_AMATEUR_FEM.fases[idx];
+    BD_REG_AMATEUR_FEM.fases.forEach((_, i) => {
+        const btn = document.getElementById('btn-ramfem-' + i);
+        if (!btn) return;
+        btn.style.background = i === idx ? '#1a4a2e' : '#fff';
+        btn.style.color = i === idx ? '#fff' : '#1a4a2e';
+    });
+    document.getElementById('contenido-ramfem').innerHTML = _renderFaseRegAmateurFem(fase);
 }

@@ -233,3 +233,17 @@ tr[onclick]:hover td { background-color: #e8f5e9 !important; }
     #banner-pub { max-height: none; }
     #banner-pub img { width: 100%; height: auto; display: block; }
 }
+/* ── REG. AMATEUR FEMENINO – escudos nuevos ── */
+.estudiantesunidos { background: linear-gradient(90deg, #000 20%, #fff 20%, #fff 40%, #000 40%, #000 60%, #fff 60%, #fff 80%, #000 80%); }
+.alumniazuleno { background: linear-gradient(90deg, #fff 20%, #000 20%, #000 40%, #fff 40%, #fff 60%, #000 60%, #000 80%, #fff 80%); }
+.sanjoseazul { position: relative; background: #fe0000; overflow: hidden; }
+.sanjoseazul::before { content: ""; position: absolute; top: 0; left: 50%; width: 50%; height: 50%; background: #003399; }
+.sanjoseazul::after  { content: ""; position: absolute; top: 50%; left: 0;   width: 50%; height: 50%; background: #003399; }
+.ciudadolavarria { background: linear-gradient(90deg, #0116a3 33.33%, #fefefe 33.33%, #fefefe 66.66%, #000000 66.66%); }
+.depsanjose { position: relative; background: #00962e; overflow: hidden; }
+.depsanjose::before { content: ""; position: absolute; top: 0; left: 50%; width: 50%; height: 50%; background: #fcfaf8; }
+.depsanjose::after  { content: ""; position: absolute; top: 50%; left: 0;   width: 50%; height: 50%; background: #fcfaf8; }
+.sanlorenzomgp { background: linear-gradient(90deg, #fd0003 20%, #050006 20%, #050006 40%, #fd0003 40%, #fd0003 60%, #050006 60%, #050006 80%, #fd0003 80%); }
+.racingfortin { background: linear-gradient(90deg, #4793f5 20%, #ffffff 20%, #ffffff 40%, #4793f5 40%, #4793f5 60%, #ffffff 60%, #ffffff 80%, #4793f5 80%); }
+.juventudunidatandil { background-color: #ffffff; position: relative; }
+.juventudunidatandil::before { content: ""; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: linear-gradient(-45deg, transparent 46%, black 46%, black 54%, transparent 54%); }
