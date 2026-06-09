@@ -15893,7 +15893,7 @@ function generarReserva(cat) {
                        {n:"Pacífico (C)", cl:"pacificocabildo",  pj:10, pg:1, pe:3, pp:6, gf:10, gc:20, pts:6},],
         'segundafemenino': [
             {n:"Liniers",             cl:"liniers",         pj:8, pg:7, pe:1, pp:0, gf:33, gc:5, pts:22},
-            {n:"San Francisco",       cl:"sanfrancisco",    pj:8, pg:5, pe:1, pp:2, gf:16, gc:6, pts:16},
+            {n:"San Francisco",       cl:"sanfrancisco",    pj:8, pg:5, pe:1, pp:2, gf:19, gc:6, pts:16},
             {n:"Rosario PB",          cl:"rosariopb",       pj:7, pg:5, pe:1, pp:1, gf:18, gc:8, pts:16},
             {n:"Estrella de Oro",     cl:"estrellaoro",     pj:8, pg:4, pe:1, pp:3, gf:11, gc:11, pts:13},
             {n:"Petroquímicos",       cl:"petroquimicos",   pj:6, pg:1, pe:1, pp:4, gf:6, gc:11, pts:4},
@@ -18058,7 +18058,7 @@ const BD_POSICIONES = {
     },
     segundafemenino: {
         torneo2026: [
-            { nombre: "Liniers",             clase: "liniers",         pj:10, pg:9, pe:1, pp:0, gf:40, gc:6, pts:30 },
+            { nombre: "Liniers",             clase: "liniers",         pj:10, pg:9, pe:1, pp:0, gf:40, gc:6, pts:28 },
             { nombre: "San Francisco",       clase: "sanfrancisco",    pj:10, pg:8, pe:2, pp:0, gf:46, gc:10, pts:26 },
             { nombre: "Rosario PB",          clase: "rosariopb",       pj:10, pg:6, pe:1, pp:3, gf:43, gc:15, pts:19 },
             { nombre: "Petroquímicos",       clase: "petroquimicos",   pj:9, pg:5, pe:2, pp:2, gf:23, gc:7, pts:17 },
