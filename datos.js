@@ -117,7 +117,7 @@ const idaSegundaFemenino = [
     { fecha: 8, libre: "Sansinena", partidos: [{l:"Liniers", v:"Rosario PB", gl:2, gv:0, dia:"Sáb 16/05", hora:"15:30", goles_l:["Paulina Acevedo","Iara Schwab"], goles_v:[]}, {l:"Pacífico (C)", v:"Estrella de Oro", gl:0, gv:1, dia:"Dom 17/05", hora:"10:30", goles_l:[], goles_v:["Constanza Franco"]}, {l:"Petroquímicos", v:"Huracán", gl:1, gv:1, dia:"Dom 17/05", hora:"14:30", goles_l:["Renata Segovia"], goles_v:["Keila Iglesias"]}, {l:"San Francisco", v:"Olimpo", gl:4, gv:0, dia:"Dom 17/05", hora:"15:30", goles_l:["Rocío de Mirta","Rocío de Mirta","Ariana Adassus","Julieta Coronel"], goles_v:[]}] },
     { fecha: 9, libre: "Estrella de Oro", partidos: [{l:"Huracán", v:"Pacífico (C)", gl:3, gv:1, dia:"Sáb 23/05", hora:"15:30", goles_l:["Keila Iglesias","Keila Iglesias","Keila Iglesias"], goles_v:["Carolina Delorte"]}, {l:"Olimpo", v:"Petroquímicos", gl:0, gv:0, dia:"Sáb 23/05", hora:"15:30"}, {l:"Rosario PB", v:"San Francisco", gl:0, gv:4, dia:"Sáb 23/05", hora:"16:00", goles_l:[], goles_v:["Ariana Adassus","Ariana Adassus","Florencia Sorbellini","Julieta Viera"]}, {l:"Sansinena", v:"Liniers", gl:0, gv:3, dia:"Sáb 23/05", hora:"17:30", goles_l:[], goles_v:["Paulina Acevedo","Paulina Acevedo","Paz Cutrín"]}] },
     { fecha: 10, libre: "Huracán", partidos: [{l:"Petroquímicos", v:"Pacífico (C)", gl:4, gv:0, dia:"Sáb 29/05", hora:"15:30", goles_l:["Paula Rodríguez","Paula Rodríguez","Paula Rodríguez","Nicole Montenegro"], goles_v:[]}, {l:"Estrella de Oro", v:"Liniers", gl:0, gv:2, dia:"Dom 30/05", hora:"15:30", goles_l:[], goles_v:["Paulina Acevedo","Isabella Pezzutti"]}, {l:"Olimpo", v:"Rosario PB", gl:0, gv:3, dia:"Dom 30/05", hora:"15:30", goles_l:[], goles_v:["Bárbara Aguirre","Celeste Medina","Ayelén Zeballos"]}, {l:"Sansinena", v:"San Francisco", gl:1, gv:6, dia:"Dom 30/05", hora:"15:30", goles_l:["Daniela Abello"], goles_v:["Milagros Opazo","Milagros Opazo","Milagros Opazo","Milagros Opazo","Florencia Sorbellini","Milagros Fernández"]}] },
-    { fecha: 11, libre: "Petroquímicos", partidos: [{l:"San Francisco", v:"Estrella de Oro", gl:3, gv:1, dia:"Sáb 06/06", hora:"15:30", goles_l:["Florencia Sorbellini","Clara Iturrioz","Ariana Adassus"], goles_v:["Sabrina Genchi"]}, {l:"Liniers", v:"Huracán", gl:7, gv:0, dia:"Dom 07/06", hora:"11:00", goles_l:["Paulina Acevedo","Paulina Acevedo","Paulina Acevedo","María Paz Marino","Agustina Borda","Lucía Julián","Ainara Izaguirre"], goles_v:[]}, {l:"Pacífico (C)", v:"Olimpo", gl:2, gv:4, dia:"Dom 07/06", hora:"15:30", goles_l:["Milena Morresi","Bianca Pasqualini"], goles_v:["Brisa Oyarce","Paola Dambolena","Jazmín Romero","Sofía Cáceres"]}, {l:"Rosario PB", v:"Sansinena", gl:6, gv:0, dia:"Dom 07/06", hora:"15:30", goles_l:["Mariela Sollosky","Mariela Sollosky","Celeste Medina","Celeste Medina","Bárbara Aguirre","Juliana Ruiz"], goles_v:[]}] },
+    { fecha: 11, libre: "Petroquímicos", partidos: [{l:"San Francisco", v:"Estrella de Oro", gl:3, gv:1, dia:"Sáb 06/06", hora:"15:30", goles_l:["Florencia Sorbellini","Clara Iturrioz","Ariana Adassus"], goles_v:["Sabrina Genchi"]}, {l:"Liniers", v:"Huracán", gl:7, gv:0, dia:"Dom 07/06", hora:"11:00", goles_l:["Paulina Acevedo","Paulina Acevedo","Paulina Acevedo","María Paz Marino","Agustina Borda","Lucía Julián","Ainara Izaguirre"], goles_v:[]}, {l:"Pacífico (C)", v:"Olimpo", gl:2, gv:4, dia:"Dom 07/06", hora:"15:30", goles_l:["Milena Morresi","Bianca Pasqualini"], goles_v:["Brisa Oyarce","Paola Dambolena","Jazmín Romero","Sofía Cáceres"]}, {l:"Rosario PB", v:"Sansinena", gl:6, gv:0, dia:"Dom 07/06", hora:"15:30", goles_l:["Bárbara Aguirre","Bárbara Aguirre","Bárbara Aguirre","Celeste Medina","Celeste Medina","Juliana Ruiz"], goles_v:[]}] },
     { fecha: 12, libre: "Pacífico (C)", partidos: [{l:"Huracán", v:"San Francisco", gl:null, gv:null, dia:"Sáb 06/05", hora:"15:30"}, {l:"Olimpo", v:"Sansinena", gl:null, gv:null}, {l:"Petroquímicos", v:"Liniers", gl:null, gv:null}, {l:"Estrella de Oro", v:"Rosario PB", gl:null, gv:null}] },
     { fecha: 13, libre: "Olimpo", partidos: [{l:"Sansinena", v:"Estrella de Oro", gl:null, gv:null}, {l:"Liniers", v:"Pacífico (C)", gl:null, gv:null}, {l:"San Francisco", v:"Petroquímicos", gl:null, gv:null}, {l:"Rosario PB", v:"Huracán", gl:null, gv:null}] },
     { fecha: 14, libre: "Liniers", partidos: [{l:"Petroquímicos", v:"Rosario PB", gl:null, gv:null}, {l:"Pacífico (C)", v:"San Francisco", gl:null, gv:null}, {l:"Huracán", v:"Sansinena", gl:null, gv:null}, {l:"Olimpo", v:"Estrella de Oro", gl:null, gv:null}] },
@@ -259,7 +259,7 @@ const BD_FIXTURES_FUTSAL_RESERVA = [
         {l:"Los 3 Chiflados", v:"San Francisco",   gl:6, gv:1},
         {l:"La Estación",     v:"Huracán",         gl:5, gv:5},
         {l:"La Esperanza",    v:"Dep. Futsal",     gl:null, gv:null},
-        {l:"Villa Mitre",     v:"Catamarca",       gl:null, gv:null}
+        {l:"Villa Mitre",     v:"Catamarca",       gl:4, gv:4}
     ]},
     { fecha: 7, partidos: [
         {l:"Los 3 Chiflados", v:"Villa Mitre",     gl:4, gv:3},
@@ -898,7 +898,7 @@ const BD_FIXTURES_FUTSAL = [
             ],
         },
         {l:"La Esperanza",    v:"Dep. Futsal",     gl:null, gv:null},
-        {l:"Villa Mitre",     v:"Catamarca",       gl:null, gv:null}
+        {l:"Villa Mitre",     v:"Catamarca",       gl:4, gv:3}
     ]},
     { fecha: 7, partidos: [
         {
@@ -1579,7 +1579,7 @@ BD_FIXTURES.oficial.reserva.push(
         {l:"Huracán",   v:"Villa Mitre",   gl:1, gv:1}
     ]},
     { fecha: 11, partidos: [
-        {l:"Huracán",   v:"La Armonía",   gl:null, gv:null},
+        {l:"Huracán",   v:"La Armonía",   gl:0, gv:0},
         {l:"Bella Vista",   v:"Sporting",   gl:null, gv:null},
         {l:"San Francisco",   v:"Villa Mitre",   gl:1, gv:3},
         {l:"Libertad",   v:"Liniers",   gl:null, gv:null}
@@ -1889,7 +1889,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 11).partidos.forEach(p
 });
 
 
-let diaSeleccionadoHome = "2026-06-07"; 
+let diaSeleccionadoHome = "2026-06-09"; 
 
 function seleccionarDiaHome(dia) {
     diaSeleccionadoHome = dia;
@@ -1909,92 +1909,51 @@ const BD_FECHA_META = {
 
 function generarHome() {
     const agenda = [
-        { id: "2026-06-02", label: "MAR 02/06", torneos: [
-            { nombre: "FUTSAL", cat: "futsal", partidos: [
-                {l:"La Esperanza", v:"Villa Mitre", hora:"22:00", nota:"en cancha de Don Bosco", gl: 7, gv: 3}
-            ]},
+        { id: "2026-06-09", label: "MAR 09/06", torneos: [
             { nombre: "SENIOR", cat: "seniorapertura", partidos: [
-                {l:"Huracán", v:"Libertad", hora:"20:00", nota:"en cancha de Libertad", gl: 3, gv: 2},
-                {l:"San Francisco", v:"Tiro Federal", hora:"20:00", nota:"en cancha de Empleados de Comercio", gl: 4, gv: 1},
-                {l:"Sansinena", v:"Sporting", hora:"21:00", nota:"en cancha de Sansinena", gl: 3, gv: 1},
-                {l:"Comercial", v:"Bella Vista", hora:"21:30", nota:"en cancha de Libertad", gl: 1, gv: 1},
-                {l:"Pacífico BB", v:"Pacífico (C)", hora:"21:30", nota:"en cancha de Empleados de Comercio", gl: 0, gv: 1}
+                {l:"Bella Vista", v:"Tiro Federal", hora:"20:00", nota:"en cancha de Empleados de Comercio"},
+                {l:"Libertad", v:"Pacífico BB", hora:"21:00", nota:"en cancha de Libertad"},
+                {l:"Sansinena", v:"Pacífico (C)", hora:"21:00", nota:"en cancha de Sansinena"},
+                {l:"San Francisco", v:"Huracán", hora:"21:30", nota:"en cancha de Empleados de Comercio"},
+                {l:"Sporting", v:"Comercial", hora:"21:30", nota:"en cancha de Empleados Sporting"},
             ]},
             { nombre: "RESERVA OFICIAL", cat: "reserva_oficial", partidos: [
-                {l:"Huracán", v:"Villa Mitre", hora:"15:00", gl: 1, gv: 1}
-            ]},
-            { nombre: "RESERVA PROMOCIONAL", cat: "reserva_promocional", partidos: [
-                {l:"Olimpo", v:"Comercial", hora:"15:00", gl: 2, gv: 1}
+                {l:"Huracán", v:"La Armonía", hora:"15:00", gl:0, gv:0},
             ]},
         ]},
-        { id: "2026-06-03", label: "MÍER 03/06", torneos: [
-            { nombre: "FUTSAL", cat: "futsal", partidos: [
-                {l:"Dep. Futsal", v:"Dublin", hora:"22:00", nota:"en La Curtiembre", gl: 3, gv: 2},
-                {l:"Comercial", v:"La Estación", hora:"22:00", nota:"en cancha de Comercial", gl: 3, gv: 8}
+        { id: "2026-06-11", label: "JUE 11/06", torneos: [
+            { nombre: "SENIOR (REPROGRAMAD)", cat: "seniorapertura", partidos: [
+                {l:"Pacífico BB", v:"Bella Vista", hora:"21:00", nota:"en cancha de Bella Vista"}
             ]},
         ]},
-            { id: "2026-06-04", label: "JUE 04/06", torneos: [
-            { nombre: "FUTSAL", cat: "futsal", partidos: [
-                {l:"Los 3 Chiflados", v:"Tiro Federal", hora:"22:00", nota:"en La Curtiembre", gl: 3, gv:0},
-                {l:"Huracán", v:"Liniers", hora:"22:30", nota:"<b>SUSPENDIDO</b>"}
+        { id: "2026-06-13", label: "SÁB 13/06", torneos: [
+            { nombre: "PROMOCIONAL", cat: "promocional", partidos: [
+                {l:"Tiro Federal", v:"Sansinena", hora:"15:00"},
+                {l:"Comercial", v:"Rosario PB", hora:"15:00"}
             ]},
         ]},
-        { id: "2026-06-05", label: "VIE 05/06", torneos: [
-            { nombre: "FUTSAL", cat: "futsal", partidos: [
-                {l:"Petroquímicos", v:"Catamarca", hora:"22:00", nota:"en Petroquímicos", gl: 6, gv: 0},
-                {l:"San Francisco", v:"Pacífico BB", hora:"22:30", nota:"en Tiro Federal", gl: 5, gv:5}
-            ]},
-        ]},
-        { id: "2026-06-06", label: "SÁB 06/06", torneos: [
+        { id: "2026-06-14", label: "DOM 14/06", torneos: [
             { nombre: "OFICIAL", cat: "oficial", partidos: [
-                {l:"Huracán", v:"La Armonía", hora:"15:00", nota:"en cancha de Villa Mitre", gl: 3, gv:0}
+                {l:"Sporting", v:"Libertad", hora:"15:00"},
+                {l:"La Armonía", v:"San Francisco", hora:"15:00"}
             ]},
             { nombre: "PROMOCIONAL", cat: "promocional", partidos: [
-                {l:"Pacífico (C)", v:"Tiro Federal", hora:"15:00", gl: 1, gv:2},
-                {l:"Dublin", v:"Comercial", hora:"15:00", nota:"en cancha de La Armonía", gl: 0, gv:1},
-                {l:"Rosario PB", v:"Olimpo", hora:"15:00", gl: 1, gv:0}
-           ]},
-            { nombre: "1° FEMENINO", cat: "femenino", partidos: [
-                {l:"Sporting", v:"Empleados de Comercio", hora:"15:30"}
+                {l:"Pacífico BB", v:"Dublin", hora:"15:00"}
             ]},
-            { nombre: "2° FEMENINO", cat: "segundafemenino", partidos: [
-                {l:"San Francisco", v:"Estrella de Oro", hora:"15:30", gl: 3, gv: 1}
+            { nombre: "FUTSAL PROMOCIONAL - FINAL REGIONAL", cat: "futsalbonaerensepromocional", partidos: [
+                {l:"SyD Argentinos del Sud", v:"La Estación", hora:"19:30", nota:"En cancha de Banco Provinia y a partido único. El ganador avanza a la fase final"}
             ]},
-            { nombre: "SUB 15 FEMENINO", cat: "sub15fem", partidos: [
-                {l:"La Armonía", v:"Huracán", hora:"09:00", gl: 1, gv: 0},
-                {l:"Empleados de Comercio", v:"Olimpo", hora:"10:00", gl: 0, gv: 1},
-                {l:"Libertad", v:"Liniers", hora:"15:00", gl: 0, gv:8},
-                {l:"Tiro Federal", v:"Juventud Unida", hora:"15:00", gl: 2, gv:1}
-            ]},
-            { nombre: "FUTSAL BONAERENSE - ASCENSO", cat: "futsalbonaerense", partidos: [
-                {l:"La Esperanza", v:"Banco Provincia", hora:"15:30", nota:"en La Curtiembre", gl: 4, gv:3}
+            { nombre: "FUTSAL BONAERENSE ASCENSO - ÚLTIMA FECHA", cat: "futsalbonaerense", partidos: [
+                {l:"Banco Provincia", v:"Los 3 Chiflados", hora:"15:30", nota:"En cancha de Banco Provincia. Si Banco Provincia no gana, La Esperanza ganará la zona y jugará la final regional"}
             ]},
         ]},
-        { id: "2026-06-07", label: "DOM 07/06", torneos: [
+        { id: "2026-06-15", label: "LUN 15/06", torneos: [
             { nombre: "OFICIAL", cat: "oficial", partidos: [
-                {l:"Bella Vista", v:"Sporting", hora:"11:00"},
-                {l:"San Francisco", v:"Villa Mitre", hora:"15:00"},
-                {l:"Libertad", v:"Liniers", hora:"15:00"}
+                {l:"Liniers", v:"Huracán", hora:"15:00", nota:"en cancha de Libertad"},
+                {l:"Sporting", v:"Libertad", hora:"15:00"}
             ]},
             { nombre: "PROMOCIONAL", cat: "promocional", partidos: [
-                {l:"Sansinena", v:"Pacífico BB", hora:"15:00"}
-            ]},
-           { nombre: "1° FEMENINO", cat: "femenino", partidos: [
-                {l:"La Armonía", v:"Bella Vista", hora:"15:30"},
-                {l:"Municipales", v:"Libertad", hora:"15:30"},
-                {l:"Villa Mitre", v:"Tiro Federal", hora:"15:30"}
-            ]},
-            { nombre: "2° FEMENINO", cat: "segundafemenino", partidos: [
-                {l:"Huracán", v:"Liniers", hora:"11:00", gl: 7, gv: 0},
-                {l:"Pacífico (C)", v:"Olimpo", hora:"11:30"},
-                {l:"Rosario PB", v:"Sansinena", hora:"11:30"}
-            ]},
-            { nombre: "SUB 15 FEMENINO", cat: "sub15fem", partidos: [
-                {l:"San Francisco", v:"Bella Vista", hora:"14:15", gl: 0, gv:4},
-                {l:"Villa Mitre", v:"Sporting", hora:"15:00", gl: 2, gv:1},
-            ]},
-            { nombre: "FEDERAL A", cat: "federala", partidos: [
-                {l:"Olimpo", v:"Guillermo Brown", hora:"15:00", gl: 0, gv:0}
+                {l:"Olimpo", v:"Pacífico (C)", hora:"15:00", nota:"en cancha de Bella Vista"}
             ]},
         ]},
 ];
@@ -15877,12 +15836,12 @@ function generarReserva(cat) {
     const BD_RESERVA_POS = {
         'oficial':    [{n:"Sporting",      cl:"sporting",     pj:10, pg:6, pe:4, pp:0, gf:19, gc:9, pts:22},
                        {n:"Villa Mitre",   cl:"villamitre",   pj:11, pg:5, pe:1, pp:5, gf:23, gc:17, pts:17},
+                       {n:"La Armonía",    cl:"laarmonia",    pj:11, pg:4, pe:4, pp:3, gf:18, gc:11, pts:16},
                        {n:"Libertad",      cl:"libertad",     pj:10, pg:4, pe:3, pp:3, gf:15, gc:11, pts:15},
-                       {n:"La Armonía",    cl:"laarmonia",    pj:10, pg:4, pe:3, pp:3, gf:18, gc:11, pts:15},
                        {n:"Bella Vista",   cl:"bellavista",   pj:10, pg:3, pe:4, pp:3, gf:16, gc:19, pts:13},
                        {n:"San Francisco", cl:"sanfrancisco", pj:11, pg:3, pe:2, pp:6, gf:17, gc:19, pts:12},
                        {n:"Liniers",       cl:"liniers",      pj:10, pg:2, pe:3, pp:5, gf:10, gc:15, pts:9},
-                       {n:"Huracán",       cl:"huracan",      pj:10, pg:1, pe:4, pp:5, gf:9, gc:28, pts:7}],
+                       {n:"Huracán",       cl:"huracan",      pj:1, pg:1, pe:5, pp:5, gf:9, gc:28, pts:8}],
         'promocional':[                       {n:"Olimpo",              cl:"olimpo",           pj:10, pg:7, pe:1, pp:2, gf:19, gc:10, pts:22},
                        {n:"Comercial",           cl:"comercial",        pj:11, pg:5, pe:5, pp:1, gf:18, gc:10, pts:20},
                        {n:"Tiro Federal",        cl:"tirofederal",      pj:10, pg:5, pe:3, pp:2, gf:22, gc:17, pts:18},
@@ -16134,13 +16093,13 @@ const BD_POS_FUTSAL = {
         {n:"La Estación <b>(C)<b>",     cl:"laestacion",    pj:10,pg:10,pe:0,pp:0,gf:52, gc:18, pts:30},
         {n:"La Esperanza <b>(C)<b>",    cl:"laesperanza",   pj:9,pg:8,pe:0,pp:1,gf:43, gc:26, pts:24},
         {n:"Los 3 Chiflados <b>(C)<b>", cl:"los3chiflados", pj:9,pg:7,pe:1,pp:1,gf:59, gc:26, pts:22},
-        {n:"Villa Mitre <b>(C)<b>",     cl:"villamitre",    pj:9,pg:6,pe:1,pp:2,gf:37, gc:30, pts:19},
+        {n:"Villa Mitre <b>(C)<b>",     cl:"villamitre",    pj:10,pg:7,pe:1,pp:2,gf:41, gc:33, pts:22},
         {n:"Tiro Federal",    cl:"tirofederal",   pj:11,pg:5,pe:1,pp:4,gf:29, gc:33, pts:16},
         {n:"Pacífico BB",     cl:"pacificobb",    pj:10,pg:5,pe:1,pp:4,gf:47, gc:42, pts:16},
         {n:"Liniers",         cl:"liniers",       pj:8,pg:4,pe:3,pp:1,gf:35, gc:27, pts:15},
         {n:"Comercial",       cl:"comercial",     pj:10,pg:4,pe:2,pp:4,gf:47, gc:37, pts:14},
         {n:"Petroquímicos",   cl:"petroquimicos", pj:11,pg:4,pe:0,pp:7,gf:39,gc:43, pts:12},
-        {n:"Catamarca",       cl:"catamarca",     pj:10,pg:3,pe:1,pp:6,gf:25, gc:43, pts:10},
+        {n:"Catamarca",       cl:"catamarca",     pj:11,pg:3,pe:1,pp:7,gf:28, gc:47, pts:10},
         {n:"Dublin",          cl:"dublin",        pj:11,pg:3,pe:0,pp:8,gf:31, gc:35, pts:9},
         {n:"Dep. Futsal",     cl:"depfutsal",     pj:10,pg:2,pe:0,pp:8,gf:19, gc:42, pts:6},
         {n:"San Francisco <b>(X)</b> <b>*</b>",   cl:"sanfrancisco",  pj:10,pg:1,pe:4,pp:5,gf:34, gc:42, pts:4},
@@ -16149,13 +16108,13 @@ const BD_POS_FUTSAL = {
     reserva: [
         {n:"Los 3 Chiflados", cl:"los3chiflados", pj:9,pg:8,pe:1,pp:0,gf:46, gc:11, pts:25},
         {n:"Petroquímicos",   cl:"petroquimicos", pj:11,pg:6,pe:3,pp:2,gf:61, gc:26, pts:21},
-        {n:"Villa Mitre",     cl:"villamitre",    pj:8,pg:6,pe:1,pp:1,gf:33, gc:19, pts:19},
+        {n:"Villa Mitre",     cl:"villamitre",    pj:9,pg:6,pe:2,pp:1,gf:37, gc:23, pts:20},
         {n:"La Esperanza",    cl:"laesperanza",   pj:8,pg:6,pe:1,pp:1,gf:33, gc:20, pts:19},
         {n:"Liniers",         cl:"liniers",       pj:8,pg:5,pe:2,pp:1,gf:37, gc:23, pts:17},
         {n:"La Estación",     cl:"laestacion",    pj:10,pg:4,pe:4,pp:2,gf:29, gc:29, pts:16},
         {n:"Dublin",          cl:"dublin",        pj:11,pg:4,pe:2,pp:5,gf:29, gc:39, pts:14},
         {n:"San Francisco",   cl:"sanfrancisco",  pj:10,pg:4,pe:1,pp:5,gf:24, gc:36, pts:13},
-        {n:"Catamarca",       cl:"catamarca",     pj:10,pg:4,pe:0,pp:6,gf:35, gc:47, pts:12},
+        {n:"Catamarca",       cl:"catamarca",     pj:11,pg:4,pe:1,pp:6,gf:39, gc:51, pts:13},
         {n:"Pacífico BB",     cl:"pacificobb",    pj:10,pg:3,pe:2,pp:5,gf:35, gc:48, pts:11},
         {n:"Tiro Federal",    cl:"tirofederal",   pj:11,pg:3,pe:2,pp:6,gf:21, gc:39, pts:11},
         {n:"Huracán",         cl:"huracan",       pj:10,pg:2,pe:1,pp:7,gf:19, gc:42, pts:7},
@@ -16507,7 +16466,7 @@ const BD_BONAERENSE_SUR = {
         { fecha: 5, libre: "Los 3 Chiflados", dia: "Vie 29/05", partidos: [
             { l: "La Esperanza", v: "Banco Provincia", gl: 4, gv: 3 }
         ]},
-        { fecha: 6, libre: "La Esperanza", dia: "Vie 05/06", partidos: [
+        { fecha: 6, libre: "La Esperanza", dia: "Dom 14/06", partidos: [
             { l: "Banco Provincia", v: "Los 3 Chiflados", gl: null, gv: null }
         ]}
     ],
@@ -16535,7 +16494,7 @@ const BD_BONAERENSE_SUR = {
 ]};
 
 function generarFutsalBonaerense() {
-    const n = estado.fechaBonaerense || 5;
+    const n = estado.fechaBonaerense || 6;
     const f = BD_BONAERENSE_SUR.fixture.find(x => x.fecha === n) || { partidos: [], libre: null };
 
     let html = `<div class="header-t">TORNEO BONAERENSE — PAMPEANA SUR</div>`;
@@ -16625,9 +16584,9 @@ const BD_BONAERENSE_PROMO = {
     },
     grupo2: {
         posiciones: [
-            { n: "SyD Argentinos del Sud", cl: "sydargentinos", pj: 3, pg: 3, pe: 0, pp: 0, gf: 10, gc: 4, pts: 9 },
+            { n: "SyD Argentinos del Sud", cl: "sydargentinos", pj: 4, pg: 4, pe: 0, pp: 0, gf: 21, gc: 6, pts: 12 },
             { n: "Puerto Futsal",          cl: "puertofutsal",  pj: 4, pg: 1, pe: 0, pp: 3, gf: 16, gc: 17, pts: 3 },
-            { n: "2 de Julio",             cl: "dedejulio",     pj: 3, pg: 1, pe: 0, pp: 2, gf: 11, gc: 16, pts: 3 }
+            { n: "2 de Julio",             cl: "dedejulio",     pj: 4, pg: 1, pe: 0, pp: 3, gf: 13, gc: 27, pts: 3 }
         ]
     },
     goleadores: [
@@ -16635,10 +16594,16 @@ const BD_BONAERENSE_PROMO = {
     { nombre: "Gastón Ackerman",           equipo: "La Estación",   goles: 1 },
     { nombre: "Lucas Matías", equipo: "Villa Mitre", goles: 1 },
     { nombre: "Agustín Pullini",          equipo: "Villa Mitre",   goles: 1 }
-]};
+],
+    finalRegional: {
+        dia: "A confirmar",
+        gl: null,
+        gv: null
+    }
+};
 
 function generarFutsalBonaerensePromo() {
-    const n = estado.fechaBonaerensePromo || 4;
+    const n = estado.fechaBonaerensePromo || 6;
     const f = BD_BONAERENSE_PROMO.grupo1.fixture.find(x => x.fecha === n) || { partidos: [], libre: null };
 
     let html = `<div class="header-t">TORNEO BONAERENSE — PAMPEANA SUR PROMOCIONAL</div>`;
@@ -16646,7 +16611,21 @@ function generarFutsalBonaerensePromo() {
         🏆 El <b>1° de cada grupo</b> clasifica a la final por un lugar en el <b>Torneo Nacional del Consejo Federal</b>
     </div>`;
 
+    // ── FINAL REGIONAL ──
+    html += `<div class="header-t" style="background:#739a3e; color:#000000;">🏆 FINAL REGIONAL</div>`;
+    const fin = BD_BONAERENSE_PROMO.finalRegional;
+    const resF = fin.gl !== null ? `${fin.gl} - ${fin.gv}` : `<span style="font-size:10px;color:#888;">${fin.dia || 'A confirmar'}</span>`;
+    html += `<table>
+        <tr>
+            <td class="c-loc"><span style="direction:ltr;display:inline-flex;align-items:center;justify-content:flex-end;width:100%;">SyD Argentinos del Sud <div class="escudo sydargentinos" style="display:inline-block;vertical-align:middle;margin-left:4px;"></div></span></td>
+            <td class="c-res">${resF}</td>
+            <td class="c-vis"><div class="escudo laestacion" style="display:inline-block;vertical-align:middle;margin-right:4px;"></div> La Estación</td>
+        </tr>
+    </table>`;
+    html += `<div style="height:10px;background:#f0f0f0;border-top:1px solid #ddd;border-bottom:1px solid #ddd;"></div>`;
+
     // Nav fechas Grupo 1
+    html += `<div class="header-t">FASE REGULAR</div>`;
     html += `<div class="nav-fechas">`;
     for (let i = 1; i <= 2; i++) {
         html += `<div class="btn-f ${i === n ? 'activa' : ''}" onclick="estado.fechaBonaerensePromo=${i};document.getElementById('contenido').innerHTML=generarFutsalBonaerensePromo()">${i}</div>`;
