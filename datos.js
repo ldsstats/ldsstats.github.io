@@ -1911,7 +1911,7 @@ function generarHome() {
     const agenda = [
         { id: "2026-06-09", label: "MAR 09/06", torneos: [
             { nombre: "SENIOR", cat: "seniorapertura", partidos: [
-                {l:"Bella Vista", v:"Tiro Federal", hora:"20:00", nota:"en cancha de Empleados de Comercio"},
+                {l:"Bella Vista", v:"Tiro Federal", hora:"20:00", nota:"en cancha de Empleados de Comercio", gl:2, gv:0},
                 {l:"Libertad", v:"Pacífico BB", hora:"21:00", nota:"en cancha de Libertad"},
                 {l:"Sansinena", v:"Pacífico (C)", hora:"21:00", nota:"en cancha de Sansinena"},
                 {l:"San Francisco", v:"Huracán", hora:"21:30", nota:"en cancha de Empleados de Comercio"},
@@ -16713,15 +16713,15 @@ function generarTablaPosBonaerense(pos) {
 
 const BD_SENIOR_APERTURA = [
     { n: "Sporting",          cl: "sporting",      pj: 6, pg: 5, pe: 0, pp: 1, gf: 13, gc: 5, pts: 15 },
+    { n: "Bella Vista",       cl: "bellavista",    pj: 6, pg: 4, pe: 1, pp: 1, gf: 9, gc: 5, pts: 13 },
     { n: "Huracán",           cl: "huracan",       pj: 6, pg: 4, pe: 0, pp: 2, gf: 21, gc: 14, pts: 12 },
     { n: "Sansinena",         cl: "sansinena",     pj: 6, pg: 3, pe: 1, pp: 2, gf: 10, gc: 7, pts: 10 },
-    { n: "Bella Vista",       cl: "bellavista",    pj: 5, pg: 3, pe: 1, pp: 1, gf: 7, gc: 5, pts: 10 },
     { n: "Pacífico (C)",      cl: "pacificoc",     pj: 6, pg: 3, pe: 0, pp: 3, gf: 10, gc: 17, pts: 9 },
     { n: "Comercial",         cl: "comercial",     pj: 6, pg: 2, pe: 2, pp: 2, gf: 11, gc: 11, pts: 8 },
     { n: "Libertad",          cl: "libertad",      pj: 6, pg: 2, pe: 1, pp: 3, gf: 14, gc: 10, pts: 7 },
     { n: "Pacífico BB",       cl: "pacificobb",    pj: 5, pg: 1, pe: 1, pp: 3, gf: 4, gc: 9, pts: 4 },
     { n: "San Francisco",     cl: "sanfrancisco",  pj: 6, pg: 1, pe: 0, pp: 5, gf: 7, gc: 10, pts: 4 },
-    { n: "Tiro Federal",      cl: "tirofederal",   pj: 6, pg: 0, pe: 3, pp: 3, gf: 9, gc: 18, pts: 3 }
+    { n: "Tiro Federal",      cl: "tirofederal",   pj: 7, pg: 0, pe: 3, pp: 4, gf: 9, gc: 20, pts: 3 }
 ];
 
 const BD_FIXTURES_SENIOR = [
@@ -16767,13 +16767,19 @@ const BD_FIXTURES_SENIOR = [
         { l: "Comercial",   v: "Bella Vista",  gl: 1, gv: 1, goles_l:["Emanuel Hitz"], goles_v:["Fabián Merlini"] },
         { l: "Pacífico BB",   v: "Pacífico (C)",  gl: 0, gv: 1, goles_l:[], goles_v:["Pablo Berra"] },
     ]},
-    { fecha: 7, libre: null, partidos: [] },
+    { fecha: 7, libre: null, partidos: [
+        { l: "Bella Vista",   v: "Tiro Federal",  gl: 2, gv: 0, goles_l:["Fabián Merlini (2)"], goles_v:[] },
+        { l: "Libertad",   v: "Pacífico BB",  gl: null, gv: null, goles_l:[], goles_v:[] },
+        { l: "Sansinena",   v: "Pacífico (C)",  gl: null, gv: null, goles_l:[], goles_v:[]  },
+        { l: "San Francisco",   v: "Huracán",  gl: null, gv: null, goles_l:[], goles_v:[] },
+        { l: "Sporting",   v: "Comercial",  gl: null, gv: null, goles_l:[], goles_v:[] },
+    ]},
     { fecha: 8, libre: null, partidos: [] },
     { fecha: 9, libre: null, partidos: [] }
 ];
 
 function generarSeniorApertura() {
-    const n = estado.fechaSenior || 6;
+    const n = estado.fechaSenior || 7;
     const f = BD_FIXTURES_SENIOR.find(x => x.fecha === n) || { partidos: [], libre: null };
     const equipos = BD_SENIOR_APERTURA.map(e => ({ nombre: e.n, clase: e.cl }));
 
@@ -16851,6 +16857,7 @@ function generarSeniorApertura() {
 const BD_GOLEADORES_SENIOR = [
     { nombre: "César Panduro", equipo: "Huracán", goles: 10 },
     { nombre: "Juan José Dietz", equipo: "Tiro Federal", goles: 6 },
+    { nombre: "Fabián Merlini", equipo: "Bella Vista", goles: 4 },
     { nombre: "Felipe Hipperdinger", equipo: "Huracán", goles: 4 },
     { nombre: "Emiliano Jofré", equipo: "Sansinena", goles: 4 },
     { nombre: "Marcos Cossu", equipo: "Sporting", goles: 4 },
@@ -16859,7 +16866,6 @@ const BD_GOLEADORES_SENIOR = [
     { nombre: "Marcos Pierucci", equipo: "Sansinena", goles: 3 },
     { nombre: "Maximiliano Rodríguez", equipo: "Sporting", goles: 3 },
     { nombre: "Gabriel Bernengo", equipo: "Sporting", goles: 3 },
-    { nombre: "Fabián Merlini", equipo: "Bella Vista", goles: 2 },
     { nombre: "Maximiliano Casas", equipo: "Comercial", goles: 2 },
     { nombre: "Sebastián Racchi", equipo: "Comercial", goles: 2 },
     { nombre: "Héctor Soto Sassi", equipo: "Huracán", goles: 2 },
