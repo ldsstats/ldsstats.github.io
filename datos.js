@@ -1676,7 +1676,7 @@ BD_FIXTURES.promocional.reserva.push(
         {l:"Dublin", v:"Comercial",              gl:0,   gv:4},
         {l:"Rosario PB",v:"Olimpo",           gl:1,   gv:0},
         {l:"Sansinena",   v:"Pacífico BB", gl:2,   gv:3},
-        {l:"Pacífico (C)",      v:"Tiro Federal",          gl:null,   gv:null},
+        {l:"Pacífico (C)",      v:"Tiro Federal",          gl:3,   gv:3},
     ]},
     { fecha: 12, partidos: [
         {l:"Tiro Federal", v:"Sansinena",              gl:null,   gv:null},
@@ -1970,6 +1970,9 @@ function generarHome() {
             ]},
             { nombre: "RESERVA OFICIAL", cat: "reserva_oficial", partidos: [
                 {l:"Huracán", v:"La Armonía", hora:"15:00", gl:0, gv:0},
+            ]},
+            { nombre: "RESERVA PROMOCIONAL", cat: "reserva_promocional", partidos: [
+                {l:"Pacífico (C)", v:"Tiro Federal", hora:"15:00", gl:3, gv:3},
             ]},
         ]},
         { id: "2026-06-09", label: "MAR 09/06", torneos: [
@@ -15938,12 +15941,12 @@ function generarReserva(cat) {
                        {n:"Huracán",       cl:"huracan",      pj:11, pg:1, pe:5, pp:5, gf:9, gc:28, pts:8}],
         'promocional':[                       {n:"Olimpo",              cl:"olimpo",           pj:11, pg:7, pe:1, pp:3, gf:19, gc:11, pts:22},
                        {n:"Comercial",           cl:"comercial",        pj:11, pg:5, pe:5, pp:1, gf:18, gc:10, pts:20},
-                       {n:"Tiro Federal",        cl:"tirofederal",      pj:10, pg:5, pe:3, pp:2, gf:22, gc:17, pts:18},
+                       {n:"Tiro Federal",        cl:"tirofederal",      pj:11, pg:5, pe:4, pp:2, gf:25, gc:22, pts:19},
                        {n:"Rosario PB",          cl:"rosariopb",        pj:11, pg:5, pe:3, pp:3, gf:13, gc:7, pts:18},
                        {n:"Pacífico BB",         cl:"pacificobb",       pj:11, pg:3, pe:4, pp:4, gf:13, gc:15, pts:13},
                        {n:"Sansinena",           cl:"sansinena",        pj:11, pg:4, pe:1, pp:6, gf:14, gc:23, pts:13},
                        {n:"Dublin",              cl:"dublin",           pj:11, pg:2, pe:2, pp:7, gf:13, gc:20, pts:8},
-                       {n:"Pacífico (C)", cl:"pacificocabildo",  pj:10, pg:1, pe:3, pp:6, gf:10, gc:20, pts:6},],
+                       {n:"Pacífico (C)", cl:"pacificocabildo",  pj:11, pg:1, pe:4, pp:6, gf:13, gc:21, pts:7},],
         'segundafemenino': [
             {n:"Liniers",             cl:"liniers",         pj:8, pg:7, pe:1, pp:0, gf:33, gc:5, pts:22},
             {n:"San Francisco",       cl:"sanfrancisco",    pj:8, pg:5, pe:1, pp:2, gf:19, gc:6, pts:16},
