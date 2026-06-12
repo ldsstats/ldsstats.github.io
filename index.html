@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>LdS Stats - 2026</title>
-    <link rel="stylesheet" href="style.css?v=7">
+    <link rel="stylesheet" href="style.css?v=77">
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#111111">
     <!-- Google Analytics -->
@@ -32,7 +32,7 @@
     z-index: 999;
     pointer-events: none;
     letter-spacing: 0.3px;
-">🕐 Última actualización: Jue 11/06 23:40hs</div>
+">🕐 Última actualización: Vie 12/06 17:00hs</div>
 
 <div id="container-principal">
     <div id="logo-header"><img src="au11.png" style="height:80px;" alt="LdS Stats"></div>
@@ -158,15 +158,15 @@
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-<script src="datos.js?v=7"></script>
+<script src="datos.js?v=77"></script>
 <script>
     let estado = { torneo: 'home', categoria: '', fecha: 1 };
     let estadoAnterior = { torneo: 'home', categoria: '', fecha: 1 };
 
     // Última actualización por sección — modificar según corresponda
     const ULTIMA_ACT = {
-        default:        "Jue 11/06 23:40hs",
-        home:        "Jue 11/06 23:40hs",
+        default:        "Vie 12/06 17:00hs",
+        home:        "Vie 12/06 17:00hs",
         apertura_oficial:   "Dom 07/06 22:00hs",
         historial:   "Dom 07/06 22:00hs",
         goleadores_oficial:   "Dom 07/06 22:00hs",
@@ -180,17 +180,17 @@
         goleadores_federala:   "Dom 07/06 22:00hs",
         sub131517:   "Sáb 06/06 08:00hs",
         copa_argentina:   "Dom 29/3 — 21:00hs",
-        apertura_femenino:   "Lun 08/06 08:00hs",
+        apertura_femenino:   "Vie 12/06 17:00hs",
         goleadores_femenino:   "Lun 08/06 08:00hs",
         reserva_femenino:   "Lun 08/06 08:00hs",
-        torneo2026_segundafemenino:   "Lun 08/06 08:00hs",
+        torneo2026_segundafemenino:   "Vie 12/06 17:00hs",
         goleadores_segundafemenino:   "Lun 08/06 08:00hs",
         reserva_segundafemenino:   "Lun 08/06 08:00hs",
-        sub15fem:   "Lun 08/06 08:00hs",
+        sub15fem:   "Vie 12/06 17:00hs",
         torneo2026_senior:   "Lun 04/05 08:00hs",
         futsal:   "Jue 11/06 23:40hs",
         futsalgoleadores:   "Jue 11/06 23:40hs",
-        futsalreserva:   "Jue 11/06 23:40hs",
+        futsalreserva:   "Vie 12/06 17:00hs",
         quienessomos:   "Miér 1/04 — 00:00hs",
         equiposfuera:   "Dom 22/3 — 1:15hs",
         futsalbonaerense:   "Miér 10/06 19:00hs",
@@ -274,7 +274,7 @@
         }
         estado.torneo = tor;
         estado.categoria = cat;
-        estado.fecha = (tor === 'apertura' && (cat === 'oficial' || cat === 'promocional')) ? 12 : (tor === 'posiciones' && cat === 'federala') ? 13 : (tor === 'apertura' && cat === 'femenino') ? 11 : (tor === 'torneo2026' && cat === 'segundafemenino') ? 11 : (tor === 'futsal') ? 12 : (tor === 'futsalreserva') ? 12 : (tor === 'sub15fem') ? 11 : 1; 
+        estado.fecha = (tor === 'apertura' && (cat === 'oficial' || cat === 'promocional')) ? 12 : (tor === 'posiciones' && cat === 'federala') ? 13 : (tor === 'apertura' && cat === 'femenino') ? 12 : (tor === 'torneo2026' && cat === 'segundafemenino') ? 12 : (tor === 'futsal') ? 12 : (tor === 'futsalreserva') ? 12 : (tor === 'sub15fem') ? 11 : 1; 
         actualizarVista();
         document.documentElement.scrollTop = 0;
         document.body.scrollTop = 0;
@@ -440,7 +440,7 @@
                 cont.innerHTML = generarTablaFederal();
             } else if (estado.torneo === 'reserva') {
                 if (!estado._reservaIniciada || estado._reservaCat !== estado.categoria) {
-                    estado.fecha = (estado.categoria === 'oficial' || estado.categoria === 'promocional') ? 12 : (estado.categoria === 'femenino' || estado.categoria === 'segundafemenino') ? 11 : 1;
+                    estado.fecha = (estado.categoria === 'oficial' || estado.categoria === 'promocional') ? 12 : (estado.categoria === 'femenino' || estado.categoria === 'segundafemenino') ? 12 : 1;
                     estado._reservaIniciada = true;
                     estado._reservaCat = estado.categoria;
                 }

@@ -118,7 +118,7 @@ const idaSegundaFemenino = [
     { fecha: 9, libre: "Estrella de Oro", partidos: [{l:"Huracán", v:"Pacífico (C)", gl:3, gv:1, dia:"Sáb 23/05", hora:"15:30", goles_l:["Keila Iglesias","Keila Iglesias","Keila Iglesias"], goles_v:["Carolina Delorte"]}, {l:"Olimpo", v:"Petroquímicos", gl:0, gv:0, dia:"Sáb 23/05", hora:"15:30"}, {l:"Rosario PB", v:"San Francisco", gl:0, gv:4, dia:"Sáb 23/05", hora:"16:00", goles_l:[], goles_v:["Ariana Adassus","Ariana Adassus","Florencia Sorbellini","Julieta Viera"]}, {l:"Sansinena", v:"Liniers", gl:0, gv:3, dia:"Sáb 23/05", hora:"17:30", goles_l:[], goles_v:["Paulina Acevedo","Paulina Acevedo","Paz Cutrín"]}] },
     { fecha: 10, libre: "Huracán", partidos: [{l:"Petroquímicos", v:"Pacífico (C)", gl:4, gv:0, dia:"Sáb 29/05", hora:"15:30", goles_l:["Paula Rodríguez","Paula Rodríguez","Paula Rodríguez","Nicole Montenegro"], goles_v:[]}, {l:"Estrella de Oro", v:"Liniers", gl:0, gv:2, dia:"Dom 30/05", hora:"15:30", goles_l:[], goles_v:["Paulina Acevedo","Isabella Pezzutti"]}, {l:"Olimpo", v:"Rosario PB", gl:0, gv:3, dia:"Dom 30/05", hora:"15:30", goles_l:[], goles_v:["Bárbara Aguirre","Celeste Medina","Ayelén Zeballos"]}, {l:"Sansinena", v:"San Francisco", gl:1, gv:6, dia:"Dom 30/05", hora:"15:30", goles_l:["Daniela Abello"], goles_v:["Milagros Opazo","Milagros Opazo","Milagros Opazo","Milagros Opazo","Florencia Sorbellini","Milagros Fernández"]}] },
     { fecha: 11, libre: "Petroquímicos", partidos: [{l:"San Francisco", v:"Estrella de Oro", gl:3, gv:1, dia:"Sáb 06/06", hora:"15:30", goles_l:["Florencia Sorbellini","Clara Iturrioz","Ariana Adassus"], goles_v:["Sabrina Genchi"]}, {l:"Liniers", v:"Huracán", gl:7, gv:0, dia:"Dom 07/06", hora:"11:00", goles_l:["Paulina Acevedo","Paulina Acevedo","Paulina Acevedo","María Paz Marino","Agustina Borda","Lucía Julián","Ainara Izaguirre"], goles_v:[]}, {l:"Pacífico (C)", v:"Olimpo", gl:2, gv:4, dia:"Dom 07/06", hora:"15:30", goles_l:["Milena Morresi","Bianca Pasqualini"], goles_v:["Brisa Oyarce","Paola Dambolena","Jazmín Romero","Sofía Cáceres"]}, {l:"Rosario PB", v:"Sansinena", gl:6, gv:0, dia:"Dom 07/06", hora:"15:30", goles_l:["Bárbara Aguirre","Bárbara Aguirre","Bárbara Aguirre","Celeste Medina","Celeste Medina","Juliana Ruiz"], goles_v:[]}] },
-    { fecha: 12, libre: "Pacífico (C)", partidos: [{l:"Huracán", v:"San Francisco", gl:null, gv:null, dia:"Sáb 06/05", hora:"15:30"}, {l:"Olimpo", v:"Sansinena", gl:null, gv:null}, {l:"Petroquímicos", v:"Liniers", gl:null, gv:null}, {l:"Estrella de Oro", v:"Rosario PB", gl:null, gv:null}] },
+    { fecha: 12, libre: "Pacífico (C)", partidos: [{l:"Huracán", v:"San Francisco", gl:null, gv:null, dia:"Sáb 13/05", hora:"15:30"}, {l:"Olimpo", v:"Sansinena", gl:null, gv:null, dia:"Dom 14/05", hora:"15:30"}, {l:"Petroquímicos", v:"Liniers", gl:null, gv:null, dia:"Dom 14/05", hora:"15:30"},, {l:"Estrella de Oro", v:"Rosario PB", gl:null, gv:null, dia:"Dom 14/05", hora:"15:30"}] },
     { fecha: 13, libre: "Olimpo", partidos: [{l:"Sansinena", v:"Estrella de Oro", gl:null, gv:null}, {l:"Liniers", v:"Pacífico (C)", gl:null, gv:null}, {l:"San Francisco", v:"Petroquímicos", gl:null, gv:null}, {l:"Rosario PB", v:"Huracán", gl:null, gv:null}] },
     { fecha: 14, libre: "Liniers", partidos: [{l:"Petroquímicos", v:"Rosario PB", gl:null, gv:null}, {l:"Pacífico (C)", v:"San Francisco", gl:null, gv:null}, {l:"Huracán", v:"Sansinena", gl:null, gv:null}, {l:"Olimpo", v:"Estrella de Oro", gl:null, gv:null}] },
     { fecha: 15, libre: "San Francisco", partidos: [{l:"Sansinena", v:"Petroquímicos", gl:null, gv:null}, {l:"Liniers", v:"Olimpo", gl:null, gv:null}, {l:"Estrella de Oro", v:"Huracán", gl:null, gv:null}, {l:"Rosario PB", v:"Pacífico (C)", gl:null, gv:null}] },
@@ -309,7 +309,7 @@ const BD_FIXTURES_FUTSAL_RESERVA = [
     { fecha: 12, partidos: [
         {l:"La Estación",     v:"La Esperanza",    gl:3, gv:3},
         {l:"Dep. Futsal",     v:"Liniers",         gl:1, gv:5},
-        {l:"Huracán",         v:"Villa Mitre",     gl:null, gv:null},
+        {l:"Huracán",         v:"Villa Mitre",     gl:1, gv:6},
         {l:"Pacífico BB",     v:"Los 3 Chiflados", gl:0, gv:6},
         {l:"Catamarca",       v:"San Francisco",   gl:null, gv:null},
         {l:"Dublin",          v:"Petroquímicos",   gl:null, gv:null},
@@ -1244,6 +1244,9 @@ const BD_FIXTURES_FUTSAL = [
                 "Diego Romano"
                 ],
             goles_v:[
+                "Emiliano Etchepareborda",
+                "Alexis Guiñez",
+                "Bruno Decoud"
                 ],
         },
         {l:"Liniers",         v:"Dep. Futsal",     gl:3, gv:3},
@@ -1797,6 +1800,12 @@ BD_FIXTURES.femenino.apertura.find(f => f.fecha === 11).partidos = [
     {l:"Municipales", v:"Libertad", gl:4, gv:0, dia:"Dom 07/06", hora:"15:30", goles_l:["Stefania Sueyro","Stefania Sueyro","Valeria Navarrere","Rosario Damiani"], goles_v:[]},
     {l:"Villa Mitre", v:"Tiro Federal", gl:1, gv:1, dia:"Dom 07/06", hora:"15:30", goles_l:["Sol Menéndez Perrone"], goles_v:["Morena Juárez"]}
 ];
+BD_FIXTURES.femenino.apertura.find(f => f.fecha === 12).partidos = [
+    {l:"Empleados de Comercio", v:"La Armonía", gl:null, gv:null, dia:"Dom 14/06", hora:"15:30", goles_l:[], goles_v:[]},
+    {l:"Tiro Federal", v:"Sporting", gl:null, gv:null, dia:"Dom 14/06", hora:"15:30", goles_l:[], goles_v:[]},
+    {l:"Municipales", v:"Bella Vista", gl:null, gv:null, dia:"Lun 15/06", hora:"15:30", goles_l:[], goles_v:[]},
+    {l:"Libertad", v:"Villa Mitre", gl:null, gv:null, dia:"Lun 15/06", hora:"15:30", goles_l:[], goles_v:[]}
+];
 
 
 // Reserva femenino: mismos partidos pero siempre con gl/gv null
@@ -1958,7 +1967,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 11).partidos.forEach(p
 });
 
 
-let diaSeleccionadoHome = "2026-06-11"; 
+let diaSeleccionadoHome = "2026-06-12"; 
 
 function seleccionarDiaHome(dia) {
     diaSeleccionadoHome = dia;
@@ -2038,6 +2047,14 @@ function generarHome() {
                 {l:"Tiro Federal", v:"Sansinena", hora:"15:00"},
                 {l:"Comercial", v:"Rosario PB", hora:"15:00"}
             ]},
+            { nombre: "2° FEMENINO", cat: "segundafemenino", partidos: [
+                {l:"Huracán", v:"San Francisco", hora:"15:30"}
+            ]},
+            { nombre: "SUB 15 FEMENINO", cat: "sub15fem", partidos: [
+                {l:"Sporting", v:"San Francisco", hora:"11:00"},
+                {l:"Bella Vista", v:"La Armonía", hora:"14:00"},
+                {l:"Liniers", v:"Tiro Federal", hora:"15:00"}
+            ]},
         ]},
         { id: "2026-06-14", label: "DOM 14/06", torneos: [
             { nombre: "OFICIAL", cat: "oficial", partidos: [
@@ -2047,15 +2064,28 @@ function generarHome() {
             { nombre: "PROMOCIONAL", cat: "promocional", partidos: [
                 {l:"Pacífico BB", v:"Dublin", hora:"15:00"}
             ]},
-            { nombre: "FEDERAL A", cat: "federala", partidos: [
-                {l:"Villa Mitre", v:"Germinal", hora:"15:00"},
-                {l:"Sol de Mayo", v:"Olimpo", hora:"15:00"}
+            { nombre: "1° FEMENINO", cat: "femenino", partidos: [
+                {l:"Empleados de Comercio", v:"La Armonía", hora:"15:30"},
+                {l:"Tiro Federal", v:"Sporting", hora:"15:30"}
+            ]},
+            { nombre: "2° FEMENINO", cat: "segundafemenino", partidos: [
+                {l:"Olimpo", v:"Sansinena", hora:"15:30"},
+                {l:"Petroquímicos", v:"Liniers", hora:"15:30", nota:"en cancha de Sansinena"},
+                {l:"Estrella de Oro", v:"Rosario PB", hora:"15:30", nota:"en cancha de La Armonía"},
+            ]},
+            { nombre: "SUB 15 FEMENINO", cat: "sub15fem", partidos: [
+                {l:"Olimpo", v:"Libertad", hora:"12:00"},
+                {l:"Juventud Unida", v:"Villa Mitre", hora:"16:00"}
             ]},
             { nombre: "FUTSAL PROMOCIONAL - FINAL REGIONAL", cat: "futsalbonaerensepromocional", partidos: [
                 {l:"SyD Argentinos del Sud", v:"La Estación", hora:"19:30", nota:"En cancha de Banco Provinia y a partido único. El ganador avanza a la fase final"}
             ]},
             { nombre: "FUTSAL BONAERENSE ASCENSO - ÚLTIMA FECHA", cat: "futsalbonaerense", partidos: [
                 {l:"Banco Provincia", v:"Los 3 Chiflados", hora:"15:30", nota:"En cancha de Banco Provincia. Si Banco Provincia no gana, La Esperanza ganará la zona y jugará la final regional"}
+            ]},
+            { nombre: "FEDERAL A", cat: "federala", partidos: [
+                {l:"Villa Mitre", v:"Germinal", hora:"15:00"},
+                {l:"Sol de Mayo", v:"Olimpo", hora:"15:00"}
             ]},
         ]},
         { id: "2026-06-15", label: "LUN 15/06", torneos: [
@@ -2065,6 +2095,13 @@ function generarHome() {
             ]},
             { nombre: "PROMOCIONAL", cat: "promocional", partidos: [
                 {l:"Olimpo", v:"Pacífico (C)", hora:"15:00", nota:"en cancha de Bella Vista"}
+            ]},
+            { nombre: "1° FEMENINO", cat: "femenino", partidos: [
+                {l:"Municipales", v:"Bella Vista", hora:"15:30"},
+                {l:"Libertad", v:"Villa Mitre", hora:"15:30"}
+            ]},
+            { nombre: "SUB 15 FEMENINO", cat: "sub15fem", partidos: [
+                {l:"Huracán", v:"Empleados de Comercio", hora:"16:00"}
             ]},
         ]},
 ];
@@ -16217,20 +16254,20 @@ const BD_POS_FUTSAL = {
         {n:"Huracán <b>(X)<b>",         cl:"huracan",       pj:11,pg:0,pe:0,pp:11,gf:27, gc:80,pts:0}
     ],
     reserva: [
-        {n:"Los 3 Chiflados", cl:"los3chiflados", pj:10,pg:9,pe:1,pp:0,gf:52, gc:11, pts:28},
-        {n:"Petroquímicos",   cl:"petroquimicos", pj:11,pg:6,pe:3,pp:2,gf:61, gc:26, pts:21},
-        {n:"Villa Mitre",     cl:"villamitre",    pj:9,pg:6,pe:2,pp:1,gf:37, gc:23, pts:20},
-        {n:"Liniers",         cl:"liniers",       pj:9,pg:6,pe:2,pp:1,gf:42, gc:24, pts:20},
-        {n:"La Esperanza",    cl:"laesperanza",   pj:9,pg:6,pe:2,pp:1,gf:36, gc:23, pts:20},
+        {n:"Los 3 Chiflados <b>(C)<b>", cl:"los3chiflados", pj:10,pg:9,pe:1,pp:0,gf:52, gc:11, pts:28},
+        {n:"Villa Mitre <b>(C)<b>",     cl:"villamitre",    pj:10,pg:7,pe:2,pp:1,gf:43, gc:24, pts:23},
+        {n:"Petroquímicos <b>(C)<b>",   cl:"petroquimicos", pj:11,pg:6,pe:3,pp:2,gf:61, gc:26, pts:21},
+        {n:"Liniers <b>(C)<b>",         cl:"liniers",       pj:9,pg:6,pe:2,pp:1,gf:42, gc:24, pts:20},
+        {n:"La Esperanza <b>(C)<b>",    cl:"laesperanza",   pj:9,pg:6,pe:2,pp:1,gf:36, gc:23, pts:20},
         {n:"La Estación",     cl:"laestacion",    pj:11,pg:4,pe:5,pp:2,gf:32, gc:32, pts:17},
         {n:"Dublin",          cl:"dublin",        pj:11,pg:4,pe:2,pp:5,gf:29, gc:39, pts:14},
         {n:"San Francisco",   cl:"sanfrancisco",  pj:10,pg:4,pe:1,pp:5,gf:24, gc:36, pts:13},
         {n:"Catamarca",       cl:"catamarca",     pj:11,pg:4,pe:1,pp:6,gf:39, gc:51, pts:13},
         {n:"Pacífico BB",     cl:"pacificobb",    pj:11,pg:3,pe:2,pp:6,gf:35, gc:54, pts:11},
         {n:"Tiro Federal",    cl:"tirofederal",   pj:11,pg:3,pe:2,pp:6,gf:21, gc:39, pts:11},
-        {n:"Huracán",         cl:"huracan",       pj:10,pg:2,pe:1,pp:7,gf:19, gc:42, pts:7},
+        {n:"Huracán",         cl:"huracan",       pj:11,pg:2,pe:1,pp:8,gf:20, gc:48, pts:7},
         {n:"Comercial",       cl:"comercial",     pj:10,pg:1,pe:2,pp:7,gf:28, gc:41, pts:5},
-        {n:"Dep. Futsal",     cl:"depfutsal",     pj:11,pg:0,pe:2,pp:9,gf:21, gc:40, pts:2}
+        {n:"Dep. Futsal <b>(X)</b>",     cl:"depfutsal",     pj:11,pg:0,pe:2,pp:9,gf:21, gc:40, pts:2}
     ]
 };
 function generarSub15Fem() {
@@ -16360,7 +16397,7 @@ if ((p.goles_l && p.goles_l.length) || (p.goles_v && p.goles_v.length)) {
     if (modo === 'principal') {
 html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'><b>📌 Puntos en juego:</b> <b>6</b> para quienes hayan completado todos los partidos hasta la fecha <b>11</b><br><b>(C)</b> Clasificado a playoffs<br><b>(X)</b> Eliminado<br><b>*</b> Se le descontaron tres puntos<br><b>●</b>La Estación y Catamarca recibieron los puntos de los partidos no disputados ante Deportivo Futsal</div>`;
     } else if (modo === 'reserva') {
-        html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>6</b> para quienes hayan completado todos los partidos hasta la fecha <b>11</b><br><b>●</b> La Estación y Catamarca recibieron los puntos de los partidos no disputados ante Deportivo Futsal<br><b>●</b> Pese a no ganar los partidos, Tiro Federal y Pacífico recibieron los tres puntos de sus duelos ante Deportivo Futsal<br></div>`;
+        html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>6</b> para quienes hayan completado todos los partidos hasta la fecha <b>11</b><br><b>(C)</b> Clasificado a playoffs<br><b>(X)</b> Eliminado<br></b><b>●</b> La Estación y Catamarca recibieron los puntos de los partidos no disputados ante Deportivo Futsal<br><b>●</b> Pese a no ganar los partidos, Tiro Federal y Pacífico recibieron los tres puntos de sus duelos ante Deportivo Futsal<br></div>`;
     }
     return html;
 }
@@ -16468,15 +16505,15 @@ const BD_GOLEADORES_FUTSAL = [
         { nombre: "Lino Bognanni",     goles: 2 },
         { nombre: "Dylan Schlebuch",     goles: 1 }
     ]},
-    { club: "La Esperanza",    clase: "laesperanza",   act: "fecha 11",  goleadores: [
-        { nombre: "Bruno Decoud",         goles: 12 },
-        { nombre: "Emiliano Etchepareborda",       goles: 6 },
+    { club: "La Esperanza",    clase: "laesperanza",   act: "fecha 12",  goleadores: [
+        { nombre: "Bruno Decoud",         goles: 13 },
+        { nombre: "Emiliano Etchepareborda",       goles: 8 },
         { nombre: "Rodrigo Decoud",       goles: 5 },
         { nombre: "Alexis Vera",          goles: 4 },
         { nombre: "Benjamín Martínez",    goles: 3 },
         { nombre: "Bruno Cronier",        goles: 3 },
         { nombre: "Jesús Abdala",         goles: 3 },
-        { nombre: "Alexis Guiñez",        goles: 2 },
+        { nombre: "Alexis Guiñez",        goles: 3 },
         { nombre: "Ignacio Cappelletti",  goles: 1 }
     ]},
     { club: "Huracán",         clase: "huracan",       act: null,       goleadores: [
