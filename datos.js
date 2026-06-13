@@ -2283,7 +2283,7 @@ function generarTablaFederal() {
     });
     
     const mejoresQuintos = [
-        { nombre: "Juventud Antoniana", pj:10, pg:4, pe:2, pp:4, gf:9, gc:9 },
+        { nombre: "Juventud Antoniana", pj:10, pg:4, pe:2, pp:4, gf:9, gc:10 },
         { nombre: "FADEP", pj:10, pg:3, pe:4, pp:3, gf:12, gc:11 },
         { nombre: "Sol de Mayo", pj:11, pg:3, pe:4, pp:4, gf:8, gc:9 }
     ];
