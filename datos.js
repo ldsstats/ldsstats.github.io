@@ -1379,7 +1379,7 @@ const idaSub15Fem = [
         {l:"La Armonía",            v:"Huracán",          gl:1, gv:0}
     ]},
     { fecha: 11, partidos: [
-        {l:"Liniers",               v:"Tiro Federal",     gl:null, gv:null},
+        {l:"Liniers",               v:"Tiro Federal",     gl:7, gv:0},
         {l:"Bella Vista",           v:"La Armonía",       gl:null, gv:null},
         {l:"Sporting",              v:"San Francisco",    gl:1, gv:1},
         {l:"Olimpo",                v:"Libertad",         gl:null, gv:null},
@@ -1769,8 +1769,8 @@ BD_FIXTURES.promocional.apertura.find(f => f.fecha === 11).partidos = [
     {l:"Sansinena",    v:"Pacífico BB", gl:1, gv:0, dia:"Dom 07/06", hora:"15:00", goles_l:["Valentín Moral"], goles_v:[]},
 ];
 BD_FIXTURES.promocional.apertura.find(f => f.fecha === 12).partidos = [
-    {l:"Tiro Federal",    v:"Sansinena", gl:null, gv:null, dia:"Sáb 13/06", hora:"15:00", goles_l:[], goles_v:[]},
-    {l:"Comercial",    v:"Rosario PB", gl:null, gv:null, dia:"Sáb 13/06", hora:"15:00", goles_l:[], goles_v:[]},
+    {l:"Tiro Federal",    v:"Sansinena", gl:4, gv:0, dia:"Sáb 13/06", hora:"15:00", goles_l:["Agustín Cabrera","Agustín Restiffo","Diego Ocampo","Joaquín Laborde"], goles_v:[]},
+    {l:"Comercial",    v:"Rosario PB", gl:0, gv:1, dia:"Sáb 13/06", hora:"15:00", goles_l:[], goles_v:["Sebastián Mendoza"]},
     {l:"Pacífico BB",    v:"Dublin", gl:null, gv:null, dia:"Dom 14/06", hora:"15:00", goles_l:[], goles_v:[]},
     {l:"Olimpo",    v:"Pacífico (C)", gl:null, gv:null, dia:"Lun 15/06", hora:"15:00", goles_l:[], goles_v:[]},
 ];
@@ -18015,12 +18015,14 @@ const BD_ARQUEROS = {
             { rival: "Comercial", resultado: "Rosario PB 2 - 0 Comercial", fecha: 5 },
             { rival: "Dublin", resultado: "Rosario PB 2 - 0 Dublin", fecha: 8 },
             { rival: "Pacífico BB", resultado: "Pacífico BB 0 - 0 Rosario PB", fecha: 9 },
-            { rival: "Olimpo", resultado: "Rosario PB 1 - 0 Olimpo", fecha: 11 }
+            { rival: "Olimpo", resultado: "Rosario PB 1 - 0 Olimpo", fecha: 11 },
+            { rival: "Comercial", resultado: "Comercial 0 - 1 Rosario PB", fecha: 12 }
         ]},
         { jugador: "Bruno Arias", equipo: "Tiro Federal", partidos: [
             { rival: "Rosario PB", resultado: "Tiro Federal 2 - 0 Rosario PB", fecha: 3 },
             { rival: "Sansinena", resultado: "Sansinena 0 - 0 Tiro Federal", fecha: 5 },
-            { rival: "Rosario PB", resultado: "Rosario PB 0 - 3 Tiro Federal", fecha: 10 }
+            { rival: "Rosario PB", resultado: "Rosario PB 0 - 3 Tiro Federal", fecha: 10 },
+            { rival: "Sansinena", resultado: "Tiro Federal 4 - 0 Sansinena", fecha: 12 }
         ]},
         { jugador: "Nicolás Such", equipo: "Tiro Federal", partidos: [
             { rival: "Pacífico BB", resultado: "Tiro Federal 3 - 0 Pacífico BB", fecha: 7 },
@@ -18202,10 +18204,10 @@ const BD_POSICIONES = {
     },
     promocional: {
         apertura: [
-            { nombre: "Comercial",           clase: "comercial",       pj:11, pg:6, pe:3, pp:2, gf:10, gc:7, pts:21 },
-            { nombre: "Sansinena",           clase: "sansinena",       pj:11, pg:4, pe:6, pp:1, gf:17, gc:13, pts:18 },
-            { nombre: "Tiro Federal",        clase: "tirofederal",     pj:11, pg:5, pe:3, pp:3, gf:13, gc:6, pts:18 },
-            { nombre: "Rosario PB",          clase: "rosariopb",       pj:11, pg:4, pe:5, pp:2, gf:18, gc:16, pts:17 },
+            { nombre: "Comercial",           clase: "comercial",       pj:12, pg:6, pe:3, pp:3, gf:10, gc:8, pts:21 },
+            { nombre: "Tiro Federal",        clase: "tirofederal",     pj:12, pg:6, pe:3, pp:3, gf:17, gc:6, pts:21 },
+            { nombre: "Rosario PB",          clase: "rosariopb",       pj:12, pg:5, pe:5, pp:2, gf:19, gc:16, pts:20 },
+            { nombre: "Sansinena",           clase: "sansinena",       pj:12, pg:4, pe:6, pp:2, gf:17, gc:17, pts:18 },
             { nombre: "Dublin",              clase: "dublin",          pj:11, pg:4, pe:4, pp:3, gf:11, gc:12, pts:16 },
             { nombre: "Olimpo",              clase: "olimpo",          pj:11, pg:3, pe:4, pp:4, gf:11, gc:10, pts:13 },
             { nombre: "Pacífico BB <b>(X)</b>",         clase: "pacificobb",      pj:11, pg:1, pe:4, pp:6, gf:7, gc:16, pts: 7},
