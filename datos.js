@@ -1726,7 +1726,7 @@ BD_FIXTURES.promocional.reserva.push(
     { fecha: 12, partidos: [
         {l:"Tiro Federal", v:"Sansinena",              gl:2,   gv:0},
         {l:"Comercial", v:"Rosario PB",           gl:2,   gv:2},
-        {l:"Pacífico BB",   v:"Dublin", gl:null,   gv:null},
+        {l:"Pacífico BB",   v:"Dublin", gl:0,   gv:2},
         {l:"Olimpo",      v:"Pacífico (C)",          gl:null,   gv:null},
     ]},
     { fecha: 13, partidos: [
@@ -18207,10 +18207,10 @@ const BD_POSICIONES = {
             { nombre: "Comercial",           clase: "comercial",       pj:12, pg:6, pe:3, pp:3, gf:10, gc:8, pts:21 },
             { nombre: "Tiro Federal",        clase: "tirofederal",     pj:12, pg:6, pe:3, pp:3, gf:17, gc:6, pts:21 },
             { nombre: "Rosario PB",          clase: "rosariopb",       pj:12, pg:5, pe:5, pp:2, gf:19, gc:16, pts:20 },
+            { nombre: "Dublin",              clase: "dublin",          pj:12, pg:5, pe:4, pp:3, gf:13, gc:12, pts:19 },
             { nombre: "Sansinena",           clase: "sansinena",       pj:12, pg:4, pe:6, pp:2, gf:17, gc:17, pts:18 },
-            { nombre: "Dublin",              clase: "dublin",          pj:11, pg:4, pe:4, pp:3, gf:11, gc:12, pts:16 },
             { nombre: "Olimpo",              clase: "olimpo",          pj:11, pg:3, pe:4, pp:4, gf:11, gc:10, pts:13 },
-            { nombre: "Pacífico BB <b>(X)</b>",         clase: "pacificobb",      pj:11, pg:1, pe:4, pp:6, gf:7, gc:16, pts: 7},
+            { nombre: "Pacífico BB <b>(X)</b>",         clase: "pacificobb",      pj:12, pg:1, pe:4, pp:7, gf:7, gc:18, pts: 7},
             { nombre: "Pacífico (C) <b>(X)</b>",        clase: "pacificocabildo", pj:11, pg:0, pe:5, pp:6, gf:14, gc:2, pts:5 }
         ]
     },
