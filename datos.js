@@ -1636,8 +1636,8 @@ BD_FIXTURES.oficial.reserva.push(
         {l:"Libertad",   v:"Liniers",   gl:1, gv:0}
     ]},
     { fecha: 12, partidos: [
-        {l:"Sporting",   v:"Libertad",   gl:null, gv:null},
-        {l:"La Armonía",   v:"San Francisco",   gl:null, gv:null},
+        {l:"Sporting",   v:"Libertad",   gl:1, gv:2},
+        {l:"La Armonía",   v:"San Francisco",   gl:2, gv:5},
         {l:"Liniers",   v:"Huracán",   gl:null, gv:null},
         {l:"Villa Mitre",   v:"Bella Vista",   gl:null, gv:null}
     ]},
@@ -1724,8 +1724,8 @@ BD_FIXTURES.promocional.reserva.push(
         {l:"Pacífico (C)",      v:"Tiro Federal",          gl:3,   gv:3},
     ]},
     { fecha: 12, partidos: [
-        {l:"Tiro Federal", v:"Sansinena",              gl:null,   gv:null},
-        {l:"Comercial", v:"Rosario PB",           gl:null,   gv:null},
+        {l:"Tiro Federal", v:"Sansinena",              gl:2,   gv:0},
+        {l:"Comercial", v:"Rosario PB",           gl:2,   gv:2},
         {l:"Pacífico BB",   v:"Dublin", gl:null,   gv:null},
         {l:"Olimpo",      v:"Pacífico (C)",          gl:null,   gv:null},
     ]},
@@ -1995,7 +1995,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 11).partidos.forEach(p
 });
 
 
-let diaSeleccionadoHome = "2026-06-13"; 
+let diaSeleccionadoHome = "2026-06-14"; 
 
 function seleccionarDiaHome(dia) {
     diaSeleccionadoHome = dia;
@@ -16010,20 +16010,20 @@ function generarReserva(cat) {
 
     // Tabla de posiciones — solo puntos, calculados desde fixtures
     const BD_RESERVA_POS = {
-        'oficial':    [{n:"Sporting",      cl:"sporting",     pj:11, pg:7, pe:4, pp:0, gf:22, gc:11, pts:25},
-                       {n:"Libertad",      cl:"libertad",     pj:11, pg:5, pe:3, pp:3, gf:16, gc:11, pts:18},
+        'oficial':    [{n:"Sporting <b>(C)</b>",      cl:"sporting",     pj:12, pg:7, pe:4, pp:1, gf:21, gc:13, pts:25},
+                       {n:"Libertad",      cl:"libertad",     pj:12, pg:6, pe:3, pp:3, gf:18, gc:12, pts:21},
+                       {n:"La Armonía",    cl:"laarmonia",    pj:12, pg:5, pe:4, pp:3, gf:23, gc:13, pts:19},
                        {n:"Villa Mitre",   cl:"villamitre",   pj:11, pg:5, pe:1, pp:5, gf:23, gc:17, pts:17},
-                       {n:"La Armonía",    cl:"laarmonia",    pj:11, pg:4, pe:4, pp:3, gf:18, gc:11, pts:16},
                        {n:"Bella Vista",   cl:"bellavista",   pj:11, pg:3, pe:4, pp:4, gf:18, gc:22, pts:13},
-                       {n:"San Francisco", cl:"sanfrancisco", pj:11, pg:3, pe:2, pp:6, gf:17, gc:19, pts:12},
+                       {n:"San Francisco", cl:"sanfrancisco", pj:12, pg:3, pe:2, pp:7, gf:19, gc:24, pts:12},
                        {n:"Liniers",       cl:"liniers",      pj:11, pg:2, pe:3, pp:6, gf:10, gc:16, pts:9},
                        {n:"Huracán",       cl:"huracan",      pj:11, pg:1, pe:5, pp:5, gf:9, gc:28, pts:8}],
         'promocional':[                       {n:"Olimpo",              cl:"olimpo",           pj:11, pg:7, pe:1, pp:3, gf:19, gc:11, pts:22},
-                       {n:"Comercial",           cl:"comercial",        pj:11, pg:5, pe:5, pp:1, gf:18, gc:10, pts:20},
-                       {n:"Tiro Federal",        cl:"tirofederal",      pj:11, pg:5, pe:4, pp:2, gf:25, gc:22, pts:19},
-                       {n:"Rosario PB",          cl:"rosariopb",        pj:11, pg:5, pe:3, pp:3, gf:13, gc:7, pts:18},
+                       {n:"Tiro Federal",        cl:"tirofederal",      pj:12, pg:6, pe:4, pp:2, gf:27, gc:22, pts:22},
+                       {n:"Comercial",           cl:"comercial",        pj:12, pg:5, pe:6, pp:1, gf:20, gc:12, pts:21},
+                       {n:"Rosario PB",          cl:"rosariopb",        pj:12, pg:5, pe:4, pp:3, gf:15, gc:9, pts:19},
                        {n:"Pacífico BB",         cl:"pacificobb",       pj:11, pg:3, pe:4, pp:4, gf:13, gc:15, pts:13},
-                       {n:"Sansinena",           cl:"sansinena",        pj:11, pg:4, pe:1, pp:6, gf:14, gc:23, pts:13},
+                       {n:"Sansinena",           cl:"sansinena",        pj:12, pg:4, pe:1, pp:7, gf:14, gc:25, pts:13},
                        {n:"Dublin",              cl:"dublin",           pj:11, pg:2, pe:2, pp:7, gf:13, gc:20, pts:8},
                        {n:"Pacífico (C)", cl:"pacificocabildo",  pj:11, pg:1, pe:4, pp:6, gf:13, gc:21, pts:7},],
         'segundafemenino': [
@@ -16069,7 +16069,7 @@ function generarReserva(cat) {
         });
         html += `</tbody></table>`;
         if (cat === 'oficial') {
-            html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>9</b> tras finalizar la fecha <b>11</b></div>`;
+            html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'><b>(C)</b> Clasificado<br>📌 Puntos en juego: <b>9</b> tras finalizar la fecha <b>11</b></div>`;
         } else if (cat === 'promocional') {
             html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>9</b> tras finalizar la fecha <b>11</b></div>`;
         } else if (cat === 'femenino') {
