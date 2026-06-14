@@ -2289,8 +2289,8 @@ function generarTablaFederal() {
     });
     
     const mejoresQuintos = [
-        { nombre: "Juventud Antoniana", pj:10, pg:4, pe:2, pp:4, gf:9, gc:10 },
-        { nombre: "FADEP", pj:10, pg:3, pe:4, pp:3, gf:12, gc:11 },
+        { nombre: "Huracán Las Heras", pj:12, pg:4, pe:4, pp:4, gf:7, gc:10 },
+        { nombre: "Boca Unidos", pj:12, pg:4, pe:3, pp:5, gf:15, gc:17 },
         { nombre: "Sol de Mayo", pj:11, pg:3, pe:4, pp:4, gf:8, gc:9 }
     ];
     html += `</tbody></table><div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>18</b> para quienes tengan 10 partidos jugados y <b>15</b> para quienes tengan 11 partidos jugados</div>`;
