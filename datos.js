@@ -1561,8 +1561,8 @@ BD_FIXTURES.oficial.apertura.find(f => f.fecha === 11).partidos = [
     {l:"Libertad",    v:"Liniers", gl:1, gv:5, dia:"Dom 07/06", hora:"15:00", goles_l:["Franco Pane"], goles_v:["Valentín Bertoni","Valentín Bertoni","Salvador Maio","Rodrigo Phillip","Joaquín Castro"]},
 ];
 BD_FIXTURES.oficial.apertura.find(f => f.fecha === 12).partidos = [
-    {l:"Sporting",    v:"Libertad", gl:null, gv:null, dia:"Dom 14/06", hora:"15:00", goles_l:[], goles_v:[]},
-    {l:"La Armonía",    v:"San Francisco", gl:null, gv:null, dia:"Dom 14/06", hora:"15:00", goles_l:[], goles_v:[]},
+    {l:"Sporting",    v:"Libertad", gl:1, gv:1, dia:"Dom 14/06", hora:"15:00", goles_l:["Erico Waker"], goles_v:["Juan Ignacio Mazzella"]},
+    {l:"La Armonía",    v:"San Francisco", gl:0, gv:1, dia:"Dom 14/06", hora:"15:00", goles_l:[], goles_v:["Leonel Romero"]},
     {l:"Liniers",    v:"Huracán", gl:null, gv:null, dia:"Lun 15/06", hora:"15:00", goles_l:[], goles_v:[]},
     {l:"Villa Mitre",    v:"Bella Vista", gl:null, gv:null, dia:"Lun 15/06", hora:"15:00", goles_l:[], goles_v:[]}
 ];
@@ -1771,7 +1771,7 @@ BD_FIXTURES.promocional.apertura.find(f => f.fecha === 11).partidos = [
 BD_FIXTURES.promocional.apertura.find(f => f.fecha === 12).partidos = [
     {l:"Tiro Federal",    v:"Sansinena", gl:4, gv:0, dia:"Sáb 13/06", hora:"15:00", goles_l:["Agustín Cabrera","Agustín Restiffo","Diego Ocampo","Joaquín Laborde"], goles_v:[]},
     {l:"Comercial",    v:"Rosario PB", gl:0, gv:1, dia:"Sáb 13/06", hora:"15:00", goles_l:[], goles_v:["Sebastián Mendoza"]},
-    {l:"Pacífico BB",    v:"Dublin", gl:null, gv:null, dia:"Dom 14/06", hora:"15:00", goles_l:[], goles_v:[]},
+    {l:"Pacífico BB",    v:"Dublin", gl:0, gv:0, dia:"Dom 14/06", hora:"15:00", goles_l:[], goles_v:[]},
     {l:"Olimpo",    v:"Pacífico (C)", gl:null, gv:null, dia:"Lun 15/06", hora:"15:00", goles_l:[], goles_v:[]},
 ];
 
@@ -1795,10 +1795,10 @@ BD_FIXTURES.federala.posiciones.find(f => f.fecha === 12).partidos = [
     {l:"Santamarina",   v:"Kimberley", gl:1, gv:0, dia:"Dom 07/06", hora:"15:30", goles_l:["Luciano Domínguez"], goles_v:[]}
 ];
 BD_FIXTURES.federala.posiciones.find(f => f.fecha === 13).partidos = [
-    {l:"Villa Mitre",   v:"Germinal", gl:null, gv:null, dia:"Dom 14/06", hora:"15:00", goles_l:[], goles_v:[]},
-    {l:"Sol de Mayo",   v:"Olimpo", gl:null, gv:null, dia:"Dom 14/06", hora:"15:00", goles_l:[], goles_v:[]},
-    {l:"Círculo Dep.",   v:"Santamarina", gl:null, gv:null, dia:"Dom 14/06", hora:"15:00", goles_l:[], goles_v:[]},
-    {l:"Kimberley",   v:"Alvarado", gl:null, gv:null, dia:"Dom 14/06", hora:"15:00", goles_l:[], goles_v:[]}
+    {l:"Villa Mitre",   v:"Germinal", gl:0, gv:0, dia:"Dom 14/06", hora:"15:00", goles_l:[], goles_v:[]},
+    {l:"Sol de Mayo",   v:"Olimpo", gl:1, gv:1, dia:"Dom 14/06", hora:"15:00", goles_l:["Diego Zalazar"], goles_v:["Antú Hernández"]},
+    {l:"Círculo Dep.",   v:"Santamarina", gl:0, gv:0, dia:"Dom 14/06", hora:"15:00", goles_l:[], goles_v:[]},
+    {l:"Kimberley",   v:"Alvarado", gl:2, gv:2, dia:"Dom 14/06", hora:"15:00", goles_l:["Tomás Loscalzo","Santiago Castillo"], goles_v:["Germán Cervera","Germán Sosa"]}
 ];
 
 
@@ -16022,9 +16022,9 @@ function generarReserva(cat) {
                        {n:"Tiro Federal",        cl:"tirofederal",      pj:12, pg:6, pe:4, pp:2, gf:27, gc:22, pts:22},
                        {n:"Comercial",           cl:"comercial",        pj:12, pg:5, pe:6, pp:1, gf:20, gc:12, pts:21},
                        {n:"Rosario PB",          cl:"rosariopb",        pj:12, pg:5, pe:4, pp:3, gf:15, gc:9, pts:19},
-                       {n:"Pacífico BB",         cl:"pacificobb",       pj:11, pg:3, pe:4, pp:4, gf:13, gc:15, pts:13},
+                       {n:"Pacífico BB",         cl:"pacificobb",       pj:12, pg:3, pe:4, pp:5, gf:13, gc:17, pts:13},
                        {n:"Sansinena",           cl:"sansinena",        pj:12, pg:4, pe:1, pp:7, gf:14, gc:25, pts:13},
-                       {n:"Dublin",              cl:"dublin",           pj:11, pg:2, pe:2, pp:7, gf:13, gc:20, pts:8},
+                       {n:"Dublin",              cl:"dublin",           pj:12, pg:3, pe:2, pp:7, gf:15, gc:20, pts:11},
                        {n:"Pacífico (C)", cl:"pacificocabildo",  pj:11, pg:1, pe:4, pp:6, gf:13, gc:21, pts:7},],
         'segundafemenino': [
             {n:"Liniers",             cl:"liniers",         pj:8, pg:7, pe:1, pp:0, gf:33, gc:5, pts:22},
@@ -17977,7 +17977,8 @@ const BD_ARQUEROS = {
         ]},
         { jugador: "Valentino Torres", equipo: "San Francisco", partidos: [
             { rival: "Huracán", resultado: "San Francisco 0 - 0 Huracán", fecha: 6 },
-            { rival: "Sporting", resultado: "San Francisco 1 - 0 Sporting", fecha: 10 }
+            { rival: "Sporting", resultado: "San Francisco 1 - 0 Sporting", fecha: 10 },
+            { rival: "La Armonía", resultado: "La Armonía 0 - 1 San Francisco", fecha: 12 }
         ]},
         { jugador: "Ignacio Torres", equipo: "La Armonía", partidos: [
             { rival: "Liniers", resultado: "La Armonía 0 - 0 Liniers", fecha: 10 }
@@ -18003,7 +18004,8 @@ const BD_ARQUEROS = {
         { jugador: "Valentín Valdez", equipo: "Dublin", partidos: [
             { rival: "Sansinena", resultado: "Sansinena 0 - 0 Dublin", fecha: 3 },
             { rival: "Pacífico BB", resultado: "Dublin 1 - 0 Pacífico BB", fecha: 5 },
-            { rival: "Tiro Federal", resultado: "Dublin 1 - 0 Tiro Federal", fecha: 6 }
+            { rival: "Tiro Federal", resultado: "Dublin 1 - 0 Tiro Federal", fecha: 6 },
+            { rival: "Pacífico BB", resultado: "Pacífico BB 0 - 0 Dublin", fecha: 12 }
         ]},
         { jugador: "Inan Bauer", equipo: "Sansinena", partidos: [
             { rival: "Dublin", resultado: "Sansinena 0 - 0 Dublin", fecha: 3 },
@@ -18031,7 +18033,8 @@ const BD_ARQUEROS = {
         { jugador: "Haziel Mastrandea", equipo: "Pacífico BB", partidos: [
             { rival: "Olimpo", resultado: "Pacífico BB 0 - 0 Olimpo", fecha: 1 },
             { rival: "Rosario PB", resultado: "Pacífico BB 0 - 0 Rosario PB", fecha: 9 },
-            { rival: "Pacífico (C)", resultado: "Pacífico BB 0 - 0 Pacífico (C)", fecha: 10 }
+            { rival: "Pacífico (C)", resultado: "Pacífico BB 0 - 0 Pacífico (C)", fecha: 10 },
+            { rival: "Dublin", resultado: "Pacífico BB 0 - 0 Dublin", fecha: 12 }
         ]},
         { jugador: "Brian Pastor", equipo: "Pacífico (C)", partidos: [
             { rival: "Olimpo", resultado: "Pacífico (C) 0 - 0 Olimpo", fecha: 5 },
@@ -18195,11 +18198,11 @@ const BD_POSICIONES = {
             { nombre: "Huracán <b>(C)</b>",       clase: "huracan",      pj:11, pg:7, pe:3, pp:1, gf:21, gc:10,  pts:24 },
             { nombre: "Bella Vista",   clase: "bellavista",   pj:11, pg:5, pe:3, pp:3, gf:15, gc:9,  pts:18 },
             { nombre: "Villa Mitre",   clase: "villamitre",   pj:11, pg:5, pe:2, pp:4, gf:13, gc:10,  pts:17 },
+            { nombre: "Libertad",      clase: "libertad",     pj:12, pg:4, pe:5, pp:3, gf:14, gc:16,  pts:17 },
             { nombre: "Liniers",       clase: "liniers",      pj:11, pg:4, pe:4, pp:3, gf:13, gc:7,  pts:16 },
-            { nombre: "Libertad",      clase: "libertad",     pj:11, pg:4, pe:4, pp:3, gf:13, gc:15,  pts:16 },
-            { nombre: "La Armonía",    clase: "laarmonia",    pj:11, pg:3, pe:2, pp:6, gf:12, gc:21,  pts:11 },
-            { nombre: "San Francisco", clase: "sanfrancisco", pj:11, pg:2, pe:3, pp:6, gf:7, gc:16,  pts:9 },
-            { nombre: "Sporting",      clase: "sporting",     pj:11, pg:2, pe:3, pp:6, gf:10, gc:17,  pts:9 }
+            { nombre: "San Francisco", clase: "sanfrancisco", pj:12, pg:3, pe:3, pp:6, gf:8, gc:16,  pts:12 },
+            { nombre: "La Armonía",    clase: "laarmonia",    pj:12, pg:3, pe:2, pp:7, gf:12, gc:22,  pts:11 },
+            { nombre: "Sporting",      clase: "sporting",     pj:12, pg:2, pe:4, pp:6, gf:11, gc:18,  pts:10 }
         ]
     },
     promocional: {
@@ -18207,10 +18210,10 @@ const BD_POSICIONES = {
             { nombre: "Comercial",           clase: "comercial",       pj:12, pg:6, pe:3, pp:3, gf:10, gc:8, pts:21 },
             { nombre: "Tiro Federal",        clase: "tirofederal",     pj:12, pg:6, pe:3, pp:3, gf:17, gc:6, pts:21 },
             { nombre: "Rosario PB",          clase: "rosariopb",       pj:12, pg:5, pe:5, pp:2, gf:19, gc:16, pts:20 },
-            { nombre: "Dublin",              clase: "dublin",          pj:12, pg:5, pe:4, pp:3, gf:13, gc:12, pts:19 },
             { nombre: "Sansinena",           clase: "sansinena",       pj:12, pg:4, pe:6, pp:2, gf:17, gc:17, pts:18 },
+            { nombre: "Dublin",              clase: "dublin",          pj:12, pg:4, pe:5, pp:3, gf:11, gc:12, pts:17 },
             { nombre: "Olimpo",              clase: "olimpo",          pj:11, pg:3, pe:4, pp:4, gf:11, gc:10, pts:13 },
-            { nombre: "Pacífico BB <b>(X)</b>",         clase: "pacificobb",      pj:12, pg:1, pe:4, pp:7, gf:7, gc:18, pts: 7},
+            { nombre: "Pacífico BB <b>(X)</b>",         clase: "pacificobb",      pj:12, pg:1, pe:5, pp:6, gf:7, gc:16, pts: 8},
             { nombre: "Pacífico (C) <b>(X)</b>",        clase: "pacificocabildo", pj:11, pg:0, pe:5, pp:6, gf:14, gc:2, pts:5 }
         ]
     },
