@@ -2007,7 +2007,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 12).partidos.forEach(p
 });
 
 
-let diaSeleccionadoHome = "2026-06-15"; 
+let diaSeleccionadoHome = "2026-06-17"; 
 
 function seleccionarDiaHome(dia) {
     diaSeleccionadoHome = dia;
@@ -2027,9 +2027,18 @@ const BD_FECHA_META = {
 
 function generarHome() {
     const agenda = [
-        { id: "2026-06-1", label: "LUN 15/06", torneos: [
+        { id: "2026-06-15", label: "LUN 15/06", torneos: [
             { nombre: "FUTSAL", cat: "futsal", partidos: [
                 {l:"La Esperanza", v:"Dep. Futsal", hora:"22:00", gl:7, gv:3}
+            ]},
+        ]},
+        { id: "2026-06-17", label: "MIÉ 17/06", torneos: [
+            { nombre: "SENIOR", cat: "seniorapertura", partidos: [
+                {l:"Pacífico BB", v:"Huracán", hora:"20:00", nota:"en cancha de Tiro Federal"},
+                {l:"Bella Vista", v:"San Francisco", hora:"20:00", nota:"en cancha de Libertad"},
+                {l:"Sansinena", v:"Libertad", hora:"21:00", nota:"en cancha de Sansinena"},
+                {l:"Comercial", v:"Pacífico (C)", hora:"21:00", nota:"en cancha de Comercial"},
+                {l:"Tiro Federal", v:"Sporting", hora:"20:30", nota:"en cancha de Tiro Federal"}
             ]},
         ]},
 ];
@@ -16851,12 +16860,18 @@ const BD_FIXTURES_SENIOR = [
         { l: "San Francisco",   v: "Huracán",  gl: 3, gv: 2, goles_l:["Patricio Muñoz","Federico Timi","Diego Vaquero"], goles_v:["Juan Pablo Campos","César Panduro"] },
         { l: "Sporting",   v: "Comercial",  gl: 1, gv: 2, goles_l:["Marcos Cossú"], goles_v:["Maximiliano Casas","Nicolás Custodio"] },
     ]},
-    { fecha: 8, libre: null, partidos: [] },
+    { fecha: 8, libre: null, partidos: [
+        { l: "Pacífico BB",   v: "Huracán",  gl: null, gv: null, goles_l:[], goles_v:[] },
+        { l: "Bella Vista",   v: "San Francisco",  gl: null, gv: null, goles_l:[], goles_v:[] },
+        { l: "Sansinena",   v: "Libertad",  gl: null, gv: null, goles_l:[], goles_v:[] },
+        { l: "Comercial",   v: "Pacífico (C)",  gl: null, gv: null, goles_l:[], goles_v:[] },
+        { l: "Tiro Federal",   v: "Sporting",  gl: null, gv: null, goles_l:[], goles_v:[] },
+    ]},
     { fecha: 9, libre: null, partidos: [] }
 ];
 
 function generarSeniorApertura() {
-    const n = estado.fechaSenior || 7;
+    const n = estado.fechaSenior || 8;
     const f = BD_FIXTURES_SENIOR.find(x => x.fecha === n) || { partidos: [], libre: null };
     const equipos = BD_SENIOR_APERTURA.map(e => ({ nombre: e.n, clase: e.cl }));
 
