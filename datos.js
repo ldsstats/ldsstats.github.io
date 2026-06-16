@@ -16030,14 +16030,14 @@ function generarReserva(cat) {
                        {n:"San Francisco <b>(X)</b>", cl:"sanfrancisco", pj:12, pg:3, pe:2, pp:7, gf:19, gc:24, pts:12},
                        {n:"Liniers <b>(X)</b>",       cl:"liniers",      pj:12, pg:3, pe:3, pp:6, gf:12, gc:17, pts:12},
                        {n:"Huracán <b>(X)</b>",       cl:"huracan",      pj:12, pg:1, pe:5, pp:6, gf:10, gc:30, pts:8}],
-        'promocional':[                       {n:"Olimpo",              cl:"olimpo",           pj:11, pg:7, pe:1, pp:3, gf:19, gc:11, pts:22},
-                       {n:"Tiro Federal",        cl:"tirofederal",      pj:12, pg:6, pe:4, pp:2, gf:27, gc:22, pts:22},
-                       {n:"Comercial",           cl:"comercial",        pj:12, pg:5, pe:6, pp:1, gf:20, gc:12, pts:21},
+        'promocional':[                       {n:"Olimpo <b>(C)</b>",              cl:"olimpo",           pj:11, pg:7, pe:1, pp:3, gf:19, gc:11, pts:22},
+                       {n:"Tiro Federal <b>(C)</b>",        cl:"tirofederal",      pj:12, pg:6, pe:4, pp:2, gf:27, gc:22, pts:22},
+                       {n:"Comercial <b>(C)</b>",           cl:"comercial",        pj:12, pg:5, pe:6, pp:1, gf:20, gc:12, pts:21},
                        {n:"Rosario PB",          cl:"rosariopb",        pj:12, pg:5, pe:4, pp:3, gf:15, gc:9, pts:19},
                        {n:"Pacífico BB",         cl:"pacificobb",       pj:12, pg:3, pe:4, pp:5, gf:13, gc:17, pts:13},
                        {n:"Sansinena",           cl:"sansinena",        pj:12, pg:4, pe:1, pp:7, gf:14, gc:25, pts:13},
-                       {n:"Dublin",              cl:"dublin",           pj:12, pg:3, pe:2, pp:7, gf:15, gc:20, pts:11},
-                       {n:"Pacífico (C)", cl:"pacificocabildo",  pj:11, pg:1, pe:4, pp:6, gf:13, gc:21, pts:7},],
+                       {n:"Dublin <b>(X)</b>",              cl:"dublin",           pj:12, pg:3, pe:2, pp:7, gf:15, gc:20, pts:11},
+                       {n:"Pacífico (C) <b>(X)</b>", cl:"pacificocabildo",  pj:11, pg:1, pe:4, pp:6, gf:13, gc:21, pts:7},],
         'segundafemenino': [
             {n:"Liniers",             cl:"liniers",         pj:9, pg:8, pe:1, pp:0, gf:36, gc:5, pts:25},
             {n:"San Francisco",       cl:"sanfrancisco",    pj:9, pg:5, pe:1, pp:2, gf:20, gc:6, pts:19},
@@ -16048,14 +16048,14 @@ function generarReserva(cat) {
             {n:"Sansinena",           cl:"sansinena",       pj:8, pg:0, pe:1, pp:7, gf:6, gc:34, pts:1}
         ],
         'femenino':   [
-            {n:"Tiro Federal",          cl:"tirofederal",pj:12,pg:7, pe:4, pp:1, gf:26, gc:13, pts:25},
+            {n:"Tiro Federal <b>(C)</b>",          cl:"tirofederal",pj:12,pg:7, pe:4, pp:1, gf:26, gc:13, pts:25},
             {n:"Villa Mitre",           cl:"villamitre", pj:12,pg:8, pe:1, pp:3, gf:26, gc:8, pts:25},
             {n:"Bella Vista",           cl:"bellavista", pj:12,pg:6, pe:4, pp:2, gf:30, gc:10, pts:22},
             {n:"Empleados de Comercio", cl:"empleados", pj:12, pg:5, pe:6, pp:1, gf:17, gc:5, pts:21},
             {n:"Municipales",           cl:"municipales",pj:12,pg:5, pe:5, pp:2, gf:32, gc:13, pts:20},
-            {n:"La Armonía",            cl:"laarmonia",  pj:12,pg:1, pe:4, pp:7, gf:9, gc:33, pts:7},
-            {n:"Sporting",              cl:"sporting",  pj:12, pg:1, pe:3, pp:8, gf:9, gc:28, pts:6},
-            {n:"Libertad",              cl:"libertad",   pj:12,pg:1, pe:1, pp:10, gf:5, gc:43, pts:4}
+            {n:"La Armonía <b>(X)</b>",            cl:"laarmonia",  pj:12,pg:1, pe:4, pp:7, gf:9, gc:33, pts:7},
+            {n:"Sporting <b>(X)</b>",              cl:"sporting",  pj:12, pg:1, pe:3, pp:8, gf:9, gc:28, pts:6},
+            {n:"Libertad <b>(X)</b>",              cl:"libertad",   pj:12,pg:1, pe:1, pp:10, gf:5, gc:43, pts:4}
         ]
     };
 
@@ -16081,11 +16081,11 @@ function generarReserva(cat) {
         });
         html += `</tbody></table>`;
         if (cat === 'oficial') {
-            html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'><b>(C)</b> Clasificado<br>📌 Puntos en juego: <b>6</b> tras finalizar la fecha <b>12</b></div>`;
+            html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'><b>(C)</b> Clasificado<br><b>(X)</b> Eliminado<br>📌 Puntos en juego: <b>6</b> tras finalizar la fecha <b>12</b></div>`;
         } else if (cat === 'promocional') {
-            html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>9</b> tras finalizar la fecha <b>11</b></div>`;
+            html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'><b>(C)</b> Clasificado<br><b>(X)</b> Eliminado<br>📌 Puntos en juego: <b>9</b> tras finalizar la fecha <b>11</b></div>`;
         } else if (cat === 'femenino') {
-            html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>6</b> tras finalizar la fecha <b>12</b></div>`;
+            html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'><b>(C)</b> Clasificado<br><b>(X)</b> Eliminado<br>📌 Puntos en juego: <b>6</b> tras finalizar la fecha <b>12</b></div>`;
         } else if (cat === 'segundafemenino') {
             html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>27</b> para equipos que jugaron 9 partidos, <b>30</b> para equipos que jugaron 8 partidos y <b>33</b> para equipos que jugaron 7 partidos</div>`;
         }
@@ -18218,8 +18218,8 @@ const BD_POSICIONES = {
             { nombre: "Liniers",       clase: "liniers",      pj:12, pg:4, pe:5, pp:3, gf:13, gc:7,  pts:17 },
             { nombre: "Libertad",      clase: "libertad",     pj:12, pg:4, pe:5, pp:3, gf:14, gc:16,  pts:17 },
             { nombre: "San Francisco", clase: "sanfrancisco", pj:12, pg:3, pe:3, pp:6, gf:8, gc:16,  pts:12 },
-            { nombre: "La Armonía",    clase: "laarmonia",    pj:12, pg:3, pe:2, pp:7, gf:12, gc:22,  pts:11 },
-            { nombre: "Sporting",      clase: "sporting",     pj:12, pg:2, pe:4, pp:6, gf:11, gc:18,  pts:10 }
+            { nombre: "La Armonía <b>(X)</b>",    clase: "laarmonia",    pj:12, pg:3, pe:2, pp:7, gf:12, gc:22,  pts:11 },
+            { nombre: "Sporting <b>(X)</b>",      clase: "sporting",     pj:12, pg:2, pe:4, pp:6, gf:11, gc:18,  pts:10 }
         ]
     },
     promocional: {
@@ -18236,14 +18236,14 @@ const BD_POSICIONES = {
     },
     femenino: {
         apertura: [
-            { nombre: "Municipales",           clase: "municipales", pj:12, pg:9, pe:2, pp:1, gf:40, gc:12, pts:29 },
-            { nombre: "Tiro Federal",          clase: "tirofederal", pj:12, pg:9, pe:2, pp:1, gf:31, gc:11, pts:29 },
+            { nombre: "Municipales <b>(C)</b>",           clase: "municipales", pj:12, pg:9, pe:2, pp:1, gf:40, gc:12, pts:29 },
+            { nombre: "Tiro Federal <b>(C)</b>",          clase: "tirofederal", pj:12, pg:9, pe:2, pp:1, gf:31, gc:11, pts:29 },
             { nombre: "Villa Mitre",           clase: "villamitre",  pj:12, pg:7, pe:2, pp:3, gf:56, gc:20, pts:23 },
             { nombre: "Empleados de Comercio", clase: "empleados",   pj:12, pg:6, pe:2, pp:4, gf:27, gc:19, pts:20 },
             { nombre: "Sporting",              clase: "sporting",    pj:12, pg:5, pe:2, pp:5, gf:21, gc:31, pts:17 },
-            { nombre: "Bella Vista",           clase: "bellavista",  pj:12, pg:3, pe:0, pp:9, gf:15, gc:36, pts:9 },
-            { nombre: "La Armonía",            clase: "laarmonia",   pj:12, pg:3, pe:0, pp:9, gf:9, gc:31, pts:9 },
-            { nombre: "Libertad",              clase: "libertad",    pj:12, pg:1, pe:0, pp:11, gf:9, gc:49, pts:3 }
+            { nombre: "Bella Vista <b>(X)</b>",           clase: "bellavista",  pj:12, pg:3, pe:0, pp:9, gf:15, gc:36, pts:9 },
+            { nombre: "La Armonía <b>(X)</b>",            clase: "laarmonia",   pj:12, pg:3, pe:0, pp:9, gf:9, gc:31, pts:9 },
+            { nombre: "Libertad <b>(X)</b>",              clase: "libertad",    pj:12, pg:1, pe:0, pp:11, gf:9, gc:49, pts:3 }
         ]
     },
     segundafemenino: {
@@ -18305,13 +18305,13 @@ function generarTabla(tor, cat) {
         html += `<tr class="${cl}"><td class="c-pos">${i+1}</td><td class="c-equipo">${e.nombre}</td><td class="c-stat">${e.pj}</td><td class="c-stat">${e.pg}</td><td class="c-stat">${e.pe}</td><td class="c-stat">${e.pp}</td><td class="c-stat">${e.gf}</td><td class="c-stat">${e.gc}</td><td class="c-stat">${e.gf-e.gc}</td><td class="c-stat"><b>${e.pts}</b></td></tr>`;
     });
 if (tor === 'apertura' && cat === 'oficial') {
-    return html + "</tbody></table><div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'><b>(C)</b> Clasificado<br>📌 Puntos en juego: <b>6</b> tras finalizar la fecha <b>12</b></div>";
+    return html + "</tbody></table><div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'><b>(C)</b> Clasificado<br><b>(X)</b> Eliminado<br>📌 Puntos en juego: <b>6</b> tras finalizar la fecha <b>12</b></div>";
 }
 if (tor === 'apertura' && cat === 'promocional') {
     return html + "</tbody></table><div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'><b>(X)</b> Eliminado<br>📌 Puntos en juego: <b>6</b> tras finalizar la fecha <b>12</b></div>";
 }
     if (tor === 'apertura' && cat === 'femenino') {
-        return html + "</tbody></table><div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>6</b> tras finalizar la fecha <b>12</b></div>";
+        return html + "</tbody></table><div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'><b>(C)</b> Clasificado<br><b>(X)</b> Eliminado<br>📌 Puntos en juego: <b>6</b> tras finalizar la fecha <b>12</b></div>";
     }
     if (tor === 'torneo2026' && cat === 'segundafemenino') {
         return html + "</tbody></table><div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>42</b> para los equipos que jugaron 10 partidos y <b>39</b> para los equipos que jugaron 11 partidos</div>";
