@@ -1565,6 +1565,12 @@ BD_FIXTURES.oficial.apertura.find(f => f.fecha === 12).partidos = [
     {l:"Liniers",    v:"Huracán", gl:0, gv:0, dia:"Lun 15/06", hora:"15:00", goles_l:[], goles_v:[]},
     {l:"Villa Mitre",    v:"Bella Vista", gl:1, gv:1, dia:"Lun 15/06", hora:"15:00", goles_l:["Julián Monteverde"], goles_v:["Rodrigo Gómez"]}
 ];
+BD_FIXTURES.oficial.apertura.find(f => f.fecha === 13).partidos = [
+    {l:"La Armonía",    v:"Bella Vista", gl:null, gv:null, dia:"Sáb 20/06", hora:"15:00", goles_l:[], goles_v:[]},
+    {l:"Liniers",    v:"Sporting", gl:null, gv:null, dia:"Sáb 20/06", hora:"15:00", goles_l:[], goles_v:[]},
+    {l:"Villa Mitre",    v:"Libertad", gl:null, gv:null, dia:"Dom 21/06", hora:"11:00", goles_l:[], goles_v:[]},
+    {l:"Huracán",    v:"San Francisco", gl:null, gv:null, dia:"Mar 23/06", hora:"15:00", goles_l:[], goles_v:[]}
+];
 
 // Reserva Oficial
 BD_FIXTURES.oficial.reserva.push(
@@ -1772,6 +1778,12 @@ BD_FIXTURES.promocional.apertura.find(f => f.fecha === 12).partidos = [
     {l:"Comercial",    v:"Rosario PB", gl:0, gv:1, dia:"Sáb 13/06", hora:"15:00", goles_l:[], goles_v:["Sebastián Mendoza"]},
     {l:"Pacífico BB",    v:"Dublin", gl:0, gv:0, dia:"Dom 14/06", hora:"15:00", goles_l:[], goles_v:[]},
     {l:"Olimpo",    v:"Pacífico (C)", gl:1, gv:2, dia:"Lun 15/06", hora:"15:00", goles_l:["Thiago Bedolla"], goles_v:["Donato Angelini","Gianni Ferrari"]},
+];
+BD_FIXTURES.promocional.apertura.find(f => f.fecha === 12).partidos = [
+    {l:"Tiro Federal",    v:"Dublin", gl:null, gv:null, dia:"Sáb 20/06", hora:"15:00", goles_l:[], goles_v:[]},
+    {l:"Rosario PB",    v:"Pacífico (C)", gl:null, gv:null, dia:"Sáb 20/06", hora:"15:00", goles_l:[], goles_v:[]},
+    {l:"Comercial",    v:"Pacífico BB", gl:null, gv:null, dia:"Sáb 20/06", hora:"15:00", goles_l:[], goles_v:[]},
+    {l:"Olimpo",    v:"Sansinena", gl:null, gv:null, dia:"Dom 21/06", hora:"15:00", goles_l:[], goles_v:[]}
 ];
 
 expandirFixture(idaFederal, BD_FIXTURES.federala.posiciones, 18);
@@ -2006,7 +2018,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 12).partidos.forEach(p
 });
 
 
-let diaSeleccionadoHome = "2026-06-17"; 
+let diaSeleccionadoHome = "2026-06-18"; 
 
 function seleccionarDiaHome(dia) {
     diaSeleccionadoHome = dia;
@@ -2037,11 +2049,11 @@ function generarHome() {
                 {l:"Dep. Futsal", v:"Huracán", hora:"22:00", nota:"en cancha de La Curtiembre"}
             ]},
             { nombre: "SENIOR", cat: "seniorapertura", partidos: [
-                {l:"Pacífico BB", v:"Huracán", hora:"20:00", nota:"en cancha de Tiro Federal"},
+                {l:"Pacífico BB", v:"Huracán", hora:"20:00", nota:"en cancha de Tiro Federal", gl: 2, gv:3},
                 {l:"Bella Vista", v:"San Francisco", hora:"20:00", nota:"en cancha de Libertad", gl: 0, gv:0},
-                {l:"Sansinena", v:"Libertad", hora:"21:00", nota:"en cancha de Sansinena"},
-                {l:"Comercial", v:"Pacífico (C)", hora:"21:00", nota:"en cancha de Comercial"},
-                {l:"Tiro Federal", v:"Sporting", hora:"20:30", nota:"en cancha de Tiro Federal"}
+                {l:"Sansinena", v:"Libertad", hora:"21:00", nota:"en cancha de Sansinena", gl: 1, gv:1},
+                {l:"Comercial", v:"Pacífico (C)", hora:"21:00", nota:"en cancha de Comercial", gl: 5, gv:0},
+                {l:"Tiro Federal", v:"Sporting", hora:"20:30", nota:"en cancha de Tiro Federal", gl: 2, gv:5}
             ]},
         ]},
        { id: "2026-06-18", label: "JUE 18/06", torneos: [
@@ -2060,7 +2072,7 @@ function generarHome() {
         { id: "2026-06-20", label: "SÁB 20/06", torneos: [
             { nombre: "OFICIAL", cat: "oficial", partidos: [
                 {l:"La Armonía", v:"Bella Vista", hora:"15:00"},
-                {l:"Liniers", v:"Sporting", hora:"15:00", nota:"en cancha de Libertad"}
+                {l:"Liniers", v:"Sporting", hora:"15:00", nota:"en cancha de Libertad y a puertas cerradas"}
             ]},
             { nombre: "PROMOCIONAL", cat: "promocional", partidos: [
                 {l:"Tiro Federal", v:"Dublin", hora:"15:00"},
@@ -2076,9 +2088,9 @@ function generarHome() {
                 {l:"Olimpo", v:"Sansinena", hora:"15:00"}
             ]},
         ]},
-        { id: "2026-06-22", label: "LUN 22/06", torneos: [
+        { id: "2026-06-23", label: "MAR 23/06", torneos: [
             { nombre: "OFICIAL", cat: "oficial", partidos: [
-                {l:"Huracán", v:"San Francisco", hora:"15:00", nota:"en cancha de Villa Mitre"}
+                {l:"Huracán", v:"San Francisco", hora:"15:00", nota:"en cancha de Villa Mitre y a puertas cerradas"}
             ]},
         ]},
 ];
@@ -16842,16 +16854,16 @@ function generarTablaPosBonaerense(pos) {
 }
 
 const BD_SENIOR_APERTURA = [
-    { n: "Sporting",          cl: "sporting",      pj: 7, pg: 5, pe: 0, pp: 2, gf: 14, gc: 7, pts: 15 },
+    { n: "Sporting",          cl: "sporting",      pj: 8, pg: 6, pe: 0, pp: 2, gf: 19, gc: 9, pts: 18 },
     { n: "Bella Vista",       cl: "bellavista",    pj: 8, pg: 4, pe: 3, pp: 1, gf: 10, gc: 7, pts: 15 },
-    { n: "Huracán",           cl: "huracan",       pj: 7, pg: 4, pe: 0, pp: 3, gf: 23, gc: 17, pts: 12 },
-    { n: "Pacífico (C)",      cl: "pacificoc",     pj: 7, pg: 4, pe: 0, pp: 3, gf: 13, gc: 18, pts: 12 },
-    { n: "Comercial",         cl: "comercial",     pj: 7, pg: 3, pe: 2, pp: 2, gf: 13, gc: 12, pts: 11 },
-    { n: "Sansinena",         cl: "sansinena",     pj: 7, pg: 3, pe: 1, pp: 3, gf: 11, gc: 10, pts: 10 },
-    { n: "Pacífico BB",       cl: "pacificobb",    pj: 7, pg: 2, pe: 2, pp: 3, gf: 6, gc: 10, pts: 8 },
-    { n: "Libertad",          cl: "libertad",      pj: 7, pg: 2, pe: 1, pp: 4, gf: 15, gc: 12, pts: 7 },
+    { n: "Huracán",           cl: "huracan",       pj: 8, pg: 5, pe: 0, pp: 3, gf: 26, gc: 19, pts: 15 },
+    { n: "Comercial",         cl: "comercial",     pj: 8, pg: 4, pe: 2, pp: 2, gf: 18, gc: 12, pts: 14 },
+    { n: "Pacífico (C)",      cl: "pacificoc",     pj: 8, pg: 4, pe: 0, pp: 4, gf: 13, gc: 24, pts: 12 },
+    { n: "Sansinena",         cl: "sansinena",     pj: 8, pg: 3, pe: 2, pp: 3, gf: 12, gc: 11, pts: 11 },
+    { n: "Pacífico BB",       cl: "pacificobb",    pj: 8, pg: 2, pe: 2, pp: 4, gf: 8, gc: 13, pts: 8 },
+    { n: "Libertad",          cl: "libertad",      pj: 8, pg: 2, pe: 2, pp: 4, gf: 16, gc: 13, pts: 8 },
     { n: "San Francisco",     cl: "sanfrancisco",  pj: 8, pg: 2, pe: 1, pp: 5, gf: 10, gc: 12, pts: 8 },
-    { n: "Tiro Federal",      cl: "tirofederal",   pj: 7, pg: 0, pe: 3, pp: 4, gf: 10, gc: 20, pts: 3 }
+    { n: "Tiro Federal",      cl: "tirofederal",   pj: 7, pg: 0, pe: 3, pp: 5, gf: 12, gc: 25, pts: 3 }
 ];
 
 const BD_FIXTURES_SENIOR = [
@@ -16905,11 +16917,11 @@ const BD_FIXTURES_SENIOR = [
         { l: "Sporting",   v: "Comercial",  gl: 1, gv: 2, goles_l:["Marcos Cossú"], goles_v:["Maximiliano Casas","Nicolás Custodio"] },
     ]},
     { fecha: 8, libre: null, partidos: [
-        { l: "Pacífico BB",   v: "Huracán",  gl: null, gv: null, goles_l:[], goles_v:[] },
+        { l: "Pacífico BB",   v: "Huracán",  gl: 2, gv: 3, goles_l:["Maximiliano Delaudo","Hernán Sangripandi"], goles_v:["César Panduro (2)","Sergio Pereyra"] },
         { l: "Bella Vista",   v: "San Francisco",  gl: 0, gv: 0, goles_l:[], goles_v:[] },
-        { l: "Sansinena",   v: "Libertad",  gl: null, gv: null, goles_l:[], goles_v:[] },
-        { l: "Comercial",   v: "Pacífico (C)",  gl: null, gv: null, goles_l:[], goles_v:[] },
-        { l: "Tiro Federal",   v: "Sporting",  gl: null, gv: null, goles_l:[], goles_v:[] },
+        { l: "Sansinena",   v: "Libertad",  gl: 1, gv: 1, goles_l:["Emiliano Scheffer"], goles_v:["Pablo Cerra"] },
+        { l: "Comercial",   v: "Pacífico (C)",  gl: 5, gv: 0, goles_l:["Nicolás Custodio (3)","Emanuel Ihitz","Santiago Ayala"], goles_v:[] },
+        { l: "Tiro Federal",   v: "Sporting",  gl: 2, gv: 5, goles_l:["Lucas Sauer","Mauricio Oldani"], goles_v:["Marco Cossú (3)","Javier Magnani","Maximilaino Rodríguez"] },
     ]},
     { fecha: 9, libre: null, partidos: [] }
 ];
@@ -16991,31 +17003,35 @@ function generarSeniorApertura() {
 }
 
 const BD_GOLEADORES_SENIOR = [
-    { nombre: "César Panduro", equipo: "Huracán", goles: 11 },
+    { nombre: "César Panduro", equipo: "Huracán", goles: 13 },
+    { nombre: "Marcos Cossu", equipo: "Sporting", goles: 8 },
     { nombre: "Juan José Dietz", equipo: "Tiro Federal", goles: 6 },
     { nombre: "Emiliano Jofré", equipo: "Sansinena", goles: 5 },
-    { nombre: "Marcos Cossu", equipo: "Sporting", goles: 5 },
     { nombre: "Fabián Merlini", equipo: "Bella Vista", goles: 4 },
+    { nombre: "Nicolás Custodio", equipo: "Sporting", goles: 4 },
     { nombre: "Felipe Hipperdinger", equipo: "Huracán", goles: 4 },
+    { nombre: "Maximiliano Rodríguez", equipo: "Sporting", goles: 4 },
     { nombre: "Sebastián Aristi", equipo: "Comercial", goles: 3 },
     { nombre: "Maximiliano Casas", equipo: "Comercial", goles: 3 },
     { nombre: "Mariano Moreno", equipo: "Libertad", goles: 3 },
     { nombre: "Gustavo Peña", equipo: "Libertad", goles: 3 },
     { nombre: "Ramón López", equipo: "Pacífico BB", goles: 3 },
+    { nombre: "Maximiliano Delaudo", equipo: "Pacífico BB", goles: 3 },
     { nombre: "Leandro Duelle", equipo: "Pacífico (C)", goles: 3 },
     { nombre: "Marcos Pierucci", equipo: "Sansinena", goles: 3 },
-    { nombre: "Maximiliano Rodríguez", equipo: "Sporting", goles: 3 },
     { nombre: "Gabriel Bernengo", equipo: "Sporting", goles: 3 },
     { nombre: "Sebastián Racchi", equipo: "Comercial", goles: 2 },
+    { nombre: "Emanuel Ihitz", equipo: "Comercial", goles: 2 },
     { nombre: "Héctor Soto Sassi", equipo: "Huracán", goles: 2 },
     { nombre: "Sebastián Faillá", equipo: "Huracán", goles: 2 },
     { nombre: "Luis Khin", equipo: "Libertad", goles: 2 },
     { nombre: "Nicolás Herrera", equipo: "Libertad", goles: 2 },
-    { nombre: "Maximiliano Delaudo", equipo: "Pacífico BB", goles: 2 },
+    { nombre: "Hernán Sangripanti", equipo: "Pacífico BB", goles: 2 },
     { nombre: "Fabián Soto", equipo: "Pacífico (C)", goles: 2 },
     { nombre: "Nicolás Arroyo", equipo: "Pacífico (C)", goles: 2 },
     { nombre: "Esteban Angelini", equipo: "Pacífico (C)", goles: 2 },
     { nombre: "Patricio Muñoz", equipo: "San Francisco", goles: 2 },
+    { nombre: "Mauricio Oldani", equipo: "Tiro Federal", goles: 2 },
     { nombre: "Néstor Alessandroni", equipo: "Bella Vista", goles: 1 },
     { nombre: "Nicolás Bellito", equipo: "Bella Vista", goles: 1 },
     { nombre: "Maximiliano Álvarez", equipo: "Bella Vista", goles: 1 },
@@ -17023,17 +17039,18 @@ const BD_GOLEADORES_SENIOR = [
     { nombre: "Gustavo Pereyra", equipo: "Bella Vista", goles: 1 },
     { nombre: "Emiliano Esmoli", equipo: "Comercial", goles: 1 },
     { nombre: "Jonathan Bravo de Laguna", equipo: "Comercial", goles: 1 },
-    { nombre: "Emanuel Hitz", equipo: "Comercial", goles: 1 },
+    { nombre: "Santiago Ayala", equipo: "Comercial", goles: 1 },
     { nombre: "Gabriel Brendel", equipo: "Huracán", goles: 1 },
     { nombre: "Javier Bicciconti", equipo: "Huracán", goles: 1 },
     { nombre: "Omar Rivas", equipo: "Huracán", goles: 1 },
     { nombre: "Juan Pablo Campos", equipo: "Huracán", goles: 1 },
+    { nombre: "Sergio Pereyra", equipo: "Huracán", goles: 1 },
     { nombre: "Darío Dieser", equipo: "Libertad", goles: 1 },
     { nombre: "Rodrigo García", equipo: "Libertad", goles: 1 },
     { nombre: "César Pascal", equipo: "Libertad", goles: 1 },
     { nombre: "Ariel Paredes", equipo: "Libertad", goles: 1 },
     { nombre: "Mariano Orsi", equipo: "Libertad", goles: 1 },
-    { nombre: "Hernán Sacripandi", equipo: "Pacífico BB", goles: 1 },
+    { nombre: "Pablo Cerra", equipo: "Libertad", goles: 1 },
     { nombre: "Silvio Pagalday", equipo: "Pacífico (C)", goles: 1 },
     { nombre: "Matías Aldunate", equipo: "Pacífico (C)", goles: 1 },
     { nombre: "Nicolás Becher", equipo: "Pacífico (C)", goles: 1 },
@@ -17048,13 +17065,14 @@ const BD_GOLEADORES_SENIOR = [
     { nombre: "Fabio Lucanera", equipo: "Sansinena", goles: 1 },
     { nombre: "Juan Pablo Pascualini", equipo: "Sansinena", goles: 1 },
     { nombre: "Juan Francisco Molina", equipo: "Sansinena", goles: 1 },
+    { nombre: "Emiliano Scheffer", equipo: "Sansinena", goles: 1 },
     { nombre: "Paolo Quiroga", equipo: "Sporting", goles: 1 },
     { nombre: "Emiliano Sebeca", equipo: "Sporting", goles: 1 },
-    { nombre: "Nicolás Custodio", equipo: "Sporting", goles: 1 },
     { nombre: "Alejandro Aparicio", equipo: "Sporting", goles: 1 },
-    { nombre: "Mauricio Oldani", equipo: "Tiro Federal", goles: 1 },
+    { nombre: "Javier Magnani", equipo: "Sporting", goles: 1 },
     { nombre: "Gustavo Derrac", equipo: "Tiro Federal", goles: 1 },
-    { nombre: "Javier Muñoz", equipo: "Tiro Federal", goles: 1 }
+    { nombre: "Javier Muñoz", equipo: "Tiro Federal", goles: 1 },
+    { nombre: "Lucas Sauer", equipo: "Tiro Federal", goles: 1 }
 ];
 const BD_GOLES_CONTRA_SENIOR = [
     { nombre: "Luciano Bellini", equipo: "Tiro Federal", goles: 1 }
