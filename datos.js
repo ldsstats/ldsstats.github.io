@@ -316,12 +316,12 @@ const BD_FIXTURES_FUTSAL_RESERVA = [
         {l:"Tiro Federal",    v:"Comercial",       gl:2, gv:2}
     ]},
     { fecha: 13, partidos: [
+        {l:"Comercial",       v:"Pacífico BB",     gl:4, gv:4},
         {l:"La Esperanza",    v:"Tiro Federal",    gl:null, gv:null},
         {l:"Los 3 Chiflados", v:"Catamarca",       gl:null, gv:null},
         {l:"San Francisco",   v:"Dublin",          gl:null, gv:null},
         {l:"Dep. Futsal",     v:"Huracán",         gl:null, gv:null},
         {l:"Villa Mitre",     v:"La Estación",     gl:null, gv:null},
-        {l:"Comercial",       v:"Pacífico BB",     gl:null, gv:null},
         {l:"Petroquímicos",   v:"Liniers",         gl:null, gv:null}
     ]}
 ];
@@ -1284,13 +1284,12 @@ const BD_FIXTURES_FUTSAL = [
                 ],
         },
     ]},
-    { fecha: 13, partidos: [
+    { fecha: 13, partidos: [        {l:"Comercial",       v:"Pacífico BB",     gl:5, gv:0},
         {l:"La Esperanza",    v:"Tiro Federal",    gl:null, gv:null},
         {l:"Los 3 Chiflados", v:"Catamarca",       gl:null, gv:null},
         {l:"San Francisco",   v:"Dublin",          gl:null, gv:null},
         {l:"Dep. Futsal",     v:"Huracán",         gl:null, gv:null},
         {l:"Villa Mitre",     v:"La Estación",     gl:null, gv:null},
-        {l:"Comercial",       v:"Pacífico BB",     gl:null, gv:null},
         {l:"Petroquímicos",   v:"Liniers",         gl:null, gv:null}
     ]}
 ];
@@ -2034,12 +2033,12 @@ function generarHome() {
         ]},
         { id: "2026-06-17", label: "MIÉ 17/06", torneos: [
             { nombre: "FUTSAL", cat: "futsal", partidos: [
-                {l:"Comercial", v:"Pacífico BB", hora:"22:00", nota:"en cancha de Comercial"},
+                {l:"Comercial", v:"Pacífico BB", hora:"22:00", nota:"en cancha de Comercial", gl: 5, gv:0},
                 {l:"Dep. Futsal", v:"Huracán", hora:"22:00", nota:"en cancha de La Curtiembre"}
             ]},
             { nombre: "SENIOR", cat: "seniorapertura", partidos: [
                 {l:"Pacífico BB", v:"Huracán", hora:"20:00", nota:"en cancha de Tiro Federal"},
-                {l:"Bella Vista", v:"San Francisco", hora:"20:00", nota:"en cancha de Libertad"},
+                {l:"Bella Vista", v:"San Francisco", hora:"20:00", nota:"en cancha de Libertad", gl: 0, gv:0},
                 {l:"Sansinena", v:"Libertad", hora:"21:00", nota:"en cancha de Sansinena"},
                 {l:"Comercial", v:"Pacífico (C)", hora:"21:00", nota:"en cancha de Comercial"},
                 {l:"Tiro Federal", v:"Sporting", hora:"20:30", nota:"en cancha de Tiro Federal"}
@@ -16225,10 +16224,10 @@ const BD_POS_FUTSAL = {
         {n:"Los 3 Chiflados <b>(C)<b>", cl:"los3chiflados", pj:10,pg:8,pe:1,pp:1,gf:70, gc:30, pts:25},
         {n:"Villa Mitre <b>(C)<b>",     cl:"villamitre",    pj:11,pg:8,pe:1,pp:2,gf:48, gc:36, pts:25},
         {n:"Tiro Federal <b>(C)<b>",    cl:"tirofederal",   pj:12,pg:6,pe:1,pp:4,gf:35, gc:35, pts:19},
-        {n:"Pacífico BB",     cl:"pacificobb",    pj:11,pg:5,pe:1,pp:5,gf:51, gc:53, pts:16},
+        {n:"Comercial",       cl:"comercial",     pj:12,pg:5,pe:2,pp:5,gf:54, gc:43, pts:17},
+        {n:"Pacífico BB",     cl:"pacificobb",    pj:12,pg:5,pe:1,pp:6,gf:51, gc:58, pts:16},
         {n:"Liniers",         cl:"liniers",       pj:9,pg:4,pe:4,pp:1,gf:38, gc:30, pts:16},
         {n:"Petroquímicos",   cl:"petroquimicos", pj:12,pg:5,pe:0,pp:7,gf:44,gc:45, pts:15},
-        {n:"Comercial",       cl:"comercial",     pj:11,pg:4,pe:2,pp:5,gf:49, gc:43, pts:14},
         {n:"Catamarca <b>(X)</b>",       cl:"catamarca",     pj:12,pg:3,pe:1,pp:8,gf:29, gc:49, pts:10},
         {n:"Dublin <b>(X)</b>",          cl:"dublin",        pj:12,pg:3,pe:0,pp:9,gf:33, gc:40, pts:9},
         {n:"Dep. Futsal <b>(X)</b>",     cl:"depfutsal",     pj:12,pg:2,pe:1,pp:9,gf:25, gc:52, pts:7},
@@ -16242,13 +16241,13 @@ const BD_POS_FUTSAL = {
         {n:"La Esperanza <b>(C)<b>",    cl:"laesperanza",   pj:10,pg:7,pe:2,pp:1,gf:41, gc:25, pts:23},
         {n:"Liniers <b>(C)<b>",         cl:"liniers",       pj:9,pg:6,pe:2,pp:1,gf:42, gc:24, pts:20},
         {n:"La Estación <b>(C)<b>",     cl:"laestacion",    pj:11,pg:4,pe:5,pp:2,gf:32, gc:32, pts:17},
-        {n:"San Francisco",   cl:"sanfrancisco",  pj:11,pg:5,pe:1,pp:5,gf:27, gc:37, pts:16},
+        {n:"San Francisco <b>(C)<b>",   cl:"sanfrancisco",  pj:11,pg:5,pe:1,pp:5,gf:27, gc:37, pts:16},
         {n:"Dublin",          cl:"dublin",        pj:12,pg:4,pe:2,pp:6,gf:31, gc:34, pts:14},
         {n:"Catamarca",       cl:"catamarca",     pj:12,pg:4,pe:1,pp:7,gf:40, gc:54, pts:13},
         {n:"Tiro Federal",    cl:"tirofederal",   pj:12,pg:3,pe:3,pp:6,gf:23, gc:41, pts:12},
-        {n:"Pacífico BB",     cl:"pacificobb",    pj:11,pg:3,pe:2,pp:6,gf:35, gc:54, pts:11},
+        {n:"Pacífico BB",     cl:"pacificobb",    pj:12,pg:3,pe:3,pp:6,gf:39, gc:58, pts:12},
         {n:"Huracán <b>(X)</b>",         cl:"huracan",       pj:11,pg:2,pe:1,pp:8,gf:20, gc:48, pts:7},
-        {n:"Comercial <b>(X)</b>",       cl:"comercial",     pj:11,pg:1,pe:3,pp:7,gf:30, gc:43, pts:6},
+        {n:"Comercial <b>(X)</b>",       cl:"comercial",     pj:12,pg:1,pe:4,pp:7,gf:34, gc:47, pts:7},
         {n:"Dep. Futsal <b>(X)</b>",     cl:"depfutsal",     pj:12,pg:0,pe:2,pp:10,gf:23, gc:43, pts:2}
     ]
 };
@@ -16844,14 +16843,14 @@ function generarTablaPosBonaerense(pos) {
 
 const BD_SENIOR_APERTURA = [
     { n: "Sporting",          cl: "sporting",      pj: 7, pg: 5, pe: 0, pp: 2, gf: 14, gc: 7, pts: 15 },
-    { n: "Bella Vista",       cl: "bellavista",    pj: 7, pg: 4, pe: 2, pp: 1, gf: 10, gc: 7, pts: 14 },
+    { n: "Bella Vista",       cl: "bellavista",    pj: 8, pg: 4, pe: 3, pp: 1, gf: 10, gc: 7, pts: 15 },
     { n: "Huracán",           cl: "huracan",       pj: 7, pg: 4, pe: 0, pp: 3, gf: 23, gc: 17, pts: 12 },
     { n: "Pacífico (C)",      cl: "pacificoc",     pj: 7, pg: 4, pe: 0, pp: 3, gf: 13, gc: 18, pts: 12 },
     { n: "Comercial",         cl: "comercial",     pj: 7, pg: 3, pe: 2, pp: 2, gf: 13, gc: 12, pts: 11 },
     { n: "Sansinena",         cl: "sansinena",     pj: 7, pg: 3, pe: 1, pp: 3, gf: 11, gc: 10, pts: 10 },
     { n: "Pacífico BB",       cl: "pacificobb",    pj: 7, pg: 2, pe: 2, pp: 3, gf: 6, gc: 10, pts: 8 },
     { n: "Libertad",          cl: "libertad",      pj: 7, pg: 2, pe: 1, pp: 4, gf: 15, gc: 12, pts: 7 },
-    { n: "San Francisco",     cl: "sanfrancisco",  pj: 7, pg: 2, pe: 0, pp: 5, gf: 10, gc: 12, pts: 7 },
+    { n: "San Francisco",     cl: "sanfrancisco",  pj: 8, pg: 2, pe: 1, pp: 5, gf: 10, gc: 12, pts: 8 },
     { n: "Tiro Federal",      cl: "tirofederal",   pj: 7, pg: 0, pe: 3, pp: 4, gf: 10, gc: 20, pts: 3 }
 ];
 
@@ -16907,7 +16906,7 @@ const BD_FIXTURES_SENIOR = [
     ]},
     { fecha: 8, libre: null, partidos: [
         { l: "Pacífico BB",   v: "Huracán",  gl: null, gv: null, goles_l:[], goles_v:[] },
-        { l: "Bella Vista",   v: "San Francisco",  gl: null, gv: null, goles_l:[], goles_v:[] },
+        { l: "Bella Vista",   v: "San Francisco",  gl: 0, gv: 0, goles_l:[], goles_v:[] },
         { l: "Sansinena",   v: "Libertad",  gl: null, gv: null, goles_l:[], goles_v:[] },
         { l: "Comercial",   v: "Pacífico (C)",  gl: null, gv: null, goles_l:[], goles_v:[] },
         { l: "Tiro Federal",   v: "Sporting",  gl: null, gv: null, goles_l:[], goles_v:[] },
