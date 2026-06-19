@@ -1795,7 +1795,7 @@ BD_FIXTURES.promocional.apertura.find(f => f.fecha === 12).partidos = [
     {l:"Pacífico BB",    v:"Dublin", gl:0, gv:0, dia:"Dom 14/06", hora:"15:00", goles_l:[], goles_v:[]},
     {l:"Olimpo",    v:"Pacífico (C)", gl:1, gv:2, dia:"Lun 15/06", hora:"15:00", goles_l:["Thiago Bedolla"], goles_v:["Donato Angelini","Gianni Ferrari"]},
 ];
-BD_FIXTURES.promocional.apertura.find(f => f.fecha === 12).partidos = [
+BD_FIXTURES.promocional.apertura.find(f => f.fecha === 13).partidos = [
     {l:"Tiro Federal",    v:"Dublin", gl:null, gv:null, dia:"Sáb 20/06", hora:"15:00", goles_l:[], goles_v:[]},
     {l:"Rosario PB",    v:"Pacífico (C)", gl:null, gv:null, dia:"Sáb 20/06", hora:"15:00", goles_l:[], goles_v:[]},
     {l:"Comercial",    v:"Pacífico BB", gl:null, gv:null, dia:"Sáb 20/06", hora:"15:00", goles_l:[], goles_v:[]},
@@ -1826,6 +1826,12 @@ BD_FIXTURES.federala.posiciones.find(f => f.fecha === 13).partidos = [
     {l:"Sol de Mayo",   v:"Olimpo", gl:1, gv:1, dia:"Dom 14/06", hora:"15:00", goles_l:["Diego Zalazar"], goles_v:["Antú Hernández"]},
     {l:"Círculo Dep.",   v:"Santamarina", gl:0, gv:0, dia:"Dom 14/06", hora:"15:00", goles_l:[], goles_v:[]},
     {l:"Kimberley",   v:"Alvarado", gl:2, gv:2, dia:"Dom 14/06", hora:"15:00", goles_l:["Tomás Loscalzo","Santiago Castillo"], goles_v:["Germán Cervera","Germán Sosa"]}
+];
+BD_FIXTURES.federala.posiciones.find(f => f.fecha === 14).partidos = [
+    {l:"Olimpo",   v:"Kimberley", gl:null, gv:null, dia:"Sáb 20/06", hora:"15:00", goles_l:[], goles_v:[]},
+    {l:"Alvarado",   v:"Círculo Dep.", gl:null, gv:null, dia:"Sáb 20/06", hora:"15:30", goles_l:[], goles_v:[]},
+    {l:"Santamarina",   v:"Villa Mitre", gl:null, gv:null, dia:"Sáb 20/06", hora:"18:00", goles_l:[], goles_v:[]},
+    {l:"Guillermo Brown",   v:"Sol de Mayo", gl:null, gv:null, dia:"Dom 21/06", hora:"15:00", goles_l:[], goles_v:[]}
 ];
 
 
@@ -2284,7 +2290,7 @@ function generarTablaFederal() {
     const mejoresQuintos = [
         { nombre: "Huracán Las Heras", pj:12, pg:4, pe:4, pp:4, gf:7, gc:10 },
         { nombre: "Boca Unidos", pj:12, pg:4, pe:3, pp:5, gf:15, gc:17 },
-        { nombre: "Sol de Mayo", pj:11, pg:3, pe:4, pp:4, gf:8, gc:9 }
+        { nombre: "Sol de Mayo", pj:11, pg:3, pe:5, pp:4, gf:9, gc:10 }
     ];
     html += `</tbody></table><div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>15</b> para quienes tengan 11 partidos jugados y <b>12</b> para quienes tengan 12 partidos jugados</div>`;
     html += `<div class="header-t">MEJORES 5° (ZONAS 2, 3 Y 4)</div>`;
