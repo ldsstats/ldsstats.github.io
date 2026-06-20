@@ -319,10 +319,10 @@ const BD_FIXTURES_FUTSAL_RESERVA = [
         {l:"Comercial",       v:"Pacífico BB",     gl:4, gv:4},
         {l:"Dep. Futsal",     v:"Huracán",         gl:null, gv:null},
         {l:"La Esperanza",    v:"Tiro Federal",    gl:5, gv:6},
+        {l:"San Francisco",   v:"Dublin",          gl:3, gv:7},
+        {l:"Petroquímicos",   v:"Liniers",         gl:3, gv:9},
         {l:"Villa Mitre",     v:"La Estación",     gl:null, gv:null},
-        {l:"Los 3 Chiflados", v:"Catamarca",       gl:null, gv:null},
-        {l:"San Francisco",   v:"Dublin",          gl:null, gv:null},
-        {l:"Petroquímicos",   v:"Liniers",         gl:null, gv:null}
+        {l:"Los 3 Chiflados", v:"Catamarca",       gl:null, gv:null}
     ]}
 ];
 
@@ -1305,7 +1305,21 @@ const BD_FIXTURES_FUTSAL = [
         {l:"La Esperanza",    v:"Tiro Federal",    gl:9, gv:3},
         {l:"Villa Mitre",     v:"La Estación",     gl:6, gv:3},
         {l:"Los 3 Chiflados", v:"Catamarca",       gl:null, gv:null},
-        {l:"San Francisco",   v:"Dublin",          gl:null, gv:null},
+        {
+            l:"San Francisco",
+            v:"Dublin",
+            gl:3,
+            gv:3,
+            dia:"Vie 19/06",
+            hora:"22:30",
+            goles_l:[
+                ],
+            goles_v:[
+                "Rodrigo Gómez",
+                "Fabricio Maidana",
+                "Agustín Miguel"
+                ],
+        },
         {l:"Petroquímicos",   v:"Liniers",         gl:null, gv:null}
     ]}
 ];
@@ -2046,7 +2060,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 12).partidos.forEach(p
 });
 
 
-let diaSeleccionadoHome = "2026-06-19"; 
+let diaSeleccionadoHome = "2026-06-20"; 
 
 function seleccionarDiaHome(dia) {
     diaSeleccionadoHome = dia;
@@ -2094,7 +2108,7 @@ function generarHome() {
             { nombre: "FUTSAL", cat: "futsal", partidos: [
                 {l:"Petroquímicos", v:"Liniers", hora:"22:00", nota:"en cancha de Petroquímicos"},
                 {l:"Los 3 Chiflados", v:"Catamarca", hora:"22:30", nota:"en cancha de La Curtiembre"},
-                {l:"San Francisco", v:"Dublin", hora:"22:30", nota:"en cancha de Tiro Federal"}
+                {l:"San Francisco", v:"Dublin", hora:"22:30", nota:"en cancha de Tiro Federal", gl:3, gv:3}
             ]},
         ]},
         { id: "2026-06-20", label: "SÁB 20/06", torneos: [
@@ -16285,21 +16299,21 @@ const BD_POS_FUTSAL = {
         {n:"Liniers",         cl:"liniers",       pj:9,pg:4,pe:4,pp:1,gf:38, gc:30, pts:16},
         {n:"Petroquímicos",   cl:"petroquimicos", pj:12,pg:5,pe:0,pp:7,gf:44,gc:45, pts:15},
         {n:"Catamarca <b>(X)</b>",       cl:"catamarca",     pj:12,pg:3,pe:1,pp:8,gf:29, gc:49, pts:10},
-        {n:"Dublin <b>(X)</b>",          cl:"dublin",        pj:12,pg:3,pe:0,pp:9,gf:33, gc:40, pts:9},
+        {n:"Dublin <b>(X)</b>",          cl:"dublin",        pj:13,pg:3,pe:1,pp:9,gf:36, gc:43, pts:10},
         {n:"Dep. Futsal <b>(X)</b>",     cl:"depfutsal",     pj:12,pg:2,pe:1,pp:9,gf:25, gc:52, pts:7},
-        {n:"San Francisco <b>(X)</b> <b>*</b>",   cl:"sanfrancisco",  pj:11,pg:2,pe:4,pp:5,gf:35, gc:43, pts:7},
+        {n:"San Francisco <b>(X)</b> <b>*</b>",   cl:"sanfrancisco",  pj:12,pg:2,pe:5,pp:5,gf:38, gc:46, pts:8},
         {n:"Huracán <b>(X)<b>",         cl:"huracan",       pj:11,pg:0,pe:0,pp:11,gf:27, gc:80,pts:0}
     ],
     reserva: [
         {n:"Los 3 Chiflados <b>(C)<b>", cl:"los3chiflados", pj:10,pg:9,pe:1,pp:0,gf:52, gc:11, pts:28},
-        {n:"Petroquímicos <b>(C)<b>",   cl:"petroquimicos", pj:12,pg:7,pe:3,pp:2,gf:66, gc:28, pts:24},
+        {n:"Petroquímicos <b>(C)<b>",   cl:"petroquimicos", pj:13,pg:7,pe:3,pp:3,gf:69, gc:37, pts:24},
         {n:"Villa Mitre <b>(C)<b>",     cl:"villamitre",    pj:10,pg:7,pe:2,pp:1,gf:43, gc:24, pts:23},
         {n:"La Esperanza <b>(C)<b>",    cl:"laesperanza",   pj:11,pg:7,pe:2,pp:2,gf:46, gc:31, pts:23},
-        {n:"Liniers <b>(C)<b>",         cl:"liniers",       pj:9,pg:6,pe:2,pp:1,gf:42, gc:24, pts:20},
+        {n:"Liniers <b>(C)<b>",         cl:"liniers",       pj:10,pg:7,pe:2,pp:1,gf:51, gc:27, pts:23},
         {n:"La Estación <b>(C)<b>",     cl:"laestacion",    pj:11,pg:4,pe:5,pp:2,gf:32, gc:32, pts:17},
-        {n:"San Francisco <b>(C)<b>",   cl:"sanfrancisco",  pj:11,pg:5,pe:1,pp:5,gf:27, gc:37, pts:16},
-        {n:"Tiro Federal",    cl:"tirofederal",   pj:14,pg:4,pe:3,pp:6,gf:29, gc:46, pts:15},
-        {n:"Dublin",          cl:"dublin",        pj:12,pg:4,pe:2,pp:6,gf:31, gc:34, pts:14},
+        {n:"Dublin <b>(C)<b>",          cl:"dublin",        pj:13,pg:5,pe:2,pp:6,gf:38, gc:37, pts:17},
+        {n:"San Francisco",   cl:"sanfrancisco",  pj:12,pg:5,pe:1,pp:6,gf:30, gc:44, pts:16},
+        {n:"Tiro Federal",    cl:"tirofederal",   pj:13,pg:4,pe:3,pp:6,gf:29, gc:46, pts:15},
         {n:"Catamarca",       cl:"catamarca",     pj:12,pg:4,pe:1,pp:7,gf:40, gc:54, pts:13},
         {n:"Pacífico BB",     cl:"pacificobb",    pj:12,pg:3,pe:3,pp:6,gf:39, gc:58, pts:12},
         {n:"Huracán <b>(X)</b>",         cl:"huracan",       pj:11,pg:2,pe:1,pp:8,gf:20, gc:48, pts:7},
@@ -16440,9 +16454,9 @@ html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-a
 }
 
 const BD_GOLEADORES_FUTSAL = [
-    { club: "Dublin",          clase: "dublin",        act: "fecha 12",  goleadores: [
-        { nombre: "Agustín Miguel",      goles: 11 },
-        { nombre: "Rodrigo Gómez",       goles: 7 },
+    { club: "Dublin",          clase: "dublin",        act: "fecha 13",  goleadores: [
+        { nombre: "Agustín Miguel",      goles: 12 },
+        { nombre: "Rodrigo Gómez",       goles: 8 },
         { nombre: "Jesús Lucarelli",     goles: 3 },
         { nombre: "Matías Gigena",       goles: 3 },
         { nombre: "Matías Palma",        goles: 2 },
@@ -16450,7 +16464,8 @@ const BD_GOLEADORES_FUTSAL = [
         { nombre: "Facundo Miranda",     goles: 2 },
         { nombre: "Alejandro Bernal",     goles: 1 },
         { nombre: "Matías Fonollosa",     goles: 1 },
-        { nombre: "Marcelo Achinelli",     goles: 1 }
+        { nombre: "Marcelo Achinelli",     goles: 1 },
+        { nombre: "Fabricio Maidana",     goles: 1 }
     ]},
     { club: "Villa Mitre",     clase: "villamitre",    act: "-",       goleadores: [
         { nombre: "Agustín Pullini",      goles: 2 },
