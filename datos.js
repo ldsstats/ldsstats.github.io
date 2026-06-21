@@ -2314,7 +2314,22 @@ function generarTablaFederal() {
         }
     });
 
-    stats.sort((a,b) => b.pts - a.pts || (b.gf-b.gc) - (a.gf-a.gc) || (a.orden||99) - (b.orden||99));
+    // Desempate por enfrentamiento directo (puntos obtenidos entre los equipos empatados)
+    function puntosEntreSi(nombreA, nombreB) {
+        let ptsA = 0, ptsB = 0;
+        partidos.forEach(p => {
+            if (p.gl === null) return;
+            const esAvsB = (p.l === nombreA && p.v === nombreB);
+            const esBvsA = (p.l === nombreB && p.v === nombreA);
+            if (!esAvsB && !esBvsA) return;
+            if (p.gl > p.gv) { esAvsB ? ptsA += 3 : ptsB += 3; }
+            else if (p.gv > p.gl) { esAvsB ? ptsB += 3 : ptsA += 3; }
+            else { ptsA++; ptsB++; }
+        });
+        return ptsA - ptsB;
+    }
+
+    stats.sort((a,b) => b.pts - a.pts || puntosEntreSi(b.nombre, a.nombre) || (b.gf-b.gc) - (a.gf-a.gc) || (a.orden||99) - (b.orden||99));
 
     let html = generarFixture(estado.fecha, 'posiciones', 'federala');
     html += `<div class="header-t">POSICIONES - FEDERAL A (ZONA 4)</div><table>
@@ -2326,9 +2341,9 @@ function generarTablaFederal() {
     });
     
     const mejoresQuintos = [
-        { nombre: "Huracán Las Heras", pj:12, pg:4, pe:4, pp:4, gf:7, gc:10 },
-        { nombre: "Boca Unidos", pj:12, pg:4, pe:3, pp:5, gf:15, gc:17 },
-        { nombre: "Sol de Mayo", pj:11, pg:3, pe:5, pp:4, gf:9, gc:10 }
+        { nombre: "Huracán Las Heras", pj:13, pg:4, pe:4, pp:5, gf:8, gc:13 },
+        { nombre: "Villa Mitre", pj:12, pg:3, pe:6, pp:3, gf:7, gc:5 },
+        { nombre: "Boca Unidos", pj:12, pg:4, pe:3, pp:5, gf:15, gc:17 }
     ];
     html += `</tbody></table><div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>15</b> para quienes tengan 11 partidos jugados y <b>12</b> para quienes tengan 12 partidos jugados</div>`;
     html += `<div class="header-t">MEJORES 5° (ZONAS 2, 3 Y 4)</div>`;
