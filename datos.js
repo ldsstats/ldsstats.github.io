@@ -12,9 +12,9 @@ const BD_EQUIPOS = {
         { nombre: "Pacífico BB", clase: "pacificobb" }, { nombre: "Pacífico (C)", clase: "pacificoc" }
     ],
     federala: [
-        { nombre: "Olimpo", clase: "olimpo", orden: 1 }, { nombre: "Villa Mitre", clase: "villamitre", orden: 2 },
-        { nombre: "Alvarado", clase: "alvarado", orden: 3 }, { nombre: "Santamarina", clase: "santamarina", orden: 4 },
-        { nombre: "Kimberley", clase: "kimberley", orden: 5 }, { nombre: "Germinal", clase: "germinal", orden: 6 },
+        { nombre: "Olimpo", clase: "olimpo", orden: 1 }, { nombre: "Villa Mitre", clase: "villamitre", orden: 3 },
+        { nombre: "Alvarado", clase: "alvarado", orden: 4 }, { nombre: "Santamarina", clase: "santamarina", orden: 5 },
+        { nombre: "Kimberley", clase: "kimberley", orden: 6 }, { nombre: "Germinal", clase: "germinal", orden: 2 },
         { nombre: "Sol de Mayo", clase: "soldemayo", orden: 7 }, { nombre: "Guillermo Brown", clase: "gbrown", orden: 8 },
         { nombre: "Círculo Dep.", clase: "circulo", orden: 9 }
     ],
@@ -1489,6 +1489,11 @@ BD_FIXTURES_SUB.sub13.find(f=>f.fecha===6).partidos.forEach(p=>{
     if(p.l==="Santamarina"&&p.v==="Balompié"){p.gl=1;p.gv=1;}
     if(p.l==="Alvarado"&&p.v==="Mac Allister"){p.gl=0;p.gv=3;}
 });
+BD_FIXTURES_SUB.sub13.find(f=>f.fecha===7).partidos.forEach(p=>{
+    if(p.l==="Balompié"&&p.v==="Villa Mitre"){p.gl=2;p.gv=2;}
+    if(p.l==="Olimpo"&&p.v==="Santamarina"){p.gl=4;p.gv=1;}
+    if(p.l==="Mac Allister"&&p.v==="Kimberley"){p.gl=3;p.gv=0;}
+});
 
 BD_FIXTURES_SUB.sub15.find(f=>f.fecha===1).partidos.forEach(p=>{
     if(p.l==="Villa Mitre"&&p.v==="Olimpo"){p.gl=1;p.gv=2;p.goles_l=["Santiago Sánchez"];p.goles_v=["Thiago Alfredo","Galo Martínez"];}
@@ -1519,6 +1524,11 @@ BD_FIXTURES_SUB.sub15.find(f=>f.fecha===6).partidos.forEach(p=>{
     if(p.l==="Kimberley"&&p.v==="Olimpo"){p.gl=2;p.gv=0;}
     if(p.l==="Santamarina"&&p.v==="Balompié"){p.gl=0;p.gv=0;}
     if(p.l==="Alvarado"&&p.v==="Mac Allister"){p.gl=1;p.gv=3;}
+});
+BD_FIXTURES_SUB.sub15.find(f=>f.fecha===7).partidos.forEach(p=>{
+    if(p.l==="Balompié"&&p.v==="Villa Mitre"){p.gl=5;p.gv=2;}
+    if(p.l==="Olimpo"&&p.v==="Santamarina"){p.gl=1;p.gv=0;}
+    if(p.l==="Mac Allister"&&p.v==="Kimberley"){p.gl=3;p.gv=1;}
 });
 
 BD_FIXTURES_SUB.sub17.find(f=>f.fecha===1).partidos.forEach(p=>{
@@ -1551,7 +1561,11 @@ BD_FIXTURES_SUB.sub17.find(f=>f.fecha===6).partidos.forEach(p=>{
     if(p.l==="Alvarado"&&p.v==="Mac Allister"){p.gl=1;p.gv=1;}
     if(p.l==="Santamarina"&&p.v==="Balompié"){p.gl=0;p.gv=1;}
 });
-
+BD_FIXTURES_SUB.sub17.find(f=>f.fecha===7).partidos.forEach(p=>{
+    if(p.l==="Balompié"&&p.v==="Villa Mitre"){p.gl=1;p.gv=0;}
+    if(p.l==="Olimpo"&&p.v==="Santamarina"){p.gl=3;p.gv=0;}
+    if(p.l==="Mac Allister"&&p.v==="Kimberley"){p.gl=3;p.gv=0;}
+});
 
 
 function expandirFixture(base, destino, total) {
@@ -1842,9 +1856,9 @@ BD_FIXTURES.federala.posiciones.find(f => f.fecha === 13).partidos = [
     {l:"Kimberley",   v:"Alvarado", gl:2, gv:2, dia:"Dom 14/06", hora:"15:00", goles_l:["Tomás Loscalzo","Santiago Castillo"], goles_v:["Germán Cervera","Germán Sosa"]}
 ];
 BD_FIXTURES.federala.posiciones.find(f => f.fecha === 14).partidos = [
-    {l:"Olimpo",   v:"Kimberley", gl:null, gv:null, dia:"Sáb 20/06", hora:"15:00", goles_l:[], goles_v:[]},
-    {l:"Alvarado",   v:"Círculo Dep.", gl:null, gv:null, dia:"Sáb 20/06", hora:"15:30", goles_l:[], goles_v:[]},
-    {l:"Santamarina",   v:"Villa Mitre", gl:null, gv:null, dia:"Sáb 20/06", hora:"18:00", goles_l:[], goles_v:[]},
+    {l:"Olimpo",   v:"Kimberley", gl:0, gv:0, dia:"Sáb 20/06", hora:"15:00", goles_l:[], goles_v:[]},
+    {l:"Alvarado",   v:"Círculo Dep.", gl:1, gv:0, dia:"Sáb 20/06", hora:"15:30", goles_l:["Germán Cervera"], goles_v:[]},
+    {l:"Santamarina",   v:"Villa Mitre", gl:0, gv:2, dia:"Sáb 20/06", hora:"18:00", goles_l:[], goles_v:["Jerónimo Almada","Santiago Gómez"]},
     {l:"Guillermo Brown",   v:"Sol de Mayo", gl:null, gv:null, dia:"Dom 21/06", hora:"15:00", goles_l:[], goles_v:[]}
 ];
 
@@ -2058,6 +2072,12 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 12).partidos.forEach(p
     if (p.l === "Petroquímicos" && p.v === "Liniers") { p.gl = 0; p.gv = 3; }
     if (p.l === "Estrella de Oro" && p.v === "Rosario PB") { p.gl = 1; p.gv = 1; }
 });
+// Reserva 2° Femenino - resultados F13
+BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 13).partidos.forEach(p => {
+    if (p.l === "San Francisco" && p.v === "Petroquímicos") { p.gl = 2; p.gv = 1; }
+    if (p.l === "Sansinena" && p.v === "Estrella de Oro") { p.gl = null; p.gv = null; }
+    if (p.l === "Rosario PB" && p.v === "Huracán") { p.gl = null; p.gv = null; }
+});
 
 
 let diaSeleccionadoHome = "2026-06-20"; 
@@ -2128,6 +2148,10 @@ function generarHome() {
             { nombre: "2° FEMENINO", cat: "segundafemenino", partidos: [
                 {l:"Liniers", v:"Pacífico (C)", hora:"15:30"},
                 {l:"San Francisco", v:"Petroquímicos", hora:"15:30"}
+            ]},
+            { nombre: "TORNEO FEDERAL A", cat: "federala", partidos: [
+                {l:"Olimpo", v:"Kimberley", hora:"15:30", gl:0, gv:0},
+                {l:"Santamarina", v:"Villa Mitre", hora:"15:30", gl:0, gv:2}
             ]},
         ]},
         { id: "2026-06-21", label: "DOM 21/06", torneos: [
@@ -16051,11 +16075,11 @@ function generarReserva(cat) {
                        {n:"Pacífico (C) <b>(X)</b>", cl:"pacificocabildo",  pj:12, pg:1, pe:5, pp:6, gf:13, gc:21, pts:8},],
         'segundafemenino': [
             {n:"Liniers",             cl:"liniers",         pj:9, pg:8, pe:1, pp:0, gf:36, gc:5, pts:25},
-            {n:"San Francisco",       cl:"sanfrancisco",    pj:9, pg:5, pe:1, pp:2, gf:20, gc:6, pts:19},
+            {n:"San Francisco",       cl:"sanfrancisco",    pj:10, pg:6, pe:1, pp:2, gf:22, gc:7, pts:22},
             {n:"Rosario PB",          cl:"rosariopb",       pj:8, pg:5, pe:2, pp:1, gf:19, gc:9, pts:17},
             {n:"Estrella de Oro",     cl:"estrellaoro",     pj:9, pg:4, pe:2, pp:3, gf:12, gc:12, pts:14},
             {n:"Huracán",             cl:"huracan",         pj:8, pg:2, pe:0, pp:6, gf:6, gc:16, pts:6},
-            {n:"Petroquímicos",       cl:"petroquimicos",   pj:7, pg:0, pe:1, pp:6, gf:6, gc:16, pts:1},
+            {n:"Petroquímicos",       cl:"petroquimicos",   pj:8, pg:0, pe:1, pp:7, gf:7, gc:18, pts:1},
             {n:"Sansinena",           cl:"sansinena",       pj:8, pg:0, pe:1, pp:7, gf:6, gc:34, pts:1}
         ],
         'femenino':   [
@@ -16107,47 +16131,52 @@ function generarReserva(cat) {
 
 const BD_POS_SUB = {
     sub13: [
-        {nombre:"Villa Mitre",  clase:"villamitre",  pj:5,pg:5,pe:0,pp:0,gf:16,gc:4,pts:15},
-        {nombre:"Mac Allister", clase:"macallister", pj:5,pg:4,pe:0,pp:1,gf:10,gc:2,pts:12},
-        {nombre:"Kimberley",    clase:"kimberley",   pj:5,pg:3,pe:1,pp:1,gf:8,gc:5,pts:10},
-        {nombre:"Balompié",     clase:"balompie",    pj:5,pg:2,pe:2,pp:1,gf:8,gc:6,pts:8},
-        {nombre:"Olimpo",       clase:"olimpo",      pj:5,pg:1,pe:0,pp:4,gf:6,gc:13,pts:3},
+        {nombre:"Villa Mitre",  clase:"villamitre",  pj:6,pg:5,pe:1,pp:0,gf:18,gc:6,pts:16},
+        {nombre:"Mac Allister", clase:"macallister", pj:6,pg:5,pe:0,pp:1,gf:13,gc:2,pts:15},
+        {nombre:"Kimberley",    clase:"kimberley",   pj:6,pg:3,pe:1,pp:2,gf:8,gc:8,pts:10},
+        {nombre:"Balompié",     clase:"balompie",    pj:6,pg:2,pe:3,pp:1,gf:10,gc:8,pts:9},
+        {nombre:"Olimpo",       clase:"olimpo",      pj:6,pg:2,pe:0,pp:4,gf:10,gc:14,pts:6},
         {nombre:"Alvarado",     clase:"alvarado",    pj:6,pg:1,pe:0,pp:5,gf:7,gc:16,pts:3},
-        {nombre:"Santamarina",  clase:"santamarina", pj:5,pg:0,pe:1,pp:4,gf:3,gc:12,pts:1}
+        {nombre:"Santamarina",  clase:"santamarina", pj:6,pg:0,pe:1,pp:5,gf:4,gc:16,pts:1}
     ],
     sub15: [
-        {nombre:"Mac Allister", clase:"macallister", pj:5,pg:5,pe:0,pp:0,gf:8,gc:1,pts:15},
-        {nombre:"Kimberley",    clase:"kimberley",   pj:5,pg:3,pe:1,pp:1,gf:7,gc:5,pts:10},
+        {nombre:"Mac Allister", clase:"macallister", pj:6,pg:6,pe:0,pp:0,gf:11,gc:2,pts:18},
+        {nombre:"Kimberley",    clase:"kimberley",   pj:6,pg:3,pe:1,pp:2,gf:8,gc:8,pts:10},
         {nombre:"Alvarado",     clase:"alvarado",    pj:6,pg:2,pe:2,pp:2,gf:13,gc:8,pts:8},
-        {nombre:"Balompié",     clase:"balompie",    pj:5,pg:2,pe:1,pp:2,gf:7,gc:5,pts:7},
-        {nombre:"Olimpo",       clase:"olimpo",      pj:5,pg:1,pe:1,pp:3,gf:5,gc:10,pts:4},
-        {nombre:"Santamarina",  clase:"santamarina", pj:5,pg:1,pe:1,pp:3,gf:2,gc:9,pts:4},
-        {nombre:"Villa Mitre",  clase:"villamitre",  pj:5,pg:1,pe:0,pp:4,gf:4,gc:8,pts:3}
+        {nombre:"Balompié",     clase:"balompie",    pj:6,pg:3,pe:1,pp:2,gf:12,gc:7,pts:10},
+        {nombre:"Olimpo",       clase:"olimpo",      pj:6,pg:2,pe:1,pp:3,gf:6,gc:10,pts:7},
+        {nombre:"Santamarina",  clase:"santamarina", pj:6,pg:1,pe:1,pp:4,gf:2,gc:10,pts:4},
+        {nombre:"Villa Mitre",  clase:"villamitre",  pj:6,pg:1,pe:0,pp:5,gf:6,gc:13,pts:3}
     ],
     sub17: [
-        {nombre:"Kimberley",    clase:"kimberley",   pj:5,pg:4,pe:1,pp:0,gf:9,gc:2,pts:13},
+        {nombre:"Kimberley",    clase:"kimberley",   pj:6,pg:4,pe:1,pp:1,gf:9,gc:5,pts:13},
+        {nombre:"Mac Allister", clase:"macallister", pj:6,pg:3,pe:3,pp:0,gf:11,gc:4,pts:12},
         {nombre:"Alvarado",     clase:"alvarado",    pj:6,pg:3,pe:1,pp:2,gf:10,gc:8,pts:10},
-        {nombre:"Mac Allister", clase:"macallister", pj:5,pg:2,pe:3,pp:0,gf:8,gc:4,pts:9},
-        {nombre:"Balompié",     clase:"balompie",    pj:5,pg:2,pe:1,pp:2,gf:8,gc:10,pts:7},
-        {nombre:"Villa Mitre",  clase:"villamitre",  pj:5,pg:1,pe:3,pp:1,gf:5,gc:6,pts:6},
-        {nombre:"Olimpo",       clase:"olimpo",      pj:5,pg:1,pe:1,pp:3,gf:5,gc:9,pts:4},
-        {nombre:"Santamarina",  clase:"santamarina", pj:5,pg:0,pe:0,pp:5,gf:2,gc:8,pts:0}
+        {nombre:"Balompié",     clase:"balompie",    pj:6,pg:3,pe:1,pp:2,gf:9,gc:10,pts:10},
+        {nombre:"Olimpo",       clase:"olimpo",      pj:6,pg:2,pe:1,pp:3,gf:8,gc:9,pts:7},
+        {nombre:"Villa Mitre",  clase:"villamitre",  pj:6,pg:1,pe:3,pp:2,gf:5,gc:7,pts:6},
+        {nombre:"Santamarina",  clase:"santamarina", pj:6,pg:0,pe:0,pp:6,gf:2,gc:11,pts:0}
     ]
 };
 
 const BD_GOL_SUB = {
     sub13: [
-        {jugador:"Santiago Martínez", equipo:"Villa Mitre", clase:"villamitre", n:8},
+        {jugador:"Santiago Martínez", equipo:"Villa Mitre", clase:"villamitre", n:9},
         {jugador:"Valentino Altfater",    equipo:"Villa Mitre", clase:"villamitre", n:3},
         {jugador:"Ringo Melcon",      equipo:"Villa Mitre", clase:"villamitre", n:2},
-        {jugador:"Leon Cáceres",      equipo:"Olimpo",      clase:"olimpo",     n:2},
+        {jugador:"León Cáceres",      equipo:"Olimpo",      clase:"olimpo",     n:2},
         {jugador:"Erick Schwaner",    equipo:"Villa Mitre", clase:"villamitre", n:1},
         {jugador:"Martiniano Vergara",    equipo:"Villa Mitre", clase:"villamitre", n:1},
         {jugador:"Enzo Rossi",    equipo:"Villa Mitre", clase:"villamitre", n:1},
+        {jugador:"Brian Scalco",    equipo:"Villa Mitre", clase:"villamitre", n:1},
         {jugador:"Santino Canales",   equipo:"Olimpo",      clase:"olimpo",     n:1},
         {jugador:"Juan Ignacio Aguado",      equipo:"Olimpo",      clase:"olimpo",     n:1},
         {jugador:"Santino Figueroa",      equipo:"Olimpo",      clase:"olimpo",     n:1},
-        {jugador:"Lucio González",      equipo:"Olimpo",      clase:"olimpo",     n:1}
+        {jugador:"Lucio González",      equipo:"Olimpo",      clase:"olimpo",     n:1},
+        {jugador:"Mikeas Jara Godoy",      equipo:"Olimpo",      clase:"olimpo",     n:1},
+        {jugador:"Enzo Salinas",      equipo:"Olimpo",      clase:"olimpo",     n:1},
+        {jugador:"Thiago Espinoza",      equipo:"Olimpo",      clase:"olimpo",     n:1},
+        {jugador:"Bastián González",      equipo:"Olimpo",      clase:"olimpo",     n:1}
     ],
     sub15: [
         {jugador:"Santiago Sánchez",  equipo:"Villa Mitre", clase:"villamitre", n:2},
@@ -16155,13 +16184,18 @@ const BD_GOL_SUB = {
         {jugador:"Thiago Alfredo",    equipo:"Olimpo",      clase:"olimpo",     n:1},
         {jugador:"Ciro Barra",     equipo:"Olimpo",      clase:"olimpo",     n:1},
         {jugador:"Simón Schmid",     equipo:"Olimpo",      clase:"olimpo",     n:1},
+        {jugador:"Matías Duarte",     equipo:"Olimpo",      clase:"olimpo",     n:1},
         {jugador:"Cardozo",    equipo:"Villa Mitre", clase:"villamitre", n:1},
-        {jugador:"Schefer",    equipo:"Villa Mitre", clase:"villamitre", n:1}
+        {jugador:"Schefer",    equipo:"Villa Mitre", clase:"villamitre", n:1},
+        {jugador:"Luca Schefelt",    equipo:"Villa Mitre", clase:"villamitre", n:1},
+        {jugador:"Luca Guanes",    equipo:"Villa Mitre", clase:"villamitre", n:1}
     ],
     sub17: [
         {jugador:"Benicio Hernández", equipo:"Olimpo",      clase:"olimpo",     n:2},
         {jugador:"Agustín Dolagaray", equipo:"Olimpo",      clase:"olimpo",     n:2},
+        {jugador:"Valentín Miñoz",      equipo:"Olimpo",      clase:"olimpo",     n:2},
         {jugador:"Valentino Kurtz", equipo:"Olimpo",      clase:"olimpo",     n:1},
+        {jugador:"Joaquín Pallalef",      equipo:"Olimpo",      clase:"olimpo",     n:1},
         {jugador:"Kraemer",    equipo:"Villa Mitre", clase:"villamitre", n:1},
         {jugador:"Mateo Luzuriaga",   equipo:"Villa Mitre", clase:"villamitre", n:1},
         {jugador:"Rodríguez",   equipo:"Villa Mitre", clase:"villamitre", n:1},
