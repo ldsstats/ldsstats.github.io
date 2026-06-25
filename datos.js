@@ -2123,7 +2123,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 13).partidos.forEach(p
 });
 
 
-let diaSeleccionadoHome = "2026-06-24"; 
+let diaSeleccionadoHome = "2026-06-25"; 
 
 function seleccionarDiaHome(dia) {
     diaSeleccionadoHome = dia;
@@ -2169,7 +2169,7 @@ function generarHome() {
         ]},
         { id: "2026-06-24", label: "MIÉR 24/06", torneos: [
             { nombre: "FUTSAL", cat: "futsal", partidos: [
-                {l:"Villa Mitre", v:"Liniers", hora:"22:00", nota:"en cancha de Don Bosco"}
+                {l:"Villa Mitre", v:"Liniers", hora:"22:00", nota:"en cancha de Don Bosco", gl:6, gv:4}
             ]},
             { nombre: "RESERVA - OFICIAL", cat: "reserva_oficial", partidos: [
                 {l:"Huracán", v:"San Francisco", hora:"15:00", gl:0, gv:0}
@@ -16367,10 +16367,10 @@ const BD_POS_FUTSAL = {
     principal: [
         {n:"La Estación <b>(C)<b>",     cl:"laestacion",    pj:12,pg:11,pe:0,pp:1,gf:60, gc:26, pts:33},
         {n:"La Esperanza <b>(C)<b>",    cl:"laesperanza",   pj:13,pg:10,pe:1,pp:2,gf:66, gc:40, pts:31},
+        {n:"Villa Mitre <b>(C)<b>",     cl:"villamitre",    pj:13,pg:10,pe:1,pp:2,gf:60, gc:43, pts:31},
         {n:"Los 3 Chiflados <b>(C)<b>", cl:"los3chiflados", pj:12,pg:9,pe:2,pp:1,gf:85, gc:33, pts:29},
-        {n:"Villa Mitre <b>(C)<b>",     cl:"villamitre",    pj:12,pg:9,pe:1,pp:2,gf:54, gc:39, pts:28},
-        {n:"Comercial",       cl:"comercial",     pj:13,pg:6,pe:2,pp:5,gf:56, gc:44, pts:20},
-        {n:"Liniers",         cl:"liniers",       pj:11,pg:5,pe:4,pp:2,gf:39, gc:33, pts:19},
+        {n:"Comercial <b>(C)<b>",       cl:"comercial",     pj:13,pg:6,pe:2,pp:5,gf:56, gc:44, pts:20},
+        {n:"Liniers <b>(C)<b>",         cl:"liniers",       pj:12,pg:5,pe:4,pp:3,gf:43, gc:39, pts:19},
         {n:"Tiro Federal <b>(C)<b>",    cl:"tirofederal",   pj:13,pg:7,pe:0,pp:6,gf:38, gc:44, pts:19},
         {n:"Petroquímicos",   cl:"petroquimicos", pj:13,pg:6,pe:0,pp:7,gf:47,gc:47, pts:18},
         {n:"Pacífico BB",     cl:"pacificobb",    pj:12,pg:5,pe:1,pp:6,gf:51, gc:58, pts:16},
