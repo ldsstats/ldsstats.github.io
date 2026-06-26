@@ -1199,7 +1199,7 @@ const BD_FIXTURES_FUTSAL = [
                 ],
         },
         {l:"Villa Mitre",     v:"Liniers",         gl:null, gv:null},
-        {l:"La Estación",     v:"Los 3 Chiflados", gl:null, gv:null},
+        {l:"La Estación",     v:"Los 3 Chiflados", gl:3, gv:3},
         {l:"Catamarca",       v:"Dep. Futsal",     gl:1, gv:0}
     ]},
     { fecha: 11, partidos: [
@@ -2123,7 +2123,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 13).partidos.forEach(p
 });
 
 
-let diaSeleccionadoHome = "2026-06-25"; 
+let diaSeleccionadoHome = "2026-06-26"; 
 
 function seleccionarDiaHome(dia) {
     diaSeleccionadoHome = dia;
@@ -2177,7 +2177,7 @@ function generarHome() {
         ]},
         { id: "2026-06-25", label: "JUE 25/06", torneos: [
             { nombre: "FUTSAL", cat: "futsal", partidos: [
-                {l:"La Estación", v:"Los 3 Chiflados", hora:"22:00", nota:"en cancha de Don Bosco"}
+                {l:"La Estación", v:"Los 3 Chiflados", hora:"22:00", nota:"en cancha de Don Bosco", gl:3, gv:3}
             ]},
         ]},
         { id: "2026-06-26", label: "VIE 26/06", torneos: [
@@ -16365,10 +16365,10 @@ function generarSub() {
 
 const BD_POS_FUTSAL = {
     principal: [
-        {n:"La Estación <b>(C)<b>",     cl:"laestacion",    pj:12,pg:11,pe:0,pp:1,gf:60, gc:26, pts:33},
+        {n:"La Estación <b>(C)<b>",     cl:"laestacion",    pj:13,pg:11,pe:1,pp:1,gf:63, gc:29, pts:34},
         {n:"La Esperanza <b>(C)<b>",    cl:"laesperanza",   pj:13,pg:10,pe:1,pp:2,gf:66, gc:40, pts:31},
         {n:"Villa Mitre <b>(C)<b>",     cl:"villamitre",    pj:13,pg:10,pe:1,pp:2,gf:60, gc:43, pts:31},
-        {n:"Los 3 Chiflados <b>(C)<b>", cl:"los3chiflados", pj:12,pg:9,pe:2,pp:1,gf:85, gc:33, pts:29},
+        {n:"Los 3 Chiflados <b>(C)<b>", cl:"los3chiflados", pj:13,pg:9,pe:3,pp:1,gf:88, gc:36, pts:30},
         {n:"Comercial <b>(C)<b>",       cl:"comercial",     pj:13,pg:6,pe:2,pp:5,gf:56, gc:44, pts:20},
         {n:"Liniers <b>(C)<b>",         cl:"liniers",       pj:12,pg:5,pe:4,pp:3,gf:43, gc:39, pts:19},
         {n:"Tiro Federal <b>(C)<b>",    cl:"tirofederal",   pj:13,pg:7,pe:0,pp:6,gf:38, gc:44, pts:19},
@@ -16378,7 +16378,7 @@ const BD_POS_FUTSAL = {
         {n:"Dublin <b>(X)</b>",          cl:"dublin",        pj:13,pg:3,pe:1,pp:9,gf:36, gc:43, pts:10},
         {n:"Dep. Futsal <b>(X)</b>",     cl:"depfutsal",     pj:13,pg:3,pe:1,pp:9,gf:35, gc:54, pts:10},
         {n:"San Francisco <b>(X)</b> <b>*</b>",   cl:"sanfrancisco",  pj:13,pg:2,pe:5,pp:6,gf:39, gc:48, pts:8},
-        {n:"Huracán <b>(X)<b>",         cl:"huracan",       pj:12,pg:0,pe:0,pp:12,gf:29, gc:90,pts:0}
+        {n:"Huracán <b>(X)<b>",         cl:"huracan",       pj:13,pg:0,pe:0,pp:13,gf:29, gc:91,pts:0}
     ],
     reserva: [
         {n:"Los 3 Chiflados <b>(C)<b>", cl:"los3chiflados", pj:12,pg:11,pe:1,pp:0,gf:61, gc:12, pts:34},
