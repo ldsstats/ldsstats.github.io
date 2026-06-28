@@ -1949,10 +1949,10 @@ BD_FIXTURES.promocional.apertura.find(f => f.fecha === 13).partidos = [
     {l:"Olimpo",    v:"Sansinena", gl:2, gv:3, dia:"Dom 21/06", hora:"15:00", goles_l:["William Vidal","Felipe Santamarina"], goles_v:["Manuel Stortini","Manuel Stortini","Santiago González"]}
 ];
 BD_FIXTURES.promocional.apertura.find(f => f.fecha === 14).partidos = [
-    {l:"Pacífico (C)",    v:"Comercial", gl:null, gv:null, dia:"Dom 28/06", hora:"15:00", goles_l:[], goles_v:[]},
-    {l:"Pacífico BB",    v:"Tiro Federal", gl:null, gv:null, dia:"Dom 28/06", hora:"15:00", goles_l:[], goles_v:[]},
-    {l:"Sansinena",    v:"Rosario PB", gl:null, gv:null, dia:"Dom 28/06", hora:"15:00", goles_l:[], goles_v:[]},
-    {l:"Dublin",    v:"Olimpo", gl:null, gv:null, dia:"Dom 28/06", hora:"15:00", goles_l:[], goles_v:[]}
+    {l:"Pacífico (C)",    v:"Comercial", gl:0, gv:4, dia:"Dom 28/06", hora:"15:00", goles_l:[], goles_v:["Joaquín Racchi","Joaquín Racchi","Thiago Priegue","Thiago Priegue"]},
+    {l:"Pacífico BB",    v:"Tiro Federal", gl:0, gv:2, dia:"Dom 28/06", hora:"15:00", goles_l:[], goles_v:["Agustín Cabrera","Franco Lefiñir"]},
+    {l:"Sansinena",    v:"Rosario PB", gl:0, gv:2, dia:"Dom 28/06", hora:"15:00", goles_l:[], goles_v:["Agustín Grippaudo","Pedro Fernández"]},
+    {l:"Dublin",    v:"Olimpo", gl:0, gv:2, dia:"Dom 28/06", hora:"15:00", goles_l:[], goles_v:["Nahuel Colmenares","Nahuel Colmenares"]}
 ];
 
 expandirFixture(idaFederal, BD_FIXTURES.federala.posiciones, 18);
@@ -1987,10 +1987,10 @@ BD_FIXTURES.federala.posiciones.find(f => f.fecha === 14).partidos = [
     {l:"Guillermo Brown",   v:"Sol de Mayo", gl:0, gv:1, dia:"Dom 21/06", hora:"15:00", goles_l:[], goles_v:["Emiliano Soria"]}
 ];
 BD_FIXTURES.federala.posiciones.find(f => f.fecha === 15).partidos = [
-    {l:"Villa Mitre",   v:"Alvarado", gl:null, gv:null, dia:"Dom 28/06", hora:"15:00", goles_l:[], goles_v:[]},
-    {l:"Círculo Dep.",   v:"Olimpo", gl:null, gv:null, dia:"Dom 28/06", hora:"15:00", goles_l:[], goles_v:[]},
-    {l:"Germinal",   v:"Santamarina", gl:null, gv:null, dia:"Dom 28/06", hora:"15:00", goles_l:[], goles_v:[]},
-    {l:"Kimberley",   v:"Guillermo Brown", gl:null, gv:null, dia:"Dom 28/06", hora:"15:00", goles_l:[], goles_v:[]}
+    {l:"Villa Mitre",   v:"Alvarado", gl:1, gv:0, dia:"Dom 28/06", hora:"15:00", goles_l:["Víctor Ayala"], goles_v:[]},
+    {l:"Círculo Dep.",   v:"Olimpo", gl:1, gv:1, dia:"Dom 28/06", hora:"15:00", goles_l:["Imanol Iriberri"], goles_v:["Federico González"]},
+    {l:"Germinal",   v:"Santamarina", gl:1, gv:0, dia:"Dom 28/06", hora:"15:00", goles_l:["Damián De Hoyos"], goles_v:[]},
+    {l:"Kimberley",   v:"Guillermo Brown", gl:3, gv:0, dia:"Dom 28/06", hora:"15:00", goles_l:["Santiago Castillo","Santiago Castillo","Mauricio Miori"], goles_v:[]}
 ];
 
 
@@ -2222,7 +2222,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 13).partidos.forEach(p
 });
 
 
-let diaSeleccionadoHome = "2026-06-27"; 
+let diaSeleccionadoHome = "2026-06-28"; 
 
 function seleccionarDiaHome(dia) {
     diaSeleccionadoHome = dia;
@@ -16532,7 +16532,7 @@ function generarSub15Fem() {
     const f = idaSub15Fem.find(x => x.fecha === n) || { partidos: [] };
 
     let html = `<div class="nav-fechas">`;
-    for (let i = 1; i <= 11; i++) {
+    for (let i = 1; i <= 22; i++) {
         html += `<div class="btn-f ${i === n ? 'activa' : ''}" onclick="cambiarFecha(${i})">${i}</div>`;
     }
     html += `</div>`;
@@ -18262,13 +18262,15 @@ const BD_ARQUEROS = {
             { rival: "Olimpo",       resultado: "Comercial 1 - 0 Olimpo",       fecha: 3 },
             { rival: "Pacífico BB",       resultado: "Pacífico BB 0 - 1 Comercial",       fecha: 6 },
             { rival: "Tiro Federal",       resultado: "Comercial 0 - 0 Tiro Federal",       fecha: 8 },
-            { rival: "Dublin",       resultado: "Dublin 0 - 1 Comercial",       fecha: 11 }
+            { rival: "Dublin",       resultado: "Dublin 0 - 1 Comercial",       fecha: 11 },
+            { rival: "Pacífico (C)",       resultado: "Pacífico (C) 0 - 4 Comercial",       fecha: 14 }
         ]},
         { jugador: "Jonathan Acosta", equipo: "Olimpo", partidos: [
             { rival: "Pacífico BB", resultado: "Pacífico BB 0 - 0 Olimpo", fecha: 1 },
             { rival: "Pacífico (C)", resultado: "Pacífico (C) 0 - 0 Olimpo", fecha: 5 },
             { rival: "Sansinena", resultado: "Sansinena 0 - 1 Olimpo", fecha: 6 },
-            { rival: "Tiro Federal", resultado: "Tiro Federal 0 - 1 Olimpo", fecha: 9 }
+            { rival: "Tiro Federal", resultado: "Tiro Federal 0 - 1 Olimpo", fecha: 9 },
+            { rival: "Dublin", resultado: "Dublin 0 - 2 Olimpo", fecha: 14 }
         ]},
         { jugador: "Valentín Valdez", equipo: "Dublin", partidos: [
             { rival: "Sansinena", resultado: "Sansinena 0 - 0 Dublin", fecha: 3 },
@@ -18288,14 +18290,16 @@ const BD_ARQUEROS = {
             { rival: "Pacífico BB", resultado: "Pacífico BB 0 - 0 Rosario PB", fecha: 9 },
             { rival: "Olimpo", resultado: "Rosario PB 1 - 0 Olimpo", fecha: 11 },
             { rival: "Comercial", resultado: "Comercial 0 - 1 Rosario PB", fecha: 12 },
-            { rival: "Pacífico (C)", resultado: "Rosario PB 5 - 0 Pacífico (C)", fecha: 13 }
+            { rival: "Pacífico (C)", resultado: "Rosario PB 5 - 0 Pacífico (C)", fecha: 13 },
+            { rival: "Sansinena", resultado: "Sansinena 0 - 2 Rosario PB", fecha: 14 }
         ]},
         { jugador: "Bruno Arias", equipo: "Tiro Federal", partidos: [
             { rival: "Rosario PB", resultado: "Tiro Federal 2 - 0 Rosario PB", fecha: 3 },
             { rival: "Sansinena", resultado: "Sansinena 0 - 0 Tiro Federal", fecha: 5 },
             { rival: "Rosario PB", resultado: "Rosario PB 0 - 3 Tiro Federal", fecha: 10 },
             { rival: "Sansinena", resultado: "Tiro Federal 4 - 0 Sansinena", fecha: 12 },
-            { rival: "Dublin", resultado: "Tiro Federal 4 - 0 Dublin", fecha: 13 }
+            { rival: "Dublin", resultado: "Tiro Federal 4 - 0 Dublin", fecha: 13 },
+            { rival: "Pacífico BB", resultado: "Pacífico BB 0 - 2 Tiro Federal", fecha: 14 }
         ]},
         { jugador: "Nicolás Such", equipo: "Tiro Federal", partidos: [
             { rival: "Pacífico BB", resultado: "Tiro Federal 3 - 0 Pacífico BB", fecha: 7 },
@@ -18481,14 +18485,14 @@ const BD_POSICIONES = {
     },
     promocional: {
         apertura: [
-            { nombre: "Comercial <b>(C)</b>",           clase: "comercial",       pj:13, pg:7, pe:3, pp:3, gf:13, gc:9, pts:24 },
-            { nombre: "Tiro Federal <b>(C)</b>",        clase: "tirofederal",     pj:13, pg:7, pe:3, pp:3, gf:21, gc:6, pts:24 },
-            { nombre: "Rosario PB <b>(C)</b>",          clase: "rosariopb",       pj:13, pg:6, pe:5, pp:2, gf:24, gc:16, pts:23 },
-            { nombre: "Sansinena <b>(C)</b>",           clase: "sansinena",       pj:13, pg:5, pe:6, pp:2, gf:20, gc:19, pts:21 },
-            { nombre: "Dublin <b>(X)</b>",              clase: "dublin",          pj:13, pg:4, pe:5, pp:4, gf:11, gc:16, pts:17 },
-            { nombre: "Olimpo <b>(X)</b>",              clase: "olimpo",          pj:13, pg:3, pe:4, pp:6, gf:14, gc:15, pts:13 },
-            { nombre: "Pacífico BB <b>(X)</b>",         clase: "pacificobb",      pj:13, pg:1, pe:5, pp:7, gf:8, gc:19, pts: 8},
-            { nombre: "Pacífico (C) <b>(X)</b>",        clase: "pacificocabildo", pj:13, pg:1, pe:5, pp:7, gf:16, gc:27, pts:8 }
+            { nombre: "Comercial <b>(C)</b>",           clase: "comercial",       pj:14, pg:8, pe:3, pp:3, gf:17, gc:9, pts:27 },
+            { nombre: "Tiro Federal <b>(C)</b>",        clase: "tirofederal",     pj:14, pg:8, pe:3, pp:3, gf:23, gc:6, pts:27 },
+            { nombre: "Rosario PB <b>(C)</b>",          clase: "rosariopb",       pj:14, pg:7, pe:5, pp:2, gf:27, gc:16, pts:26 },
+            { nombre: "Sansinena <b>(C)</b>",           clase: "sansinena",       pj:14, pg:5, pe:6, pp:3, gf:20, gc:22, pts:21 },
+            { nombre: "Dublin <b>(X)</b>",              clase: "dublin",          pj:14, pg:4, pe:5, pp:5, gf:11, gc:18, pts:17 },
+            { nombre: "Olimpo <b>(X)</b>",              clase: "olimpo",          pj:14, pg:4, pe:4, pp:6, gf:16, gc:15, pts:16 },
+            { nombre: "Pacífico BB <b>(X)</b>",         clase: "pacificobb",      pj:14, pg:1, pe:5, pp:8, gf:8, gc:21, pts: 8},
+            { nombre: "Pacífico (C) <b>(X)</b>",        clase: "pacificocabildo", pj:14, pg:1, pe:5, pp:8, gf:16, gc:31, pts:8 }
         ]
     },
     femenino: {
@@ -18562,10 +18566,10 @@ function generarTabla(tor, cat) {
         html += `<tr class="${cl}"><td class="c-pos">${i+1}</td><td class="c-equipo">${e.nombre}</td><td class="c-stat">${e.pj}</td><td class="c-stat">${e.pg}</td><td class="c-stat">${e.pe}</td><td class="c-stat">${e.pp}</td><td class="c-stat">${e.gf}</td><td class="c-stat">${e.gc}</td><td class="c-stat">${e.gf-e.gc}</td><td class="c-stat"><b>${e.pts}</b></td></tr>`;
     });
 if (tor === 'apertura' && cat === 'oficial') {
-    return html + "</tbody></table><div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'><b>(C)</b> Clasificado<br><b>(X)</b> Eliminado<br>📌 Puntos en juego: <b>3</b> tras finalizar la fecha <b>13</b></div>";
+    return html + "</tbody></table><div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'><b>(C)</b> Clasificado<br><b>(X)</b> Eliminado<br>📌 Puntos en juego: <b>Torneo finalizado</b></div>";
 }
 if (tor === 'apertura' && cat === 'promocional') {
-    return html + "</tbody></table><div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'><b>(X)</b> Eliminado<br>📌 Puntos en juego: <b>3</b> tras finalizar la fecha <b>13</b></div>";
+    return html + "</tbody></table><div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'><b>(X)</b> Eliminado<br>📌 Puntos en juego: <b>Torneo finalizado</b></b></div>";
 }
     if (tor === 'apertura' && cat === 'femenino') {
         return html + "</tbody></table><div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'><b>(C)</b> Clasificado<br><b>(X)</b> Eliminado<br>📌 Puntos en juego: <b>3</b> tras finalizar la fecha <b>13</b></div>";
@@ -18918,6 +18922,44 @@ function generarOficialPlayoffs() {
     html += `<div class="header-t" style="font-size:11px;background:#7b1a1a;">🏆 FINAL</div>`;
     html += `<table>`;
     html += renderPartido(BD_OFICIAL_PLAYOFFS.final, 'Pendiente');
+    html += `</table>`;
+    return html;
+}
+
+/* ══════════════════════════════════════════════════════════
+   PROMOCIONAL — PLAYOFFS APERTURA 2026
+   ══════════════════════════════════════════════════════════ */
+const BD_PROMOCIONAL_PLAYOFFS = {
+    semifinales: [
+        { local: "Comercial",   clL: "comercial",   visitante: "Sansinena",  clV: "sansinena",  gl: null, gv: null },
+        { local: "Tiro Federal",clL: "tirofederal", visitante: "Rosario PB", clV: "rosariopb",  gl: null, gv: null }
+    ],
+    final: { local: "A confirmar", clL: "escudo", visitante: "A confirmar", clV: "escudo", gl: null, gv: null }
+};
+
+function generarPromocionalPlayoffs() {
+    const renderPartido = (p, pendiente) => {
+        const res = p.gl !== null
+            ? `<td class="c-res">${p.gl} - ${p.gv}</td>`
+            : `<td class="c-res" style="font-size:10px;color:#aaa;">${pendiente || 'vs'}</td>`;
+        return `<tr>
+            <td class="c-loc"><span style="direction:ltr;display:inline-flex;align-items:center;justify-content:flex-end;width:100%;">
+                ${p.local} <div class="escudo ${p.clL}" style="display:inline-block;vertical-align:middle;margin-left:4px;"></div>
+            </span></td>
+            ${res}
+            <td class="c-vis"><div class="escudo ${p.clV}" style="display:inline-block;vertical-align:middle;margin-right:4px;"></div> ${p.visitante}</td>
+        </tr>`;
+    };
+
+    let html = `<div class="header-t">TORNEO PROMOCIONAL — PLAYOFFS APERTURA 2026</div>`;
+    html += `<div class="header-t" style="font-size:11px;background:#2c6e49;">SEMIFINALES</div>`;
+    html += `<table>`;
+    BD_PROMOCIONAL_PLAYOFFS.semifinales.forEach(p => { html += renderPartido(p); });
+    html += `</table>`;
+    html += `<div style="height:8px;background:#f0f0f0;border-top:1px solid #ddd;border-bottom:1px solid #ddd;"></div>`;
+    html += `<div class="header-t" style="font-size:11px;background:#7b1a1a;">🏆 FINAL</div>`;
+    html += `<table>`;
+    html += renderPartido(BD_PROMOCIONAL_PLAYOFFS.final, 'Pendiente');
     html += `</table>`;
     return html;
 }
