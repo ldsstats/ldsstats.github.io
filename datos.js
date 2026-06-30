@@ -1817,9 +1817,9 @@ BD_FIXTURES.oficial.reserva.push(
     ]},
     { fecha: 14, partidos: [
         {l:"Sporting",   v:"Villa Mitre",   gl:1, gv:2},
-        {l:"Bella Vista",   v:"Huracán",   gl:null, gv:null},
+        {l:"Bella Vista",   v:"Huracán",   gl:2, gv:0},
         {l:"Libertad",   v:"La Armonía",   gl:1, gv:0},
-        {l:"San Francisco",   v:"Liniers",   gl:null, gv:null}
+        {l:"San Francisco",   v:"Liniers",   gl:2, gv:0}
     ]},
 );
 
@@ -1904,7 +1904,7 @@ BD_FIXTURES.promocional.reserva.push(
         {l:"Comercial",      v:"Pacífico BB",          gl:1,   gv:1},
     ]},
     { fecha: 14, partidos: [
-        {l:"Dublin", v:"Olimpo",              gl:null,   gv:null},
+        {l:"Dublin", v:"Olimpo",              gl:0,   gv:1},
         {l:"Pacífico BB", v:"Tiro Federal",           gl:1,   gv:4},
         {l:"Pacífico (C)",   v:"Comercial", gl:1,   gv:4},
         {l:"Sansinena",      v:"Rosario PB",          gl:0,   gv:1},
@@ -2255,9 +2255,13 @@ function generarHome() {
         { id: "2026-06-30", label: "MAR 30/06", torneos: [
             { nombre: "OCTAVOS DE FINAL - SENIOR", cat: "seniorapertura", noAutoResult: true, partidos: [
                 {l:"Sansinena", v:"Pacífico BB", hora:"20:00",nota:"en cancha de Libertad"},
-                {l:"Pacífico (C)", v:"Libertad", hora:"20:00",nota:"en cancha de iro Federal"},
+                {l:"Pacífico (C)", v:"Libertad", hora:"20:00",nota:"en cancha de Tiro Federal"},
                 {l:"Comercial", v:"Tiro Federal", hora:"21:30",nota:"en cancha de Libertad"},
                 {l:"Huracán", v:"San Francisco", hora:"21:30",nota:"en cancha de Tiro Federal"}
+            ]},
+            { nombre: "RESERVA OFICIAL", cat: "reserva_oficial", noAutoResult: true, partidos: [
+                {l:"Bella Vista", v:"Huracán", hora:"15:00", gl:2, gv:0},
+                {l:"San Francisco", v:"Liniers", hora:"15:00", gl:2, gv:0}
             ]},
         ]},
         { id: "2026-07-04", label: "SÁB 04/07", torneos: [
@@ -16181,18 +16185,18 @@ function generarReserva(cat) {
         'oficial':    [{n:"Sporting <b>(C)</b>",      cl:"sporting",     pj:14, pg:8, pe:4, pp:2, gf:24, gc:16, pts:28},
                        {n:"Libertad <b>(C)</b>",      cl:"libertad",     pj:14, pg:7, pe:4, pp:3, gf:19, gc:12, pts:25},
                        {n:"Villa Mitre <b>(C)</b>",   cl:"villamitre",   pj:14, pg:7, pe:2, pp:5, gf:27, gc:19, pts:24},
+                       {n:"Bella Vista <b>(C)</b>",   cl:"bellavista",   pj:14, pg:5, pe:4, pp:5, gf:24, gc:26, pts:19},
                        {n:"La Armonía",    cl:"laarmonia",    pj:14, pg:5, pe:4, pp:5, gf:25, gc:17, pts:19},
-                       {n:"Bella Vista",   cl:"bellavista",   pj:13, pg:4, pe:4, pp:5, gf:22, gc:26, pts:16},
-                       {n:"San Francisco <b>(X)</b>", cl:"sanfrancisco", pj:13, pg:3, pe:3, pp:7, gf:19, gc:24, pts:13},
-                       {n:"Liniers <b>(X)</b>",       cl:"liniers",      pj:13, pg:3, pe:3, pp:7, gf:13, gc:19, pts:12},
-                       {n:"Huracán <b>(X)</b>",       cl:"huracan",      pj:13, pg:1, pe:6, pp:6, gf:10, gc:30, pts:9}],
-        'promocional':[                       {n:"Olimpo <b>(C)</b>",              cl:"olimpo",           pj:13, pg:8, pe:2, pp:3, gf:20, gc:11, pts:26},
+                       {n:"San Francisco <b>(X)</b>", cl:"sanfrancisco", pj:14, pg:4, pe:3, pp:7, gf:21, gc:24, pts:16},
+                       {n:"Liniers <b>(X)</b>",       cl:"liniers",      pj:14, pg:3, pe:3, pp:8, gf:13, gc:21, pts:12},
+                       {n:"Huracán <b>(X)</b>",       cl:"huracan",      pj:14, pg:1, pe:6, pp:7, gf:10, gc:32, pts:9}],
+        'promocional':[                       {n:"Olimpo <b>(C)</b>",              cl:"olimpo",           pj:14, pg:9, pe:2, pp:3, gf:21, gc:11, pts:29},
                        {n:"Tiro Federal <b>(C)</b>",        cl:"tirofederal",      pj:14, pg:7, pe:5, pp:2, gf:31, gc:23, pts:26},
                        {n:"Comercial <b>(C)</b>",           cl:"comercial",        pj:14, pg:6, pe:7, pp:1, gf:25, gc:14, pts:25},
                        {n:"Rosario PB <b>(C)</b>",          cl:"rosariopb",        pj:14, pg:7, pe:4, pp:3, gf:18, gc:9, pts:25},
                        {n:"Pacífico BB <b>(X)</b>",         cl:"pacificobb",       pj:14, pg:3, pe:5, pp:6, gf:14, gc:22, pts:14},
                        {n:"Sansinena <b>(X)</b>",           cl:"sansinena",        pj:14, pg:4, pe:1, pp:9, gf:14, gc:27, pts:13},
-                       {n:"Dublin <b>(X)</b>",              cl:"dublin",           pj:13, pg:3, pe:3, pp:7, gf:15, gc:20, pts:12},
+                       {n:"Dublin <b>(X)</b>",              cl:"dublin",           pj:14, pg:3, pe:3, pp:8, gf:15, gc:21, pts:12},
                        {n:"Pacífico (C) <b>(X)</b>", cl:"pacificocabildo",  pj:14, pg:1, pe:5, pp:8, gf:14, gc:27, pts:8},],
         'segundafemenino': [
             {n:"Liniers",             cl:"liniers",         pj:9, pg:8, pe:1, pp:0, gf:36, gc:5, pts:25},
@@ -18922,7 +18926,7 @@ function generarPromocionalPlayoffs() {
 
 const BD_RESERVA_OFICIAL_PLAYOFFS = {
     semifinales: [
-        { local: "Sporting", clL: "sporting", visitante: "La Armonía / Bella Vista", clV: "escudo", gl: null, gv: null },
+        { local: "Sporting", clL: "sporting", visitante: "Bella Vista", clV: "bellavista", gl: null, gv: null },
         { local: "Libertad", clL: "libertad", visitante: "Villa Mitre", clV: "villamitre", gl: null, gv: null }
     ],
     final: { local: "A confirmar", clL: "escudo", visitante: "A confirmar", clV: "escudo", gl: null, gv: null }
@@ -18970,8 +18974,8 @@ const BD_FUTSAL_RESERVA_PLAYOFFS = {
     cuartos: [
         { local: "Los 3 Chiflados", clL: "los3chiflados", visitante: "San Francisco", clV: "sanfrancisco", gl: null, gv: null },
         { local: "Liniers", clL: "liniers", visitante: "Dublin", clV: "dublin", gl: null, gv: null },
-        { local: "Villa Mitre", clL: "villamitre", visitante: "Petroquímicos", clV: "petroquimicos", gl: null, gv: null },
-        { local: "La Esperanza", clL: "laesperanza", visitante: "La Estación", clV: "laestacion", gl: null, gv: null }
+        { local: "Villa Mitre", clL: "villamitre", visitante: "La Estación", clV: "laestacion", gl: null, gv: null },
+        { local: "Petroquímicos", clL: "petroquimicos", visitante: "La Esperanza", clV: "laesperanza", gl: null, gv: null }
     ],
     semifinales: [
         { local: "A confirmar", clL: "escudo", visitante: "A confirmar", clV: "escudo", gl: null, gv: null },
