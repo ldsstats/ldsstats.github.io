@@ -2271,7 +2271,18 @@ function generarHome() {
                 {l:"Los 3 Chiflados", v:"Comercial", hora:"22:00",nota:"en cancha de La Curtiembre"}
             ]},
           { nombre: "FUTSAL RESERVA - CUARTOS DE FINAL", cat: "futsalreserva", noAutoResult: true, partidos: [
-                {l:"Liniers", v:"Dublin", hora:"20:30",nota:"en cancha de Don Bosco"}
+                {l:"Liniers", v:"Dublin", hora:"20:30",nota:"en cancha de Don Bosco"},
+                {l:"Los 3 Chiflados", v:"San Francisco", hora:"20:30",nota:"en cancha de La Curtiembre"}
+            ]},
+       ]},
+      { id: "2026-07-02", label: "JUE 02/07", torneos: [
+            { nombre: "FUTSAL - CUARTOS DE FINAL", cat: "futsal", noAutoResult: true, partidos: [
+                {l:"La Estación", v:"Pacífico BB", hora:"22:00",nota:"en cancha de Don Bosco"},
+                {l:"La Esperanza", v:"Tiro Federal", hora:"22:00",nota:"en cancha de La Curtiembre"}
+            ]},
+          { nombre: "FUTSAL RESERVA - CUARTOS DE FINAL", cat: "futsalreserva", noAutoResult: true, partidos: [
+                {l:"Villa Mitre", v:"La Estación", hora:"20:30",nota:"en cancha de Don Bosco"},
+                {l:"Petroquímicos", v:"La Esperanza", hora:"20:30",nota:"en cancha de La Curtiembre"}
             ]},
        ]},
         { id: "2026-07-04", label: "SÁB 04/07", torneos: [
