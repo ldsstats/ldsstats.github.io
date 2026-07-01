@@ -2232,7 +2232,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 14).partidos.forEach(p
 });
 
 
-let diaSeleccionadoHome = "2026-06-30"; 
+let diaSeleccionadoHome = "2026-07-01"; 
 
 function seleccionarDiaHome(dia) {
     diaSeleccionadoHome = dia;
@@ -2252,6 +2252,7 @@ const BD_FECHA_META = {
 
 function generarHome() {
     const agenda = [
+ 
         { id: "2026-06-30", label: "MAR 30/06", torneos: [
             { nombre: "OCTAVOS DE FINAL - SENIOR", cat: "seniorapertura", noAutoResult: true, partidos: [
                 {l:"Sansinena", v:"Pacífico BB", hora:"20:00",nota:"en cancha de Libertad"},
@@ -2264,6 +2265,15 @@ function generarHome() {
                 {l:"San Francisco", v:"Liniers", hora:"15:00", gl:2, gv:0}
             ]},
         ]},
+       { id: "2026-07-01", label: "MIÉR 01/07", torneos: [
+            { nombre: "FUTSAL - CUARTOS DE FINAL", cat: "futsal", noAutoResult: true, partidos: [
+                {l:"Villa Mitre", v:"Liniers", hora:"22:00",nota:"en cancha de Don Bosco"},
+                {l:"Los 3 Chiflados", v:"Comercial", hora:"22:00",nota:"en cancha de La Curtiembre"}
+            ]},
+          { nombre: "FUTSAL RESERVA - CUARTOS DE FINAL", cat: "futsalreserva", noAutoResult: true, partidos: [
+                {l:"Liniers", v:"Dublin", hora:"20:30",nota:"en cancha de Don Bosco"}
+            ]},
+       ]},
         { id: "2026-07-04", label: "SÁB 04/07", torneos: [
             { nombre: "SEMIFINALES - OFICIAL", cat: "oficial", noAutoResult: true, partidos: [
                 {l:"Huracán", v:"Villa Mitre", hora:"15:00",nota:"en cancha de Sansinena"},
@@ -2273,12 +2283,28 @@ function generarHome() {
                 {l:"Comercial", v:"Sansinena", hora:"15:00"},
                 {l:"Tiro Federal", v:"Rosario PB", hora:"15:00"}
             ]},
+           { nombre: "SEMIFINALES - RESERVA OFICIAL", cat: "reserva_oficial", noAutoResult: true, partidos: [
+                {l:"Libertad", v:"Villa Mitre", hora:"10:00"}
+            ]},
         ]},
         { id: "2026-07-05", label: "DOM 05/07", torneos: [
+         { nombre: "SEMIFINALES - RESERVA OFICIAL", cat: "reserva_oficial", noAutoResult: true, partidos: [
+                {l:"Sporting", v:"Bella Vista", hora:"15:00"}
+            ]},
             { nombre: "FEDERAL A", cat: "federala", noAutoResult: true, partidos: [
                 {l:"Olimpo", v:"Villa Mitre", hora:"15:00"}
             ]},
         ]},
+       { id: "2026-07-06", label: "LUN 06/07", torneos: [
+         { nombre: "SEMIFINALES - RESERVA PROMOCIONAL", cat: "reserva_promocional", noAutoResult: true, partidos: [
+                {l:"Tiro Federal", v:"Comercial", hora:"15:30"}
+            ]},
+       ]},
+      { id: "2026-07-08", label: "MIÉR 08/07", torneos: [
+         { nombre: "SEMIFINALES - RESERVA PROMOCIONAL", cat: "reserva_promocional", noAutoResult: true, partidos: [
+                {l:"Olimpo", v:"Rosario PB", hora:"15:00", nota:"en cancha de Teléfono"}
+            ]},
+       ]},
 ];
 
     let html = `<div class="nav-fechas" style="background:#222; margin-bottom:0; border-bottom:1px solid #000;">`;
@@ -2306,6 +2332,7 @@ const equiposSrc = torneo.cat === 'seniorapertura' ? BD_SENIOR_APERTURA.map(e =>
                    torneo.cat === 'reserva_promocional' ? BD_EQUIPOS['promocional'] :
                    torneo.cat === 'reserva_femenino' ? BD_EQUIPOS['femenino'] :
                    torneo.cat === 'reserva_segundafemenino' ? BD_EQUIPOS['segundafemenino'] :
+                   torneo.cat === 'futsalreserva' ? BD_EQUIPOS['futsal'] :
                    BD_EQUIPOS[torneo.cat] || [];
                    BD_EQUIPOS[torneo.cat] || [];
 let escL = p.claseL || equiposSrc.find(e => e.nombre === p.l)?.clase || "";
@@ -18958,7 +18985,7 @@ const BD_RESERVA_FEMENINO_PLAYOFFS = {
 
 const BD_FUTSAL_PLAYOFFS = {
     cuartos: [
-        { local: "La Estación", clL: "laestacion", visitante: "Pacífico", clV: "pacifico", gl: null, gv: null },
+        { local: "La Estación", clL: "laestacion", visitante: "Pacífico BB", clV: "pacifico", gl: null, gv: null },
         { local: "La Esperanza", clL: "laesperanza", visitante: "Tiro Federal", clV: "tirofederal", gl: null, gv: null },
         { local: "Villa Mitre", clL: "villamitre", visitante: "Liniers", clV: "liniers", gl: null, gv: null },
         { local: "Los 3 Chiflados", clL: "los3chiflados", visitante: "Comercial", clV: "comercial", gl: null, gv: null }
