@@ -2275,7 +2275,7 @@ function generarHome() {
        { id: "2026-07-01", label: "MIÉR 01/07", torneos: [
             { nombre: "FUTSAL - CUARTOS DE FINAL", cat: "futsal", noAutoResult: true, partidos: [
                 {l:"Villa Mitre", v:"Liniers", hora:"22:00",nota:"en cancha de Don Bosco"},
-                {l:"Los 3 Chiflados", v:"Comercial", hora:"22:00",nota:"en cancha de La Curtiembre"}
+                {l:"Los 3 Chiflados", v:"Comercial", hora:"22:00",nota:"en cancha de La Curtiembre. <b>Pasó Los 3 Chiflados por ventaja deportiva</b>", gl:3, gv:3}
             ]},
           { nombre: "FUTSAL RESERVA - CUARTOS DE FINAL", cat: "futsalreserva", noAutoResult: true, partidos: [
                 {l:"Liniers", v:"Dublin", hora:"20:30",nota:"en cancha de Don Bosco", gl:3, gv:5},
@@ -18899,7 +18899,6 @@ function generarSeniorPlayoffs() {
 
     html += `<div style="height:8px;background:#f0f0f0;border-top:1px solid #ddd;border-bottom:1px solid #ddd;"></div>`;
     html += `<div class="header-t" style="font-size:11px;background:#2c6e49;">SEMIFINALES</div>`;
-    html += `<div style="padding:5px 10px;font-size:10px;background:#fff8e1;border-bottom:1px solid #eee;color:#888;font-style:italic;">⏳ Bella Vista y Sporting aguardan al ganador de cuartos</div>`;
     html += `<table>`;
     BD_SENIOR_PLAYOFFS.semifinales.forEach(p => { html += renderPartido(p, 'Pendiente'); });
     html += `</table>`;
@@ -19030,10 +19029,10 @@ const BD_FUTSAL_PLAYOFFS = {
         { local: "La Estación", clL: "laestacion", visitante: "Pacífico BB", clV: "pacifico", gl: null, gv: null },
         { local: "La Esperanza", clL: "laesperanza", visitante: "Tiro Federal", clV: "tirofederal", gl: null, gv: null },
         { local: "Villa Mitre", clL: "villamitre", visitante: "Liniers", clV: "liniers", gl: null, gv: null },
-        { local: "Los 3 Chiflados", clL: "los3chiflados", visitante: "Comercial", clV: "comercial", gl: null, gv: null }
+        { local: "Los 3 Chiflados", clL: "los3chiflados", visitante: "Comercial", clV: "comercial", gl: 3, gv: 3 }
     ],
     semifinales: [
-        { local: "A confirmar", clL: "escudo", visitante: "A confirmar", clV: "escudo", gl: null, gv: null },
+        { local: "Los 3 Chiflados", clL: "los3chiflados", visitante: "A confirmar", clV: "escudo", gl: null, gv: null },
         { local: "A confirmar", clL: "escudo", visitante: "A confirmar", clV: "escudo", gl: null, gv: null }
     ],
     final: { local: "A confirmar", clL: "escudo", visitante: "A confirmar", clV: "escudo", gl: null, gv: null }
@@ -19047,7 +19046,7 @@ const BD_FUTSAL_RESERVA_PLAYOFFS = {
         { local: "Petroquímicos", clL: "petroquimicos", visitante: "La Esperanza", clV: "laesperanza", gl: null, gv: null }
     ],
     semifinales: [
-        { local: "A confirmar", clL: "escudo", visitante: "A confirmar", clV: "escudo", gl: null, gv: null },
+        { local: "Los 3 Chiflados", clL: "los3chiflados", visitante: "Dublin", clV: "dublin", gl: null, gv: null },
         { local: "A confirmar", clL: "escudo", visitante: "A confirmar", clV: "escudo", gl: null, gv: null }
     ],
     final: { local: "A confirmar", clL: "escudo", visitante: "A confirmar", clV: "escudo", gl: null, gv: null }
