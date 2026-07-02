@@ -2239,7 +2239,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 14).partidos.forEach(p
 });
 
 
-let diaSeleccionadoHome = "2026-07-01"; 
+let diaSeleccionadoHome = "2026-07-02"; 
 
 function seleccionarDiaHome(dia) {
     diaSeleccionadoHome = dia;
@@ -2274,7 +2274,7 @@ function generarHome() {
         ]},
        { id: "2026-07-01", label: "MIÉR 01/07", torneos: [
             { nombre: "FUTSAL - CUARTOS DE FINAL", cat: "futsal", noAutoResult: true, partidos: [
-                {l:"Villa Mitre", v:"Liniers", hora:"22:00",nota:"en cancha de Don Bosco"},
+                {l:"Villa Mitre", v:"Liniers", hora:"22:00",nota:"en cancha de Don Bosco", gl:3, gv:4},
                 {l:"Los 3 Chiflados", v:"Comercial", hora:"22:00",nota:"en cancha de La Curtiembre. <b>Pasó Los 3 Chiflados por ventaja deportiva</b>", gl:3, gv:3}
             ]},
           { nombre: "FUTSAL RESERVA - CUARTOS DE FINAL", cat: "futsalreserva", noAutoResult: true, partidos: [
@@ -19026,13 +19026,14 @@ const BD_RESERVA_FEMENINO_PLAYOFFS = {
 
 const BD_FUTSAL_PLAYOFFS = {
     cuartos: [
+        { local: "Los 3 Chiflados", clL: "los3chiflados", visitante: "Comercial", clV: "comercial", gl: 3, gv: 3 },
+        { local: "Villa Mitre", clL: "villamitre", visitante: "Liniers", clV: "liniers", gl: 4, gv: 3 },
         { local: "La Estación", clL: "laestacion", visitante: "Pacífico BB", clV: "pacifico", gl: null, gv: null },
-        { local: "La Esperanza", clL: "laesperanza", visitante: "Tiro Federal", clV: "tirofederal", gl: null, gv: null },
-        { local: "Villa Mitre", clL: "villamitre", visitante: "Liniers", clV: "liniers", gl: null, gv: null },
-        { local: "Los 3 Chiflados", clL: "los3chiflados", visitante: "Comercial", clV: "comercial", gl: 3, gv: 3 }
+        { local: "La Esperanza", clL: "laesperanza", visitante: "Tiro Federal", clV: "tirofederal", gl: null, gv: null }
+
     ],
     semifinales: [
-        { local: "Los 3 Chiflados", clL: "los3chiflados", visitante: "A confirmar", clV: "escudo", gl: null, gv: null },
+        { local: "Villa Mitre", clL: "villamitre", visitante: "Los 3 Chiflados", clV: "los3chiflados", gl: null, gv: null },
         { local: "A confirmar", clL: "escudo", visitante: "A confirmar", clV: "escudo", gl: null, gv: null }
     ],
     final: { local: "A confirmar", clL: "escudo", visitante: "A confirmar", clV: "escudo", gl: null, gv: null }
