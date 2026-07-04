@@ -2302,7 +2302,7 @@ function generarHome() {
                 {l:"Tiro Federal", v:"Rosario PB", hora:"15:00"}
             ]},
            { nombre: "SEMIFINALES - RESERVA OFICIAL", cat: "reserva_oficial", noAutoResult: true, partidos: [
-                {l:"Libertad", v:"Villa Mitre", hora:"10:00"}
+                {l:"Libertad", v:"Villa Mitre", hora:"10:00", gl: 0, gv: 1}
             ]},
         ]},
         { id: "2026-07-05", label: "DOM 05/07", torneos: [
@@ -18992,9 +18992,9 @@ function generarPromocionalPlayoffs() {
 const BD_RESERVA_OFICIAL_PLAYOFFS = {
     semifinales: [
         { local: "Sporting", clL: "sporting", visitante: "Bella Vista", clV: "bellavista", gl: null, gv: null },
-        { local: "Libertad", clL: "libertad", visitante: "Villa Mitre", clV: "villamitre", gl: null, gv: null }
+        { local: "Libertad", clL: "libertad", visitante: "Villa Mitre", clV: "villamitre", gl: 0, gv: 1 }
     ],
-    final: { local: "A confirmar", clL: "escudo", visitante: "A confirmar", clV: "escudo", gl: null, gv: null }
+    final: { local: "Villa Mitre", clL: "villamitre", visitante: "A confirmar", clV: "escudo", gl: null, gv: null }
 };
 
 const BD_RESERVA_PROMOCIONAL_PLAYOFFS = {
