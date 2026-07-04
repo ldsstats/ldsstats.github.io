@@ -2239,7 +2239,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 14).partidos.forEach(p
 });
 
 
-let diaSeleccionadoHome = "2026-07-02"; 
+let diaSeleccionadoHome = "2026-07-04"; 
 
 function seleccionarDiaHome(dia) {
     diaSeleccionadoHome = dia;
@@ -2288,7 +2288,7 @@ function generarHome() {
                 {l:"La Esperanza", v:"Tiro Federal", hora:"22:00",nota:"en cancha de La Curtiembre", gl: 6, gv: 2}
             ]},
           { nombre: "FUTSAL RESERVA - CUARTOS DE FINAL", cat: "futsalreserva", noAutoResult: true, partidos: [
-                {l:"Villa Mitre", v:"La Estación", hora:"20:30",nota:"en cancha de Don Bosco"},
+                {l:"Villa Mitre", v:"La Estación", hora:"20:30",nota:"en cancha de Don Bosco", gl:4, gv:4},
                 {l:"Petroquímicos", v:"La Esperanza", hora:"20:30",nota:"en cancha de La Curtiembre", gl:4, gv:2}
             ]},
        ]},
@@ -19041,11 +19041,11 @@ const BD_FUTSAL_RESERVA_PLAYOFFS = {
         { local: "Los 3 Chiflados", clL: "los3chiflados", visitante: "San Francisco", clV: "sanfrancisco", gl: 3, gv: 3 },
         { local: "Liniers", clL: "liniers", visitante: "Dublin", clV: "dublin", gl: 3, gv: 5 },
         { local: "Petroquímicos", clL: "petroquimicos", visitante: "La Esperanza", clV: "laesperanza", gl: 4, gv: 2 },
-        { local: "Villa Mitre", clL: "villamitre", visitante: "La Estación", clV: "laestacion", gl: null, gv: null }
+        { local: "Villa Mitre", clL: "villamitre", visitante: "La Estación", clV: "laestacion", gl: 4, gv: 4 }
     ],
     semifinales: [
         { local: "Los 3 Chiflados", clL: "los3chiflados", visitante: "Dublin", clV: "dublin", gl: null, gv: null },
-        { local: "Petroquímicos", clL: "petroquimicos", visitante: "A confirmar", clV: "escudo", gl: null, gv: null }
+        { local: "Villa Mitre", clL: "villamitre", visitante: "Petroquímicos", clV: "petroquimicos", gl: null, gv: null }
     ],
     final: { local: "A confirmar", clL: "escudo", visitante: "A confirmar", clV: "escudo", gl: null, gv: null }
 };
