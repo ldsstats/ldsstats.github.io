@@ -159,7 +159,7 @@ function generarCopaArgentina() {
             } else {
                 html += `<tr>
                     <td class="c-loc"><span style="direction:ltr;display:inline-flex;align-items:center;justify-content:flex-end;width:100%;">${p.l} <div class="escudo ${escL}" style="display:inline-block;vertical-align:middle;margin-left:4px;"></div></span></td>
-                    <td class="c-res">${p.gl} - ${p.gv}</td>
+                    <td class="c-res">${p.gl} - ${p.gv}${(p.pen_l !== undefined && p.pen_l !== null) ? ` <span style="font-size:9px;color:#888;">(${p.pen_l}-${p.pen_v} pen.)</span>` : ''}</td>
                     <td class="c-vis"><div class="escudo ${escV}" style="display:inline-block;vertical-align:middle;margin-right:4px;"></div> ${p.v}</td>
                 </tr>`;
                 if (p.nota) html += `<tr style="background:#f5f5f5;"><td colspan="3" style="text-align:center;font-size:10px;color:#777;padding:3px 8px;font-style:italic;">📍 ${p.nota}</td></tr>`;
@@ -1695,7 +1695,7 @@ expandirFixture(idaOficial, BD_FIXTURES.oficial.apertura, 14);
 BD_FIXTURES.oficial.apertura.find(f => f.fecha === 8).partidos = [
     {l:"San Francisco", v:"Bella Vista", gl:2, gv:1, dia:"Sáb 16/05", hora:"15:00", goles_l:["Claudio Castiglioni","Sebastián Leguiza"], goles_v:["Lucas Martínez"]},
     {l:"Liniers",       v:"Villa Mitre", gl:1, gv:1, dia:"Sáb 16/05", hora:"15:00", goles_l:[], goles_v:["Thiago Uicala (e/c)","Constanzo Palacio"]},
-    {l:"Huracán",       v:"Libertad",    gl:3, gv:1, dia:"Sáb 16/05", hora:"15:30", goles_l:["Ivan Agudiak","Brian Scalco"], goles_v:["Gianluca Falcioni (e/c)", "Franco Pane"]},
+    {l:"Huracán",       v:"Libertad",    gl:3, gv:1, dia:"Sáb 16/05", hora:"15:30", goles_l:["Iván Agudiak","Brian Scalco"], goles_v:["Gianluca Falcioni (e/c)", "Franco Pane"]},
     {l:"La Armonía",    v:"Sporting",    gl:3, gv:1, dia:"Dom 17/05", hora:"15:00", goles_l:["Enrique Narvay","Ezequiel Intrevado","Alex Muzi"], goles_v:["Jonathan Font"]}
 ];
 BD_FIXTURES.oficial.apertura.find(f => f.fecha === 9).partidos = [
@@ -1943,7 +1943,7 @@ BD_FIXTURES.promocional.apertura.find(f => f.fecha === 12).partidos = [
     {l:"Olimpo",    v:"Pacífico (C)", gl:1, gv:2, dia:"Lun 15/06", hora:"15:00", goles_l:["Thiago Bedolla"], goles_v:["Donato Angelini","Gianni Ferrari"]},
 ];
 BD_FIXTURES.promocional.apertura.find(f => f.fecha === 13).partidos = [
-    {l:"Tiro Federal",    v:"Dublin", gl:4, gv:0, dia:"Sáb 20/06", hora:"15:00", goles_l:["Franco Fraysse","Tiago Papalardo","Mariano Mc Coubrey"], goles_v:["Francisco Vallejos (e/c)"]},
+    {l:"Tiro Federal",    v:"Dublin", gl:4, gv:0, dia:"Sáb 20/06", hora:"15:00", goles_l:["Franco Fraysse","Tiago Papalardo","Mariano McCoubrey"], goles_v:["Francisco Vallejos (e/c)"]},
     {l:"Rosario PB",    v:"Pacífico (C)", gl:5, gv:0, dia:"Sáb 20/06", hora:"15:00", goles_l:["Agustín Grippaudo","Agustín Grippaudo","Favio Durán","Alejo Zweedyk","Tomás Franchi"], goles_v:[]},
     {l:"Comercial",    v:"Pacífico BB", gl:3, gv:1, dia:"Sáb 20/06", hora:"15:00", goles_l:["Mateo Silenzi","Baltasar Gómez","Santiago Storti"], goles_v:["Miqueas Vásquez"]},
     {l:"Olimpo",    v:"Sansinena", gl:2, gv:3, dia:"Dom 21/06", hora:"15:00", goles_l:["William Vidal","Felipe Santamarina"], goles_v:["Manuel Stortini","Manuel Stortini","Santiago González"]}
@@ -2294,20 +2294,45 @@ function generarHome() {
        ]},
         { id: "2026-07-04", label: "SÁB 04/07", torneos: [
             { nombre: "SEMIFINALES - OFICIAL", cat: "oficial", noAutoResult: true, partidos: [
-                {l:"Huracán", v:"Villa Mitre", hora:"15:00",nota:"en cancha de Sansinena"},
-                {l:"Bella Vista", v:"Liniers", hora:"15:00"}
+                {l:"Huracán", v:"Villa Mitre", hora:"15:00",nota:"en cancha de Sansinena", gl:1, gv:0},
+                {l:"Bella Vista", v:"Liniers", hora:"15:00", gl:0, gv:0, pen_l: 1, pen_v: 3}
             ]},
             { nombre: "SEMIFINALES - PROMOCIONAL", cat: "promocional", noAutoResult: true, partidos: [
-                {l:"Comercial", v:"Sansinena", hora:"15:00"},
-                {l:"Tiro Federal", v:"Rosario PB", hora:"15:00"}
+                {l:"Comercial", v:"Sansinena", hora:"15:00", gl:0, gv:0, pen_l: 3, pen_v: 2},
+                {l:"Tiro Federal", v:"Rosario PB", hora:"15:00", gl:4, gv:0}
             ]},
            { nombre: "SEMIFINALES - RESERVA OFICIAL", cat: "reserva_oficial", noAutoResult: true, partidos: [
                 {l:"Libertad", v:"Villa Mitre", hora:"10:00", gl: 0, gv: 1}
+            ]},
+            { nombre: "2°FEMENINO", cat: "segundafemenino", noAutoResult: true, partidos: [
+                {l:"Liniers", v:"Olimpo", hora:"15:30"},
+                {l:"Rosario PB", v:"Pacífico (C)", hora:"15:30"}
+            ]},
+            { nombre: "SUB 15 FEM", cat: "sub15fem", noAutoResult: true, partidos: [
+                {l:"Olimpo", v:"Huracán", hora:"12:00"},
+                {l:"Libertad", v:"Bella Vista", hora:"16:00"}
             ]},
         ]},
         { id: "2026-07-05", label: "DOM 05/07", torneos: [
          { nombre: "SEMIFINALES - RESERVA OFICIAL", cat: "reserva_oficial", noAutoResult: true, partidos: [
                 {l:"Sporting", v:"Bella Vista", hora:"15:00"}
+            ]},
+            { nombre: "SEMIFINALES - 1°FEMENINO", cat: "femenino", noAutoResult: true, partidos: [
+                {l:"Tiro Federal", v:"Villa Mitre", hora:"15:00"},
+                {l:"Municipales", v:"Empleados de Comercio", hora:"15:00"}
+            ]},
+            { nombre: "SEMIFINALES - 1°FEMENINO RESERVA", cat: "reserva_femenino", noAutoResult: true, partidos: [
+                {l:"Tiro Federal", v:"Bella Vista", hora:"12:00"},
+                {l:"Villa Mitre", v:"Municipales", hora:"12:00"}
+            ]},
+            { nombre: "2°FEMENINO", cat: "segundafemenino", noAutoResult: true, partidos: [
+                {l:"Estrella de Oro", v:"Huracán", hora:"15:30", nota:"en el sintético de Villa Mitre"},
+                {l:"Sansinena", v:"Petroquímicos", hora:"15:30"}
+            ]},
+            { nombre: "SUB 15 FEM", cat: "sub15fem", noAutoResult: true, partidos: [
+                {l:"Empleados de Comercio", v:"Sporting", hora:"11:00"},
+                {l:"Liniers", v:"Villa Mitre", hora:"15:00"},
+                {l:"La Armonía", v:"Juventud Unida", hora:"15:00"}
             ]},
             { nombre: "FEDERAL A", cat: "federala", noAutoResult: true, partidos: [
                 {l:"Olimpo", v:"Villa Mitre", hora:"15:00"}
@@ -2371,7 +2396,8 @@ let escV = p.claseV || equiposSrc.find(e => e.nombre === p.v)?.clase || "";
                         if (partido) { gl = partido.gl; gv = partido.gv; break; }
                     }
                 }
-                const resHome = (gl !== undefined && gl !== null) ? `${gl} - ${gv}` : '';
+                const pen = (p.pen_l !== undefined && p.pen_l !== null) ? ` (${p.pen_l}-${p.pen_v} pen.)` : '';
+                const resHome = (gl !== undefined && gl !== null) ? `${gl} - ${gv}${pen}` : '';
                 html += `<tr>
                     <td style="width:50px; background:#004d26; color:#adff2f; font-weight:bold; font-size:11px; border-right:1px solid #000; text-align:center;">${p.hora}</td>
                     <td class="c-loc"><span style="direction:ltr;display:inline-flex;align-items:center;justify-content:flex-end;width:100%;">${p.l} <div class="escudo ${escL}" style="margin-left:4px;"></div></span></td>
@@ -17578,6 +17604,23 @@ function generarH2H(eq1, eq2, cls1, cls2, catKey) {
                 }
             });
         });
+
+        // Playoffs ya jugados
+        const _posBD = { oficial: typeof BD_OFICIAL_PLAYOFFS !== 'undefined' ? BD_OFICIAL_PLAYOFFS : null, promocional: typeof BD_PROMOCIONAL_PLAYOFFS !== 'undefined' ? BD_PROMOCIONAL_PLAYOFFS : null, femenino: typeof BD_FEMENINO_PLAYOFFS !== 'undefined' ? BD_FEMENINO_PLAYOFFS : null };
+        const _pd = _posBD[cat];
+        if (_pd) {
+            const _lbl = cat === 'oficial' ? 'Torneo Oficial' : cat === 'promocional' ? 'Torneo Promocional' : '1° Femenino';
+            [...(_pd.octavos||[]), ...(_pd.cuartos||[]), ...(_pd.semifinales||[]), _pd.final]
+                .filter(x => x && x.gl !== null)
+                .forEach(x => {
+                    if ((x.local === eq1 && x.visitante === eq2) || (x.local === eq2 && x.visitante === eq1)) {
+                        fixturePartidos.push({ fecha: 'Playoffs', torneo: _lbl,
+                            l: x.local, v: x.visitante, gl: x.gl, gv: x.gv,
+                            pen_l: x.pen_l ?? null, pen_v: x.pen_v ?? null,
+                            goles_l: x.goles_l || [], goles_v: x.goles_v || [] });
+                    }
+                });
+        }
     });
 
     // Combinar todos los partidos (BD_H2H + fixtures)
@@ -17633,7 +17676,7 @@ function generarH2H(eq1, eq2, cls1, cls2, catKey) {
             html += `<tr>
                 <td style="width:52px;background:#f0f0f0;border-right:1px solid #ddd;text-align:center;font-size:9px;color:#666;padding:3px;">${p.fecha||''}<br><span style="font-size:8px;color:#aaa;">${p.torneo||''}</span></td>
                 <td class="c-loc"><span style="direction:ltr;display:inline-flex;align-items:center;justify-content:flex-end;width:100%;">${p.l} <div class="escudo ${escL}" style="margin-left:4px;"></div></span></td>
-                <td class="c-res">${p.gl} - ${p.gv}</td>
+                <td class="c-res">${p.gl} - ${p.gv}${(p.pen_l !== null && p.pen_l !== undefined) ? ' ('+p.pen_l+'-'+p.pen_v+' pen.)' : ''}</td>
                 <td class="c-vis"><div class="escudo ${escV}"></div> ${p.v}</td>
                 <td style="width:52px;"></td>
             </tr>`;
@@ -18117,19 +18160,35 @@ function verDetalleTorneo(clave) {
 function generarGoleadores(cat) {
     const goles = {};
     const golesEnContra = {};
+
+    // Partidos de la fase regular
     const partidos = (cat === 'segundafemenino') 
         ? BD_FIXTURES.segundafemenino.torneo2026.flatMap(f => f.partidos)
         : cat === 'federala'
         ? BD_FIXTURES.federala.posiciones.flatMap(f => f.partidos)
         : BD_FIXTURES[cat].apertura.flatMap(f => f.partidos);
 
-    partidos.forEach(p => {
+    // Partidos de playoffs según categoría (en formato {local, visitante, goles_l, goles_v})
+    const playoffsBD = {
+        oficial: BD_OFICIAL_PLAYOFFS,
+        seniorapertura: BD_SENIOR_PLAYOFFS,
+        femenino: BD_FEMENINO_PLAYOFFS,
+        promocional: BD_PROMOCIONAL_PLAYOFFS
+    };
+    const playoffData = playoffsBD[cat];
+    const partidosPlayoff = playoffData
+        ? [...(playoffData.octavos||[]), ...(playoffData.cuartos||[]), ...(playoffData.semifinales||[]), playoffData.final].filter(p => p && p.gl !== null)
+          .map(p => ({ l: p.local, v: p.visitante, gl: p.gl, gv: p.gv, goles_l: p.goles_l||[], goles_v: p.goles_v||[] }))
+        : [];
+
+    const todosPartidos = [...partidos, ...partidosPlayoff];
+
+    todosPartidos.forEach(p => {
         if (p.gl === null) return;
         (p.goles_l || []).forEach(g => {
             const esEC = g.includes('(e/c)');
             const nombre = g.replace(' (e/c)', '').trim();
             if (esEC) {
-                // Gol en contra: el jugador es del equipo local pero el gol va para el visitante
                 const key = `${nombre}|${p.l}`;
                 if (!golesEnContra[key]) golesEnContra[key] = { jugador: nombre, equipo: p.l, n: 0 };
                 golesEnContra[key].n++;
@@ -18201,7 +18260,8 @@ const BD_ARQUEROS = {
             { rival: "San Francisco", resultado: "San Francisco 0 - 0 Huracán", fecha: 6 },
             { rival: "Villa Mitre", resultado: "Huracán 0 - 0 Villa Mitre", fecha: 10 },
             { rival: "La Armonía", resultado: "Huracán 3 - 0 La Armonía", fecha: 11 },
-            { rival: "Liniers", resultado: "Liniers 0 - 0 Huracán", fecha: 12 }
+            { rival: "Liniers", resultado: "Liniers 0 - 0 Huracán", fecha: 12 },
+            { rival: "Villa Mitre", resultado: "Huracán 1 - 0 Villa Mitre", instancia: "Semifinales" }
         ]},
         { jugador: "Francisco Martínez", equipo: "Bella Vista", partidos: [
             { rival: "Libertad", resultado: "Libertad 0 - 0 Bella Vista", fecha: 3 },
@@ -18210,7 +18270,8 @@ const BD_ARQUEROS = {
             { rival: "Liniers", resultado: "Liniers 0 - 0 Bella Vista", fecha: 9 },
             { rival: "Libertad", resultado: "Bella Vista 2 - 0 Libertad", fecha: 10 },
             { rival: "Sporting", resultado: "Bella Vista 3 - 0 Sporting", fecha: 11 },
-            { rival: "Huracán", resultado: "Bella Vista 2 - 0 Huracán", fecha: 14 }
+            { rival: "Huracán", resultado: "Bella Vista 2 - 0 Huracán", fecha: 14 },
+            { rival: "Liniers", resultado: "Bella Vista 0 - 0 Liniers", instancia: "Semifinales" }
         ]},
         { jugador: "Andoni Mendiguibel", equipo: "Liniers", partidos: [
             { rival: "Bella Vista", resultado: "Bella Vista 0 - 1 Liniers", fecha: 2 },
@@ -18220,7 +18281,8 @@ const BD_ARQUEROS = {
             { rival: "La Armonía", resultado: "La Armonía 0 - 0 Liniers", fecha: 10 },
             { rival: "Huracán", resultado: "Liniers 0 - 0 Huracán", fecha: 12 },
             { rival: "Sporting", resultado: "Liniers 3 - 0 Sporting", fecha: 13 },
-            { rival: "San Francisco", resultado: "San Francisco 0 - 1 Liniers", fecha: 14 }
+            { rival: "San Francisco", resultado: "San Francisco 0 - 1 Liniers", fecha: 14 },
+            { rival: "Bella Vista", resultado: "Bella Vista 0 - 0 Liniers", instancia: "Semifinales" }
         ]},
         { jugador: "Tomás Manganaro", equipo: "Villa Mitre", partidos: [
             { rival: "Liniers",    resultado: "Villa Mitre 2 - 0 Liniers",    fecha: 1 },
@@ -18264,7 +18326,8 @@ const BD_ARQUEROS = {
             { rival: "Pacífico BB",       resultado: "Pacífico BB 0 - 1 Comercial",       fecha: 6 },
             { rival: "Tiro Federal",       resultado: "Comercial 0 - 0 Tiro Federal",       fecha: 8 },
             { rival: "Dublin",       resultado: "Dublin 0 - 1 Comercial",       fecha: 11 },
-            { rival: "Pacífico (C)",       resultado: "Pacífico (C) 0 - 4 Comercial",       fecha: 14 }
+            { rival: "Pacífico (C)",       resultado: "Pacífico (C) 0 - 4 Comercial",       fecha: 14 },
+            { rival: "Sansinena", resultado: "Comercial 0 - 0 Sansinena", instancia: "Semifinal" }
         ]},
         { jugador: "Jonathan Acosta", equipo: "Olimpo", partidos: [
             { rival: "Pacífico BB", resultado: "Pacífico BB 0 - 0 Olimpo", fecha: 1 },
@@ -18283,7 +18346,8 @@ const BD_ARQUEROS = {
             { rival: "Dublin", resultado: "Sansinena 0 - 0 Dublin", fecha: 3 },
             { rival: "Tiro Federal", resultado: "Sansinena 0 - 0 Tiro Federal", fecha: 5 },
             { rival: "Comercial", resultado: "Comercial 0 - 1 Sansinena", fecha: 9 },
-            { rival: "Pacífico BB", resultado: "Sansinena 1 - 0 Pacífico BB", fecha: 11 }
+            { rival: "Pacífico BB", resultado: "Sansinena 1 - 0 Pacífico BB", fecha: 11 },
+            { rival: "Comercial", resultado: "Comercial 0 - 0 Sansinena", instancia: "Semifinal" }
         ]},
         { jugador: "Enzo Riffo", equipo: "Rosario PB", partidos: [
             { rival: "Comercial", resultado: "Rosario PB 2 - 0 Comercial", fecha: 5 },
@@ -18300,7 +18364,8 @@ const BD_ARQUEROS = {
             { rival: "Rosario PB", resultado: "Rosario PB 0 - 3 Tiro Federal", fecha: 10 },
             { rival: "Sansinena", resultado: "Tiro Federal 4 - 0 Sansinena", fecha: 12 },
             { rival: "Dublin", resultado: "Tiro Federal 4 - 0 Dublin", fecha: 13 },
-            { rival: "Pacífico BB", resultado: "Pacífico BB 0 - 2 Tiro Federal", fecha: 14 }
+            { rival: "Pacífico BB", resultado: "Pacífico BB 0 - 2 Tiro Federal", fecha: 14 },
+            { rival: "Rosario PB", resultado: "Tiro Federal 4 - 0 Rosario PB", instancia: "Semifinal" }
         ]},
         { jugador: "Nicolás Such", equipo: "Tiro Federal", partidos: [
             { rival: "Pacífico BB", resultado: "Tiro Federal 3 - 0 Pacífico BB", fecha: 7 },
@@ -18357,7 +18422,7 @@ function generarArqueros(cat) {
         <tr id="${rowId}" style="display:none;background:#f0f7f0;">
             <td colspan="4" style="padding:6px 12px;">
                 <div style="font-size:10px;font-weight:bold;color:#004d26;margin-bottom:4px;">PARTIDOS INVICTO:</div>
-                ${g.partidos.map(p => `<div style="font-size:11px;padding:2px 0;border-bottom:1px solid #ddd;">📅 Fecha ${p.fecha} — ${p.resultado}</div>`).join('')}
+                ${g.partidos.map(p => `<div style="font-size:11px;padding:2px 0;border-bottom:1px solid #ddd;">📅 ${p.instancia ? p.instancia : 'Fecha ' + p.fecha} — ${p.resultado}</div>`).join('')}
             </td>
         </tr>`;
     });
@@ -18377,8 +18442,19 @@ function generarPerfilJugador(jugador, equipo) {
         else if (cat === 'federala') fixtures = BD_FIXTURES.federala.posiciones;
         else fixtures = BD_FIXTURES[cat]?.apertura || [];
 
-        fixtures.forEach(f => {
-            f.partidos.forEach(p => {
+        // Partidos de fase regular
+        const todosPartidos = fixtures.flatMap(f => f.partidos);
+
+        // Agregar partidos de playoffs de este torneo (convertidos al formato l/v)
+        const playoffsBD = { oficial: BD_OFICIAL_PLAYOFFS, promocional: BD_PROMOCIONAL_PLAYOFFS, femenino: BD_FEMENINO_PLAYOFFS };
+        const pd = playoffsBD[cat];
+        if (pd) {
+            [...(pd.octavos||[]), ...(pd.cuartos||[]), ...(pd.semifinales||[]), pd.final]
+                .filter(p => p && p.gl !== null && p.goles_l?.length || p?.goles_v?.length)
+                .forEach(p => { if (p) todosPartidos.push({ l: p.local, v: p.visitante, gl: p.gl, gv: p.gv, goles_l: p.goles_l||[], goles_v: p.goles_v||[], dia: 'Playoffs' }); });
+        }
+
+        todosPartidos.forEach(p => {
                 if (p.gl === null) return;
                 const golesL = p.goles_l || [];
                 const golesV = p.goles_v || [];
@@ -18413,7 +18489,6 @@ function generarPerfilJugador(jugador, equipo) {
                     }
                 }
             });
-        });
     });
 
     const escudoEq = Object.values(BD_EQUIPOS).flat().find(e => e.nombre === equipo)?.clase 
@@ -18857,53 +18932,31 @@ const BD_SENIOR_PLAYOFFS = {
 };
 
 function generarSeniorPlayoffs() {
-    const renderPartido = (p, pendiente) => {
-        const res = p.gl !== null
-            ? `<td class="c-res">${p.gl} - ${p.gv}</td>`
-            : `<td class="c-res" style="font-size:10px;color:#aaa;">${pendiente || 'vs'}</td>`;
-        let html = `<tr>
-            <td class="c-loc"><span style="direction:ltr;display:inline-flex;align-items:center;justify-content:flex-end;width:100%;">
-                ${p.local} <div class="escudo ${p.clL}" style="display:inline-block;vertical-align:middle;margin-left:4px;"></div>
-            </span></td>
-            ${res}
-            <td class="c-vis"><div class="escudo ${p.clV}" style="display:inline-block;vertical-align:middle;margin-right:4px;"></div> ${p.visitante}</td>
-        </tr>`;
-        // Goleadores
-        if (p.gl !== null && ((p.goles_l && p.goles_l.length > 0) || (p.goles_v && p.goles_v.length > 0))) {
-            html += `<tr style="background:#f9f9f9;"><td colspan="3" style="font-size:9px;color:#555;padding:3px 8px;text-align:center;">`;
-            if (p.goles_l && p.goles_l.length > 0) html += `⚽ <b>${p.local}:</b> ${p.goles_l.join(', ')}`;
-            if (p.goles_l?.length > 0 && p.goles_v?.length > 0) html += ` &nbsp;|&nbsp; `;
-            if (p.goles_v && p.goles_v.length > 0) html += `⚽ <b>${p.visitante}:</b> ${p.goles_v.join(', ')}`;
-            html += `</td></tr>`;
-        }
-        return html;
-    };
-
     let html = `<div class="header-t">SENIOR — PLAYOFFS APERTURA 2026</div>`;
 
     html += `<div class="header-t" style="font-size:11px;background:#2c6e49;">OCTAVOS DE FINAL</div>`;
     html += `<table>`;
-    BD_SENIOR_PLAYOFFS.octavos.forEach(p => { html += renderPartido(p); });
+    BD_SENIOR_PLAYOFFS.octavos.forEach(p => { html += _renderPartidoPlayoff(p); });
     html += `</table>`;
 
     if (BD_SENIOR_PLAYOFFS.cuartos && BD_SENIOR_PLAYOFFS.cuartos.length > 0) {
         html += `<div style="height:8px;background:#f0f0f0;border-top:1px solid #ddd;border-bottom:1px solid #ddd;"></div>`;
         html += `<div class="header-t" style="font-size:11px;background:#2c6e49;">CUARTOS DE FINAL</div>`;
         html += `<table>`;
-        BD_SENIOR_PLAYOFFS.cuartos.forEach(p => { html += renderPartido(p, 'Pendiente'); });
+        BD_SENIOR_PLAYOFFS.cuartos.forEach(p => { html += _renderPartidoPlayoff(p, 'Pendiente'); });
         html += `</table>`;
     }
 
     html += `<div style="height:8px;background:#f0f0f0;border-top:1px solid #ddd;border-bottom:1px solid #ddd;"></div>`;
     html += `<div class="header-t" style="font-size:11px;background:#2c6e49;">SEMIFINALES</div>`;
     html += `<table>`;
-    BD_SENIOR_PLAYOFFS.semifinales.forEach(p => { html += renderPartido(p, 'Pendiente'); });
+    BD_SENIOR_PLAYOFFS.semifinales.forEach(p => { html += _renderPartidoPlayoff(p, 'Pendiente'); });
     html += `</table>`;
 
     html += `<div style="height:8px;background:#f0f0f0;border-top:1px solid #ddd;border-bottom:1px solid #ddd;"></div>`;
     html += `<div class="header-t" style="font-size:11px;background:#7b1a1a;">🏆 FINAL</div>`;
     html += `<table>`;
-    html += renderPartido(BD_SENIOR_PLAYOFFS.final, 'Pendiente');
+    html += _renderPartidoPlayoff(BD_SENIOR_PLAYOFFS.final, 'Pendiente');
     html += `</table>`;
 
     return html;
@@ -18914,35 +18967,22 @@ function generarSeniorPlayoffs() {
    ══════════════════════════════════════════════════════════ */
 const BD_OFICIAL_PLAYOFFS = {
     semifinales: [
-        { local: "Huracán",     clL: "huracan",    visitante: "Villa Mitre", clV: "villamitre", gl: null, gv: null },
-        { local: "Bella Vista", clL: "bellavista", visitante: "Liniers",     clV: "liniers",    gl: null, gv: null }
+        { local: "Huracán",     clL: "huracan",    visitante: "Villa Mitre", clV: "villamitre", gl: 1, gv: 0, goles_l: ["Iván Agudiak"], goles_v: [] },
+        { local: "Bella Vista", clL: "bellavista", visitante: "Liniers",     clV: "liniers",    gl: 0, gv: 0, pen_l: 1, pen_v: 3 }
     ],
-    final: { local: "A confirmar", clL: "escudo", visitante: "A confirmar", clV: "escudo", gl: null, gv: null }
+    final: { local: "Huracán", clL: "huracan", visitante: "Liniers", clV: "liniers", gl: null, gv: null }
 };
 
 function generarOficialPlayoffs() {
-    const renderPartido = (p, pendiente) => {
-        const res = p.gl !== null
-            ? `<td class="c-res">${p.gl} - ${p.gv}</td>`
-            : `<td class="c-res" style="font-size:10px;color:#aaa;">${pendiente || 'vs'}</td>`;
-        return `<tr>
-            <td class="c-loc"><span style="direction:ltr;display:inline-flex;align-items:center;justify-content:flex-end;width:100%;">
-                ${p.local} <div class="escudo ${p.clL}" style="display:inline-block;vertical-align:middle;margin-left:4px;"></div>
-            </span></td>
-            ${res}
-            <td class="c-vis"><div class="escudo ${p.clV}" style="display:inline-block;vertical-align:middle;margin-right:4px;"></div> ${p.visitante}</td>
-        </tr>`;
-    };
-
     let html = `<div class="header-t">TORNEO OFICIAL — PLAYOFFS APERTURA 2026</div>`;
     html += `<div class="header-t" style="font-size:11px;background:#2c6e49;">SEMIFINALES</div>`;
     html += `<table>`;
-    BD_OFICIAL_PLAYOFFS.semifinales.forEach(p => { html += renderPartido(p); });
+    BD_OFICIAL_PLAYOFFS.semifinales.forEach(p => { html += _renderPartidoPlayoff(p); });
     html += `</table>`;
     html += `<div style="height:8px;background:#f0f0f0;border-top:1px solid #ddd;border-bottom:1px solid #ddd;"></div>`;
     html += `<div class="header-t" style="font-size:11px;background:#7b1a1a;">🏆 FINAL</div>`;
     html += `<table>`;
-    html += renderPartido(BD_OFICIAL_PLAYOFFS.final, 'Pendiente');
+    html += _renderPartidoPlayoff(BD_OFICIAL_PLAYOFFS.final, 'Pendiente');
     html += `</table>`;
     return html;
 }
@@ -18952,35 +18992,22 @@ function generarOficialPlayoffs() {
    ══════════════════════════════════════════════════════════ */
 const BD_PROMOCIONAL_PLAYOFFS = {
     semifinales: [
-        { local: "Comercial",   clL: "comercial",   visitante: "Sansinena",  clV: "sansinena",  gl: null, gv: null },
-        { local: "Tiro Federal",clL: "tirofederal", visitante: "Rosario PB", clV: "rosariopb",  gl: null, gv: null }
+        { local: "Comercial",   clL: "comercial",   visitante: "Sansinena",  clV: "sansinena", gl: 0, gv: 0, pen_l: 3, pen_v: 2 },
+        { local: "Tiro Federal",clL: "tirofederal", visitante: "Rosario PB", clV: "rosariopb",  gl: 4, gv: 0, goles_l: ["Mariano McCoubrey","Mariano McCoubrey","Genaro Fraysse","Gino Carrozzi"], goles_v: [] }
     ],
-    final: { local: "A confirmar", clL: "escudo", visitante: "A confirmar", clV: "escudo", gl: null, gv: null }
+    final: { local: "Comercial", clL: "comercial", visitante: "Tiro Federal", clV: "tirofederal", gl: null, gv: null }
 };
 
 function generarPromocionalPlayoffs() {
-    const renderPartido = (p, pendiente) => {
-        const res = p.gl !== null
-            ? `<td class="c-res">${p.gl} - ${p.gv}</td>`
-            : `<td class="c-res" style="font-size:10px;color:#aaa;">${pendiente || 'vs'}</td>`;
-        return `<tr>
-            <td class="c-loc"><span style="direction:ltr;display:inline-flex;align-items:center;justify-content:flex-end;width:100%;">
-                ${p.local} <div class="escudo ${p.clL}" style="display:inline-block;vertical-align:middle;margin-left:4px;"></div>
-            </span></td>
-            ${res}
-            <td class="c-vis"><div class="escudo ${p.clV}" style="display:inline-block;vertical-align:middle;margin-right:4px;"></div> ${p.visitante}</td>
-        </tr>`;
-    };
-
     let html = `<div class="header-t">TORNEO PROMOCIONAL — PLAYOFFS APERTURA 2026</div>`;
     html += `<div class="header-t" style="font-size:11px;background:#2c6e49;">SEMIFINALES</div>`;
     html += `<table>`;
-    BD_PROMOCIONAL_PLAYOFFS.semifinales.forEach(p => { html += renderPartido(p); });
+    BD_PROMOCIONAL_PLAYOFFS.semifinales.forEach(p => { html += _renderPartidoPlayoff(p); });
     html += `</table>`;
     html += `<div style="height:8px;background:#f0f0f0;border-top:1px solid #ddd;border-bottom:1px solid #ddd;"></div>`;
     html += `<div class="header-t" style="font-size:11px;background:#7b1a1a;">🏆 FINAL</div>`;
     html += `<table>`;
-    html += renderPartido(BD_PROMOCIONAL_PLAYOFFS.final, 'Pendiente');
+    html += _renderPartidoPlayoff(BD_PROMOCIONAL_PLAYOFFS.final, 'Pendiente');
     html += `</table>`;
     return html;
 }
@@ -19051,16 +19078,30 @@ const BD_FUTSAL_RESERVA_PLAYOFFS = {
 };
 
 function _renderPartidoPlayoff(p, pendiente) {
+    let resTexto;
+    if (p.gl !== null) {
+        const pen = (p.pen_l !== undefined && p.pen_l !== null)
+            ? ` <span style="font-size:9px;color:#888;">(${p.pen_l}-${p.pen_v} pen.)</span>` : '';
+        resTexto = `${p.gl} - ${p.gv}${pen}`;
+    }
     const res = p.gl !== null
-        ? `<td class="c-res">${p.gl} - ${p.gv}</td>`
+        ? `<td class="c-res">${resTexto}</td>`
         : `<td class="c-res" style="font-size:10px;color:#aaa;">${pendiente || 'vs'}</td>`;
-    return `<tr>
+    let html = `<tr>
         <td class="c-loc"><span style="direction:ltr;display:inline-flex;align-items:center;justify-content:flex-end;width:100%;">
             ${p.local} <div class="escudo ${p.clL}" style="display:inline-block;vertical-align:middle;margin-left:4px;"></div>
         </span></td>
         ${res}
         <td class="c-vis"><div class="escudo ${p.clV}" style="display:inline-block;vertical-align:middle;margin-right:4px;"></div> ${p.visitante}</td>
     </tr>`;
+    if (p.gl !== null && ((p.goles_l && p.goles_l.length > 0) || (p.goles_v && p.goles_v.length > 0))) {
+        html += `<tr style="background:#f9f9f9;"><td colspan="3" style="font-size:9px;color:#555;padding:3px 8px;text-align:center;">`;
+        if (p.goles_l && p.goles_l.length > 0) html += `⚽ <b>${p.local}:</b> ${p.goles_l.join(', ')}`;
+        if (p.goles_l?.length > 0 && p.goles_v?.length > 0) html += ` &nbsp;|&nbsp; `;
+        if (p.goles_v && p.goles_v.length > 0) html += `⚽ <b>${p.visitante}:</b> ${p.goles_v.join(', ')}`;
+        html += `</td></tr>`;
+    }
+    return html;
 }
 
 function generarReservaOficialPlayoffs() {
