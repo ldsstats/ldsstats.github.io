@@ -1607,6 +1607,11 @@ BD_FIXTURES_SUB.sub13.find(f=>f.fecha===7).partidos.forEach(p=>{
     if(p.l==="Olimpo"&&p.v==="Santamarina"){p.gl=4;p.gv=1;}
     if(p.l==="Mac Allister"&&p.v==="Kimberley"){p.gl=3;p.gv=0;}
 });
+BD_FIXTURES_SUB.sub13.find(f=>f.fecha===8).partidos.forEach(p=>{
+    if(p.l==="Olimpo"&&p.v==="Villa Mitre"){p.gl=0;p.gv=4;}
+    if(p.l==="Mac Allister"&&p.v==="Santamarina"){p.gl=null;p.gv=null;}
+    if(p.l==="Alvarado"&&p.v==="Kimberley"){p.gl=2;p.gv=1;}
+});
 
 BD_FIXTURES_SUB.sub15.find(f=>f.fecha===1).partidos.forEach(p=>{
     if(p.l==="Villa Mitre"&&p.v==="Olimpo"){p.gl=1;p.gv=2;p.goles_l=["Santiago Sánchez"];p.goles_v=["Thiago Alfredo","Galo Martínez"];}
@@ -1643,6 +1648,11 @@ BD_FIXTURES_SUB.sub15.find(f=>f.fecha===7).partidos.forEach(p=>{
     if(p.l==="Olimpo"&&p.v==="Santamarina"){p.gl=1;p.gv=0;}
     if(p.l==="Mac Allister"&&p.v==="Kimberley"){p.gl=3;p.gv=1;}
 });
+BD_FIXTURES_SUB.sub15.find(f=>f.fecha===8).partidos.forEach(p=>{
+    if(p.l==="Olimpo"&&p.v==="Villa Mitre"){p.gl=1;p.gv=1;}
+    if(p.l==="Mac Allister"&&p.v==="Santamarina"){p.gl=null;p.gv=null;}
+    if(p.l==="Alvarado"&&p.v==="Kimberley"){p.gl=1;p.gv=1;}
+});
 
 BD_FIXTURES_SUB.sub17.find(f=>f.fecha===1).partidos.forEach(p=>{
     if(p.l==="Villa Mitre"&&p.v==="Olimpo"){p.gl=1;p.gv=1;p.goles_l=["Mateo Luzuriaga"];p.goles_v=["Benicio Hernández"];}
@@ -1678,6 +1688,11 @@ BD_FIXTURES_SUB.sub17.find(f=>f.fecha===7).partidos.forEach(p=>{
     if(p.l==="Balompié"&&p.v==="Villa Mitre"){p.gl=1;p.gv=0;}
     if(p.l==="Olimpo"&&p.v==="Santamarina"){p.gl=3;p.gv=0;}
     if(p.l==="Mac Allister"&&p.v==="Kimberley"){p.gl=3;p.gv=0;}
+});
+BD_FIXTURES_SUB.sub17.find(f=>f.fecha===8).partidos.forEach(p=>{
+    if(p.l==="Olimpo"&&p.v==="Villa Mitre"){p.gl=1;p.gv=0;}
+    if(p.l==="Mac Allister"&&p.v==="Santamarina"){p.gl=null;p.gv=null;}
+    if(p.l==="Alvarado"&&p.v==="Kimberley"){p.gl=0;p.gv=0;}
 });
 
 
@@ -2239,7 +2254,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 14).partidos.forEach(p
 });
 
 
-let diaSeleccionadoHome = "2026-07-04"; 
+let diaSeleccionadoHome = "2026-07-05"; 
 
 function seleccionarDiaHome(dia) {
     diaSeleccionadoHome = dia;
@@ -16324,42 +16339,42 @@ function generarReserva(cat) {
 
 const BD_POS_SUB = {
     sub13: [
-        {nombre:"Villa Mitre",  clase:"villamitre",  pj:6,pg:5,pe:1,pp:0,gf:18,gc:6,pts:16},
+        {nombre:"Villa Mitre",  clase:"villamitre",  pj:7,pg:6,pe:1,pp:0,gf:22,gc:6,pts:19},
         {nombre:"Mac Allister", clase:"macallister", pj:6,pg:5,pe:0,pp:1,gf:13,gc:2,pts:15},
-        {nombre:"Kimberley",    clase:"kimberley",   pj:6,pg:3,pe:1,pp:2,gf:8,gc:8,pts:10},
+        {nombre:"Kimberley",    clase:"kimberley",   pj:7,pg:3,pe:1,pp:3,gf:9,gc:10,pts:10},
         {nombre:"Balompié",     clase:"balompie",    pj:6,pg:2,pe:3,pp:1,gf:10,gc:8,pts:9},
-        {nombre:"Olimpo",       clase:"olimpo",      pj:6,pg:2,pe:0,pp:4,gf:10,gc:14,pts:6},
-        {nombre:"Alvarado",     clase:"alvarado",    pj:6,pg:1,pe:0,pp:5,gf:7,gc:16,pts:3},
+        {nombre:"Olimpo",       clase:"olimpo",      pj:7,pg:2,pe:0,pp:5,gf:10,gc:18,pts:6},
+        {nombre:"Alvarado",     clase:"alvarado",    pj:7,pg:2,pe:0,pp:5,gf:9,gc:17,pts:6},
         {nombre:"Santamarina",  clase:"santamarina", pj:6,pg:0,pe:1,pp:5,gf:4,gc:16,pts:1}
     ],
     sub15: [
         {nombre:"Mac Allister", clase:"macallister", pj:6,pg:6,pe:0,pp:0,gf:11,gc:2,pts:18},
-        {nombre:"Kimberley",    clase:"kimberley",   pj:6,pg:3,pe:1,pp:2,gf:8,gc:8,pts:10},
+        {nombre:"Kimberley",    clase:"kimberley",   pj:7,pg:3,pe:2,pp:2,gf:9,gc:9,pts:11},
         {nombre:"Balompié",     clase:"balompie",    pj:6,pg:3,pe:1,pp:2,gf:12,gc:7,pts:10},
-        {nombre:"Alvarado",     clase:"alvarado",    pj:6,pg:2,pe:2,pp:2,gf:13,gc:8,pts:8},
-        {nombre:"Olimpo",       clase:"olimpo",      pj:6,pg:2,pe:1,pp:3,gf:6,gc:10,pts:7},
+        {nombre:"Alvarado",     clase:"alvarado",    pj:7,pg:2,pe:3,pp:2,gf:14,gc:9,pts:9},
+        {nombre:"Olimpo",       clase:"olimpo",      pj:7,pg:2,pe:2,pp:3,gf:7,gc:11,pts:8},
         {nombre:"Santamarina",  clase:"santamarina", pj:6,pg:1,pe:1,pp:4,gf:2,gc:10,pts:4},
-        {nombre:"Villa Mitre",  clase:"villamitre",  pj:6,pg:1,pe:0,pp:5,gf:6,gc:13,pts:3}
+        {nombre:"Villa Mitre",  clase:"villamitre",  pj:7,pg:1,pe:1,pp:5,gf:7,gc:14,pts:4}
     ],
     sub17: [
-        {nombre:"Kimberley",    clase:"kimberley",   pj:6,pg:4,pe:1,pp:1,gf:9,gc:5,pts:13},
+        {nombre:"Kimberley",    clase:"kimberley",   pj:7,pg:4,pe:2,pp:1,gf:9,gc:5,pts:14},
         {nombre:"Mac Allister", clase:"macallister", pj:6,pg:3,pe:3,pp:0,gf:11,gc:4,pts:12},
-        {nombre:"Alvarado",     clase:"alvarado",    pj:6,pg:3,pe:1,pp:2,gf:10,gc:8,pts:10},
+        {nombre:"Alvarado",     clase:"alvarado",    pj:7,pg:3,pe:2,pp:2,gf:10,gc:8,pts:11},
         {nombre:"Balompié",     clase:"balompie",    pj:6,pg:3,pe:1,pp:2,gf:9,gc:10,pts:10},
-        {nombre:"Olimpo",       clase:"olimpo",      pj:6,pg:2,pe:1,pp:3,gf:8,gc:9,pts:7},
-        {nombre:"Villa Mitre",  clase:"villamitre",  pj:6,pg:1,pe:3,pp:2,gf:5,gc:7,pts:6},
+        {nombre:"Olimpo",       clase:"olimpo",      pj:7,pg:3,pe:1,pp:3,gf:9,gc:9,pts:10},
+        {nombre:"Villa Mitre",  clase:"villamitre",  pj:7,pg:1,pe:3,pp:3,gf:5,gc:8,pts:6},
         {nombre:"Santamarina",  clase:"santamarina", pj:6,pg:0,pe:0,pp:6,gf:2,gc:11,pts:0}
     ]
 };
 
 const BD_GOL_SUB = {
     sub13: [
-        {jugador:"Santiago Martínez", equipo:"Villa Mitre", clase:"villamitre", n:9},
-        {jugador:"Valentino Altfater",    equipo:"Villa Mitre", clase:"villamitre", n:3},
+        {jugador:"Santiago Martínez", equipo:"Villa Mitre", clase:"villamitre", n:10},
+        {jugador:"Valentino Altfater",    equipo:"Villa Mitre", clase:"villamitre", n:4},
         {jugador:"Ringo Melcon",      equipo:"Villa Mitre", clase:"villamitre", n:2},
         {jugador:"León Cáceres",      equipo:"Olimpo",      clase:"olimpo",     n:2},
-        {jugador:"Erick Schwaner",    equipo:"Villa Mitre", clase:"villamitre", n:1},
-        {jugador:"Martiniano Vergara",    equipo:"Villa Mitre", clase:"villamitre", n:1},
+        {jugador:"Erick Schwaner",    equipo:"Villa Mitre", clase:"villamitre", n:2},
+        {jugador:"Martiniano Vergara",    equipo:"Villa Mitre", clase:"villamitre", n:2},
         {jugador:"Enzo Rossi",    equipo:"Villa Mitre", clase:"villamitre", n:1},
         {jugador:"Brian Scalco",    equipo:"Villa Mitre", clase:"villamitre", n:1},
         {jugador:"Santino Canales",   equipo:"Olimpo",      clase:"olimpo",     n:1},
@@ -16372,8 +16387,8 @@ const BD_GOL_SUB = {
         {jugador:"Bastián González",      equipo:"Olimpo",      clase:"olimpo",     n:1}
     ],
     sub15: [
+        {jugador:"Galo Martínez",     equipo:"Olimpo",      clase:"olimpo",     n:3},
         {jugador:"Santiago Sánchez",  equipo:"Villa Mitre", clase:"villamitre", n:2},
-        {jugador:"Galo Martínez",     equipo:"Olimpo",      clase:"olimpo",     n:2},
         {jugador:"Thiago Alfredo",    equipo:"Olimpo",      clase:"olimpo",     n:1},
         {jugador:"Ciro Barra",     equipo:"Olimpo",      clase:"olimpo",     n:1},
         {jugador:"Simón Schmid",     equipo:"Olimpo",      clase:"olimpo",     n:1},
@@ -16381,13 +16396,14 @@ const BD_GOL_SUB = {
         {jugador:"Cardozo",    equipo:"Villa Mitre", clase:"villamitre", n:1},
         {jugador:"Schefer",    equipo:"Villa Mitre", clase:"villamitre", n:1},
         {jugador:"Luca Schefelt",    equipo:"Villa Mitre", clase:"villamitre", n:1},
-        {jugador:"Luca Guanes",    equipo:"Villa Mitre", clase:"villamitre", n:1}
+        {jugador:"Luca Guanes",    equipo:"Villa Mitre", clase:"villamitre", n:1},
+        {jugador:"Román Morelli",    equipo:"Villa Mitre", clase:"villamitre", n:1}
     ],
     sub17: [
         {jugador:"Benicio Hernández", equipo:"Olimpo",      clase:"olimpo",     n:2},
         {jugador:"Agustín Dolagaray", equipo:"Olimpo",      clase:"olimpo",     n:2},
         {jugador:"Valentín Miñoz",      equipo:"Olimpo",      clase:"olimpo",     n:2},
-        {jugador:"Valentino Kurtz", equipo:"Olimpo",      clase:"olimpo",     n:1},
+        {jugador:"Valentino Kurtz", equipo:"Olimpo",      clase:"olimpo",     n:2},
         {jugador:"Joaquín Pallalef",      equipo:"Olimpo",      clase:"olimpo",     n:1},
         {jugador:"Kraemer",    equipo:"Villa Mitre", clase:"villamitre", n:1},
         {jugador:"Mateo Luzuriaga",   equipo:"Villa Mitre", clase:"villamitre", n:1},
@@ -19173,5 +19189,136 @@ function generarFutsalReservaPlayoffs() {
     html += `<div class="header-t" style="font-size:11px;background:#7b1a1a;">🏆 FINAL</div><table>`;
     html += _renderPartidoPlayoff(BD_FUTSAL_RESERVA_PLAYOFFS.final, 'Pendiente');
     html += `</table>`;
+    return html;
+}
+
+/* ══════════════════════════════════════════════════════════
+   CAMPEONES HISTÓRICOS LDS
+   ══════════════════════════════════════════════════════════ */
+const BD_CAMPEONES_RANKING = [
+    { nombre: "Olimpo",        clase: "olimpo",        titulos: 28, anios: [1911,1921,1949,1950,1951,1952,1953,1954,1955,1962,1965,1966,1968,1976,1977,1978,1979,1980,1981,1982,1983,1984,1985,1986,1987,1988,1995,2009] },
+    { nombre: "Liniers",       clase: "liniers",       titulos: 20, anios: ["1916","1919","1932","1933","1934","1938","1942","1948","1996","1997","2005","2006","2007","2011","2012","2015(A)","2017(A)","2019(C)","2021","2024"] },
+    { nombre: "Comercial",     clase: "comercial",     titulos: 14, anios: [1920,1924,1926,1927,1928,1931,1935,1936,1937,1941,1943,1958,1973,1989] },
+    { nombre: "Sporting",      clase: "sporting",      titulos: 12, anios: ["1934","1935","1936","1945","1963","1964","1974","1990","1999","2002","2018(A)","2019(C)"] },
+    { nombre: "Pacífico",      clase: "pacifico",      titulos: 10, anios: [1909,1912,1913,1914,1917,1918,1922,1925,1929,1930] },
+    { nombre: "Villa Mitre",   clase: "villamitre",    titulos: 9,  anios: ["1940","1944","1991","1992","1993","1994","1998","2003","2017(C)"] },
+    { nombre: "Rosario PB",    clase: "rosariopb",     titulos: 8,  anios: ["1939","1959","1969","1971","1972","1975","2001","2018(C)"] },
+    { nombre: "Bella Vista",   clase: "bellavista",    titulos: 8,  anios: ["1957","1960","1961","2000","2008","2010","2016(A)","2023(C)"] },
+    { nombre: "Huracán",       clase: "huracan",       titulos: 5,  anios: ["1967","1970","2015(C)","2023(A)","2025"] },
+    { nombre: "Sansinena",     clase: "sansinena",     titulos: 4,  anios: ["1923","1946","2014(A)","2014(C)"] },
+    { nombre: "Tiro Federal",  clase: "tirofederal",   titulos: 4,  anios: ["2004","2013","2016(C)","2022"] },
+    { nombre: "Porteño",       clase: "porteno",       titulos: 2,  anios: [1908,1915] },
+    { nombre: "Libertad",      clase: "libertad",      titulos: 1,  anios: [1956] },
+    { nombre: "Ferrocarril Sud",clase: "ferrocarrilsur",titulos: 1, anios: [1910] }
+];
+
+const BD_CRONOLOGIA = [
+    { anio: "1908", clase: "porteno",       nombre: "Porteño",        detalle: "Primer campeón" },
+    { anio: "1909", clase: "pacificobb",     nombre: "Pacífico BB",      detalle: "1° título en el año de su afiliación a la Liga del Sur" },
+    { anio: "1910", clase: "ferrocarrilsur",nombre: "Ferrocarril Sud",detalle: "Club fundador extinto" },
+    { anio: "1912", clase: "pacificobb",     nombre: "Pacífico BB",      detalle: "2° título: primer equipo en repetir equipo" },
+    { anio: "1913", clase: "pacificobb",     nombre: "Pacífico BB",      detalle: "3° título: bicampeón" },
+    { anio: "1914", clase: "pacificobb",     nombre: "Pacífico BB",      detalle: "4° título: primer tricampeón de la Liga del Sur" },
+    { anio: "1915", clase: "porteno",       nombre: "Porteño",        detalle: "2° título" },
+    { anio: "1917", clase: "pacificobb",     nombre: "Pacífico BB",      detalle: "5° título" },
+    { anio: "1918", clase: "pacificobb",     nombre: "Pacífico BB",      detalle: "6° título: bicampeón" },
+    { anio: "1922", clase: "pacificobb",     nombre: "Pacífico BB",      detalle: "7° título" },
+    { anio: "1923", clase: "sansinena",     nombre: "Sansinena",      detalle: "1° título: campeón del torneo en la temporada que llegó inmediatamente después de su ascenso a la máxima" },
+    { anio: "1925", clase: "pacificobb",     nombre: "Pacífico BB",      detalle: "8° título" },
+    { anio: "1929", clase: "pacificobb",     nombre: "Pacífico BB",      detalle: "9° título: año histórico por obtener los títulos de fútbol y básquetbol de Bahía Blanca" },
+    { anio: "1930", clase: "pacificobb",     nombre: "Pacífico BB",      detalle: "10° título: bicampeón" },
+    { anio: "1934", clase: "sporting",     nombre: "Sporting",      detalle: "1° título: campeón a dos años de su ascenso" },
+    { anio: "1935", clase: "sporting",     nombre: "Sporting",      detalle: "2° título: bicampeón de la Liga del Sur y obtención de la 'triple corona' con la Copa Competencia y la Copa Estímulo" },
+    { anio: "1936", clase: "sporting",     nombre: "Sporting",      detalle: "3° título: tricampeón" },
+    { anio: "1939", clase: "rosariopb",     nombre: "Rosario PB",      detalle: "1° título" },
+    { anio: "1940", clase: "villamitre",     nombre: "Villa Mitre",      detalle: "1° título" },
+    { anio: "1944", clase: "villamitre",     nombre: "Villa Mitre",      detalle: "2° título" },
+    { anio: "1946", clase: "sansinena",     nombre: "Sansinena",      detalle: "2° título: campeón al ganar el título el 8 de diciembre de 1946" },
+    { anio: "1945", clase: "sporting",     nombre: "Sporting",      detalle: "4° título: Campeón de la Liga Sureña (competencia que se disputaba paralela a la Liga del Sur)" },
+    { anio: "1946", clase: "villamitre",     nombre: "Villa Mitre",      detalle: "Campeón de la Liga Sureña (competencia que se disputaba paralela a la Liga del Sur)" },
+    { anio: "1956", clase: "libertad",       nombre: "Libertad",        detalle: "1° título: campeón tras vencer a Villa Mitre en el último partido. Las posiciones finales fueron: Libertad 24, Rosario 24, Villa Mitre 22, Liniers 19, Olimpo 17, Bella Vista 15, Pacífico 15, Sporting 15,Tiro Federal 15, Sansinena 14 con el tribunal de penas dándole por perdido un partido al Chivo y entregándole los puntos a Rosario" },
+    { anio: "1957", clase: "bellavista",     nombre: "Bella Vista",      detalle: "1° título" },
+    { anio: "1959", clase: "rosariopb",     nombre: "Rosario PB",      detalle: "2° título" },
+    { anio: "1960", clase: "bellavista",     nombre: "Bella Vista",      detalle: "2° título" },
+    { anio: "1961", clase: "bellavista",     nombre: "Bella Vista",      detalle: "3° título: bicampeón" },
+    { anio: "1963", clase: "sporting",     nombre: "Sporting",      detalle: "5° título" },
+    { anio: "1964", clase: "sporting",     nombre: "Sporting",      detalle: "6° título: bicampeón al vencer a Olimpo" },
+    { anio: "1967", clase: "huracan",     nombre: "Huracán",      detalle: "1° título: con Bartolomé 'Chiquito' Lliteras jugando su primera temporada en el club y anotando 17 goles en 19 partidos" },
+    { anio: "1969", clase: "rosariopb",     nombre: "Rosario PB",      detalle: "3° título: campeón tras golear a Tiro Federal por 9-0 el 19 de octubre de 1969. Los goles fueron de Ricardo Dagotto x3, Lorenzo Britos x2, Clemente Espinoza x2, Carlos Horacio Ortíz y Miguel Ángel Jacobo" },
+    { anio: "1970", clase: "huracan",     nombre: "Huracán",      detalle: "2° título" },
+    { anio: "1971", clase: "rosariopb",     nombre: "Rosario PB",      detalle: "4° título" },
+    { anio: "1972", clase: "rosariopb",     nombre: "Rosario PB",      detalle: "5° título: bicampeón al vencer a Olimpo por 3-0 el 5 de noviembre de 1972 en cancha de Villa Mitre. Los goles fueron de Raúl Martínez x2 y Jorge Novelli. En la ida acabaron 1-1" },
+    { anio: "1974", clase: "sporting",     nombre: "Sporting",      detalle: "7° título: campeón al empatar contra Villa Mitre por 1-1 el 25 de noviembre de 1974. El tanto rojinegro fue de José Mosqueira y el partido se jugó en cancha de Rosario, su clásico rival" },
+    { anio: "1975", clase: "rosariopb",     nombre: "Rosario PB",      detalle: "6° título: campeón al vencer a Bella Vista por 2-0 el 7 de septiembre de 1975. Los goles fueron de José Dolcemáscolo y 'Cachilo' Brítez" },
+    { anio: "1989", clase: "comercial",     nombre: "Comercial",      detalle: "14° Título: venció a Sporting por 2-0 el 15 de octubre de 1989" },
+    { anio: "1990", clase: "sporting",     nombre: "Sporting",      detalle: "8° título" },
+    { anio: "1991", clase: "villamitre",     nombre: "Villa Mitre",      detalle: "3° título: campeón al empatar con Olimpo por 1-1 con gol de Luis 'Paquillo' Sánchez y ganar el cuadrangular el 28 de julio de 1991 (a falta de una fecha)" },
+    { anio: "1992", clase: "villamitre",     nombre: "Villa Mitre",      detalle: "4° título: bicampeón" },
+    { anio: "1993", clase: "villamitre",     nombre: "Villa Mitre",      detalle: "5° título: tricampeón" },
+    { anio: "1994", clase: "villamitre",     nombre: "Villa Mitre",      detalle: "6° título: tetracampeón" },
+    { anio: "1998", clase: "villamitre",     nombre: "Villa Mitre",      detalle: "7° título" },
+    { anio: "1999", clase: "sporting",     nombre: "Sporting",      detalle: "9° título: campeón al vencer a Rosario Puerto Belgrano por 3-1 el 10 de octubre de 1999" },
+    { anio: "2000", clase: "bellavista",     nombre: "Bella Vista",      detalle: "4° título: campeón el 29 de octubre de 2000 en cancha de Olimpo con gol de tiro libre de Fernado Lucas ante Sporting (1-0). Cortó una sequía de 39 años" },
+    { anio: "2001", clase: "rosariopb",     nombre: "Rosario PB",      detalle: "7° título: campeón al golear a Bella Vista por 4-0 el 11 de noviembre de 2001. Los goles fueron de López Rueda, Armando Di Meglio, Marcos Junis e Ignacio Mesa" },
+    { anio: "2002", clase: "sporting",     nombre: "Sporting",      detalle: "10° título: campeón tras una serie final ante Rosario. El último partido se jugó el 15 de diciembre de 2002 con victoria por 1-0 con gol de Guillermo Álvarez y segunda vuelta olímpica en cancha de su rival histórico" },
+    { anio: "2003", clase: "villamitre",     nombre: "Villa Mitre",      detalle: "8° título: campeón al vencer por penales a Tiro Federal el 5 de noviembre de 2003. Además, se convirtió en el primer equipo en ser campeón en su primera temporada en Primera tras ascender desde el Promocional" },
+    { anio: "2004", clase: "tirofederal",     nombre: "Tiro Federal",      detalle: "1° título: campeón al vencer a Villa Mitre por 1-0 el 27 de octubre de 2004 en la final con gol en tiempo suplementario de Daniel 'Chiqui' Fernández. El partido se jugó en cancha de Liniers" },
+    { anio: "2008", clase: "bellavista",     nombre: "Bella Vista",      detalle: "5° título: campeón al vencer a Liniers por 1-0 con gol de Fernando Priore y quedarse con el cuadrangular final el 7 de diciembre de 2008" },
+    { anio: "2010", clase: "bellavista",     nombre: "Bella Vista",      detalle: "6° título: campeón de la temporada con una goleada por 3-0 ante Tiro Federal en cancha de Olimpo con goles de Lucas Machaín, Gabrie Ianni y Maximiliano Vallejos" },
+    { anio: "2013", clase: "tirofederal",     nombre: "Tiro Federal",      detalle: "2° título: campeón al quedarse con el Apertura y Clausura" },
+    { anio: "2014", clase: "sansinena",     nombre: "Sansinena",      detalle: "3° título: campeón al vencer a Liniers por 2-0 en el Torneo Apertura el 24 de julio de 2014. Nelson Ibarlucea y Lucas Machaín marcaron los goles" },
+    { anio: "2014", clase: "sansinena",     nombre: "Sansinena",      detalle: "4° título: Bicampeón al conquistar el título del Clausura al empatar contra Olimpo por 1-1 el 14 de diciembre de 2014 y contar con la ventaja deportiva. El gol del cerrense: Lucas Machaín" },
+    { anio: "2015", clase: "huracan",     nombre: "Huracán",      detalle: "3° título: campeón del Apertura tras vencer Tiro Federal por penales tras un 0-0 (10 de diciembre de 2015)" },
+    { anio: "2016", clase: "bellavista",     nombre: "Bella Vista",      detalle: "7° título: campeón del torneo Apertura el 24 de julio de 2016 después de vencer a Tiro Federal por 3-2 con goles de Lucas Machaín x2 y Fernando Priore" },
+    { anio: "2016", clase: "tirofederal",     nombre: "Tiro Federal",      detalle: "3° título: campeón del Clausura al vencer a Libertad por 5-2 en el alargue tras empatar 1-1 en los 90' el 8 de diciembre de 2016. Mauro Sabatini x2, Franco Lefiñir, Emanuel Tamalet y Nicolás Di Bello, anotaron los goles" },
+    { anio: "2017", clase: "villamitre",     nombre: "Villa Mitre",      detalle: "9° título: campeón al aplastar a Sporting por 6-0 el 8 de diciembre de 2017 en cancha de Liniers. Los goles fueron de Damián De Hoyos x2, Leonardo López, Agustín Cocciarini, Ricardo Chavarri y Gastón Santillán" },
+    { anio: "2018", clase: "sporting",     nombre: "Sporting",      detalle: "11° título: campeón del Apertura al vencer en la final a Tiro Federal por 2-1 el 22 de julio de 2018. Goles de Marcelo Castellano y Mauro Sabatini" },
+    { anio: "2018", clase: "rosariopb",     nombre: "Rosario PB",      detalle: "8° título: camopeón al golear a Tiro Federal por 5-1 el 16 de diciembre de 2018 y quedarse con el Clausura. Los goles fueron de Brian Scalco x2, Leonel Navarro, Nicolás Achigar e Iván Mesa" },
+    { anio: "2019", clase: "sporting",     nombre: "Sporting",      detalle: "12° título: campeón del Clausura al vencer a Villa Mitre en la final extra jugada en cancha de Tiro Federal el 21 de julio de 2019. El único gol fue de Miguel Sanhueza" },
+    { anio: "2022", clase: "tirofederal",     nombre: "Tiro Federal",      detalle: "4° título: campeón al vencer con un global de 3-2 a Liniers en la serie final el 17 de diciembre de 2022. Agustín Restiffo y Santiago López anotaron en la ida (2-1) y el propio López en la vuelta (1-1)" },
+    { anio: "2023", clase: "huracan",     nombre: "Huracán",      detalle: "4° título: título compartido con Bella Vista por temporal que imposibilitó jugar la final del 17 de diciembre de 2023)" },
+    { anio: "2023", clase: "bellavista",     nombre: "Bella Vista",      detalle: "8° título: título compartido con Huracán por temporal que imposibilitó jugar la final del 17 de diciembre de 2023)" },
+    { anio: "2025", clase: "huracan",     nombre: "Huracán",      detalle: "5° título: venció a Bella Vista por penales en cancha de Villa Mitre luego de empatar 1-1 (14 de diciembre de 2025)" }
+];
+
+function generarCampeonesHistoricos() {
+    let html = `<div class="header-t">🏆 CAMPEONES HISTÓRICOS LDS</div>`;
+
+    // ── RANKING ──
+    html += `<div class="header-t" style="font-size:11px;background:#2c6e49;">RANKING DE TÍTULOS</div>`;
+    html += `<table><thead><tr>
+        <th style="width:25px;">#</th>
+        <th style="text-align:left;padding-left:8px;">Equipo</th>
+        <th class="c-stat" style="width:40px;">🏆</th>
+        <th style="text-align:left;padding-left:8px;font-size:9px;color:#777;">Años</th>
+    </tr></thead><tbody>`;
+
+    BD_CAMPEONES_RANKING.forEach((e, i) => {
+        html += `<tr>
+            <td class="c-pos">${i + 1}</td>
+            <td class="c-equipo">
+                <div class="escudo ${e.clase}" style="display:inline-block;vertical-align:middle;margin-right:5px;"></div>
+                ${e.nombre}
+            </td>
+            <td class="c-stat"><b>${e.titulos}</b></td>
+            <td style="font-size:9px;color:#666;padding:4px 8px;line-height:1.6;">${e.anios.join(' · ')}</td>
+        </tr>`;
+    });
+
+    html += `</tbody></table>`;
+
+    // ── CRONOLOGÍA ──
+    html += `<div style="height:8px;background:#f0f0f0;border-top:1px solid #ddd;border-bottom:1px solid #ddd;"></div>`;
+    html += `<div class="header-t" style="font-size:11px;background:#2c6e49;">ORDEN CRONOLÓGICO</div>`;
+
+    BD_CRONOLOGIA.forEach(item => {
+        html += `<div style="display:flex;align-items:flex-start;gap:8px;padding:8px 10px;border-bottom:1px solid #eee;background:#fff;">
+            <div style="min-width:36px;text-align:center;font-size:10px;font-weight:bold;color:#1a4a2e;padding-top:2px;">${item.anio}</div>
+            <div class="escudo ${item.clase}" style="display:inline-block;vertical-align:middle;flex-shrink:0;margin-top:1px;"></div>
+            <div style="font-size:11px;color:#333;"><b>${item.nombre}</b><br><span style="font-size:10px;color:#666;">${item.detalle}</span></div>
+        </div>`;
+    });
+
+
     return html;
 }

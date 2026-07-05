@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>LdS Stats - 2026</title>
-    <link rel="stylesheet" href="style.css?v=77">
+    <link rel="stylesheet" href="style.css?v=777">
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#111111">
     <!-- Google Analytics -->
@@ -86,6 +86,7 @@
             <div class="bloque-titulo con-drop" onclick="toggleMenu(this)">ESTADÍSTICAS <span class="flecha">▼</span></div>
             <div class="bloque-links">
                 <a href="#" onclick="navegar('historial')">Historial LdS desde 2026</a>
+                <a href="#" onclick="navegar('campeoneshistoricos')">Campeones históricos LDS</a>
                 <a href="#" onclick="navegar('equiposfuera')">Equipos fuera de la Liga del Sur</a>
             </div>
         </div>
@@ -158,7 +159,7 @@
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-<script src="datos.js?v=77"></script>
+<script src="datos.js?v=777"></script>
 <script>
     let estado = { torneo: 'home', categoria: '', fecha: 1 };
     let estadoAnterior = { torneo: 'home', categoria: '', fecha: 1 };
@@ -446,6 +447,8 @@
                 cont.innerHTML = generarCopaArgentina();
             } else if (estado.torneo === 'historial') {
                 cont.innerHTML = generarHistorial();
+            } else if (estado.torneo === 'campeoneshistoricos') {
+                cont.innerHTML = generarCampeonesHistoricos();
             } else if (estado.torneo === 'sub131517') {
                 cont.innerHTML = generarSub();
             } else if (estado.torneo === 'goleadores') {
