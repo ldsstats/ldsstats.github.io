@@ -2008,10 +2008,10 @@ BD_FIXTURES.federala.posiciones.find(f => f.fecha === 15).partidos = [
     {l:"Kimberley",   v:"Guillermo Brown", gl:3, gv:0, dia:"Dom 28/06", hora:"15:00", goles_l:["Santiago Castillo","Santiago Castillo","Mauricio Miori"], goles_v:[]}
 ];
 BD_FIXTURES.federala.posiciones.find(f => f.fecha === 16).partidos = [
-    {l:"Olimpo",   v:"Villa Mitre", gl:null, gv:null, dia:"Dom 05/07", hora:"15:00", goles_l:[], goles_v:[]},
-    {l:"Sol de Mayo",   v:"Kimberley", gl:null, gv:null, dia:"Dom 05/07", hora:"15:00", goles_l:[], goles_v:[]},
-    {l:"Guillermo Brown",   v:"Círculo Dep.", gl:null, gv:null, dia:"Dom 05/07", hora:"15:00", goles_l:[], goles_v:[]},
-    {l:"Alvarado",   v:"Germinal", gl:null, gv:null, dia:"Dom 05/07", hora:"15:00", goles_l:[], goles_v:[]}
+    {l:"Olimpo",   v:"Villa Mitre", gl:0, gv:0, dia:"Dom 05/07", hora:"15:00", goles_l:[], goles_v:[]},
+    {l:"Sol de Mayo",   v:"Kimberley", gl:1, gv:2, dia:"Dom 05/07", hora:"15:00", goles_l:[], goles_v:["Facundo Russo","Ever Ullua","Leonel Aquino (e/c)"]},
+    {l:"Guillermo Brown",   v:"Círculo Dep.", gl:1, gv:0, dia:"Dom 05/07", hora:"15:00", goles_l:["Branco Mera"], goles_v:[]},
+    {l:"Alvarado",   v:"Germinal", gl:5, gv:0, dia:"Dom 05/07", hora:"15:00", goles_l:["Germán Cervera","Santiago Gutiérrez","Facundo Centurión","Ramiro Makarte","Matías Pérez"], goles_v:[]}
 ];
 
 
@@ -2333,12 +2333,12 @@ function generarHome() {
                 {l:"Sporting", v:"Bella Vista", hora:"15:00"}
             ]},
             { nombre: "SEMIFINALES - 1°FEMENINO", cat: "femenino", noAutoResult: true, partidos: [
-                {l:"Tiro Federal", v:"Villa Mitre", hora:"15:00"},
+                {l:"Tiro Federal", v:"Villa Mitre", hora:"15:00", gl:1, gv:2},
                 {l:"Municipales", v:"Empleados de Comercio", hora:"15:00"}
             ]},
             { nombre: "SEMIFINALES - 1°FEMENINO RESERVA", cat: "reserva_femenino", noAutoResult: true, partidos: [
                 {l:"Tiro Federal", v:"Bella Vista", hora:"12:00"},
-                {l:"Villa Mitre", v:"Municipales", hora:"12:00"}
+                {l:"Villa Mitre", v:"Municipales", hora:"12:00", gl:0, gv:0, pen_l: 3, pen_v: 4}
             ]},
             { nombre: "2°FEMENINO", cat: "segundafemenino", noAutoResult: true, partidos: [
                 {l:"Estrella de Oro", v:"Huracán", hora:"15:30", nota:"en el sintético de Villa Mitre"},
@@ -2346,11 +2346,11 @@ function generarHome() {
             ]},
             { nombre: "SUB 15 FEM", cat: "sub15fem", noAutoResult: true, partidos: [
                 {l:"Empleados de Comercio", v:"Sporting", hora:"11:00"},
-                {l:"Liniers", v:"Villa Mitre", hora:"15:00"},
+                {l:"Liniers", v:"Villa Mitre", hora:"15:00", gl:5, gv:0},
                 {l:"La Armonía", v:"Juventud Unida", hora:"15:00"}
             ]},
             { nombre: "FEDERAL A", cat: "federala", noAutoResult: true, partidos: [
-                {l:"Olimpo", v:"Villa Mitre", hora:"15:00"}
+                {l:"Olimpo", v:"Villa Mitre", hora:"15:00", gl:0, gv:0}
             ]},
         ]},
        { id: "2026-07-06", label: "LUN 06/07", torneos: [
@@ -2535,7 +2535,7 @@ function generarTablaFederal() {
         { nombre: "Villa Mitre", pj:13, pg:4, pe:6, pp:3, gf:8, gc:5 },
         { nombre: "Costa Brava", pj:15, pg:4, pe:6, pp:5, gf:12, gc:12 }
     ];
-    html += `</tbody></table><div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>9</b> para quienes tengan 13 partidos jugados y <b>6</b> para quienes tengan 14 partidos jugados</div>`;
+    html += `</tbody></table><div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>6</b> para quienes tengan 14 partidos jugados y <b>3</b> para quienes tengan 15 partidos jugados</div>`;
     html += `<div class="header-t">MEJORES 5° (ZONAS 2, 3 Y 4)</div>`;
     html += `<table><thead><tr><th style="width:25px;">#</th><th style="text-align:left;padding-left:8px;">Equipo</th><th class="c-stat">PJ</th><th class="c-stat">PG</th><th class="c-stat">PE</th><th class="c-stat">PP</th><th class="c-stat">GF</th><th class="c-stat">GC</th><th class="c-stat">Dif</th><th class="c-stat">Pts</th></tr></thead><tbody>`;
     mejoresQuintos.forEach((e, i) => {
@@ -19051,7 +19051,7 @@ const BD_RESERVA_PROMOCIONAL_PLAYOFFS = {
 const BD_FEMENINO_PLAYOFFS = {
     semifinales: [
         { local: "Municipales", clL: "municipales", visitante: "Empleados de Comercio", clV: "empleados", gl: null, gv: null },
-        { local: "Tiro Federal", clL: "tirofederal", visitante: "Villa Mitre", clV: "villamitre", gl: null, gv: null }
+        { local: "Tiro Federal", clL: "tirofederal", visitante: "Villa Mitre", clV: "villamitre", gl: 1, gv: 2 }
     ],
     final: { local: "A confirmar", clL: "escudo", visitante: "A confirmar", clV: "escudo", gl: null, gv: null }
 };
@@ -19059,7 +19059,7 @@ const BD_FEMENINO_PLAYOFFS = {
 const BD_RESERVA_FEMENINO_PLAYOFFS = {
     semifinales: [
         { local: "Tiro Federal", clL: "tirofederal", visitante: "Bella Vista", clV: "bellavista", gl: null, gv: null },
-        { local: "Villa Mitre", clL: "villamitre", visitante: "Municipales", clV: "municipales", gl: null, gv: null }
+        { local: "Villa Mitre", clL: "villamitre", visitante: "Municipales", clV: "municipales", gl: 0, gv: 0, pen_l: 3, pen_v: 4 }
     ],
     final: { local: "A confirmar", clL: "escudo", visitante: "A confirmar", clV: "escudo", gl: null, gv: null }
 };
