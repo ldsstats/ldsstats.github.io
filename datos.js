@@ -121,7 +121,7 @@ const idaSegundaFemenino = [
     { fecha: 12, libre: "Pacífico (C)", partidos: [{l:"Huracán", v:"San Francisco", gl:1, gv:8, dia:"Sáb 13/06", hora:"15:30", goles_l:[], goles_v:["Luciana Sosa","Luciana Sosa","Clara Iturrioz","Clara Iturrioz","Ariana Adassus","Ailín Randisi","Florencia Sorbellini","Milagros Fernández"]}, {l:"Olimpo", v:"Sansinena", gl:0, gv:0, dia:"Dom 14/06", hora:"15:30", goles_l:[], goles_v:[]}, {l:"Petroquímicos", v:"Liniers", gl:1, gv:2, dia:"Dom 14/06", hora:"15:30", goles_l:["Paula Rodríguez"], goles_v:["Iara Schwab","Paulina Acevedo"]}, {l:"Estrella de Oro", v:"Rosario PB", gl:1, gv:5, dia:"Dom 14/06", hora:"15:30", goles_l:["Natalia Ríos"], goles_v:["Juliana Ruiz","Juliana Ruiz","Valentina Cavalli","Carolina Díaz","Celeste Medina"]}] },
     { fecha: 13, libre: "Olimpo", partidos: [{l:"Liniers", v:"Pacífico (C)", gl:7, gv:0, dia:"Sáb 20/06", hora:"15:30", goles_l:["Agustina Borda","Agustina Borda","Iara Schwab","Iara Schwab","Isabella Pezzutti","Paz Cutrín","Ailén Márquez"], goles_v:[]}, {l:"San Francisco", v:"Petroquímicos", gl:0, gv:1, dia:"Sáb 20/06", hora:"15:30", goles_l:[], goles_v:["Renata Segovia"]}, {l:"Sansinena", v:"Estrella de Oro", gl:0, gv:0, dia:"Dom 21/06", hora:"15:30", goles_l:[], goles_v:[]},{l:"Rosario PB", v:"Huracán", gl:9, gv:2, dia:"Dom 21/06", hora:"15:30", goles_l:["Mariela Sollosky","Mariela Sollosky","Celeste Medina","Celeste Medina","Juliana Ruiz","Valentina Cavalli","Ayelén Zeballos","Carolina Díaz","Bárbara Aguirre"], goles_v:[]}] },
     { fecha: 14, libre: "Liniers", partidos: [{l:"Huracán", v:"Sansinena", gl:2, gv:0, dia:"Sáb 27/06", hora:"15:30", goles_l:["Keila Iglesias","Keila Iglesias"], goles_v:[]}, {l:"Pacífico (C)", v:"San Francisco", gl:0, gv:1, dia:"Dom 28/06", hora:"10:00", goles_l:[], goles_v:["Elena Spinucci"]}, {l:"Petroquímicos", v:"Rosario PB", gl:1, gv:0, dia:"Dom 28/06", hora:"15:30", goles_l:["Cintia Saavedra"], goles_v:[]}, {l:"Olimpo", v:"Estrella de Oro", gl:1, gv:2, dia:"Dom 28/06", hora:"15:30", goles_l:["Paloma Dambolena"], goles_v:["Luana Anfossi","Luana Anfossi"]}] },
-    { fecha: 15, libre: "San Francisco", partidos: [{l:"Liniers", v:"Olimpo", gl:4, gv:0, dia:"Sáb 04/07", hora:"15:30", goles_l:["Paulina Acevedo","Paulina Acevedo","Paulina Acevedo","Iara Schwab"], goles_v:[]}, {l:"Rosario PB", v:"Pacífico (C)", gl:6, gv:2, dia:"Sáb 04/07", hora:"15:30", goles_l:["Carolina Díaz","Carolina Díaz","Carolina Díaz","Bárbara Aguirre","Valentina Cavalli","Mariela Sollosky"], goles_v:[]}, {l:"Sansinena", v:"Petroquímicos", gl:1, gv:3, dia:"Dom 05/07", hora:"15:30"}, {l:"Estrella de Oro", v:"Huracán", gl:2, gv:1, dia:"Dom 05/07", hora:"15:30"}] },
+    { fecha: 15, libre: "San Francisco", partidos: [{l:"Liniers", v:"Olimpo", gl:4, gv:0, dia:"Sáb 04/07", hora:"15:30", goles_l:["Paulina Acevedo","Paulina Acevedo","Paulina Acevedo","Iara Schwab"], goles_v:[]}, {l:"Rosario PB", v:"Pacífico (C)", gl:6, gv:2, dia:"Sáb 04/07", hora:"15:30", goles_l:["Carolina Díaz","Carolina Díaz","Carolina Díaz","Bárbara Aguirre","Valentina Cavalli","Mariela Sollosky"], goles_v:["Gianna Gerling","Natali Recagno"]}, {l:"Sansinena", v:"Petroquímicos", gl:1, gv:3, dia:"Dom 05/07", hora:"15:30", goles_l:["Melina Gómez"], goles_v:["Morena Varela","Morena Varela","Nicole Montenegro"]}, {l:"Estrella de Oro", v:"Huracán", gl:2, gv:1, dia:"Dom 05/07", hora:"15:30", goles_l:["Luana Anfossi","Mariana González"], goles_v:["Natasha Mella"]}] },
     { fecha: 16, libre: "Rosario PB", partidos: [{l:"Pacífico (C)", v:"Sansinena", gl:null, gv:null}, {l:"Petroquímicos", v:"Estrella de Oro", gl:null, gv:null}, {l:"Liniers", v:"San Francisco", gl:null, gv:null}, {l:"Olimpo", v:"Huracán", gl:null, gv:null}] },
     { fecha: 17, libre: "Sansinena", partidos: [{l:"Olimpo", v:"San Francisco", gl:null, gv:null}, {l:"Rosario PB", v:"Liniers", gl:null, gv:null}, {l:"Estrella de Oro", v:"Pacífico (C)", gl:null, gv:null}, {l:"Huracán", v:"Petroquímicos", gl:null, gv:null}] },
     { fecha: 18, libre: "Estrella de Oro", partidos: [{l:"Pacífico (C)", v:"Huracán", gl:null, gv:null}, {l:"San Francisco", v:"Rosario PB", gl:null, gv:null}, {l:"Petroquímicos", v:"Olimpo", gl:null, gv:null}, {l:"Liniers", v:"Sansinena", gl:null, gv:null}] },
@@ -2258,7 +2258,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 15).partidos.forEach(p
 });
 
 
-let diaSeleccionadoHome = "2026-07-05"; 
+let diaSeleccionadoHome = "2026-07-06"; 
 
 function seleccionarDiaHome(dia) {
     diaSeleccionadoHome = dia;
@@ -2359,7 +2359,7 @@ function generarHome() {
         ]},
        { id: "2026-07-06", label: "LUN 06/07", torneos: [
          { nombre: "SEMIFINALES - RESERVA PROMOCIONAL", cat: "reserva_promocional", noAutoResult: true, partidos: [
-                {l:"Tiro Federal", v:"Comercial", hora:"15:30"}
+                {l:"Tiro Federal", v:"Comercial", hora:"15:30", gl:2, gv:0}
             ]},
        ]},
       { id: "2026-07-08", label: "MIÉR 08/07", torneos: [
@@ -16500,11 +16500,11 @@ function generarSub() {
         });
         html += `</tbody></table>`;
         if (cat.key === 'sub13') {
-            html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>18</b> para los que jugaron 6 partidos</div>`;
+            html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>18</b> para los que jugaron 6 partidos y <b>18</b> para los que jugaron 7 partidos</div>`;
         } else if (cat.key === 'sub15') {
-            html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>18</b> para los que jugaron 6 partidos</div>`;
+            html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>18</b> para los que jugaron 6 partidos y <b>18</b> para los que jugaron 7 partidos</div>`;
         } else if (cat.key === 'sub17') {
-            html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>18</b> para los que jugaron 6 partidos</div>`;
+            html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>18</b> para los que jugaron 6 partidos y <b>18</b> para los que jugaron 7 partidos</div>`;
         }
 
         // Goleadores
@@ -18182,6 +18182,15 @@ function verDetalleTorneo(clave) {
     document.getElementById("contenido").innerHTML = html;
 }
 
+/* Jugadores que cambiaron de equipo en el mismo torneo.
+   Cada entrada fusiona varias keys "nombre|equipo" en una sola fila.
+   El primer equipo de la lista se usa como equipo principal en la tabla. */
+const BD_ALIAS_JUGADORES = {
+    femenino: [
+        { nombre: "Marianela Santana", equipos: ["Empleados de Comercio", "Municipales"] }
+    ]
+};
+
 function generarGoleadores(cat) {
     const goles = {};
     const golesEnContra = {};
@@ -18208,33 +18217,38 @@ function generarGoleadores(cat) {
 
     const todosPartidos = [...partidos, ...partidosPlayoff];
 
+    // Función para resolver la key canónica según aliases
+    const aliases = BD_ALIAS_JUGADORES[cat] || [];
+    const resolverKey = (nombre, equipo) => {
+        const alias = aliases.find(a => a.nombre === nombre && a.equipos.includes(equipo));
+        if (alias) return `${nombre}|__alias__`;
+        return `${nombre}|${equipo}`;
+    };
+    const resolverEquipo = (nombre, equipo) => {
+        const alias = aliases.find(a => a.nombre === nombre && a.equipos.includes(equipo));
+        if (alias) return alias.equipos.join(' / ');
+        return equipo;
+    };
+
     todosPartidos.forEach(p => {
         if (p.gl === null) return;
         (p.goles_l || []).forEach(g => {
             const esEC = g.includes('(e/c)');
             const nombre = g.replace(' (e/c)', '').trim();
-            if (esEC) {
-                const key = `${nombre}|${p.l}`;
-                if (!golesEnContra[key]) golesEnContra[key] = { jugador: nombre, equipo: p.l, n: 0 };
-                golesEnContra[key].n++;
-            } else {
-                const key = `${nombre}|${p.l}`;
-                if (!goles[key]) goles[key] = { jugador: nombre, equipo: p.l, n: 0 };
-                goles[key].n++;
-            }
+            const key = resolverKey(nombre, p.l) + (esEC ? '|ec' : '');
+            const equipo = resolverEquipo(nombre, p.l);
+            const mapa = esEC ? golesEnContra : goles;
+            if (!mapa[key]) mapa[key] = { jugador: nombre, equipo, n: 0 };
+            mapa[key].n++;
         });
         (p.goles_v || []).forEach(g => {
             const esEC = g.includes('(e/c)');
             const nombre = g.replace(' (e/c)', '').trim();
-            if (esEC) {
-                const key = `${nombre}|${p.v}`;
-                if (!golesEnContra[key]) golesEnContra[key] = { jugador: nombre, equipo: p.v, n: 0 };
-                golesEnContra[key].n++;
-            } else {
-                const key = `${nombre}|${p.v}`;
-                if (!goles[key]) goles[key] = { jugador: nombre, equipo: p.v, n: 0 };
-                goles[key].n++;
-            }
+            const key = resolverKey(nombre, p.v) + (esEC ? '|ec' : '');
+            const equipo = resolverEquipo(nombre, p.v);
+            const mapa = esEC ? golesEnContra : goles;
+            if (!mapa[key]) mapa[key] = { jugador: nombre, equipo, n: 0 };
+            mapa[key].n++;
         });
     });
 
@@ -18258,13 +18272,26 @@ function generarGoleadores(cat) {
         datos.forEach(g => {
             realIdx++;
             if (g.n !== prev) { pos = realIdx; prev = g.n; }
-            const escudo = BD_EQUIPOS[cat]?.find(e => e.nombre === g.equipo)?.clase || '';
+            // Para el perfil, usar el primer equipo del alias si aplica
+            const alias = aliases.find(a => a.nombre === g.jugador);
+            const equipoPerfil = alias ? alias.equipos[alias.equipos.length - 1] : g.equipo;
+            const escudo = BD_EQUIPOS[cat]?.find(e => e.nombre === (alias ? alias.equipos[0] : g.equipo))?.clase || '';
             const jugNorm = g.jugador.replace(/'/g, "\\'");
-            const eqNorm = g.equipo.replace(/'/g, "\\'");
+            const eqNorm = equipoPerfil.replace(/'/g, "\\'");
+            // Mostrar escudos de todos los equipos si es alias
+            let escudosHtml = '';
+            if (alias) {
+                alias.equipos.forEach(eq => {
+                    const cl = BD_EQUIPOS[cat]?.find(e => e.nombre === eq)?.clase || '';
+                    escudosHtml += `<div class="escudo ${cl}" style="display:inline-block;vertical-align:middle;margin-right:2px;"></div>`;
+                });
+            } else {
+                escudosHtml = `<div class="escudo ${escudo}" style="display:inline-block;vertical-align:middle;margin-right:4px;"></div>`;
+            }
             h += `<tr>
                 <td class="c-pos">${pos}</td>
                 <td style="text-align:left;padding-left:8px;font-size:12px;cursor:pointer;color:#00331a;font-weight:bold;" onclick="verPerfilJugador('${jugNorm}','${eqNorm}')">${g.jugador} ▶</td>
-                <td style="text-align:left;padding-left:8px;font-size:11px;"><div class="escudo ${escudo}" style="display:inline-block;vertical-align:middle;margin-right:4px;"></div>${g.equipo}</td>
+                <td style="text-align:left;padding-left:8px;font-size:11px;">${escudosHtml}${g.equipo}</td>
                 <td class="c-stat"><b>${g.n}</b></td>
             </tr>`;
         });
@@ -18479,6 +18506,10 @@ function generarPerfilJugador(jugador, equipo) {
                 .forEach(p => { if (p) todosPartidos.push({ l: p.local, v: p.visitante, gl: p.gl, gv: p.gv, goles_l: p.goles_l||[], goles_v: p.goles_v||[], dia: 'Playoffs' }); });
         }
 
+        // Resolver todos los equipos del jugador (puede haber cambiado de equipo)
+        const alias = (BD_ALIAS_JUGADORES[cat] || []).find(a => a.nombre === jugador && a.equipos.includes(equipo));
+        const equiposBuscar = alias ? alias.equipos : [equipo];
+
         todosPartidos.forEach(p => {
                 if (p.gl === null) return;
                 const golesL = p.goles_l || [];
@@ -18488,7 +18519,7 @@ function generarPerfilJugador(jugador, equipo) {
                 let golesJugador = 0;
                 let esEC = false;
 
-                if (p.l === equipo) {
+                if (equiposBuscar.includes(p.l)) {
                     golesL.forEach(g => {
                         if (nombreLimpio(g) === jugador) {
                             golesJugador++;
@@ -18498,9 +18529,10 @@ function generarPerfilJugador(jugador, equipo) {
                     if (golesJugador > 0) {
                         const rival = p.v;
                         const escRival = BD_EQUIPOS[cat]?.find(e => e.nombre === rival)?.clase || '';
-                        partidos.push({ fecha: p.dia || '', torneo: catLabels[cat], condicion: 'Local', rival, escRival, resultado: `${p.gl}-${p.gv}`, goles: golesJugador, esEC });
+                        const escPropio = BD_EQUIPOS[cat]?.find(e => e.nombre === p.l)?.clase || '';
+                        partidos.push({ fecha: p.dia || '', torneo: catLabels[cat], condicion: 'Local', equipoPropio: p.l, escPropio, rival, escRival, resultado: `${p.gl}-${p.gv}`, goles: golesJugador, esEC });
                     }
-                } else if (p.v === equipo) {
+                } else if (equiposBuscar.includes(p.v)) {
                     golesV.forEach(g => {
                         if (nombreLimpio(g) === jugador) {
                             golesJugador++;
@@ -18510,7 +18542,8 @@ function generarPerfilJugador(jugador, equipo) {
                     if (golesJugador > 0) {
                         const rival = p.l;
                         const escRival = BD_EQUIPOS[cat]?.find(e => e.nombre === rival)?.clase || '';
-                        partidos.push({ fecha: p.dia || '', torneo: catLabels[cat], condicion: 'Visitante', rival, escRival, resultado: `${p.gl}-${p.gv}`, goles: golesJugador, esEC });
+                        const escPropio = BD_EQUIPOS[cat]?.find(e => e.nombre === p.v)?.clase || '';
+                        partidos.push({ fecha: p.dia || '', torneo: catLabels[cat], condicion: 'Visitante', equipoPropio: p.v, escPropio, rival, escRival, resultado: `${p.gl}-${p.gv}`, goles: golesJugador, esEC });
                     }
                 }
             });
@@ -18557,9 +18590,12 @@ function generarPerfilJugador(jugador, equipo) {
                 <div style="width:30px;text-align:center;">⚽</div>
             </div>`;
         partidos.forEach(p => {
+            const equipoTag = p.equipoPropio && p.equipoPropio !== equipo
+                ? `<div class="escudo ${p.escPropio||''}" style="display:inline-block;vertical-align:middle;margin-right:2px;flex-shrink:0;"></div><span style="font-size:9px;color:#888;">(${p.equipoPropio})</span> `
+                : '';
             html += `<div style="display:flex;align-items:center;padding:5px 8px;border-bottom:1px solid #eee;">
                 <div style="width:70px;flex-shrink:0;font-size:9px;color:#666;line-height:1.4;">${p.fecha}<br><span style="color:#bbb;">${p.torneo.replace('Torneo ','')}</span></div>
-                <div style="flex:1;display:flex;align-items:center;gap:4px;overflow:hidden;"><div class="escudo ${p.escRival}" style="flex-shrink:0;"></div><span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${p.condicion === 'Local' ? 'vs' : 'en'} ${p.rival}</span></div>
+                <div style="flex:1;display:flex;align-items:center;gap:4px;overflow:hidden;">${equipoTag}<div class="escudo ${p.escRival}" style="flex-shrink:0;"></div><span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${p.condicion === 'Local' ? 'vs' : 'en'} ${p.rival}</span></div>
                 <div style="width:40px;text-align:center;font-size:11px;">${p.resultado}</div>
                 <div style="width:30px;text-align:center;font-weight:bold;">${p.goles}${p.esEC ? '*' : ''}</div>
             </div>`;
@@ -19052,14 +19088,14 @@ const BD_RESERVA_OFICIAL_PLAYOFFS = {
 const BD_RESERVA_PROMOCIONAL_PLAYOFFS = {
     semifinales: [
         { local: "Olimpo", clL: "olimpo", visitante: "Rosario PB", clV: "rosariopb", gl: null, gv: null },
-        { local: "Tiro Federal", clL: "tirofederal", visitante: "Comercial", clV: "comercial", gl: null, gv: null }
+        { local: "Tiro Federal", clL: "tirofederal", visitante: "Comercial", clV: "comercial", gl: 2, gv: 0 }
     ],
     final: { local: "A confirmar", clL: "escudo", visitante: "A confirmar", clV: "escudo", gl: null, gv: null }
 };
 
 const BD_FEMENINO_PLAYOFFS = {
     semifinales: [
-        { local: "Municipales", clL: "municipales", visitante: "Empleados de Comercio", clV: "empleados", gl: 11, gv: 0, goles_l: [], goles_v: [] },
+        { local: "Municipales", clL: "municipales", visitante: "Empleados de Comercio", clV: "empleados", gl: 11, gv: 0, goles_l: ["Luana Villanueva","Luana Villanueva","Luana Villanueva","Luana Villanueva","Marianela Santana","Marianela Santana","Victoria Nervi","Stefanía Sueyro","Tania Espíndola","Ivana Lindstrom","Agustina Malaspina (e/c)"], goles_v: [] },
         { local: "Tiro Federal", clL: "tirofederal", visitante: "Villa Mitre", clV: "villamitre", gl: 1, gv: 2, goles_l: ["Morena Juárez"], goles_v: ["Sol Menéndez Perrone","Morena Bouven"] }
     ],
     final: { local: "Municipales", clL: "municipales", visitante: "Villa Mitre", clV: "villamitre", gl: null, gv: null }
