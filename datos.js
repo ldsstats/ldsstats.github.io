@@ -2258,7 +2258,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 15).partidos.forEach(p
 });
 
 
-let diaSeleccionadoHome = "2026-07-06"; 
+let diaSeleccionadoHome = "2026-07-07"; 
 
 function seleccionarDiaHome(dia) {
     diaSeleccionadoHome = dia;
@@ -2279,87 +2279,23 @@ const BD_FECHA_META = {
 function generarHome() {
     const agenda = [
  
-        { id: "2026-06-30", label: "MAR 30/06", torneos: [
-            { nombre: "OCTAVOS DE FINAL - SENIOR", cat: "seniorapertura", noAutoResult: true, partidos: [
-                {l:"Sansinena", v:"Pacífico BB", hora:"20:00",nota:"en cancha de Libertad", gl:1, gv:1},
-                {l:"Pacífico (C)", v:"Libertad", hora:"20:00",nota:"en cancha de Tiro Federal", gl:2, gv:2},
-                {l:"Comercial", v:"Tiro Federal", hora:"21:30",nota:"en cancha de Libertad", gl:0, gv:3},
-                {l:"Huracán", v:"San Francisco", hora:"21:30",nota:"en cancha de Tiro Federal", gl:0, gv:3}
-            ]},
-            { nombre: "RESERVA OFICIAL", cat: "reserva_oficial", noAutoResult: true, partidos: [
-                {l:"Bella Vista", v:"Huracán", hora:"15:00", gl:2, gv:0},
-                {l:"San Francisco", v:"Liniers", hora:"15:00", gl:2, gv:0}
-            ]},
-        ]},
-       { id: "2026-07-01", label: "MIÉR 01/07", torneos: [
-            { nombre: "FUTSAL - CUARTOS DE FINAL", cat: "futsal", noAutoResult: true, partidos: [
-                {l:"Villa Mitre", v:"Liniers", hora:"22:00",nota:"en cancha de Don Bosco", gl:3, gv:4},
-                {l:"Los 3 Chiflados", v:"Comercial", hora:"22:00",nota:"en cancha de La Curtiembre. <b>Pasó Los 3 Chiflados por ventaja deportiva</b>", gl:3, gv:3}
-            ]},
-          { nombre: "FUTSAL RESERVA - CUARTOS DE FINAL", cat: "futsalreserva", noAutoResult: true, partidos: [
-                {l:"Liniers", v:"Dublin", hora:"20:30",nota:"en cancha de Don Bosco", gl:3, gv:5},
-                {l:"Los 3 Chiflados", v:"San Francisco", hora:"20:30",nota:"en cancha de La Curtiembre. <b>Pasó Los 3 Chiflados por ventaja deportiva</b>", gl:3, gv:3}
-            ]},
-       ]},
-      { id: "2026-07-02", label: "JUE 02/07", torneos: [
-            { nombre: "FUTSAL - CUARTOS DE FINAL", cat: "futsal", noAutoResult: true, partidos: [
-                {l:"La Estación", v:"Pacífico BB", hora:"22:00",nota:"en cancha de Don Bosco", gl: 5, gv: 2},
-                {l:"La Esperanza", v:"Tiro Federal", hora:"22:00",nota:"en cancha de La Curtiembre", gl: 6, gv: 2}
-            ]},
-          { nombre: "FUTSAL RESERVA - CUARTOS DE FINAL", cat: "futsalreserva", noAutoResult: true, partidos: [
-                {l:"Villa Mitre", v:"La Estación", hora:"20:30",nota:"en cancha de Don Bosco", gl:4, gv:4},
-                {l:"Petroquímicos", v:"La Esperanza", hora:"20:30",nota:"en cancha de La Curtiembre", gl:4, gv:2}
-            ]},
-       ]},
-        { id: "2026-07-04", label: "SÁB 04/07", torneos: [
-            { nombre: "SEMIFINALES - OFICIAL", cat: "oficial", noAutoResult: true, partidos: [
-                {l:"Huracán", v:"Villa Mitre", hora:"15:00",nota:"en cancha de Sansinena", gl:1, gv:0},
-                {l:"Bella Vista", v:"Liniers", hora:"15:00", gl:0, gv:0, pen_l: 1, pen_v: 3}
-            ]},
-            { nombre: "SEMIFINALES - PROMOCIONAL", cat: "promocional", noAutoResult: true, partidos: [
-                {l:"Comercial", v:"Sansinena", hora:"15:00", gl:0, gv:0, pen_l: 3, pen_v: 2},
-                {l:"Tiro Federal", v:"Rosario PB", hora:"15:00", gl:4, gv:0}
-            ]},
-           { nombre: "SEMIFINALES - RESERVA OFICIAL", cat: "reserva_oficial", noAutoResult: true, partidos: [
-                {l:"Libertad", v:"Villa Mitre", hora:"10:00", gl: 0, gv: 1}
-            ]},
-            { nombre: "2°FEMENINO", cat: "segundafemenino", noAutoResult: true, partidos: [
-                {l:"Liniers", v:"Olimpo", hora:"15:30", gl:4, gv:0},
-                {l:"Rosario PB", v:"Pacífico (C)", hora:"15:30", gl: 6, gv: 2}
-            ]},
-            { nombre: "SUB 15 FEM", cat: "sub15fem", noAutoResult: true, partidos: [
-                {l:"Olimpo", v:"Huracán", hora:"12:00", gl: 1, gv: 0},
-                {l:"Libertad", v:"Bella Vista", hora:"16:00", gl: 0, gv: 10}
-            ]},
-        ]},
-        { id: "2026-07-05", label: "DOM 05/07", torneos: [
-         { nombre: "SEMIFINALES - RESERVA OFICIAL", cat: "reserva_oficial", noAutoResult: true, partidos: [
-                {l:"Sporting", v:"Bella Vista", hora:"15:00", gl:0, gv:0, pen_l: 3, pen_v: 2}
-            ]},
-            { nombre: "SEMIFINALES - 1°FEMENINO", cat: "femenino", noAutoResult: true, partidos: [
-                {l:"Tiro Federal", v:"Villa Mitre", hora:"15:00", gl:1, gv:2},
-                {l:"Municipales", v:"Empleados de Comercio", hora:"15:00", gl:11, gv:0}
-            ]},
-            { nombre: "SEMIFINALES - 1°FEMENINO RESERVA", cat: "reserva_femenino", noAutoResult: true, partidos: [
-                {l:"Tiro Federal", v:"Bella Vista", hora:"12:00", gl:0, gv:1},
-                {l:"Villa Mitre", v:"Municipales", hora:"12:00", gl:0, gv:0, pen_l: 3, pen_v: 4}
-            ]},
-            { nombre: "2°FEMENINO", cat: "segundafemenino", noAutoResult: true, partidos: [
-                {l:"Estrella de Oro", v:"Huracán", hora:"15:30", nota:"en el sintético de Villa Mitre", gl:2, gv:1},
-                {l:"Sansinena", v:"Petroquímicos", hora:"15:30", gl:1, gv:3}
-            ]},
-            { nombre: "SUB 15 FEM", cat: "sub15fem", noAutoResult: true, partidos: [
-                {l:"Empleados de Comercio", v:"Sporting", hora:"11:00", gl: 0, gv: 4},
-                {l:"Liniers", v:"Villa Mitre", hora:"15:00", gl:5, gv:0},
-                {l:"La Armonía", v:"Juventud Unida", hora:"15:00", gl: 1, gv: 2}
-            ]},
-            { nombre: "FEDERAL A", cat: "federala", noAutoResult: true, partidos: [
-                {l:"Olimpo", v:"Villa Mitre", hora:"15:00", gl:0, gv:0}
-            ]},
-        ]},
        { id: "2026-07-06", label: "LUN 06/07", torneos: [
          { nombre: "SEMIFINALES - RESERVA PROMOCIONAL", cat: "reserva_promocional", noAutoResult: true, partidos: [
                 {l:"Tiro Federal", v:"Comercial", hora:"15:30", gl:2, gv:0}
+            ]},
+       ]},
+       { id: "2026-07-07", label: "MAR 07/07", torneos: [
+         { nombre: "SEMIFINAL - FUTSAL", cat: "futsal", noAutoResult: true, partidos: [
+                {l:"La Estación", v:"Los 3 Chiflados", hora:"22:00", gl:null, gv:null,nota:"en el predio de Don Bosco"},
+                {l:"La Esperanza", v:"Villa Mitre", hora:"22:00", gl:null, gv:null,nota:"en el predio de La Curtiembre"}
+            ]},
+         { nombre: "SEMIFINAL - FUTSAL RESERVA", cat: "futsalreserva", noAutoResult: true, partidos: [
+                {l:"Los 3 Chiflados", v:"Dublin", hora:"20:30", gl:null, gv:null,nota:"en el predio de Don Bosco"},
+                {l:"Villa Mitre", v:"Petroquímicos", hora:"20:30", gl:null, gv:null,nota:"en el predio de La Curtiembre"}
+            ]},
+         { nombre: "CUARTOS DE FINAL - SENIOR", cat: "seniorapertura", noAutoResult: true, partidos: [
+                {l:"Pacífico (C)", v:"Sansinena", hora:"20:15", gl:null, gv:null,nota:"en el predio de Tiro Federal"},
+                {l:"Comercial", v:"San Francisco", hora:"21:30", gl:null, gv:null,nota:"en el predio de Comercial"}
             ]},
        ]},
       { id: "2026-07-08", label: "MIÉR 08/07", torneos: [
@@ -18281,17 +18217,18 @@ function generarGoleadores(cat) {
             // Mostrar escudos de todos los equipos si es alias
             let escudosHtml = '';
             if (alias) {
-                alias.equipos.forEach(eq => {
+                alias.equipos.forEach((eq, idx) => {
                     const cl = BD_EQUIPOS[cat]?.find(e => e.nombre === eq)?.clase || '';
-                    escudosHtml += `<div class="escudo ${cl}" style="display:inline-block;vertical-align:middle;margin-right:2px;"></div>`;
+                    escudosHtml += `<div class="escudo ${cl}" style="display:inline-block;vertical-align:middle;margin-right:3px;"></div>${eq}`;
+                    if (idx < alias.equipos.length - 1) escudosHtml += ` / `;
                 });
             } else {
-                escudosHtml = `<div class="escudo ${escudo}" style="display:inline-block;vertical-align:middle;margin-right:4px;"></div>`;
+                escudosHtml = `<div class="escudo ${escudo}" style="display:inline-block;vertical-align:middle;margin-right:4px;"></div>${g.equipo}`;
             }
             h += `<tr>
                 <td class="c-pos">${pos}</td>
                 <td style="text-align:left;padding-left:8px;font-size:12px;cursor:pointer;color:#00331a;font-weight:bold;" onclick="verPerfilJugador('${jugNorm}','${eqNorm}')">${g.jugador} ▶</td>
-                <td style="text-align:left;padding-left:8px;font-size:11px;">${escudosHtml}${g.equipo}</td>
+                <td style="text-align:left;padding-left:8px;font-size:11px;">${escudosHtml}</td>
                 <td class="c-stat"><b>${g.n}</b></td>
             </tr>`;
         });
@@ -18483,10 +18420,21 @@ function generarArqueros(cat) {
 }
 
 function generarPerfilJugador(jugador, equipo) {
-    // Buscar en todos los fixtures
     const cats = ['oficial', 'promocional', 'femenino', 'segundafemenino', 'federala'];
     const catLabels = { oficial: 'Torneo Oficial', promocional: 'Torneo Promocional', femenino: '1° Femenino', segundafemenino: '2° Femenino', federala: 'Federal A' };
-    const partidos = [];
+
+    // Detectar si el jugador cambió de equipo en esta categoría
+    let alias = null;
+    for (const cat of cats) {
+        const found = (BD_ALIAS_JUGADORES[cat] || []).find(a => a.nombre === jugador && a.equipos.includes(equipo));
+        if (found) { alias = found; break; }
+    }
+    const equipoAnterior = alias ? alias.equipos[0] : null;
+    const equipoActual   = alias ? alias.equipos[alias.equipos.length - 1] : equipo;
+    const cambioDeEquipo = alias && alias.equipos.length > 1 && alias.equipos[0] !== alias.equipos[alias.equipos.length - 1];
+
+    // Recolectar partidos etiquetados por equipo en que jugó
+    const partidosPorEquipo = {}; // { nombreEquipo: [partidos] }
 
     cats.forEach(cat => {
         let fixtures;
@@ -18494,113 +18442,131 @@ function generarPerfilJugador(jugador, equipo) {
         else if (cat === 'federala') fixtures = BD_FIXTURES.federala.posiciones;
         else fixtures = BD_FIXTURES[cat]?.apertura || [];
 
-        // Partidos de fase regular
         const todosPartidos = fixtures.flatMap(f => f.partidos);
 
-        // Agregar partidos de playoffs de este torneo (convertidos al formato l/v)
         const playoffsBD = { oficial: BD_OFICIAL_PLAYOFFS, promocional: BD_PROMOCIONAL_PLAYOFFS, femenino: BD_FEMENINO_PLAYOFFS };
         const pd = playoffsBD[cat];
         if (pd) {
             [...(pd.octavos||[]), ...(pd.cuartos||[]), ...(pd.semifinales||[]), pd.final]
-                .filter(p => p && p.gl !== null && p.goles_l?.length || p?.goles_v?.length)
+                .filter(p => p && p.gl !== null)
                 .forEach(p => { if (p) todosPartidos.push({ l: p.local, v: p.visitante, gl: p.gl, gv: p.gv, goles_l: p.goles_l||[], goles_v: p.goles_v||[], dia: 'Playoffs' }); });
         }
 
-        // Resolver todos los equipos del jugador (puede haber cambiado de equipo)
-        const alias = (BD_ALIAS_JUGADORES[cat] || []).find(a => a.nombre === jugador && a.equipos.includes(equipo));
         const equiposBuscar = alias ? alias.equipos : [equipo];
+        const nombreLimpio = n => n.replace(' (e/c)', '').replace(' (p)', '').trim();
 
         todosPartidos.forEach(p => {
-                if (p.gl === null) return;
-                const golesL = p.goles_l || [];
-                const golesV = p.goles_v || [];
-                const nombreLimpio = nombre => nombre.replace(' (e/c)', '').replace(' (p)', '').trim();
+            if (p.gl === null) return;
+            const golesL = p.goles_l || [];
+            const golesV = p.goles_v || [];
 
-                let golesJugador = 0;
-                let esEC = false;
+            let golesJugador = 0, esEC = false, equipoEnEstePartido = null, condicion = null, rival = null;
 
-                if (equiposBuscar.includes(p.l)) {
-                    golesL.forEach(g => {
-                        if (nombreLimpio(g) === jugador) {
-                            golesJugador++;
-                            if (g.includes('(e/c)')) esEC = true;
-                        }
-                    });
-                    if (golesJugador > 0) {
-                        const rival = p.v;
-                        const escRival = BD_EQUIPOS[cat]?.find(e => e.nombre === rival)?.clase || '';
-                        const escPropio = BD_EQUIPOS[cat]?.find(e => e.nombre === p.l)?.clase || '';
-                        partidos.push({ fecha: p.dia || '', torneo: catLabels[cat], condicion: 'Local', equipoPropio: p.l, escPropio, rival, escRival, resultado: `${p.gl}-${p.gv}`, goles: golesJugador, esEC });
-                    }
-                } else if (equiposBuscar.includes(p.v)) {
-                    golesV.forEach(g => {
-                        if (nombreLimpio(g) === jugador) {
-                            golesJugador++;
-                            if (g.includes('(e/c)')) esEC = true;
-                        }
-                    });
-                    if (golesJugador > 0) {
-                        const rival = p.l;
-                        const escRival = BD_EQUIPOS[cat]?.find(e => e.nombre === rival)?.clase || '';
-                        const escPropio = BD_EQUIPOS[cat]?.find(e => e.nombre === p.v)?.clase || '';
-                        partidos.push({ fecha: p.dia || '', torneo: catLabels[cat], condicion: 'Visitante', equipoPropio: p.v, escPropio, rival, escRival, resultado: `${p.gl}-${p.gv}`, goles: golesJugador, esEC });
-                    }
-                }
-            });
+            if (equiposBuscar.includes(p.l)) {
+                golesL.forEach(g => { if (nombreLimpio(g) === jugador) { golesJugador++; if (g.includes('(e/c)')) esEC = true; } });
+                if (golesJugador > 0) { equipoEnEstePartido = p.l; condicion = 'Local'; rival = p.v; }
+            } else if (equiposBuscar.includes(p.v)) {
+                golesV.forEach(g => { if (nombreLimpio(g) === jugador) { golesJugador++; if (g.includes('(e/c)')) esEC = true; } });
+                if (golesJugador > 0) { equipoEnEstePartido = p.v; condicion = 'Visitante'; rival = p.l; }
+            }
+
+            if (golesJugador > 0 && equipoEnEstePartido) {
+                const escRival = BD_EQUIPOS[cat]?.find(e => e.nombre === rival)?.clase || '';
+                const escPropio = BD_EQUIPOS[cat]?.find(e => e.nombre === equipoEnEstePartido)?.clase || '';
+                if (!partidosPorEquipo[equipoEnEstePartido]) partidosPorEquipo[equipoEnEstePartido] = [];
+                partidosPorEquipo[equipoEnEstePartido].push({ fecha: p.dia || '', torneo: catLabels[cat], condicion, rival, escRival, escPropio, resultado: `${p.gl}-${p.gv}`, goles: golesJugador, esEC });
+            }
+        });
     });
 
-    const escudoEq = Object.values(BD_EQUIPOS).flat().find(e => e.nombre === equipo)?.clase 
-        || Object.values(BD_EQUIPOS).flat().find(e => e.nombre.startsWith(equipo) || equipo.startsWith(e.nombre))?.clase || '';
-    const totalGoles = partidos.filter(p => !p.esEC).reduce((a, p) => a + p.goles, 0);
-    const totalEC = partidos.filter(p => p.esEC).reduce((a, p) => a + p.goles, 0);
+    // Escudos
+    const getEscudo = nombre => Object.values(BD_EQUIPOS).flat().find(e => e.nombre === nombre)?.clase || '';
+    const escActual   = getEscudo(equipoActual);
+    const escAnterior = cambioDeEquipo ? getEscudo(equipoAnterior) : null;
 
-    const statsStr = totalGoles > 0 && totalEC > 0
-        ? `${totalGoles} gol${totalGoles !== 1 ? 'es' : ''} · ${totalEC} en contra`
-        : totalGoles > 0
-        ? `${totalGoles} gol${totalGoles !== 1 ? 'es' : ''} en 2026`
-        : totalEC > 0
-        ? `${totalEC} gol${totalEC !== 1 ? 'es' : ''} en contra en 2026`
-        : `Sin goles en 2026`;
-
+    // HTML del header
     let html = `
     <div style="display:flex;align-items:center;gap:8px;padding:8px 10px;background:#f5f5f5;border-bottom:1px solid #ddd;cursor:pointer;" onclick="navegar('goleadores', estadoAnterior.categoria || 'oficial')">
         <span style="font-size:16px;color:#00331a;">←</span>
         <span style="font-size:11px;color:#555;">Volver a Goleadores</span>
     </div>
-    <div class="header-t" style="font-size:16px;text-align:center;padding:12px;">
-        ⚽ ${jugador}
-    </div>
-    <div style="display:flex;align-items:center;gap:10px;padding:10px 14px;background:#f0f7f0;border-bottom:1px solid #c8e6c9;">
-        <div class="escudo ${escudoEq}"></div>
-        <div>
-            <div style="font-size:13px;font-weight:bold;">${equipo}</div>
-            <div style="font-size:11px;color:#555;">${statsStr}</div>
-        </div>
-    </div>`;
+    <div class="header-t" style="font-size:16px;text-align:center;padding:12px;">⚽ ${jugador}</div>`;
 
-    if (partidos.length === 0) {
-        html += `<div style="text-align:center;padding:20px;color:#999;font-size:12px;">Sin partidos registrados</div>`;
+    if (cambioDeEquipo) {
+        html += `<div style="display:flex;align-items:center;justify-content:center;gap:16px;padding:12px 14px;background:#f0f7f0;border-bottom:1px solid #c8e6c9;">
+            <div style="display:flex;flex-direction:column;align-items:center;gap:4px;opacity:0.7;">
+                <div class="escudo ${escAnterior}"></div>
+                <div style="font-size:9px;color:#888;text-align:center;">Inició en<br><b>${equipoAnterior}</b></div>
+            </div>
+            <div style="font-size:18px;color:#aaa;">→</div>
+            <div style="display:flex;flex-direction:column;align-items:center;gap:4px;">
+                <div class="escudo ${escActual}"></div>
+                <div style="font-size:9px;color:#004d26;text-align:center;">Club actual<br><b>${equipoActual}</b></div>
+            </div>
+        </div>`;
     } else {
-        html += `<div class="header-t">PARTIDOS</div>
-        <div style="font-size:11px;">
+        const totalG = (partidosPorEquipo[equipo]||[]).filter(p=>!p.esEC).reduce((a,p)=>a+p.goles,0);
+        const escudoEq = getEscudo(equipo);
+        html += `<div style="display:flex;align-items:center;gap:10px;padding:10px 14px;background:#f0f7f0;border-bottom:1px solid #c8e6c9;">
+            <div class="escudo ${escudoEq}"></div>
+            <div><div style="font-size:13px;font-weight:bold;">${equipo}</div>
+            <div style="font-size:11px;color:#555;">${totalG} gol${totalG!==1?'es':''} en 2026</div></div>
+        </div>`;
+    }
+
+    // Función auxiliar para renderizar una tabla de partidos
+    const renderTabla = (lista) => {
+        if (!lista || lista.length === 0) return `<div style="text-align:center;padding:12px;color:#999;font-size:11px;">Sin goles registrados</div>`;
+        let t = `<div style="font-size:11px;">
             <div style="display:flex;background:#eee;font-weight:bold;padding:5px 8px;border-bottom:2px solid #ccc;font-size:10px;">
                 <div style="width:70px;flex-shrink:0;">Fecha</div>
                 <div style="flex:1;">Rival</div>
                 <div style="width:40px;text-align:center;">Res.</div>
                 <div style="width:30px;text-align:center;">⚽</div>
             </div>`;
-        partidos.forEach(p => {
-            const equipoTag = p.equipoPropio && p.equipoPropio !== equipo
-                ? `<div class="escudo ${p.escPropio||''}" style="display:inline-block;vertical-align:middle;margin-right:2px;flex-shrink:0;"></div><span style="font-size:9px;color:#888;">(${p.equipoPropio})</span> `
-                : '';
-            html += `<div style="display:flex;align-items:center;padding:5px 8px;border-bottom:1px solid #eee;">
+        lista.forEach(p => {
+            t += `<div style="display:flex;align-items:center;padding:5px 8px;border-bottom:1px solid #eee;">
                 <div style="width:70px;flex-shrink:0;font-size:9px;color:#666;line-height:1.4;">${p.fecha}<br><span style="color:#bbb;">${p.torneo.replace('Torneo ','')}</span></div>
-                <div style="flex:1;display:flex;align-items:center;gap:4px;overflow:hidden;">${equipoTag}<div class="escudo ${p.escRival}" style="flex-shrink:0;"></div><span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${p.condicion === 'Local' ? 'vs' : 'en'} ${p.rival}</span></div>
+                <div style="flex:1;display:flex;align-items:center;gap:4px;overflow:hidden;">
+                    <div class="escudo ${p.escRival}" style="flex-shrink:0;"></div>
+                    <span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${p.condicion === 'Local' ? 'vs' : 'en'} ${p.rival}</span>
+                </div>
                 <div style="width:40px;text-align:center;font-size:11px;">${p.resultado}</div>
                 <div style="width:30px;text-align:center;font-weight:bold;">${p.goles}${p.esEC ? '*' : ''}</div>
             </div>`;
         });
-        html += `</div>`;
+        t += `</div>`;
+        return t;
+    };
+
+    if (cambioDeEquipo) {
+        // Tabla del equipo anterior
+        const listAnterior = partidosPorEquipo[equipoAnterior] || [];
+        const listActual   = partidosPorEquipo[equipoActual]   || [];
+        const totalAnterior = listAnterior.filter(p=>!p.esEC).reduce((a,p)=>a+p.goles,0);
+        const totalActual   = listActual.filter(p=>!p.esEC).reduce((a,p)=>a+p.goles,0);
+
+        html += `<div style="display:flex;align-items:center;gap:6px;padding:6px 10px;background:#f9f9f9;border-bottom:1px solid #ddd;">
+            <div class="escudo ${escAnterior}" style="opacity:0.7;"></div>
+            <span style="font-size:11px;font-weight:bold;color:#555;">${equipoAnterior}</span>
+            <span style="font-size:10px;color:#999;margin-left:4px;">${totalAnterior} gol${totalAnterior!==1?'es':''}</span>
+        </div>`;
+        html += renderTabla(listAnterior);
+
+        html += `<div style="display:flex;align-items:center;gap:6px;padding:6px 10px;background:#f0f7f0;border-bottom:1px solid #c8e6c9;">
+            <div class="escudo ${escActual}"></div>
+            <span style="font-size:11px;font-weight:bold;color:#004d26;">${equipoActual} <span style="font-size:9px;font-weight:normal;background:#004d26;color:#fff;border-radius:3px;padding:1px 4px;">actual</span></span>
+            <span style="font-size:10px;color:#555;margin-left:4px;">${totalActual} gol${totalActual!==1?'es':''}</span>
+        </div>`;
+        html += renderTabla(listActual);
+    } else {
+        const lista = Object.values(partidosPorEquipo).flat();
+        if (lista.length === 0) {
+            html += `<div style="text-align:center;padding:20px;color:#999;font-size:12px;">Sin partidos registrados</div>`;
+        } else {
+            html += `<div class="header-t">PARTIDOS</div>`;
+            html += renderTabla(lista);
+        }
     }
 
     return html;
@@ -19335,7 +19301,7 @@ function generarCampeonesHistoricos() {
         <th style="width:25px;">#</th>
         <th style="text-align:left;padding-left:8px;">Equipo</th>
         <th class="c-stat" style="width:40px;">🏆</th>
-        <th style="text-align:left;padding-left:8px;font-size:9px;color:#777;">Años</th>
+        <th style="text-align:center;padding-left:8px;font-size:9px;color:#777;">Años</th>
     </tr></thead><tbody>`;
 
     BD_CAMPEONES_RANKING.forEach((e, i) => {
@@ -19346,7 +19312,7 @@ function generarCampeonesHistoricos() {
                 ${e.nombre}
             </td>
             <td class="c-stat"><b>${e.titulos}</b></td>
-            <td style="font-size:9px;color:#666;padding:4px 8px;line-height:1.6;">${e.anios.join(' · ')}</td>
+            <td style="font-size:9px;color:#666;padding:4px 8px;line-height:1.6;text-align:center;">${e.anios.join(' · ')}</td>
         </tr>`;
     });
 
