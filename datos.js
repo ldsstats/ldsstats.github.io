@@ -2406,8 +2406,8 @@ function generarHome() {
                 {l:"Villa Mitre", v:"Petroquímicos", hora:"20:30", gl:null, gv:null,nota:"en el predio de La Curtiembre", gl:5, gv:6}
             ]},
          { nombre: "CUARTOS DE FINAL - SENIOR", cat: "seniorapertura", noAutoResult: true, partidos: [
-                {l:"Pacífico (C)", v:"Sansinena", hora:"20:15", gl:null, gv:null,nota:"en el predio de Tiro Federal"},
-                {l:"Comercial", v:"San Francisco", hora:"21:30", gl:null, gv:null,nota:"en el predio de Comercial"}
+                {l:"Pacífico (C)", v:"Sansinena", hora:"20:15", gl:null, gv:null,nota:"en el predio de Tiro Federal", gl:4, gv:1},
+                {l:"Comercial", v:"San Francisco", hora:"21:30", gl:null, gv:null,nota:"en el predio de Comercial", gl:3, gv:1}
             ]},
        ]},
       { id: "2026-07-08", label: "MIÉR 08/07", torneos: [
@@ -17391,25 +17391,27 @@ const BD_GOLEADORES_SENIOR = [
     { nombre: "Marcos Cossu", equipo: "Sporting", goles: 8 },
     { nombre: "Juan José Dietz", equipo: "Tiro Federal", goles: 8 },
     { nombre: "Emiliano Jofré", equipo: "Sansinena", goles: 8 },
-    { nombre: "Esteban Angelini", equipo: "Pacífico (C)", goles: 6 },
-    { nombre: "Leandro Duelle", equipo: "Pacífico (C)", goles: 6 },
+    { nombre: "Leandro Duelle", equipo: "Pacífico (C)", goles: 7 },
+    { nombre: "Esteban Angelini", equipo: "Pacífico (C)", goles: 7 },
+    { nombre: "Maximiliano Casas", equipo: "Comercial", goles: 5 },
     { nombre: "Fabián Merlini", equipo: "Bella Vista", goles: 4 },
-    { nombre: "Maximiliano Casas", equipo: "Comercial", goles: 4 },
     { nombre: "Nicolás Custodio", equipo: "Sporting", goles: 4 },
     { nombre: "Felipe Hipperdinger", equipo: "Huracán", goles: 4 },
     { nombre: "Ramón López", equipo: "Pacífico BB", goles: 4 },
+    { nombre: "Fabián Soto", equipo: "Pacífico (C)", goles: 4 },
     { nombre: "Maximiliano Rodríguez", equipo: "Sporting", goles: 4 },
     { nombre: "Sebastián Aristi", equipo: "Comercial", goles: 3 },
     { nombre: "Emiliano Esmoli", equipo: "Comercial", goles: 3 },
+    { nombre: "Emanuel Ihitz", equipo: "Comercial", goles: 3 },
+    { nombre: "Sebastián Racchi", equipo: "Comercial", goles: 3 },
     { nombre: "Sergio Pereyra", equipo: "Huracán", goles: 3 },
     { nombre: "Mariano Moreno", equipo: "Libertad", goles: 3 },
     { nombre: "Gustavo Peña", equipo: "Libertad", goles: 3 },
     { nombre: "Maximiliano Delaudo", equipo: "Pacífico BB", goles: 3 },
     { nombre: "Ángel Martínez", equipo: "San Francisco", goles: 3 },
+    { nombre: "Juan Pérez", equipo: "San Francisco", goles: 3 },
     { nombre: "Marcos Pierucci", equipo: "Sansinena", goles: 3 },
     { nombre: "Gabriel Bernengo", equipo: "Sporting", goles: 3 },
-    { nombre: "Sebastián Racchi", equipo: "Comercial", goles: 2 },
-    { nombre: "Emanuel Ihitz", equipo: "Comercial", goles: 2 },
     { nombre: "Héctor Soto Sassi", equipo: "Huracán", goles: 2 },
     { nombre: "Sebastián Faillá", equipo: "Huracán", goles: 2 },
     { nombre: "Luis Khin", equipo: "Libertad", goles: 2 },
@@ -17417,11 +17419,9 @@ const BD_GOLEADORES_SENIOR = [
     { nombre: "César Pascal", equipo: "Libertad", goles: 2 },
     { nombre: "Pablo Cerra", equipo: "Libertad", goles: 2 },
     { nombre: "Hernán Sangripanti", equipo: "Pacífico BB", goles: 2 },
-    { nombre: "Fabián Soto", equipo: "Pacífico (C)", goles: 2 },
     { nombre: "Nicolás Arroyo", equipo: "Pacífico (C)", goles: 2 },
     { nombre: "Patricio Muñoz", equipo: "San Francisco", goles: 2 },
     { nombre: "Federico Timi", equipo: "San Francisco", goles: 2 },
-    { nombre: "Juan Pérez", equipo: "San Francisco", goles: 2 },
     { nombre: "Mauricio Oldani", equipo: "Tiro Federal", goles: 2 },
     { nombre: "Javier Muñoz", equipo: "Tiro Federal", goles: 2 },
     { nombre: "Lucas Sauer", equipo: "Tiro Federal", goles: 2 },
@@ -17463,6 +17463,7 @@ const BD_GOLEADORES_SENIOR = [
     { nombre: "Emiliano Scheffer", equipo: "Sansinena", goles: 1 },
     { nombre: "Sebastián Bettinelli", equipo: "Sansinena", goles: 1 },
     { nombre: "Mauricio Díaz", equipo: "Sansinena", goles: 1 },
+    { nombre: "Cristian González", equipo: "Sansinena", goles: 1 },
     { nombre: "Paolo Quiroga", equipo: "Sporting", goles: 1 },
     { nombre: "Emiliano Sebeca", equipo: "Sporting", goles: 1 },
     { nombre: "Alejandro Aparicio", equipo: "Sporting", goles: 1 },
@@ -19074,12 +19075,12 @@ const BD_SENIOR_PLAYOFFS = {
         { local: "Huracán",      clL: "huracan",      visitante: "San Francisco", clV: "sanfrancisco", gl: 0, gv: 3, goles_l: [], goles_v: ["Ángel Martínez","Juan Pérez","Federico Timi"] }
     ],
     cuartos: [
-        { local: "Comercial",    clL: "comercial",    visitante: "San Francisco",  clV: "sanfrancisco",  gl: null, gv: null },
-        { local: "Pacífico (C)", clL: "pacificoc",    visitante: "Sansinena",      clV: "sansinena",     gl: null, gv: null }
+        { local: "Comercial",    clL: "comercial",    visitante: "San Francisco",  clV: "sanfrancisco",  gl: 3, gv: 1, goles_l: ["Sebastián Racchi","Emanuel Ihitz","Maximiliano Casas"], goles_v: ["Juan Pérez"] },
+        { local: "Pacífico (C)", clL: "pacificoc",    visitante: "Sansinena",      clV: "sansinena",     gl: 4, gv: 1, goles_l: ["Fabián Soto (2)","Leandro Duelle","Esteban Angelini"], goles_v: ["Cristian González"] }
     ],
     semifinales: [
-        { local: "Bella Vista",  clL: "bellavista",   visitante: "A confirmar",   clV: "escudo",       gl: null, gv: null },
-        { local: "Sporting",     clL: "sporting",     visitante: "A confirmar",   clV: "escudo",       gl: null, gv: null }
+        { local: "Bella Vista",  clL: "bellavista",   visitante: "Pacífico (C)", clV: "pacificoc",       gl: null, gv: null },
+        { local: "Sporting",     clL: "sporting",     visitante: "Comercial",    clV: "comercial",       gl: null, gv: null }
     ],
     final: { local: "A confirmar", clL: "escudo", visitante: "A confirmar", clV: "escudo", gl: null, gv: null }
 };
