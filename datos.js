@@ -63,6 +63,112 @@ const BD_EQUIPOS = {
     ]
 };
 
+// ══════════════════════════════════════════════════════
+// MERCADO DE PASES - INVIERNO 2026
+// ══════════════════════════════════════════════════════
+// Categorías que participan del mercado de pases y su etiqueta visible
+const MERCADO_PASES_CATEGORIAS = {
+    oficial:          "Oficial",
+    promocional:      "Promocional",
+    femenino:         "1° Femenino",
+    segundafemenino:  "2° Femenino",
+    federala:  "Federal A"
+};
+
+// Estructura de datos: por categoría, por equipo (clase), sus altas y bajas.
+// Cada movimiento: { jugador: "Nombre Apellido", club: "Club de origen/destino", fecha: "opcional" }
+// Se auto-completa con todos los equipos de cada categoría, arrancando vacío.
+const BD_MERCADO_PASES = {};
+Object.keys(MERCADO_PASES_CATEGORIAS).forEach(cat => {
+    BD_MERCADO_PASES[cat] = {};
+    (BD_EQUIPOS[cat] || []).forEach(eq => {
+        BD_MERCADO_PASES[cat][eq.clase] = { altas: [], bajas: [] };
+    });
+});
+BD_MERCADO_PASES["federala"] = {
+    villamitre: { altas: [], bajas: [] },
+    olimpo:     { altas: [], bajas: [] }
+};
+
+
+// — OFICIAL —
+BD_MERCADO_PASES["oficial"]["libertad"].bajas.push({ jugador: "Mauro Sabatini", club: "Lilán (Laprida)" });
+BD_MERCADO_PASES["oficial"]["sporting"].bajas.push({ jugador: "Luis De Los Santos", club: "Libre" });
+BD_MERCADO_PASES["femenino"]["empleados"].bajas.push({ jugador: "Marianela Santana", club: "Municipales" });
+BD_MERCADO_PASES["femenino"]["municipales"].altas.push({ jugador: "Marianela Santana", club: "Empleados de Comercio" });
+BD_MERCADO_PASES["federala"]["villamitre"].altas.push({ jugador: "Bruno Benítez", club: "Independiente de Chivilcoy" });
+BD_MERCADO_PASES["federala"]["villamitre"].altas.push({ jugador: "Gonzalo Córdoba", club: "Mitre de Santiago del Estero" });
+BD_MERCADO_PASES["federala"]["olimpo"].altas.push({ jugador: "Leandro Espejo", club: "Chaco For Ever" });
+
+function generarMercadoPases(cat) {
+const equipos = Object.keys(BD_MERCADO_PASES[cat] || {}).map(clase => BD_EQUIPOS[cat]?.find(e => e.clase === clase) || { nombre: clase, clase }).filter(Boolean);
+    const datosCat = BD_MERCADO_PASES[cat] || {};
+    const etiqueta = MERCADO_PASES_CATEGORIAS[cat] || cat;
+
+    let html = `<div class="header-t">MERCADO DE PASES · INVIERNO 2026 · ${etiqueta.toUpperCase()}</div>`;
+    html += `<div class="mp-volver" onclick="navegar('home')">← Volver al inicio</div>`;
+    html += `<div class="mp-lista-equipos">`;
+
+    equipos.forEach(eq => {
+        const mov = datosCat[eq.clase] || { altas: [], bajas: [] };
+        const total = mov.altas.length + mov.bajas.length;
+        html += `<div class="mp-equipo-row" onclick="navegarMercadoEquipo('${cat}', '${eq.clase}')">
+            <div class="escudo ${eq.clase}"></div>
+            <span class="mp-equipo-nombre">${eq.nombre}</span>
+            <span class="mp-equipo-contador">${total > 0 ? total + ' mov.' : 'Sin novedades'}</span>
+            <span class="mp-flecha">›</span>
+        </div>`;
+    });
+
+    html += `</div>`;
+    return html;
+}
+
+function generarMercadoPasesEquipo(cat, clase) {
+    const equipos = BD_EQUIPOS[cat] || [];
+    const equipo = equipos.find(e => e.clase === clase);
+    const nombre = equipo ? equipo.nombre : clase;
+    const etiqueta = MERCADO_PASES_CATEGORIAS[cat] || cat;
+    const mov = (BD_MERCADO_PASES[cat] && BD_MERCADO_PASES[cat][clase]) || { altas: [], bajas: [] };
+
+    let html = `<div class="header-t">MERCADO DE PASES · INVIERNO 2026</div>`;
+    html += `<div class="mp-volver" onclick="navegarMercado('${cat}')">← Volver a ${etiqueta}</div>`;
+    html += `<div class="mp-equipo-header">
+        <div class="escudo ${clase}" style="width:26px;height:26px;"></div>
+        <span>${nombre}</span>
+    </div>`;
+
+    html += `<div class="header-t" style="background:#1a7a3d;font-size:11px;margin-top:0;">⬆ ALTAS</div>`;
+    if (mov.altas.length === 0) {
+        html += `<div class="mp-sin-datos">Sin altas registradas por el momento.</div>`;
+    } else {
+        html += `<table><tbody>`;
+        mov.altas.forEach(j => {
+            html += `<tr>
+                <td style="text-align:left;padding-left:10px;">${j.jugador}</td>
+                <td style="font-size:10px;color:#555;text-align:right;padding-right:10px;">${j.club ? 'Proviene de ' + j.club : ''}</td>
+            </tr>`;
+        });
+        html += `</tbody></table>`;
+    }
+
+    html += `<div class="header-t" style="background:#a93226;font-size:11px;">⬇ BAJAS</div>`;
+    if (mov.bajas.length === 0) {
+        html += `<div class="mp-sin-datos">Sin bajas registradas por el momento.</div>`;
+    } else {
+        html += `<table><tbody>`;
+        mov.bajas.forEach(j => {
+            html += `<tr>
+                <td style="text-align:left;padding-left:10px;">${j.jugador}</td>
+                <td style="font-size:10px;color:#555;text-align:right;padding-right:10px;">${j.club ? 'Se va a ' + j.club : ''}</td>
+            </tr>`;
+        });
+        html += `</tbody></table>`;
+    }
+
+    return html;
+}
+
 const idaOficial = [
     { fecha: 1, partidos: [{l:"Libertad", v:"Huracán", gl:3, gv:1, dia:"Dom 15/03", hora:"16:00", goles_l:["Luciano Trídico","Mauro Sabatini","Matías Mayer"], goles_v:["Iván Agudiak"]}, {l:"Sporting", v:"La Armonía", gl:1, gv:2, dia:"Dom 15/03", hora:"16:00", goles_l:["Jonathan Font"], goles_v:["Matías Malmoria","Matías Malmoria"]}, {l:"Bella Vista", v:"San Francisco", gl:3, gv:1, dia:"Dom 15/03", hora:"16:00", goles_l:["Lucas Martínez","Alexis Vega","Gabino Bellegia"], goles_v:["Juan Romero"]}, {l:"Villa Mitre", v:"Liniers", gl:2, gv:0, dia:"Dom 15/03", hora:"16:00", goles_l:["Santiago Gómez","Juan Acosta"], goles_v:[]}] },
     { fecha: 2, partidos: [{l:"La Armonía", v:"Villa Mitre", gl:0, gv:4, dia:"Dom 22/03", hora:"16:00", goles_l:[], goles_v:["Ramiro Gerk","Ramiro Gerk","Julián Monteverde","Diego Avit"]}, {l:"San Francisco", v:"Libertad", gl:1, gv:1, dia:"Dom 22/03", hora:"16:00", goles_l:["Federico Pinedo"], goles_v:["Mauro Sabatini"]}, {l:"Huracán", v:"Sporting", gl:3, gv:0, dia:"Lun 23/03", hora:"16:00", nota:"En cancha de Sansinena", goles_l:["Iván Agudiak","Agustín Seisdedos","Johan Munives Cortes"], goles_v:[]}, {l:"Bella Vista", v:"Liniers", gl:0, gv:1, dia:"Mar 24/03", hora:"16:00", goles_l:[], goles_v:["Rodrigo Phillip"]}] },
@@ -2258,7 +2364,13 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 15).partidos.forEach(p
 });
 
 
-let diaSeleccionadoHome = "2026-07-07"; 
+let diaSeleccionadoHome = "2026-07-08"; 
+let mercadoPasesAbierto = false;
+
+function toggleMercadoPasesHome() {
+    mercadoPasesAbierto = !mercadoPasesAbierto;
+    document.getElementById('contenido').innerHTML = generarHome();
+}
 
 function seleccionarDiaHome(dia) {
     diaSeleccionadoHome = dia;
@@ -2286,12 +2398,12 @@ function generarHome() {
        ]},
        { id: "2026-07-07", label: "MAR 07/07", torneos: [
          { nombre: "SEMIFINAL - FUTSAL", cat: "futsal", noAutoResult: true, partidos: [
-                {l:"La Estación", v:"Los 3 Chiflados", hora:"22:00", gl:null, gv:null,nota:"en el predio de Don Bosco"},
-                {l:"La Esperanza", v:"Villa Mitre", hora:"22:00", gl:null, gv:null,nota:"en el predio de La Curtiembre"}
+                {l:"La Estación", v:"Los 3 Chiflados", hora:"22:00", gl:null, gv:null,nota:"en el predio de Don Bosco", gl:2, gv:2},
+                {l:"La Esperanza", v:"Villa Mitre", hora:"22:00", gl:null, gv:null,nota:"en el predio de La Curtiembre", gl:3, gv:4}
             ]},
          { nombre: "SEMIFINAL - FUTSAL RESERVA", cat: "futsalreserva", noAutoResult: true, partidos: [
-                {l:"Los 3 Chiflados", v:"Dublin", hora:"20:30", gl:null, gv:null,nota:"en el predio de Don Bosco"},
-                {l:"Villa Mitre", v:"Petroquímicos", hora:"20:30", gl:null, gv:null,nota:"en el predio de La Curtiembre"}
+                {l:"Los 3 Chiflados", v:"Dublin", hora:"20:30", gl:null, gv:null,nota:"en el predio de Don Bosco", gl:7, gv:2},
+                {l:"Villa Mitre", v:"Petroquímicos", hora:"20:30", gl:null, gv:null,nota:"en el predio de La Curtiembre", gl:5, gv:6}
             ]},
          { nombre: "CUARTOS DE FINAL - SENIOR", cat: "seniorapertura", noAutoResult: true, partidos: [
                 {l:"Pacífico (C)", v:"Sansinena", hora:"20:15", gl:null, gv:null,nota:"en el predio de Tiro Federal"},
@@ -2310,7 +2422,21 @@ function generarHome() {
        ]},
 ];
 
-    let html = `<div class="nav-fechas" style="background:#222; margin-bottom:0; border-bottom:1px solid #000;">`;
+    let html = `<div class="mp-visera" onclick="toggleMercadoPasesHome()">
+        <span>🔁 MERCADO DE PASES - INVIERNO 2026</span>
+        <span class="mp-visera-flecha">${mercadoPasesAbierto ? '▲' : '▼'}</span>
+    </div>`;
+    if (mercadoPasesAbierto) {
+        html += `<div class="mp-visera-dropdown">
+            <a href="#" onclick="event.stopPropagation();navegarMercado('oficial');return false;">Oficial</a>
+            <a href="#" onclick="event.stopPropagation();navegarMercado('promocional');return false;">Promocional</a>
+            <a href="#" onclick="event.stopPropagation();navegarMercado('femenino');return false;">1° Femenino</a>
+            <a href="#" onclick="event.stopPropagation();navegarMercado('segundafemenino');return false;">2° Femenino</a>
+            <a href="#" onclick="event.stopPropagation();navegarMercado('federala');return false;">Federal A</a>
+        </div>`;
+    }
+
+    html += `<div class="nav-fechas" style="background:#222; margin-bottom:0; border-bottom:1px solid #000;">`;
     agenda.forEach(dia => {
         html += `<div class="btn-f ${diaSeleccionadoHome === dia.id ? 'active' : ''}" 
                  style="width:auto; padding:0 15px;" 
@@ -19084,10 +19210,10 @@ const BD_FUTSAL_PLAYOFFS = {
 
     ],
     semifinales: [
-        { local: "La Esperanza", clL: "laesperanza", visitante: "Villa Mitre", clV: "villamitre", gl: null, gv: null },
-        { local: "La Estación", clL: "laestacion", visitante: "Los 3 Chiflados", clV: "los3chiflados", gl: null, gv: null }
+        { local: "La Esperanza", clL: "laesperanza", visitante: "Villa Mitre", clV: "villamitre", gl: 3, gv: 4 },
+        { local: "La Estación", clL: "laestacion", visitante: "Los 3 Chiflados", clV: "los3chiflados", gl: 2, gv: 2 }
     ],
-    final: { local: "A confirmar", clL: "escudo", visitante: "A confirmar", clV: "escudo", gl: null, gv: null }
+    final: { local: "La Estación", clL: "laestacion", visitante: "Villa Mitre", clV: "villamitre", gl: null, gv: null }
 };
 
 const BD_FUTSAL_RESERVA_PLAYOFFS = {
@@ -19098,10 +19224,10 @@ const BD_FUTSAL_RESERVA_PLAYOFFS = {
         { local: "Villa Mitre", clL: "villamitre", visitante: "La Estación", clV: "laestacion", gl: 4, gv: 4 }
     ],
     semifinales: [
-        { local: "Los 3 Chiflados", clL: "los3chiflados", visitante: "Dublin", clV: "dublin", gl: null, gv: null },
-        { local: "Villa Mitre", clL: "villamitre", visitante: "Petroquímicos", clV: "petroquimicos", gl: null, gv: null }
+        { local: "Los 3 Chiflados", clL: "los3chiflados", visitante: "Dublin", clV: "dublin", gl: 7, gv: 2 },
+        { local: "Villa Mitre", clL: "villamitre", visitante: "Petroquímicos", clV: "petroquimicos", gl: 5, gv: 6 }
     ],
-    final: { local: "A confirmar", clL: "escudo", visitante: "A confirmar", clV: "escudo", gl: null, gv: null }
+    final: { local: "Los 3 Chiflados", clL: "los3chiflados", visitante: "Petroquímicos", clV: "petroquimicos", gl: null, gv: null }
 };
 
 function _renderPartidoPlayoff(p, pendiente) {

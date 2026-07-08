@@ -253,6 +253,96 @@ tr[onclick]:hover td { background-color: #e8f5e9 !important; }
 .juventudunidatandil { background-color: #ffffff; position: relative; }
 .juventudunidatandil::before { content: ""; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: linear-gradient(-45deg, transparent 46%, black 46%, black 54%, transparent 54%); }
 
+/* ── MERCADO DE PASES ── */
+.mp-visera {
+    background: linear-gradient(135deg, #b8860b, #f0a500);
+    color: #1a1a1a;
+    text-align: center;
+    padding: 10px 12px;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 0.3px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border-bottom: 2px solid #7a5c00;
+}
+.mp-visera:hover { background: linear-gradient(135deg, #c9950f, #ffb700); }
+.mp-visera-flecha { font-size: 10px; }
+
+.mp-visera-dropdown {
+    background: #fff8e1;
+    border-bottom: 2px solid #f0a500;
+    display: flex;
+    flex-wrap: wrap;
+}
+.mp-visera-dropdown a {
+    flex: 1 1 auto;
+    min-width: 110px;
+    text-align: center;
+    padding: 10px 8px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #1a4a2e;
+    text-decoration: none;
+    border-right: 1px solid #eaddb7;
+    background: #fff8e1;
+}
+.mp-visera-dropdown a:last-child { border-right: none; }
+.mp-visera-dropdown a:hover { background: #f0a500; color: #fff; }
+
+.mp-volver {
+    background: #eee;
+    color: #333;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 8px 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #ccc;
+}
+.mp-volver:hover { background: #ddd; }
+
+.mp-lista-equipos { background: #fff; }
+.mp-equipo-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 12px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+}
+.mp-equipo-row:hover { background: #f7f7f7; }
+.mp-equipo-nombre { flex: 1; font-size: 13px; font-weight: bold; color: #222; }
+.mp-equipo-contador { font-size: 10px; color: #777; }
+.mp-flecha { font-size: 14px; color: #999; }
+
+.mp-equipo-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    background: #f5f5f5;
+    font-size: 15px;
+    font-weight: bold;
+    border-bottom: 1px solid #ddd;
+}
+
+.mp-sin-datos {
+    padding: 18px;
+    text-align: center;
+    font-size: 12px;
+    color: #999;
+    font-style: italic;
+}
+
+@media (max-width: 600px) {
+    .mp-visera { font-size: 11px; padding: 9px 8px; }
+    .mp-visera-dropdown a { min-width: 45%; font-size: 11px; padding: 9px 6px; }
+    .mp-equipo-nombre { font-size: 12px; }
+}
+
 /* ── Campeones históricos LDS — escudos nuevos ── */
 .porteno { background: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2216%22%20height%3D%2216%22%3E%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22white%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-size%3D%2211%22%20font-weight%3D%22bold%22%20fill%3D%22black%22%20font-family%3D%22sans-serif%22%3EP%3C/text%3E%3C/svg%3E") no-repeat center/cover; border: 1px solid #ccc; }
 .ferrocarrilsur { background: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2216%22%20height%3D%2216%22%3E%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22white%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-size%3D%229%22%20font-weight%3D%22bold%22%20fill%3D%22black%22%20font-family%3D%22sans-serif%22%3EFS%3C/text%3E%3C/svg%3E") no-repeat center/cover; border: 1px solid #ccc; }
