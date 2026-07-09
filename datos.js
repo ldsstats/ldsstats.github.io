@@ -2412,12 +2412,22 @@ function generarHome() {
        ]},
       { id: "2026-07-08", label: "MIÉR 08/07", torneos: [
          { nombre: "SEMIFINALES - RESERVA PROMOCIONAL", cat: "reserva_promocional", noAutoResult: true, partidos: [
-                {l:"Olimpo", v:"Rosario PB", hora:"15:30", nota:"en cancha de Teléfono"}
+                {l:"Olimpo", v:"Rosario PB", hora:"15:30", nota:"en cancha de Teléfono", gl:0, gv:0, pen_l: 1, pen_v: 3}
             ]},
        ]},
         { id: "2026-07-09", label: "JUE 09/07", torneos: [
             { nombre: "SUB 15 FEM", cat: "sub15fem", noAutoResult: true, partidos: [
                 {l:"San Francisco", v:"Tiro Federal", hora:"15:00"}
+            ]},
+       ]},
+        { id: "2026-07-11", label: "SÁB 11/07", torneos: [
+            { nombre: "PROMOCIONAL - FINAL", cat: "promocional", noAutoResult: true, partidos: [
+                {l:"Comercial", v:"Tiro Federal", hora:"15:00"}
+            ]},
+       ]},
+        { id: "2026-07-12", label: "DOM 12/07", torneos: [
+            { nombre: "OFICIAL - FINAL", cat: "oficial", noAutoResult: true, partidos: [
+                {l:"Huracán", v:"Liniers", hora:"15:00",nota:"en cancha de Sansinena"}
             ]},
        ]},
 ];
@@ -19180,10 +19190,10 @@ const BD_RESERVA_OFICIAL_PLAYOFFS = {
 
 const BD_RESERVA_PROMOCIONAL_PLAYOFFS = {
     semifinales: [
-        { local: "Olimpo", clL: "olimpo", visitante: "Rosario PB", clV: "rosariopb", gl: null, gv: null },
+        { local: "Olimpo", clL: "olimpo", visitante: "Rosario PB", clV: "rosariopb", gl: 0, gv: 0, pen_l: 3, pen_v: 1 },
         { local: "Tiro Federal", clL: "tirofederal", visitante: "Comercial", clV: "comercial", gl: 2, gv: 0 }
     ],
-    final: { local: "A confirmar", clL: "escudo", visitante: "A confirmar", clV: "escudo", gl: null, gv: null }
+    final: { local: "Tiro Federal", clL: "tirofederal", visitante: "Rosario PB", clV: "rosariopb", gl: null, gv: null }
 };
 
 const BD_FEMENINO_PLAYOFFS = {
