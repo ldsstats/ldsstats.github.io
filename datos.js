@@ -93,12 +93,16 @@ BD_MERCADO_PASES["federala"] = {
 
 // — OFICIAL —
 BD_MERCADO_PASES["oficial"]["libertad"].bajas.push({ jugador: "Mauro Sabatini", club: "Lilán (Laprida)" });
+BD_MERCADO_PASES["oficial"]["libertad"].bajas.push({ jugador: "Alan Gigena", club: "Libre" });
 BD_MERCADO_PASES["oficial"]["sporting"].bajas.push({ jugador: "Luis De Los Santos", club: "Libre" });
 BD_MERCADO_PASES["femenino"]["empleados"].bajas.push({ jugador: "Marianela Santana", club: "Municipales" });
 BD_MERCADO_PASES["femenino"]["municipales"].altas.push({ jugador: "Marianela Santana", club: "Empleados de Comercio" });
+BD_MERCADO_PASES["oficial"]["bellavista"].altas.push({ jugador: "Maximiliano Tormann", club: "VE Rende (Italia)" });
 BD_MERCADO_PASES["federala"]["villamitre"].altas.push({ jugador: "Bruno Benítez", club: "Independiente de Chivilcoy" });
 BD_MERCADO_PASES["federala"]["villamitre"].altas.push({ jugador: "Gonzalo Córdoba", club: "Mitre de Santiago del Estero" });
 BD_MERCADO_PASES["federala"]["olimpo"].altas.push({ jugador: "Leandro Espejo", club: "Chaco For Ever" });
+BD_MERCADO_PASES["federala"]["olimpo"].bajas.push({ jugador: "Albaro Pavón", club: "Libre" });
+BD_MERCADO_PASES["oficial"]["laarmonia"].bajas.push({ jugador: "Matías López", club: "Libre" });
 
 function generarMercadoPases(cat) {
 const equipos = Object.keys(BD_MERCADO_PASES[cat] || {}).map(clase => BD_EQUIPOS[cat]?.find(e => e.clase === clase) || { nombre: clase, clase }).filter(Boolean);
