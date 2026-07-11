@@ -97,6 +97,7 @@ BD_MERCADO_PASES["oficial"]["libertad"].bajas.push({ jugador: "Alan Gigena", clu
 BD_MERCADO_PASES["oficial"]["sporting"].bajas.push({ jugador: "Luis De Los Santos", club: "Libre" });
 BD_MERCADO_PASES["femenino"]["empleados"].bajas.push({ jugador: "Marianela Santana", club: "Municipales" });
 BD_MERCADO_PASES["femenino"]["municipales"].altas.push({ jugador: "Marianela Santana", club: "Empleados de Comercio" });
+BD_MERCADO_PASES["oficial"]["sanfrancisco"].altas.push({ jugador: "Tomás Alfaro", club: "Santiago Morning (Chile)" });
 BD_MERCADO_PASES["oficial"]["bellavista"].altas.push({ jugador: "Maximiliano Tormann", club: "VE Rende (Italia)" });
 BD_MERCADO_PASES["federala"]["villamitre"].altas.push({ jugador: "Bruno Benítez", club: "Independiente de Chivilcoy" });
 BD_MERCADO_PASES["federala"]["villamitre"].altas.push({ jugador: "Gonzalo Córdoba", club: "Mitre de Santiago del Estero" });
@@ -232,7 +233,7 @@ const idaSegundaFemenino = [
     { fecha: 13, libre: "Olimpo", partidos: [{l:"Liniers", v:"Pacífico (C)", gl:7, gv:0, dia:"Sáb 20/06", hora:"15:30", goles_l:["Agustina Borda","Agustina Borda","Iara Schwab","Iara Schwab","Isabella Pezzutti","Paz Cutrín","Ailén Márquez"], goles_v:[]}, {l:"San Francisco", v:"Petroquímicos", gl:0, gv:1, dia:"Sáb 20/06", hora:"15:30", goles_l:[], goles_v:["Renata Segovia"]}, {l:"Sansinena", v:"Estrella de Oro", gl:0, gv:0, dia:"Dom 21/06", hora:"15:30", goles_l:[], goles_v:[]},{l:"Rosario PB", v:"Huracán", gl:9, gv:2, dia:"Dom 21/06", hora:"15:30", goles_l:["Mariela Sollosky","Mariela Sollosky","Celeste Medina","Celeste Medina","Juliana Ruiz","Valentina Cavalli","Ayelén Zeballos","Carolina Díaz","Bárbara Aguirre"], goles_v:[]}] },
     { fecha: 14, libre: "Liniers", partidos: [{l:"Huracán", v:"Sansinena", gl:2, gv:0, dia:"Sáb 27/06", hora:"15:30", goles_l:["Keila Iglesias","Keila Iglesias"], goles_v:[]}, {l:"Pacífico (C)", v:"San Francisco", gl:0, gv:1, dia:"Dom 28/06", hora:"10:00", goles_l:[], goles_v:["Elena Spinucci"]}, {l:"Petroquímicos", v:"Rosario PB", gl:1, gv:0, dia:"Dom 28/06", hora:"15:30", goles_l:["Cintia Saavedra"], goles_v:[]}, {l:"Olimpo", v:"Estrella de Oro", gl:1, gv:2, dia:"Dom 28/06", hora:"15:30", goles_l:["Paloma Dambolena"], goles_v:["Luana Anfossi","Luana Anfossi"]}] },
     { fecha: 15, libre: "San Francisco", partidos: [{l:"Liniers", v:"Olimpo", gl:4, gv:0, dia:"Sáb 04/07", hora:"15:30", goles_l:["Paulina Acevedo","Paulina Acevedo","Paulina Acevedo","Iara Schwab"], goles_v:[]}, {l:"Rosario PB", v:"Pacífico (C)", gl:6, gv:2, dia:"Sáb 04/07", hora:"15:30", goles_l:["Carolina Díaz","Carolina Díaz","Carolina Díaz","Bárbara Aguirre","Valentina Cavalli","Mariela Sollosky"], goles_v:["Gianna Gerling","Natali Recagno"]}, {l:"Sansinena", v:"Petroquímicos", gl:1, gv:3, dia:"Dom 05/07", hora:"15:30", goles_l:["Melina Gómez"], goles_v:["Morena Varela","Morena Varela","Nicole Montenegro"]}, {l:"Estrella de Oro", v:"Huracán", gl:2, gv:1, dia:"Dom 05/07", hora:"15:30", goles_l:["Luana Anfossi","Mariana González"], goles_v:["Natasha Mella"]}] },
-    { fecha: 16, libre: "Rosario PB", partidos: [{l:"Olimpo", v:"Huracán", gl:1, gv:3, dia:"Jue 09/07", hora:"15:30", goles_l:[], goles_v:["Keila Iglesias","Keila Iglesias","Natasha Mella"]}, {l:"Pacífico (C)", v:"Sansinena", gl:null, gv:null}, {l:"Petroquímicos", v:"Estrella de Oro", gl:null, gv:null}, {l:"Liniers", v:"San Francisco", gl:null, gv:null}] },
+    { fecha: 16, libre: "Rosario PB", partidos: [{l:"Olimpo", v:"Huracán", gl:1, gv:3, dia:"Jue 09/07", hora:"15:30", goles_l:[], goles_v:["Keila Iglesias","Keila Iglesias","Natasha Mella"]}, {l:"Pacífico (C)", v:"Sansinena", gl:null, gv:null, dia:"Sáb 11/07", hora:"15:00"}, {l:"Petroquímicos", v:"Estrella de Oro", gl:null, gv:null, dia:"Sáb 11/07", hora:"15:30"}, {l:"Liniers", v:"San Francisco", gl:null, gv:null, dia:"Sáb 11/07", hora:"15:30"}] },
     { fecha: 17, libre: "Sansinena", partidos: [{l:"Olimpo", v:"San Francisco", gl:null, gv:null}, {l:"Rosario PB", v:"Liniers", gl:null, gv:null}, {l:"Estrella de Oro", v:"Pacífico (C)", gl:null, gv:null}, {l:"Huracán", v:"Petroquímicos", gl:null, gv:null}] },
     { fecha: 18, libre: "Estrella de Oro", partidos: [{l:"Pacífico (C)", v:"Huracán", gl:null, gv:null}, {l:"San Francisco", v:"Rosario PB", gl:null, gv:null}, {l:"Petroquímicos", v:"Olimpo", gl:null, gv:null}, {l:"Liniers", v:"Sansinena", gl:null, gv:null}] },
     { fecha: 19, libre: "Huracán", partidos: [{l:"Liniers/Estrella de Oro", v:"Liniers/Estrella de Oro", gl:null, gv:null}, {l:"Rosario PB/Olimpo", v:"Rosario PB/Olimpo", gl:null, gv:null}, {l:"Pacífico (C)/Petroquímicos", v:"Pacífico (C)/Petroquímicos", gl:null, gv:null}, {l:"San Francisco/Sansinena", v:"San Francisco/Sansinena", gl:null, gv:null}] },
@@ -1570,7 +1571,7 @@ const idaSub15Fem = [
         {l:"Tiro Federal",          v:"La Armonía",       gl:null, gv:null},
         {l:"Sporting",              v:"Libertad",         gl:null, gv:null},
         {l:"Bella Vista",           v:"Olimpo",           gl:6, gv:0},
-        {l:"Villa Mitre",           v:"San Francisco",    gl:null, gv:null},
+        {l:"Villa Mitre",           v:"San Francisco",    gl:3, gv:0},
         {l:"Huracán",               v:"Liniers",          gl:null, gv:null},
         {l:"Juventud Unida",        v:"Empleados de Comercio", gl:null, gv:null}
     ]},
@@ -2123,6 +2124,12 @@ BD_FIXTURES.federala.posiciones.find(f => f.fecha === 16).partidos = [
     {l:"Guillermo Brown",   v:"Círculo Dep.", gl:1, gv:0, dia:"Dom 05/07", hora:"15:00", goles_l:["Branco Mera"], goles_v:[]},
     {l:"Alvarado",   v:"Germinal", gl:5, gv:0, dia:"Dom 05/07", hora:"15:00", goles_l:["Germán Cervera","Santiago Gutiérrez","Facundo Centurión","Ramiro Makarte","Matías Pérez"], goles_v:[]}
 ];
+BD_FIXTURES.federala.posiciones.find(f => f.fecha === 17).partidos = [
+    {l:"Santamarina",   v:"Alvarado", gl:null, gv:null, dia:"Sáb 11/07", hora:"15:30", goles_l:[], goles_v:[]},
+    {l:"Villa Mitre",   v:"Guillermo Brown", gl:null, gv:null, dia:"Dom 12/07", hora:"15:00", goles_l:[], goles_v:[]},
+    {l:"Germinal",   v:"Olimpo", gl:null, gv:null, dia:"Dom 12/07", hora:"15:00", goles_l:[], goles_v:[]},
+    {l:"Círculo Dep.",   v:"Sol de Mayo", gl:null, gv:null, dia:"Dom 12/07", hora:"15:00", goles_l:[], goles_v:[]}
+];
 
 
 
@@ -2441,10 +2448,41 @@ function generarHome() {
             { nombre: "PROMOCIONAL - FINAL", cat: "promocional", noAutoResult: true, partidos: [
                 {l:"Comercial", v:"Tiro Federal", hora:"15:00"}
             ]},
+            { nombre: "2° FEMENINO", cat: "segundafemenino", noAutoResult: true, partidos: [
+                {l:"Pacífico (C)", v:"Sansinena", hora:"15:00"},
+                {l:"Petroquímicos", v:"Estrella de Oro", hora:"15:30"},
+                {l:"Liniers", v:"San Francisco", hora:"15:30"}
+            ]},
+            { nombre: "SUB 15 FEM", cat: "sub15fem", noAutoResult: true, partidos: [
+                {l:"Villa Mitre", v:"San Francisco", hora:"15:00", gl:3, gv:0},
+            ]},
+            { nombre: "FEDERAL A", cat: "federala", noAutoResult: true, partidos: [
+                {l:"Santamarina", v:"Alvarado", hora:"15:30"},
+            ]},
        ]},
         { id: "2026-07-12", label: "DOM 12/07", torneos: [
             { nombre: "OFICIAL - FINAL", cat: "oficial", noAutoResult: true, partidos: [
                 {l:"Huracán", v:"Liniers", hora:"15:00",nota:"en cancha de Sansinena"}
+            ]},
+            { nombre: "1° FEMENINO - FINAL", cat: "femenino", noAutoResult: true, partidos: [
+                {l:"Municipales", v:"Villa Mitre", hora:"15:00"}
+            ]},
+            { nombre: "OFICIAL RESERVA - FINAL", cat: "reserva_oficial", noAutoResult: true, partidos: [
+                {l:"Sporting", v:"Villa Mitre", hora:"15:00"}
+            ]},
+            { nombre: "SUB 15 FEM", cat: "sub15fem", noAutoResult: true, partidos: [
+                {l:"Tiro Federal", v:"La Armonía", hora:"11:00", gl:null, gv:null},
+                {l:"Huracán", v:"Liniers", hora:"15:00", gl:null, gv:null}
+            ]},
+            { nombre: "FEDERAL A", cat: "federala", noAutoResult: true, partidos: [
+                {l:"Villa Mitre", v:"Guillermo Brown", hora:"15:00"},
+                {l:"Germinal", v:"Olimpo", hora:"15:00"},
+                {l:"Círculo Dep.", v:"Sol de Mayo", hora:"15:00"}
+            ]},
+       ]},
+        { id: "2026-07-13", label: "LUN 13/07", torneos: [
+            { nombre: "PROMOCIONAL RESERVA - FINAL", cat: "reserva_promocional", noAutoResult: true, partidos: [
+                {l:"Tiro Federal", v:"Rosario PB", hora:"15:00"}
             ]},
        ]},
 ];
@@ -16383,7 +16421,7 @@ function generarReserva(cat) {
             {n:"Liniers",             cl:"liniers",         pj:9, pg:8, pe:1, pp:0, gf:36, gc:5, pts:25},
             {n:"Rosario PB",          cl:"rosariopb",       pj:10, pg:7, pe:2, pp:1, gf:23, gc:10, pts:23},
             {n:"San Francisco",       cl:"sanfrancisco",    pj:10, pg:7, pe:1, pp:2, gf:22, gc:10, pts:22},
-            {n:"Estrella de Oro",     cl:"estrellaoro",     pj:10, pg:5, pe:2, pp:3, gf:18, gc:12, pts:17},
+            {n:"Estrella de Oro",     cl:"estrellaoro",     pj:11, pg:6, pe:2, pp:3, gf:19, gc:12, pts:20},
             {n:"Huracán",             cl:"huracan",         pj:10, pg:2, pe:0, pp:8, gf:6, gc:18, pts:6},
             {n:"Petroquímicos",       cl:"petroquimicos",   pj:10, pg:1, pe:1, pp:8, gf:9, gc:21, pts:4},
             {n:"Sansinena",           cl:"sansinena",       pj:11, pg:1, pe:1, pp:9, gf:8, gc:41, pts:4}
