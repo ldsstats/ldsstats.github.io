@@ -2368,7 +2368,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 15).partidos.forEach(p
 });
 
 
-let diaSeleccionadoHome = "2026-07-10"; 
+let diaSeleccionadoHome = "2026-07-11"; 
 let mercadoPasesAbierto = false;
 
 function toggleMercadoPasesHome() {
@@ -2431,10 +2431,10 @@ function generarHome() {
        ]},
         { id: "2026-07-10", label: "VIE 10/07", torneos: [
          { nombre: "FINAL PLAYOFFS - FUTSAL", cat: "futsal", noAutoResult: true, partidos: [
-                {l:"La Estación", v:"Villa Mitre", hora:"22:00", gl:null, gv:null,nota:"en el predio de La Curtiembre", gl:null, gv:null},
+                {l:"La Estación", v:"Villa Mitre", hora:"22:00", gl:null, gv:null,nota:"en el predio de La Curtiembre", gl:2, gv:2, pen_l: 4, pen_v: 3},
             ]},
          { nombre: "FINAL PLAYOFFS - FUTSAL RESERVA", cat: "futsalreserva", noAutoResult: true, partidos: [
-                {l:"Los 3 Chiflados", v:"Petroquímicos", hora:"20:30", gl:null, gv:null,nota:"en el predio de La Curtiembre", gl:null, gv:null},
+                {l:"Los 3 Chiflados", v:"Petroquímicos", hora:"20:30", gl:null, gv:null,nota:"en el predio de La Curtiembre", gl:4, gv:1},
             ]},
        ]},
         { id: "2026-07-11", label: "SÁB 11/07", torneos: [
@@ -19241,7 +19241,7 @@ const BD_FUTSAL_PLAYOFFS = {
         { local: "La Esperanza", clL: "laesperanza", visitante: "Villa Mitre", clV: "villamitre", gl: 3, gv: 4 },
         { local: "La Estación", clL: "laestacion", visitante: "Los 3 Chiflados", clV: "los3chiflados", gl: 2, gv: 2 }
     ],
-    final: { local: "La Estación", clL: "laestacion", visitante: "Villa Mitre", clV: "villamitre", gl: null, gv: null }
+    final: { local: "La Estación", clL: "laestacion", visitante: "Villa Mitre", clV: "villamitre", gl: 3, gv: 3, pen_l: 4, pen_v: 3 }
 };
 
 const BD_FUTSAL_RESERVA_PLAYOFFS = {
@@ -19255,7 +19255,7 @@ const BD_FUTSAL_RESERVA_PLAYOFFS = {
         { local: "Los 3 Chiflados", clL: "los3chiflados", visitante: "Dublin", clV: "dublin", gl: 7, gv: 2 },
         { local: "Villa Mitre", clL: "villamitre", visitante: "Petroquímicos", clV: "petroquimicos", gl: 5, gv: 6 }
     ],
-    final: { local: "Los 3 Chiflados", clL: "los3chiflados", visitante: "Petroquímicos", clV: "petroquimicos", gl: null, gv: null }
+    final: { local: "Los 3 Chiflados", clL: "los3chiflados", visitante: "Petroquímicos", clV: "petroquimicos", gl: 4, gv: 1 }
 };
 
 function _renderPartidoPlayoff(p, pendiente) {
@@ -19331,6 +19331,10 @@ function generarReservaFemeninoPlayoffs() {
 
 function generarFutsalPlayoffs() {
     let html = `<div class="header-t">FUTSAL — PLAYOFFS</div>`;
+    html += `<div style="background:#111;color:#ffd700;text-align:center;padding:10px 12px;display:flex;align-items:center;justify-content:center;gap:10px;border-bottom:2px solid #ffd700;">
+        <img src="La_Estación.png" style="width:36px;height:36px;object-fit:contain;border-radius:50%;background:#fff;">
+        <span style="font-size:13px;font-weight:bold;letter-spacing:0.5px;">🏆 LA ESTACIÓN CAMPEÓN</span>
+    </div>`;
     html += `<div class="header-t" style="font-size:11px;background:#2c6e49;">CUARTOS DE FINAL</div><table>`;
     BD_FUTSAL_PLAYOFFS.cuartos.forEach(p => { html += _renderPartidoPlayoff(p); });
     html += `</table><div style="height:8px;background:#f0f0f0;border-top:1px solid #ddd;border-bottom:1px solid #ddd;"></div>`;
@@ -19345,6 +19349,10 @@ function generarFutsalPlayoffs() {
 
 function generarFutsalReservaPlayoffs() {
     let html = `<div class="header-t">FUTSAL RESERVA — PLAYOFFS</div>`;
+    html += `<div style="background:#111;color:#ffd700;text-align:center;padding:10px 12px;display:flex;align-items:center;justify-content:center;gap:10px;border-bottom:2px solid #ffd700;">
+        <img src="Los_3_Chiflados.png" style="width:36px;height:36px;object-fit:contain;border-radius:50%;background:#fff;">
+        <span style="font-size:13px;font-weight:bold;letter-spacing:0.5px;">🏆 LOS 3 CHIFLADOS CAMPEÓN</span>
+    </div>`;
     html += `<div class="header-t" style="font-size:11px;background:#2c6e49;">CUARTOS DE FINAL</div><table>`;
     BD_FUTSAL_RESERVA_PLAYOFFS.cuartos.forEach(p => { html += _renderPartidoPlayoff(p); });
     html += `</table><div style="height:8px;background:#f0f0f0;border-top:1px solid #ddd;border-bottom:1px solid #ddd;"></div>`;
