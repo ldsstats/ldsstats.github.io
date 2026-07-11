@@ -2125,7 +2125,7 @@ BD_FIXTURES.federala.posiciones.find(f => f.fecha === 16).partidos = [
     {l:"Alvarado",   v:"Germinal", gl:5, gv:0, dia:"Dom 05/07", hora:"15:00", goles_l:["Germán Cervera","Santiago Gutiérrez","Facundo Centurión","Ramiro Makarte","Matías Pérez"], goles_v:[]}
 ];
 BD_FIXTURES.federala.posiciones.find(f => f.fecha === 17).partidos = [
-    {l:"Santamarina",   v:"Alvarado", gl:null, gv:null, dia:"Sáb 11/07", hora:"15:30", goles_l:[], goles_v:[]},
+    {l:"Santamarina",   v:"Alvarado", gl:0, gv:0, dia:"Sáb 11/07", hora:"15:30", goles_l:[], goles_v:[]},
     {l:"Villa Mitre",   v:"Guillermo Brown", gl:null, gv:null, dia:"Dom 12/07", hora:"15:00", goles_l:[], goles_v:[]},
     {l:"Germinal",   v:"Olimpo", gl:null, gv:null, dia:"Dom 12/07", hora:"15:00", goles_l:[], goles_v:[]},
     {l:"Círculo Dep.",   v:"Sol de Mayo", gl:null, gv:null, dia:"Dom 12/07", hora:"15:00", goles_l:[], goles_v:[]}
@@ -2451,13 +2451,13 @@ function generarHome() {
             { nombre: "2° FEMENINO", cat: "segundafemenino", noAutoResult: true, partidos: [
                 {l:"Pacífico (C)", v:"Sansinena", hora:"15:00"},
                 {l:"Petroquímicos", v:"Estrella de Oro", hora:"15:30"},
-                {l:"Liniers", v:"San Francisco", hora:"15:30"}
+                {l:"Liniers", v:"San Francisco", hora:"15:30", gl:2, gv:1}
             ]},
             { nombre: "SUB 15 FEM", cat: "sub15fem", noAutoResult: true, partidos: [
                 {l:"Villa Mitre", v:"San Francisco", hora:"15:00", gl:3, gv:0},
             ]},
             { nombre: "FEDERAL A", cat: "federala", noAutoResult: true, partidos: [
-                {l:"Santamarina", v:"Alvarado", hora:"15:30"},
+                {l:"Santamarina", v:"Alvarado", hora:"15:30", gl:0, gv:0},
             ]},
        ]},
         { id: "2026-07-12", label: "DOM 12/07", torneos: [
@@ -18816,8 +18816,8 @@ const BD_POSICIONES = {
     },
     segundafemenino: {
         torneo2026: [
-            { nombre: "Liniers",             clase: "liniers",         pj:12, pg:11, pe:1, pp:0, gf:53, gc:7, pts:37 },
-            { nombre: "San Francisco",       clase: "sanfrancisco",    pj:13, pg:10, pe:2, pp:1, gf:55, gc:12, pts:32 },
+            { nombre: "Liniers",             clase: "liniers",         pj:13, pg:12, pe:1, pp:0, gf:55, gc:8, pts:40 },
+            { nombre: "San Francisco",       clase: "sanfrancisco",    pj:14, pg:10, pe:2, pp:2, gf:56, gc:14, pts:32 },
             { nombre: "Rosario PB",          clase: "rosariopb",       pj:14, pg:9, pe:1, pp:4, gf:63, gc:21, pts:28 },
             { nombre: "Petroquímicos",       clase: "petroquimicos",   pj:13, pg:8, pe:2, pp:3, gf:29, gc:10, pts:26 },
             { nombre: "Estrella de Oro",     clase: "estrellaoro",     pj:14, pg:6, pe:3, pp:5, gf:22, gc:29, pts:21 },
