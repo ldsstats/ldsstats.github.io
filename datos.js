@@ -2377,12 +2377,12 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 15).partidos.forEach(p
 });
 // Reserva 2° Femenino - resultados F16
 BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 16).partidos.forEach(p => {
-    if (p.l === "Petroquímicos" && p.v === "Estrella de Oro") { p.gl = null; p.gv = null; }
+    if (p.l === "Petroquímicos" && p.v === "Estrella de Oro") { p.gl = 0; p.gv = 1; }
     if (p.l === "Liniers" && p.v === "San Francisco") { p.gl = 1; p.gv = 1; }
 });
 
 
-let diaSeleccionadoHome = "2026-07-11"; 
+let diaSeleccionadoHome = "2026-07-12"; 
 let mercadoPasesAbierto = false;
 
 function toggleMercadoPasesHome() {
@@ -2457,7 +2457,7 @@ function generarHome() {
             ]},
             { nombre: "2° FEMENINO", cat: "segundafemenino", noAutoResult: true, partidos: [
                 {l:"Pacífico (C)", v:"Sansinena", hora:"15:00"},
-                {l:"Petroquímicos", v:"Estrella de Oro", hora:"15:30"},
+                {l:"Petroquímicos", v:"Estrella de Oro", hora:"15:30", gl:1, gv:2},
                 {l:"Liniers", v:"San Francisco", hora:"15:30", gl:2, gv:1}
             ]},
             { nombre: "SUB 15 FEM", cat: "sub15fem", noAutoResult: true, partidos: [
@@ -16441,9 +16441,9 @@ function generarReserva(cat) {
             {n:"Liniers",             cl:"liniers",         pj:10, pg:8, pe:2, pp:0, gf:37, gc:6, pts:26},
             {n:"Rosario PB",          cl:"rosariopb",       pj:10, pg:7, pe:2, pp:1, gf:23, gc:10, pts:23},
             {n:"San Francisco",       cl:"sanfrancisco",    pj:11, pg:7, pe:2, pp:2, gf:23, gc:11, pts:23},
-            {n:"Estrella de Oro",     cl:"estrellaoro",     pj:11, pg:6, pe:2, pp:3, gf:19, gc:12, pts:20},
+            {n:"Estrella de Oro",     cl:"estrellaoro",     pj:12, pg:7, pe:2, pp:3, gf:20, gc:12, pts:23},
             {n:"Huracán",             cl:"huracan",         pj:10, pg:2, pe:0, pp:8, gf:6, gc:18, pts:6},
-            {n:"Petroquímicos",       cl:"petroquimicos",   pj:10, pg:1, pe:1, pp:8, gf:9, gc:21, pts:4},
+            {n:"Petroquímicos",       cl:"petroquimicos",   pj:11, pg:1, pe:1, pp:9, gf:9, gc:22, pts:4},
             {n:"Sansinena",           cl:"sansinena",       pj:11, pg:1, pe:1, pp:9, gf:8, gc:41, pts:4}
         ],
         'femenino':   [
@@ -18829,8 +18829,8 @@ const BD_POSICIONES = {
             { nombre: "Liniers",             clase: "liniers",         pj:13, pg:12, pe:1, pp:0, gf:55, gc:8, pts:40 },
             { nombre: "San Francisco",       clase: "sanfrancisco",    pj:14, pg:10, pe:2, pp:2, gf:56, gc:14, pts:32 },
             { nombre: "Rosario PB",          clase: "rosariopb",       pj:14, pg:9, pe:1, pp:4, gf:63, gc:21, pts:28 },
-            { nombre: "Petroquímicos",       clase: "petroquimicos",   pj:13, pg:8, pe:2, pp:3, gf:29, gc:10, pts:26 },
-            { nombre: "Estrella de Oro",     clase: "estrellaoro",     pj:14, pg:6, pe:3, pp:5, gf:22, gc:29, pts:21 },
+            { nombre: "Petroquímicos",       clase: "petroquimicos",   pj:14, pg:8, pe:2, pp:4, gf:30, gc:12, pts:26 },
+            { nombre: "Estrella de Oro",     clase: "estrellaoro",     pj:15, pg:7, pe:3, pp:5, gf:24, gc:30, pts:24 },
             { nombre: "Sansinena",           clase: "sansinena",       pj:14, pg:3, pe:2, pp:9, gf:14, gc:36, pts:11 },
             { nombre: "Huracán",             clase: "huracan",         pj:14, pg:3, pe:2, pp:9, gf:14, gc:59, pts:11 },
             { nombre: "Olimpo",              clase: "olimpo",          pj:16, pg:2, pe:3, pp:11, gf:11, gc:36, pts:9 },
@@ -19453,46 +19453,97 @@ const BD_CRONOLOGIA = [
     { anio: "1908", clase: "porteno",       nombre: "Porteño",        detalle: "Primer campeón" },
     { anio: "1909", clase: "pacificobb",     nombre: "Pacífico BB",      detalle: "1° título en el año de su afiliación a la Liga del Sur" },
     { anio: "1910", clase: "ferrocarrilsur",nombre: "Ferrocarril Sud",detalle: "Club fundador extinto" },
+    { anio: "1911", clase: "olimpo",     nombre: "Olimpo",      detalle: "1° Título" },
     { anio: "1912", clase: "pacificobb",     nombre: "Pacífico BB",      detalle: "2° título: primer equipo en repetir equipo" },
     { anio: "1913", clase: "pacificobb",     nombre: "Pacífico BB",      detalle: "3° título: bicampeón" },
     { anio: "1914", clase: "pacificobb",     nombre: "Pacífico BB",      detalle: "4° título: primer tricampeón de la Liga del Sur" },
     { anio: "1915", clase: "porteno",       nombre: "Porteño",        detalle: "2° título" },
+    { anio: "1916", clase: "liniers",     nombre: "Liniers",      detalle: "1° Título" },
     { anio: "1917", clase: "pacificobb",     nombre: "Pacífico BB",      detalle: "5° título" },
     { anio: "1918", clase: "pacificobb",     nombre: "Pacífico BB",      detalle: "6° título: bicampeón" },
+    { anio: "1919", clase: "liniers",     nombre: "Liniers",      detalle: "2° Título" },
+    { anio: "1920", clase: "comercial",     nombre: "Comercial",      detalle: "1° Título" },
+    { anio: "1921", clase: "olimpo",     nombre: "Olimpo",      detalle: "2° Título" },
     { anio: "1922", clase: "pacificobb",     nombre: "Pacífico BB",      detalle: "7° título" },
     { anio: "1923", clase: "sansinena",     nombre: "Sansinena",      detalle: "1° título: campeón del torneo en la temporada que llegó inmediatamente después de su ascenso a la máxima" },
+    { anio: "1924", clase: "comercial",     nombre: "Comercial",      detalle: "2° Título" },
     { anio: "1925", clase: "pacificobb",     nombre: "Pacífico BB",      detalle: "8° título" },
+    { anio: "1926", clase: "comercial",     nombre: "Comercial",      detalle: "3° Título" },
+    { anio: "1927", clase: "comercial",     nombre: "Comercial",      detalle: "4° Título: Bicampeón" },
+    { anio: "1928", clase: "comercial",     nombre: "Comercial",      detalle: "5° Título: Tricampeón" },
     { anio: "1929", clase: "pacificobb",     nombre: "Pacífico BB",      detalle: "9° título: año histórico por obtener los títulos de fútbol y básquetbol de Bahía Blanca" },
     { anio: "1930", clase: "pacificobb",     nombre: "Pacífico BB",      detalle: "10° título: bicampeón" },
+    { anio: "1931", clase: "comercial",     nombre: "Comercial",      detalle: "6° Título" },
+    { anio: "1932", clase: "liniers",     nombre: "Liniers",      detalle: "3° Título" },
+    { anio: "1933", clase: "liniers",     nombre: "Liniers",      detalle: "4° Título: bicampeón" },
+    { anio: "1934", clase: "liniers",     nombre: "Liniers",      detalle: "5° Título: tricampeón" },
     { anio: "1934", clase: "sporting",     nombre: "Sporting",      detalle: "1° título: campeón a dos años de su ascenso" },
     { anio: "1935", clase: "sporting",     nombre: "Sporting",      detalle: "2° título: bicampeón de la Liga del Sur y obtención de la 'triple corona' con la Copa Competencia y la Copa Estímulo" },
+    { anio: "1935", clase: "comercial",     nombre: "Comercial",      detalle: "7° Título: campeón de la Asociación Bahiense (Competencia que se jugaba en paralelo a la LdS)" },
     { anio: "1936", clase: "sporting",     nombre: "Sporting",      detalle: "3° título: tricampeón" },
+    { anio: "1936", clase: "comercial",     nombre: "Comercial",      detalle: "8° Título: bicampeón de la Asociación Bahiense (Competencia que se jugaba en paralelo a la LdS)" },
+    { anio: "1937", clase: "comercial",     nombre: "Comercial",      detalle: "9° Título: tricampeón" },
+    { anio: "1938", clase: "liniers",     nombre: "Liniers",      detalle: "6° Título" },
     { anio: "1939", clase: "rosariopb",     nombre: "Rosario PB",      detalle: "1° título" },
     { anio: "1940", clase: "villamitre",     nombre: "Villa Mitre",      detalle: "1° título" },
+    { anio: "1941", clase: "comercial",     nombre: "Comercial",      detalle: "10° Título" },
+    { anio: "1942", clase: "liniers",     nombre: "Liniers",      detalle: "7° Título" },
+    { anio: "1943", clase: "comercial",     nombre: "Comercial",      detalle: "11° Título" },
     { anio: "1944", clase: "villamitre",     nombre: "Villa Mitre",      detalle: "2° título" },
     { anio: "1946", clase: "sansinena",     nombre: "Sansinena",      detalle: "2° título: campeón al ganar el título el 8 de diciembre de 1946" },
     { anio: "1945", clase: "sporting",     nombre: "Sporting",      detalle: "4° título: Campeón de la Liga Sureña (competencia que se disputaba paralela a la Liga del Sur)" },
     { anio: "1946", clase: "villamitre",     nombre: "Villa Mitre",      detalle: "Campeón de la Liga Sureña (competencia que se disputaba paralela a la Liga del Sur)" },
+    { anio: "1948", clase: "liniers",     nombre: "Liniers",      detalle: "8° Título" },
+    { anio: "1949", clase: "olimpo",     nombre: "Olimpo",      detalle: "3° Título" },
+    { anio: "1950", clase: "olimpo",     nombre: "Olimpo",      detalle: "4° Título: bicampeón" },
+    { anio: "1951", clase: "olimpo",     nombre: "Olimpo",      detalle: "5° Título: tricampeón" },
+    { anio: "1952", clase: "olimpo",     nombre: "Olimpo",      detalle: "6° Título: tetracampeón" },
+    { anio: "1953", clase: "olimpo",     nombre: "Olimpo",      detalle: "7° Título: pentacampeón" },
+    { anio: "1954", clase: "olimpo",     nombre: "Olimpo",      detalle: "8° Título: hexacampeón" },
+    { anio: "1955", clase: "olimpo",     nombre: "Olimpo",      detalle: "9° Título: heptacampeón" },
     { anio: "1956", clase: "libertad",       nombre: "Libertad",        detalle: "1° título: campeón tras vencer a Villa Mitre en el último partido. Las posiciones finales fueron: Libertad 24, Rosario 24, Villa Mitre 22, Liniers 19, Olimpo 17, Bella Vista 15, Pacífico 15, Sporting 15,Tiro Federal 15, Sansinena 14 con el tribunal de penas dándole por perdido un partido al Chivo y entregándole los puntos a Rosario" },
     { anio: "1957", clase: "bellavista",     nombre: "Bella Vista",      detalle: "1° título" },
+    { anio: "1958", clase: "comercial",     nombre: "Comercial",      detalle: "12° Título" },
     { anio: "1959", clase: "rosariopb",     nombre: "Rosario PB",      detalle: "2° título" },
     { anio: "1960", clase: "bellavista",     nombre: "Bella Vista",      detalle: "2° título" },
     { anio: "1961", clase: "bellavista",     nombre: "Bella Vista",      detalle: "3° título: bicampeón" },
+    { anio: "1962", clase: "olimpo",     nombre: "Olimpo",      detalle: "10° Título" },
     { anio: "1963", clase: "sporting",     nombre: "Sporting",      detalle: "5° título" },
     { anio: "1964", clase: "sporting",     nombre: "Sporting",      detalle: "6° título: bicampeón al vencer a Olimpo" },
+    { anio: "1965", clase: "olimpo",     nombre: "Olimpo",      detalle: "11° Título" },
+    { anio: "1966", clase: "olimpo",     nombre: "Olimpo",      detalle: "12° Título" },
     { anio: "1967", clase: "huracan",     nombre: "Huracán",      detalle: "1° título: con Bartolomé 'Chiquito' Lliteras jugando su primera temporada en el club y anotando 17 goles en 19 partidos" },
+    { anio: "1968", clase: "olimpo",     nombre: "Olimpo",      detalle: "13° Título: al vencer a Rosario Puerto Belgrano por tiros de esquina" },
     { anio: "1969", clase: "rosariopb",     nombre: "Rosario PB",      detalle: "3° título: campeón tras golear a Tiro Federal por 9-0 el 19 de octubre de 1969. Los goles fueron de Ricardo Dagotto x3, Lorenzo Britos x2, Clemente Espinoza x2, Carlos Horacio Ortíz y Miguel Ángel Jacobo" },
     { anio: "1970", clase: "huracan",     nombre: "Huracán",      detalle: "2° título" },
     { anio: "1971", clase: "rosariopb",     nombre: "Rosario PB",      detalle: "4° título" },
     { anio: "1972", clase: "rosariopb",     nombre: "Rosario PB",      detalle: "5° título: bicampeón al vencer a Olimpo por 3-0 el 5 de noviembre de 1972 en cancha de Villa Mitre. Los goles fueron de Raúl Martínez x2 y Jorge Novelli. En la ida acabaron 1-1" },
+    { anio: "1973", clase: "comercial",     nombre: "Comercial",      detalle: "13° Título" },
     { anio: "1974", clase: "sporting",     nombre: "Sporting",      detalle: "7° título: campeón al empatar contra Villa Mitre por 1-1 el 25 de noviembre de 1974. El tanto rojinegro fue de José Mosqueira y el partido se jugó en cancha de Rosario, su clásico rival" },
     { anio: "1975", clase: "rosariopb",     nombre: "Rosario PB",      detalle: "6° título: campeón al vencer a Bella Vista por 2-0 el 7 de septiembre de 1975. Los goles fueron de José Dolcemáscolo y 'Cachilo' Brítez" },
+    { anio: "1976", clase: "olimpo",     nombre: "Olimpo",      detalle: "14° Título" },
+    { anio: "1977", clase: "olimpo",     nombre: "Olimpo",      detalle: "15° Título: bicampeón" },
+    { anio: "1978", clase: "olimpo",     nombre: "Olimpo",      detalle: "16° Título: tricampeón" },
+    { anio: "1979", clase: "olimpo",     nombre: "Olimpo",      detalle: "17° Título: tetracampeón" },
+    { anio: "1980", clase: "olimpo",     nombre: "Olimpo",      detalle: "18° Título: pentacampeón" },
+    { anio: "1981", clase: "olimpo",     nombre: "Olimpo",      detalle: "19° Título: hexacampeón" },
+    { anio: "1982", clase: "olimpo",     nombre: "Olimpo",      detalle: "20° Título: heptacampeón" },
+    { anio: "1983", clase: "olimpo",     nombre: "Olimpo",      detalle: "21° Título: octacampeón" },
+    { anio: "1984", clase: "olimpo",     nombre: "Olimpo",      detalle: "22° Título: nonacampeón" },
+    { anio: "1985", clase: "olimpo",     nombre: "Olimpo",      detalle: "23° Título: decacampeón" },
+    { anio: "1986", clase: "olimpo",     nombre: "Olimpo",      detalle: "24° Título: undecacampeón" },
+    { anio: "1987", clase: "olimpo",     nombre: "Olimpo",      detalle: "25° Título: duodecacampeón" },
+    { anio: "1988", clase: "olimpo",     nombre: "Olimpo",      detalle: "26° Título: tredecacampeón" },
     { anio: "1989", clase: "comercial",     nombre: "Comercial",      detalle: "14° Título: venció a Sporting por 2-0 el 15 de octubre de 1989" },
     { anio: "1990", clase: "sporting",     nombre: "Sporting",      detalle: "8° título" },
     { anio: "1991", clase: "villamitre",     nombre: "Villa Mitre",      detalle: "3° título: campeón al empatar con Olimpo por 1-1 con gol de Luis 'Paquillo' Sánchez y ganar el cuadrangular el 28 de julio de 1991 (a falta de una fecha)" },
     { anio: "1992", clase: "villamitre",     nombre: "Villa Mitre",      detalle: "4° título: bicampeón" },
     { anio: "1993", clase: "villamitre",     nombre: "Villa Mitre",      detalle: "5° título: tricampeón" },
     { anio: "1994", clase: "villamitre",     nombre: "Villa Mitre",      detalle: "6° título: tetracampeón" },
+    { anio: "1995", clase: "olimpo",     nombre: "Olimpo",      detalle: "27° Título: campeón al vencer a Villa Mitre por penales el 25 de octubre de 1995" },
+    { anio: "1996", clase: "liniers",     nombre: "Liniers",      detalle: "9° Título: al vencer a Sporting 1-0 en la final anual por 6 de octubre de 1995" },
+    { anio: "1997", clase: "liniers",     nombre: "Liniers",      detalle: "10° Título: bicampeón" },
+
     { anio: "1998", clase: "villamitre",     nombre: "Villa Mitre",      detalle: "7° título" },
     { anio: "1999", clase: "sporting",     nombre: "Sporting",      detalle: "9° título: campeón al vencer a Rosario Puerto Belgrano por 3-1 el 10 de octubre de 1999" },
     { anio: "2000", clase: "bellavista",     nombre: "Bella Vista",      detalle: "4° título: campeón el 29 de octubre de 2000 en cancha de Olimpo con gol de tiro libre de Fernado Lucas ante Sporting (1-0). Cortó una sequía de 39 años" },
@@ -19500,21 +19551,32 @@ const BD_CRONOLOGIA = [
     { anio: "2002", clase: "sporting",     nombre: "Sporting",      detalle: "10° título: campeón tras una serie final ante Rosario. El último partido se jugó el 15 de diciembre de 2002 con victoria por 1-0 con gol de Guillermo Álvarez y segunda vuelta olímpica en cancha de su rival histórico" },
     { anio: "2003", clase: "villamitre",     nombre: "Villa Mitre",      detalle: "8° título: campeón al vencer por penales a Tiro Federal el 5 de noviembre de 2003. Además, se convirtió en el primer equipo en ser campeón en su primera temporada en Primera tras ascender desde el Promocional" },
     { anio: "2004", clase: "tirofederal",     nombre: "Tiro Federal",      detalle: "1° título: campeón al vencer a Villa Mitre por 1-0 el 27 de octubre de 2004 en la final con gol en tiempo suplementario de Daniel 'Chiqui' Fernández. El partido se jugó en cancha de Liniers" },
+    { anio: "2005", clase: "liniers",     nombre: "Liniers",      detalle: "11° Título: al vencer a Bella vista por 3-1" },
+    { anio: "2006", clase: "liniers",     nombre: "Liniers",      detalle: "12° Título: bicampeón al superar por penales a Sansinena en la serie final" },
+    { anio: "2007", clase: "liniers",     nombre: "Liniers",      detalle: "13° Título: tricampeón al vencer a Olimpo por 3-1 en la final" },
     { anio: "2008", clase: "bellavista",     nombre: "Bella Vista",      detalle: "5° título: campeón al vencer a Liniers por 1-0 con gol de Fernando Priore y quedarse con el cuadrangular final el 7 de diciembre de 2008" },
+    { anio: "2009", clase: "olimpo",     nombre: "Olimpo",      detalle: "28° Título: al vencer a Tiro Federal por 4-2 en la serie. La última final se jugó el 6 de diciembre de 2009" },
     { anio: "2010", clase: "bellavista",     nombre: "Bella Vista",      detalle: "6° título: campeón de la temporada con una goleada por 3-0 ante Tiro Federal en cancha de Olimpo con goles de Lucas Machaín, Gabrie Ianni y Maximiliano Vallejos" },
+    { anio: "2011", clase: "liniers",     nombre: "Liniers",      detalle: "14° Título: al vencer a Bella Vista en la serie final" },
+    { anio: "2012", clase: "liniers",     nombre: "Liniers",      detalle: "15° Título: al vencer a Bella Vista en la serie final" },
     { anio: "2013", clase: "tirofederal",     nombre: "Tiro Federal",      detalle: "2° título: campeón al quedarse con el Apertura y Clausura" },
     { anio: "2014", clase: "sansinena",     nombre: "Sansinena",      detalle: "3° título: campeón al vencer a Liniers por 2-0 en el Torneo Apertura el 24 de julio de 2014. Nelson Ibarlucea y Lucas Machaín marcaron los goles" },
     { anio: "2014", clase: "sansinena",     nombre: "Sansinena",      detalle: "4° título: Bicampeón al conquistar el título del Clausura al empatar contra Olimpo por 1-1 el 14 de diciembre de 2014 y contar con la ventaja deportiva. El gol del cerrense: Lucas Machaín" },
-    { anio: "2015", clase: "huracan",     nombre: "Huracán",      detalle: "3° título: campeón del Apertura tras vencer Tiro Federal por penales tras un 0-0 (10 de diciembre de 2015)" },
+    { anio: "2015", clase: "liniers",     nombre: "Liniers",      detalle: "16° Título: campeón del Apertura al empatar contra Rosario el 27 de julio de 2015" },
+    { anio: "2015", clase: "huracan",     nombre: "Huracán",      detalle: "3° título: campeón del Clausura tras vencer Tiro Federal por penales tras un 0-0 (10 de diciembre de 2015)" },
     { anio: "2016", clase: "bellavista",     nombre: "Bella Vista",      detalle: "7° título: campeón del torneo Apertura el 24 de julio de 2016 después de vencer a Tiro Federal por 3-2 con goles de Lucas Machaín x2 y Fernando Priore" },
     { anio: "2016", clase: "tirofederal",     nombre: "Tiro Federal",      detalle: "3° título: campeón del Clausura al vencer a Libertad por 5-2 en el alargue tras empatar 1-1 en los 90' el 8 de diciembre de 2016. Mauro Sabatini x2, Franco Lefiñir, Emanuel Tamalet y Nicolás Di Bello, anotaron los goles" },
-    { anio: "2017", clase: "villamitre",     nombre: "Villa Mitre",      detalle: "9° título: campeón al aplastar a Sporting por 6-0 el 8 de diciembre de 2017 en cancha de Liniers. Los goles fueron de Damián De Hoyos x2, Leonardo López, Agustín Cocciarini, Ricardo Chavarri y Gastón Santillán" },
+    { anio: "2017", clase: "liniers",     nombre: "Liniers",      detalle: "17° Título: campeón del Apertura al vencer a Bella Vista por 3-1" },
+    { anio: "2017", clase: "villamitre",     nombre: "Villa Mitre",      detalle: "9° título: campeón del Clausura al aplastar a Sporting por 6-0 el 8 de diciembre de 2017 en cancha de Liniers. Los goles fueron de Damián De Hoyos x2, Leonardo López, Agustín Cocciarini, Ricardo Chavarri y Gastón Santillán" },
     { anio: "2018", clase: "sporting",     nombre: "Sporting",      detalle: "11° título: campeón del Apertura al vencer en la final a Tiro Federal por 2-1 el 22 de julio de 2018. Goles de Marcelo Castellano y Mauro Sabatini" },
     { anio: "2018", clase: "rosariopb",     nombre: "Rosario PB",      detalle: "8° título: camopeón al golear a Tiro Federal por 5-1 el 16 de diciembre de 2018 y quedarse con el Clausura. Los goles fueron de Brian Scalco x2, Leonel Navarro, Nicolás Achigar e Iván Mesa" },
-    { anio: "2019", clase: "sporting",     nombre: "Sporting",      detalle: "12° título: campeón del Clausura al vencer a Villa Mitre en la final extra jugada en cancha de Tiro Federal el 21 de julio de 2019. El único gol fue de Miguel Sanhueza" },
+    { anio: "2019", clase: "sporting",     nombre: "Sporting",      detalle: "12° título: campeón del Apertura al vencer a Villa Mitre en la final extra jugada en cancha de Tiro Federal el 21 de julio de 2019. El único gol fue de Miguel Sanhueza" },
+    { anio: "2019", clase: "liniers",     nombre: "Liniers",      detalle: "18° Título: campeón del Clausura al vencer a Villa Mitre por 2-0 en la final extra" },
+    { anio: "2021", clase: "liniers",     nombre: "Liniers",      detalle: "19° Título: al vencer a Huracán por 3-1 en la final anual" },
     { anio: "2022", clase: "tirofederal",     nombre: "Tiro Federal",      detalle: "4° título: campeón al vencer con un global de 3-2 a Liniers en la serie final el 17 de diciembre de 2022. Agustín Restiffo y Santiago López anotaron en la ida (2-1) y el propio López en la vuelta (1-1)" },
     { anio: "2023", clase: "huracan",     nombre: "Huracán",      detalle: "4° título: título compartido con Bella Vista por temporal que imposibilitó jugar la final del 17 de diciembre de 2023)" },
     { anio: "2023", clase: "bellavista",     nombre: "Bella Vista",      detalle: "8° título: título compartido con Huracán por temporal que imposibilitó jugar la final del 17 de diciembre de 2023)" },
+    { anio: "2024", clase: "liniers",     nombre: "Liniers",      detalle: "20° Título: al ganar ambos torneos, superando por penales a Bella Vista en el último partido el 1 de diciembre de 2024" },
     { anio: "2025", clase: "huracan",     nombre: "Huracán",      detalle: "5° título: venció a Bella Vista por penales en cancha de Villa Mitre luego de empatar 1-1 (14 de diciembre de 2025)" }
 ];
 
@@ -19548,7 +19610,7 @@ function generarCampeonesHistoricos() {
     html += `<div style="height:8px;background:#f0f0f0;border-top:1px solid #ddd;border-bottom:1px solid #ddd;"></div>`;
     html += `<div class="header-t" style="font-size:11px;background:#2c6e49;">ORDEN CRONOLÓGICO</div>`;
 
-    BD_CRONOLOGIA.forEach(item => {
+    BD_CRONOLOGIA.slice().reverse().forEach(item => {
         html += `<div style="display:flex;align-items:flex-start;gap:8px;padding:8px 10px;border-bottom:1px solid #eee;background:#fff;">
             <div style="min-width:36px;text-align:center;font-size:10px;font-weight:bold;color:#1a4a2e;padding-top:2px;">${item.anio}</div>
             <div class="escudo ${item.clase}" style="display:inline-block;vertical-align:middle;flex-shrink:0;margin-top:1px;"></div>
@@ -19556,6 +19618,94 @@ function generarCampeonesHistoricos() {
         </div>`;
     });
 
+
+    return html;
+}
+
+/* ══════════════════════════════════════════════════════════
+   LOS CAMPEONES DESDE 2026
+   ══════════════════════════════════════════════════════════ */
+const BD_CAMPEONES_2026 = {
+    promocional:        [
+    { anio: "2026", equipo: "Comercial", clase: "comercial", detalle: "Ganador del Apertura 2026 al vencer a Tiro Federal por penales (3-0) tras igualar 0-0 en los 90' el 11/7/2026" }
+],
+    reservaoficial:     [],
+    reservapromocional: [],
+    femenino:           [],
+    segundafemenino:    [],
+    reservafemenino:    [],
+    reservasegundafem:  [],
+    sub15fem:           [],
+    futsal:             [
+    { anio: "2026", equipo: "La Estación", clase: "laestacion", detalle: "Ganadora del Apertura 2026 al vencer a Villa Mitre por penales el 10/7/2026" }
+],
+    futsalreserva:      [
+    { anio: "2026", equipo: "Los 3 Chiflados", clase: "los3chiflados", detalle: "Ganador del Apertura 2026 al vencer a Petroquímicos por 4-1 el 10/7/2026" }
+],
+    juveniles:          [],
+    menores:            [
+    { anio: "2026", equipo: "La Armonía B", clase: "laarmonia", detalle: "Ganador del Apertura 2026 en 7ma" },
+    { anio: "2026", equipo: "Libertad", clase: "libertad", detalle: "Ganador del Apertura 2026 en 8va" },
+    { anio: "2026", equipo: "Liniers", clase: "liniers", detalle: "Ganador del Apertura 2026 en 9na" },
+],
+    infantiles:         [],
+    senior:             [],
+    otros:              []
+};
+
+/* Formato de cada entrada:
+   { anio: "2026", equipo: "Nombre", clase: "cssclass", detalle: "texto opcional" } */
+
+function generarCampeones2026() {
+    const secciones = [
+        { key: "promocional",        label: "Torneo Promocional" },
+        { key: "reservaoficial",     label: "Reserva Oficial" },
+        { key: "reservapromocional", label: "Reserva Promocional" },
+        { key: "femenino",           label: "1° Femenino" },
+        { key: "segundafemenino",    label: "2° Femenino" },
+        { key: "reservafemenino",    label: "1° Femenino Reserva" },
+        { key: "reservasegundafem",  label: "2° Femenino Reserva" },
+        { key: "sub15fem",           label: "Sub 15 Femenino" },
+        { key: "futsal",             label: "Futsal" },
+        { key: "futsalreserva",      label: "Futsal Reserva" },
+        { key: "senior",             label: "Senior" },
+        { key: "juveniles",          label: "Juveniles" },
+        { key: "menores",            label: "Menores" },
+        { key: "infantiles",         label: "Infantiles" },
+        { key: "otros",              label: "Otros" }
+    ];
+
+    let html = `<div class="header-t">🏆 LOS CAMPEONES DESDE 2026</div>`;
+
+    secciones.forEach(s => {
+        const datos = (BD_CAMPEONES_2026[s.key] || []).slice().reverse();
+        const activo = datos.length > 0;
+
+        html += `<div style="border-bottom:1px solid #ddd;">
+            <div onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='none'?'block':'none'"
+                 style="padding:10px 12px;background:${activo ? '#fff' : '#f9f9f9'};cursor:pointer;display:flex;align-items:center;justify-content:space-between;">
+                <span style="font-size:12px;font-weight:bold;color:${activo ? '#1a4a2e' : '#aaa'};">${s.label}</span>
+                <span style="font-size:10px;color:#aaa;">▼</span>
+            </div>
+            <div style="display:none;">`;
+
+        if (datos.length === 0) {
+            html += `<div style="padding:10px 12px;font-size:11px;color:#bbb;font-style:italic;text-align:center;">Sin campeones registrados aún</div>`;
+        } else {
+            datos.forEach(item => {
+                html += `<div style="display:flex;align-items:center;gap:8px;padding:8px 14px;border-top:1px solid #f0f0f0;background:#fff;">
+                    <div style="min-width:36px;font-size:11px;font-weight:bold;color:#1a4a2e;">${item.anio}</div>
+                    <div class="escudo ${item.clase}" style="display:inline-block;vertical-align:middle;flex-shrink:0;"></div>
+                    <div>
+                        <div style="font-size:12px;font-weight:bold;">${item.equipo}</div>
+                        ${item.detalle ? `<div style="font-size:10px;color:#777;">${item.detalle}</div>` : ''}
+                    </div>
+                </div>`;
+            });
+        }
+
+        html += `</div></div>`;
+    });
 
     return html;
 }
