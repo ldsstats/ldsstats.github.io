@@ -2415,7 +2415,7 @@ function generarHome() {
 
         { id: "2026-07-13", label: "LUN 13/07", torneos: [
             { nombre: "PROMOCIONAL RESERVA - FINAL", cat: "reserva_promocional", noAutoResult: true, partidos: [
-                {l:"Tiro Federal", v:"Rosario PB", hora:"15:30"}
+                {l:"Tiro Federal", v:"Rosario PB", hora:"15:30", gl:1, gv:1, pen_l: 4, pen_v:5}
             ]},
        ]},
         { id: "2026-07-14", label: "MAR 14/07", torneos: [
@@ -19212,8 +19212,8 @@ const BD_RESERVA_PROMOCIONAL_PLAYOFFS = {
         { local: "Olimpo", clL: "olimpo", visitante: "Rosario PB", clV: "rosariopb", gl: 0, gv: 0, pen_l: 3, pen_v: 1 },
         { local: "Tiro Federal", clL: "tirofederal", visitante: "Comercial", clV: "comercial", gl: 2, gv: 0 }
     ],
-    final: { local: "Tiro Federal", clL: "tirofederal", visitante: "Rosario PB", clV: "rosariopb", gl: null, gv: null },
-    finalExtra: { local: "Olimpo", clL: "olimpo", visitante: "A confirmar", clV: "aconfirmar", gl: null, gv: null }
+    final: { local: "Tiro Federal", clL: "tirofederal", visitante: "Rosario PB", clV: "rosariopb", gl: 1, gv: 1, pen_l: 4, pen_v: 5 },
+    finalExtra: { local: "Olimpo", clL: "olimpo", visitante: "Rosario PB", clV: "rosariopb", gl: null, gv: null }
 };
 
 const BD_FEMENINO_PLAYOFFS = {
