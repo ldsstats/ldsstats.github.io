@@ -16367,13 +16367,13 @@ function generarReserva(cat) {
                        {n:"Dublin <b>(X)</b>",              cl:"dublin",           pj:14, pg:3, pe:3, pp:8, gf:15, gc:21, pts:12},
                        {n:"Pacífico (C) <b>(X)</b>", cl:"pacificocabildo",  pj:14, pg:1, pe:5, pp:8, gf:14, gc:27, pts:8},],
         'segundafemenino': [
-            {n:"Liniers",             cl:"liniers",         pj:10, pg:8, pe:2, pp:0, gf:37, gc:6, pts:26},
+            {n:"Liniers <b>(C)</b>",             cl:"liniers",         pj:10, pg:8, pe:2, pp:0, gf:37, gc:6, pts:26},
             {n:"Rosario PB",          cl:"rosariopb",       pj:10, pg:7, pe:2, pp:1, gf:23, gc:10, pts:23},
             {n:"San Francisco",       cl:"sanfrancisco",    pj:11, pg:7, pe:2, pp:2, gf:23, gc:11, pts:23},
             {n:"Estrella de Oro",     cl:"estrellaoro",     pj:12, pg:7, pe:2, pp:3, gf:20, gc:12, pts:23},
-            {n:"Huracán",             cl:"huracan",         pj:10, pg:2, pe:0, pp:8, gf:6, gc:18, pts:6},
+            {n:"Huracán",             cl:"huracan",         pj:11, pg:2, pe:0, pp:9, gf:6, gc:19, pts:6},
             {n:"Petroquímicos",       cl:"petroquimicos",   pj:11, pg:1, pe:1, pp:9, gf:9, gc:22, pts:4},
-            {n:"Sansinena",           cl:"sansinena",       pj:11, pg:1, pe:1, pp:9, gf:8, gc:41, pts:4}
+            {n:"Sansinena",           cl:"sansinena",       pj:11, pg:1, pe:1, pp:9, gf:8, gc:45, pts:4}
         ],
         'femenino':   [
             {n:"Tiro Federal <b>(C)</b>",          cl:"tirofederal",pj:14,pg:8, pe:5, pp:1, gf:31, gc:14, pts:29},
@@ -16415,7 +16415,7 @@ function generarReserva(cat) {
         } else if (cat === 'femenino') {
             html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'><b>(C)</b> Clasificado<br><b>(X)</b> Eliminado<br>📌 Puntos en juego: <b>Torneo finalizado</b></div>`;
         } else if (cat === 'segundafemenino') {
-            html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>24</b> para equipos que jugaron 10 partidos y <b>27</b> para equipos que jugaron 9 partidos</div>`;
+html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'><b>(C) Clasificado</b><br>📌 Puntos en juego: <b>24</b> para equipos que jugaron 10 partidos, <b>21</b> para equipos que jugaron 11 partidos y <b>18</b> para equipos que jugaron 12 partidos<br></div>`;
         }
     }
     return html;
@@ -16430,7 +16430,7 @@ const BD_POS_SUB = {
         {nombre:"Balompié",     clase:"balompie",    pj:6,pg:2,pe:3,pp:1,gf:10,gc:8,pts:9},
         {nombre:"Olimpo",       clase:"olimpo",      pj:7,pg:2,pe:0,pp:5,gf:10,gc:18,pts:6},
         {nombre:"Alvarado",     clase:"alvarado",    pj:7,pg:2,pe:0,pp:5,gf:9,gc:17,pts:6},
-        {nombre:"Santamarina",  clase:"santamarina", pj:7,pg:0,pe:1,pp:6,gf:4,gc:25,pts:1}
+        {nombre:"Santamarina <b>(X)</b>",  clase:"santamarina", pj:7,pg:0,pe:1,pp:6,gf:4,gc:25,pts:1}
     ],
     sub15: [
         {nombre:"Mac Allister", clase:"macallister", pj:7,pg:7,pe:0,pp:0,gf:12,gc:2,pts:21},
@@ -16448,7 +16448,7 @@ const BD_POS_SUB = {
         {nombre:"Balompié",     clase:"balompie",    pj:6,pg:3,pe:1,pp:2,gf:9,gc:10,pts:10},
         {nombre:"Olimpo",       clase:"olimpo",      pj:7,pg:3,pe:1,pp:3,gf:9,gc:9,pts:10},
         {nombre:"Villa Mitre",  clase:"villamitre",  pj:7,pg:1,pe:3,pp:3,gf:5,gc:8,pts:6},
-        {nombre:"Santamarina",  clase:"santamarina", pj:7,pg:0,pe:0,pp:7,gf:2,gc:19,pts:0}
+        {nombre:"Santamarina <b>(X)</b>",  clase:"santamarina", pj:7,pg:0,pe:0,pp:7,gf:2,gc:19,pts:0}
     ]
 };
 
@@ -16566,7 +16566,8 @@ function generarSub() {
         </tr></thead><tbody>`;
         stats.forEach((e, i) => {
             const dif = (e.gf || 0) - (e.gc || 0);
-            html += `<tr>
+            const cl = i < 2 ? 'p-playoff' : '';
+            html += `<tr class="${cl}">
                 <td class="c-pos">${i+1}</td>
                 <td class="c-equipo"><div class="escudo ${e.clase}" style="display:inline-block;vertical-align:middle;margin-right:4px;"></div>${e.nombre}</td>
                 <td class="c-stat">${e.pj||0}</td><td class="c-stat">${e.pg||0}</td><td class="c-stat">${e.pe||0}</td>
@@ -16576,11 +16577,11 @@ function generarSub() {
         });
         html += `</tbody></table>`;
         if (cat.key === 'sub13') {
-            html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>15</b> para los que jugaron 7 partidos y <b>18</b> para los que jugaron 6 partidos</div>`;
+            html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'><b>(X) Eliminado</b><br>📌 Puntos en juego: <b>15</b> para los que jugaron 7 partidos y <b>18</b> para los que jugaron 6 partidos</div>`;
         } else if (cat.key === 'sub15') {
             html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>15</b> para los que jugaron 7 partidos y <b>18</b> para los que jugaron 6 partidos</div>`;
         } else if (cat.key === 'sub17') {
-            html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>15</b> para los que jugaron 7 partidos y <b>18</b> para los que jugaron 6 partidos</div>`;
+            html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'><b>(X) Eliminado</b><br>📌 Puntos en juego: <b>15</b> para los que jugaron 7 partidos y <b>18</b> para los que jugaron 6 partidos</div>`;
         }
 
         // Goleadores
@@ -18756,15 +18757,15 @@ const BD_POSICIONES = {
     },
     segundafemenino: {
         torneo2026: [
-            { nombre: "Liniers",             clase: "liniers",         pj:13, pg:12, pe:1, pp:0, gf:55, gc:8, pts:40 },
+            { nombre: "Liniers",             clase: "liniers",         pj:14, pg:13, pe:1, pp:0, gf:55, gc:8, pts:40 },
             { nombre: "San Francisco",       clase: "sanfrancisco",    pj:14, pg:10, pe:2, pp:2, gf:56, gc:14, pts:32 },
             { nombre: "Petroquímicos",       clase: "petroquimicos",   pj:14, pg:9, pe:2, pp:3, gf:31, gc:11, pts:29 },
             { nombre: "Rosario PB",          clase: "rosariopb",       pj:14, pg:9, pe:1, pp:4, gf:63, gc:21, pts:28 },
             { nombre: "Estrella de Oro",     clase: "estrellaoro",     pj:15, pg:6, pe:3, pp:6, gf:23, gc:31, pts:21 },
             { nombre: "Sansinena",           clase: "sansinena",       pj:15, pg:3, pe:3, pp:9, gf:15, gc:37, pts:12 },
             { nombre: "Huracán",             clase: "huracan",         pj:14, pg:3, pe:2, pp:9, gf:14, gc:59, pts:11 },
-            { nombre: "Olimpo",              clase: "olimpo",          pj:16, pg:2, pe:3, pp:11, gf:11, gc:36, pts:9 },
-            { nombre: "Pacífico (C)", clase: "pacificocabildo", pj:14, pg:0, pe:1, pp:13, gf:7, gc:54, pts:1 },
+            { nombre: "Olimpo",              clase: "olimpo",          pj:14, pg:2, pe:3, pp:9, gf:11, gc:37, pts:9 },
+            { nombre: "Pacífico (C)", clase: "pacificocabildo", pj:14, pg:0, pe:1, pp:13, gf:7, gc:56, pts:1 },
         ]
     }
 };
@@ -18822,7 +18823,7 @@ if (tor === 'apertura' && cat === 'promocional') {
         return html + "</tbody></table><div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'><b>(C)</b> Clasificado<br><b>(X)</b> Eliminado<br>📌 Puntos en juego: <b>Torneo finalizado</b></div>";
     }
     if (tor === 'torneo2026' && cat === 'segundafemenino') {
-        return html + "</tbody></table><div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>33</b> para los equipos que jugaron 13 partidos, <b>30</b> para los equipos que jugaron 14 partidos, <b>27</b> para los equipos que jugaron 15 partidos y <b>24</b> para los equipos que jugaron 16 partidos</div>";
+        return html + "</tbody></table><div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>30</b> para los equipos que jugaron 14 partidos y <b>27</b> para los equipos que jugaron 15 partidos</div>";
     }
     return html + "</tbody></table>";
 }
