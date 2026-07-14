@@ -97,6 +97,7 @@ BD_MERCADO_PASES["oficial"]["libertad"].bajas.push({ jugador: "Alan Gigena", clu
 BD_MERCADO_PASES["oficial"]["libertad"].bajas.push({ jugador: "Bruno Falcioni", club: "Ferroviario (Dorrego)" });
 BD_MERCADO_PASES["oficial"]["sporting"].bajas.push({ jugador: "Luis De Los Santos", club: "Libre" });
 BD_MERCADO_PASES["promocional"]["rosario"].bajas.push({ jugador: "Nicolás Orellana", club: "Libre" });
+BD_MERCADO_PASES["promocional"]["rosario"].bajas.push({ jugador: "Benjamín Segovia", club: "Libre" });
 BD_MERCADO_PASES["femenino"]["empleados"].bajas.push({ jugador: "Marianela Santana", club: "Municipales" });
 BD_MERCADO_PASES["femenino"]["municipales"].altas.push({ jugador: "Marianela Santana", club: "Empleados de Comercio" });
 BD_MERCADO_PASES["oficial"]["sanfrancisco"].altas.push({ jugador: "Tomás Alfaro", club: "Santiago Morning (Chile)" });
@@ -2386,7 +2387,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 16).partidos.forEach(p
 });
 
 
-let diaSeleccionadoHome = "2026-07-13"; 
+let diaSeleccionadoHome = "2026-07-14"; 
 let mercadoPasesAbierto = false;
 
 function toggleMercadoPasesHome() {
@@ -2422,6 +2423,14 @@ function generarHome() {
             { nombre: "SENIOR - SEMIFINALES", cat: "seniorapertura", noAutoResult: true, partidos: [
                 {l:"Bella Vista", v:"Pacífico (C)", hora:"21:00",nota:"en cancha de Sansinena"},
                 {l:"Sporting", v:"Comercial", hora:"21:30",nota:"en cancha de Libertad"}
+            ]},
+       ]},
+        { id: "2026-07-19", label: "DOM 19/07", torneos: [
+            { nombre: "OFICIAL - FINAL EXTRA", cat: "oficial", noAutoResult: true, partidos: [
+                {l:"Huracán", v:"Liniers", hora:"11:00",nota:"<b>en cancha de Tiro Federal</b>"}
+            ]},
+            { nombre: "RESERVA OFICIAL - FINAL EXTRA", cat: "reserva_oficial", noAutoResult: true, partidos: [
+                {l:"Sporting", v:"Villa Mitre", hora:"11:00"}
             ]},
        ]},
 ];
