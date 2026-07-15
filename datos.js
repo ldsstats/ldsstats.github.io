@@ -2422,7 +2422,7 @@ function generarHome() {
         { id: "2026-07-14", label: "MAR 14/07", torneos: [
             { nombre: "SENIOR - SEMIFINALES", cat: "seniorapertura", noAutoResult: true, partidos: [
                 {l:"Bella Vista", v:"Pacífico (C)", hora:"21:00",nota:"en cancha de Sansinena"},
-                {l:"Sporting", v:"Comercial", hora:"21:30",nota:"en cancha de Libertad"}
+                {l:"Sporting", v:"Comercial", hora:"21:30",nota:"en cancha de Libertad", gl:2, gv:0}
             ]},
        ]},
         { id: "2026-07-19", label: "DOM 19/07", torneos: [
@@ -19107,7 +19107,7 @@ const BD_SENIOR_PLAYOFFS = {
     ],
     semifinales: [
         { local: "Bella Vista",  clL: "bellavista",   visitante: "Pacífico (C)", clV: "pacificoc",       gl: null, gv: null },
-        { local: "Sporting",     clL: "sporting",     visitante: "Comercial",    clV: "comercial",       gl: null, gv: null }
+        { local: "Sporting",     clL: "sporting",     visitante: "Comercial",    clV: "comercial",       gl: 2, gv: 0 }
     ],
     final: { local: "A confirmar", clL: "escudo", visitante: "A confirmar", clV: "escudo", gl: null, gv: null }
 };
