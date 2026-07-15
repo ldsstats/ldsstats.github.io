@@ -2421,7 +2421,7 @@ function generarHome() {
        ]},
         { id: "2026-07-14", label: "MAR 14/07", torneos: [
             { nombre: "SENIOR - SEMIFINALES", cat: "seniorapertura", noAutoResult: true, partidos: [
-                {l:"Bella Vista", v:"Pacífico (C)", hora:"21:00",nota:"en cancha de Sansinena"},
+                {l:"Bella Vista", v:"Pacífico (C)", hora:"21:00",nota:"en cancha de Sansinena", gl:0, gv:2},
                 {l:"Sporting", v:"Comercial", hora:"21:30",nota:"en cancha de Libertad", gl:2, gv:0}
             ]},
        ]},
@@ -16718,6 +16718,13 @@ function generarSub15Fem() {
     return html;
 }
 
+function generarTorneoSeleccion15() {
+    let html = `<div class="header-t">TORNEO DE SELECCIÓN — SUB 15</div>`;
+    html += `<div class='msg-prox'>PRÓXIMAMENTE</div>`;
+    return html;
+}
+
+
 function generarFutsal(modo) {
     modo = modo || 'principal';
     const equipos = BD_EQUIPOS.futsal;
@@ -17412,11 +17419,11 @@ function generarSeniorApertura() {
 
 const BD_GOLEADORES_SENIOR = [
     { nombre: "César Panduro", equipo: "Huracán", goles: 13 },
-    { nombre: "Marcos Cossu", equipo: "Sporting", goles: 8 },
+    { nombre: "Marcos Cossu", equipo: "Sporting", goles: 9 },
     { nombre: "Juan José Dietz", equipo: "Tiro Federal", goles: 8 },
+    { nombre: "Esteban Angelini", equipo: "Pacífico (C)", goles: 8 },
     { nombre: "Emiliano Jofré", equipo: "Sansinena", goles: 8 },
     { nombre: "Leandro Duelle", equipo: "Pacífico (C)", goles: 7 },
-    { nombre: "Esteban Angelini", equipo: "Pacífico (C)", goles: 7 },
     { nombre: "Maximiliano Casas", equipo: "Comercial", goles: 5 },
     { nombre: "Fabián Merlini", equipo: "Bella Vista", goles: 4 },
     { nombre: "Nicolás Custodio", equipo: "Sporting", goles: 4 },
@@ -17473,6 +17480,7 @@ const BD_GOLEADORES_SENIOR = [
     { nombre: "Silvio Pagalday", equipo: "Pacífico (C)", goles: 1 },
     { nombre: "Matías Aldunate", equipo: "Pacífico (C)", goles: 1 },
     { nombre: "Nicolás Becher", equipo: "Pacífico (C)", goles: 1 },
+    { nombre: "Santiago Martín", equipo: "Pacífico (C)", goles: 1 },
     { nombre: "Gabriel Dauwalder", equipo: "San Francisco", goles: 1 },
     { nombre: "Marcos Ramos", equipo: "San Francisco", goles: 1 },
     { nombre: "Damián Vidal", equipo: "San Francisco", goles: 1 },
@@ -17492,6 +17500,7 @@ const BD_GOLEADORES_SENIOR = [
     { nombre: "Emiliano Sebeca", equipo: "Sporting", goles: 1 },
     { nombre: "Alejandro Aparicio", equipo: "Sporting", goles: 1 },
     { nombre: "Javier Magnani", equipo: "Sporting", goles: 1 },
+    { nombre: "José Alberto Mosqueira", equipo: "Sporting", goles: 1 },
     { nombre: "Gustavo Derrac", equipo: "Tiro Federal", goles: 1 }
 ];
 const BD_GOLES_CONTRA_SENIOR = [
@@ -19106,10 +19115,10 @@ const BD_SENIOR_PLAYOFFS = {
         { local: "Pacífico (C)", clL: "pacificoc",    visitante: "Sansinena",      clV: "sansinena",     gl: 4, gv: 1, goles_l: ["Fabián Soto (2)","Leandro Duelle","Esteban Angelini"], goles_v: ["Cristian González"] }
     ],
     semifinales: [
-        { local: "Bella Vista",  clL: "bellavista",   visitante: "Pacífico (C)", clV: "pacificoc",       gl: null, gv: null },
+        { local: "Bella Vista",  clL: "bellavista",   visitante: "Pacífico (C)", clV: "pacificoc",       gl: 0, gv: 2 },
         { local: "Sporting",     clL: "sporting",     visitante: "Comercial",    clV: "comercial",       gl: 2, gv: 0 }
     ],
-    final: { local: "A confirmar", clL: "escudo", visitante: "A confirmar", clV: "escudo", gl: null, gv: null }
+    final: { local: "Sporting", clL: "sporting",     visitante: "Pacífico (C)", clV: "pacificoc",       gl: null, gv: null }
 };
 
 function generarSeniorPlayoffs() {
