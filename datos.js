@@ -16718,13 +16718,6 @@ function generarSub15Fem() {
     return html;
 }
 
-function generarTorneoSeleccion15() {
-    let html = `<div class="header-t">TORNEO DE SELECCIÓN — SUB 15</div>`;
-    html += `<div class='msg-prox'>PRÓXIMAMENTE</div>`;
-    return html;
-}
-
-
 function generarFutsal(modo) {
     modo = modo || 'principal';
     const equipos = BD_EQUIPOS.futsal;
@@ -19115,10 +19108,10 @@ const BD_SENIOR_PLAYOFFS = {
         { local: "Pacífico (C)", clL: "pacificoc",    visitante: "Sansinena",      clV: "sansinena",     gl: 4, gv: 1, goles_l: ["Fabián Soto (2)","Leandro Duelle","Esteban Angelini"], goles_v: ["Cristian González"] }
     ],
     semifinales: [
-        { local: "Bella Vista",  clL: "bellavista",   visitante: "Pacífico (C)", clV: "pacificoc",       gl: 0, gv: 2 },
-        { local: "Sporting",     clL: "sporting",     visitante: "Comercial",    clV: "comercial",       gl: 2, gv: 0 }
+        { local: "Bella Vista",  clL: "bellavista",   visitante: "Pacífico (C)", clV: "pacificoc",       gl: 0, gv: 2, goles_l: [], goles_v: ["Esteban Angelini","Santiago Martín"] },
+        { local: "Sporting",     clL: "sporting",     visitante: "Comercial",    clV: "comercial",       gl: 2, gv: 0, goles_l: ["Marcos Cossu","José Alberto Mosqueira"], goles_v: [] }
     ],
-    final: { local: "Sporting", clL: "sporting",     visitante: "Pacífico (C)", clV: "pacificoc",       gl: null, gv: null }
+    final: { local: "Sporting", clL: "sporting", visitante: "Pacífico (C)", clV: "pacificoc", gl: null, gv: null }
 };
 
 function generarSeniorPlayoffs() {
@@ -19684,6 +19677,106 @@ function generarCampeones2026() {
         }
 
         html += `</div></div>`;
+    });
+
+    return html;
+}
+
+function generarTorneoSeleccion15() {
+    const esc = {
+        ldsbb:         `<svg width="16" height="16" viewBox="0 0 16 16"><rect width="16" height="16" fill="#30d1d1"/><text x="8" y="6.5" text-anchor="middle" font-size="4.5" font-weight="bold" fill="white" font-family="Arial">LS</text><text x="8" y="13" text-anchor="middle" font-size="4.5" font-weight="bold" fill="white" font-family="Arial">BB</text></svg>`,
+        olavarria:     `<svg width="16" height="16" viewBox="0 0 16 16"><rect width="16" height="16" fill="white" stroke="#aaa" stroke-width="1"/><text x="8" y="12" text-anchor="middle" font-size="10" font-weight="bold" fill="#375dbd" font-family="Arial">O</text></svg>`,
+        tresarroyos:   `<svg width="16" height="16" viewBox="0 0 16 16"><rect width="16" height="16" fill="white" stroke="#aaa" stroke-width="1"/><text x="8" y="12" text-anchor="middle" font-size="7" font-weight="bold" fill="#111" font-family="Arial">3A</text></svg>`,
+        azul:          `<svg width="16" height="16" viewBox="0 0 16 16"><rect width="16" height="16" rx="2" fill="#3759b0"/><text x="8" y="12" text-anchor="middle" font-size="11" font-family="Arial">⚽</text></svg>`,
+        ayacucho:      `<svg width="16" height="16" viewBox="0 0 16 16"><rect width="16" height="16" fill="white" stroke="#aaa" stroke-width="1"/><text x="8" y="11" text-anchor="middle" font-size="5" font-weight="bold" fill="#1e3b85" font-family="Arial">CAF</text></svg>`,
+        necochea:      `<svg width="16" height="16" viewBox="0 0 16 16"><rect width="16" height="16" fill="white" stroke="#aaa" stroke-width="1"/><text x="8" y="11" text-anchor="middle" font-size="5" font-weight="bold" fill="#1e3b85" font-family="Arial">LNF</text></svg>`,
+        tandil:        `<svg width="16" height="16" viewBox="0 0 16 16"><rect width="16" height="16" fill="white"/><rect x="0" y="13" width="16" height="3" fill="#009abd"/><rect x="0" y="0" width="3" height="16" fill="#009abd"/><rect x="13" y="0" width="3" height="16" fill="#009abd"/><text x="8" y="10" text-anchor="middle" font-size="4.5" font-weight="bold" fill="#1e3b85" font-family="Arial">LTF</text></svg>`,
+        dolores:       `<svg width="16" height="16" viewBox="0 0 16 16"><rect width="16" height="16" rx="2" fill="#1d7a8f"/><line x1="8" y1="1" x2="8" y2="15" stroke="white" stroke-width="0.8"/><line x1="1" y1="8" x2="15" y2="8" stroke="white" stroke-width="0.8"/><text x="3" y="7" font-size="4.5" font-weight="bold" fill="white" font-family="Arial">L</text><text x="10" y="7" font-size="4.5" font-weight="bold" fill="white" font-family="Arial">D</text><text x="8.5" y="14.5" font-size="3.5" font-weight="bold" fill="white" font-family="Arial">DE</text><text x="2" y="14.5" font-size="4.5" font-weight="bold" fill="white" font-family="Arial">F</text></svg>`,
+        madariaga:     `<svg width="16" height="16" viewBox="0 0 16 16"><rect width="16" height="16" rx="2" fill="#4ec3de"/><rect x="3" y="0" width="3" height="16" fill="white"/><rect x="10" y="0" width="3" height="16" fill="white"/><text x="8" y="11" text-anchor="middle" font-size="5" font-weight="bold" fill="#111" font-family="Arial">LMF</text></svg>`,
+        lacosta:       `<svg width="16" height="16" viewBox="0 0 16 16"><rect width="16" height="16" fill="#242d85"/><rect x="0" y="3" width="16" height="3" fill="white"/><rect x="0" y="10" width="16" height="3" fill="white"/></svg>`,
+        guatrache:     `<svg width="16" height="16" viewBox="0 0 16 16"><rect width="16" height="16" fill="#5d67c9"/><rect x="0" y="0" width="5" height="16" fill="white"/><rect x="11" y="0" width="5" height="16" fill="white"/></svg>`,
+        trenquelauquen:`<svg width="16" height="16" viewBox="0 0 16 16"><rect width="16" height="16" fill="#cc0000"/><text x="8" y="11" text-anchor="middle" font-size="5" font-weight="bold" fill="white" font-family="Arial">LTF</text></svg>`,
+        pehuajo:       `<svg width="16" height="16" viewBox="0 0 16 16"><rect width="16" height="16" fill="#1bd2e3"/><text x="8" y="11" text-anchor="middle" font-size="5" font-weight="bold" fill="#2e22ba" font-family="Arial">LPF</text></svg>`,
+    };
+
+    const fixture = [
+        { n:1, dia:"Mié 5/8",  partidos:[{l:"Olavarría",    v:"Tres Arroyos", lk:"olavarria",  vk:"tresarroyos", gl:null, gv:null}], libre:"Liga del Sur" },
+        { n:2, dia:"Mié 12/8", partidos:[{l:"Liga del Sur", v:"Olavarría",    lk:"ldsbb",      vk:"olavarria",   gl:null, gv:null}], libre:"Tres Arroyos" },
+        { n:3, dia:"Mié 19/8", partidos:[{l:"Tres Arroyos", v:"Liga del Sur", lk:"tresarroyos",vk:"ldsbb",       gl:null, gv:null}], libre:"Olavarría" },
+        { n:4, dia:"Mié 26/8", partidos:[{l:"Tres Arroyos", v:"Olavarría",    lk:"tresarroyos",vk:"olavarria",   gl:null, gv:null}], libre:"Liga del Sur" },
+        { n:5, dia:"Mié 2/9",  partidos:[{l:"Olavarría",    v:"Liga del Sur", lk:"olavarria",  vk:"ldsbb",       gl:null, gv:null}], libre:"Tres Arroyos" },
+        { n:6, dia:"Mié 8/9",  partidos:[{l:"Liga del Sur", v:"Tres Arroyos", lk:"ldsbb",      vk:"tresarroyos", gl:null, gv:null}], libre:"Olavarría" },
+    ];
+
+    const zonas = [
+        { label:"ZONA 1", equipos:[
+            { nombre:"Liga del Sur",      key:"ldsbb",          pj:0,pg:0,pe:0,pp:0,gf:0,gc:0,pts:0 },
+            { nombre:"Olavarría",         key:"olavarria",      pj:0,pg:0,pe:0,pp:0,gf:0,gc:0,pts:0 },
+            { nombre:"Tres Arroyos",      key:"tresarroyos",    pj:0,pg:0,pe:0,pp:0,gf:0,gc:0,pts:0 },
+        ]},
+        { label:"ZONA 2", equipos:[
+            { nombre:"Azul",              key:"azul",           pj:0,pg:0,pe:0,pp:0,gf:0,gc:0,pts:0 },
+            { nombre:"Ayacucho",          key:"ayacucho",       pj:0,pg:0,pe:0,pp:0,gf:0,gc:0,pts:0 },
+            { nombre:"Necochea",          key:"necochea",       pj:0,pg:0,pe:0,pp:0,gf:0,gc:0,pts:0 },
+            { nombre:"Tandil",            key:"tandil",         pj:0,pg:0,pe:0,pp:0,gf:0,gc:0,pts:0 },
+        ]},
+        { label:"ZONA 3", equipos:[
+            { nombre:"Dolores",           key:"dolores",        pj:0,pg:0,pe:0,pp:0,gf:0,gc:0,pts:0 },
+            { nombre:"General Madariaga", key:"madariaga",      pj:0,pg:0,pe:0,pp:0,gf:0,gc:0,pts:0 },
+            { nombre:"La Costa",          key:"lacosta",        pj:0,pg:0,pe:0,pp:0,gf:0,gc:0,pts:0 },
+        ]},
+        { label:"ZONA 4", equipos:[
+            { nombre:"Guatraché",         key:"guatrache",      pj:0,pg:0,pe:0,pp:0,gf:0,gc:0,pts:0 },
+            { nombre:"Trenque Lauquen",   key:"trenquelauquen", pj:0,pg:0,pe:0,pp:0,gf:0,gc:0,pts:0 },
+            { nombre:"Pehuajó",           key:"pehuajo",        pj:0,pg:0,pe:0,pp:0,gf:0,gc:0,pts:0 },
+        ]},
+    ];
+
+    const n = estado.fecha_sel15 || 1;
+    const f = fixture.find(x => x.n === n) || fixture[0];
+    const e = k => `<span style="display:inline-flex;align-items:center;vertical-align:middle;">${esc[k]||''}</span>`;
+
+    let html = `<div class="header-t">TORNEO DE SELECCIÓN — SUB 15</div>`;
+
+    html += `<div class="nav-fechas">`;
+    for (let i = 1; i <= 6; i++) {
+        html += `<div class="btn-f ${i===n?'activa':''}" onclick="cambiarFechaSel15(${i})">${i}</div>`;
+    }
+    html += `</div>`;
+
+    html += `<div class="header-t">ZONA 1 — FECHA ${n} &nbsp;·&nbsp; ${f.dia}</div>`;
+    html += `<div style="padding:6px 10px;font-size:11px;background:#f9f9f9;border-bottom:1px solid #eee;"><b>Fecha libre:</b> ${f.libre}</div>`;
+    html += `<table>`;
+    f.partidos.forEach(p => {
+        const res = p.gl !== null ? `${p.gl} - ${p.gv}` : '- -';
+        html += `<tr>
+            <td class="c-loc"><span style="display:inline-flex;align-items:center;justify-content:flex-end;width:100%;gap:4px;">${p.l} ${e(p.lk)}</span></td>
+            <td class="c-res">${res}</td>
+            <td class="c-vis"><span style="display:inline-flex;align-items:center;gap:4px;">${e(p.vk)} ${p.v}</span></td>
+        </tr>`;
+    });
+    html += `</table>`;
+
+    zonas.forEach(z => {
+        html += `<div class="header-t">POSICIONES — ${z.label}</div>
+        <table><thead><tr>
+            <th style="width:20px;">#</th>
+            <th style="text-align:left;padding-left:6px;">Equipo</th>
+            <th class="c-stat">PJ</th><th class="c-stat">PG</th><th class="c-stat">PE</th>
+            <th class="c-stat">PP</th><th class="c-stat">GF</th><th class="c-stat">GC</th>
+            <th class="c-stat">Dif</th><th class="c-stat">Pts</th>
+        </tr></thead><tbody>`;
+        z.equipos.forEach((eq, i) => {
+            const dif = eq.gf - eq.gc;
+            html += `<tr>
+                <td class="c-pos">${i+1}</td>
+                <td class="c-equipo"><span style="display:inline-flex;align-items:center;gap:5px;">${e(eq.key)} ${eq.nombre}</span></td>
+                <td class="c-stat">${eq.pj}</td><td class="c-stat">${eq.pg}</td><td class="c-stat">${eq.pe}</td>
+                <td class="c-stat">${eq.pp}</td><td class="c-stat">${eq.gf}</td><td class="c-stat">${eq.gc}</td>
+                <td class="c-stat">${dif>0?'+'+dif:dif}</td><td class="c-stat"><b>${eq.pts}</b></td>
+            </tr>`;
+        });
+        html += `</tbody></table>`;
     });
 
     return html;
