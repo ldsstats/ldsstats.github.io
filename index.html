@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>LdS Stats - 2026</title>
-    <link rel="stylesheet" href="style.css?v=777">
+    <link rel="stylesheet" href="style.css?v=7">
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#111111">
     <!-- Google Analytics -->
@@ -32,7 +32,7 @@
     z-index: 999;
     pointer-events: none;
     letter-spacing: 0.3px;
-">🕐 Última actualización: Miér 15/07 00:00hs</div>
+">🕐 Última actualización: Sáb 18/07 00:00hs</div>
 
 <div id="container-principal">
     <div id="logo-header"><img src="au11.png" style="height:80px;" alt="LdS Stats"></div>
@@ -45,7 +45,7 @@
             <div class="bloque-titulo con-drop" onclick="toggleMenu(this)">TORNEO OFICIAL <span class="flecha">▼</span></div>
             <div class="bloque-links">
                 <a href="#" onclick="navegar('apertura', 'oficial')">Apertura</a>
-                <a href="#" onclick="navegar('proximamente')">Clausura</a>
+                <a href="#" onclick="navegar('clausura', 'oficial')">Clausura</a>
                 <a href="#" onclick="navegar('goleadores', 'oficial')">Goleadores</a>
                 <a href="#" onclick="navegar('arqueros', 'oficial')">Vallas invictas</a>
                 <a href="#" onclick="navegar('reserva', 'oficial')">Reserva</a>
@@ -159,15 +159,15 @@
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-<script src="datos.js?v=777"></script>
+<script src="datos.js?v=7"></script>
 <script>
     let estado = { torneo: 'home', categoria: '', fecha: 1 };
     let estadoAnterior = { torneo: 'home', categoria: '', fecha: 1 };
 
     // Última actualización por sección — modificar según corresponda
     const ULTIMA_ACT = {
-        default:        "Miér 15/07 00:00hs",
-        home:        "Miér 15/07 00:00hs",
+        default:        "Sáb 18/07 00:00hs",
+        home:        "Sáb 18/07 00:00hs",
         apertura_oficial:   "Dom 12/07 17:30hs",
         historial:   "Dom 12/07 17:30hs",
         goleadores_oficial:   "Dom 12/07 17:30hs",
@@ -179,7 +179,7 @@
         reserva_promocional:   "Lun 13/07 19:00hs",
         posiciones_federala:   "Dom 12/07 17:30hs",
         goleadores_federala:   "Dom 12/07 17:30hs",
-        sub131517:   "Vie 10/07 16:00hs",
+        sub131517:   "Sáb 18/07 00:00hs",
         copa_argentina:   "Dom 29/3 — 21:00hs",
         apertura_femenino:   "Dom 12/07 17:30hs",
         goleadores_femenino:   "Dom 12/07 17:30hs",
@@ -199,7 +199,7 @@
         seniorapertura: "Miér 15/07 00:00hs",
         seniorgoleadores: "Miér 08/07 17:00hs",
         mercadopases_oficial: "Dom 12/07 17:30hs",
-        mercadopases_promocional: "Mar 14/07 18:00hs",
+        mercadopases_promocional: "Sáb 18/07 00:00hs",
         mercadopases_femenino: "Dom 12/07 17:30hs",
         mercadopases_segundafemenino: "Dom 12/07 17:30hs"
     };
@@ -279,7 +279,7 @@
         }
         estado.torneo = tor;
         estado.categoria = cat;
-        estado.fecha = (tor === 'apertura' && (cat === 'oficial' || cat === 'promocional')) ? 14 : (tor === 'posiciones' && cat === 'federala') ? 17 : (tor === 'apertura' && cat === 'femenino') ? 14 : (tor === 'torneo2026' && cat === 'segundafemenino') ? 16 : (tor === 'futsal') ? 13 : (tor === 'futsalreserva') ? 13 : (tor === 'sub15fem') ? 14 : 1; 
+        estado.fecha = (tor === 'apertura' && (cat === 'oficial' || cat === 'promocional')) ? 14 : (tor === 'clausura' && cat === 'oficial') ? 1 : (tor === 'posiciones' && cat === 'federala') ? 17 : (tor === 'apertura' && cat === 'femenino') ? 14 : (tor === 'torneo2026' && cat === 'segundafemenino') ? 16 : (tor === 'futsal') ? 13 : (tor === 'futsalreserva') ? 13 : (tor === 'sub15fem') ? 14 : 1; 
         actualizarVista();
         document.documentElement.scrollTop = 0;
         document.body.scrollTop = 0;
@@ -503,6 +503,10 @@
                     estado._reservaCat = estado.categoria;
                 }
                 cont.innerHTML = generarReserva(estado.categoria);
+            } else if (estado.torneo === 'clausura' && estado.categoria === 'oficial') {
+                cont.innerHTML = generarFixture(estado.fecha, 'clausura', 'oficial') +
+                                 generarTabla('clausura', 'oficial') +
+                                 generarTabla('acumulada', 'oficial');
             } else {
                 const tablaAnual = (estado.categoria === 'femenino' || estado.categoria === 'segundafemenino') ? '' : generarTabla('anual', estado.categoria);
                 const viseraPlayoffs = estado.categoria === 'oficial'
