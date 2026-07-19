@@ -2491,10 +2491,10 @@ function generarHome() {
        ]},
         { id: "2026-07-19", label: "DOM 19/07", torneos: [
             { nombre: "RESERVA OFICIAL - FINAL EXTRA", cat: "reserva_oficial", noAutoResult: true, partidos: [
-                {l:"Sporting", v:"Villa Mitre", hora:"11:00"}
+                {l:"Sporting", v:"Villa Mitre", hora:"11:00", gl:2, gv:1}
             ]},
             { nombre: "1° FEMENINO - FINAL EXTRA", cat: "reserva_femenino", noAutoResult: true, partidos: [
-                {l:"Municipales", v:"Villa Mitre", hora:"11:00"}
+                {l:"Municipales", v:"Villa Mitre", hora:"11:00", gl:3, gv:2}
             ]},
        ]},
 ];
@@ -19361,7 +19361,7 @@ const BD_RESERVA_OFICIAL_PLAYOFFS = {
         { local: "Libertad", clL: "libertad", visitante: "Villa Mitre", clV: "villamitre", gl: 0, gv: 1 }
     ],
     final: { local: "Sporting", clL: "sporting", visitante: "Villa Mitre", clV: "villamitre", gl: 2, gv: 2, pen_l: 4, pen_v: 5 },
-    finalExtra: { local: "Sporting", clL: "sporting", visitante: "Villa Mitre", clV: "villamitre", gl: null, gv: null }
+    finalExtra: { local: "Sporting", clL: "sporting", visitante: "Villa Mitre", clV: "villamitre", gl: 2, gv: 1 }
 };
 
 const BD_RESERVA_PROMOCIONAL_PLAYOFFS = {
@@ -19379,7 +19379,7 @@ const BD_FEMENINO_PLAYOFFS = {
         { local: "Tiro Federal", clL: "tirofederal", visitante: "Villa Mitre", clV: "villamitre", gl: 1, gv: 2, goles_l: ["Morena Juárez"], goles_v: ["Sol Menéndez Perrone","Morena Bouven"] }
     ],
     final: { local: "Municipales", clL: "municipales", visitante: "Villa Mitre", clV: "villamitre", gl: 0, gv: 2, goles_l: [], goles_v: ["Lucrecia Semper","Morena Bouven"] },
-    finalExtra: { local: "Municipales", clL: "municipales", visitante: "Villa Mitre", clV: "villamitre", gl: null, gv: null }
+    finalExtra: { local: "Municipales", clL: "municipales", visitante: "Villa Mitre", clV: "villamitre", gl: 3, gv: 2, goles_l: ["Valeria Navarrete","Valeria Navarrete","Tania Espíndola"], goles_v: [] }
 };
 
 const BD_RESERVA_FEMENINO_PLAYOFFS = {
@@ -19449,6 +19449,10 @@ function _renderPartidoPlayoff(p, pendiente) {
 
 function generarReservaOficialPlayoffs() {
     let html = `<div class="header-t">RESERVA OFICIAL — PLAYOFFS</div>`;
+    html += `<div style="background:#111;color:#ffd700;text-align:center;padding:10px 12px;display:flex;align-items:center;justify-content:center;gap:10px;border-bottom:2px solid #ffd700;">
+        <img src="Sporting.png" style="width:36px;height:36px;object-fit:contain;">
+        <span style="font-size:13px;font-weight:bold;letter-spacing:0.5px;">🏆 SPORTING — GANADOR DEL APERTURA</span>
+    </div>`;
     html += `<div class="header-t" style="font-size:11px;background:#2c6e49;">SEMIFINALES</div><table>`;
     BD_RESERVA_OFICIAL_PLAYOFFS.semifinales.forEach(p => { html += _renderPartidoPlayoff(p); });
     html += `</table><div style="height:8px;background:#f0f0f0;border-top:1px solid #ddd;border-bottom:1px solid #ddd;"></div>`;
@@ -19485,6 +19489,10 @@ function generarReservaPromocionalPlayoffs() {
 
 function generarFemeninoPlayoffs() {
     let html = `<div class="header-t">1° FEMENINO — PLAYOFFS</div>`;
+    html += `<div style="background:#111;color:#ffd700;text-align:center;padding:10px 12px;display:flex;align-items:center;justify-content:center;gap:10px;border-bottom:2px solid #ffd700;">
+        <img src="Municipales.png" style="width:36px;height:36px;object-fit:contain;">
+        <span style="font-size:13px;font-weight:bold;letter-spacing:0.5px;">🏆 MUNICIPALES — GANADOR DEL APERTURA</span>
+    </div>`;
     html += `<div class="header-t" style="font-size:11px;background:#2c6e49;">SEMIFINALES</div><table>`;
     BD_FEMENINO_PLAYOFFS.semifinales.forEach(p => { html += _renderPartidoPlayoff(p); });
     html += `</table><div style="height:8px;background:#f0f0f0;border-top:1px solid #ddd;border-bottom:1px solid #ddd;"></div>`;
