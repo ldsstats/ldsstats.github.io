@@ -95,7 +95,8 @@ BD_MERCADO_PASES["federala"] = {
 BD_MERCADO_PASES["oficial"]["libertad"].bajas.push({ jugador: "Mauro Sabatini", club: "Lilán (Laprida)" });
 BD_MERCADO_PASES["oficial"]["libertad"].bajas.push({ jugador: "Alan Gigena", club: "Libre" });
 BD_MERCADO_PASES["oficial"]["libertad"].bajas.push({ jugador: "Bruno Falcioni", club: "Ferroviario (Dorrego)" });
-BD_MERCADO_PASES["oficial"]["sporting"].bajas.push({ jugador: "Luis De Los Santos", club: "Libre" });
+BD_MERCADO_PASES["oficial"]["libertad"].altas.push({ jugador: "Marcos Pérez", club: "Dublin" });
+BD_MERCADO_PASES["oficial"]["sporting"].bajas.push({ jugador: "Luis De Los Santos", club: "libre" });
 BD_MERCADO_PASES["promocional"]["rosario"].bajas.push({ jugador: "Nicolás Orellana", club: "Libre" });
 BD_MERCADO_PASES["promocional"]["rosario"].bajas.push({ jugador: "Benjamín Segovia", club: "Libre" });
 BD_MERCADO_PASES["promocional"]["rosario"].bajas.push({ jugador: "Juan Bautista Garay", club: "Independiente de Dorrego" });
@@ -106,6 +107,7 @@ BD_MERCADO_PASES["oficial"]["sanfrancisco"].altas.push({ jugador: "Tomás Alfaro
 BD_MERCADO_PASES["oficial"]["sanfrancisco"].altas.push({ jugador: "Alexis Vega", club: "Bella Vista" });
 BD_MERCADO_PASES["oficial"]["bellavista"].altas.push({ jugador: "Maximiliano Tormann", club: "VE Rende (Italia)" });
 BD_MERCADO_PASES["oficial"]["bellavista"].altas.push({ jugador: "Matías Mayer", club: "Libertad" });
+BD_MERCADO_PASES["oficial"]["bellavista"].altas.push({ jugador: "Luis de los Santos", club: "Sporting" });
 BD_MERCADO_PASES["oficial"]["bellavista"].bajas.push({ jugador: "Alexis Vega", club: "San Francisco" });
 BD_MERCADO_PASES["oficial"]["libertad"].bajas.push({ jugador: "Matías Mayer", club: "Bella Vista" });
 BD_MERCADO_PASES["federala"]["villamitre"].altas.push({ jugador: "Bruno Benítez", club: "Independiente de Chivilcoy" });
@@ -2441,7 +2443,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 16).partidos.forEach(p
 });
 
 
-let diaSeleccionadoHome = "2026-07-18"; 
+let diaSeleccionadoHome = "2026-07-19"; 
 let mercadoPasesAbierto = false;
 
 function toggleMercadoPasesHome() {
@@ -2481,7 +2483,7 @@ function generarHome() {
        ]},
         { id: "2026-07-18", label: "SÁB 18/07", torneos: [
             { nombre: "RESERVA 1°FEMENINO - FINAL EXTRA", cat: "reserva_femenino", noAutoResult: true, partidos: [
-                {l:"Tiro Federal", v:"Bella Vista", hora:"13:30"}
+                {l:"Tiro Federal", v:"Bella Vista", hora:"13:30", gl:1, gv:1, pen_l: 3, pen_v:1}
             ]},
             { nombre: "RESERVA PROMOCIONAL - FINAL EXTRA", cat: "reserva_promocional", noAutoResult: true, partidos: [
                 {l:"Olimpo", v:"Rosario PB", hora:"11:00",nota:"<b>en cancha del sintético de Olimpo</b>", gl:2, gv:0}
@@ -2490,6 +2492,9 @@ function generarHome() {
         { id: "2026-07-19", label: "DOM 19/07", torneos: [
             { nombre: "RESERVA OFICIAL - FINAL EXTRA", cat: "reserva_oficial", noAutoResult: true, partidos: [
                 {l:"Sporting", v:"Villa Mitre", hora:"11:00"}
+            ]},
+            { nombre: "1° FEMENINO - FINAL EXTRA", cat: "reserva_femenino", noAutoResult: true, partidos: [
+                {l:"Municipales", v:"Villa Mitre", hora:"11:00"}
             ]},
        ]},
 ];
@@ -19383,7 +19388,7 @@ const BD_RESERVA_FEMENINO_PLAYOFFS = {
         { local: "Villa Mitre", clL: "villamitre", visitante: "Municipales", clV: "municipales", gl: 0, gv: 0, pen_l: 3, pen_v: 4 }
     ],
     final: { local: "Municipales", clL: "municipales", visitante: "Bella Vista", clV: "bellavista", gl: 0, gv: 2 },
-    finalExtra: { local: "Tiro Federal", clL: "tirofederal", visitante: "Bella Vista", clV: "bellavista", gl: null, gv: null }
+    finalExtra: { local: "Tiro Federal", clL: "tirofederal", visitante: "Bella Vista", clV: "bellavista", gl: 1, gv: 1, pen_l: 3, pen_v: 1 }
 };
 
 const BD_FUTSAL_PLAYOFFS = {
@@ -19496,6 +19501,10 @@ function generarFemeninoPlayoffs() {
 
 function generarReservaFemeninoPlayoffs() {
     let html = `<div class="header-t">RESERVA 1° FEMENINO — PLAYOFFS</div>`;
+    html += `<div style="background:#111;color:#ffd700;text-align:center;padding:10px 12px;display:flex;align-items:center;justify-content:center;gap:10px;border-bottom:2px solid #ffd700;">
+        <img src="Tiro_Federal.png" style="width:36px;height:36px;object-fit:contain;border-radius:50%;background:#fff;">
+        <span style="font-size:13px;font-weight:bold;letter-spacing:0.5px;">🏆 TIRO FEDERAL — GANADOR DEL APERTURA</span>
+    </div>`;
     html += `<div class="header-t" style="font-size:11px;background:#2c6e49;">SEMIFINALES</div><table>`;
     BD_RESERVA_FEMENINO_PLAYOFFS.semifinales.forEach(p => { html += _renderPartidoPlayoff(p); });
     html += `</table><div style="height:8px;background:#f0f0f0;border-top:1px solid #ddd;border-bottom:1px solid #ddd;"></div>`;
