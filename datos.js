@@ -1865,7 +1865,7 @@ const idaOficialClausura = [
 expandirFixture(idaOficialClausura, BD_FIXTURES.oficial.clausura, 14);
 BD_FIXTURES.oficial.apertura.find(f => f.fecha === 8).partidos = [
     {l:"San Francisco", v:"Bella Vista", gl:2, gv:1, dia:"Sáb 16/05", hora:"15:00", goles_l:["Claudio Castiglioni","Sebastián Leguiza"], goles_v:["Lucas Martínez"]},
-    {l:"Liniers",       v:"Villa Mitre", gl:1, gv:1, dia:"Sáb 16/05", hora:"15:00", goles_l:[], goles_v:["Thiago Uicala (e/c)","Constanzo Palacio"]},
+    {l:"Liniers",       v:"Villa Mitre", gl:1, gv:1, dia:"Sáb 16/05", hora:"15:00", goles_l:["Thiago Uicala (e/c)"], goles_v:["Constanzo Palacio"]},
     {l:"Huracán",       v:"Libertad",    gl:3, gv:1, dia:"Sáb 16/05", hora:"15:30", goles_l:["Iván Agudiak","Brian Scalco"], goles_v:["Gianluca Falcioni (e/c)", "Franco Pane"]},
     {l:"La Armonía",    v:"Sporting",    gl:3, gv:1, dia:"Dom 17/05", hora:"15:00", goles_l:["Enrique Narvay","Ezequiel Intrevado","Alex Muzi"], goles_v:["Jonathan Font"]}
 ];
@@ -2470,31 +2470,9 @@ const BD_FECHA_META = {
 function generarHome() {
     const agenda = [
 
-        { id: "2026-07-13", label: "LUN 13/07", torneos: [
-            { nombre: "PROMOCIONAL RESERVA - FINAL", cat: "reserva_promocional", noAutoResult: true, partidos: [
-                {l:"Tiro Federal", v:"Rosario PB", hora:"15:30", gl:1, gv:1, pen_l: 4, pen_v:5}
-            ]},
-       ]},
-        { id: "2026-07-14", label: "MAR 14/07", torneos: [
-            { nombre: "SENIOR - SEMIFINALES", cat: "seniorapertura", noAutoResult: true, partidos: [
-                {l:"Bella Vista", v:"Pacífico (C)", hora:"21:00",nota:"en cancha de Sansinena", gl:0, gv:2},
-                {l:"Sporting", v:"Comercial", hora:"21:30",nota:"en cancha de Libertad", gl:2, gv:0}
-            ]},
-       ]},
-        { id: "2026-07-18", label: "SÁB 18/07", torneos: [
-            { nombre: "RESERVA 1°FEMENINO - FINAL EXTRA", cat: "reserva_femenino", noAutoResult: true, partidos: [
-                {l:"Tiro Federal", v:"Bella Vista", hora:"13:30", gl:1, gv:1, pen_l: 3, pen_v:1}
-            ]},
-            { nombre: "RESERVA PROMOCIONAL - FINAL EXTRA", cat: "reserva_promocional", noAutoResult: true, partidos: [
-                {l:"Olimpo", v:"Rosario PB", hora:"11:00",nota:"<b>en cancha del sintético de Olimpo</b>", gl:2, gv:0}
-            ]},
-       ]},
-        { id: "2026-07-19", label: "DOM 19/07", torneos: [
-            { nombre: "RESERVA OFICIAL - FINAL EXTRA", cat: "reserva_oficial", noAutoResult: true, partidos: [
-                {l:"Sporting", v:"Villa Mitre", hora:"11:00", gl:2, gv:1}
-            ]},
-            { nombre: "1° FEMENINO - FINAL EXTRA", cat: "reserva_femenino", noAutoResult: true, partidos: [
-                {l:"Municipales", v:"Villa Mitre", hora:"11:00", gl:3, gv:2}
+        { id: "2026-07-22", label: "MIÉR 22/07", torneos: [
+            { nombre: "FINAL", cat: "seniorapertura", noAutoResult: true, partidos: [
+                {l:"Sporting", v:"Pacífico (C)", hora:"21:15", gl:1, gv:2,nota:"en cancha de Tiro Federal"}
             ]},
        ]},
 ];
@@ -16362,6 +16340,12 @@ const BD_H2H = {
     //     { fecha: "Dom 22/03/2026", torneo: "Torneo Oficial - Apertura F2", l: "Bella Vista", v: "Huracán", gl: 2, gv: 1,
     //       goles_l: ["Juan Pérez", "Carlos López"], goles_v: ["Iván Gómez"] }
     // ],
+    "La Estación|Villa Mitre": [
+        { fecha: "Final", torneo: "Futsal", l: "La Estación", v: "Villa Mitre", gl: 3, gv: 3, goles_l: [], goles_v: [] }
+    ],
+    "Pacífico (C)|sporting": [
+        { fecha: "Final", torneo: "Senior", l: "Pacífico (C)", v: "Sporting", gl: 2, gv: 1, goles_l: [], goles_v: [] }
+    ],
 };
 
 function generarReserva(cat) {
@@ -17704,6 +17688,14 @@ function generarHistorial() {
                     ]
                 }
             ]
+        },
+        {
+            titulo: "SENIOR",
+            equipos: BD_SENIOR_APERTURA.map(e => ({ nombre: e.n, clase: e.cl, cat: "Senior", catKey: "seniorapertura" }))
+        },
+        {
+            titulo: "FUTSAL",
+            equipos: BD_EQUIPOS.futsal.map(e => ({ nombre: e.nombre, clase: e.clase, cat: "Futsal", catKey: "futsal" }))
         }
     ];
 
@@ -17764,11 +17756,11 @@ function generarH2H(eq1, eq2, cls1, cls2, catKey) {
     const partidos = BD_H2H[clave1] || BD_H2H[clave2] || [];
 
     // También incluir partidos de fixtures ya jugados
-    const cats = catKey ? [catKey] : ['oficial','promocional','femenino','segundafemenino'];
+    const cats = catKey ? [catKey] : ['oficial','promocional','femenino','segundafemenino','seniorapertura','futsal'];
     const fixturePartidos = [];
     cats.forEach(cat => {
-        // Para oficial incluimos apertura Y clausura
-        const keys = (cat === 'oficial' || cat === 'promocional') ? ['apertura', 'clausura'] : cat === 'segundafemenino' ? ['torneo2026'] : [Object.keys(BD_FIXTURES[cat]||{})[0]];
+        const keys = (cat === 'oficial' || cat === 'promocional') ? ['apertura', 'clausura'] : cat === 'segundafemenino' ? ['torneo2026'] : cat === 'seniorapertura' ? [] : [Object.keys(BD_FIXTURES[cat]||{})[0]];
+
         keys.forEach(key => {
         const fixtures = BD_FIXTURES[cat]?.[key] || [];
         fixtures.forEach(f => {
@@ -17787,11 +17779,11 @@ function generarH2H(eq1, eq2, cls1, cls2, catKey) {
         }); // end keys.forEach
 
         // Playoffs ya jugados
-        const _posBD = { oficial: typeof BD_OFICIAL_PLAYOFFS !== 'undefined' ? BD_OFICIAL_PLAYOFFS : null, promocional: typeof BD_PROMOCIONAL_PLAYOFFS !== 'undefined' ? BD_PROMOCIONAL_PLAYOFFS : null, femenino: typeof BD_FEMENINO_PLAYOFFS !== 'undefined' ? BD_FEMENINO_PLAYOFFS : null };
+        const _posBD = { oficial: typeof BD_OFICIAL_PLAYOFFS !== 'undefined' ? BD_OFICIAL_PLAYOFFS : null, promocional: typeof BD_PROMOCIONAL_PLAYOFFS !== 'undefined' ? BD_PROMOCIONAL_PLAYOFFS : null, femenino: typeof BD_FEMENINO_PLAYOFFS !== 'undefined' ? BD_FEMENINO_PLAYOFFS : null, seniorapertura: typeof BD_SENIOR_PLAYOFFS !== 'undefined' ? BD_SENIOR_PLAYOFFS : null };
         const _pd = _posBD[cat];
         if (_pd) {
-            const _lbl = cat === 'oficial' ? 'Torneo Oficial' : cat === 'promocional' ? 'Torneo Promocional' : '1° Femenino';
-            [...(_pd.octavos||[]), ...(_pd.cuartos||[]), ...(_pd.semifinales||[]), _pd.final]
+            const _lbl = cat === 'oficial' ? 'Torneo Oficial' : cat === 'promocional' ? 'Torneo Promocional' : cat === 'seniorapertura' ? 'Senior' : '1° Femenino';
+            [...(_pd.octavos||[]), ...(_pd.cuartos||[]), ...(_pd.semifinales||[]), _pd.final, _pd.finalExtra]
                 .filter(x => x && x.gl !== null)
                 .forEach(x => {
                     if ((x.local === eq1 && x.visitante === eq2) || (x.local === eq2 && x.visitante === eq1)) {
@@ -17852,8 +17844,11 @@ function generarH2H(eq1, eq2, cls1, cls2, catKey) {
     } else {
         html += `<div class="header-t">PARTIDOS</div><table>`;
         todos.forEach(p => {
-            const escL = BD_EQUIPOS[catKey]?.find(e=>e.nombre===p.l)?.clase || '';
-            const escV = BD_EQUIPOS[catKey]?.find(e=>e.nombre===p.v)?.clase || '';
+const equiposLookup = catKey === 'seniorapertura'
+    ? BD_SENIOR_APERTURA.map(e => ({ nombre: e.n, clase: e.cl }))
+    : (BD_EQUIPOS[catKey] || []);
+const escL = equiposLookup.find(e=>e.nombre===p.l)?.clase || '';
+const escV = equiposLookup.find(e=>e.nombre===p.v)?.clase || '';
             html += `<tr>
                 <td style="width:52px;background:#f0f0f0;border-right:1px solid #ddd;text-align:center;font-size:9px;color:#666;padding:3px;">${p.fecha||''}<br><span style="font-size:8px;color:#aaa;">${p.torneo||''}</span></td>
                 <td class="c-loc"><span style="direction:ltr;display:inline-flex;align-items:center;justify-content:flex-end;width:100%;">${p.l} <div class="escudo ${escL}" style="margin-left:4px;"></div></span></td>
@@ -18360,8 +18355,11 @@ function generarGoleadores(cat, torneo) {
         partidos = BD_FIXTURES.federala.posiciones.flatMap(f => f.partidos);
     } else if (cat === 'oficial' || cat === 'promocional') {
         const ap = BD_FIXTURES[cat].apertura.flatMap(f => f.partidos);
-        const cl = BD_FIXTURES[cat].clausura.flatMap(f => f.partidos);
-        partidos = torneo === 'apertura' ? ap : torneo === 'clausura' ? cl : [...ap, ...cl];
+        partidos = ap;
+    } else if (cat === 'femenino') {
+        partidos = BD_FIXTURES.femenino.apertura.flatMap(f => f.partidos);
+    } else if (cat === 'segundafemenino') {
+        partidos = BD_FIXTURES.segundafemenino.torneo2026.flatMap(f => f.partidos);
     } else {
         partidos = BD_FIXTURES[cat].apertura.flatMap(f => f.partidos);
     }
@@ -18374,10 +18372,10 @@ function generarGoleadores(cat, torneo) {
         promocional: BD_PROMOCIONAL_PLAYOFFS
     };
     const playoffData = playoffsBD[cat];
-    // Para oficial, solo incluir playoffs en "total" (no en apertura/clausura por separado)
-    const incluirPlayoffs = cat !== 'oficial' || torneo === 'total';
+    // Playoffs siempre incluidos en todos los tabs
+    const incluirPlayoffs = !!playoffData;
     const partidosPlayoff = (incluirPlayoffs && playoffData)
-        ? [...(playoffData.octavos||[]), ...(playoffData.cuartos||[]), ...(playoffData.semifinales||[]), playoffData.final].filter(p => p && p.gl !== null)
+        ? [...(playoffData.octavos||[]), ...(playoffData.cuartos||[]), ...(playoffData.semifinales||[]), playoffData.final, playoffData.finalExtra].filter(p => p && p.gl !== null)
           .map(p => ({ l: p.local, v: p.visitante, gl: p.gl, gv: p.gv, goles_l: p.goles_l||[], goles_v: p.goles_v||[] }))
         : [];
 
@@ -18465,11 +18463,12 @@ function generarGoleadores(cat, torneo) {
         return h + '</tbody></table>';
     };
 
-    const tabs = cat === 'oficial' ? (() => {
-        const opciones = [['apertura','Apertura'],['clausura','Clausura'],['total','Total']];
+    const _tabsCats = {};
+    const tabs = _tabsCats[cat] ? (() => {
+        const opciones = _tabsCats[cat];
         return `<div style="display:flex;gap:6px;padding:8px 8px 4px;background:#f9f9f9;border-bottom:1px solid #eee;">` +
             opciones.map(([key, label]) =>
-                `<button onclick="document.getElementById('contenido').innerHTML=generarGoleadores('oficial','${key}')"
+                `<button onclick="document.getElementById('contenido').innerHTML=generarGoleadores('${cat}','${key}')"
                     style="font-size:10px;padding:4px 12px;border:1px solid #1a4a2e;border-radius:12px;cursor:pointer;font-weight:bold;
                     background:${torneo===key?'#1a4a2e':'#fff'};color:${torneo===key?'#fff':'#1a4a2e'};">${label}</button>`
             ).join('') + `</div>`;
@@ -18623,38 +18622,14 @@ const BD_ARQUEROS = {
     ]
 };
 
-function generarArqueros(cat, torneo) {
-    torneo = torneo || 'total';
-    let listaBase = BD_ARQUEROS[cat] || [];
-
-    // Para oficial, filtrar partidos por torneo
-    if (cat === 'oficial' && torneo !== 'total') {
-        listaBase = listaBase.map(g => ({
-            ...g,
-            partidos: g.partidos.filter(p => {
-                if (p.instancia) return false; // playoffs van solo al total
-                return torneo === 'clausura' ? p.torneo === 'clausura' : !p.torneo || p.torneo === 'apertura';
-            })
-        })).filter(g => g.partidos.length > 0);
-    }
-
-    const lista = listaBase.slice().sort((a, b) => b.partidos.length - a.partidos.length || a.equipo.localeCompare(b.equipo) || a.jugador.localeCompare(b.jugador));
+function generarArqueros(cat) {
+    const lista = (BD_ARQUEROS[cat] || []).slice().sort((a, b) => b.partidos.length - a.partidos.length || a.equipo.localeCompare(b.equipo) || a.jugador.localeCompare(b.jugador));
     const catLabel = cat === 'oficial' ? 'TORNEO OFICIAL' : cat === 'promocional' ? 'TORNEO PROMOCIONAL' : cat.toUpperCase();
 
-    const tabs = cat === 'oficial' ? (() => {
-        const opciones = [['apertura','Apertura'],['clausura','Clausura'],['total','Total']];
-        return `<div style="display:flex;gap:6px;padding:8px 8px 4px;background:#f9f9f9;border-bottom:1px solid #eee;">` +
-            opciones.map(([key, label]) =>
-                `<button onclick="document.getElementById('contenido').innerHTML=generarArqueros('oficial','${key}')"
-                    style="font-size:10px;padding:4px 12px;border:1px solid #1a4a2e;border-radius:12px;cursor:pointer;font-weight:bold;
-                    background:${torneo===key?'#1a4a2e':'#fff'};color:${torneo===key?'#fff':'#1a4a2e'};">${label}</button>`
-            ).join('') + `</div>`;
-    })() : '';
+    if (lista.length === 0) return `<div class="msg-prox">Sin datos registrados</div>`;
 
-    if (lista.length === 0) return tabs + `<div class="msg-prox">Sin datos registrados</div>`;
-
-    const torneoLabel = cat === 'oficial' && torneo !== 'total' ? ` — ${torneo === 'apertura' ? 'APERTURA' : 'CLAUSURA'}` : '';
-    let h = `<div class="header-t">VALLAS INVICTAS — ${catLabel}${torneoLabel}</div><table>
+    const torneoLabel = '';
+    let h = `<div class="header-t">VALLAS INVICTAS — ${catLabel}</div><table>
     <thead><tr>
         <th style="width:25px;">#</th>
         <th style="text-align:left;padding-left:8px;">Arquero</th>
@@ -18685,7 +18660,7 @@ function generarArqueros(cat, torneo) {
         </tr>`;
     });
 
-    return tabs + h + '</tbody></table>';
+    return h + '</tbody></table>';
 }
 
 function generarPerfilJugador(jugador, equipo) {
@@ -18717,7 +18692,7 @@ function generarPerfilJugador(jugador, equipo) {
         const playoffsBD = { oficial: BD_OFICIAL_PLAYOFFS, promocional: BD_PROMOCIONAL_PLAYOFFS, femenino: BD_FEMENINO_PLAYOFFS };
         const pd = playoffsBD[cat];
         if (pd) {
-            [...(pd.octavos||[]), ...(pd.cuartos||[]), ...(pd.semifinales||[]), pd.final]
+            [...(pd.octavos||[]), ...(pd.cuartos||[]), ...(pd.semifinales||[]), pd.final, pd.finalExtra]
                 .filter(p => p && p.gl !== null)
                 .forEach(p => { if (p) todosPartidos.push({ l: p.local, v: p.visitante, gl: p.gl, gv: p.gv, goles_l: p.goles_l||[], goles_v: p.goles_v||[], dia: 'Playoffs' }); });
         }
@@ -18733,10 +18708,16 @@ function generarPerfilJugador(jugador, equipo) {
             let golesJugador = 0, esEC = false, equipoEnEstePartido = null, condicion = null, rival = null;
 
             if (equiposBuscar.includes(p.l)) {
-                golesL.forEach(g => { if (nombreLimpio(g) === jugador) { golesJugador++; if (g.includes('(e/c)')) esEC = true; } });
+                // Buscar goles normales en goles_l
+                golesL.forEach(g => { if (nombreLimpio(g) === jugador && !g.includes('(e/c)')) { golesJugador++; } });
+                // Buscar e/c en goles_v (el jugador local cometió e/c anotado del lado visitante)
+                golesV.forEach(g => { if (nombreLimpio(g) === jugador && g.includes('(e/c)')) { golesJugador++; esEC = true; } });
                 if (golesJugador > 0) { equipoEnEstePartido = p.l; condicion = 'Local'; rival = p.v; }
             } else if (equiposBuscar.includes(p.v)) {
-                golesV.forEach(g => { if (nombreLimpio(g) === jugador) { golesJugador++; if (g.includes('(e/c)')) esEC = true; } });
+                // Buscar goles normales en goles_v
+                golesV.forEach(g => { if (nombreLimpio(g) === jugador && !g.includes('(e/c)')) { golesJugador++; } });
+                // Buscar e/c en goles_l (el jugador visitante cometió e/c anotado del lado local)
+                golesL.forEach(g => { if (nombreLimpio(g) === jugador && g.includes('(e/c)')) { golesJugador++; esEC = true; } });
                 if (golesJugador > 0) { equipoEnEstePartido = p.v; condicion = 'Visitante'; rival = p.l; }
             }
 
@@ -19257,11 +19238,15 @@ const BD_SENIOR_PLAYOFFS = {
         { local: "Bella Vista",  clL: "bellavista",   visitante: "Pacífico (C)", clV: "pacificoc",       gl: 0, gv: 2, goles_l: [], goles_v: ["Esteban Angelini","Santiago Martín"] },
         { local: "Sporting",     clL: "sporting",     visitante: "Comercial",    clV: "comercial",       gl: 2, gv: 0, goles_l: ["Marcos Cossu","José Alberto Mosqueira"], goles_v: [] }
     ],
-    final: { local: "Sporting", clL: "sporting", visitante: "Pacífico (C)", clV: "pacificoc", gl: null, gv: null }
+    final: { local: "Sporting", clL: "sporting", visitante: "Pacífico (C)", clV: "pacificoc", gl: 1, gv: 2 }
 };
 
 function generarSeniorPlayoffs() {
     let html = `<div class="header-t">SENIOR — PLAYOFFS APERTURA 2026</div>`;
+    html += `<div style="background:#111;color:#ffd700;text-align:center;padding:10px 12px;display:flex;align-items:center;justify-content:center;gap:10px;border-bottom:2px solid #ffd700;">
+        <img src="PacíficoCabildo.png" style="width:36px;height:36px;object-fit:contain;border-radius:50%;background:#fff;">
+        <span style="font-size:13px;font-weight:bold;letter-spacing:0.5px;">🏆 PACÍFICO (C) — GANADOR DEL TORNEO APERTURA</span>
+    </div>`;
 
     html += `<div class="header-t" style="font-size:11px;background:#2c6e49;">OCTAVOS DE FINAL</div>`;
     html += `<table>`;
@@ -19299,7 +19284,7 @@ const BD_OFICIAL_PLAYOFFS = {
         { local: "Huracán",     clL: "huracan",    visitante: "Villa Mitre", clV: "villamitre", gl: 1, gv: 0, goles_l: ["Iván Agudiak"], goles_v: [] },
         { local: "Bella Vista", clL: "bellavista", visitante: "Liniers",     clV: "liniers",    gl: 0, gv: 0, pen_l: 1, pen_v: 3 }
     ],
-    final: { local: "Huracán", clL: "huracan", visitante: "Liniers", clV: "liniers", gl: 0, gv: 1, goles_l: [], goles_v: ["Fabián Dauwalder (e/c)"] },
+    final: { local: "Huracán", clL: "huracan", visitante: "Liniers", clV: "liniers", gl: 0, gv: 1, goles_l: ["Fabián Dauwalder (e/c)"], goles_v: [] },
     finalExtra: { local: "Huracán", clL: "huracan", visitante: "Liniers", clV: "liniers", gl: null, gv: null }
 };
 
@@ -19375,11 +19360,11 @@ const BD_RESERVA_PROMOCIONAL_PLAYOFFS = {
 
 const BD_FEMENINO_PLAYOFFS = {
     semifinales: [
-        { local: "Municipales", clL: "municipales", visitante: "Empleados de Comercio", clV: "empleados", gl: 11, gv: 0, goles_l: ["Luana Villanueva","Luana Villanueva","Luana Villanueva","Luana Villanueva","Marianela Santana","Marianela Santana","Victoria Nervi","Stefanía Sueyro","Tania Espíndola","Ivana Lindstrom","Agustina Malaspina (e/c)"], goles_v: [] },
+        { local: "Municipales", clL: "municipales", visitante: "Empleados de Comercio", clV: "empleados", gl: 11, gv: 0, goles_l: ["Luana Villanueva","Luana Villanueva","Luana Villanueva","Luana Villanueva","Marianela Santana","Marianela Santana","Victoria Nervi","Stefanía Sueyro","Tania Espíndola","Ivana Lindstrom"], goles_v: ["Agustina Malaspina (e/c)"] },
         { local: "Tiro Federal", clL: "tirofederal", visitante: "Villa Mitre", clV: "villamitre", gl: 1, gv: 2, goles_l: ["Morena Juárez"], goles_v: ["Sol Menéndez Perrone","Morena Bouven"] }
     ],
     final: { local: "Municipales", clL: "municipales", visitante: "Villa Mitre", clV: "villamitre", gl: 0, gv: 2, goles_l: [], goles_v: ["Lucrecia Semper","Morena Bouven"] },
-    finalExtra: { local: "Municipales", clL: "municipales", visitante: "Villa Mitre", clV: "villamitre", gl: 3, gv: 2, goles_l: ["Valeria Navarrete","Valeria Navarrete","Tania Espíndola"], goles_v: [] }
+    finalExtra: { local: "Municipales", clL: "municipales", visitante: "Villa Mitre", clV: "villamitre", gl: 3, gv: 2, goles_l: ["Valeria Navarrete","Valeria Navarrete","Tania Espíndola"], goles_v: ["Morena Bouver","Sol Menéndez Perrone"] }
 };
 
 const BD_RESERVA_FEMENINO_PLAYOFFS = {
@@ -19763,11 +19748,19 @@ const BD_CAMPEONES_2026 = {
     promocional:        [
     { anio: "2026", equipo: "Comercial", clase: "comercial", detalle: "Ganador del Apertura 2026 al vencer a Tiro Federal por penales (3-0) tras igualar 0-0 en los 90' el 11/7/2026" }
 ],
-    reservaoficial:     [],
-    reservapromocional: [],
-    femenino:           [],
+    reservaoficial:     [
+    { anio: "2026", equipo: "Sporting", clase: "sporting", detalle: "Ganador del Apertura 2026 al vencer a Villa Mitre por 2-1 el 19/7/2026" }
+],
+    reservapromocional: [
+    { anio: "2026", equipo: "Olimpo", clase: "olimpo", detalle: "Ganador del Apertura 2026 al vencer a Rosario PB por 2-0 el 18/7/2026" }
+],
+    femenino:           [
+    { anio: "2026", equipo: "Municipales", clase: "municipales", detalle: "Ganador del Apertura 2026 al vencer a Villa Mitre por 3-2 el 19/7/2026" }
+],
     segundafemenino:    [],
-    reservafemenino:    [],
+    reservafemenino:    [
+    { anio: "2026", equipo: "Tiro Federal", clase: "tirofederal", detalle: "Ganador del Apertura 2026 al vencer a Bella Vista por penales (3-1) tras igualar 1-1 en los 90' el 18/7/2026" }
+],
     reservasegundafem:  [],
     sub15fem:           [],
     futsal:             [
@@ -19783,7 +19776,9 @@ const BD_CAMPEONES_2026 = {
     { anio: "2026", equipo: "Liniers", clase: "liniers", detalle: "Ganador del Apertura 2026 en 9na" },
 ],
     infantiles:         [],
-    senior:             [],
+    senior:             [
+    { anio: "2026", equipo: "Pacífico (C)", clase: "pacificoc", detalle: "Ganador del Apertura 2026 al vencer a Sporting por 2-1 el 22/7/2026" }
+],
     otros:              []
 };
 
