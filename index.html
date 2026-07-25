@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>LdS Stats - 2026</title>
-    <link rel="stylesheet" href="style.css?v=77">
+    <link rel="stylesheet" href="style.css?v=777">
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#111111">
     <!-- Google Analytics -->
@@ -32,7 +32,7 @@
     z-index: 999;
     pointer-events: none;
     letter-spacing: 0.3px;
-">🕐 Última actualización: Sáb 18/07 16:00hs</div>
+">🕐 Última actualización: Jue 24/07 00:00hs</div>
 
 <div id="container-principal">
     <div id="logo-header"><img src="au11.png" style="height:80px;" alt="LdS Stats"></div>
@@ -94,6 +94,7 @@
             <div class="bloque-titulo con-drop" onclick="toggleMenu(this)">1° FEMENINO <span class="flecha">▼</span></div>
             <div class="bloque-links">
                 <a href="#" onclick="navegar('apertura', 'femenino')">Apertura</a>
+                <a href="#" onclick="navegar('clausura', 'femenino')">Clausura</a>
                 <a href="#" onclick="navegar('proximamente')">Clausura</a>
                 <a href="#" onclick="navegar('goleadores', 'femenino')">Goleadoras</a>
                 <a href="#" onclick="navegar('reserva', 'femenino')">Reserva</a>
@@ -136,8 +137,8 @@
             <div class="bloque-titulo con-drop" onclick="toggleMenu(this)">SENIOR <span class="flecha">▼</span></div>
             <div class="bloque-links">
                 <a href="#" onclick="navegar('seniorapertura')">Apertura</a>
+                <a href="#" onclick="navegar('seniorclausura')">Clausura</a>
                 <a href="#" onclick="navegar('seniorgoleadores')">Goleadores</a>
-                <a href="#" onclick="navegar('proximamente')">Clausura</a>
             </div>
         </div>
         <div class="bloque">
@@ -159,16 +160,16 @@
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-<script src="datos.js?v=77"></script>
+<script src="datos.js?v=777"></script>
 <script>
     let estado = { torneo: 'home', categoria: '', fecha: 1 };
     let estadoAnterior = { torneo: 'home', categoria: '', fecha: 1 };
 
     // Última actualización por sección — modificar según corresponda
     const ULTIMA_ACT = {
-        default:        "Sáb 18/07 16:00hs",
-        home:        "Sáb 18/07 16:00hs",
-        apertura_oficial:   "Dom 12/07 17:30hs",
+        default:        "Jue 24/07 00:00hs",
+        home:        "Jue 24/07 00:00hs",
+        apertura_oficial:   "Jue 24/07 00:00hs",
         historial:   "Dom 12/07 17:30hs",
         goleadores_oficial:   "Dom 12/07 17:30hs",
         arqueros_oficial:   "Dom 12/07 17:30hs",
@@ -279,7 +280,7 @@
         }
         estado.torneo = tor;
         estado.categoria = cat;
-        estado.fecha = (tor === 'apertura' && (cat === 'oficial' || cat === 'promocional')) ? 14 : (tor === 'clausura' && (cat === 'oficial' || cat === 'promocional')) ? 1 : (tor === 'posiciones' && cat === 'federala') ? 17 : (tor === 'apertura' && cat === 'femenino') ? 14 : (tor === 'torneo2026' && cat === 'segundafemenino') ? 16 : (tor === 'futsal') ? 13 : (tor === 'futsalreserva') ? 13 : (tor === 'sub15fem') ? 14 : 1; 
+        estado.fecha = (tor === 'apertura' && (cat === 'oficial' || cat === 'promocional')) ? 14 : (tor === 'clausura' && (cat === 'oficial' || cat === 'promocional')) ? 1 : (tor === 'posiciones' && cat === 'federala') ? 18 : (tor === 'apertura' && cat === 'femenino') ? 14 : (tor === 'clausura' && cat === 'femenino') ? 1 : (tor === 'torneo2026' && cat === 'segundafemenino') ? 16 : (tor === 'futsal') ? 1 : (tor === 'futsalreserva') ? 1 : (tor === 'sub15fem') ? 14 : 1; 
         actualizarVista();
         document.documentElement.scrollTop = 0;
         document.body.scrollTop = 0;
@@ -390,12 +391,14 @@
     function toggleHistEquipo(id) {
         const body = document.getElementById(id);
         const arr = document.getElementById('arr_' + id);
+        if (!body) return;
         const isOpen = body.classList.contains('open');
-        body.closest('.hist-seccion').querySelectorAll('.hist-equipo-body').forEach(b => b.classList.remove('open'));
-        body.closest('.hist-seccion').querySelectorAll('.hist-equipo-arrow').forEach(a => a.classList.remove('open'));
+        const seccion = body.parentElement;
+        seccion.querySelectorAll('.hist-equipo-body').forEach(b => b.classList.remove('open'));
+        seccion.querySelectorAll('.hist-equipo-arrow').forEach(a => a.classList.remove('open'));
         if (!isOpen) {
             body.classList.add('open');
-            arr.classList.add('open');
+            if (arr) arr.classList.add('open');
         }
     }
 
@@ -458,6 +461,8 @@
                 cont.innerHTML = generarSeniorApertura();
             } else if (estado.torneo === 'seniorplayoffs') {
                 cont.innerHTML = generarSeniorPlayoffs();
+            } else if (estado.torneo === 'seniorclausura') {
+                cont.innerHTML = generarSeniorClausura();
             } else if (estado.torneo === 'oficialplayoffs') {
                 cont.innerHTML = generarOficialPlayoffs();
             } else if (estado.torneo === 'promocionalplayoffs') {
