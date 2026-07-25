@@ -245,7 +245,7 @@ const idaSegundaFemenino = [
     { fecha: 14, libre: "Liniers", partidos: [{l:"Huracán", v:"Sansinena", gl:2, gv:0, dia:"Sáb 27/06", hora:"15:30", goles_l:["Keila Iglesias","Keila Iglesias"], goles_v:[]}, {l:"Pacífico (C)", v:"San Francisco", gl:0, gv:1, dia:"Dom 28/06", hora:"10:00", goles_l:[], goles_v:["Elena Spinucci"]}, {l:"Petroquímicos", v:"Rosario PB", gl:1, gv:0, dia:"Dom 28/06", hora:"15:30", goles_l:["Cintia Saavedra"], goles_v:[]}, {l:"Olimpo", v:"Estrella de Oro", gl:1, gv:2, dia:"Dom 28/06", hora:"15:30", goles_l:["Paloma Dambolena"], goles_v:["Luana Anfossi","Luana Anfossi"]}] },
     { fecha: 15, libre: "San Francisco", partidos: [{l:"Liniers", v:"Olimpo", gl:4, gv:0, dia:"Sáb 04/07", hora:"15:30", goles_l:["Paulina Acevedo","Paulina Acevedo","Paulina Acevedo","Iara Schwab"], goles_v:[]}, {l:"Rosario PB", v:"Pacífico (C)", gl:6, gv:2, dia:"Sáb 04/07", hora:"15:30", goles_l:["Carolina Díaz","Carolina Díaz","Carolina Díaz","Bárbara Aguirre","Valentina Cavalli","Mariela Sollosky"], goles_v:["Gianna Gerling","Natali Recagno"]}, {l:"Sansinena", v:"Petroquímicos", gl:1, gv:3, dia:"Dom 05/07", hora:"15:30", goles_l:["Melina Gómez"], goles_v:["Morena Varela","Morena Varela","Nicole Montenegro"]}, {l:"Estrella de Oro", v:"Huracán", gl:2, gv:1, dia:"Dom 05/07", hora:"15:30", goles_l:["Luana Anfossi","Mariana González"], goles_v:["Natasha Mella"]}] },
     { fecha: 16, libre: "Rosario PB", partidos: [{l:"Olimpo", v:"Huracán", gl:1, gv:3, dia:"Jue 09/07", hora:"15:30", goles_l:["Lourdes Antonietti"], goles_v:["Keila Iglesias","Keila Iglesias","Natasha Mella"]}, {l:"Pacífico (C)", v:"Sansinena", gl:1, gv:1, dia:"Sáb 11/07", hora:"15:00", goles_l:["Bianca Pascualini"], goles_v:["Melina Gómez"]}, {l:"Petroquímicos", v:"Estrella de Oro", gl:2, gv:1, dia:"Sáb 11/07", hora:"15:30", goles_l:["Paula Rodríguez","Paula Rodríguez"], goles_v:["Luana Anfossi"]}, {l:"Liniers", v:"San Francisco", gl:2, gv:1, dia:"Sáb 11/07", hora:"15:30", goles_l:["Paulina Acevedo","Iara Schwab"], goles_v:["Julieta Coronel"]}] },
-    { fecha: 17, libre: "Sansinena", partidos: [{l:"Olimpo", v:"San Francisco", gl:null, gv:null}, {l:"Rosario PB", v:"Liniers", gl:null, gv:null}, {l:"Estrella de Oro", v:"Pacífico (C)", gl:null, gv:null}, {l:"Huracán", v:"Petroquímicos", gl:null, gv:null}] },
+    { fecha: 17, libre: "Sansinena", partidos: [{l:"Rosario PB", v:"Liniers", gl:null, gv:null, dia:"Sáb 25/07", hora:"15:30"}, {l:"Olimpo", v:"San Francisco", gl:null, gv:null, dia:"Dom 26/07", hora:"15:30"}, {l:"Estrella de Oro", v:"Pacífico (C)", gl:null, gv:null, dia:"Dom 26/07", hora:"15:30"}, {l:"Huracán", v:"Petroquímicos", gl:null, gv:null, dia:"Dom 26/07", hora:"15:30"}] },
     { fecha: 18, libre: "Estrella de Oro", partidos: [{l:"Pacífico (C)", v:"Huracán", gl:null, gv:null}, {l:"San Francisco", v:"Rosario PB", gl:null, gv:null}, {l:"Petroquímicos", v:"Olimpo", gl:null, gv:null}, {l:"Liniers", v:"Sansinena", gl:null, gv:null}] },
     { fecha: 19, libre: "Huracán", partidos: [{l:"Liniers/Estrella de Oro", v:"Liniers/Estrella de Oro", gl:null, gv:null}, {l:"Rosario PB/Olimpo", v:"Rosario PB/Olimpo", gl:null, gv:null}, {l:"Pacífico (C)/Petroquímicos", v:"Pacífico (C)/Petroquímicos", gl:null, gv:null}, {l:"San Francisco/Sansinena", v:"San Francisco/Sansinena", gl:null, gv:null}] },
     { fecha: 20, libre: "Petroquímicos", partidos: [{l:"Estrella de Oro/San Francisco", v:"Estrella de Oro/San Francisco", gl:null, gv:null}, {l:"Olimpo/Pacífico (C)", v:"Olimpo/Pacífico (C)", gl:null, gv:null}, {l:"Sansinena/Rosario PB", v:"Sansinena/Rosario PB", gl:null, gv:null}, {l:"Huracán/Liniers", v:"Huracán/Liniers", gl:null, gv:null}] },
@@ -1288,10 +1288,10 @@ BD_FIXTURES.federala.posiciones.find(f => f.fecha === 18).partidos = [
 // Fixture Clausura 1° Femenino
 const idaFemeninoClausura = [
     { fecha: 1, partidos: [
-        { l: "Sporting",              v: "Municipales",          gl: null, gv: null },
-        { l: "Bella Vista",           v: "Libertad",             gl: null, gv: null },
-        { l: "La Armonía",            v: "Villa Mitre",          gl: null, gv: null },
-        { l: "Empleados de Comercio", v: "Tiro Federal",         gl: null, gv: null }
+        { l: "Sporting",              v: "Municipales",          gl: null, gv: null, dia:"Sáb 15/07", hora:"15:30"},
+        { l: "Bella Vista",           v: "Libertad",             gl: null, gv: null, dia:"Sáb 15/07", hora:"15:30"},
+        { l: "La Armonía",            v: "Villa Mitre",          gl: null, gv: null, dia:"Sáb 15/07", hora:"15:30"},
+        { l: "Empleados de Comercio", v: "Tiro Federal",         gl: null, gv: null, dia:"Sáb 15/07", hora:"15:30"}
     ]},
     { fecha: 2, partidos: [
         { l: "Bella Vista",           v: "Sporting",             gl: null, gv: null },
@@ -16629,10 +16629,10 @@ function generarSeniorApertura() {
 const BD_GOLEADORES_SENIOR = [
     { nombre: "César Panduro", equipo: "Huracán", goles: 13 },
     { nombre: "Marcos Cossu", equipo: "Sporting", goles: 9 },
+    { nombre: "Leandro Duelle", equipo: "Pacífico (C)", goles: 9 },
     { nombre: "Juan José Dietz", equipo: "Tiro Federal", goles: 8 },
     { nombre: "Esteban Angelini", equipo: "Pacífico (C)", goles: 8 },
     { nombre: "Emiliano Jofré", equipo: "Sansinena", goles: 8 },
-    { nombre: "Leandro Duelle", equipo: "Pacífico (C)", goles: 7 },
     { nombre: "Maximiliano Casas", equipo: "Comercial", goles: 5 },
     { nombre: "Fabián Merlini", equipo: "Bella Vista", goles: 4 },
     { nombre: "Nicolás Custodio", equipo: "Sporting", goles: 4 },
@@ -16665,6 +16665,7 @@ const BD_GOLEADORES_SENIOR = [
     { nombre: "Mauricio Oldani", equipo: "Tiro Federal", goles: 2 },
     { nombre: "Javier Muñoz", equipo: "Tiro Federal", goles: 2 },
     { nombre: "Lucas Sauer", equipo: "Tiro Federal", goles: 2 },
+    { nombre: "Alejandro Aparicio", equipo: "Sporting", goles: 2 },
     { nombre: "Néstor Alessandroni", equipo: "Bella Vista", goles: 1 },
     { nombre: "Nicolás Bellito", equipo: "Bella Vista", goles: 1 },
     { nombre: "Maximiliano Álvarez", equipo: "Bella Vista", goles: 1 },
@@ -16707,7 +16708,6 @@ const BD_GOLEADORES_SENIOR = [
     { nombre: "Cristian González", equipo: "Sansinena", goles: 1 },
     { nombre: "Paolo Quiroga", equipo: "Sporting", goles: 1 },
     { nombre: "Emiliano Sebeca", equipo: "Sporting", goles: 1 },
-    { nombre: "Alejandro Aparicio", equipo: "Sporting", goles: 1 },
     { nombre: "Javier Magnani", equipo: "Sporting", goles: 1 },
     { nombre: "José Alberto Mosqueira", equipo: "Sporting", goles: 1 },
     { nombre: "Gustavo Derrac", equipo: "Tiro Federal", goles: 1 }
@@ -18487,7 +18487,7 @@ const BD_SENIOR_PLAYOFFS = {
         { local: "Bella Vista",  clL: "bellavista",   visitante: "Pacífico (C)", clV: "pacificoc",       gl: 0, gv: 2, goles_l: [], goles_v: ["Esteban Angelini","Santiago Martín"] },
         { local: "Sporting",     clL: "sporting",     visitante: "Comercial",    clV: "comercial",       gl: 2, gv: 0, goles_l: ["Marcos Cossu","José Alberto Mosqueira"], goles_v: [] }
     ],
-    final: { local: "Sporting", clL: "sporting", visitante: "Pacífico (C)", clV: "pacificoc", gl: 1, gv: 2 }
+    final: { local: "Sporting", clL: "sporting", visitante: "Pacífico (C)", clV: "pacificoc", gl: 1, gv: 2, goles_l: ["Alejandro Aparicio"], goles_v: ["Leandro Duelle (2)"] }
 };
 
 function generarSeniorPlayoffs() {
