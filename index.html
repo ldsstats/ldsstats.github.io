@@ -32,7 +32,7 @@
     z-index: 999;
     pointer-events: none;
     letter-spacing: 0.3px;
-">🕐 Última actualización: Jue 24/07 22:15hs</div>
+">🕐 Última actualización: Dom 26/07 13:15hs</div>
 
 <div id="container-principal">
     <div id="logo-header"><img src="au11.png" style="height:80px;" alt="LdS Stats"></div>
@@ -95,7 +95,6 @@
             <div class="bloque-links">
                 <a href="#" onclick="navegar('apertura', 'femenino')">Apertura</a>
                 <a href="#" onclick="navegar('clausura', 'femenino')">Clausura</a>
-                <a href="#" onclick="navegar('proximamente')">Clausura</a>
                 <a href="#" onclick="navegar('goleadores', 'femenino')">Goleadoras</a>
                 <a href="#" onclick="navegar('reserva', 'femenino')">Reserva</a>
             </div>
@@ -167,8 +166,8 @@
 
     // Última actualización por sección — modificar según corresponda
     const ULTIMA_ACT = {
-        default:        "Jue 24/07 22:15hs",
-        home:        "Jue 24/07 22:15hs",
+        default:        "Dom 26/07 13:15hs",
+        home:        "Dom 26/07 13:15hs",
         apertura_oficial:   "Jue 24/07 00:00hs",
         historial:   "Dom 12/07 17:30hs",
         goleadores_oficial:   "Dom 12/07 17:30hs",
@@ -182,12 +181,12 @@
         goleadores_federala:   "Dom 12/07 17:30hs",
         sub131517:   "Sáb 18/07 00:00hs",
         copa_argentina:   "Dom 29/3 — 21:00hs",
-        apertura_femenino:   "Dom 12/07 17:30hs",
-        goleadores_femenino:   "Dom 12/07 17:30hs",
+        apertura_femenino:   "Dom 26/07 13:15hs",
+        goleadores_femenino:   "Dom 26/07 13:15hs",
         reserva_femenino:   "Dom 12/07 17:30hs",
-        torneo2026_segundafemenino:   "Lun 13/07 08:00hs",
-        goleadores_segundafemenino:   "Lun 13/07 08:00hs",
-        reserva_segundafemenino:   "Lun 13/07 08:00hs",
+        torneo2026_segundafemenino:   "Sáb 25/07 18:45hs",
+        goleadores_segundafemenino:   "Sáb 25/07 18:45hs",
+        reserva_segundafemenino:   "Sáb 25/07 18:45hs",
         sub15fem:   "Vie 10/07 16:00hs",
         torneo2026_senior:   "Sáb 27/06 08:00hs",
         futsal:   "Miér 08/07 00:00hs",
@@ -280,7 +279,7 @@
         }
         estado.torneo = tor;
         estado.categoria = cat;
-        estado.fecha = (tor === 'apertura' && (cat === 'oficial' || cat === 'promocional')) ? 14 : (tor === 'clausura' && (cat === 'oficial' || cat === 'promocional')) ? 1 : (tor === 'posiciones' && cat === 'federala') ? 18 : (tor === 'apertura' && cat === 'femenino') ? 14 : (tor === 'clausura' && cat === 'femenino') ? 1 : (tor === 'torneo2026' && cat === 'segundafemenino') ? 16 : (tor === 'futsal') ? 1 : (tor === 'futsalreserva') ? 1 : (tor === 'sub15fem') ? 14 : 1; 
+        estado.fecha = (tor === 'apertura' && (cat === 'oficial' || cat === 'promocional')) ? 14 : (tor === 'clausura' && (cat === 'oficial' || cat === 'promocional')) ? 1 : (tor === 'posiciones' && cat === 'federala') ? 18 : (tor === 'apertura' && cat === 'femenino') ? 14 : (tor === 'clausura' && cat === 'femenino') ? 1 : (tor === 'torneo2026' && cat === 'segundafemenino') ? 17 : (tor === 'futsal') ? 1 : (tor === 'futsalreserva') ? 1 : (tor === 'sub15fem') ? 14 : 1; 
         actualizarVista();
         document.documentElement.scrollTop = 0;
         document.body.scrollTop = 0;
@@ -386,6 +385,13 @@
         document.getElementById('contenido').innerHTML = generarH2H(eq1, eq2, cls1, cls2, catKey);
         document.documentElement.scrollTop = 0;
         document.body.scrollTop = 0;
+    }
+
+    function verH2HFromEl(el) {
+        const eq1 = el.dataset.eq1, eq2 = el.dataset.eq2;
+        const cls1 = el.dataset.cls1, cls2 = el.dataset.cls2;
+        const cat = el.dataset.cat;
+        verH2H(eq1, eq2, cls1, cls2, cat);
     }
 
     function toggleHistEquipo(id) {
@@ -503,7 +509,7 @@
                 cont.innerHTML = generarTablaFederal();
             } else if (estado.torneo === 'reserva') {
                 if (!estado._reservaIniciada || estado._reservaCat !== estado.categoria) {
-                    estado.fecha = (estado.categoria === 'oficial' || estado.categoria === 'promocional') ? 14 : (estado.categoria === 'femenino') ? 14 : (estado.categoria === 'segundafemenino') ? 16 : 1;
+                    estado.fecha = (estado.categoria === 'oficial' || estado.categoria === 'promocional') ? 14 : (estado.categoria === 'femenino') ? 14 : (estado.categoria === 'segundafemenino') ? 17 : 1;
                     estado._reservaIniciada = true;
                     estado._reservaCat = estado.categoria;
                 }
