@@ -19,7 +19,7 @@ td { height: 35px; color: black; border-bottom: 1px solid #ccc; text-align: cent
 
 .p-playoff { background-color: #d4edda !important; }
 .p-mejorquinto { background-color: #ffe5b4 !important; }
-.p-revalida { background-color: #cce5ff !important; }
+.p-revalida { background-color: #1d6cbf !important; }
 .p-naranja { background-color: #ffe0b2 !important; }
 .p-promo { background-color: #fff3cd !important; }
 .p-desc { background-color: #f8d7da !important; }
@@ -72,6 +72,11 @@ td { height: 35px; color: black; border-bottom: 1px solid #ccc; text-align: cent
 .tirofederal { background: linear-gradient(90deg, #4b0082 20%, #ff0 20%, #ff0 40%, #4b0082 40%, #4b0082 60%, #ff0 60%, #ff0 80%, #4b0082 80%); }
 .puertocomercial { background: linear-gradient(90deg, green 33%, #ff0 33%, #ff0 66%, green 66%); }
 tr[onclick]:hover td { background-color: #e8f5e9 !important; }
+.argmontemaiz { background: linear-gradient(90deg, #0F3F93 20%, #fff 20%, #fff 40%, #0F3F93 40%, #0F3F93 60%, #fff 60%, #fff 80%, #0F3F93 80%); }
+.atenasrc { background-color: #001E45; background-image: linear-gradient(to right, transparent 40%, #fff 40%, #fff 60%, transparent 60%), linear-gradient(to bottom, transparent 40%, #fff 40%, #fff 60%, transparent 60%); }
+.cipolletti { background: linear-gradient(90deg, #000 20%, #fff 20%, #fff 40%, #000 40%, #000 60%, #fff 60%, #fff 80%, #000 80%); }
+.huracanlh::before { content: "HLH"; color: #DF2224; font-size: 8px; font-weight: 900; letter-spacing: -1px; display: flex; align-items: center; justify-content: center; }
+.jantoniana { background: linear-gradient(135deg, #113553 46%, #fff 46%, #fff 54%, #3C2712 54%); }
 
 /* MENÚ DESPLEGABLE */
 .bloque-titulo.sin-drop { cursor: pointer; text-align: left; }
