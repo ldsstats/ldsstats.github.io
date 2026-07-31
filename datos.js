@@ -381,7 +381,7 @@ if (p.goles_l?.length || p.goles_v?.length) {
 
 const BD_FIXTURES_FUTSAL_RESERVA = [
     { fecha: 1, partidos: [
-        {l:"La Esperanza",     v:"Pacífico BB",    gl:2,    gv:0},
+        {l:"La Esperanza",     v:"Pacífico BB",    gl:2,    gv:0, goles_l:["Gianfranco Kinter","Lautaro Flores"], goles_v:[]},
         {l:"Comercial",       v:"Catamarca",     gl:3, gv:3, goles_l:["Bautista Antón","Facundo Diez","Rodrigo Carvajal"], goles_v:[]},
         {l:"La Estación",    v:"Tiro Federal",     gl:null, gv:null},
         {l:"Los 3 Chiflados",          v:"Dublin",     gl:null, gv:null},
@@ -501,9 +501,9 @@ const BD_FIXTURES_FUTSAL_RESERVA = [
 
 const BD_FIXTURES_FUTSAL = [
     { fecha: 1, partidos: [
-        {l:"La Esperanza",     v:"Pacífico BB",    gl:5,    gv:2},
+        {l:"La Esperanza",     v:"Pacífico BB",    gl:5,    gv:2, goles_l:["Emiliano Etchepareborda (2)","Bruno Decoud","Rodrigo Decoud","Ignacio Cappelletti"], goles_v:[]},
         {l:"Comercial",       v:"Catamarca",     gl:10, gv:3, goles_l:["Ricardo Lagos (4)","Jonatan Kippes (3)","Juan Muñoz (2)","Ivo Basich"], goles_v:[]},
-        {l:"La Estación",    v:"Tiro Federal",     gl:null, gv:null},
+        {l:"La Estación",    v:"Tiro Federal",     gl:3, gv:1},
         {l:"Los 3 Chiflados",          v:"Dublin",     gl:null, gv:null},
         {l:"Villa Mitre",     v:"Dep. Futsal",     gl:null, gv:null},
         {l:"San Francisco",    v:"Liniers",     gl:null, gv:null},
@@ -1751,7 +1751,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 17).partidos.forEach(p
 });
 
 
-let diaSeleccionadoHome = "2026-07-30"; 
+let diaSeleccionadoHome = "2026-07-31"; 
 let mercadoPasesAbierto = false;
 
 function toggleMercadoPasesHome() {
@@ -1786,7 +1786,7 @@ function generarHome() {
        ]},
         { id: "2026-07-30", label: "JUE 30/07", torneos: [
             { nombre: "1° FECHA - FUTSAL - CLAUSURA", cat: "futsal", noAutoResult: true, partidos: [
-                {l:"La Estación", v:"Tiro Federal", hora:"22:00", gl:null, gv:null,nota:"en cancha de Don Bosco"},
+                {l:"La Estación", v:"Tiro Federal", hora:"22:00", gl:3, gv:1,nota:"en cancha de Don Bosco"},
             ]},
        ]},
         { id: "2026-07-31", label: "VIE 31/07", torneos: [
@@ -16343,15 +16343,15 @@ const BD_POS_FUTSAL = {
     principal: [
         {n:"Comercial",       cl:"comercial",    pj:1,pg:1,pe:0,pp:0,gf:10, gc:2, pts:3},
         {n:"La Esperanza",    cl:"laesperanza",    pj:1,pg:1,pe:0,pp:0,gf:5, gc:2, pts:3},
-        {n:"La Estación <b>(A)</b>",     cl:"laestacion",    pj:0,pg:0,pe:0,pp:0,gf:0, gc:0, pts:0},
+        {n:"La Estación <b>(A)</b>",     cl:"laestacion",    pj:1,pg:1,pe:0,pp:0,gf:3, gc:1, pts:3},
         {n:"Villa Mitre",     cl:"villamitre",    pj:0,pg:0,pe:0,pp:0,gf:0, gc:0, pts:0},
         {n:"Los 3 Chiflados", cl:"los3chiflados",    pj:0,pg:0,pe:0,pp:0,gf:0, gc:0, pts:0},
         {n:"Liniers",         cl:"liniers",    pj:0,pg:0,pe:0,pp:0,gf:0, gc:0, pts:0},
-        {n:"Tiro Federal",    cl:"tirofederal",    pj:0,pg:0,pe:0,pp:0,gf:0, gc:0, pts:0},
         {n:"Petroquímico",   cl:"petroquimicos",    pj:0,pg:0,pe:0,pp:0,gf:0, gc:0, pts:0},
         {n:"Dublin",          cl:"dublin",    pj:0,pg:0,pe:0,pp:0,gf:0, gc:0, pts:0},
         {n:"Dep. Futsal",     cl:"depfutsal",    pj:0,pg:0,pe:0,pp:0,gf:0, gc:0, pts:0},
         {n:"San Francisco",   cl:"sanfrancisco",    pj:0,pg:0,pe:0,pp:0,gf:0, gc:0, pts:0},
+        {n:"Tiro Federal",    cl:"tirofederal",    pj:1,pg:0,pe:0,pp:1,gf:1, gc:3, pts:0},
         {n:"Pacífico BB",     cl:"pacificobb",    pj:1,pg:0,pe:0,pp:1,gf:2, gc:5, pts:0},
         {n:"Catamarca",       cl:"catamarca",    pj:1,pg:0,pe:0,pp:1,gf:2, gc:10, pts:0},
         {n:"Huracán <b>(-)</b>",         cl:"huracan",    pj:0,pg:0,pe:0,pp:0,gf:0, gc:0, pts:0}
@@ -16524,7 +16524,12 @@ const BD_GOLEADORES_FUTSAL = [
 ] },
     { club: "Pacífico BB",     clase: "pacificobb",    act: null,       goleadores: [] },
     { club: "Los 3 Chiflados", clase: "los3chiflados",    act: null,       goleadores: [] },
-    { club: "La Esperanza",    clase: "laesperanza",    act: null,       goleadores: [] },
+    { club: "La Esperanza",    clase: "laesperanza",    act: "fecha 1",       goleadores: [
+    { nombre: "Emiliano Etchepareborda",          equipo: "La Esperanza",   goles: 2 },
+    { nombre: "Bruno Decoud",          equipo: "La Esperanza",   goles: 1 },
+    { nombre: "Ignacio Cappelletti",          equipo: "La Esperanza",   goles: 1 },
+    { nombre: "Rodrigo Decoud",          equipo: "La Esperanza",   goles: 1 },
+] },
     { club: "Huracán",         clase: "huracan",    act: null,       goleadores: [] },
     { club: "Petroquímicos",   clase: "petroquimicos", act: null,       goleadores: [] }
 ];
