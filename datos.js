@@ -109,6 +109,8 @@ BD_MERCADO_PASES["oficial"]["libertad"].bajas.push({ jugador: "Bruno Falcioni", 
 BD_MERCADO_PASES["oficial"]["libertad"].altas.push({ jugador: "Marcos Pérez", club: "Dublin" });
 BD_MERCADO_PASES["oficial"]["sporting"].bajas.push({ jugador: "Luis De Los Santos", club: "Bella Vista" });
 BD_MERCADO_PASES["oficial"]["liniers"].bajas.push({ jugador: "Manuel Cutrín", club: "libre" });
+BD_MERCADO_PASES["oficial"]["libertad"].altas.push({ jugador: "Thiago Uicala", club: "Villa Mitre" });
+BD_MERCADO_PASES["oficial"]["sporting"].bajas.push({ jugador: "Thiago Uicala", club: "Libertad" });
 BD_MERCADO_PASES["promocional"]["rosario"].bajas.push({ jugador: "Nicolás Orellana", club: "Libre" });
 BD_MERCADO_PASES["promocional"]["rosario"].bajas.push({ jugador: "Benjamín Segovia", club: "Libre" });
 BD_MERCADO_PASES["promocional"]["rosario"].bajas.push({ jugador: "Juan Bautista Garay", club: "Independiente de Dorrego" });
