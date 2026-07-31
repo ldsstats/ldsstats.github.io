@@ -110,7 +110,10 @@ BD_MERCADO_PASES["oficial"]["libertad"].altas.push({ jugador: "Marcos Pérez", c
 BD_MERCADO_PASES["oficial"]["sporting"].bajas.push({ jugador: "Luis De Los Santos", club: "Bella Vista" });
 BD_MERCADO_PASES["oficial"]["liniers"].bajas.push({ jugador: "Manuel Cutrín", club: "libre" });
 BD_MERCADO_PASES["oficial"]["libertad"].altas.push({ jugador: "Thiago Uicala", club: "Villa Mitre" });
-BD_MERCADO_PASES["oficial"]["sporting"].bajas.push({ jugador: "Thiago Uicala", club: "Libertad" });
+BD_MERCADO_PASES["oficial"]["villamitre"].bajas.push({ jugador: "Thiago Uicala", club: "Libertad" });
+BD_MERCADO_PASES["oficial"]["sporting"].altas.push({ jugador: "Rodrigo Soria", club: "Gorriones (Uruguay)" });
+BD_MERCADO_PASES["oficial"]["sporting"].altas.push({ jugador: "Fabrizio Acosta", club: "San Martín (Burzaco)" });
+BD_MERCADO_PASES["oficial"]["sporting"].altas.push({ jugador: "Facundo Taborda", club: "Ferro (Gral. Pico)" });
 BD_MERCADO_PASES["promocional"]["rosario"].bajas.push({ jugador: "Nicolás Orellana", club: "Libre" });
 BD_MERCADO_PASES["promocional"]["rosario"].bajas.push({ jugador: "Benjamín Segovia", club: "Libre" });
 BD_MERCADO_PASES["promocional"]["rosario"].bajas.push({ jugador: "Juan Bautista Garay", club: "Independiente de Dorrego" });
@@ -385,7 +388,7 @@ const BD_FIXTURES_FUTSAL_RESERVA = [
     { fecha: 1, partidos: [
         {l:"La Esperanza",     v:"Pacífico BB",    gl:2,    gv:0, goles_l:["Gianfranco Kinter","Lautaro Flores"], goles_v:[]},
         {l:"Comercial",       v:"Catamarca",     gl:3, gv:3, goles_l:["Bautista Antón","Facundo Diez","Rodrigo Carvajal"], goles_v:[]},
-        {l:"La Estación",    v:"Tiro Federal",     gl:null, gv:null},
+        {l:"La Estación",    v:"Tiro Federal",     gl:3, gv:1, goles_l:["Juan Ignacio Zárate","Fermín Jara","Gonzalo ..."], goles_v:[]},
         {l:"Los 3 Chiflados",          v:"Dublin",     gl:null, gv:null},
         {l:"Villa Mitre",     v:"Dep. Futsal",     gl:null, gv:null},
         {l:"San Francisco",    v:"Liniers",     gl:null, gv:null},
@@ -505,7 +508,7 @@ const BD_FIXTURES_FUTSAL = [
     { fecha: 1, partidos: [
         {l:"La Esperanza",     v:"Pacífico BB",    gl:5,    gv:2, goles_l:["Emiliano Etchepareborda (2)","Bruno Decoud","Rodrigo Decoud","Ignacio Cappelletti"], goles_v:[]},
         {l:"Comercial",       v:"Catamarca",     gl:10, gv:3, goles_l:["Ricardo Lagos (4)","Jonatan Kippes (3)","Juan Muñoz (2)","Ivo Basich"], goles_v:[]},
-        {l:"La Estación",    v:"Tiro Federal",     gl:3, gv:1},
+        {l:"La Estación",    v:"Tiro Federal",     gl:3, gv:1, goles_l:["Eric Martin","Gastón Aravena","Octavio Kerman"], goles_v:[]},
         {l:"Los 3 Chiflados",          v:"Dublin",     gl:null, gv:null},
         {l:"Villa Mitre",     v:"Dep. Futsal",     gl:null, gv:null},
         {l:"San Francisco",    v:"Liniers",     gl:null, gv:null},
@@ -16356,23 +16359,23 @@ const BD_POS_FUTSAL = {
         {n:"Tiro Federal",    cl:"tirofederal",    pj:1,pg:0,pe:0,pp:1,gf:1, gc:3, pts:0},
         {n:"Pacífico BB",     cl:"pacificobb",    pj:1,pg:0,pe:0,pp:1,gf:2, gc:5, pts:0},
         {n:"Catamarca",       cl:"catamarca",    pj:1,pg:0,pe:0,pp:1,gf:2, gc:10, pts:0},
-        {n:"Huracán <b>(-)</b>",         cl:"huracan",    pj:0,pg:0,pe:0,pp:0,gf:0, gc:0, pts:0}
+        {n:"<s>Huracán</s> <b>(-)</b>",         cl:"huracan",    pj:0,pg:0,pe:0,pp:0,gf:0, gc:0, pts:0}
     ],
     reserva: [
         {n:"La Esperanza",    cl:"laesperanza",    pj:1,pg:1,pe:0,pp:0,gf:2, gc:0, pts:3},
+        {n:"La Estación",     cl:"laestacion",    pj:1,pg:1,pe:0,pp:0,gf:3, gc:1, pts:3},
         {n:"Catamarca",       cl:"catamarca",    pj:1,pg:0,pe:1,pp:0,gf:3, gc:3, pts:1},
         {n:"Comercial",       cl:"comercial",    pj:1,pg:0,pe:1,pp:0,gf:3, gc:3, pts:1},
-        {n:"La Estación <b>(A)</b>",     cl:"laestacion",    pj:0,pg:0,pe:0,pp:0,gf:0, gc:0, pts:0},
         {n:"Villa Mitre",     cl:"villamitre",    pj:0,pg:0,pe:0,pp:0,gf:0, gc:0, pts:0},
-        {n:"Los 3 Chiflados", cl:"los3chiflados",    pj:0,pg:0,pe:0,pp:0,gf:0, gc:0, pts:0},
+        {n:"Los 3 Chiflados <b>(A)</b>", cl:"los3chiflados",    pj:0,pg:0,pe:0,pp:0,gf:0, gc:0, pts:0},
         {n:"Liniers",         cl:"liniers",    pj:0,pg:0,pe:0,pp:0,gf:0, gc:0, pts:0},
-        {n:"Tiro Federal",    cl:"tirofederal",    pj:0,pg:0,pe:0,pp:0,gf:0, gc:0, pts:0},
         {n:"Petroquímico",   cl:"petroquimicos",    pj:0,pg:0,pe:0,pp:0,gf:0, gc:0, pts:0},
         {n:"Dublin",          cl:"dublin",    pj:0,pg:0,pe:0,pp:0,gf:0, gc:0, pts:0},
         {n:"Dep. Futsal",     cl:"depfutsal",    pj:0,pg:0,pe:0,pp:0,gf:0, gc:0, pts:0},
         {n:"San Francisco",   cl:"sanfrancisco",    pj:0,pg:0,pe:0,pp:0,gf:0, gc:0, pts:0},
+        {n:"Tiro Federal",    cl:"tirofederal",    pj:1,pg:0,pe:0,pp:1,gf:1, gc:3, pts:0},
         {n:"Pacífico BB",     cl:"pacificobb",    pj:1,pg:0,pe:0,pp:1,gf:0, gc:2, pts:0},
-        {n:"Huracán <b>(-)</b>",         cl:"huracan",    pj:0,pg:0,pe:0,pp:0,gf:0, gc:0, pts:0}
+        {n:"<s>Huracán</s> <b>(-)</b>",         cl:"huracan",    pj:0,pg:0,pe:0,pp:0,gf:0, gc:0, pts:0}
     ]
 };
 function generarSub15Fem() {
@@ -16515,7 +16518,11 @@ const BD_GOLEADORES_FUTSAL = [
     { club: "Tiro Federal", clase: "tirofederal",    act: null,       goleadores: [] },
     { club: "San Francisco",   clase: "sanfrancisco",    act: null,       goleadores: [] },
     { club: "Catamarca",       clase: "catamarca",    act: null,       goleadores: [] },
-    { club: "La Estación",     clase: "laestacion",    act: null,       goleadores: [] },
+    { club: "La Estación",     clase: "laestacion",    act: "Fecha 1",       goleadores: [
+    { nombre: "Eric Martin",          equipo: "La Estación",   goles: 1 },
+    { nombre: "Gastón Aravena",          equipo: "La Estación",   goles: 1 },
+    { nombre: "Octavio Kerman",          equipo: "La Estación",   goles: 2 },
+] },
     { club: "Dep. Futsal",     clase: "depfutsal",    act: null,       goleadores: [] },
     { club: "Liniers",         clase: "liniers",    act: null,       goleadores: [] },
     { club: "Comercial",       clase: "comercial",    act: "fecha 1",       goleadores: [
