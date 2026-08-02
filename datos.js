@@ -372,7 +372,7 @@ const idaSegundaFemenino = [
     { fecha: 15, libre: "San Francisco", partidos: [{l:"Liniers", v:"Olimpo", gl:4, gv:0, dia:"Sáb 04/07", hora:"15:30", goles_l:["Paulina Acevedo","Paulina Acevedo","Paulina Acevedo","Iara Schwab"], goles_v:[]}, {l:"Rosario PB", v:"Pacífico (C)", gl:6, gv:2, dia:"Sáb 04/07", hora:"15:30", goles_l:["Carolina Díaz","Carolina Díaz","Carolina Díaz","Bárbara Aguirre","Valentina Cavalli","Mariela Sollosky"], goles_v:["Gianna Gerling","Natali Recagno"]}, {l:"Sansinena", v:"Petroquímicos", gl:1, gv:3, dia:"Dom 05/07", hora:"15:30", goles_l:["Melina Gómez"], goles_v:["Morena Varela","Morena Varela","Nicole Montenegro"]}, {l:"Estrella de Oro", v:"Huracán", gl:2, gv:1, dia:"Dom 05/07", hora:"15:30", goles_l:["Luana Anfossi","Mariana González"], goles_v:["Natasha Mella"]}] },
     { fecha: 16, libre: "Rosario PB", partidos: [{l:"Olimpo", v:"Huracán", gl:1, gv:3, dia:"Jue 09/07", hora:"15:30", goles_l:["Lourdes Antonietti"], goles_v:["Keila Iglesias","Keila Iglesias","Natasha Mella"]}, {l:"Pacífico (C)", v:"Sansinena", gl:1, gv:1, dia:"Sáb 11/07", hora:"15:00", goles_l:["Bianca Pascualini"], goles_v:["Melina Gómez"]}, {l:"Petroquímicos", v:"Estrella de Oro", gl:2, gv:1, dia:"Sáb 11/07", hora:"15:30", goles_l:["Paula Rodríguez","Paula Rodríguez"], goles_v:["Luana Anfossi"]}, {l:"Liniers", v:"San Francisco", gl:2, gv:1, dia:"Sáb 11/07", hora:"15:30", goles_l:["Paulina Acevedo","Iara Schwab"], goles_v:["Julieta Coronel"]}] },
     { fecha: 17, libre: "Sansinena", partidos: [{l:"Rosario PB", v:"Liniers", gl:1, gv:1, dia:"Sáb 25/07", hora:"15:30", goles_l:["Carolina Díaz"], goles_v:["Iara Schwab"]}, {l:"Olimpo", v:"San Francisco", gl:0, gv:4, dia:"Dom 26/07", hora:"15:30", goles_l:[], goles_v:["Jazmín Ríos","Jazmín Ríos","Morena Barzola","Ariana Adassus"]}, {l:"Estrella de Oro", v:"Pacífico (C)", gl:3, gv:0, dia:"Dom 26/07", hora:"15:30", goles_l:["Luana Anfossi","Sabrina Genchi","Camila Guenchual"], goles_v:[]}, {l:"Huracán", v:"Petroquímicos", gl:0, gv:3, dia:"Dom 26/07", hora:"15:30", goles_l:[], goles_v:["Renata Segovia","Mía Carranza","Paola Vallejos"]}] },
-    { fecha: 18, libre: "Estrella de Oro", partidos: [{l:"Pacífico (C)", v:"Huracán", gl:null, gv:null}, {l:"San Francisco", v:"Rosario PB", gl:null, gv:null}, {l:"Petroquímicos", v:"Olimpo", gl:null, gv:null}, {l:"Liniers", v:"Sansinena", gl:null, gv:null}] },
+    { fecha: 18, libre: "Estrella de Oro", partidos: [{l:"San Francisco", v:"Rosario PB", gl:1, gv:0, dia:"Sáb 01/08", hora:"15:30", goles_l:["Ariana Adassus"], goles_v:[]}, {l:"Petroquímicos", v:"Olimpo", gl:5, gv:0, dia:"Sáb 01/08", hora:"15:30", goles_l:["Renata Segovia","Nicole Montenegro","Cintia Saavedra","Romina Zarza","Morena Varela"], goles_v:[]}, {l:"Pacífico (C)", v:"Huracán", gl:null, gv:null}, {l:"Liniers", v:"Sansinena", gl:null, gv:null}] },
     { fecha: 19, libre: "Huracán", partidos: [{l:"Liniers/Estrella de Oro", v:"Liniers/Estrella de Oro", gl:null, gv:null}, {l:"Rosario PB/Olimpo", v:"Rosario PB/Olimpo", gl:null, gv:null}, {l:"Pacífico (C)/Petroquímicos", v:"Pacífico (C)/Petroquímicos", gl:null, gv:null}, {l:"San Francisco/Sansinena", v:"San Francisco/Sansinena", gl:null, gv:null}] },
     { fecha: 20, libre: "Petroquímicos", partidos: [{l:"Estrella de Oro/San Francisco", v:"Estrella de Oro/San Francisco", gl:null, gv:null}, {l:"Olimpo/Pacífico (C)", v:"Olimpo/Pacífico (C)", gl:null, gv:null}, {l:"Sansinena/Rosario PB", v:"Sansinena/Rosario PB", gl:null, gv:null}, {l:"Huracán/Liniers", v:"Huracán/Liniers", gl:null, gv:null}] },
     { fecha: 21, libre: "Pacífico (C)", partidos: [{l:"San Francisco/Huracán", v:"San Francisco/Huracán", gl:null, gv:null}, {l:"Sansinena/Olimpo", v:"Sansinena/Olimpo", gl:null, gv:null}, {l:"Liniers/Petroquímicos", v:"Liniers/Petroquímicos", gl:null, gv:null}, {l:"Rosario PB/Estrella de Oro", v:"Rosario PB/Estrella de Oro", gl:null, gv:null}] },
@@ -443,7 +443,7 @@ const BD_FIXTURES_FUTSAL_RESERVA = [
         {l:"La Esperanza",     v:"Pacífico BB",    gl:2,    gv:0, goles_l:["Gianfranco Kinter","Lautaro Flores"], goles_v:[]},
         {l:"Comercial",       v:"Catamarca",     gl:3, gv:3, goles_l:["Bautista Antón","Facundo Diez","Rodrigo Carvajal"], goles_v:[]},
         {l:"La Estación",    v:"Tiro Federal",     gl:3, gv:1, goles_l:["Juan Ignacio Zárate","Fermín Jara","Gonzalo ..."], goles_v:[]},
-        {l:"San Francisco",    v:"Liniers",     gl:5, gv:0, goles_l:["Manuel Tejedor","Juan Antonello","Paulo Angelarmoa","Maximo Larralde","Giuliano Petris"], goles_v:[]},
+        {l:"San Francisco",    v:"Liniers",     gl:0, gv:5, goles_l:[], goles_v:["Manuel Tejedor","Juan Antonello","Paulo Angelarmoa","Maximo Larralde","Giuliano Petris"]},
         {l:"Los 3 Chiflados",          v:"Dublin",     gl:5, gv:1},
         {l:"Villa Mitre",     v:"Dep. Futsal",     gl:null, gv:null},
         {l:"Petroquímicos",         v:"Huracán",   gl:null,    gv:null}
@@ -565,7 +565,7 @@ const BD_FIXTURES_FUTSAL = [
         {l:"La Estación",    v:"Tiro Federal",     gl:3, gv:1, goles_l:["Eric Martin","Gastón Aravena","Octavio Kerman"], goles_v:[]},
         {l:"Los 3 Chiflados",          v:"Dublin",     gl:null, gv:null},
         {l:"Villa Mitre",     v:"Dep. Futsal",     gl:null, gv:null},
-        {l:"San Francisco",    v:"Liniers",     gl:4, gv:0, goles_l:["Franco Tirabasso (2)","Emiliano Tomasetti","Marcelo De Lucía"], goles_v:[]},
+        {l:"San Francisco",    v:"Liniers",     gl:0, gv:4, goles_l:[], goles_v:["Franco Tirabasso (2)","Emiliano Tomasetti","Marcelo De Lucía"]},
         {l:"Petroquímicos",         v:"Huracán",   gl:null,    gv:null}
     ]},
     { fecha: 2, partidos: [
@@ -1492,7 +1492,7 @@ const idaFemeninoClausura = [
         { l: "Empleados de Comercio", v: "Tiro Federal",         gl: 0, gv: 6, dia:"Sáb 25/07", hora:"15:30", goles_l:[], goles_v:["Guadalupe Rifo (2)","Abril Sáenz","Candela Salgado","Morena Juárez","Agostina Caballero"]}
     ]},
     { fecha: 2, partidos: [
-        { l: "Bella Vista",           v: "Sporting",             gl: null, gv: null },
+        { l: "Bella Vista",           v: "Sporting",             gl: 2, gv: 3, dia:"Sáb 01/08", hora:"15:30", goles_l:["Mía González","Narela Roth"], goles_v:["Alexis Villani","Fiorella Jael","Sofía Mattos"] },
         { l: "Villa Mitre",           v: "Municipales",          gl: null, gv: null },
         { l: "Libertad",              v: "Empleados de Comercio",gl: null, gv: null },
         { l: "Tiro Federal",          v: "La Armonía",           gl: null, gv: null }
@@ -1633,7 +1633,7 @@ BD_FIXTURES.femenino.reserva.find(f => f.fecha === 1).partidos.forEach(p => {
     if (p.l === "La Armonía" && p.v === "Villa Mitre") { p.gl = null; p.gv = null; delete p.dia; delete p.hora; }
 });
 BD_FIXTURES.femenino.reserva.find(f => f.fecha === 2).partidos.forEach(p => {
-    if (p.l === "Bella Vista" && p.v === "Sporting") { p.gl = null; p.gv = null; p.goles_l = []; p.goles_v = []; delete p.dia; delete p.hora; }
+    if (p.l === "Bella Vista" && p.v === "Sporting") { p.gl = 0; p.gv = 2; p.goles_l = []; p.goles_v = []; delete p.dia; delete p.hora; }
     if (p.l === "Villa Mitre" && p.v === "Municipales") { p.gl = null; p.gv = null; delete p.dia; delete p.hora; }
     if (p.l === "Libertad" && p.v === "Empleados de Comercio") { p.gl = null; p.gv = null; delete p.dia; delete p.hora; }
     if (p.l === "Tiro Federal" && p.v === "La Armonía") { p.gl = null; p.gv = null; delete p.dia; delete p.hora; }
@@ -1823,6 +1823,11 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 17).partidos.forEach(p
     if (p.l === "Rosario PB" && p.v === "Liniers") { p.gl = 1; p.gv = 3; }
     if (p.l === "Huracán" && p.v === "Petroquímicos") { p.gl = null; p.gv = null; }
 });
+// Reserva 2° Femenino - resultados F18
+BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 18).partidos.forEach(p => {
+    if (p.l === "San Francisco" && p.v === "Rosario PB") { p.gl = 3; p.gv = 1; }
+    if (p.l === "Liniers" && p.v === "Sansinena") { p.gl = null; p.gv = null; }
+});
 
 
 let diaSeleccionadoHome = "2026-08-01"; 
@@ -1877,11 +1882,14 @@ function generarHome() {
                 {l:"Pacífico BB", v:"Olimpo", hora:"15:00", gl:0, gv:2},
             ]},
             { nombre: "FECHA 2 - 1°FEMENINO - CLAUSURA", cat: "femenino", noAutoResult: true, partidos: [
-                {l:"Bella Vista", v:"Sporting", hora:"15:45", gl:null, gv:null},
+                {l:"Bella Vista", v:"Sporting", hora:"15:45", gl:2, gv:3},
             ]},
             { nombre: "FECHA 18 - 2°FEMENINO", cat: "segundafemenino", noAutoResult: true, partidos: [
-                {l:"San Francisco", v:"Rosario PB", hora:"15:30", gl:null, gv:null},
-                {l:"Petroquímicos", v:"Olimpo", hora:"15:30", gl:null, gv:null}
+                {l:"Petroquímicos", v:"Olimpo", hora:"15:30", gl:5, gv:0},
+                {l:"San Francisco", v:"Rosario PB", hora:"15:30", gl:1, gv:0}
+            ]},
+            { nombre: "REGIONAL FEMENINO - IDA", cat: "regamateurfem", torLink: "regamateurfem", noAutoResult: true, partidos: [
+                {l:"Villa Mitre", v:"Municipales", hora:"15:00", gl:4, gv:1, claseL:"villamitre", claseV:"municipales"},
             ]},
        ]},
         { id: "2026-08-02", label: "DOM 02/08", torneos: [
@@ -1985,7 +1993,7 @@ let escV = p.claseV || equiposSrc.find(e => e.nombre === p.v)?.clase || "";
             });
             html += `</table>`;
             html += `<div style="margin-bottom:12px; background:#000; padding:2px;">
-                        <a href="#" onclick="navegar('apertura', '${torneo.cat}')" style="display:block; background:#00331a; color:white; text-decoration:none; text-align:center; padding:5px; font-size:10px; font-weight:bold;">Ir a sección: ${torneo.nombre}</a>
+                        <a href="#" onclick="navegar('${torneo.torLink || 'apertura'}', '${torneo.cat}')" style="display:block; background:#00331a; color:white; text-decoration:none; text-align:center; padding:5px; font-size:10px; font-weight:bold;">Ir a sección: ${torneo.nombre}</a>
                     </div>`;
         });
     }
@@ -16181,19 +16189,19 @@ function generarReserva(cat) {
                        {n:"Pacífico (C)", cl:"pacificocabildo",  pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0},],
         'segundafemenino': [
             {n:"Liniers <b>(C)</b>",             cl:"liniers",         pj:11, pg:9, pe:2, pp:0, gf:40, gc:7, pts:29},
-            {n:"Rosario PB",          cl:"rosariopb",       pj:11, pg:7, pe:2, pp:2, gf:24, gc:13, pts:23},
-            {n:"San Francisco",       cl:"sanfrancisco",    pj:11, pg:7, pe:2, pp:2, gf:23, gc:11, pts:23},
+            {n:"San Francisco",       cl:"sanfrancisco",    pj:12, pg:8, pe:2, pp:2, gf:26, gc:12, pts:26},
+            {n:"Rosario PB",          cl:"rosariopb",       pj:12, pg:7, pe:2, pp:3, gf:25, gc:16, pts:23},
             {n:"Estrella de Oro",     cl:"estrellaoro",     pj:12, pg:7, pe:2, pp:3, gf:20, gc:12, pts:23},
             {n:"<s>Huracán</s> <b>(-)</b>",             cl:"huracan",         pj:11, pg:2, pe:0, pp:9, gf:6, gc:19, pts:6},
             {n:"Petroquímicos",       cl:"petroquimicos",   pj:11, pg:1, pe:1, pp:9, gf:9, gc:22, pts:4},
             {n:"Sansinena",           cl:"sansinena",       pj:11, pg:1, pe:1, pp:9, gf:8, gc:45, pts:4}
         ],
         'femenino':   [
-            {n:"Bella Vista",           cl:"bellavista", pj:1,pg:1, pe:0, pp:0, gf:7, gc:0, pts:3},
+            {n:"Sporting",              cl:"sporting",  pj:2,pg:1, pe:1, pp:0, gf:2, gc:3, pts:4},
+            {n:"Bella Vista",           cl:"bellavista", pj:2,pg:1, pe:0, pp:1, gf:7, gc:2, pts:3},
             {n:"Tiro Federal <b>(A)</b>",          cl:"tirofederal",pj:1,pg:1, pe:0, pp:0, gf:0, gc:0, pts:3},
             {n:"Villa Mitre",           cl:"villamitre", pj:1,pg:1, pe:0, pp:0, gf:0, gc:0, pts:3},
             {n:"Municipales",           cl:"municipales",pj:1,pg:0, pe:1, pp:0, gf:1, gc:1, pts:1},
-            {n:"Sporting",              cl:"sporting",  pj:1,pg:0, pe:1, pp:0, gf:1, gc:1, pts:1},
             {n:"Libertad",              cl:"libertad",   pj:0,pg:0, pe:0, pp:0, gf:0, gc:0, pts:0},
             {n:"<s>Empleados de Comercio</s> <b>(-)</b>", cl:"empleados", pj:0,pg:0, pe:0, pp:0, gf:0, gc:0, pts:0},
             {n:"<s>La Armonía</s> <b>(-)</b>",            cl:"laarmonia",  pj:0,pg:0, pe:0, pp:0, gf:0, gc:0, pts:0}
@@ -18356,7 +18364,7 @@ function verDetalleTorneo(clave) {
 const BD_ALIAS_JUGADORES = {
     femenino: [
         { nombre: "Marianela Santana", equipos: ["Empleados de Comercio", "Municipales"] },
-        { nombre: "Trinidad Rivas", equipos: ["Empleados de Comercio", "Villa Mitre"] },
+        { nombre: "Trinidad Rivas", equipos: ["Empleados de Comercio", "Villa Mitre"], desde: "clausura" },
     ]
 };
 
@@ -18412,6 +18420,31 @@ const BD_GOLEADORAS_CLAUSURA_FEM = [
 { jugadora: "Trinidad Rivas", equipo: "Villa Mitre", goles: 1,
       partidos: [
           { fecha: "Fecha 1", rival: "La Armonía", gl: 0, gv: 1, condicion: "Visitante", goles: 1 }
+      ]
+    },
+{ jugadora: "Mía González", equipo: "Bella Vista", goles: 1,
+      partidos: [
+          { fecha: "Fecha 2", rival: "Sporting", gl: 2, gv: 3, condicion: "Local", goles: 1 }
+      ]
+    },
+{ jugadora: "Narela Roth", equipo: "Bella Vista", goles: 1,
+      partidos: [
+          { fecha: "Fecha 2", rival: "Sporting", gl: 2, gv: 3, condicion: "Local", goles: 1 }
+      ]
+    },
+{ jugadora: "Alexia Villani", equipo: "Sporting", goles: 1,
+      partidos: [
+          { fecha: "Fecha 2", rival: "Bella Vista", gl: 2, gv: 3, condicion: "Visitante", goles: 1 }
+      ]
+    },
+{ jugadora: "Alexia Villani", equipo: "Sporting", goles: 1,
+      partidos: [
+          { fecha: "Fecha 2", rival: "Bella Vista", gl: 2, gv: 3, condicion: "Visitante", goles: 1 }
+      ]
+    },
+{ jugadora: "Alexia Villani", equipo: "Sporting", goles: 1,
+      partidos: [
+          { fecha: "Fecha 2", rival: "Bella Vista", gl: 2, gv: 3, condicion: "Visitante", goles: 1 }
       ]
     },
 ];
@@ -18868,7 +18901,7 @@ if (torneo === 'total') {
     const todosPartidos = [...partidos, ...partidosPlayoff];
 
     // Función para resolver la key canónica según aliases
-    const aliases = BD_ALIAS_JUGADORES[cat] || [];
+    const aliases = (BD_ALIAS_JUGADORES[cat] || []).filter(a => torneo === 'apertura' ? !a.desde || a.desde !== 'clausura' : true);
     const resolverKey = (nombre, equipo) => {
         const alias = aliases.find(a => a.nombre === nombre && a.equipos.includes(equipo));
         if (alias) return `${nombre}|__alias__`;
@@ -18941,7 +18974,7 @@ const lista = Object.values(goles).filter(g => cat !== 'federala' || g.equipo ==
             }
             h += `<tr>
                 <td class="c-pos">${pos}</td>
-                <td style="text-align:left;padding-left:8px;font-size:12px;cursor:pointer;color:#00331a;font-weight:bold;" onclick="verPerfilJugador('${jugNorm}','${eqNorm}')">${g.jugador} ▶</td>
+                <td style="text-align:left;padding-left:8px;font-size:12px;cursor:pointer;color:#00331a;font-weight:bold;" onclick="verPerfilJugador('${jugNorm}','${eqNorm}','apertura')">${g.jugador} ▶</td>
                 <td style="text-align:left;padding-left:8px;font-size:11px;">${escudosHtml}</td>
                 <td class="c-stat"><b>${g.n}</b></td>
             </tr>`;
@@ -19113,7 +19146,17 @@ const BD_ARQUEROS = {
     ]
 };
 const BD_ARQUEROS_CLAUSURA_OFICIAL = [];
-const BD_ARQUEROS_CLAUSURA_PROMOCIONAL = [];
+const BD_ARQUEROS_CLAUSURA_PROMOCIONAL = [
+        { jugador: "Bruno Arias", equipo: "Tiro Federal", partidos: [
+            { rival: "Comercial", resultado: "Tiro Federal 4 - 0 Comercial", fecha: 1 },
+        ]},
+        { jugador: "Enzo Riffo", equipo: "Rosario PB", partidos: [
+            { rival: "Dublin", resultado: "Rosario PB 1 - 0 Dublin", fecha: 1 },
+        ]},
+        { jugador: "Mirko Rojas", equipo: "Olimpo", partidos: [
+            { rival: "Pacífico BB", resultado: "Pacífico BB 0 - 1 Olimpo", fecha: 1 },
+        ]},
+];
 
 function generarArqueros(cat, torneo) {
     torneo = torneo || 'apertura';
@@ -19199,7 +19242,7 @@ function generarPerfilJugador(jugador, equipo, origen, totalOverride, catPerfil)
     }
     const equipoAnterior = alias ? alias.equipos[0] : null;
     const equipoActual   = alias ? alias.equipos[alias.equipos.length - 1] : equipo;
-    const cambioDeEquipo = alias && alias.equipos.length > 1 && alias.equipos[0] !== alias.equipos[alias.equipos.length - 1];
+    const cambioDeEquipo = alias && alias.equipos.length > 1 && alias.equipos[0] !== alias.equipos[alias.equipos.length - 1] && (origen !== 'apertura' || !alias.desde);
 
     // Recolectar partidos etiquetados por equipo en que jugó
     const partidosPorEquipo = {}; // { nombreEquipo: [partidos] }
@@ -19221,8 +19264,14 @@ function generarPerfilJugador(jugador, equipo, origen, totalOverride, catPerfil)
                 .forEach(p => { if (p) todosPartidos.push({ l: p.local, v: p.visitante, gl: p.gl, gv: p.gv, goles_l: p.goles_l||[], goles_v: p.goles_v||[], dia: 'Playoffs' }); });
         }
 
-        const equiposBuscar = alias ? alias.equipos : [equipo];
+        let equiposBuscar;
+if (alias) {
+    equiposBuscar = alias.equipos;
+} else {
+    equiposBuscar = [equipo];
+}
         const nombreLimpio = n => n.replace(' (e/c)', '').replace(' (p)', '').trim();
+        const equiposBuscarFixture = (alias && alias.desde === 'clausura') ? [alias.equipos[0]] : equiposBuscar;
 
         todosPartidos.forEach(p => {
             if (p.gl === null) return;
@@ -19231,13 +19280,13 @@ function generarPerfilJugador(jugador, equipo, origen, totalOverride, catPerfil)
 
             let golesJugador = 0, esEC = false, equipoEnEstePartido = null, condicion = null, rival = null;
 
-            if (equiposBuscar.includes(p.l)) {
+            if (equiposBuscarFixture.includes(p.l)) {
                 // Buscar goles normales en goles_l
                 golesL.forEach(g => { if (nombreLimpio(g) === jugador && !g.includes('(e/c)')) { golesJugador++; } });
                 // Buscar e/c en goles_v (el jugador local cometió e/c anotado del lado visitante)
                 golesV.forEach(g => { if (nombreLimpio(g) === jugador && g.includes('(e/c)')) { golesJugador++; esEC = true; } });
                 if (golesJugador > 0) { equipoEnEstePartido = p.l; condicion = 'Local'; rival = p.v; }
-            } else if (equiposBuscar.includes(p.v)) {
+            } else if (equiposBuscarFixture.includes(p.v)) {
                 // Buscar goles normales en goles_v
                 golesV.forEach(g => { if (nombreLimpio(g) === jugador && !g.includes('(e/c)')) { golesJugador++; } });
                 // Buscar e/c en goles_l (el jugador visitante cometió e/c anotado del lado local)
@@ -19341,6 +19390,9 @@ function generarPerfilJugador(jugador, equipo, origen, totalOverride, catPerfil)
         // Tabla del equipo anterior
         const listAnterior = partidosPorEquipo[equipoAnterior] || [];
         const listActual   = partidosPorEquipo[equipoActual]   || [];
+        console.log('anterior:', equipoAnterior, listAnterior.length);
+        console.log('actual:', equipoActual, listActual.length);
+        console.log('todos:', JSON.stringify(Object.keys(partidosPorEquipo)));
         const totalAnterior = listAnterior.filter(p=>!p.esEC).reduce((a,p)=>a+p.goles,0);
         const totalActual   = listActual.filter(p=>!p.esEC).reduce((a,p)=>a+p.goles,0);
 
@@ -19430,20 +19482,20 @@ const BD_POSICIONES = {
         clausura: [
             { nombre: "Tiro Federal",          clase: "tirofederal", pj:1, pg:1, pe:0, pp:0, gf:6, gc:0, pts:3 },
             { nombre: "Municipales <b>(A)</b>",           clase: "municipales", pj:1, pg:1, pe:0, pp:0, gf:2, gc:0, pts:3 },
+            { nombre: "Sporting",              clase: "sporting",    pj:2, pg:1, pe:0, pp:1, gf:3, gc:4, pts:3 },
             { nombre: "Villa Mitre",           clase: "villamitre",  pj:1, pg:1, pe:0, pp:0, gf:1, gc:0, pts:3 },
-            { nombre: "Bella Vista",           clase: "bellavista",  pj:1, pg:0, pe:1, pp:0, gf:1, gc:1, pts:1 },
+            { nombre: "Bella Vista",           clase: "bellavista",  pj:2, pg:0, pe:2, pp:0, gf:3, gc:4, pts:1 },
             { nombre: "Libertad",              clase: "libertad",    pj:1, pg:0, pe:1, pp:0, gf:1, gc:1, pts:1 },
             { nombre: "La Armonía",            clase: "laarmonia",   pj:1, pg:0, pe:0, pp:1, gf:0, gc:1, pts:0 },
-            { nombre: "Sporting",              clase: "sporting",    pj:1, pg:0, pe:0, pp:1, gf:0, gc:2, pts:0 },
             { nombre: "Empleados de Comercio", clase: "empleados",   pj:1, pg:0, pe:0, pp:1, gf:0, gc:6, pts:0 }
 ],
         acumulada: [
             { nombre: "Municipales",           clase: "municipales", pj:15, pg:12, pe:2, pp:1, gf:15, gc:13, pts:38 },
             { nombre: "Tiro Federal",          clase: "tirofederal", pj:15, pg:12, pe:2, pp:1, gf:44, gc:12, pts:38 },
             { nombre: "Villa Mitre",           clase: "villamitre",  pj:15, pg:10, pe:2, pp:3, gf:74, gc:20, pts:32 },
+            { nombre: "Sporting",              clase: "sporting",    pj:16, pg:8, pe:2, pp:6, gf:26, gc:38, pts:23 },
             { nombre: "Empleados de Comercio", clase: "empleados",   pj:15, pg:6, pe:2, pp:7, gf:27, gc:40, pts:20 },
-            { nombre: "Sporting",              clase: "sporting",    pj:15, pg:7, pe:2, pp:6, gf:23, gc:36, pts:20 },
-            { nombre: "Bella Vista",           clase: "bellavista",  pj:15, pg:3, pe:1, pp:11, gf:16, gc:45, pts:10 },
+            { nombre: "Bella Vista",           clase: "bellavista",  pj:16, pg:3, pe:1, pp:12, gf:18, gc:48, pts:10 },
             { nombre: "La Armonía",            clase: "laarmonia",   pj:15, pg:3, pe:0, pp:12, gf:11, gc:38, pts:9 },
             { nombre: "Libertad",              clase: "libertad",    pj:15, pg:2, pe:1, pp:14, gf:11, gc:54, pts:7 }
         ]
@@ -19451,13 +19503,13 @@ const BD_POSICIONES = {
     segundafemenino: {
         torneo2026: [
             { nombre: "Liniers",             clase: "liniers",         pj:15, pg:13, pe:2, pp:0, gf:56, gc:9, pts:41 },
-            { nombre: "San Francisco",       clase: "sanfrancisco",    pj:15, pg:11, pe:2, pp:2, gf:60, gc:14, pts:35 },
-            { nombre: "Petroquímicos",       clase: "petroquimicos",   pj:15, pg:10, pe:2, pp:3, gf:34, gc:11, pts:32 },
-            { nombre: "Rosario PB",          clase: "rosariopb",       pj:15, pg:9, pe:2, pp:4, gf:66, gc:22, pts:29 },
+            { nombre: "San Francisco",       clase: "sanfrancisco",    pj:16, pg:12, pe:2, pp:2, gf:61, gc:14, pts:38 },
+            { nombre: "Petroquímicos",       clase: "petroquimicos",   pj:16, pg:11, pe:2, pp:3, gf:39, gc:11, pts:35 },
+            { nombre: "Rosario PB",          clase: "rosariopb",       pj:16, pg:9, pe:2, pp:5, gf:66, gc:23, pts:29 },
             { nombre: "Estrella de Oro",     clase: "estrellaoro",     pj:16, pg:7, pe:3, pp:6, gf:26, gc:31, pts:24 },
             { nombre: "Sansinena",           clase: "sansinena",       pj:15, pg:3, pe:3, pp:9, gf:15, gc:37, pts:12 },
             { nombre: "Huracán",             clase: "huracan",         pj:15, pg:3, pe:2, pp:10, gf:14, gc:62, pts:11 },
-            { nombre: "Olimpo",              clase: "olimpo",          pj:15, pg:2, pe:3, pp:10, gf:11, gc:41, pts:9 },
+            { nombre: "Olimpo",              clase: "olimpo",          pj:16, pg:2, pe:3, pp:11, gf:11, gc:46, pts:9 },
             { nombre: "Pacífico (C)", clase: "pacificocabildo", pj:15, pg:0, pe:1, pp:14, gf:7, gc:59, pts:1 },
         ]
     }
@@ -19579,33 +19631,53 @@ const BD_REG_AMATEUR_FEM = {
             nombre: "Primera Ronda",
             duelos: [
                 {
-                    ida:    { local: "Villa Mitre",                  clL: "villamitre",        visitante: "Municipales",               clV: "municipales" },
+                    ida:    { local: "Villa Mitre",                  clL: "villamitre",        visitante: "Municipales",               clV: "municipales", gl: 4, gv: 1, goles_l: ["Lucrecia Semper (2)","Morena Bouven","Sol Menéndez Perrone"], goles_v: [] },
                     vuelta: { local: "Municipales",                  clL: "municipales",       visitante: "Villa Mitre",               clV: "villamitre" }
                 },
                 {
-                    ida:    { local: "Racing de Fortín Olavarría",   clL: "racingfortin",      visitante: "Huracán de Pellegrini",      clV: "huracan" },
+                    ida:    { local: "Racing de Fortín Olavarría",   clL: "racingfortin",      visitante: "Huracán de Pellegrini",      clV: "huracan", gl: 9, gv: 1 },
                     vuelta: { local: "Huracán de Pellegrini",        clL: "huracan",           visitante: "Racing de Fortín Olavarría", clV: "racingfortin" }
                 },
                 {
-                    ida:    { local: "Estudiantes Unidos",           clL: "estudiantesunidos", visitante: "Ciudad de Olavarría",        clV: "ciudadolavarria" },
+                    ida:    { local: "Estudiantes Unidos",           clL: "estudiantesunidos", visitante: "Ciudad de Olavarría",        clV: "ciudadolavarria", gl: 0, gv: 1 },
                     vuelta: { local: "Ciudad de Olavarría",          clL: "ciudadolavarria",   visitante: "Estudiantes Unidos",         clV: "estudiantesunidos" }
                 },
                 {
-                    ida:    { local: "Alumni Azuleño",               clL: "alumniazuleno",     visitante: "San José de Azul",           clV: "sanjoseazul" },
+                    ida:    { local: "Alumni Azuleño",               clL: "alumniazuleno",     visitante: "San José de Azul",           clV: "sanjoseazul", gl: 5, gv: 2 },
                     vuelta: { local: "San José de Azul",             clL: "sanjoseazul",       visitante: "Alumni Azuleño",             clV: "alumniazuleno" }
                 },
                 {
-                    ida:    { local: "Juventud Unida de Tandil",     clL: "juventudunidatandil", visitante: "Dep. San José de Tandil",  clV: "depsanjose" },
+                    ida:    { local: "Juventud Unida de Tandil",     clL: "juventudunidatandil", visitante: "Dep. San José de Tandil",  clV: "depsanjose", gl: 0, gv: 0 },
                     vuelta: { local: "Dep. San José de Tandil",      clL: "depsanjose",          visitante: "Juventud Unida de Tandil", clV: "juventudunidatandil" }
                 },
                 {
-                    ida:    { local: "San Lorenzo (MdP)",            clL: "sanlorenzomgp",     visitante: "Alvarado",                  clV: "alvarado" },
+                    ida:    { local: "San Lorenzo (MdP)",            clL: "sanlorenzomgp",     visitante: "Alvarado",                  clV: "alvarado", gl: 4, gv: 1 },
                     vuelta: { local: "Alvarado",                     clL: "alvarado",           visitante: "San Lorenzo (MdP)",         clV: "sanlorenzomgp" }
                 }
             ]
         }
     ]
 };
+
+const BD_GOLEADORAS_REGAMATEURFEM = [];
+BD_GOLEADORAS_REGAMATEURFEM.push({
+    jugadora: "Lucrecia Semper", equipo: "Villa Mitre", goles: 2,
+    partidos: [
+        { rival: "Municipales", resultado: "Villa Mitre 4 - 1 Municipales", instancia: "Primera Ronda - Ida" }
+    ]
+});
+BD_GOLEADORAS_REGAMATEURFEM.push({
+    jugadora: "Morena Bouven", equipo: "Villa Mitre", goles: 1,
+    partidos: [
+        { rival: "Municipales", resultado: "Villa Mitre 4 - 1 Municipales", instancia: "Primera Ronda - Ida" }
+    ]
+});
+BD_GOLEADORAS_REGAMATEURFEM.push({
+    jugadora: "Sol Menéndez Perrone", equipo: "Villa Mitre", goles: 1,
+    partidos: [
+        { rival: "Municipales", resultado: "Villa Mitre 4 - 1 Municipales", instancia: "Primera Ronda - Ida" }
+    ]
+});
 
 function generarRegAmateurFem() {
     const faseActual = BD_REG_AMATEUR_FEM.fases[0];
@@ -19621,7 +19693,7 @@ function generarRegAmateurFem() {
     });
     botones += `</div>`;
 
-    let html = `<div class="header-t">REG. AMATEUR — FEMENINO 2026</div>`;
+    let html = `<div class="header-t">TORNEO FEDERAL — FEMENINO 2026</div>`;
     html += `<div style="background:#1a4a2e;color:#fff;text-align:center;font-size:10px;font-weight:bold;padding:5px 8px;letter-spacing:0.5px;">
         🏆 REGIÓN BONAERENSE PAMPEANA SUR
     </div>`;
@@ -19644,19 +19716,32 @@ function _renderFaseRegAmateurFem(fase) {
 }
 
 function _renderPartidoRAF(p) {
-    return `<table style="width:100%;"><tbody><tr>
+    const jugado = p.gl !== null && p.gl !== undefined;
+    const resultado = jugado ? `${p.gl} - ${p.gv}` : 'vs';
+    let html = `<table style="width:100%;"><tbody><tr>
         <td class="c-loc">
             <span style="direction:ltr;display:inline-flex;align-items:center;justify-content:flex-end;width:100%;">
                 ${p.local}
                 <div class="escudo ${p.clL}" style="display:inline-block;vertical-align:middle;margin-left:4px;"></div>
             </span>
         </td>
-        <td class="c-res" style="font-size:10px;color:#aaa;">vs</td>
+        <td class="c-res" style="font-size:${jugado ? '12px' : '10px'};color:${jugado ? '#000' : '#aaa'};font-weight:${jugado ? 'bold' : 'normal'};">${resultado}</td>
         <td class="c-vis">
             <div class="escudo ${p.clV}" style="display:inline-block;vertical-align:middle;margin-right:4px;"></div>
             ${p.visitante}
         </td>
     </tr></tbody></table>`;
+
+    if (jugado && ((p.goles_l && p.goles_l.length) || (p.goles_v && p.goles_v.length))) {
+        const golesL = (p.goles_l || []).join(", ");
+        const golesV = (p.goles_v || []).join(", ");
+        html += `<div style="background:#f7f7f7;font-size:9px;color:#666;padding:2px 10px 4px;font-style:italic;text-align:center;">`;
+        if (golesL) html += `⚽ ${p.local}: ${golesL}`;
+        if (golesL && golesV) html += ` &nbsp;|&nbsp; `;
+        if (golesV) html += `⚽ ${p.visitante}: ${golesV}`;
+        html += `</div>`;
+    }
+    return html;
 }
 
 function verFaseRegAmateurFem(idx) {
@@ -19668,6 +19753,76 @@ function verFaseRegAmateurFem(idx) {
         btn.style.color = i === idx ? '#fff' : '#1a4a2e';
     });
     document.getElementById('contenido-ramfem').innerHTML = _renderFaseRegAmateurFem(fase);
+}
+
+function generarGoleadorasRegAmateurFem() {
+    const lista = (BD_GOLEADORAS_REGAMATEURFEM || []).slice().sort((a,b) => b.goles - a.goles || a.equipo.localeCompare(b.equipo) || a.jugadora.localeCompare(b.jugadora));
+
+    let html = `<div style="display:flex;align-items:center;gap:8px;padding:8px 10px;background:#f5f5f5;border-bottom:1px solid #ddd;cursor:pointer;" onclick="navegar('regamateurfem')">
+        <span style="font-size:16px;color:#00331a;">←</span>
+        <span style="font-size:11px;color:#555;">Volver a Reg. Amateur Femenino</span>
+    </div>`;
+    html += `<div class="header-t">GOLEADORAS — REG. AMATEUR FEMENINO 2026</div>`;
+
+    if (lista.length === 0) return html + `<div class="msg-prox">Sin goles registrados</div>`;
+
+    html += `<table><thead><tr>
+        <th style="width:25px;">#</th>
+        <th style="text-align:left;padding-left:8px;">Jugadora</th>
+        <th style="text-align:left;padding-left:8px;">Equipo</th>
+        <th class="c-stat">⚽</th>
+    </tr></thead><tbody>`;
+
+    let pos = 1, prev = -1, i = 0;
+    lista.forEach(g => {
+        i++;
+        if (g.goles !== prev) { pos = i; prev = g.goles; }
+        const escudo = g.equipo === 'Villa Mitre' ? 'villamitre' : g.equipo === 'Municipales' ? 'municipales' : '';
+        const jugNorm = g.jugadora.replace(/'/g, "\\'");
+        const eqNorm = g.equipo.replace(/'/g, "\\'");
+        html += `<tr>
+            <td class="c-pos">${pos}</td>
+            <td style="text-align:left;padding-left:8px;font-size:12px;font-weight:bold;color:#00331a;cursor:pointer;" onclick="verPerfilJugadoraRegAmateurFem('${jugNorm}','${eqNorm}')">${g.jugadora} ▶</td>
+            <td style="text-align:left;padding-left:8px;font-size:11px;"><div class="escudo ${escudo}" style="display:inline-block;vertical-align:middle;margin-right:4px;"></div>${g.equipo}</td>
+            <td class="c-stat"><b>${g.goles}</b></td>
+        </tr>`;
+    });
+
+    return html + `</tbody></table>`;
+}
+
+function verPerfilJugadoraRegAmateurFem(jugadora, equipo) {
+    const g = (BD_GOLEADORAS_REGAMATEURFEM || []).find(x => x.jugadora === jugadora && x.equipo === equipo);
+    if (!g) return;
+    const escudo = equipo === 'Villa Mitre' ? 'villamitre' : equipo === 'Municipales' ? 'municipales' : '';
+
+    let html = `<div style="display:flex;align-items:center;gap:8px;padding:8px 10px;background:#f5f5f5;border-bottom:1px solid #ddd;cursor:pointer;" onclick="navegar('goleadorasregamateurfem')">
+        <span style="font-size:16px;color:#00331a;">←</span>
+        <span style="font-size:11px;color:#555;">Volver a Goleadoras</span>
+    </div>`;
+    html += `<div class="header-t" style="font-size:16px;text-align:center;padding:12px;">⚽ ${jugadora}</div>`;
+    html += `<div style="display:flex;align-items:center;gap:10px;padding:10px 14px;background:#f0f7f0;border-bottom:1px solid #c8e6c9;">
+        <div class="escudo ${escudo}"></div>
+        <div><div style="font-size:13px;font-weight:bold;">${equipo}</div>
+        <div style="font-size:11px;color:#555;">${g.goles} gol${g.goles!==1?'es':''} en el Torneo Federal Femenino 2026</div></div>
+    </div>`;
+
+    const partidos = g.partidos || [];
+    if (partidos.length === 0) {
+        html += `<div style="text-align:center;padding:20px;color:#999;font-size:12px;">Sin partidos detallados</div>`;
+    } else {
+        html += `<div class="header-t">PARTIDOS</div><div style="font-size:11px;">`;
+        partidos.forEach(p => {
+            html += `<div style="padding:6px 12px;border-bottom:1px solid #eee;">
+                <div style="font-size:9px;color:#888;">${p.instancia || ''}</div>
+                <div>vs ${p.rival} — <b>${p.resultado}</b></div>
+            </div>`;
+        });
+        html += `</div>`;
+    }
+
+    document.getElementById('contenido').innerHTML = html;
+    document.documentElement.scrollTop = 0;
 }
 
 /* ══════════════════════════════════════════════

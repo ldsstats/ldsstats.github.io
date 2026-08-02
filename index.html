@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>LdS Stats - 2026</title>
-    <link rel="stylesheet" href="style.css?v=777">
+    <link rel="stylesheet" href="style.css?v=7">
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#111111">
     <!-- Google Analytics -->
@@ -32,7 +32,7 @@
     z-index: 999;
     pointer-events: none;
     letter-spacing: 0.3px;
-">🕐 Última actualización: Sáb 01/08 16:00hs</div>
+">🕐 Última actualización: Sáb 01/08 22:40hs</div>
 
 <div id="container-principal">
     <div id="logo-header"><img src="au11.png" style="height:80px;" alt="LdS Stats"></div>
@@ -74,7 +74,7 @@
                 <a href="#" onclick="navegar('proximamente')">Temporada 2026</a>
                 <a href="#" onclick="navegar('proximamente')">Goleadores</a>
                 <a href="#" onclick="navegar('regamateurfem')">Femenino 2026</a>
-                <a href="#" onclick="navegar('proximamente')">Goleadoras</a>
+                <a href="#" onclick="navegar('goleadorasregamateurfem')">Goleadoras</a>
             </div>
         </div>
         <div class="bloque">
@@ -165,35 +165,35 @@
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-<script src="datos.js?v=777"></script>
+<script src="datos.js?v=7"></script>
 <script>
     let estado = { torneo: 'home', categoria: '', fecha: 1 };
     let estadoAnterior = { torneo: 'home', categoria: '', fecha: 1 };
 
     // Última actualización por sección — modificar según corresponda
     const ULTIMA_ACT = {
-        default:        "Sáb 01/08 16:00hs",
-        home:        "Sáb 01/08 16:00hs",
+        default:        "Sáb 01/08 22:40hs",
+        home:        "Sáb 01/08 22:40hs",
         apertura_oficial:   "Lun 27/07 00:08hs",
         historial:   "Lun 27/07 00:08hs",
         goleadores_oficial:   "Lun 27/07 00:08hs",
         arqueros_oficial:   "Lun 27/07 00:08hs",
         reserva_oficial:   "Dom 12/07 17:30hs",
-        apertura_promocional:   "Sáb 04/07 19:10hs",
-        goleadores_promocional:   "Sáb 04/07 19:10hs",
-        arqueros_promocional:   "Sáb 04/07 19:10hs",
+        apertura_promocional:   "Sáb 01/08 22:40hs",
+        goleadores_promocional:   "Sáb 01/08 22:40hs",
+        arqueros_promocional:   "Sáb 01/08 22:40hs",
         reserva_promocional:   "Sáb 18/07 16:00hs",
         posiciones_federala:   "Dom 12/07 17:30hs",
         goleadores_federala:   "Dom 12/07 17:30hs",
         sub131517:   "Sáb 01/08 16:00hs",
         copa_argentina:   "Dom 29/3 — 21:00hs",
         apertura_femenino:   "Dom 26/07 13:15hs",
-        clausura_femenino:   "Lun 27/07 00:08hs",
-        goleadores_femenino:   "Lun 27/07 00:08hs",
-        reserva_femenino:   "Lun 27/07 00:08hs",
-        torneo2026_segundafemenino:   "Lun 27/07 00:08hs",
-        goleadores_segundafemenino:   "Lun 27/07 00:08hs",
-        reserva_segundafemenino:   "Sáb 25/07 18:45hs",
+        clausura_femenino:   "Sáb 01/08 22:40hs",
+        goleadores_femenino:   "Sáb 01/08 22:40hs",
+        reserva_femenino:   "Sáb 01/08 22:40hs",
+        torneo2026_segundafemenino:   "Sáb 01/08 22:40hs",
+        goleadores_segundafemenino:   "Sáb 01/08 22:40hs",
+        reserva_segundafemenino:   "Sáb 01/08 22:40hs",
         sub15fem:   "Vie 10/07 16:00hs",
         torneo2026_senior:   "Sáb 27/06 08:00hs",
         futsal:   "Sáb 01/08 16:00hs",
@@ -206,6 +206,7 @@
         seniorapertura: "Miér 15/07 00:00hs",
         seniorgoleadores: "Miér 08/07 17:00hs",
         copapais: "Lun 27/07 08:00hs",
+        regamateurfem:   "Sáb 01/08 22:40hs",
         mercadopases_oficial: "Sáb 01/08 16:00hs",
         mercadopases_promocional: "Sáb 01/08 16:00hs",
         mercadopases_femenino: "Lun 27/07 00:08hs",
@@ -495,6 +496,8 @@
                 cont.innerHTML = generarFormativas(estado.categoria);
             } else if (estado.torneo === 'regamateurfem') {
                 cont.innerHTML = generarRegAmateurFem();
+            } else if (estado.torneo === 'goleadorasregamateurfem') {
+                cont.innerHTML = generarGoleadorasRegAmateurFem();
             } else if (estado.torneo === 'copa_argentina') {
                 cont.innerHTML = generarCopaArgentina();
             } else if (estado.torneo === 'historial') {
