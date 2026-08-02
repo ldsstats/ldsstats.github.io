@@ -562,7 +562,7 @@ const BD_FIXTURES_FUTSAL = [
     { fecha: 1, partidos: [
         {l:"La Esperanza",     v:"Pacífico BB",    gl:5,    gv:2, goles_l:["Emiliano Etchepareborda (2)","Bruno Decoud","Rodrigo Decoud","Ignacio Cappelletti"], goles_v:[]},
         {l:"Comercial",       v:"Catamarca",     gl:10, gv:3, goles_l:["Ricardo Lagos (4)","Jonatan Kippes (3)","Juan Muñoz (2)","Ivo Basich"], goles_v:[]},
-        {l:"La Estación",    v:"Tiro Federal",     gl:3, gv:1, goles_l:["Eric Martin","Gastón Aravena","Octavio Kerman"], goles_v:[]},
+        {l:"La Estación",    v:"Tiro Federal",     gl:3, gv:1, goles_l:["Eric Martin","Gastón Aravena","Octavio Kerman"], goles_v:["Alejandro Saldívar"]},
         {l:"Los 3 Chiflados",          v:"Dublin",     gl:null, gv:null},
         {l:"Villa Mitre",     v:"Dep. Futsal",     gl:null, gv:null},
         {l:"San Francisco",    v:"Liniers",     gl:0, gv:4, goles_l:[], goles_v:["Franco Tirabasso (2)","Emiliano Tomasetti","Marcelo De Lucía"]},
@@ -1068,9 +1068,9 @@ const BD_FIXTURES = { oficial: { apertura: [], clausura: [], reserva: [] }, prom
 BD_FIXTURES.federala.nonagonal = [
     { fecha: 1, partidos: [
         { l: "Olimpo", v: "Juventud Antoniana", gl: null, gv: null, dia:"Dom 02/08", hora:"15:00", goles_l:[], goles_v:[] },
-        { l: "Kimberley", v: "Argentino de Monte Maíz", gl: null, gv: null, dia:"Dom 02/08", hora:"15:00", goles_l:[], goles_v:[] },
         { l: "Cipolletti", v: "Huracán Las Heras", gl: null, gv: null, dia:"Dom 02/08", hora:"15:30", goles_l:[], goles_v:[] },
-        { l: "Atenas de Río Cuarto", v: "Villa Mitre", gl: null, gv: null, dia:"Dom 02/08", hora:"15:45", goles_l:[], goles_v:[] }
+        { l: "Atenas de Río Cuarto", v: "Villa Mitre", gl: null, gv: null, dia:"Dom 02/08", hora:"15:45", goles_l:[], goles_v:[] },
+        { l: "Kimberley", v: "Argentino de Monte Maíz", gl: null, gv: null, dia:"Lun 03/08", hora:"15:00", goles_l:[], goles_v:[] }
     ], libre: "Alvarado" },
     { fecha: 2, partidos: [
         { l: "Villa Mitre", v: "Cipolletti", gl: null, gv: null },
@@ -1633,7 +1633,7 @@ BD_FIXTURES.femenino.reserva.find(f => f.fecha === 1).partidos.forEach(p => {
     if (p.l === "La Armonía" && p.v === "Villa Mitre") { p.gl = null; p.gv = null; delete p.dia; delete p.hora; }
 });
 BD_FIXTURES.femenino.reserva.find(f => f.fecha === 2).partidos.forEach(p => {
-    if (p.l === "Bella Vista" && p.v === "Sporting") { p.gl = 0; p.gv = 2; p.goles_l = []; p.goles_v = []; delete p.dia; delete p.hora; }
+    if (p.l === "Bella Vista" && p.v === "Sporting") { p.gl = 2; p.gv = 0; p.goles_l = []; p.goles_v = []; delete p.dia; delete p.hora; }
     if (p.l === "Villa Mitre" && p.v === "Municipales") { p.gl = null; p.gv = null; delete p.dia; delete p.hora; }
     if (p.l === "Libertad" && p.v === "Empleados de Comercio") { p.gl = null; p.gv = null; delete p.dia; delete p.hora; }
     if (p.l === "Tiro Federal" && p.v === "La Armonía") { p.gl = null; p.gv = null; delete p.dia; delete p.hora; }
@@ -1830,7 +1830,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 18).partidos.forEach(p
 });
 
 
-let diaSeleccionadoHome = "2026-08-01"; 
+let diaSeleccionadoHome = "2026-08-02"; 
 let mercadoPasesAbierto = false;
 
 function toggleMercadoPasesHome() {
@@ -16197,12 +16197,12 @@ function generarReserva(cat) {
             {n:"Sansinena",           cl:"sansinena",       pj:11, pg:1, pe:1, pp:9, gf:8, gc:45, pts:4}
         ],
         'femenino':   [
-            {n:"Sporting",              cl:"sporting",  pj:2,pg:1, pe:1, pp:0, gf:2, gc:3, pts:4},
-            {n:"Bella Vista",           cl:"bellavista", pj:2,pg:1, pe:0, pp:1, gf:7, gc:2, pts:3},
-            {n:"Tiro Federal <b>(A)</b>",          cl:"tirofederal",pj:1,pg:1, pe:0, pp:0, gf:0, gc:0, pts:3},
-            {n:"Villa Mitre",           cl:"villamitre", pj:1,pg:1, pe:0, pp:0, gf:0, gc:0, pts:3},
+            {n:"Bella Vista",           cl:"bellavista", pj:2,pg:2, pe:0, pp:0, gf:9, gc:0, pts:6},
+            {n:"Tiro Federal <b>(A)</b>",          cl:"tirofederal",pj:0,pg:0, pe:0, pp:0, gf:0, gc:0, pts:0},
+            {n:"Villa Mitre",           cl:"villamitre", pj:0,pg:0, pe:0, pp:0, gf:0, gc:0, pts:0},
             {n:"Municipales",           cl:"municipales",pj:1,pg:0, pe:1, pp:0, gf:1, gc:1, pts:1},
-            {n:"Libertad",              cl:"libertad",   pj:0,pg:0, pe:0, pp:0, gf:0, gc:0, pts:0},
+            {n:"Sporting",              cl:"sporting",  pj:2,pg:0, pe:1, pp:1, gf:1, gc:3, pts:1},
+            {n:"Libertad",              cl:"libertad",   pj:1,pg:0, pe:0, pp:1, gf:0, gc:7, pts:0},
             {n:"<s>Empleados de Comercio</s> <b>(-)</b>", cl:"empleados", pj:0,pg:0, pe:0, pp:0, gf:0, gc:0, pts:0},
             {n:"<s>La Armonía</s> <b>(-)</b>",            cl:"laarmonia",  pj:0,pg:0, pe:0, pp:0, gf:0, gc:0, pts:0}
         ]
@@ -16612,13 +16612,15 @@ const BD_GOLEADORES_FUTSAL = [
 
     { club: "Villa Mitre",     clase: "villamitre",    act: null,       goleadores: [] },
 
-    { club: "Tiro Federal", clase: "tirofederal",    act: null,       goleadores: [] },
+    { club: "Tiro Federal", clase: "tirofederal",    act: "fecha 1",       goleadores: [
+    { nombre: "Alejandro Saldívar",          equipo: "Tiro Federal",   goles: 1 },
+] },
 
     { club: "San Francisco",   clase: "sanfrancisco",    act: null,       goleadores: [] },
 
     { club: "Catamarca",       clase: "catamarca",    act: null,       goleadores: [] },
 
-    { club: "La Estación",     clase: "laestacion",    act: "Fecha 1",       goleadores: [
+    { club: "La Estación",     clase: "laestacion",    act: "fecha 1",       goleadores: [
     { nombre: "Eric Martin",          equipo: "La Estación",   goles: 1 },
     { nombre: "Gastón Aravena",          equipo: "La Estación",   goles: 1 },
     { nombre: "Octavio Kerman",          equipo: "La Estación",   goles: 1 },
@@ -16626,7 +16628,7 @@ const BD_GOLEADORES_FUTSAL = [
 
     { club: "Dep. Futsal",     clase: "depfutsal",    act: null,       goleadores: [] },
 
-    { club: "Liniers",         clase: "liniers",    act: "Fecha 1",       goleadores: [
+    { club: "Liniers",         clase: "liniers",    act: "fecha 1",       goleadores: [
     { nombre: "Franco Tirabasso",          equipo: "La Estación",   goles: 2 },
     { nombre: "Emiliano Tomasetti",          equipo: "La Estación",   goles: 1 },
     { nombre: "Marcelo De Lucía",          equipo: "La Estación",   goles: 1 },
@@ -18860,7 +18862,7 @@ if (torneo === 'total') {
                         if (idx < equiposLista.length - 1) escudosHtml += ` / `;
                     });
                     const jugNorm = g.jugador.replace(/'/g, "\\'");
-                    const eqNorm = g.equipo.replace(/'/g, "\\'");
+                    const eqNorm = g.equipo.split(' / ').pop().replace(/'/g, "\\'");
                     const clickFn = g.origen === 'clausura' ? `navegarPerfilGoleadoraClausura('${jugNorm}','${eqNorm}','total',${g.n})` : `verPerfilJugador('${jugNorm}','${eqNorm}','total',${g.n},'femenino')`;
                     h += `<tr>
                         <td class="c-pos">${pos}</td>
@@ -19390,9 +19392,6 @@ if (alias) {
         // Tabla del equipo anterior
         const listAnterior = partidosPorEquipo[equipoAnterior] || [];
         const listActual   = partidosPorEquipo[equipoActual]   || [];
-        console.log('anterior:', equipoAnterior, listAnterior.length);
-        console.log('actual:', equipoActual, listActual.length);
-        console.log('todos:', JSON.stringify(Object.keys(partidosPorEquipo)));
         const totalAnterior = listAnterior.filter(p=>!p.esEC).reduce((a,p)=>a+p.goles,0);
         const totalActual   = listActual.filter(p=>!p.esEC).reduce((a,p)=>a+p.goles,0);
 
