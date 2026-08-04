@@ -1188,10 +1188,10 @@ BD_FIXTURES.oficial.apertura.find(f => f.fecha === 14).partidos = [
 // Reserva Oficial
 BD_FIXTURES.oficial.reserva.push(
     { fecha: 1, partidos: [
-        {l:"Villa Mitre",  v:"Liniers",       gl:null,   gv:null},
-        {l:"Libertad",     v:"Huracán",       gl:null,   gv:null},
-        {l:"Sporting",     v:"La Armonía",    gl:null,   gv:null},
-        {l:"Bella Vista",  v:"San Francisco", gl:null,   gv:null}
+        {l:"Villa Mitre",  v:"Liniers",       gl:0,   gv:4},
+        {l:"Libertad",     v:"Huracán",       gl:4,   gv:1},
+        {l:"Sporting",     v:"La Armonía",    gl:2,   gv:2},
+        {l:"Bella Vista",  v:"San Francisco", gl:3,   gv:2}
     ]},
     { fecha: 2, partidos: [
         {l:"Huracán",      v:"Sporting",      gl:null,   gv:null},
@@ -16133,15 +16133,17 @@ function generarReserva(cat) {
 
     // Tabla de posiciones — solo puntos, calculados desde fixtures
     const BD_RESERVA_POS = {
-        'oficial':    [{n:"Sporting <b>(A)</b>",      cl:"sporting",     pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0},
-                       {n:"Libertad",      cl:"libertad",     pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0},
-                       {n:"Villa Mitre",   cl:"villamitre",   pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0},
-                       {n:"Bella Vista",   cl:"bellavista",   pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0},
-                       {n:"La Armonía",    cl:"laarmonia",    pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0},
-                       {n:"San Francisco", cl:"sanfrancisco", pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0},
-                       {n:"Liniers",       cl:"liniers",      pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0},
-                       {n:"Huracán",       cl:"huracan",      pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0}],
-        'promocional':[                       {n:"Olimpo <b>(A)</b>",              cl:"olimpo",           pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0},
+        'oficial':    [
+                       {n:"Liniers",       cl:"liniers",      pj:1, pg:1, pe:0, pp:0, gf:4, gc:0, pts:3},
+                       {n:"Libertad",      cl:"libertad",     pj:1, pg:1, pe:0, pp:0, gf:4, gc:1, pts:3},
+                       {n:"Bella Vista",   cl:"bellavista",   pj:1, pg:1, pe:0, pp:0, gf:3, gc:2, pts:3},
+                       {n:"Sporting <b>(A)</b>",      cl:"sporting",     pj:1, pg:0, pe:1, pp:0, gf:2, gc:2, pts:1},
+                       {n:"La Armonía",    cl:"laarmonia",    pj:1, pg:0, pe:1, pp:0, gf:2, gc:2, pts:1},
+                       {n:"San Francisco", cl:"sanfrancisco", pj:1, pg:0, pe:0, pp:1, gf:2, gc:3, pts:0},
+                       {n:"Huracán",       cl:"huracan",      pj:1, pg:0, pe:0, pp:1, gf:1, gc:4, pts:0},
+                       {n:"Villa Mitre",   cl:"villamitre",   pj:1, pg:0, pe:0, pp:1, gf:0, gc:4, pts:0}],
+        'promocional':[
+                       {n:"Olimpo <b>(A)</b>",              cl:"olimpo",           pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0},
                        {n:"Tiro Federal",        cl:"tirofederal",      pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0},
                        {n:"Comercial",           cl:"comercial",        pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0},
                        {n:"Rosario PB",          cl:"rosariopb",        pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0},
