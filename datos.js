@@ -1145,7 +1145,7 @@ expandirFixture(idaOficialClausura, BD_FIXTURES.oficial.clausura, 14);
 BD_FIXTURES.oficial.apertura.find(f => f.fecha === 8).partidos = [
     {l:"San Francisco", v:"Bella Vista", gl:2, gv:1, dia:"Sáb 16/05", hora:"15:00", goles_l:["Claudio Castiglioni","Sebastián Leguiza"], goles_v:["Lucas Martínez"]},
     {l:"Liniers",       v:"Villa Mitre", gl:1, gv:1, dia:"Sáb 16/05", hora:"15:00", goles_l:[], goles_v:["Constanzo Palacio","Thiago Uicala (e/c)"]},
-    {l:"Huracán",       v:"Libertad",    gl:3, gv:1, dia:"Sáb 16/05", hora:"15:30", goles_l:["Iván Agudiak","Brian Scalco"], goles_v:["Gianluca Falcioni (e/c)", "Franco Pane"]},
+    {l:"Huracán",       v:"Libertad",    gl:3, gv:1, dia:"Sáb 16/05", hora:"15:30", goles_l:["Iván Agudiak","Brian Scalco"], goles_v:["Franco Pane","Gianluca Falcioni (e/c)"]},
     {l:"La Armonía",    v:"Sporting",    gl:3, gv:1, dia:"Dom 17/05", hora:"15:00", goles_l:["Enrique Narvay","Ezequiel Intrevado","Alex Muzi"], goles_v:["Jonathan Font"]}
 ];
 BD_FIXTURES.oficial.apertura.find(f => f.fecha === 9).partidos = [
@@ -1830,7 +1830,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 18).partidos.forEach(p
 });
 
 
-let diaSeleccionadoHome = "2026-08-05"; 
+let diaSeleccionadoHome = "2026-08-04"; 
 let mercadoPasesAbierto = false;
 
 function toggleMercadoPasesHome() {
@@ -1857,6 +1857,11 @@ const BD_FECHA_META = {
 function generarHome() {
     const agenda = [
 
+        { id: "2026-08-04", label: "MAR 04/08", torneos: [
+            { nombre: "2° FECHA - FUTSAL - CLAUSURA", cat: "futsal", noAutoResult: true, partidos: [
+                {l:"Liniers", v:"Los 3 Chiflados", hora:"22:00", gl:null, gv:null,nota:"en cancha de Don Bosco"},
+            ]},
+       ]},
         { id: "2026-08-05", label: "MIÉR 05/08", torneos: [
             { nombre: "2° FECHA - FUTSAL - CLAUSURA", cat: "futsal", noAutoResult: true, partidos: [
                 {l:"Dublin", v:"Comercial", hora:"22:00", gl:null, gv:null,nota:"en cancha de Don Bosco"},
@@ -19338,14 +19343,14 @@ if (alias) {
             if (equiposBuscarFixture.includes(p.l)) {
                 // Buscar goles normales en goles_l
                 golesL.forEach(g => { if (nombreLimpio(g) === jugador && !g.includes('(e/c)')) { golesJugador++; } });
-                // Buscar e/c en goles_v (el jugador local cometió e/c anotado del lado visitante)
-                golesV.forEach(g => { if (nombreLimpio(g) === jugador && g.includes('(e/c)')) { golesJugador++; esEC = true; } });
+                // Buscar e/c en goles_l (el jugador local cometió e/c, anotado del lado local)
+                golesL.forEach(g => { if (nombreLimpio(g) === jugador && g.includes('(e/c)')) { golesJugador++; esEC = true; } });
                 if (golesJugador > 0) { equipoEnEstePartido = p.l; condicion = 'Local'; rival = p.v; }
             } else if (equiposBuscarFixture.includes(p.v)) {
                 // Buscar goles normales en goles_v
                 golesV.forEach(g => { if (nombreLimpio(g) === jugador && !g.includes('(e/c)')) { golesJugador++; } });
-                // Buscar e/c en goles_l (el jugador visitante cometió e/c anotado del lado local)
-                golesL.forEach(g => { if (nombreLimpio(g) === jugador && g.includes('(e/c)')) { golesJugador++; esEC = true; } });
+                // Buscar e/c en goles_v (el jugador visitante cometió e/c, anotado del lado visitante)
+                golesV.forEach(g => { if (nombreLimpio(g) === jugador && g.includes('(e/c)')) { golesJugador++; esEC = true; } });
                 if (golesJugador > 0) { equipoEnEstePartido = p.v; condicion = 'Visitante'; rival = p.l; }
             }
 
@@ -20237,10 +20242,18 @@ function _renderPartidoPlayoff(p, pendiente) {
         <td class="c-vis"><div class="escudo ${p.clV}" style="display:inline-block;vertical-align:middle;margin-right:4px;"></div> ${p.visitante}</td>
     </tr>`;
     if (p.gl !== null && ((p.goles_l && p.goles_l.length > 0) || (p.goles_v && p.goles_v.length > 0))) {
+        const golesLocal = [
+            ...(p.goles_l || []).filter(g => !g.includes('(e/c)')),
+            ...(p.goles_v || []).filter(g => g.includes('(e/c)'))
+        ];
+        const golesVisitante = [
+            ...(p.goles_v || []).filter(g => !g.includes('(e/c)')),
+            ...(p.goles_l || []).filter(g => g.includes('(e/c)'))
+        ];
         html += `<tr style="background:#f9f9f9;"><td colspan="3" style="font-size:9px;color:#555;padding:3px 8px;text-align:center;">`;
-        if (p.goles_l && p.goles_l.length > 0) html += `⚽ <b>${p.local}:</b> ${p.goles_l.join(', ')}`;
-        if (p.goles_l?.length > 0 && p.goles_v?.length > 0) html += ` &nbsp;|&nbsp; `;
-        if (p.goles_v && p.goles_v.length > 0) html += `⚽ <b>${p.visitante}:</b> ${p.goles_v.join(', ')}`;
+        if (golesLocal.length > 0) html += `⚽ <b>${p.local}:</b> ${golesLocal.join(', ')}`;
+        if (golesLocal.length > 0 && golesVisitante.length > 0) html += ` &nbsp;|&nbsp; `;
+        if (golesVisitante.length > 0) html += `⚽ <b>${p.visitante}:</b> ${golesVisitante.join(', ')}`;
         html += `</td></tr>`;
     }
     return html;
