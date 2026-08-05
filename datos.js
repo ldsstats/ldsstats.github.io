@@ -449,11 +449,11 @@ const BD_FIXTURES_FUTSAL_RESERVA = [
         {l:"Petroquímicos",         v:"Huracán",   gl:null,    gv:null}
     ]},
     { fecha: 2, partidos: [
+        {l:"Los 3 Chiflados", v:"Liniers",    gl:5,    gv:1, goles_l:["Lino Bognanni (3)","Ismael Domínguez (2)"], goles_v:[]},
         {l:"Dublin",       v:"Comercial",     gl:null, gv:null},
         {l:"Pacífico BB",     v:"La Estación",     gl:null, gv:null},
         {l:"Catamarca",    v:"La Esperanza",     gl:null, gv:null},
         {l:"Tiro Federal",     v:"Villa Mitre",     gl:null, gv:null},
-        {l:"Los 3 Chiflados", v:"Liniers",     gl:null, gv:null},
         {l:"Petroquímicos",   v:"Dep. Futsal",     gl:null, gv:null},
         {l:"San Francisco",   v:"Huracán",     gl:null, gv:null},
     ]},
@@ -569,11 +569,11 @@ const BD_FIXTURES_FUTSAL = [
         {l:"Petroquímicos",         v:"Huracán",   gl:null,    gv:null}
     ]},
     { fecha: 2, partidos: [
+        {l:"Los 3 Chiflados", v:"Liniers",     gl:2, gv:1, goles_l:["Iván Zapata","Martín Kloberdans"], goles_v:[""]},
         {l:"Dublin",       v:"Comercial",     gl:null, gv:null},
         {l:"Pacífico BB",     v:"La Estación",     gl:null, gv:null},
         {l:"Catamarca",    v:"La Esperanza",     gl:null, gv:null},
         {l:"Tiro Federal",     v:"Villa Mitre",     gl:null, gv:null},
-        {l:"Los 3 Chiflados", v:"Liniers",     gl:null, gv:null},
         {l:"Petroquímicos",   v:"Dep. Futsal",     gl:null, gv:null},
         {l:"San Francisco",   v:"Huracán",     gl:null, gv:null},
     ]},
@@ -1859,7 +1859,7 @@ function generarHome() {
 
         { id: "2026-08-04", label: "MAR 04/08", torneos: [
             { nombre: "2° FECHA - FUTSAL - CLAUSURA", cat: "futsal", noAutoResult: true, partidos: [
-                {l:"Liniers", v:"Los 3 Chiflados", hora:"22:00", gl:null, gv:null,nota:"en cancha de Don Bosco"},
+                {l:"Liniers", v:"Los 3 Chiflados", hora:"22:00", gl:1, gv:2,nota:"en cancha de Don Bosco"},
             ]},
        ]},
         { id: "2026-08-05", label: "MIÉR 05/08", torneos: [
@@ -16412,15 +16412,15 @@ function generarSub() {
 
 const BD_POS_FUTSAL = {
     principal: [
+        {n:"Petroquímicos",   cl:"petroquimicos",    pj:2,pg:2,pe:0,pp:0,gf:0, gc:0, pts:6},
         {n:"Comercial",       cl:"comercial",    pj:1,pg:1,pe:0,pp:0,gf:10, gc:2, pts:3},
         {n:"La Esperanza",    cl:"laesperanza",    pj:1,pg:1,pe:0,pp:0,gf:5, gc:2, pts:3},
         {n:"La Estación <b>(A)</b>",     cl:"laestacion",    pj:1,pg:1,pe:0,pp:0,gf:3, gc:1, pts:3},
-        {n:"Liniers",         cl:"liniers",    pj:1,pg:1,pe:0,pp:0,gf:4, gc:0, pts:3},
+        {n:"Liniers",         cl:"liniers",    pj:2,pg:1,pe:1,pp:0,gf:5, gc:2, pts:3},
+        {n:"Los 3 Chiflados", cl:"los3chiflados",    pj:1,pg:1,pe:0,pp:0,gf:2, gc:1, pts:3},
         {n:"Villa Mitre",     cl:"villamitre",    pj:1,pg:1,pe:0,pp:0,gf:0, gc:0, pts:3},
-        {n:"Petroquímicos",   cl:"petroquimicos",    pj:1,pg:1,pe:0,pp:0,gf:0, gc:0, pts:3},
-        {n:"Los 3 Chiflados", cl:"los3chiflados",    pj:0,pg:0,pe:0,pp:0,gf:0, gc:0, pts:0},
+        {n:"San Francisco",   cl:"sanfrancisco",    pj:2,pg:1,pe:0,pp:1,gf:0, gc:4, pts:3},
         {n:"Dublin",          cl:"dublin",    pj:0,pg:0,pe:0,pp:0,gf:0, gc:0, pts:0},
-        {n:"San Francisco",   cl:"sanfrancisco",    pj:1,pg:0,pe:0,pp:1,gf:0, gc:4, pts:0},
         {n:"Tiro Federal",    cl:"tirofederal",    pj:1,pg:0,pe:0,pp:1,gf:1, gc:3, pts:0},
         {n:"Pacífico BB",     cl:"pacificobb",    pj:1,pg:0,pe:0,pp:1,gf:2, gc:5, pts:0},
         {n:"Catamarca",       cl:"catamarca",    pj:1,pg:0,pe:0,pp:1,gf:2, gc:10, pts:0},
@@ -16428,16 +16428,16 @@ const BD_POS_FUTSAL = {
         {n:"<s>Huracán</s> <b>(-)</b>",         cl:"huracan",    pj:0,pg:0,pe:0,pp:0,gf:0, gc:0, pts:0}
     ],
     reserva: [
+        {n:"Petroquímicos",   cl:"petroquimicos",    pj:2,pg:2,pe:0,pp:0,gf:0, gc:0, pts:6},
+        {n:"Los 3 Chiflados <b>(A)</b>", cl:"los3chiflados",    pj:2,pg:2,pe:0,pp:0,gf:10, gc:2, pts:6},
         {n:"La Esperanza",    cl:"laesperanza",    pj:1,pg:1,pe:0,pp:0,gf:2, gc:0, pts:3},
         {n:"La Estación",     cl:"laestacion",    pj:1,pg:1,pe:0,pp:0,gf:3, gc:1, pts:3},
-        {n:"Liniers",         cl:"liniers",    pj:1,pg:1,pe:0,pp:0,gf:5, gc:0, pts:3},
-        {n:"Los 3 Chiflados <b>(A)</b>", cl:"los3chiflados",    pj:1,pg:1,pe:0,pp:0,gf:5, gc:1, pts:3},
+        {n:"Liniers",         cl:"liniers",    pj:2,pg:1,pe:0,pp:1,gf:6, gc:5, pts:3},
+        {n:"Villa Mitre",     cl:"villamitre",    pj:1,pg:1,pe:0,pp:0,gf:0, gc:0, pts:3},
+        {n:"San Francisco",   cl:"sanfrancisco",    pj:2,pg:1,pe:0,pp:1,gf:0, gc:5, pts:3},
         {n:"Catamarca",       cl:"catamarca",    pj:1,pg:0,pe:1,pp:0,gf:3, gc:3, pts:1},
         {n:"Comercial",       cl:"comercial",    pj:1,pg:0,pe:1,pp:0,gf:3, gc:3, pts:1},
-        {n:"Villa Mitre",     cl:"villamitre",    pj:1,pg:1,pe:0,pp:0,gf:0, gc:0, pts:3},
-        {n:"Petroquímicos",   cl:"petroquimicos",    pj:1,pg:1,pe:0,pp:0,gf:0, gc:0, pts:3},
         {n:"Dublin",          cl:"dublin",    pj:1,pg:0,pe:0,pp:1,gf:1, gc:5, pts:0},
-        {n:"San Francisco",   cl:"sanfrancisco",    pj:1,pg:0,pe:0,pp:1,gf:0, gc:5, pts:0},
         {n:"Tiro Federal",    cl:"tirofederal",    pj:1,pg:0,pe:0,pp:1,gf:1, gc:3, pts:0},
         {n:"Pacífico BB",     cl:"pacificobb",    pj:1,pg:0,pe:0,pp:1,gf:0, gc:2, pts:0},
         {n:"<s>Dep. Futsal</s> <b>(-)</b>",     cl:"depfutsal",    pj:0,pg:0,pe:0,pp:0,gf:0, gc:0, pts:0},
@@ -16614,7 +16614,10 @@ const BD_GOLEADORES_FUTSAL = [
 
     { club: "Pacífico BB",     clase: "pacificobb",    act: null,       goleadores: [] },
 
-    { club: "Los 3 Chiflados", clase: "los3chiflados",    act: null,       goleadores: [] },
+    { club: "Los 3 Chiflados", clase: "los3chiflados",    act: "fecha 2",       goleadores: [
+    { nombre: "Iván Zapata",          equipo: "Comercial",   goles: 1 },
+    { nombre: "Martín Kloberdans",          equipo: "Comercial",   goles: 1 },
+] },
 
     { club: "La Esperanza",    clase: "laesperanza",    act: "fecha 1",       goleadores: [
     { nombre: "Emiliano Etchepareborda",          equipo: "La Esperanza",   goles: 2 },
