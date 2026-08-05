@@ -77,6 +77,26 @@ tr[onclick]:hover td { background-color: #e8f5e9 !important; }
 .cipolletti { background: linear-gradient(90deg, #000 20%, #fff 20%, #fff 40%, #000 40%, #000 60%, #fff 60%, #fff 80%, #000 80%); }
 .huracanlh::before { content: "HLH"; color: #DF2224; font-size: 8px; font-weight: 900; letter-spacing: -1px; display: flex; align-items: center; justify-content: center; }
 .jantoniana { background: linear-gradient(135deg, #113553 46%, #fff 46%, #fff 54%, #3C2712 54%); }
+.ldsbb { background: #30d1d1; }
+.ldsbb::before { content: "LSBB"; color: #fff; font-size: 5px; font-weight: bold; }
+.olavarria::before { content: "O"; color: #375dbd; font-size: 10px; font-weight: bold; }
+.tresarroyos::before { content: "3A"; color: #111; font-size: 6px; font-weight: bold; }
+.azul { background: #3759b0; }
+.azul::before { content: "⚽"; font-size: 10px; }
+.ayacucho::before { content: "CAF"; color: #1e3b85; font-size: 5px; font-weight: bold; }
+.necochea::before { content: "LNF"; color: #1e3b85; font-size: 5px; font-weight: bold; }
+.tandil { background: #fff; border: 2px solid #009abd; }
+.tandil::before { content: "LTF"; color: #1e3b85; font-size: 4.5px; font-weight: bold; }
+.dolores { background: #1d7a8f; }
+.dolores::before { content: "LD"; color: #fff; font-size: 6px; font-weight: bold; }
+.madariaga { background: linear-gradient(90deg, #4ec3de 20%, #fff 20%, #fff 35%, #4ec3de 35%, #4ec3de 65%, #fff 65%, #fff 80%, #4ec3de 80%); }
+.madariaga::before { content: "LMF"; color: #111; font-size: 5px; font-weight: bold; }
+.lacosta { background: linear-gradient(180deg, #242d85 20%, #fff 20%, #fff 35%, #242d85 35%, #242d85 65%, #fff 65%, #fff 80%, #242d85 80%); }
+.guatrache { background: linear-gradient(90deg, #fff 31%, #5d67c9 31%, #5d67c9 69%, #fff 69%); }
+.trenquelauquen { background: #cc0000; }
+.trenquelauquen::before { content: "LTF"; color: #fff; font-size: 5px; font-weight: bold; }
+.pehuajo { background: #1bd2e3; }
+.pehuajo::before { content: "LPF"; color: #2e22ba; font-size: 5px; font-weight: bold; }
 
 /* MENÚ DESPLEGABLE */
 .bloque-titulo.sin-drop { cursor: pointer; text-align: left; }

@@ -1276,7 +1276,7 @@ BD_FIXTURES.oficial.reserva.push(
 // Reserva Promocional
 BD_FIXTURES.promocional.reserva.push(
     { fecha: 1, partidos: [
-        {l:"Dublin",      v:"Rosario PB",          gl:null,   gv:null},
+        {l:"Dublin",      v:"Rosario PB",          gl:2,   gv:3},
         {l:"Sansinena",   v:"Pacífico (C)", gl:null,   gv:null},
         {l:"Pacífico BB", v:"Olimpo",              gl:null,   gv:null},
         {l:"Tiro Federal",v:"Comercial",           gl:null,   gv:null}
@@ -1830,7 +1830,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 18).partidos.forEach(p
 });
 
 
-let diaSeleccionadoHome = "2026-08-04"; 
+let diaSeleccionadoHome = "2026-08-05"; 
 let mercadoPasesAbierto = false;
 
 function toggleMercadoPasesHome() {
@@ -1865,6 +1865,13 @@ function generarHome() {
         { id: "2026-08-05", label: "MIÉR 05/08", torneos: [
             { nombre: "2° FECHA - FUTSAL - CLAUSURA", cat: "futsal", noAutoResult: true, partidos: [
                 {l:"Dublin", v:"Comercial", hora:"22:00", gl:null, gv:null,nota:"en cancha de Don Bosco"},
+            ]},
+            { nombre: "1ª FECHA — TORNEO DE SELECCIÓN SUB 15", cat: "torneoseleccion15", torLink: "torneoseleccion15", noAutoResult: true, partidos: [
+                {l:"Olavarría", v:"Tres Arroyos", hora:"16:00", gl:null, gv:null, claseL:"olavarria", claseV:"tresarroyos", nota:"<b>Zona 1</b>"},
+{l:"Ayacucho", v:"Necochea", hora:"16:00", gl:null, gv:null, claseL:"ayacucho", claseV:"necochea", nota:"<b>Zona 2</b>"},
+{l:"Tandil", v:"Azul", hora:"16:00", gl:null, gv:null, claseL:"tandil", claseV:"azul", nota:"<b>Zona 2</b>"},
+{l:"Dolores", v:"General Madariaga", hora:"16:00", gl:null, gv:null, claseL:"dolores", claseV:"madariaga", nota:"<b>Zona 3</b>"},
+{l:"Trenque Lauquen", v:"Pehuajó", hora:"16:00", gl:null, gv:null, claseL:"trenquelauquen", claseV:"pehuajo", nota:"<b>Zona 4</b>"},
             ]},
        ]},
         { id: "2026-08-06", label: "JUE 06/08", torneos: [
@@ -1944,9 +1951,9 @@ let escV = p.claseV || equiposSrc.find(e => e.nombre === p.v)?.clase || "";
                 const resHome = (gl !== undefined && gl !== null) ? `${gl} - ${gv}${pen}` : '';
                 html += `<tr>
                     <td style="width:50px; background:#004d26; color:#adff2f; font-weight:bold; font-size:11px; border-right:1px solid #000; text-align:center;">${p.hora}</td>
-                    <td class="c-loc"><span style="direction:ltr;display:inline-flex;align-items:center;justify-content:flex-end;width:100%;">${p.l} <div class="escudo ${escL}" style="margin-left:4px;"></div></span></td>
+                    <td class="c-loc"><span style="direction:ltr;display:inline-flex;align-items:center;justify-content:flex-end;width:100%;">${p.l} ${p.escHtmlL ? p.escHtmlL : `<div class="escudo ${escL}" style="margin-left:4px;"></div>`}</span></td>
                     <td style="width:40px; background:#fcfcfc; border-left:1px solid #eee; border-right:1px solid #eee; text-align:center; font-weight:bold; font-size:12px;">${resHome}</td>
-                    <td class="c-vis"><div class="escudo ${escV}"></div> ${p.v}</td>
+                    <td class="c-vis">${p.escHtmlV ? p.escHtmlV : `<div class="escudo ${escV}"></div>`} ${p.v}</td>
                     <td style="width:50px;"></td>
                 </tr>`;
                 if (p.nota) {
@@ -16143,14 +16150,14 @@ function generarReserva(cat) {
                        {n:"Huracán",       cl:"huracan",      pj:1, pg:0, pe:0, pp:1, gf:1, gc:4, pts:0},
                        {n:"Villa Mitre",   cl:"villamitre",   pj:1, pg:0, pe:0, pp:1, gf:0, gc:4, pts:0}],
         'promocional':[
+                       {n:"Rosario PB",          cl:"rosariopb",        pj:1, pg:1, pe:0, pp:0, gf:3, gc:2, pts:0},
                        {n:"Olimpo <b>(A)</b>",              cl:"olimpo",           pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0},
                        {n:"Tiro Federal",        cl:"tirofederal",      pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0},
                        {n:"Comercial",           cl:"comercial",        pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0},
-                       {n:"Rosario PB",          cl:"rosariopb",        pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0},
                        {n:"Pacífico BB",         cl:"pacificobb",       pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0},
                        {n:"Sansinena",           cl:"sansinena",        pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0},
-                       {n:"Dublin",              cl:"dublin",           pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0},
-                       {n:"Pacífico (C)", cl:"pacificocabildo",  pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0},],
+                       {n:"Pacífico (C)", cl:"pacificocabildo",  pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0},
+                       {n:"Dublin",              cl:"dublin",           pj:1, pg:0, pe:0, pp:1, gf:2, gc:3, pts:0},],
         'segundafemenino': [
             {n:"Liniers <b>(C)</b>",             cl:"liniers",         pj:12, pg:10, pe:2, pp:0, gf:50, gc:7, pts:32},
             {n:"San Francisco",       cl:"sanfrancisco",    pj:12, pg:8, pe:2, pp:2, gf:26, gc:12, pts:26},
@@ -16246,7 +16253,7 @@ const BD_GOL_SUB = {
         {jugador:"Erick Schwaner",    equipo:"Villa Mitre", clase:"villamitre", n:2},
         {jugador:"Martiniano Vergara",    equipo:"Villa Mitre", clase:"villamitre", n:2},
         {jugador:"Enzo Rossi",    equipo:"Villa Mitre", clase:"villamitre", n:1},
-        {jugador:"Brian Scalco",    equipo:"Villa Mitre", clase:"villamitre", n:1},
+        {jugador:"Bautista Scalco",    equipo:"Villa Mitre", clase:"villamitre", n:1},
         {jugador:"Santino Canales",   equipo:"Olimpo",      clase:"olimpo",     n:1},
         {jugador:"Juan Ignacio Aguado",      equipo:"Olimpo",      clase:"olimpo",     n:1},
         {jugador:"Santino Figueroa",      equipo:"Olimpo",      clase:"olimpo",     n:1},
@@ -20671,7 +20678,6 @@ function generarCampeones2026() {
 
     return html;
 }
-
 function generarTorneoSeleccion15() {
     const esc = {
         ldsbb:         `<svg width="16" height="16" viewBox="0 0 16 16"><rect width="16" height="16" fill="#30d1d1"/><text x="8" y="6.5" text-anchor="middle" font-size="4.5" font-weight="bold" fill="white" font-family="Arial">LS</text><text x="8" y="13" text-anchor="middle" font-size="4.5" font-weight="bold" fill="white" font-family="Arial">BB</text></svg>`,
