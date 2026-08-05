@@ -948,7 +948,7 @@ BD_FIXTURES_SUB.sub13.find(f=>f.fecha===9).partidos.forEach(p=>{
 });
 BD_FIXTURES_SUB.sub13.find(f=>f.fecha===10).partidos.forEach(p=>{
     if(p.l==="Alvarado"&&p.v==="Villa Mitre"){p.gl=0;p.gv=1;}
-    if(p.l==="Kimberley"&&p.v==="Santamarina"){p.gl=null;p.gv=null;}
+    if(p.l==="Kimberley"&&p.v==="Santamarina"){p.gl=5;p.gv=0;}
     if(p.l==="Mac Allister"&&p.v==="Balompié"){p.gl=2;p.gv=1;}
 });
 
@@ -999,7 +999,7 @@ BD_FIXTURES_SUB.sub15.find(f=>f.fecha===9).partidos.forEach(p=>{
 });
 BD_FIXTURES_SUB.sub15.find(f=>f.fecha===10).partidos.forEach(p=>{
     if(p.l==="Alvarado"&&p.v==="Villa Mitre"){p.gl=2;p.gv=1;}
-    if(p.l==="Kimberley"&&p.v==="Santamarina"){p.gl=null;p.gv=null;}
+    if(p.l==="Kimberley"&&p.v==="Santamarina"){p.gl=5;p.gv=0;}
     if(p.l==="Mac Allister"&&p.v==="Balompié"){p.gl=2;p.gv=0;}
 });
 
@@ -1050,7 +1050,7 @@ BD_FIXTURES_SUB.sub17.find(f=>f.fecha===9).partidos.forEach(p=>{
 });
 BD_FIXTURES_SUB.sub17.find(f=>f.fecha===10).partidos.forEach(p=>{
     if(p.l==="Alvarado"&&p.v==="Villa Mitre"){p.gl=1;p.gv=1;}
-    if(p.l==="Kimberley"&&p.v==="Santamarina"){p.gl=null;p.gv=null;}
+    if(p.l==="Kimberley"&&p.v==="Santamarina"){p.gl=3;p.gv=1;}
     if(p.l==="Mac Allister"&&p.v==="Balompié"){p.gl=1;p.gv=2;}
 });
 
@@ -2068,7 +2068,7 @@ function generarTablaFederal(etapa = 'nonagonal') {
             htmlN += `<tr class="${cl}"><td class="c-pos">${i+1}</td><td class="c-equipo">${e.nombre}</td><td class="c-stat">${e.pj}</td><td class="c-stat">${e.pg}</td><td class="c-stat">${e.pe}</td><td class="c-stat">${e.pp}</td><td class="c-stat">${e.gf}</td><td class="c-stat">${e.gc}</td><td class="c-stat">${e.gf-e.gc}</td><td class="c-stat"><b>${e.pts}</b></td></tr>`;
         });
 
-        htmlN += `</tbody></table><div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>24</b> tras la fecha 0</div>`;
+        htmlN += `</tbody></table><div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>21</b> tras la fecha 1</div>`;
         htmlN += `<div style='background:#f9f9f9; padding:6px 8px; font-size:9.5px; text-align:center; color:#555; line-height:1.6;'>
             <span class="p-playoff" style="padding:1px 6px;border-radius:3px;">1° al 4°</span> Clasifican a la Tercera Fase y a la Copa Argentina<br>
             <span class="p-revalida" style="padding:1px 6px;border-radius:3px;">5°</span> Clasifica a la Segunda Fase Reválida y a la Copa Argentina<br>
@@ -16194,11 +16194,11 @@ function generarReserva(cat) {
         });
         html += `</tbody></table>`;
         if (cat === 'oficial') {
-            html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'><b>(A)</b> Ganador del Apertura<br>📌 Puntos en juego: <b>42</b></div>`;
+            html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'><b>(A)</b> Ganador del Apertura<br>📌 Puntos en juego: <b>42</b> tras la fecha 1</div>`;
         } else if (cat === 'promocional') {
-            html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'><b>(A)</b> Ganador del Apertura<br>📌 Puntos en juego: <b>42</b></div>`;
+            html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'><b>(A)</b> Ganador del Apertura<br>📌 Puntos en juego: <b>42</b> tras la fecha 1</div>`;
         } else if (cat === 'femenino') {
-            html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'><b>(A)</b> Campeón del Apertura<br><b>(-)</b> No presenta reserva<br>📌 Puntos en juego: <b>39</b> tras la fecha 1</div>`;
+            html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'><b>(A)</b> Campeón del Apertura<br><b>(-)</b> No presenta reserva<br>📌 Puntos en juego: <b>36</b> tras la fecha 2</div>`;
         } else if (cat === 'segundafemenino') {
 html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'><b>(C) Clasificado</b><br><b>(-) No presenta reserva</b><br>📌 Puntos en juego: <b>-</b><br></div>`;
         }
@@ -16211,29 +16211,29 @@ const BD_POS_SUB = {
     sub13: [
         {nombre:"Villa Mitre <b>(C)</b>",  clase:"villamitre",  pj:9,pg:8,pe:1,pp:0,gf:26,gc:7,pts:25},
         {nombre:"Mac Allister", clase:"macallister", pj:9,pg:7,pe:0,pp:2,gf:25,gc:6,pts:21},
+        {nombre:"Kimberley",    clase:"kimberley",   pj:8,pg:4,pe:1,pp:3,gf:14,gc:10,pts:13},
         {nombre:"Balompié",     clase:"balompie",    pj:8,pg:3,pe:3,pp:2,gf:13,gc:10,pts:12},
-        {nombre:"Kimberley",    clase:"kimberley",   pj:7,pg:3,pe:1,pp:3,gf:9,gc:10,pts:10},
         {nombre:"Alvarado <b>(X)</b>",     clase:"alvarado",    pj:9,pg:3,pe:0,pp:6,gf:11,gc:19,pts:9},
         {nombre:"Olimpo <b>(X)</b>",       clase:"olimpo",      pj:8,pg:2,pe:0,pp:6,gf:10,gc:20,pts:6},
-        {nombre:"Santamarina <b>(X)</b>",  clase:"santamarina", pj:8,pg:0,pe:1,pp:7,gf:5,gc:27,pts:1}
+        {nombre:"Santamarina <b>(X)</b>",  clase:"santamarina", pj:9,pg:0,pe:1,pp:8,gf:5,gc:32,pts:1}
     ],
     sub15: [
-        {nombre:"Mac Allister", clase:"macallister", pj:9,pg:8,pe:1,pp:0,gf:14,gc:2,pts:25},
+        {nombre:"Mac Allister <b>(C)</b>", clase:"macallister", pj:9,pg:8,pe:1,pp:0,gf:14,gc:2,pts:25},
+        {nombre:"Kimberley",    clase:"kimberley",   pj:9,pg:4,pe:2,pp:2,gf:14,gc:9,pts:14},
         {nombre:"Alvarado",     clase:"alvarado",    pj:9,pg:3,pe:4,pp:2,gf:17,gc:11,pts:13},
-        {nombre:"Kimberley",    clase:"kimberley",   pj:7,pg:3,pe:2,pp:2,gf:9,gc:9,pts:11},
         {nombre:"Balompié",     clase:"balompie",    pj:8,pg:3,pe:2,pp:3,gf:13,gc:10,pts:11},
         {nombre:"Olimpo",       clase:"olimpo",      pj:8,pg:2,pe:3,pp:3,gf:8,gc:12,pts:9},
-        {nombre:"Santamarina",  clase:"santamarina", pj:8,pg:1,pe:2,pp:5,gf:3,gc:12,pts:5},
+        {nombre:"Santamarina",  clase:"santamarina", pj:9,pg:1,pe:2,pp:6,gf:3,gc:17,pts:5},
         {nombre:"Villa Mitre",  clase:"villamitre",  pj:9,pg:1,pe:2,pp:6,gf:8,gc:16,pts:5}
     ],
     sub17: [
+        {nombre:"Kimberley",    clase:"kimberley",   pj:8,pg:5,pe:2,pp:1,gf:12,gc:6,pts:17},
         {nombre:"Mac Allister", clase:"macallister", pj:9,pg:4,pe:4,pp:1,gf:20,gc:6,pts:16},
         {nombre:"Balompié",     clase:"balompie",    pj:8,pg:5,pe:1,pp:2,gf:15,gc:13,pts:16},
-        {nombre:"Kimberley",    clase:"kimberley",   pj:7,pg:4,pe:2,pp:1,gf:9,gc:5,pts:14},
         {nombre:"Alvarado",     clase:"alvarado",    pj:9,pg:3,pe:3,pp:3,gf:13,gc:12,pts:12},
         {nombre:"Olimpo",       clase:"olimpo",      pj:8,pg:3,pe:1,pp:4,gf:11,gc:13,pts:10},
         {nombre:"Villa Mitre",  clase:"villamitre",  pj:9,pg:1,pe:5,pp:3,gf:6,gc:9,pts:8},
-        {nombre:"Santamarina <b>(X)</b>",  clase:"santamarina", pj:8,pg:1,pe:0,pp:7,gf:5,gc:21,pts:3}
+        {nombre:"Santamarina <b>(X)</b>",  clase:"santamarina", pj:9,pg:1,pe:0,pp:8,gf:6,gc:24,pts:3}
     ]
 };
 
@@ -19663,7 +19663,7 @@ if (tor === 'clausura' && cat === 'femenino') {
         });
         htmlAcum += `</tbody></table>`;
     }
-    return html + "</tbody></table><div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>39</b> tras la fecha 1<br><b>(A)</b> Ganador del Apertura</div>" + htmlAcum;
+    return html + "</tbody></table><div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>36</b> tras la fecha 2<br><b>(A)</b> Ganador del Apertura</div>" + htmlAcum;
 }
 if (tor === 'clausura' && cat === 'promocional') {
     return html + "</tbody></table><div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>39</b> tras la fecha 1<br><b>(A)</b> Ganador del Apertura</div>";
