@@ -1886,7 +1886,7 @@ function generarHome() {
                 {l:"Tiro Federal", v:"Villa Mitre", hora:"22:30", gl:null, gv:null,nota:"en cancha de Tiro Federal"},
             ]},
             { nombre: "1ª FECHA — TORNEO DE SELECCIÓN SUB 15", cat: "torneoseleccion15", torLink: "torneoseleccion15", noAutoResult: true, partidos: [
-                {l:"Dolores", v:"General Madariaga", hora:"16:00", gl:null, gv:null, claseL:"dolores", claseV:"madariaga", nota:"<b>Zona 3</b>"},
+                {l:"Dolores", v:"General Madariaga", hora:"19:00", gl:null, gv:null, claseL:"dolores", claseV:"madariaga", nota:"<b>Zona 3</b>"},
             ]},
        ]},
         { id: "2026-08-08", label: "SÁB 08/08", torneos: [
@@ -1896,8 +1896,8 @@ function generarHome() {
                 {l:"Sansinena", v:"Comercial", hora:"15:00", gl:null, gv:null},
             ]},
             { nombre: "2° FECHA - NONAGONAL - FEDERAL A", cat: "federala", torLink: "federala", noAutoResult: true, partidos: [
-                {l:"Villa Mitre", v:"Cipoletti", hora:"15:30", gl:null, gv:null},
-                {l:"Huracán Las Heras", v:"Olimpo", hora:"15:30", gl:null, gv:null},
+                {l:"Villa Mitre", v:"Cipoletti", hora:"15:30", gl:null, gv:null, claseL:"villamitre", claseV:"cipolletti"},
+                {l:"Huracán Las Heras", v:"Olimpo", hora:"15:30", gl:null, gv:null, claseL:"huracanlh", claseV:"olimpo"},
             ]},
        ]},
         { id: "2026-08-09", label: "DOM 09/08", torneos: [
