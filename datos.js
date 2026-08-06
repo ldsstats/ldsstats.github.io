@@ -1858,12 +1858,12 @@ function generarHome() {
     const agenda = [
 
         { id: "2026-08-04", label: "MAR 04/08", torneos: [
-            { nombre: "2° FECHA - FUTSAL - CLAUSURA", cat: "futsal", noAutoResult: true, partidos: [
+            { nombre: "2° FECHA - FUTSAL - CLAUSURA", cat: "futsal", torLink: "futsal", noAutoResult: true, partidos: [
                 {l:"Liniers", v:"Los 3 Chiflados", hora:"22:00", gl:1, gv:2,nota:"en cancha de Don Bosco"},
             ]},
        ]},
         { id: "2026-08-05", label: "MIÉR 05/08", torneos: [
-            { nombre: "2° FECHA - FUTSAL - CLAUSURA", cat: "futsal", noAutoResult: true, partidos: [
+            { nombre: "2° FECHA - FUTSAL - CLAUSURA", cat: "futsal", torLink: "futsal", noAutoResult: true, partidos: [
                 {l:"Dublin", v:"Comercial", hora:"22:00", gl:4, gv:3,nota:"en cancha de Don Bosco"},
             ]},
             { nombre: "1ª FECHA — TORNEO DE SELECCIÓN SUB 15", cat: "torneoseleccion15", torLink: "torneoseleccion15", noAutoResult: true, partidos: [
@@ -1875,12 +1875,15 @@ function generarHome() {
             ]},
        ]},
         { id: "2026-08-06", label: "JUE 06/08", torneos: [
-            { nombre: "2° FECHA - FUTSAL - CLAUSURA", cat: "futsal", noAutoResult: true, partidos: [
+            { nombre: "2° FECHA - FUTSAL - CLAUSURA", cat: "futsal", torLink: "futsal", noAutoResult: true, partidos: [
                 {l:"Pacífico BB", v:"La Estación", hora:"22:00", gl:null, gv:null,nota:"en cancha de Don Bosco"},
+            ]},
+            { nombre: "PARTIDOS DE VUELTA (VILLA MITRE Y MUNICIPALES)", cat: "regamateurfem", torLink: "regamateurfem", noAutoResult: true, partidos: [
+                {l:"Alvarado", v:"San Lorenzo (MdP)", hora:"15:00", gl:null, gv:null, claseL:"alvarado", claseV:"sanlorenzomgp", nota:"<b>ganó San Lorenzo 4-1 en la ida</b>"},
             ]},
        ]},
         { id: "2026-08-07", label: "VIE 07/08", torneos: [
-            { nombre: "2° FECHA - FUTSAL - CLAUSURA", cat: "futsal", noAutoResult: true, partidos: [
+            { nombre: "2° FECHA - FUTSAL - CLAUSURA", cat: "futsal", torLink: "futsal", noAutoResult: true, partidos: [
                 {l:"Catamarca", v:"La Esperanza", hora:"22:00", gl:null, gv:null,nota:"en cancha de Petroquímicos"},
                 {l:"Tiro Federal", v:"Villa Mitre", hora:"22:30", gl:null, gv:null,nota:"en cancha de Tiro Federal"}
             ]},
