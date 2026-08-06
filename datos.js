@@ -1073,10 +1073,10 @@ BD_FIXTURES.federala.nonagonal = [
         { l: "Kimberley", v: "Argentino de Monte Maíz", gl: 1, gv: 0, dia:"Lun 03/08", hora:"15:00", goles_l:["Facundo Russo"], goles_v:[] }
     ], libre: "Alvarado" },
     { fecha: 2, partidos: [
-        { l: "Villa Mitre", v: "Cipolletti", gl: null, gv: null },
-        { l: "Huracán Las Heras", v: "Olimpo", gl: null, gv: null },
-        { l: "Argentino de Monte Maíz", v: "Atenas de Río Cuarto", gl: null, gv: null },
-        { l: "Juventud Antoniana", v: "Alvarado", gl: null, gv: null }
+        { l: "Juventud Antoniana", v: "Alvarado", gl: null, gv: null, dia:"Vie 07/08", hora:"22:00", goles_l:[], goles_v:[] },
+        { l: "Argentino de Monte Maíz", v: "Atenas de Río Cuarto", gl: null, gv: null, dia:"Sáb 08/08", hora:"15:00", goles_l:[], goles_v:[] },
+        { l: "Villa Mitre", v: "Cipolletti", gl: null, gv: null, dia:"Sáb 08/08", hora:"15:30", goles_l:[], goles_v:[] },
+        { l: "Huracán Las Heras", v: "Olimpo", gl: null, gv: null, dia:"Sáb 08/08", hora:"15:30", goles_l:[], goles_v:[] },
     ], libre: "Kimberley" },
     { fecha: 3, partidos: [
         { l: "Olimpo", v: "Villa Mitre", gl: null, gv: null },
@@ -1894,6 +1894,10 @@ function generarHome() {
                 {l:"Rosario PB", v:"Pacífico BB", hora:"15:00", gl:null, gv:null,nota:"a puertas cerradas"},
                 {l:"Olimpo", v:"Tiro Federal", hora:"15:00", gl:null, gv:null},
                 {l:"Sansinena", v:"Comercial", hora:"15:00", gl:null, gv:null},
+            ]},
+            { nombre: "2° FECHA - NONAGONAL - FEDERAL A", cat: "federala", torLink: "federala", noAutoResult: true, partidos: [
+                {l:"Villa Mitre", v:"Cipoletti", hora:"15:30", gl:null, gv:null},
+                {l:"Huracán Las Heras", v:"Olimpo", hora:"15:30", gl:null, gv:null},
             ]},
        ]},
         { id: "2026-08-09", label: "DOM 09/08", torneos: [
