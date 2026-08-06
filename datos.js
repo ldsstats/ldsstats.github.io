@@ -570,7 +570,7 @@ const BD_FIXTURES_FUTSAL = [
     ]},
     { fecha: 2, partidos: [
         {l:"Los 3 Chiflados", v:"Liniers",     gl:2, gv:1, goles_l:["Iván Zapata","Martín Kloberdans"], goles_v:[""]},
-        {l:"Dublin",       v:"Comercial",     gl:3, gv:4, goles_l:["Agustín Miguel (2)","Matías Fonollosa"], goles_v:["Leonel Torres (2)","Jonatan Kippes","Juan Muñoz"]},
+        {l:"Dublin",       v:"Comercial",     gl:3, gv:4, goles_l:["Agustín Miguel","Matías Fonollosa"], goles_v:["Leonel Torres (2)","Jonatan Kippes","Juan Muñoz"]},
         {l:"Pacífico BB",     v:"La Estación",     gl:null, gv:null},
         {l:"Catamarca",    v:"La Esperanza",     gl:null, gv:null},
         {l:"Tiro Federal",     v:"Villa Mitre",     gl:null, gv:null},
@@ -16603,7 +16603,7 @@ html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-a
 
 const BD_GOLEADORES_FUTSAL = [
     { club: "Dublin",          clase: "dublin",    act: "fecha 2",       goleadores: [
-    { nombre: "Agustín Miguel",          equipo: "Dublin",   goles: 2 },
+    { nombre: "Agustín Miguel",          equipo: "Dublin",   goles: 1 },
     { nombre: "Matías Fonollosa",          equipo: "Dublin",   goles: 1 },
 ] },
 
