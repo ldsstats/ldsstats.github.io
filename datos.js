@@ -1882,8 +1882,8 @@ function generarHome() {
                 {l:"Catamarca", v:"La Esperanza", hora:"22:00", gl:null, gv:null,nota:"en cancha de Petroquímicos"},
                 {l:"Tiro Federal", v:"Villa Mitre", hora:"22:30", gl:null, gv:null,nota:"en cancha de Tiro Federal"},
             ]},
-            { nombre: "PARTIDOS DE VUELTA (VILLA MITRE Y MUNICIPALES)", cat: "regamateurfem", torLink: "regamateurfem", noAutoResult: true, partidos: [
-                {l:"Alvarado", v:"San Lorenzo (MdP)", hora:"15:00", gl:null, gv:null, claseL:"alvarado", claseV:"sanlorenzomgp", nota:"<b>ganó San Lorenzo 4-1 en la ida</b>"},
+            { nombre: "REGIONAL FEMENINO - PARTIDOS DE VUELTA (VILLA MITRE Y MUNICIPALES)", cat: "regamateurfem", torLink: "regamateurfem", noAutoResult: true, partidos: [
+                {l:"Alvarado", v:"San Lorenzo (MdP)", hora:"15:00", gl:0, gv:1, claseL:"alvarado", claseV:"sanlorenzomgp", nota:"<b>San Lorenzo ganó la serie por 5-1</b>"},
             ]},
             { nombre: "FECHA 1 — TORNEO DE SELECCIÓN SUB 15", cat: "torneoseleccion15", torLink: "torneoseleccion15", noAutoResult: true, partidos: [
                 {l:"Dolores", v:"General Madariaga", hora:"19:00", gl:null, gv:null, claseL:"dolores", claseV:"madariaga", nota:"<b>Zona 3</b>"},
@@ -1910,6 +1910,12 @@ function generarHome() {
                 {l:"Villa Mitre", v:"Cipoletti", hora:"15:30", gl:null, gv:null, claseL:"villamitre", claseV:"cipolletti"},
                 {l:"Huracán Las Heras", v:"Olimpo", hora:"15:30", gl:null, gv:null, claseL:"huracanlh", claseV:"olimpo"},
             ]},
+            { nombre: "REGIONAL FEMENINO - PARTIDOS DE VUELTA (VILLA MITRE Y MUNICIPALES)", cat: "regamateurfem", torLink: "regamateurfem", noAutoResult: true, partidos: [
+                {l:"Ciudad de Olavarría", v:"Estudiantes Unidos", hora:"14:00", gl:null, gv:null, claseL:"ciudadolavarria", claseV:"estudiantesunidos", nota:"<b>Ciudad de Olavarría ganó 1-0 en la ida</b>"},
+                {l:"Municipales", v:"Villa Mitre", hora:"15:00", gl:null, gv:null, claseL:"municipales", claseV:"villamitre", nota:"<b>Villa Mitre ganó 4-1 en la ida</b>"},
+                {l:"San José de Azul", v:"Alumni Azuleño", hora:"15:00", gl:null, gv:null, claseL:"sanjoseazul", claseV:"alumniazuleno", nota:"<b>Alumni Azuleño ganó 5-2 en la ida</b>"},
+                {l:"Huracán de Pellegrini", v:"Racing de Fortín Olavarría", hora:"16:00", gl:null, gv:null, claseL:"huracan", claseV:"racingfortin", nota:"<b>Racing ganó 9-1 en la ida</b>"},
+            ]},
        ]},
         { id: "2026-08-09", label: "DOM 09/08", torneos: [
             { nombre: "FECHA 2 - OFICIAL - CLAUSURA", cat: "oficial", torLink: "oficial", noAutoResult: true, partidos: [
@@ -1935,6 +1941,9 @@ function generarHome() {
                 {l:"Empleados de Comercio", v:"Tiro Federal", hora:"13:15", gl:null, gv:null},
                 {l:"Olimpo", v:"Sporting", hora:"13:45", gl:null, gv:null},
                 {l:"Bella Vista", v:"Huracán", hora:"16:00", gl:null, gv:null},
+            ]},
+            { nombre: "REGIONAL FEMENINO - PARTIDOS DE VUELTA (VILLA MITRE Y MUNICIPALES)", cat: "regamateurfem", torLink: "regamateurfem", noAutoResult: true, partidos: [
+                {l:"Dep. San José de Tandil", v:"Juventud Unida de Tandil", hora:"15:00", gl:null, gv:null, claseL:"depsanjose", claseV:"juventudunidatandil", nota:"<b>Empataron 0-0 en la ida</b>"},
             ]},
        ]},
 ];
@@ -19780,8 +19789,8 @@ const BD_REG_AMATEUR_FEM = {
                     vuelta: { local: "Dep. San José de Tandil",      clL: "depsanjose",          visitante: "Juventud Unida de Tandil", clV: "juventudunidatandil" }
                 },
                 {
-                    ida:    { local: "San Lorenzo (MdP)",            clL: "sanlorenzomgp",     visitante: "Alvarado",                  clV: "alvarado", gl: 4, gv: 1 },
-                    vuelta: { local: "Alvarado",                     clL: "alvarado",           visitante: "San Lorenzo (MdP)",         clV: "sanlorenzomgp" }
+                    ida:    { local: "<b>San Lorenzo (MdP)</b>",            clL: "sanlorenzomgp",     visitante: "Alvarado",                  clV: "alvarado", gl: 4, gv: 1 },
+                    vuelta: { local: "Alvarado",                     clL: "alvarado",           visitante: "<b>San Lorenzo (MdP)</b>",         clV: "sanlorenzomgp", gl: 0, gv: 1 }
                 }
             ]
         }
