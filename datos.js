@@ -570,7 +570,7 @@ const BD_FIXTURES_FUTSAL = [
     ]},
     { fecha: 2, partidos: [
         {l:"Los 3 Chiflados", v:"Liniers",     gl:2, gv:1, goles_l:["Iván Zapata","Martín Kloberdans"], goles_v:[""]},
-        {l:"Dublin",       v:"Comercial",     gl:3, gv:4, goles_l:["Agustín Miguel","Matías Fonollosa"], goles_v:["Leonel Torres (2)","Jonatan Kippes","Juan Muñoz"]},
+        {l:"Dublin",       v:"Comercial",     gl:3, gv:4, goles_l:["Agustín Miguel (2)","Matías Fonollosa"], goles_v:["Leonel Torres (2)","Jonatan Kippes","Juan Muñoz"]},
         {l:"Pacífico BB",     v:"La Estación",     gl:null, gv:null},
         {l:"Catamarca",    v:"La Esperanza",     gl:null, gv:null},
         {l:"Tiro Federal",     v:"Villa Mitre",     gl:null, gv:null},
@@ -1830,7 +1830,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 18).partidos.forEach(p
 });
 
 
-let diaSeleccionadoHome = "2026-08-06"; 
+let diaSeleccionadoHome = "2026-08-07"; 
 let mercadoPasesAbierto = false;
 
 function toggleMercadoPasesHome() {
@@ -1876,14 +1876,14 @@ function generarHome() {
             { nombre: "2° FECHA - FUTSAL - CLAUSURA", cat: "futsal", torLink: "futsal", noAutoResult: true, partidos: [
                 {l:"Pacífico BB", v:"La Estación", hora:"22:00", gl:null, gv:null,nota:"en cancha de Don Bosco"},
             ]},
-            { nombre: "PARTIDOS DE VUELTA (VILLA MITRE Y MUNICIPALES)", cat: "regamateurfem", torLink: "regamateurfem", noAutoResult: true, partidos: [
-                {l:"Alvarado", v:"San Lorenzo (MdP)", hora:"15:00", gl:null, gv:null, claseL:"alvarado", claseV:"sanlorenzomgp", nota:"<b>ganó San Lorenzo 4-1 en la ida</b>"},
-            ]},
        ]},
         { id: "2026-08-07", label: "VIE 07/08", torneos: [
             { nombre: "2° FECHA - FUTSAL - CLAUSURA", cat: "futsal", torLink: "futsal", noAutoResult: true, partidos: [
                 {l:"Catamarca", v:"La Esperanza", hora:"22:00", gl:null, gv:null,nota:"en cancha de Petroquímicos"},
                 {l:"Tiro Federal", v:"Villa Mitre", hora:"22:30", gl:null, gv:null,nota:"en cancha de Tiro Federal"},
+            ]},
+            { nombre: "PARTIDOS DE VUELTA (VILLA MITRE Y MUNICIPALES)", cat: "regamateurfem", torLink: "regamateurfem", noAutoResult: true, partidos: [
+                {l:"Alvarado", v:"San Lorenzo (MdP)", hora:"15:00", gl:null, gv:null, claseL:"alvarado", claseV:"sanlorenzomgp", nota:"<b>ganó San Lorenzo 4-1 en la ida</b>"},
             ]},
             { nombre: "1ª FECHA — TORNEO DE SELECCIÓN SUB 15", cat: "torneoseleccion15", torLink: "torneoseleccion15", noAutoResult: true, partidos: [
                 {l:"Dolores", v:"General Madariaga", hora:"19:00", gl:null, gv:null, claseL:"dolores", claseV:"madariaga", nota:"<b>Zona 3</b>"},
@@ -16607,7 +16607,7 @@ html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-a
 
 const BD_GOLEADORES_FUTSAL = [
     { club: "Dublin",          clase: "dublin",    act: "fecha 2",       goleadores: [
-    { nombre: "Agustín Miguel",          equipo: "Dublin",   goles: 1 },
+    { nombre: "Agustín Miguel",          equipo: "Dublin",   goles: 2 },
     { nombre: "Matías Fonollosa",          equipo: "Dublin",   goles: 1 },
 ] },
 
