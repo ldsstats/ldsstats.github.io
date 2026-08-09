@@ -147,6 +147,11 @@ BD_MERCADO_PASES["promocional"]["tirofederal"].altas.push({ jugador: "Joaquín M
 BD_MERCADO_PASES["promocional"]["pacificobb"].altas.push({ jugador: "Agustín De Poli", club: "Comercial" });
 BD_MERCADO_PASES["promocional"]["comercial"].bajas.push({ jugador: "Agustín De Poli", club: "Pacífico BB" });
 BD_MERCADO_PASES["promocional"]["pacificobb"].altas.push({ jugador: "Lautaro Verdino", club: "Sansinena" });
+BD_MERCADO_PASES["femenino"]["bellavista"].altas.push({ jugador: "Brisa Aguirre", club: "Libre" });
+BD_MERCADO_PASES["femenino"]["bellavista"].altas.push({ jugador: "Julieta Viera", club: "San Francisco" });
+BD_MERCADO_PASES["segundafemenino"]["sanfrancisco"].bajas.push({ jugador: "Julieta Viera", club: "Bella Vista" });
+BD_MERCADO_PASES["femenino"]["bellavista"].altas.push({ jugador: "Fabiana Barraza", club: "Liniers" });
+BD_MERCADO_PASES["segundafemenino"]["liniers"].bajas.push({ jugador: "Fabiana Barraza", club: "Bella Vista" });
 BD_MERCADO_PASES["femenino"]["empleados"].bajas.push({ jugador: "Marianela Santana", club: "Municipales" });
 BD_MERCADO_PASES["femenino"]["tirofederal"].altas.push({ jugador: "Bárbara Aguirre", club: "Rosario PB" });
 BD_MERCADO_PASES["femenino"]["tirofederal"].altas.push({ jugador: "Agustina Aguirre", club: "Rosario PB" });
@@ -18901,14 +18906,20 @@ if (torneo === 'total') {
             datos.forEach(g => {
                 realIdx++;
                 if (g.n !== prev) { pos = realIdx; prev = g.n; }
-                const escudo = BD_EQUIPOS[cat]?.find(e => e.nombre === g.equipo.split(' / ')[0])?.clase || '';
+                const equiposLista = g.equipo.split(' / ');
+                let escudosHtml = '';
+                equiposLista.forEach((eq, idx) => {
+                    const cl = BD_EQUIPOS[cat]?.find(e => e.nombre === eq)?.clase || '';
+                    escudosHtml += `<div class="escudo ${cl}" style="display:inline-block;vertical-align:middle;margin-right:3px;"></div>${eq}`;
+                    if (idx < equiposLista.length - 1) escudosHtml += ` / `;
+                });
                 const jugNorm = g.jugador.replace(/'/g, "\\'");
-                const eqNorm = g.equipo.replace(/'/g, "\\'");
+                const eqNorm = g.equipo.split(' / ').pop().replace(/'/g, "\\'");
                 const clickFn = g.origen === 'clausura' ? `navegarPerfilGoleadorClausura('${cat}','${jugNorm}','${eqNorm}','total',${g.n})` : `verPerfilJugador('${jugNorm}','${eqNorm}','total',${g.n},'${cat}')`;
                 h += `<tr>
                     <td class="c-pos">${pos}</td>
                     <td style="text-align:left;padding-left:8px;font-size:12px;cursor:pointer;color:#00331a;font-weight:bold;" onclick="${clickFn}">${g.jugador} ▶</td>
-                    <td style="text-align:left;padding-left:8px;font-size:11px;"><div class="escudo ${escudo}" style="display:inline-block;vertical-align:middle;margin-right:4px;"></div>${g.equipo}</td>
+                    <td style="text-align:left;padding-left:8px;font-size:11px;">${escudosHtml}</td>
                     <td class="c-stat"><b>${g.n}</b></td>
                 </tr>`;
             });
@@ -19328,9 +19339,23 @@ const BD_ARQUEROS_CLAUSURA_OFICIAL = [
         ]},
         { jugador: "Matías Salvarezza", equipo: "Huracán", partidos: [
             { rival: "Libertad", resultado: "Libertad 0 - 0 Huracán", fecha: 1 },
+            { rival: "Sporting", resultado: "Sporting 0 - 0 Huracán", fecha: 2 },
         ]},
         { jugador: "Facundo Tavoliere", equipo: "Sporting", partidos: [
             { rival: "La Armonía", resultado: "Sporting 2 - 0 La Armonía", fecha: 1 },
+            { rival: "Huracán", resultado: "Sporting 0 - 0 Huracán", fecha: 2 },
+        ]},
+        { jugador: "Francisco Martínez", equipo: "Bella Vista", partidos: [
+            { rival: "Liniers", resultado: "Bella Vista 0 - 0 Liniers", fecha: 2 },
+        ]},
+        { jugador: "Andoni Mendiguibel", equipo: "Liniers", partidos: [
+            { rival: "Bella Vista", resultado: "Bella Vista 0 - 0 Liniers", fecha: 2 },
+        ]},
+        { jugador: "Ignacio Torres", equipo: "La Armonía", partidos: [
+            { rival: "Villa Mitre", resultado: "La Armonía 0 - 0 Villa Mitre", fecha: 2 },
+        ]},
+        { jugador: "Tomás Manganaro", equipo: "Villa Mitre", partidos: [
+            { rival: "La Armonía", resultado: "La Armonía 0 - 0 Villa Mitre", fecha: 2 },
         ]},
 ];
 const BD_ARQUEROS_CLAUSURA_PROMOCIONAL = [
@@ -19349,6 +19374,9 @@ const BD_ARQUEROS_CLAUSURA_PROMOCIONAL = [
         ]},
         { jugador: "Inan Bauer", equipo: "Sansinena", partidos: [
             { rival: "Comercial", resultado: "Sansinena 2 - 0 Comercial", fecha: 2 },
+        ]},
+        { jugador: "Brian Pastor", equipo: "Pacífico (C)", partidos: [
+            { rival: "Dublin", resultado: "Pacífico (C) 3 - 0 Dublin", fecha: 2 },
         ]},
 ];
 
