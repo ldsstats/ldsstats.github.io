@@ -452,7 +452,7 @@ const BD_FIXTURES_FUTSAL_RESERVA = [
         {l:"Los 3 Chiflados", v:"Liniers",    gl:5,    gv:1, goles_l:["Lino Bognanni (3)","Ismael Domínguez (2)"], goles_v:[]},
         {l:"Dublin",       v:"Comercial",     gl:3, gv:2, goles_l:["Nahuel Rodríguez","Julián Bernal","Facundo Vallejos"], goles_v:["Franco Coronel","Facundo Diez"]},
         {l:"Pacífico BB",     v:"La Estación",     gl:0, gv:4, goles_l:[], goles_v:["Gonzalo...","Juan Ignacio Zárate","Gastón Villalba","Nicolás Peña"]},
-        {l:"Catamarca",    v:"La Esperanza",     gl:null, gv:null},
+        {l:"Catamarca",    v:"La Esperanza",     gl:2, gv:7},
         {l:"Tiro Federal",     v:"Villa Mitre",     gl:null, gv:null},
         {l:"Petroquímicos",   v:"Dep. Futsal",     gl:null, gv:null},
         {l:"San Francisco",   v:"Huracán",     gl:null, gv:null},
@@ -572,7 +572,7 @@ const BD_FIXTURES_FUTSAL = [
         {l:"Los 3 Chiflados", v:"Liniers",     gl:2, gv:1, goles_l:["Iván Zapata","Martín Kloberdans"], goles_v:[""]},
         {l:"Dublin",       v:"Comercial",     gl:3, gv:4, goles_l:["Agustín Miguel (2)","Matías Fonollosa"], goles_v:["Leonel Torres (2)","Jonatan Kippes","Juan Muñoz"]},
         {l:"Pacífico BB",     v:"La Estación",     gl:3, gv:6, goles_l:[], goles_v:["Julián Hidalgo (2)","Javier Cabrera","Tobías Montiel","Gonzalo...","Franco Juárez"]},
-        {l:"Catamarca",    v:"La Esperanza",     gl:null, gv:null},
+        {l:"Catamarca",    v:"La Esperanza",     gl:2, gv:7},
         {l:"Tiro Federal",     v:"Villa Mitre",     gl:null, gv:null},
         {l:"Petroquímicos",   v:"Dep. Futsal",     gl:null, gv:null},
         {l:"San Francisco",   v:"Huracán",     gl:null, gv:null},
@@ -794,9 +794,9 @@ const idaSub15Fem = [
         {l:"Juventud Unida",        v:"Empleados de Comercio", gl:2, gv:0}
     ]},
     { fecha: 15, partidos: [
+        {l:"Liniers",               v:"San Francisco",    gl:7, gv:0},
         {l:"Libertad",              v:"Juventud Unida",   gl:null, gv:null},
         {l:"La Armonía",            v:"Villa Mitre",      gl:null, gv:null},
-        {l:"Liniers",               v:"San Francisco",    gl:null, gv:null},
         {l:"Empleados de Comercio", v:"Tiro Federal",     gl:null, gv:null},
         {l:"Olimpo",                v:"Sporting",         gl:null, gv:null},
         {l:"Huracán",               v:"Bella Vista",      gl:null, gv:null}
@@ -1072,12 +1072,14 @@ BD_FIXTURES.federala.nonagonal = [
         { l: "Atenas de Río Cuarto", v: "Villa Mitre", gl: 0, gv: 1, dia:"Dom 02/08", hora:"15:45", goles_l:[], goles_v:["Leonel Monti"] },
         { l: "Kimberley", v: "Argentino de Monte Maíz", gl: 1, gv: 0, dia:"Lun 03/08", hora:"15:00", goles_l:["Facundo Russo"], goles_v:[] }
     ], libre: "Alvarado" },
+
     { fecha: 2, partidos: [
-        { l: "Juventud Antoniana", v: "Alvarado", gl: null, gv: null, dia:"Vie 07/08", hora:"22:00", goles_l:[], goles_v:[] },
-        { l: "Argentino de Monte Maíz", v: "Atenas de Río Cuarto", gl: null, gv: null, dia:"Sáb 08/08", hora:"15:00", goles_l:[], goles_v:[] },
-        { l: "Villa Mitre", v: "Cipolletti", gl: null, gv: null, dia:"Sáb 08/08", hora:"15:30", goles_l:[], goles_v:[] },
-        { l: "Huracán Las Heras", v: "Olimpo", gl: null, gv: null, dia:"Sáb 08/08", hora:"15:30", goles_l:[], goles_v:[] },
+        { l: "Juventud Antoniana", v: "Alvarado", gl: 0, gv: 2, dia:"Vie 07/08", hora:"22:00", goles_l:[], goles_v:["Matías Mansilla","Santiago Gutiérrez"] },
+        { l: "Argentino de Monte Maíz", v: "Atenas de Río Cuarto", gl: 1, gv: 2, dia:"Sáb 08/08", hora:"15:00", goles_l:["Ignacio Blangetti"], goles_v:["Martín Vera","Agustín Arcando"] },
+        { l: "Villa Mitre", v: "Cipolletti", gl: 1, gv: 1, dia:"Sáb 08/08", hora:"15:30", goles_l:["Marcos Escobar"], goles_v:["Gonzalo Lucero"] },
+        { l: "Huracán Las Heras", v: "Olimpo", gl: 0, gv: 1, dia:"Sáb 08/08", hora:"15:30", goles_l:[], goles_v:["Marcelo Olivera"] },
     ], libre: "Kimberley" },
+
     { fecha: 3, partidos: [
         { l: "Olimpo", v: "Villa Mitre", gl: null, gv: null },
         { l: "Alvarado", v: "Huracán Las Heras", gl: null, gv: null },
@@ -1879,14 +1881,14 @@ function generarHome() {
        ]},
         { id: "2026-08-07", label: "VIE 07/08", torneos: [
             { nombre: "FECHA 2 - FUTSAL - CLAUSURA", cat: "futsal", torLink: "futsal", noAutoResult: true, partidos: [
-                {l:"Catamarca", v:"La Esperanza", hora:"22:00", gl:null, gv:null,nota:"en cancha de Petroquímicos"},
+                {l:"Catamarca", v:"La Esperanza", hora:"22:00", gl:2, gv:7,nota:"en cancha de Petroquímicos"},
                 {l:"Tiro Federal", v:"Villa Mitre", hora:"22:30", gl:null, gv:null,nota:"en cancha de Tiro Federal"},
             ]},
             { nombre: "REGIONAL FEMENINO - PARTIDOS DE VUELTA (VILLA MITRE Y MUNICIPALES)", cat: "regamateurfem", torLink: "regamateurfem", noAutoResult: true, partidos: [
                 {l:"Alvarado", v:"San Lorenzo (MdP)", hora:"15:00", gl:0, gv:1, claseL:"alvarado", claseV:"sanlorenzomgp", nota:"<b>San Lorenzo ganó la serie por 5-1</b>"},
             ]},
             { nombre: "FECHA 1 — TORNEO DE SELECCIÓN SUB 15", cat: "torneoseleccion15", torLink: "torneoseleccion15", noAutoResult: true, partidos: [
-                {l:"Dolores", v:"General Madariaga", hora:"19:00", gl:null, gv:null, claseL:"dolores", claseV:"madariaga", nota:"<b>Zona 3</b>"},
+                {l:"Dolores", v:"General Madariaga", hora:"19:00", gl:1, gv:2, claseL:"dolores", claseV:"madariaga", nota:"<b>Zona 3</b>"},
             ]},
        ]},
         { id: "2026-08-08", label: "SÁB 08/08", torneos: [
@@ -1899,22 +1901,22 @@ function generarHome() {
                 {l:"La Armonía", v:"Libertad", hora:"15:30", gl:null, gv:null},
             ]},
             { nombre: "FECHA 19 - 2° FEMENINO", cat: "segundafemenino", torLink: "segundafemenino", noAutoResult: true, partidos: [
-                {l:"Sansinena", v:"San Francisco", hora:"15:30", gl:null, gv:null},
+                {l:"Sansinena", v:"San Francisco", hora:"15:30", gl:null, gv:null,nota:"<b>PARTIDOS REPROGRAMADO</b>"},
             ]},
             { nombre: "FECHA 15 - SUB 15 FEMENINO", cat: "sub15fem", torLink: "sub15fem", noAutoResult: true, partidos: [
                 {l:"Libertad", v:"Juventud Unida", hora:"11:00", gl:null, gv:null},
                 {l:"La Armonía", v:"Villa Mitre", hora:"11:00", gl:null, gv:null},
-                {l:"Liniers", v:"San Francisco", hora:"15:00", gl:null, gv:null},
+                {l:"Liniers", v:"San Francisco", hora:"15:00", gl:7, gv:0},
             ]},
             { nombre: "FECHA 2 - NONAGONAL - FEDERAL A", cat: "federala", torLink: "federala", noAutoResult: true, partidos: [
-                {l:"Villa Mitre", v:"Cipoletti", hora:"15:30", gl:null, gv:null, claseL:"villamitre", claseV:"cipolletti"},
-                {l:"Huracán Las Heras", v:"Olimpo", hora:"15:30", gl:null, gv:null, claseL:"huracanlh", claseV:"olimpo"},
+                {l:"Villa Mitre", v:"Cipoletti", hora:"15:30", gl:1, gv:1, claseL:"villamitre", claseV:"cipolletti"},
+                {l:"Huracán Las Heras", v:"Olimpo", hora:"15:30", gl:0, gv:1, claseL:"huracanlh", claseV:"olimpo"},
             ]},
             { nombre: "REGIONAL FEMENINO - PARTIDOS DE VUELTA (VILLA MITRE Y MUNICIPALES)", cat: "regamateurfem", torLink: "regamateurfem", noAutoResult: true, partidos: [
-                {l:"Ciudad de Olavarría", v:"Estudiantes Unidos", hora:"14:00", gl:null, gv:null, claseL:"ciudadolavarria", claseV:"estudiantesunidos", nota:"<b>Ciudad de Olavarría ganó 1-0 en la ida</b>"},
-                {l:"Municipales", v:"Villa Mitre", hora:"15:00", gl:null, gv:null, claseL:"municipales", claseV:"villamitre", nota:"<b>Villa Mitre ganó 4-1 en la ida</b>"},
-                {l:"San José de Azul", v:"Alumni Azuleño", hora:"15:00", gl:null, gv:null, claseL:"sanjoseazul", claseV:"alumniazuleno", nota:"<b>Alumni Azuleño ganó 5-2 en la ida</b>"},
-                {l:"Huracán de Pellegrini", v:"Racing de Fortín Olavarría", hora:"16:00", gl:null, gv:null, claseL:"huracan", claseV:"racingfortin", nota:"<b>Racing ganó 9-1 en la ida</b>"},
+                {l:"Ciudad de Olavarría", v:"Estudiantes Unidos", hora:"14:00", gl:2, gv:2, claseL:"ciudadolavarria", claseV:"estudiantesunidos", nota:"<b>Ciudad de Olavarría ganó la serie por 3-2</b>"},
+                {l:"Municipales", v:"Villa Mitre", hora:"15:00", gl:1, gv:2, claseL:"municipales", claseV:"villamitre", nota:"<b>Villa Mitre ganó la serie por 6-2</b>"},
+                {l:"San José de Azul", v:"Alumni Azuleño", hora:"15:00", gl:0, gv:0, claseL:"sanjoseazul", claseV:"alumniazuleno", nota:"<b>Alumni Azuleño ganó la serie por 5-2</b>"},
+                {l:"Huracán de Pellegrini", v:"Racing de Fortín Olavarría", hora:"16:00", gl:2, gv:1, claseL:"huracan", claseV:"racingfortin", nota:"<b>Racing ganó la serie por 10-3</b>"},
             ]},
        ]},
         { id: "2026-08-09", label: "DOM 09/08", torneos: [
@@ -16476,7 +16478,7 @@ const BD_POS_FUTSAL = {
 
         {n:"Comercial",       cl:"comercial",    pj:2,pg:2,pe:0,pp:0,gf:14, gc:6, pts:6},        {n:"La Estación <b>(A)</b>",     cl:"laestacion",    pj:2,pg:2,pe:0,pp:0,gf:9, gc:4, pts:6},
         {n:"Petroquímicos",   cl:"petroquimicos",    pj:2,pg:2,pe:0,pp:0,gf:0, gc:0, pts:6},
-        {n:"La Esperanza",    cl:"laesperanza",    pj:1,pg:1,pe:0,pp:0,gf:5, gc:2, pts:3},
+        {n:"La Esperanza",    cl:"laesperanza",    pj:2,pg:2,pe:0,pp:0,gf:12, gc:4, pts:6},
         {n:"Liniers",         cl:"liniers",    pj:2,pg:1,pe:1,pp:0,gf:5, gc:2, pts:3},
         {n:"Los 3 Chiflados", cl:"los3chiflados",    pj:1,pg:1,pe:0,pp:0,gf:2, gc:1, pts:3},
         {n:"Villa Mitre",     cl:"villamitre",    pj:1,pg:1,pe:0,pp:0,gf:0, gc:0, pts:3},
@@ -16484,7 +16486,7 @@ const BD_POS_FUTSAL = {
         {n:"Dublin",          cl:"dublin",    pj:1,pg:0,pe:0,pp:1,gf:3, gc:4, pts:0},
         {n:"Tiro Federal",    cl:"tirofederal",    pj:1,pg:0,pe:0,pp:1,gf:1, gc:3, pts:0},
         {n:"Pacífico BB",     cl:"pacificobb",    pj:2,pg:0,pe:0,pp:2,gf:5, gc:11, pts:0},
-        {n:"Catamarca",       cl:"catamarca",    pj:1,pg:0,pe:0,pp:1,gf:2, gc:10, pts:0},
+        {n:"Catamarca",       cl:"catamarca",    pj:2,pg:0,pe:0,pp:2,gf:4, gc:17, pts:0},
         {n:"<s>Dep. Futsal</s> <b>(-)</b>",     cl:"depfutsal",    pj:0,pg:0,pe:0,pp:0,gf:0, gc:0, pts:0},
         {n:"<s>Huracán</s> <b>(-)</b>",         cl:"huracan",    pj:0,pg:0,pe:0,pp:0,gf:0, gc:0, pts:0}
     ],
@@ -16492,12 +16494,12 @@ const BD_POS_FUTSAL = {
         {n:"Los 3 Chiflados <b>(A)</b>", cl:"los3chiflados",    pj:2,pg:2,pe:0,pp:0,gf:10, gc:2, pts:6},
         {n:"La Estación",     cl:"laestacion",    pj:2,pg:2,pe:0,pp:0,gf:7, gc:1, pts:6},
         {n:"Petroquímicos",   cl:"petroquimicos",    pj:2,pg:2,pe:0,pp:0,gf:0, gc:0, pts:6},
-        {n:"La Esperanza",    cl:"laesperanza",    pj:1,pg:1,pe:0,pp:0,gf:2, gc:0, pts:3},
+        {n:"La Esperanza",    cl:"laesperanza",    pj:2,pg:2,pe:0,pp:0,gf:9, gc:2, pts:6},
         {n:"Liniers",         cl:"liniers",    pj:2,pg:1,pe:0,pp:1,gf:6, gc:5, pts:3},
         {n:"Villa Mitre",     cl:"villamitre",    pj:1,pg:1,pe:0,pp:0,gf:0, gc:0, pts:3},
         {n:"Dublin",          cl:"dublin",    pj:2,pg:1,pe:0,pp:1,gf:4, gc:7, pts:3},
         {n:"San Francisco",   cl:"sanfrancisco",    pj:2,pg:1,pe:0,pp:1,gf:0, gc:5, pts:3},
-        {n:"Catamarca",       cl:"catamarca",    pj:1,pg:0,pe:1,pp:0,gf:3, gc:3, pts:1},
+        {n:"Catamarca",       cl:"catamarca",    pj:2,pg:0,pe:1,pp:1,gf:5, gc:10, pts:1},
         {n:"Comercial",       cl:"comercial",    pj:2,pg:0,pe:2,pp:0,gf:5, gc:6, pts:1},
         {n:"Tiro Federal",    cl:"tirofederal",    pj:1,pg:0,pe:0,pp:1,gf:1, gc:3, pts:0},
         {n:"Pacífico BB",     cl:"pacificobb",    pj:2,pg:0,pe:0,pp:2,gf:0, gc:6, pts:0},
@@ -19802,20 +19804,20 @@ const BD_REG_AMATEUR_FEM = {
             nombre: "Primera Ronda",
             duelos: [
                 {
-                    ida:    { local: "Villa Mitre",                  clL: "villamitre",        visitante: "Municipales",               clV: "municipales", gl: 4, gv: 1, goles_l: ["Lucrecia Semper (2)","Morena Bouven","Sol Menéndez Perrone"], goles_v: [] },
-                    vuelta: { local: "Municipales",                  clL: "municipales",       visitante: "Villa Mitre",               clV: "villamitre" }
+                    ida:    { local: "<b>Villa Mitre</b>",                  clL: "villamitre",        visitante: "Municipales",               clV: "municipales", gl: 4, gv: 1, goles_l: ["Lucrecia Semper (2)","Morena Bouven","Sol Menéndez Perrone"], goles_v: [] },
+                    vuelta: { local: "Municipales",                  clL: "municipales",       visitante: "<b>Villa Mitre</b>",               clV: "villamitre", gl: 1, gv: 2, goles_l: [], goles_v: [] }
                 },
                 {
-                    ida:    { local: "Racing de Fortín Olavarría",   clL: "racingfortin",      visitante: "Huracán de Pellegrini",      clV: "huracan", gl: 9, gv: 1 },
-                    vuelta: { local: "Huracán de Pellegrini",        clL: "huracan",           visitante: "Racing de Fortín Olavarría", clV: "racingfortin" }
+                    ida:    { local: "<b>Racing de Fortín Olavarría</b>",   clL: "racingfortin",      visitante: "Huracán de Pellegrini",      clV: "huracan", gl: 9, gv: 1 },
+                    vuelta: { local: "Huracán de Pellegrini",        clL: "huracan",           visitante: "<b>Racing de Fortín Olavarría</b>", clV: "racingfortin", gl: 2, gv: 1, goles_l: [], goles_v: [] }
                 },
                 {
-                    ida:    { local: "Estudiantes Unidos",           clL: "estudiantesunidos", visitante: "Ciudad de Olavarría",        clV: "ciudadolavarria", gl: 0, gv: 1 },
-                    vuelta: { local: "Ciudad de Olavarría",          clL: "ciudadolavarria",   visitante: "Estudiantes Unidos",         clV: "estudiantesunidos" }
+                    ida:    { local: "Estudiantes Unidos",           clL: "estudiantesunidos", visitante: "<b>Ciudad de Olavarría</b>",        clV: "ciudadolavarria", gl: 0, gv: 1 },
+                    vuelta: { local: "<b>Ciudad de Olavarría</b>",          clL: "ciudadolavarria",   visitante: "Estudiantes Unidos",         clV: "estudiantesunidos", gl: 2, gv: 2, goles_l: [], goles_v: [] }
                 },
                 {
-                    ida:    { local: "Alumni Azuleño",               clL: "alumniazuleno",     visitante: "San José de Azul",           clV: "sanjoseazul", gl: 5, gv: 2 },
-                    vuelta: { local: "San José de Azul",             clL: "sanjoseazul",       visitante: "Alumni Azuleño",             clV: "alumniazuleno" }
+                    ida:    { local: "<b>Alumni Azuleño</b>",               clL: "alumniazuleno",     visitante: "San José de Azul",           clV: "sanjoseazul", gl: 5, gv: 2 },
+                    vuelta: { local: "San José de Azul",             clL: "sanjoseazul",       visitante: "<b>Alumni Azuleño</b>",             clV: "alumniazuleno", gl: 0, gv: 0, goles_l: [], goles_v: [] }
                 },
                 {
                     ida:    { local: "Juventud Unida de Tandil",     clL: "juventudunidatandil", visitante: "Dep. San José de Tandil",  clV: "depsanjose", gl: 0, gv: 0 },
@@ -20822,9 +20824,9 @@ function generarTorneoSeleccion15() {
             { nombre:"Ayacucho",          key:"ayacucho",       pj:1,pg:0,pe:0,pp:1,gf:2,gc:3,pts:0 },
         ]},
         { label:"ZONA 3", equipos:[
-            { nombre:"Dolores",           key:"dolores",        pj:0,pg:0,pe:0,pp:0,gf:0,gc:0,pts:0 },
-            { nombre:"General Madariaga", key:"madariaga",      pj:0,pg:0,pe:0,pp:0,gf:0,gc:0,pts:0 },
+            { nombre:"General Madariaga", key:"madariaga",      pj:1,pg:1,pe:0,pp:0,gf:2,gc:1,pts:3 },
             { nombre:"La Costa",          key:"lacosta",        pj:0,pg:0,pe:0,pp:0,gf:0,gc:0,pts:0 },
+            { nombre:"Dolores",           key:"dolores",        pj:1,pg:0,pe:0,pp:1,gf:1,gc:2,pts:0 },
         ]},
         { label:"ZONA 4", equipos:[
             { nombre:"Guatraché",         key:"guatrache",      pj:0,pg:0,pe:0,pp:0,gf:0,gc:0,pts:0 },
