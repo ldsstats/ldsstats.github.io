@@ -1128,7 +1128,7 @@ expandirFixture(idaOficial, BD_FIXTURES.oficial.apertura, 14);
 
 const idaOficialClausura = [
     { fecha: 1,  partidos: [{l:"Bella Vista", v:"San Francisco", gl:1, gv:2, dia:"Dom 02/08", hora:"11:00", goles_l:["Rodrigo Gómez"], goles_v:["Tomás Alfaro","Federico Pinedo"]}, {l:"Libertad",    v:"Huracán",       gl:0, gv:0, dia:"Dom 02/08", hora:"15:00", goles_l:[], goles_v:[]}, {l:"Sporting",    v:"La Armonía",   gl:2, gv:0, dia:"Dom 02/08", hora:"15:00", goles_l:["Jonathan Font (2)"], goles_v:[]}, {l:"Liniers", v:"Villa Mitre",       gl:6, gv:1, dia:"Dom 02/08", hora:"15:00", goles_l:["Valentín Bertoni (2)","Ramiro Ullmann (2)","Enzo Chamorro","Nicolás Malerba"], goles_v:["Ayrton Matélica"]}] },
-    { fecha: 2,  partidos: [{l:"La Armonía",  v:"Villa Mitre",   gl:null, gv:null, dia:"Dom 09/08", hora:"15:00", goles_l:[], goles_v:[]}, {l:"San Francisco",v:"Libertad",     gl:null, gv:null, dia:"Dom 09/08", hora:"15:00", goles_l:[], goles_v:[]}, {l:"Huracán",     v:"Sporting",      gl:null, gv:null, dia:"Dom 09/08", hora:"15:00", goles_l:[], goles_v:[]}, {l:"Bella Vista", v:"Liniers",       gl:null, gv:null, dia:"Dom 09/08", hora:"15:00", goles_l:[], goles_v:[]}] },
+    { fecha: 2,  partidos: [{l:"La Armonía",  v:"Villa Mitre",   gl:0, gv:0, dia:"Dom 09/08", hora:"15:00", goles_l:[], goles_v:[]}, {l:"San Francisco",v:"Libertad",     gl:2, gv:1, dia:"Dom 09/08", hora:"15:00", goles_l:["Alexis Vega","Leonel Romero"], goles_v:["Nelson Avello"]}, {l:"Huracán",     v:"Sporting",      gl:0, gv:0, dia:"Dom 09/08", hora:"15:00", goles_l:[], goles_v:[]}, {l:"Bella Vista", v:"Liniers",       gl:0, gv:0, dia:"Dom 09/08", hora:"15:00", goles_l:[], goles_v:[]}] },
     { fecha: 3,  partidos: [{l:"Villa Mitre", v:"Huracán",       gl:null, gv:null}, {l:"Sporting",    v:"San Francisco", gl:null, gv:null}, {l:"Liniers",     v:"La Armonía",    gl:null, gv:null}, {l:"Libertad",    v:"Bella Vista",   gl:null, gv:null}] },
     { fecha: 4,  partidos: [{l:"Villa Mitre", v:"San Francisco", gl:null, gv:null}, {l:"La Armonía",  v:"Huracán",       gl:null, gv:null}, {l:"Liniers",     v:"Libertad",      gl:null, gv:null}, {l:"Sporting",    v:"Bella Vista",   gl:null, gv:null}] },
     { fecha: 5,  partidos: [{l:"Bella Vista", v:"Villa Mitre",   gl:null, gv:null}, {l:"Libertad",    v:"Sporting",      gl:null, gv:null}, {l:"San Francisco",v:"La Armonía",    gl:null, gv:null}, {l:"Huracán",     v:"Liniers",       gl:null, gv:null}] },
@@ -1921,13 +1921,13 @@ function generarHome() {
        ]},
         { id: "2026-08-09", label: "DOM 09/08", torneos: [
             { nombre: "FECHA 2 - OFICIAL - CLAUSURA", cat: "oficial", torLink: "oficial", noAutoResult: true, partidos: [
-                {l:"Sporting", v:"Huracán", hora:"15:00", gl:null, gv:null,nota:"sin visitantes"},
-                {l:"La Armonía", v:"Villa Mitre", hora:"15:00", gl:null, gv:null},
-                {l:"Bella Vista", v:"Liniers", hora:"15:00", gl:null, gv:null},
-                {l:"San Francisco", v:"Libertad", hora:"15:00", gl:null, gv:null},
+                {l:"Sporting", v:"Huracán", hora:"15:00", gl:0, gv:0,nota:"sin visitantes"},
+                {l:"La Armonía", v:"Villa Mitre", hora:"15:00", gl:0, gv:0},
+                {l:"Bella Vista", v:"Liniers", hora:"15:00", gl:0, gv:0},
+                {l:"San Francisco", v:"Libertad", hora:"15:00", gl:2, gv:1},
             ]},
             { nombre: "FECHA 2 - PROMOCIONAL - CLAUSURA", cat: "promocional", torLink: "promocional", noAutoResult: true, partidos: [
-                {l:"Pacífico (C)", v:"Dublin", hora:"15:00", gl:null, gv:null},
+                {l:"Pacífico (C)", v:"Dublin", hora:"15:00", gl:3, gv:0},
             ]},
             { nombre: "FECHA 3 - FEMENINO - CLAUSURA", cat: "femenino", torLink: "femenino", noAutoResult: true, partidos: [
                 {l:"Municipales", v:"Tiro Federal", hora:"15:30", gl:null, gv:null},
@@ -18412,6 +18412,9 @@ const BD_ALIAS_JUGADORES = {
     femenino: [
         { nombre: "Marianela Santana", equipos: ["Empleados de Comercio", "Municipales"] },
         { nombre: "Trinidad Rivas", equipos: ["Empleados de Comercio", "Villa Mitre"], desde: "clausura" },
+    ],
+    oficial: [
+        { nombre: "Alexis Vega", equipos: ["Bella Vista", "San Francisco"], desde: "clausura" },
     ]
 };
 
@@ -18535,6 +18538,21 @@ const BD_GOLEADORES_CLAUSURA_OFICIAL = [
 { jugador: "Tomás Alfaro", equipo: "San Francisco", goles: 1,
       partidos: [
           { fecha: "Fecha 1", rival: "Bella Vista", gl: 1, gv: 2, condicion: "Visitante", goles: 1 }
+      ]
+    },
+{ jugador: "Alexis Vega", equipo: "San Francisco", goles: 1,
+      partidos: [
+          { fecha: "Fecha 2", rival: "Libertad", gl: 2, gv: 1, condicion: "Local", goles: 1 }
+      ]
+    },
+{ jugador: "Leonel Romero", equipo: "San Francisco", goles: 1,
+      partidos: [
+          { fecha: "Fecha 2", rival: "Libertad", gl: 2, gv: 1, condicion: "Local", goles: 1 }
+      ]
+    },
+{ jugador: "Nelson Avello", equipo: "Libertad", goles: 1,
+      partidos: [
+          { fecha: "Fecha 2", rival: "San Francisco", gl: 2, gv: 1, condicion: "Visitante", goles: 1 }
       ]
     },
 { jugador: "Rodrigo Gómez", equipo: "Bella Vista", goles: 1,
