@@ -1367,7 +1367,7 @@ expandirFixture(idaPromo, BD_FIXTURES.promocional.apertura, 14);
 
 const idaPromoClausura = [
     { fecha: 1,  partidos: [{l:"Pacífico BB",  v:"Olimpo",       gl:0, gv:2, dia:"Sáb 01/08", hora:"15:00", goles_l:[], goles_v:["Valentín Quidel","Santiago Llanos"]}, {l:"Rosario PB",      v:"Dublin",   gl:1, gv:0, dia:"Sáb 01/08", hora:"15:00", goles_l:["Nicolás Ovando"], goles_v:[]}, {l:"Tiro Federal",v:"Comercial",    gl:4, gv:0, dia:"Sáb 01/08", hora:"15:00", goles_l:["Agustín Restiffo","Franco Fraysse","Mariano McCoubrey","Joaquín Laborde"], goles_v:[]}, {l:"Sansinena",   v:"Pacífico (C)", gl:1, gv:1, dia:"Dom 02/08", hora:"15:00", goles_l:["Gerónimo Fernández"], goles_v:["Marcelo Soto"]}] },
-    { fecha: 2,  partidos: [{l:"Rosario PB",   v:"Pacífico BB",  gl:0, gv:0, dia:"Sáb 08/08", hora:"15:00", goles_l:[], goles_v:[]}, {l:"Olimpo",      v:"Tiro Federal", gl:3, gv:2, dia:"Sáb 08/08", hora:"15:00", goles_l:["Nahuel Colmenares (2)","Santiago Llanos"], goles_v:["Juan Ignacio Talmón","Rodrigo Belasque"]}, {l:"Sansinena",   v:"Comercial",    gl:2, gv:0, dia:"Sáb 08/08", hora:"15:00", goles_l:["Valentín Moral","Manuel Stortini"], goles_v:[]}, {l:"Pacífico (C)",v:"Dublin",       gl:null, gv:null, dia:"Dom 09/08", hora:"15:00", goles_l:[], goles_v:[]}] },
+    { fecha: 2,  partidos: [{l:"Rosario PB",   v:"Pacífico BB",  gl:0, gv:0, dia:"Sáb 08/08", hora:"15:00", goles_l:[], goles_v:[]}, {l:"Olimpo",      v:"Tiro Federal", gl:3, gv:2, dia:"Sáb 08/08", hora:"15:00", goles_l:["Nahuel Colmenares (2)","Santiago Llanos"], goles_v:["Juan Ignacio Talmón","Rodrigo Belasque"]}, {l:"Sansinena",   v:"Comercial",    gl:2, gv:0, dia:"Sáb 08/08", hora:"15:00", goles_l:["Valentín Moral","Manuel Stortini"], goles_v:[]}, {l:"Pacífico (C)",v:"Dublin",       gl:3, gv:0, dia:"Dom 09/08", hora:"15:00", goles_l:["Marcelo Soto","Juan Pablo Molina","Gianni Ferrari"], goles_v:[]}] },
     { fecha: 3,  partidos: [{l:"Comercial",    v:"Olimpo",       gl:null, gv:null}, {l:"Tiro Federal",v:"Rosario PB",   gl:null, gv:null}, {l:"Pacífico BB", v:"Pacífico (C)", gl:null, gv:null}, {l:"Sansinena",   v:"Dublin",       gl:null, gv:null}] },
     { fecha: 4,  partidos: [{l:"Comercial",    v:"Dublin",       gl:null, gv:null}, {l:"Olimpo",      v:"Rosario PB",   gl:null, gv:null}, {l:"Tiro Federal",v:"Pacífico (C)", gl:null, gv:null}, {l:"Pacífico BB", v:"Sansinena",    gl:null, gv:null}] },
     { fecha: 5,  partidos: [{l:"Rosario PB",   v:"Comercial",    gl:null, gv:null}, {l:"Sansinena",   v:"Tiro Federal", gl:null, gv:null}, {l:"Pacífico (C)",v:"Olimpo",       gl:null, gv:null}, {l:"Dublin",      v:"Pacífico BB",  gl:null, gv:null}] },
@@ -19627,14 +19627,14 @@ const BD_POSICIONES = {
             { nombre: "Sporting <b>(X)</b>",      clase: "sporting",     pj:14, pg:3, pe:4, pp:7, gf:15, gc:22,  pts:13 }
         ],
         clausura: [
-            { nombre: "Liniers",       clase: "liniers",      pj:1, pg:1, pe:0, pp:0, gf:6, gc:1,  pts:3 },
-            { nombre: "Sporting",      clase: "sporting",     pj:1, pg:1, pe:0, pp:0, gf:2, gc:0,  pts:3 },
-            { nombre: "San Francisco", clase: "sanfrancisco", pj:1, pg:1, pe:0, pp:0, gf:2, gc:1,  pts:3 },
-            { nombre: "Huracán",       clase: "huracan",      pj:1, pg:0, pe:1, pp:0, gf:0, gc:0,  pts:1 },
-            { nombre: "Libertad",      clase: "libertad",     pj:1, pg:0, pe:1, pp:0, gf:0, gc:0,  pts:1 },
-            { nombre: "Bella Vista",   clase: "bellavista",   pj:1, pg:0, pe:0, pp:1, gf:1, gc:2,  pts:0 },
-            { nombre: "La Armonía",    clase: "laarmonia",    pj:1, pg:0, pe:0, pp:1, gf:0, gc:2,  pts:0 },
-            { nombre: "Villa Mitre",   clase: "villamitre",   pj:1, pg:0, pe:0, pp:1, gf:1, gc:6,  pts:0 },
+            { nombre: "San Francisco", clase: "sanfrancisco", pj:2, pg:2, pe:0, pp:0, gf:4, gc:2,  pts:6 },
+            { nombre: "Liniers",       clase: "liniers",      pj:2, pg:1, pe:1, pp:0, gf:6, gc:1,  pts:4 },
+            { nombre: "Sporting",      clase: "sporting",     pj:2, pg:1, pe:1, pp:0, gf:2, gc:0,  pts:4 },
+            { nombre: "Huracán",       clase: "huracan",      pj:2, pg:0, pe:2, pp:0, gf:0, gc:0,  pts:2 },
+            { nombre: "Libertad",      clase: "libertad",     pj:2, pg:0, pe:1, pp:1, gf:1, gc:2,  pts:1 },
+            { nombre: "Bella Vista",   clase: "bellavista",   pj:2, pg:0, pe:1, pp:1, gf:1, gc:2,  pts:1 },
+            { nombre: "La Armonía",    clase: "laarmonia",    pj:2, pg:0, pe:1, pp:1, gf:0, gc:2,  pts:1 },
+            { nombre: "Villa Mitre",   clase: "villamitre",   pj:2, pg:0, pe:1, pp:1, gf:1, gc:6,  pts:1 },
 ]
     },
     promocional: {
@@ -19652,10 +19652,10 @@ const BD_POSICIONES = {
             { nombre: "Olimpo",              clase: "olimpo",          pj:2, pg:2, pe:0, pp:0, gf:5, gc:2, pts:6 },
             { nombre: "Rosario PB",          clase: "rosariopb",       pj:2, pg:1, pe:1, pp:0, gf:1, gc:0, pts:4 },
             { nombre: "Sansinena",           clase: "sansinena",       pj:2, pg:1, pe:1, pp:0, gf:3, gc:1, pts:4 },
+            { nombre: "Pacífico (C)",        clase: "pacificocabildo", pj:2, pg:1, pe:1, pp:0, gf:4, gc:1, pts:4 },
             { nombre: "Tiro Federal",        clase: "tirofederal",     pj:2, pg:1, pe:0, pp:1, gf:6, gc:3, pts:3 },
-            { nombre: "Pacífico (C)",        clase: "pacificocabildo", pj:1, pg:0, pe:1, pp:0, gf:1, gc:1, pts:1 },
             { nombre: "Pacífico BB",         clase: "pacificobb",      pj:2, pg:0, pe:1, pp:1, gf:0, gc:2, pts:1},
-            { nombre: "Dublin",              clase: "dublin",          pj:1, pg:0, pe:0, pp:1, gf:0, gc:1, pts:0 },
+            { nombre: "Dublin",              clase: "dublin",          pj:2, pg:0, pe:0, pp:2, gf:0, gc:4, pts:0 },
             { nombre: "Comercial <b>(A)</b>",           clase: "comercial",       pj:2, pg:0, pe:0, pp:2, gf:0, gc:6, pts:0 }
 ],
     },
@@ -19768,7 +19768,7 @@ if (tor === 'apertura' && cat === 'oficial') {
     return html + "</tbody></table><div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'><b>(C)</b> Clasificado<br><b>(X)</b> Eliminado<br>📌 Puntos en juego: <b>Torneo finalizado</b></div>";
 }
 if (tor === 'clausura' && cat === 'oficial') {
-    return html + "</tbody></table><div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>39</b> tras finalizar la fecha 1</div>";
+    return html + "</tbody></table><div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>36</b> tras finalizar la fecha 2</div>";
 }
 if (tor === 'clausura' && cat === 'femenino') {
     const posAcum = BD_POSICIONES['femenino']?.['acumulada'] || [];
