@@ -1832,7 +1832,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 18).partidos.forEach(p
 });
 
 
-let diaSeleccionadoHome = "2026-08-08"; 
+let diaSeleccionadoHome = "2026-08-09"; 
 let mercadoPasesAbierto = false;
 
 function toggleMercadoPasesHome() {
