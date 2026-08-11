@@ -457,7 +457,7 @@ const BD_FIXTURES_FUTSAL_RESERVA = [
         {l:"Los 3 Chiflados", v:"Liniers",    gl:5,    gv:1, goles_l:["Lino Bognanni (3)","Ismael Domínguez (2)"], goles_v:[]},
         {l:"Dublin",       v:"Comercial",     gl:3, gv:2, goles_l:["Nahuel Rodríguez","Julián Bernal","Facundo Vallejos"], goles_v:["Franco Coronel","Facundo Diez"]},
         {l:"Pacífico BB",     v:"La Estación",     gl:0, gv:4, goles_l:[], goles_v:["Gonzalo...","Juan Ignacio Zárate","Gastón Villalba","Nicolás Peña"]},
-        {l:"Catamarca",    v:"La Esperanza",     gl:2, gv:7},
+        {l:"Catamarca",    v:"La Esperanza",     gl:2, gv:7, goles_l:[], goles_v:["Galo Castro (3)","Felipe Cabanne","Lautaro Flores","Agustín Pascual","Agustín Carabajal"]},
         {l:"Tiro Federal",     v:"Villa Mitre",     gl:1, gv:3},
         {l:"Petroquímicos",   v:"Dep. Futsal",     gl:null, gv:null},
         {l:"San Francisco",   v:"Huracán",     gl:null, gv:null},
@@ -577,7 +577,7 @@ const BD_FIXTURES_FUTSAL = [
         {l:"Los 3 Chiflados", v:"Liniers",     gl:2, gv:1, goles_l:["Iván Zapata","Martín Kloberdans"], goles_v:[""]},
         {l:"Dublin",       v:"Comercial",     gl:3, gv:4, goles_l:["Agustín Miguel (2)","Matías Fonollosa"], goles_v:["Leonel Torres (2)","Jonatan Kippes","Juan Muñoz"]},
         {l:"Pacífico BB",     v:"La Estación",     gl:3, gv:6, goles_l:[], goles_v:["Julián Hidalgo (2)","Javier Cabrera","Tobías Montiel","Gonzalo...","Franco Juárez"]},
-        {l:"Catamarca",    v:"La Esperanza",     gl:2, gv:7},
+        {l:"Catamarca",    v:"La Esperanza",     gl:2, gv:7, goles_l:[], goles_v:["Rodrigo Decoud (2)","Alexis Vera (2)","Ignacio Capelletti (2)","Bruno Manso"]},
         {l:"Tiro Federal",     v:"Villa Mitre",     gl:4, gv:5},
         {l:"Petroquímicos",   v:"Dep. Futsal",     gl:null, gv:null},
         {l:"San Francisco",   v:"Huracán",     gl:null, gv:null},
@@ -17806,11 +17806,13 @@ const BD_GOLEADORES_FUTSAL = [
     { nombre: "Diego Santiváñez",          equipo: "Los 3 Chiflados",   goles: 1 },
 ] },
 
-    { club: "La Esperanza",    clase: "laesperanza",    act: "fecha 1",       goleadores: [
+    { club: "La Esperanza",    clase: "laesperanza",    act: "fecha 2",       goleadores: [
+    { nombre: "Ignacio Cappelletti",          equipo: "La Esperanza",   goles: 3 },
+    { nombre: "Rodrigo Decoud",          equipo: "La Esperanza",   goles: 3 },
     { nombre: "Emiliano Etchepareborda",          equipo: "La Esperanza",   goles: 2 },
+    { nombre: "Alexis Vera",          equipo: "La Esperanza",   goles: 2 },
     { nombre: "Bruno Decoud",          equipo: "La Esperanza",   goles: 1 },
-    { nombre: "Ignacio Cappelletti",          equipo: "La Esperanza",   goles: 1 },
-    { nombre: "Rodrigo Decoud",          equipo: "La Esperanza",   goles: 1 },
+    { nombre: "Bruno Manso",          equipo: "La Esperanza",   goles: 1 }
 ] },
 
     { club: "Petroquímicos",   clase: "petroquimicos", act: null,       goleadores: [] },
