@@ -304,7 +304,7 @@ const idaFederal = [
     { fecha: 9, libre: "Alvarado", partidos: [{l:"Germinal", v:"Guillermo Brown", gl:1, gv:1, dia:"Dom 17/05", hora:"15:00", goles_l:["Ignacio Terán"], goles_v:["Patricio Cucchi"]}, {l:"Villa Mitre", v:"Sol de Mayo", gl:2, gv:1, dia:"Dom 17/05", hora:"15:00", goles_l:["Enzo González","Thiago Pérez"], goles_v:["Kevin Pereyra"]}, {l:"Círculo Dep.", v:"Kimberley", gl:0, gv:1, dia:"Dom 17/05", hora:"15:00", goles_l:[], goles_v:["Santiago Castillo"]}, {l:"Santamarina", v:"Olimpo", gl:0, gv:0, dia:"Dom 17/05", hora:"18:10"}] }
 ];
 
-let fechaNonagonal = 1;
+let fechaNonagonal = 3;
 
 function cambiarFechaNonagonal(n) {
     fechaNonagonal = n;
@@ -1086,10 +1086,10 @@ BD_FIXTURES.federala.nonagonal = [
     ], libre: "Kimberley" },
 
     { fecha: 3, partidos: [
-        { l: "Olimpo", v: "Villa Mitre", gl: null, gv: null },
-        { l: "Alvarado", v: "Huracán Las Heras", gl: null, gv: null },
-        { l: "Cipolletti", v: "Argentino de Monte Maíz", gl: null, gv: null },
-        { l: "Atenas de Río Cuarto", v: "Kimberley", gl: null, gv: null }
+        { l: "Alvarado", v: "Huracán Las Heras", gl: null, gv: null, dia:"Miér 12/08", hora:"15:30", goles_l:[], goles_v:[] },
+        { l: "Cipolletti", v: "Argentino de Monte Maíz", gl: null, gv: null, dia:"Miér 12/08", hora:"15:30", goles_l:[], goles_v:[] },
+        { l: "Olimpo", v: "Villa Mitre", gl: null, gv: null, dia:"Miér 12/08", hora:"19:30", goles_l:[], goles_v:[] },
+        { l: "Atenas de Río Cuarto", v: "Kimberley", gl: null, gv: null, dia:"Miér 12/08", hora:"22:00", goles_l:[], goles_v:[] }
     ], libre: "Juventud Antoniana" },
     { fecha: 4, partidos: [
         { l: "Villa Mitre", v: "Alvarado", gl: null, gv: null },
@@ -1183,7 +1183,7 @@ BD_FIXTURES.oficial.apertura.find(f => f.fecha === 13).partidos = [
     {l:"La Armonía",    v:"Bella Vista", gl:1, gv:3, dia:"Sáb 20/06", hora:"15:00", goles_l:["Alex Muzi"], goles_v:["Rodrigo Gómez","Rodrigo Gómez","Leandro Rosales"]},
     {l:"Liniers",    v:"Sporting", gl:3, gv:0, dia:"Sáb 20/06", hora:"15:00", goles_l:["Massimo Monti","Massimo Monti","Simón Biondo"], goles_v:[]},
     {l:"Villa Mitre",    v:"Libertad", gl:0, gv:0, dia:"Dom 21/06", hora:"11:00", goles_l:[], goles_v:[]},
-    {l:"Huracán",    v:"San Francisco", gl:1, gv:1, dia:"Mar 23/06", hora:"15:00", goles_l:["Federico Pinedo"], goles_v:["Walter Linares"]}
+    {l:"Huracán",    v:"San Francisco", gl:1, gv:1, dia:"Mar 23/06", hora:"15:00", goles_l:["Walter Linares"], goles_v:["Federico Pinedo"]}
 ];
 BD_FIXTURES.oficial.apertura.find(f => f.fecha === 14).partidos = [
     {l:"Bella Vista",    v:"Huracán", gl:2, gv:0, dia:"Sáb 27/06", hora:"15:00", goles_l:["Lucas Martínez","Gabino Bellegia"], goles_v:[]},
@@ -1842,7 +1842,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 19).partidos.forEach(p
 });
 
 
-let diaSeleccionadoHome = "2026-08-10"; 
+let diaSeleccionadoHome = "2026-08-11"; 
 let mercadoPasesAbierto = false;
 
 function toggleMercadoPasesHome() {
@@ -1973,6 +1973,14 @@ function generarHome() {
             { nombre: "FECHA 2 - PROMOCIONAL - RESERVA", cat: "reservapromocional", torLink: "reservapromocional", noAutoResult: true, partidos: [
                 {l:"Rosario PB", v:"Pacífico BB", hora:"15:30", gl:null, gv:null, claseL:"rosariopb", claseV:"pacificobb"},
                 {l:"Sansinena", v:"Comercial", hora:"16:00", gl:null, gv:null, claseL:"sansinena", claseV:"comercial"},
+            ]},
+       ]},
+        { id: "2026-08-12", label: "MIÉR 12/08", torneos: [
+            { nombre: "FEDERAL A - NONAGONAL - FECHA 3", cat: "federala", torLink: "federala", noAutoResult: true, partidos: [
+                {l:"Alvarado", v:"Huracán Las Heras", hora:"15:30", gl:null, gv:null, claseL:"alvarado", claseV:"huracanlh"},
+                {l:"Cipolletti", v:"Argentino de Monte Maiz", hora:"15:30", gl:null, gv:null, claseL:"cipolletti", claseV:"argmontemaiz"},
+                {l:"Olimpo", v:"Villa Mitre", hora:"19:30", gl:null, gv:null, claseL:"olimpo", claseV:"villamitre"},
+                {l:"Atenas", v:"Kimberley", hora:"21:00", gl:null, gv:null, claseL:"atenasrc", claseV:"kimberley"},
             ]},
        ]},
 ];
