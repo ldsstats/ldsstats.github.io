@@ -1290,9 +1290,9 @@ BD_FIXTURES.promocional.reserva.push(
     ]},
     { fecha: 2, partidos: [
         {l:"Pacífico (C)", v:"Dublin",      gl:4,   gv:4},
+        {l:"Olimpo",              v:"Tiro Federal",gl:2,   gv:1},
         {l:"Rosario PB",          v:"Pacífico BB", gl:null,   gv:null},
-        {l:"Sansinena",           v:"Comercial",   gl:null,   gv:null},
-        {l:"Olimpo",              v:"Tiro Federal",gl:null,   gv:null}
+        {l:"Sansinena",           v:"Comercial",   gl:null,   gv:null}
     ]},
     { fecha: 3, partidos: [
         {l:"Comercial",      v:"Olimpo",          gl:null,   gv:null},
@@ -1959,8 +1959,8 @@ function generarHome() {
             ]},
        ]},
         { id: "2026-08-10", label: "LUN 10/08", torneos: [
-            { nombre: "FECHA 2 - PROMOCIONAL - RESERVA", cat: "reservapromocional", torLink: "reservapromocional", noAutoResult: true, partidos: [
-                {l:"Olimpo", v:"Tiro Federal", hora:"15:30", gl:null, gv:null, claseL:"olimpo", claseV:"tirofederal"},
+            { nombre: "FECHA 2 - PROMOCIONAL - RESERVA", cat: "reserva_promocional", torLink: "reserva_promocional", noAutoResult: true, partidos: [
+                {l:"Olimpo", v:"Tiro Federal", hora:"15:30", gl:2, gv:1, claseL:"olimpo", claseV:"tirofederal"},
             ]},
             { nombre: "FECHA 1 - FUTSAL - CLAUSURA (REPROGRAMADO)", cat: "futsal", torLink: "futsal", noAutoResult: true, partidos: [
                 {l:"Los 3 Chiflados", v:"Dublin", hora:"22:00", gl:null, gv:null,nota:"en cancha de La Curtiembre - <b>DUBLIN COMENZÓ EL PARTIDO GANANDO 1-0, RESULTADO CON EL QUE FUE SUSPENDIDO LA PRIMERA VEZ</b>"},
@@ -15906,276 +15906,1355 @@ const BD_DETALLES_FUERA = {
 // Clave: "Equipo A vs Equipo B" (siempre alfabético para consistencia)
 // Los partidos tienen: fecha (string), torneo, local, visitante, gl, gv, goles_l, goles_v
 const BD_H2H = {
-    "Huracán|Libertad": [
-        { fecha: "Fecha 1 - 15/03/2026", torneo: "oficial", l: "Libertad", v: "Huracán", gl: 3, gv: 1,
-          goles_l: ["Luciano Trídico","Mauro Sabatini","Matías Mayer"], goles_v: ["Iván Agudiak"] },
-        { fecha: "Fecha 1 - Torneo 2026", torneo: "sub15fem", l: "Libertad", v: "Huracán", gl: 0, gv: 8 },
-        { fecha: "Fecha 1 - Apertura 2026", torneo: "reserva_oficial", l: "Libertad", v: "Huracán", gl: 2, gv: 2 },
-        { fecha: "Fecha 8 - 16/05/2026", torneo: "oficial", l: "Huracán", v: "Libertad", gl: 3, gv: 1, goles_l: ["Iván Agudiak","Brian Scalco","Gianluca Falcioni (e/c)"], goles_v: ["Franco Pane"] },
-    ],
-    "La Armonía|Sporting": [
-        { fecha: "Fecha 1 - 15/03/2026", torneo: "oficial", l: "Sporting", v: "La Armonía", gl: 1, gv: 2,
-          goles_l: ["Jonathan Font"], goles_v: ["Matías Malmoria (2)"] },
-        { fecha: "Fecha 1 - Apertura 2026", torneo: "reserva_oficial", l: "Sporting", v: "La Armonía", gl: 1, gv: 1,
-          goles_l: [], goles_v: [] },
-        { fecha: "Fecha 8 - 17/05/2026", torneo: "oficial", l: "La Armonía", v: "Sporting", gl: 3, gv: 1, goles_l: ["Enrique Narvay","Ezequiel Intrevado","Alex Muzi"], goles_v: ["Jonathan Font"] },
-        { fecha: "Fecha 1 - Apertura 2026", torneo: "sub15fem", l: "La Armonía", v: "Sporting", gl: 3, gv: 0 }
-    ],
-    "Bella Vista|San Francisco": [
-        { fecha: "Fecha 1 - 15/03/2026", torneo: "oficial", l: "Bella Vista", v: "San Francisco", gl: 3, gv: 1,
-          goles_l: ["Lucas Martínez","Alexis Vega","Gabino Bellegia"], goles_v: ["Juan Romero"] },
-        { fecha: "Fecha 1 - Apertura 2026", torneo: "reserva_oficial", l: "Bella Vista", v: "San Francisco", gl: 2, gv: 2,
-          goles_l: [], goles_v: [] },
-        { fecha: "Fecha 8 - 16/05/2026", torneo: "oficial", l: "San Francisco", v: "Bella Vista", gl: 2, gv: 1, goles_l: ["Claudio Castiglioni","Sebastián Leguiza"], goles_v: ["Lucas Martínez"] },
-    ],
-    "Liniers|Villa Mitre": [
-        { fecha: "Fecha 1 - 15/03/2026", torneo: "oficial", l: "Villa Mitre", v: "Liniers", gl: 2, gv: 0,
-          goles_l: ["Santiago Gómez","Juan Acosta"], goles_v: [] },
-        { fecha: "Fecha 1 - Apertura 2026", torneo: "reserva_oficial", l: "Villa Mitre", v: "Liniers", gl: 0, gv: 1,
-          goles_l: [], goles_v: [] },
-        { fecha: "Fecha 8 - 16/05/2026", torneo: "oficial", l: "Liniers", v: "Villa Mitre", gl: 1, gv: 1, goles_l: ["Thiago Uicala (e/c)"], goles_v: ["Constanzo Palacio"] },
-        { fecha: "Fecha 2 - Torneo 2026", torneo: "sub15fem", l: "Villa Mitre", v: "Liniers", gl: 0, gv: 5, goles_l: [], goles_v: [] },
-    ],
-    "Olimpo|Pacífico BB": [
-        { fecha: "Fecha 1 - 15/03/2026", torneo: "promocional", l: "Pacífico BB", v: "Olimpo", gl: 0, gv: 0,
-          goles_l: [], goles_v: [] },
-        { fecha: "Fecha 1 - Apertura 2026", torneo: "reserva_promocional", l: "Pacífico BB", v: "Olimpo", gl: 1, gv: 3,
-          goles_l: [], goles_v: [] }
-    ],
-    "Pacífico (C)|Sansinena": [
-        { fecha: "Fecha 1 - 15/03/2026", torneo: "promocional", l: "Sansinena", v: "Pacífico (C)", gl: 3, gv: 3,
-          goles_l: ["Pablo González","Valentín Moral","Manuel Stortini"], goles_v: ["Gianni Ferrari (2)","Emanuel López"] },
-        { fecha: "Fecha 1 - Apertura 2026", torneo: "reserva_promocional", l: "Sansinena", v: "Pacífico (C)", gl: 1, gv: 0,
-          goles_l: [], goles_v: [] }
-    ],
-    "Dublin|Rosario PB": [
-        { fecha: "Fecha 1 - 18/03/2026", torneo: "promocional", l: "Dublin", v: "Rosario PB", gl: 1, gv: 1,
-          goles_l: ["Marcos Pérez"], goles_v: ["Sebastián Mendoza"] },
-        { fecha: "Fecha 1 - Apertura 2026", torneo: "reserva_promocional", l: "Dublin", v: "Rosario PB", gl: 0, gv: 1,
-          goles_l: [], goles_v: [] }
-    ],
-    "Comercial|Tiro Federal": [
-        { fecha: "Fecha 1 - 18/03/2026", torneo: "promocional", l: "Tiro Federal", v: "Comercial", gl: 0, gv: 1,
-          goles_l: [], goles_v: ["Diego Cuevas (e/c)"] }
-    ],
     "Municipales|Sporting": [
-        { fecha: "Fecha 1 - 24/03/2026", torneo: "femenino", l: "Sporting", v: "Municipales", gl: 0, gv: 0, goles_l: [], goles_v: [] },
-        { fecha: "Fecha 1 - Apertura 2026", torneo: "reserva_femenino", l: "Sporting", v: "Municipales", gl: 1, gv: 2, goles_l: [], goles_v: [] },
-        { fecha: "Fecha 8 - 17/05/2026", torneo: "femenino", l: "Municipales", v: "Sporting", gl: 6, gv: 2, goles_l: ["Carolina Paz","Yanina Suárez","Victoria Nervi","Stefanía Sueyro","Rosario Damiani","Tania Espíndola"], goles_v: ["Sofía Mattos","Yazmín Fehrebacher"] },
-        { fecha: "Fecha 1 - Clausura - 25/07/2026", torneo: "femenino", l: "Sporting", v: "Municipales", gl: 0, gv: 2, goles_l: [], goles_v: ["Ludmila Fernández","Luana Villanueva"] },
-        { fecha: "Fecha 1 - Clausura 2026", torneo: "reserva_femenino", l: "Sporting", v: "Municipales", gl: 1, gv: 1},
+        { fecha: "Fecha 1 - Apertura 2026 - 24 mar", torneo: "femenino", l: "Sporting", v: "Municipales", gl: 0, gv: 0 },
+        { fecha: "Fecha 1 - Apertura 2026", torneo: "reserva_femenino", l: "Sporting", v: "Municipales", gl: 1, gv: 2 },
+        { fecha: "Fecha 8 - Apertura 2026 - 17 may", torneo: "femenino", l: "Municipales", v: "Sporting", gl: 6, gv: 2, goles_l: ["Carolina Paz","Yanina Suárez","Victoria Nervi","Stefania Sueyro","Rosario Damiani","Tania Espíndola"], goles_v: ["Sofía Mattos","Yazmín Fehrebacher"] },
+        { fecha: "Fecha 8 - Apertura 2026", torneo: "reserva_femenino", l: "Municipales", v: "Sporting", gl: 3, gv: 3 },
+        { fecha: "Fecha 1 - Clausura 2026 - 25 jul", torneo: "femenino", l: "Sporting", v: "Municipales", gl: 0, gv: 2, goles_l: [], goles_v: ["Ludmila Fernández","Luana Villanueva"] },
+        { fecha: "Fecha 1 - Clausura 2026 - 25 jul", torneo: "reserva_femenino", l: "Sporting", v: "Municipales", gl: 1, gv: 1 },
     ],
     "Bella Vista|Libertad": [
-        { fecha: "Fecha 1 - 24/03/2026", torneo: "femenino", l: "Bella Vista", v: "Libertad", gl: 0, gv: 2, goles_l: [], goles_v: ["Milagros Varas","Antonella De Vega"] },
-        { fecha: "Fecha 1 - Apertura 2026", torneo: "reserva_femenino", l: "Bella Vista", v: "Libertad", gl: 6, gv: 0, goles_l: [], goles_v: [] },
-        { fecha: "Fecha 8 - 17/05/2026", torneo: "femenino", l: "Libertad", v: "Bella Vista", gl: 3, gv: 4, goles_l: ["Caterina Rugo","Vera del Valle","Rihana Vitelli"], goles_v: ["Narela Roth","Mahia Romero","Martina Moleker","Victoria Sánchez"] },
-        { fecha: "Fecha 2", torneo: "senior", l: "Libertad", v: "Bella Vista", gl: 1, gv: 2, goles_l: ["Darío Dieser"], goles_v: ["Néstor Alessandroni","Nicolás Bellito"] },
-        { fecha: "Fecha 2 - Torneo 2026", torneo: "sub15fem", l: "Bella Vista", v: "Libertad", gl: 14, gv: 0, goles_l: [], goles_v: [] },
-        { fecha: "Fecha 1 - Clausura - 25/07/2026", torneo: "femenino", l: "Bella Vista", v: "Libertad", gl: 1, gv: 1, goles_l: ["Juanita Roumec"], goles_v: ["Antonella De Vega"] },
-        { fecha: "Fecha 1 - Clausura 2026", torneo: "reserva_femenino", l: "Bella Vista", v: "Libertad", gl: 7, gv: 0},
-    ],
-    "Empleados de Comercio|Tiro Federal": [
-        { fecha: "Fecha 1 - 22/03/2026", torneo: "femenino", l: "Empleados de Comercio", v: "Tiro Federal", gl: 2, gv: 2, goles_l: ["Marianela Santana","Trinidad Rivas"], goles_v: ["Abril Sáenz (2)"] },
-        { fecha: "Fecha 1 - Apertura 2026", torneo: "reserva_femenino", l: "Empleados de Comercio", v: "Tiro Federal", gl: 4, gv: 0, goles_l: [], goles_v: [] },
-        { fecha: "Fecha 8 - 17/05/2026", torneo: "femenino", l: "Tiro Federal", v: "Empleados de Comercio", gl: 1, gv: 0, goles_l: ["Nahiara Tillería"], goles_v: [] },
-        { fecha: "Fecha 1 - Clausura - 25/07/2026", torneo: "femenino", l: "Empleados de Comercio", v: "Tiro Federal", gl: 0, gv: 6, goles_l: [], goles_v: ["Guadalupe Rifo (2)","Abril Sáenz","Candela Salgado","Morena Juárez","Agostina Caballero"] },
-    ],
-    "Estrella de Oro|Liniers": [
-        { fecha: "Fecha 1 - 24/03/2026", torneo: "segundafemenino", l: "Liniers", v: "Estrella de Oro", gl: 4, gv: 1,
-          goles_l: ["Aldana Arce","Lola Podestá","Paulina Acevedo","Cindy Paillamilla"], goles_v: ["Natalia Ríos"] },
-        { fecha: "Fecha 1 - Apertura 2026", torneo: "reserva_segundafemenino", l: "Liniers", v: "Estrella de Oro", gl: 3, gv: 1,
-          goles_l: [], goles_v: [] }
-    ],
-    "Olimpo|Rosario PB": [
-        { fecha: "Fecha 1 - 22/03/2026", torneo: "segundafemenino", l: "Rosario PB", v: "Olimpo", gl: 5, gv: 1,
-          goles_l: ["Bárbara Aguirre","Julieta Díaz","Celeste Medina","Juliana Ruiz (2)"], goles_v: ["Lourdes Antonietti"] }
-    ],
-    "Pacífico (C)|Petroquímicos": [
-        { fecha: "Fecha 1 - 24/03/2026", torneo: "segundafemenino", l: "Pacífico (C)", v: "Petroquímicos", gl: 1, gv: 5,
-          goles_l: ["Bianca Pascualini"], goles_v: ["Nicole Montenegro (2)","Paola Vallejos","Renata Segovia","Lucía Vallejos"] }
-    ],
-    "San Francisco|Sansinena": [
-        { fecha: "Fecha 1 - 23/03/2026", torneo: "segundafemenino", l: "San Francisco", v: "Sansinena", gl: 5, gv: 2,
-          goles_l: ["Clara Iturrioz (2)","Florencia Sorbellini","Ariana Adassus","Julieta Coronel"], goles_v: ["Micaela Gómez","Nicole Huenupi"] },
-        { fecha: "Fecha 1 - Apertura 2026", torneo: "reserva_segundafemenino", l: "San Francisco", v: "Sansinena", gl: 4, gv: 1, goles_l: [], goles_v: [] },
-        { fecha: "Fecha 2", torneo: "senior", l: "Sansinena", v: "San Francisco", gl: 1, gv: 1, goles_l: ["Emiliano Jofré"], goles_v: ["Patricio Muñoz"] },
-    ],
-    "Bella Vista|Empleados de Comercio": [
-        { fecha: "Fecha 1 - Apertura 2026", torneo: "sub15fem", l: "Empleados de Comercio", v: "Bella Vista", gl: 0, gv: 4 }
-    ],
-    "Tiro Federal|Villa Mitre": [
-        { fecha: "Fecha 1 - Apertura 2026", torneo: "sub15fem", l: "Villa Mitre", v: "Tiro Federal", gl: 1, gv: 2 }
-    ],
-    "Liniers|Olimpo": [
-        { fecha: "Fecha 1 - Apertura 2026", torneo: "sub15fem", l: "Olimpo", v: "Liniers", gl: 0, gv: 12 }
-    ],
-    "Juventud Unida|San Francisco": [
-        { fecha: "Fecha 1 - Apertura 2026", torneo: "sub15fem", l: "San Francisco", v: "Juventud Unida", gl: 0, gv: 3 }
-    ],
-    "Dep. Futsal|Villa Mitre": [
-        { fecha: "Fecha 1 - Apertura 2026", torneo: "futsal", l: "Dep. Futsal", v: "Villa Mitre", gl: 2, gv: 4 },
-        { fecha: "Fecha 1 - Apertura 2026", torneo: "futsalreserva", l: "Dep. Futsal", v: "Villa Mitre", gl: 2, gv: 6 }
-    ],
-    "La Esperanza|Pacífico BB": [
-        { fecha: "Fecha 1 - Apertura 2026", torneo: "futsal", l: "Pacífico BB", v: "La Esperanza", gl: 2, gv: 6 },
-        { fecha: "Fecha 1 - Apertura 2026", torneo: "futsalreserva", l: "Pacífico BB", v: "La Esperanza", gl: 6, gv: 6 }
-    ],
-    "Huracán|Petroquímicos": [
-        { fecha: "Fecha 1 - Apertura 2026", torneo: "futsal", l: "Huracán", v: "Petroquímicos", gl: 3, gv: 10 },
-        { fecha: "Fecha 1 - Apertura 2026", torneo: "futsalreserva", l: "Huracán", v: "Petroquímicos", gl: 0, gv: 8 },
-        { fecha: "Fecha 17 - 2°Femenino - 26/07/2026", torneo: "segundafemenino", l: "Huracán", v: "Petroquímicos", gl: 0, gv: 3, goles_l: [], goles_v: ["Renata Segovia","Mía Carranza","Paola Vallejos"] }
-    ],
-    "Dublin|Los 3 Chiflados": [
-        { fecha: "Fecha 1 - Apertura 2026", torneo: "futsal", l: "Dublin", v: "Los 3 Chiflados", gl: 6, gv: 2 },
-        { fecha: "Fecha 1 - Apertura 2026", torneo: "futsalreserva", l: "Dublin", v: "Los 3 Chiflados", gl: 0, gv: 8 }
-    ],
-    "La Estación|Tiro Federal": [
-        { fecha: "Fecha 1 - Apertura 2026", torneo: "futsal", l: "La Estación", v: "Tiro Federal", gl: 7, gv: 1 },
-        { fecha: "Fecha 1 - Apertura 2026", torneo: "futsalreserva", l: "La Estación", v: "Tiro Federal", gl: 1, gv: 1 }
-    ],
-    "Liniers|San Francisco": [
-        { fecha: "Fecha 1 - Apertura 2026", torneo: "futsal", l: "Liniers", v: "San Francisco", gl: 2, gv: 2 },
-        { fecha: "Fecha 1 - Apertura 2026", torneo: "futsalreserva", l: "Liniers", v: "San Francisco", gl: 5, gv: 1 }
-    ],
-    "Catamarca|Comercial": [
-        { fecha: "Fecha 1 - Apertura 2026", torneo: "futsal", l: "Catamarca", v: "Comercial", gl: 4, gv: 4 },
-        { fecha: "Fecha 1 - Apertura 2026", torneo: "futsalreserva", l: "Catamarca", v: "Comercial", gl: 6, gv: 5 },
-        { fecha: "Fecha 1 - Clausura 2026", torneo: "futsal", l: "Comercial", v: "Catamarca", gl: 10, gv: 3 },
-        { fecha: "Fecha 1 - Clausura 2026", torneo: "futsalreserva", l: "Comercial", v: "Catamarca", gl: 3, gv: 3 }
-    ],
-    "Bella Vista|Pacífico (C)": [
-        { fecha: "Fecha 1 - Apertura 2026", torneo: "seniorapertura", l: "Bella Vista", v: "Pacífico (C)", gl: 0, gv: 2, goles_l: [], goles_v: ["Fabián Soto","Leandro Duelle"] }
-    ],
-    "Comercial|Huracán": [
-        { fecha: "Fecha 1 - Apertura 2026", torneo: "seniorapertura", l: "Comercial", v: "Huracán", gl: 1, gv: 3, goles_l: ["Sebastián Aristi"], goles_v: ["César Panduro (2)","Sebastián Faillá"] }
-    ],
-    "Pacífico BB|Sansinena": [
-        { fecha: "Fecha 1 - Apertura 2026", torneo: "seniorapertura", l: "Sansinena", v: "Pacífico BB", gl: 0, gv: 1, goles_l: [], goles_v: ["Ramón López"] }
-    ],
-    "Libertad|Tiro Federal": [
-        { fecha: "Fecha 1 - Apertura 2026", torneo: "seniorapertura", l: "Tiro Federal", v: "Libertad", gl: 2, gv: 2, goles_l: ["Juan José Dietz (2)"], goles_v: ["Mariano Moreno","Nicolás Herrera"] }
-    ],
-    "San Francisco|Sporting": [
-        { fecha: "Fecha 1 - Apertura 2026", torneo: "seniorapertura", l: "Sporting", v: "San Francisco", gl: 1, gv: 0, goles_l: ["Gabriel Bermengo"], goles_v: [] }
-    ],
-    "Alvarado|Olimpo": [
-        { fecha: "Fecha 1 - 22/03/2026", torneo: "federala", l: "Olimpo", v: "Alvarado", gl: 2, gv: 0, goles_l: ["Martín Ferreyra","Diego Ramírez"], goles_v: [] },
-        { fecha: "Fecha 10 - 24/03/2026", torneo: "federala", l: "Alvarado", v: "Olimpo", gl: 2, gv: 0, goles_l: ["Santiago Gutiérrez (2)"], goles_v: [] }
-    ],
-    "Kimberley|Villa Mitre": [
-        { fecha: "Fecha 1 - 22/03/2026", torneo: "federala", l: "Kimberley", v: "Villa Mitre", gl: 1, gv: 0, goles_l: [], goles_v: ["Rodrigo Ríos"] },
-        { fecha: "Fecha 10 - 25/03/2026", torneo: "federala", l: "Villa Mitre", v: "Kimberley", gl: 0, gv: 0, goles_l: [], goles_v: [] }
+        { fecha: "Fecha 1 - Apertura 2026 - 24 mar", torneo: "femenino", l: "Bella Vista", v: "Libertad", gl: 0, gv: 0, goles_l: [], goles_v: ["Antonella De Vega","Milagros Varas"]},
+        { fecha: "Fecha 1 - Apertura 2026", torneo: "reserva_femenino", l: "Bella Vista", v: "Libertad", gl: 6, gv: 0 },
+        { fecha: "Fecha 8 - Apertura 2026 - 17 may", torneo: "femenino", l: "Libertad", v: "Bella Vista", gl: 3, gv: 4, goles_l: ["Caterina Rugo","Vera del Valle","Rihana Vitelli"], goles_v: ["Narela Roth","Mahia Romero","Martina Moleker","Victoria Sánchez"] },
+        { fecha: "Fecha 8 - Apertura 2026", torneo: "reserva_femenino", l: "Libertad", v: "Bella Vista", gl: 0, gv: 4 },
+        { fecha: "Fecha 1 - Clausura 2026 - 25 jul", torneo: "femenino", l: "Bella Vista", v: "Libertad", gl: 1, gv: 1, goles_l: ["Juanita Roumec"], goles_v: ["Antonella De Vega"] },
+        { fecha: "Fecha 1 - Clausura 2026 - 25 jul", torneo: "reserva_femenino", l: "Bella Vista", v: "Libertad", gl: 7, gv: 0 },
+        { fecha: "Apertura 2026 - Fecha 2", torneo: "senior", l: "Libertad", v: "Bella Vista", gl: 1, gv: 2, goles_l: ["Darío Dieser"], goles_v: ["Néstor Alessandroni","Nicolás Bellito"] },
+        { fecha: "Torneo 2026 - Fecha 2", torneo: "sub15fem", l: "Bella Vista", v: "Libertad", gl: 14, gv: 0 },
+        { fecha: "Torneo 2026 - Fecha 13", torneo: "sub15fem", l: "Libertad", v: "Bella Vista", gl: 0, gv: 10 },
+        { fecha: "Fecha 3 - Apertura 2026 - 29 mar", torneo: "oficial", l: "Libertad", v: "Bella Vista", gl: 0, gv: 0, goles_l: [], goles_v: []},
+        { fecha: "Fecha 3 - Apertura 2026", torneo: "reserva_oficial", l: "Libertad", v: "Bella Vista", gl: 2, gv: 2 },
+        { fecha: "Fecha 10 - Apertura 2026 - 31 may", torneo: "oficial", l: "Bella Vista", v: "Libertad", gl: 2, gv: 0, goles_l: ["Gabino Bellegia","Rodrigo Gómez"], goles_v: []},
+        { fecha: "Fecha 10 - Apertura 2026", torneo: "reserva_oficial", l: "Bella Vista", v: "Libertad", gl: 0, gv: 2 },
     ],
     "La Armonía|Villa Mitre": [
-        { fecha: "Fecha 2 - 22/03/2026", torneo: "oficial", l: "La Armonía", v: "Villa Mitre", gl: 0, gv: 4, goles_l: [], goles_v: ["Ramiro Gerk (2)","Julián Monteverde","Diego Avit"] },
-        { fecha: "Fecha 9 - 24/05/2026", torneo: "oficial", l: "Villa Mitre", v: "La Armonía", gl: 2, gv: 1, goles_l: ["Rodrigo Cardoso (2)"], goles_v: ["Juan González"] },
-        { fecha: "Fecha 1 - 24/03/2026", torneo: "femenino", l: "La Armonía", v: "Villa Mitre", gl: 1, gv: 5, goles_l: ["Natalia Morinigo"], goles_v: ["Agustina Rodríguez (3)","Morena Bouven","Camila Aliata"] },
+        { fecha: "Fecha 1 - Apertura 2026 - 24 mar", torneo: "femenino", l: "La Armonía", v: "Villa Mitre", gl: 1, gv: 5, goles_l: ["Natalia Morinigo"], goles_v: ["Agustina Rodríguez (3)","Morena Bouven","Camila Aliata"]},
         { fecha: "Fecha 1 - Apertura 2026", torneo: "reserva_femenino", l: "La Armonía", v: "Villa Mitre", gl: 0, gv: 4 },
-        { fecha: "Fecha 8 - 17/05/2026", torneo: "femenino", l: "Villa Mitre", v: "La Armonía", gl: 6, gv: 0, goles_l: ["Lucrecia Semper (3)","Sol Menéndez Perrone","Morena Bouven","Morena Beiteleztn"], goles_v: [] },
-        { fecha: "Fecha 1 - Clausura - 25/07/2026", torneo: "femenino", l: "La Armonía", v: "Villa Mitre", gl: 0, gv: 1, goles_l: [], goles_v: ["Trinidad Rivas"] },
+        { fecha: "Fecha 8 - Apertura 2026 - 17 may", torneo: "femenino", l: "Villa Mitre", v: "La Armonía", gl: 6, gv: 0, goles_l: ["Lucrecia Semper (3)","Sol Menéndez Perrone","Morena Bouven","Morena Beiteleztn"], goles_v: [] },
+        { fecha: "Fecha 8 - Apertura 2026", torneo: "reserva_femenino", l: "Villa Mitre", v: "La Armonía", gl: 2, gv: 0 },
+        { fecha: "Fecha 1 - Clausura 2026 - 25 jul", torneo: "femenino", l: "La Armonía", v: "Villa Mitre", gl: 0, gv: 1, goles_l: [], goles_v: ["Trinidad Rivas"] },
+        { fecha: "Fecha 2 - Apertura 2026 - 22 mar 2026", torneo: "oficial", l: "La Armonía", v: "Villa Mitre", gl: 0, gv: 4, goles_l: [], goles_v: ["Ramiro Gerk (2)","Julián Monteverde","Diego Avit"] },
+        { fecha: "Fecha 2 - Apertura 2026", torneo: "reserva_oficial", l: "La Armonía", v: "Villa Mitre", gl: 0, gv: 1 },
+        { fecha: "Fecha 9 - Apertura 2026 - 24 may 2026", torneo: "oficial", l: "Villa Mitre", v: "La Armonía", gl: 2, gv: 1, goles_l: ["Rodrigo Cardoso (2)"], goles_v: ["Juan González"] },
+        { fecha: "Fecha 9 - Apertura 2026", torneo: "reserva_oficial", l: "Villa Mitre", v: "La Armonía", gl: 1, gv: 1 },
+        { fecha: "Torneo 2026 - Fecha 4", torneo: "sub15fem", l: "Villa Mitre", v: "La Armonía", gl: 0, gv: 0 },
+        { fecha: "Fecha 2 - Clausura 2026 - 09 ago 2026", torneo: "oficial", l: "La Armonía", v: "Villa Mitre", gl: 0, gv: 0, goles_l: [], goles_v: [] },
     ],
-    "Libertad|San Francisco": [
-        { fecha: "Fecha 2 - 22/03/2026", torneo: "oficial", l: "San Francisco", v: "Libertad", gl: 1, gv: 1, goles_l: ["Juan Pinedo"], goles_v: ["Mauro Sabatini"] },
-        { fecha: "Fecha 9 - 25/05/2026", torneo: "oficial", l: "Libertad", v: "San Francisco", gl: 2, gv: 0, goles_l: ["Alan Gigena","Matías Mayer"], goles_v: [] }
-    ],
-    "Huracán|Sporting": [
-        { fecha: "Fecha 2 - 23/03/2026", torneo: "oficial", l: "Huracán", v: "Sporting", gl: 3, gv: 0, goles_l: ["Iván Agudiak","Agustín Seisdedos","Johan Munives"], goles_v: [] },
-        { fecha: "Fecha 9 - 25/05/2026", torneo: "oficial", l: "Sporting", v: "Huracán", gl: 1, gv: 3, goles_l: ["Jonathan Font"], goles_v: ["Brian Scalco (2)","Facundo Reynoso"] }
-    ],
-    "Bella Vista|Liniers": [
-        { fecha: "Fecha 2 - 24/03/2026", torneo: "oficial", l: "Bella Vista", v: "Liniers", gl: 0, gv: 1, goles_l: [], goles_v: ["Rodrigo Phillip"] },
-        { fecha: "Fecha 9 - 25/05/2026", torneo: "oficial", l: "Liniers", v: "Bella Vista", gl: 0, gv: 0, goles_l: [], goles_v: [] }
-    ],
-    "Bella Vista|Sporting": [
-        { fecha: "Fecha 2 - 28/03/2026", torneo: "femenino", l: "Bella Vista", v: "Sporting", gl: 2, gv: 3, goles_l: ["Victoria Toloza","Mahia Romero"], goles_v: ["Sofía Mattos (2)","Alexia Villani"] },
-        { fecha: "Fecha 9 - 25/05/2026", torneo: "femenino", l: "Sporting", v: "Bella Vista", gl: 4, gv: 1, goles_l: ["Sofía Mattos (2)","Lucía Aranda","Yazmín Fehrebacher"], goles_v: ["Victoria Toloza"] },
-    ],
-    "Municipales|Villa Mitre": [
-        { fecha: "Fecha 2 - 28/03/2026", torneo: "femenino", l: "Villa Mitre", v: "Municipales", gl: 1, gv: 5, goles_l: ["Agustina Rodríguez"], goles_v: ["Valeria Navarrete (2)","Victoria Nervi","Ludmila Fernández","Stefanía Sueyro"] },
-        { fecha: "Fecha 9 - 24/05/2026", torneo: "femenino", l: "Municipales", v: "Villa Mitre", gl: 2, gv: 2, goles_l: ["Stefanía Sueyro","Valeria Navarrete"], goles_v: ["Victoria Toloza"] },
-    ],
-    "Empleados de Comercio|Libertad": [
-        { fecha: "Fecha 2 - 28/03/2026", torneo: "femenino", l: "Libertad", v: "Empleados de Comercio", gl: 0, gv: 5, goles_l: [], goles_v: ["Marianela Santana (4)","Trinidad Rivas"] },
-        { fecha: "Fecha 9 - 25/05/2026", torneo: "femenino", l: "Empleados de Comercio", v: "Libertad", gl: 4, gv: 0, goles_l: ["Marianela Santana (3)","Alison Guerrero"], goles_v: [] },
-    ],
-    "La Armonía|Tiro Federal": [
-        { fecha: "Fecha 2 - 28/03/2026", torneo: "femenino", l: "Tiro Federal", v: "La Armonía", gl: 4, gv: 0, goles_l: ["Alfonsina Royo","Candela Salgado","Camila Odriozola","Gabriela Cabrera"], goles_v: [] },
-        { fecha: "Fecha 9 - 23/05/2026", torneo: "femenino", l: "La Armonía", v: "Tiro Federal", gl: 0, gv: 2, goles_l: [], goles_v: ["Abril Sáenz (2)"] },
-    ],
-    "Círculo Dep.|Villa Mitre": [
-        { fecha: "Fecha 2 - 29/03/2026", torneo: "federala", l: "Villa Mitre", v: "Círculo Dep.", gl: 2, gv: 0, goles_l: ["Pablo Mujica","Marcos Escobar"], goles_v: [] },
-        { fecha: "Fecha 11 - 31/05/2026", torneo: "federala", l: "Círculo Dep.", v: "Villa Mitre", gl: 0, gv: 0, goles_l: [], goles_v: [] },
-    ],
-    "Comercial|Pacífico BB": [
-        { fecha: "Fecha 2", torneo: "senior", l: "Pacífico BB", v: "Comercial", gl: 1, gv: 5, goles_l: ["Ramón López"], goles_v: ["Maximiliano Casas (2)","Sebastián Aristi (2)","Emiliano Esmoli"] },
-    ],
-    "Huracán|Tiro Federal": [
-        { fecha: "Fecha 2", torneo: "senior", l: "Huracán", v: "Tiro Federal", gl: 6, gv: 1, goles_l: ["Felipe Hippendinger (3)","César Panduro (3)"], goles_v: ["Guido Leobono"] },
-    ],
-    "Pacífico (C)|Sporting": [
-        { fecha: "Fecha 2", torneo: "senior", l: "Pacífico (C)", v: "Sporting", gl: 0, gv: 3, goles_l: [], goles_v: ["Marcos Cossú","Pablo Quiroga","Maximiliano Rodríguez"] },
-    ],
-    "Comercial|Dublin": [
-        { fecha: "Fecha 2 - Apertura 2026", torneo: "futsal", l: "Comercial", v: "Dublin", gl: 5, gv: 1, goles_l: ["Jonathan Kippes (2)","Alejandro Moreno (2)","Leandro Weitt"], goles_v: ["Matías Gigena"] },
-        { fecha: "Fecha 2 - Apertura 2026", torneo: "futsalreserva", l: "Comercial", v: "Dublin", gl: 4, gv: 5, goles_l: [], goles_v: [] }
-    ],
-    "Catamarca|La Esperanza": [
-        { fecha: "Fecha 2 - Apertura 2026", torneo: "futsal", l: "La Esperanza", v: "Catamarca", gl: 7, gv: 3, goles_l: ["Bruno Decoud (3)","Jesús Abdala (2)","Rodrigo Decoud","Benjamín Martínez"], goles_v: [] },
-        { fecha: "Fecha 2 - Apertura 2026", torneo: "futsalreserva", l: "La Esperanza", v: "Catamarca", gl: 4, gv: 1, goles_l: [], goles_v: [] }
-    ],
-    "Dep. Futsal|Petroquímicos": [
-        { fecha: "Fecha 2 - Apertura 2026", torneo: "futsal", l: "Petroquímicos", v: "Dep.Futsal", gl: 8, gv: 4, goles_l: [], goles_v: [] },
-        { fecha: "Fecha 2 - Apertura 2026", torneo: "futsalreserva", l: "Petroquímicos", v: "Dep. Futsal", gl: 8, gv: 4, goles_l: [], goles_v: [] }
-    ],
-    "Liniers|Los 3 Chiflados": [
-        { fecha: "Fecha 2 - Apertura 2026", torneo: "futsal", l: "Los 3 Chiflados", v: "Liniers", gl: 3, gv: 3, goles_l: ["Dylan Schlebuch","Yonatan Santivañez","Lucas Raya"], goles_v: [] },
-        { fecha: "Fecha 2 - Apertura 2026", torneo: "futsalreserva", l: "Los 3 Chiflados", v: "Liniers", gl: 3, gv: 1, goles_l: [], goles_v: [] }
-    ],
-    "La Estación|Pacífico BB": [
-        { fecha: "Fecha 2 - Apertura 2026", torneo: "futsal", l: "La Estación", v: "Pacífico BB", gl: 8, gv: 5, goles_l: ["Diego Romano (3)","Mariano Sepúlveda (2)","Bernabé Storni (2)","Jonathan Carunchio"], goles_v: [] },
-        { fecha: "Fecha 2 - Apertura 2026", torneo: "futsalreserva", l: "La Estación", v: "Pacífico BB", gl: 2, gv: 4, goles_l: [], goles_v: [] }
-    ],
-    "Tiro Federal|Villa Mitre": [
-        { fecha: "Fecha 2 - Apertura 2026", torneo: "futsal", l: "Villa Mitre", v: "Tiro Federal", gl: 7, gv: 1, goles_l: [], goles_v: [] },
-        { fecha: "Fecha 2 - Apertura 2026", torneo: "futsalreserva", l: "Villa Mitre", v: "Tiro Federal", gl: 4, gv: 1, goles_l: [], goles_v: [] }
-    ],
-    "Huracán|San Francisco": [
-        { fecha: "Fecha 2 - Apertura 2026", torneo: "futsal", l: "San Francisco", v: "Huracán", gl: 9, gv: 6, goles_l: ["Federico Schneider (3)","Daniel Ojeda (3)","Jeremías Jerez","Fernando González","Thiago González"], goles_v: [] },
-        { fecha: "Fecha 2 - Apertura 2026", torneo: "futsalreserva", l: "San Francisco", v: "Huracán", gl: 2, gv: 0, goles_l: [], goles_v: [] }
-    ],
-    "Empleados de Comercio|Sporting": [
-        { fecha: "Fecha 2 - Torneo 2026", torneo: "sub15fem", l: "Sporting", v: "Empleados de Comercio", gl: 2, gv: 1, goles_l: [], goles_v: [] },
-    ],
-    "Juventud Unida|La Armonía": [
-        { fecha: "Fecha 2 - Torneo 2026", torneo: "sub15fem", l: "Juventud Unida", v: "La Armonía", gl: 6, gv: 1, goles_l: [], goles_v: [] },
-    ],
-    "Huracán|Olimpo": [
-        { fecha: "Fecha 2 - Torneo 2026", torneo: "sub15fem", l: "Huracán", v: "Olimpo", gl: 1, gv: 0, goles_l: [], goles_v: [] },
-    ],
-    "San Francisco|Tiro Federal": [
-        { fecha: "Fecha 2 - Torneo 2026", torneo: "sub15fem", l: "Tiro Federal", v: "San Francisco", gl: 1, gv: 1, goles_l: [], goles_v: [] },
+    "Empleados de Comercio|Tiro Federal": [
+        { fecha: "Fecha 1 - Apertura 2026 - 22 mar", torneo: "femenino", l: "Empleados de Comercio", v: "Tiro Federal", gl: 2, gv: 2, goles_l: ["Marianela Santana","Trinidad Rivas"], goles_v: ["Abril Sáenz (2)"]},
+        { fecha: "Fecha 1 - Apertura 2026", torneo: "reserva_femenino", l: "Empleados de Comercio", v: "Tiro Federal", gl: 4, gv: 0 },
+        { fecha: "Fecha 8 - Apertura 2026 - 17 may", torneo: "femenino", l: "Tiro Federal", v: "Empleados de Comercio", gl: 1, gv: 0, goles_l: ["Nahiara Tillería"], goles_v: [] },
+        { fecha: "Fecha 8 - Apertura 2026", torneo: "reserva_femenino", l: "Tiro Federal", v: "Empleados de Comercio", gl: 1, gv: 1 },
+        { fecha: "Fecha 1 - Clausura 2026 - 25 jul", torneo: "femenino", l: "Empleados de Comercio", v: "Tiro Federal", gl: 0, gv: 6, goles_l: [], goles_v: ["Guadalupe Rifo (2)","Abril Sáenz","Candela Salgado","Morena Juárez","Agostina Caballero"] },
+        { fecha: "Torneo 2026 - Fecha 4", torneo: "sub15fem", l: "Tiro Federal", v: "Empleados de Comercio", gl: 1, gv: 0 },
+        { fecha: "Torneo 2026 - Fecha 15", torneo: "sub15fem", l: "Empleados de Comercio", v: "Tiro Federal", gl: 0, gv: 0 },
     ],
     "Liniers|Rosario PB": [
-        { fecha: "Fecha 1 - Clausura - 25/7/2026", torneo: "segundafemenino", l: "Liniers", v: "Rosario PB", gl: 1, gv: 1, goles_l: ["Carolina Díaz"], goles_v: ["Iara Schwab"] },
-        { fecha: "Fecha 1 - Clausura 2026", torneo: "reserva_segundafemenino", l: "Liniers", v: "Rosario PB", gl: 3, gv: 1},
-    ],
-    "Huracán|Liniers": [
-        { fecha: "Final Extra - Apertura - 26/07/2026", torneo: "oficial", l: "Huracán", v: "Liniers", gl: 2, gv: 0, goles_l: ["Iván Aguadiak","Brian Scalco"], goles_v: [] },
+        { fecha: "Fecha 8 - Torneo 2026 - 16 may", torneo: "segundafemenino", l: "Liniers", v: "Rosario PB", gl: 2, gv: 0, goles_l: ["Paulina Acevedo","Iara Schwab"], goles_v: [] },
+        { fecha: "Fecha 8 - Torneo 2026", torneo: "reserva_segundafemenino", l: "Liniers", v: "Rosario PB", gl: 5, gv: 1 },
+        { fecha: "Fecha 17 - Torneo 2026 - 25 jul", torneo: "segundafemenino", l: "Rosario PB", v: "Liniers", gl: 1, gv: 1, goles_l: ["Carolina Díaz"], goles_v: ["Iara Schwab"] },
+        { fecha: "Fecha 17 - Torneo 2026", torneo: "reserva_segundafemenino", l: "Rosario PB", v: "Liniers", gl: 1, gv: 3 },
     ],
     "Olimpo|San Francisco": [
-        { fecha: "Fecha 17 - 2°Femenino - 26/07/2026", torneo: "segundafemenino", l: "Olimpo", v: "San Francisco", gl: 0, gv: 4, goles_l: [], goles_v: ["Jazmín Ríos (2)","Morena Barzola","Ariana Adassus"] },
+        { fecha: "Fecha 8 - Torneo 2026 - 17 may", torneo: "segundafemenino", l: "San Francisco", v: "Olimpo", gl: 4, gv: 0, goles_l: ["Rocío de Mirta (2)","Ariana Adassus","Julieta Coronel"], goles_v: [] },
+        { fecha: "Fecha 17 - Torneo 2026 - 25 jul", torneo: "segundafemenino", l: "Olimpo", v: "San Francisco", gl: 0, gv: 4, goles_l: [], goles_v: ["Jazmín Ríos (2)","Morena Barzola","Ariana Adassus"] },
     ],
     "Estrella de Oro|Pacífico (C)": [
-        { fecha: "Fecha 17 - 2°Femenino - 26/07/2026", torneo: "segundafemenino", l: "Estrella de Oro", v: "Pacífico (C)", gl: 3, gv: 0, goles_l: ["Luana Anfossi","Sabrina Genchi","Camila Guenchual"], goles_v: [] },
+        { fecha: "Fecha 8 - Torneo 2026 - 17 may", torneo: "segundafemenino", l: "Pacífico (C)", v: "Estrella de Oro", gl: 0, gv: 1, goles_l: [], goles_v: ["Constanza Franco"] },
+        { fecha: "Fecha 17 - Torneo 2026 - 25 jul", torneo: "segundafemenino", l: "Estrella de Oro", v: "Pacífico (C)", gl: 3, gv: 0, goles_l: ["Luana Anfossi","Sabrina Genchi","Camila Guenchual"], goles_v: [] },
+        { fecha: "Torneo 2026 - Fecha 8", torneo: "sub15fem", l: "San Francisco", v: "Olimpo", gl: 1, gv: 0 },
+    ],
+    "Huracán|Petroquímicos": [
+        { fecha: "Fecha 8 - Torneo 2026 - 17 may", torneo: "segundafemenino", l: "Petroquímicos", v: "Huracán", gl: 1, gv: 1, goles_l: ["Renata Segovia"], goles_v: ["Keila Iglesias"] },
+        { fecha: "Fecha 8 - Torneo 2026", torneo: "reserva_segundafemenino", l: "Petroquímicos", v: "Huracán", gl: 1, gv: 0 },
+        { fecha: "Fecha 17 - Torneo 2026 - 25 jul", torneo: "segundafemenino", l: "Huracán", v: "Petroquímicos", gl: 0, gv: 3, goles_l: [], goles_v: ["Renata Segovia","Mía Carranza","Paola Vallejos"] },
     ],
     "Olimpo|Santamarina": [
-        { fecha: "Fecha 18 - Ronda 1 - Federal A - 26/07/2026", torneo: "federala", l: "Olimpo", v: "Santamarina", gl: 2, gv: 0, goles_l: ["Marcelo Olivera","Brian Guille"], goles_v: [] },
+        { fecha: "Fecha 9 - Fase inicial - 17 may 2026", torneo: "federala", l: "Santamarina", v: "Olimpo", gl: 0, gv: 0, goles_l: ["Marcelo Olivera","Brian Guille"], goles_v: [] },
+        { fecha: "Fecha 18 - Fase inicial - 26 jul 2026", torneo: "federala", l: "Olimpo", v: "Santamarina", gl: 2, gv: 0, goles_l: ["Marcelo Olivera","Brian Guille"], goles_v: [] },
     ],
     "Sol de Mayo|Villa Mitre": [
-        { fecha: "Fecha 18 - Ronda 1 - Federal A - 26/07/2026", torneo: "federala", l: "Sol de Mayo", v: "Villa Mitre", gl: 3, gv: 3, goles_l: ["Santiago Jara","Kevin Pereira","Editson Córdoba"], goles_v: ["Marcos Escobar","Víctor Ayala","Santiago Gómez"] },
+        { fecha: "Fecha 9 - Fase inicial - 17 may 2026", torneo: "federala", l: "Villa Mitre", v: "Sol de Mayo", gl: 2, gv: 1, goles_l: ["Enzo González","Thiago Pérez"], goles_v: ["Kevin Pereyra"] },
+        { fecha: "Fecha 18 - Fase inicial - 26 jul 2026", torneo: "federala", l: "Sol de Mayo", v: "Villa Mitre", gl: 3, gv: 3, goles_l: ["Santiago Jara","Kevin Pereira","Editson Córdoba"], goles_v: ["Marcos Escobar","Víctor Ayala","Santiago Gómez"] },
     ],
     "Huracán|Olimpo": [
-        { fecha: "32vos de final - Copa Argentina 2026", torneo: "copaargentina", l: "Olimpo", v: "Huracán", gl: 1, gv: 2, goles_l: ["Enzo Coacci"], goles_v: ["Oscar Romero","Lucas Blondel"] },
+        { fecha: "Torneo 2026 - 32vos - 29 mar 2026", torneo: "copaargentina", l: "Olimpo", v: "Huracán", gl: 2, gv: 0, goles_l: ["Enzo Coacci"], goles_v: ["Oscar Romero","Lucas Blondel"] },
+    ],
+    "Huracán|Libertad": [
+        { fecha: "Fecha 1 - Apertura 2026 - 15 mar 2026", torneo: "oficial", l: "Libertad", v: "Huracán", gl: 3, gv: 1, goles_l: ["Luciano Trídico","Mauro Sabatini","Matías Mayer"], goles_v: ["Iván Agudiak"] },
+        { fecha: "Fecha 1 - Apertura 2026", torneo: "reserva_oficial", l: "Libertad", v: "Huracán", gl: 2, gv: 2 },
+        { fecha: "Fecha 8 - Apertura 2026 - 16 may 2026", torneo: "oficial", l: "Huracán", v: "Libertad", gl: 3, gv: 1, goles_l: ["Iván Agudiak","Brian Scalco","Gianluca Falcioni (e/c)"], goles_v: ["Franco Pane"] },
+        { fecha: "Fecha 8 - Apertura 2026", torneo: "reserva_oficial", l: "Huracán", v: "Libertad", gl: 0, gv: 4 },
+        { fecha: "Apertura 2026 - Fecha 6", torneo: "senior", l: "Huracán", v: "Libertad", gl: 3, gv: 2, goles_l: ["César Panduro (2)","Omar Rivas"], goles_v: ["Mariano Orsi","Nicolás Herrera"] },
+    ],
+    "La Armonía|Sporting": [
+        { fecha: "Fecha 1 - Apertura 2026 - 15 mar 2026", torneo: "oficial", l: "Sporting", v: "La Armonía", gl: 1, gv: 2, goles_l: ["Jonathan Font"], goles_v: ["Matías Malmoria (2)"] },
+        { fecha: "Fecha 1 - Apertura 2026", torneo: "reserva_oficial", l: "Sporting", v: "La Armonía", gl: 1, gv: 1 },
+        { fecha: "Fecha 8 - Apertura 2026 - 17 may 2026", torneo: "oficial", l: "La Armonía", v: "Sporting", gl: 3, gv: 1, goles_l: ["Enrique Narvay","Ezequiel Intrevado","Alex Muzi"], goles_v: ["Jonathan Font"] },
+        { fecha: "Fecha 8 - Apertura 2026", torneo: "reserva_oficial", l: "La Armonía", v: "Sporting", gl: 1, gv: 1 },
+        { fecha: "Fecha 1 - Clausura 2026 - 02 ago 2026", torneo: "oficial", l: "Sporting", v: "La Armonía", gl: 2, gv: 0, goles_l: ["Jonathan Font (2)"], goles_v: [] },
+        { fecha: "Fecha 6 - Apertura 2026 - 26 abr 2026", torneo: "femenino", l: "La Armonía", v: "Sporting", gl: 1, gv: 2, goles_l: ["Lara Saibene"], goles_v: ["Rocío Troncoso","Sofía Mattos"] },
+        { fecha: "Fecha 6 - Apertura 2026", torneo: "reserva_femenino", l: "La Armonía", v: "Sporting", gl: 2, gv: 2 },
+        { fecha: "Fecha 13 - Apertura 2026 - 20 jun 2026", torneo: "femenino", l: "Sporting", v: "La Armonía", gl: 2, gv: 1, goles_l: ["Alexia Villani","Sofía Mattos"], goles_v: ["Aixa Bruzzone"] },
+        { fecha: "Fecha 13 - Apertura 2026", torneo: "reserva_femenino", l: "Sporting", v: "La Armonía", gl: 1, gv: 0 },
+    ],
+    "Bella Vista|San Francisco": [
+        { fecha: "Fecha 1 - Apertura 2026 - 15 mar 2026", torneo: "oficial", l: "Bella Vista", v: "San Francisco", gl: 3, gv: 1, goles_l: ["Lucas Martínez","Alexis Vega","Gabino Bellegia"], goles_v: ["Juan Romero"] },
+        { fecha: "Fecha 1 - Apertura 2026", torneo: "reserva_oficial", l: "Bella Vista", v: "San Francisco", gl: 2, gv: 2 },
+        { fecha: "Fecha 8 - Apertura 2026 - 16 may 2026", torneo: "oficial", l: "San Francisco", v: "Bella Vista", gl: 2, gv: 1, goles_l: ["Claudio  Castiglioni","Sebastián Leguiza"], goles_v: ["Lucas Martínez"] },
+        { fecha: "Fecha 8 - Apertura 2026", torneo: "reserva_oficial", l: "San Francisco", v: "Bella Vista", gl: 4, gv: 0 },
+        { fecha: "Fecha 1 - Clausura 2026 - 02 ago 2026", torneo: "oficial", l: "Bella Vista", v: "San Francisco", gl: 1, gv: 2, goles_l: ["Rodrigo Gómez"], goles_v: ["Tomás Alfaro","Federico Pinedo"] },
+        { fecha: "Apertura 2026 - Fecha 8", torneo: "senior", l: "Bella Vista", v: "San Francisco", gl: 0, gv: 0, goles_l: [], goles_v: [] },
+        { fecha: "Torneo 2026 - Fecha 10", torneo: "sub15fem", l: "San Francisco", v: "Bella Vista", gl: 0, gv: 4 },
+    ],
+    "Liniers|Villa Mitre": [
+        { fecha: "Fecha 1 - Apertura 2026 - 15 mar 2026", torneo: "oficial", l: "Villa Mitre", v: "Liniers", gl: 2, gv: 0, goles_l: ["Santiago Gómez","Juan Acosta"], goles_v: [] },
+        { fecha: "Fecha 1 - Apertura 2026", torneo: "reserva_oficial", l: "Villa Mitre", v: "Liniers", gl: 0, gv: 1 },
+        { fecha: "Fecha 8 - Apertura 2026 - 16 may 2026", torneo: "oficial", l: "Liniers", v: "Villa Mitre", gl: 1, gv: 1, goles_l: ["Thiago Uicala (e/c)"], goles_v: ["Constanzo Palacio"] },
+        { fecha: "Fecha 8 - Apertura 2026", torneo: "reserva_oficial", l: "Liniers", v: "Villa Mitre", gl: 1, gv: 2 },
+        { fecha: "Apertura 2026 - Cuartos de final", torneo: "futsal", l: "Villa Mitre", v: "Liniers", gl: 4, gv: 3 },
+        { fecha: "Torneo 2026 - Fecha 2", torneo: "sub15fem", l: "Villa Mitre", v: "Liniers", gl: 0, gv: 5 },
+        { fecha: "Torneo 2026 - Fecha 13", torneo: "sub15fem", l: "Liniers", v: "Villa Mitre", gl: 5, gv: 0 },
+        { fecha: "Fecha 1 - Clausura 2026 - 02 ago 2026", torneo: "oficial", l: "Liniers", v: "Villa Mitre", gl: 6, gv: 1, goles_l: ["Valentín Bertoni (2)","Ramiro Ullmann (2)","Enzo Chamorro","Nicolás Malerba"], goles_v: ["Ayrton Matélica"] },
+        { fecha: "Apertura 2026 - Fecha 10", torneo: "futsal", l: "Villa Mitre", v: "Liniers", gl: 6, gv: 4 },
+        { fecha: "Apertura 2026 - Fecha 10", torneo: "futsalreserva", l: "Villa Mitre", v: "Liniers", gl: 2, gv: 2 },
+    ],
+    "Olimpo|Pacífico BB": [
+        { fecha: "Fecha 1 - Apertura 2026 - 15 mar 2026", torneo: "promocional", l: "Pacífico BB", v: "Olimpo", gl: 0, gv: 0 },
+        { fecha: "Fecha 8 - Apertura 2026 - 16 may 2026", torneo: "promocional", l: "Olimpo", v: "Pacífico BB", gl: 2, gv: 2, goles_l: ["Nahuel Colmenares (2)"], goles_v: ["Leandro Martínez","Marcos Montenegro"] },
+        { fecha: "Fecha 1 - Apertura 2026", torneo: "reserva_promocional", l: "Pacífico BB", v: "Olimpo", gl: 1, gv: 3 },
+        { fecha: "Fecha 8 - Apertura 2026", torneo: "reserva_promocional", l: "Pacífico BB", v: "Olimpo", gl: 0, gv: 2, goles_l: [], goles_v: ["Valentín Quidel","Santiago Llanos"] },
+        { fecha: "Fecha 1 - Clausura 2026 - 01 ago 2026", torneo: "promocional", l: "Pacífico BB", v: "Olimpo", gl: 0, gv: 0 },
+    ],
+    "Pacífico (C)|Sansinena": [
+        { fecha: "Fecha 1 - Apertura 2026 - 15 mar 2026", torneo: "promocional", l: "Sansinena", v: "Pacífico (C)", gl: 3, gv: 3, goles_l: ["Pablo González","Valentín Moral","Manuel Stortini"], goles_v: ["Gianni Ferrari (2)","Emanuel López"] },
+        { fecha: "Fecha 8 - Apertura 2026 - 17 may 2026", torneo: "promocional", l: "Pacífico (C)", v: "Sansinena", gl: 1, gv: 2, goles_l: ["Jonathan Fidalgo"], goles_v: ["Manuel Stortini","Diego Romero"] },
+        { fecha: "Fecha 1 - Apertura 2026", torneo: "reserva_promocional", l: "Sansinena", v: "Pacífico (C)", gl: 1, gv: 0 },
+        { fecha: "Fecha 8 - Apertura 2026", torneo: "reserva_promocional", l: "Pacífico (C)", v: "Sansinena", gl: 2, gv: 3 },
+        { fecha: "Fecha 1 - Clausura 2026 - 02 ago 2026", torneo: "promocional", l: "Sansinena", v: "Pacífico (C)", gl: 1, gv: 1, goles_l: ["Gerónimo Fernández"], goles_v: ["Marcelo Soto"] },
+        { fecha: "Apertura 2026 - Fecha 7", torneo: "senior", l: "Sansinena", v: "Pacífico (C)", gl: 1, gv: 3, goles_l: ["Emiliano Jofré"], goles_v: ["Leandro Duelle (2)","Esteban Angelini"] },
+        { fecha: "Apertura 2026 - Cuartos de Final", torneo: "senior", l: "Pacífico (C)", v: "Sansinena", gl: 4, gv: 1, goles_l: ["Fabián Soto (2)","Leandro Duelle","Esteban Angelini"], goles_v: ["Cristian González"] },
+    ],
+    "Dublin|Rosario PB": [
+        { fecha: "Fecha 1 - Apertura 2026 - 18 mar 2026", torneo: "promocional", l: "Dublin", v: "Rosario PB", gl: 1, gv: 1, goles_l: ["Marcos Pérez"], goles_v: ["Sebastián Mendoza"] },
+        { fecha: "Fecha 8 - Apertura 2026 - 16 may 2026", torneo: "promocional", l: "Rosario PB", v: "Dublin", gl: 2, gv: 0, goles_l: ["Pedro Fernández","Agustín Grippaudo"], goles_v: [] },
+        { fecha: "Fecha 1 - Apertura 2026", torneo: "reserva_promocional", l: "Dublin", v: "Rosario PB", gl: 0, gv: 1 },
+        { fecha: "Fecha 8 - Apertura 2026", torneo: "reserva_promocional", l: "Rosario PB", v: "Dublin", gl: 2, gv: 1 },
+        { fecha: "Fecha 1 - Clausura 2026 - 01 ago 2026", torneo: "promocional", l: "Rosario PB", v: "Dublin", gl: 1, gv: 0, goles_l: ["Nicolás Ovando"], goles_v: [] },
+    ],
+    "Comercial|Tiro Federal": [
+        { fecha: "Fecha 1 - Apertura 2026 - 18 mar 2026", torneo: "promocional", l: "Tiro Federal", v: "Comercial", gl: 0, gv: 1, goles_l: [], goles_v: ["Diego Cuevas (e/c)"] },
+        { fecha: "Fecha 8 - Apertura 2026 - 16 may 2026", torneo: "promocional", l: "Comercial", v: "Tiro Federal", gl: 0, gv: 0, goles_l: [], goles_v: [] },
+        { fecha: "Fecha 1 - Apertura 2026", torneo: "reserva_promocional", l: "Tiro Federal", v: "Comercial", gl: 2, gv: 2 },
+        { fecha: "Fecha 8 - Apertura 2026", torneo: "reserva_promocional", l: "Comercial", v: "Tiro Federal", gl: 2, gv: 2 },
+        { fecha: "Final - Apertura 2026 - 11 jul 2026", torneo: "promocional", l: "Comercial", v: "Tiro Federal", gl: 0, gv: 0, pen_l:3, pen_v:0 },
+        { fecha: "Semifinales - Apertura 2026", torneo: "reserva_promocional", l: "Tiro Federal", v: "Comercial", gl: 2, gv: 0 },
+        { fecha: "Apertura 2026 - Fecha 5", torneo: "senior", l: "Tiro Federal", v: "Comercial", gl: 2, gv: 2, goles_l: ["Juan José Dietz","Mauricio Oldani"], goles_v: ["Luciano Bellini (e/c)","Jonathan Bravo de Laguna"] },
+        { fecha: "Apertura 2026 - Octavos de Final", torneo: "senior", l: "Comercial", v: "Tiro Federal", gl: 2, gv: 0, goles_l: ["Cristian Rodríguez","Maximiliano Casas"], goles_v: [] },
+        { fecha: "Fecha 1 - Clausura 2026 - 01 ago 2026", torneo: "promocional", l: "Tiro Federal", v: "Comercial", gl: 4, gv: 0, goles_l: ["Agustín Restiffo","Franco Fraysse","Mariano McCoubrey","Joaquín Laborde"], goles_v: [] },
+        { fecha: "Apertura 2026 - Fecha 12", torneo: "futsal", l: "Tiro Federal", v: "Comercial", gl: 6, gv: 2 },
+        { fecha: "Apertura 2026 - Fecha 12", torneo: "futsalreserva", l: "Tiro Federal", v: "Comercial", gl: 2, gv: 2 },
+    ],
+    "Alvarado|Olimpo": [
+        { fecha: "Fecha 1 - Fase inicial - 22 mar 2026", torneo: "federala", l: "Olimpo", v: "Alvarado", gl: 2, gv: 0, goles_l: ["Martín Ferreyra","Diego Ramírez"], goles_v: [] },
+        { fecha: "Fecha 10 - Fase inicial - 24 may 2026", torneo: "federala", l: "Alvarado", v: "Olimpo", gl: 2, gv: 0, goles_l: ["Santiago Gutiérrez (2)"], goles_v: [] },
+    ],
+    "Kimberley|Villa Mitre": [
+        { fecha: "Fecha 1 - Fase inicial - 22 mar 2026", torneo: "federala", l: "Kimberley", v: "Villa Mitre", gl: 1, gv: 0, goles_l: ["Rodrigo Ríos"], goles_v: [] },
+        { fecha: "Fecha 10 - Fase inicial - 25 may 2026", torneo: "federala", l: "Villa Mitre", v: "Kimberley", gl: 0, gv: 0, goles_l: [], goles_v: [] },
+    ],
+    "Estrella de Oro|Liniers": [
+        { fecha: "Fecha 1 - Torneo 2026 - 24 mar", torneo: "segundafemenino", l: "Liniers", v: "Estrella de Oro", gl: 4, gv: 1, goles_l: ["Aldana Arce","Lola Podestá","Paulina Acevedo","Cindy Paillamilla"], goles_v: ["Natalia Ríos"] },
+        { fecha: "Fecha 1 - Torneo 2026", torneo: "reserva_segundafemenino", l: "Liniers", v: "Estrella de Oro", gl: 3, gv: 1 },
+        { fecha: "Fecha 10 - Torneo 2026", torneo: "reserva_segundafemenino", l: "Estrella de Oro", v: "Liniers", gl: 1, gv: 1 },
+        { fecha: "Fecha 10 - Torneo 2026 - 30 may", torneo: "segundafemenino", l: "Estrella de Oro", v: "Liniers", gl: 0, gv: 2, goles_l: [], goles_v: ["Paulina Acevedo","Isabella Pezzutti"] },
+        { fecha: "Fecha 19 - Torneo 2026 - 09 ago", torneo: "segundafemenino", l: "Estrella de Oro", v: "Liniers", gl: 0, gv: 1, goles_l: [], goles_v: ["Paz Marino"] },
+        { fecha: "Fecha 19 - Torneo 2026", torneo: "reserva_segundafemenino", l: "Estrella de Oro", v: "Liniers", gl: 2, gv: 4 },
+    ],
+    "Olimpo|Rosario": [
+        { fecha: "Fecha 4 - Apertura 2026 - 03 abr 2026", torneo: "oficial", l: "Olimpo", v: "Rosario PB", gl: 2, gv: 2, goles_l: ["Nahuel Colmenares (2)"], goles_v: ["Ezequiel Katz","Agustín Grippaudo"] },
+        { fecha: "Fecha 4 - Apertura 2026", torneo: "reserva_oficial", l: "Olimpo", v: "Rosario PB", gl: 1, gv: 0 },
+        { fecha: "Fecha 11 - Apertura 2026 - 06 jun 2026", torneo: "oficial", l: "Rosario PB", v: "Olimpo", gl: 1, gv: 0, goles_l: ["Pedro Fernández"], goles_v: [] },
+        { fecha: "Fecha 11 - Apertura 2026", torneo: "reserva_oficial", l: "Rosario PB", v: "Olimpo", gl: 1, gv: 0 },
+        { fecha: "Fecha 1 - Torneo 2026 - 22 mar", torneo: "segundafemenino", l: "Rosario PB", v: "Olimpo", gl: 5, gv: 1, goles_l: ["Bárbara Aguirre","Julieta Díaz","Celeste Medina","Juliana Ruiz","Juliana Ruiz"], goles_v: ["Lourdes Antonietti"] },
+        { fecha: "Fecha 10 - Torneo 2026 - 30 may", torneo: "segundafemenino", l: "Olimpo", v: "Rosario PB", gl: 0, gv: 3, goles_l: [], goles_v: ["Bárbara Aguirre","Celeste Medina","Ayelén Zeballos"] },
+        { fecha: "Semifinales - Apertura 2026", torneo: "reserva_promocional", l: "Olimpo", v: "Rosario PB", gl: 0, gv: 0, pen_l:3, pen_v:1 },
+        { fecha: "Final Extra - Apertura 2026", torneo: "reserva_promocional", l: "Olimpo", v: "Rosario PB", gl: 2, gv: 0 },
+        { fecha: "Fecha 19 - Torneo 2026 - 09 ago", torneo: "segundafemenino", l: "Olimpo", v: "Rosario PB", gl: 2, gv: 7, goles_l: ["Sofía Cáceres","Mía Cibelli"], goles_v: ["Celeste Medina  (2)","Ayelén Zeballos (2)","Alejandra Sturtz","Julieta Díaz","Valentina Cavalli"] },
+    ],
+    "Pacífico (C)|Petroquímicos": [
+        { fecha: "Fecha 1 - Torneo 2026 - 24 mar", torneo: "segundafemenino", l: "Pacífico (C)", v: "Petroquímicos", gl: 1, gv: 5, goles_l: ["Bianca Pascualini"], goles_v: ["Nicole Montenegro (2)","Paola Vallejos","Renata Segovia","Lucía Vallejos"] },
+        { fecha: "Fecha 10 - Torneo 2026 - 20 may", torneo: "segundafemenino", l: "Petroquímicos", v: "Pacífico (C)", gl: 4, gv: 0, goles_l: ["Paula Rodríguez (3)","Nicole Montenegro"], goles_v: [] },
+        { fecha: "Fecha 19 - Torneo 2026 - 09 ago", torneo: "segundafemenino", l: "Petroquímicos", v: "Pacífico (C)", gl: 3, gv: 0, goles_l: ["Cintia Saavedra","Lidia Espinoza","Romina Zarza"], goles_v: [] },
+    ],
+    "San Francisco|Sansinena": [
+        { fecha: "Fecha 1 - Torneo 2026 - 23 mar", torneo: "segundafemenino", l: "San Francisco", v: "Sansinena", gl: 5, gv: 2, goles_l: ["Clara Iturrioz (2)","Florencia Sorbellini","Ariana Adassus","Julieta Coronel"], goles_v: ["Micaela Gómez","Nicola Huenupi"] },
+        { fecha: "Fecha 1 - Torneo 2026", torneo: "reserva_segundafemenino", l: "San Francisco", v: "Sansinena", gl: 4, gv: 1 },
+        { fecha: "Fecha 10 - Torneo 2026 - 30 mar", torneo: "segundafemenino", l: "Sansinena", v: "San Francisco", gl: 1, gv: 6, goles_l: ["Daniela Abello"], goles_v: ["Milagros Opazo (4)","Florencia Sorbellini","Milagros Fernández"] },
+        { fecha: "Fecha 10 - Torneo 2026", torneo: "reserva_segundafemenino", l: "Sansinena", v: "San Francisco", gl: 0, gv: 5 },
+        { fecha: "Apertura 2026 - Fecha 2", torneo: "senior", l: "Libertad", v: "Sansinena", gl: 1, gv: 1, goles_l: ["Emiliano Jofré"], goles_v: ["Patricio Muñoz"] },
+    ],
+    "Dep. Futsal|Villa Mitre": [
+        { fecha: "Apertura 2026 - Fecha 1", torneo: "futsal", l: "Dep. Futsal", v: "Villa Mitre", gl: 2, gv: 4 },
+        { fecha: "Apertura 2026 - Fecha 1", torneo: "reservafutsal", l: "Dep. Futsal", v: "Villa Mitre", gl: 2, gv: 6 },
+    ],
+    "La Esperanza|Pacífico BB": [
+        { fecha: "Apertura 2026 - Fecha 1", torneo: "futsal", l: "Pacífico BB", v: "La Esperanza", gl: 2, gv: 6 },
+        { fecha: "Apertura 2026 - Fecha 1", torneo: "reservafutsal", l: "Pacífico BB", v: "La Esperanza", gl: 6, gv: 6 },
+        { fecha: "Clausura 2026 - Fecha 1", torneo: "futsal", l: "La Esperanza", v: "Pacífico BB", gl: 5, gv: 2 },
+        { fecha: "Clausura 2026 - Fecha 1", torneo: "reservafutsal", l: "La Esperanza", v: "Pacífico BB", gl: 2, gv: 0 },
+    ],
+    "Huracán|Petroquímicos": [
+        { fecha: "Apertura 2026 - Fecha 1", torneo: "futsal", l: "Huracán", v: "Petroquímicas", gl: 3, gv: 10 },
+        { fecha: "Apertura 2026 - Fecha 1", torneo: "reservafutsal", l: "Huracán", v: "Petroquímicos", gl: 0, gv: 8 },
+    ],
+    "Dublin|Los 3 Chiflados": [
+        { fecha: "Apertura 2026 - Fecha 1", torneo: "futsal", l: "Dublin", v: "Los 3 Chiflados", gl: 6, gv: 2 },
+        { fecha: "Apertura 2026 - Fecha 1", torneo: "reservafutsal", l: "Dublin", v: "Los 3 Chiflados", gl: 0, gv: 7 },
+        { fecha: "Clausura 2026 - Fecha 1", torneo: "reservafutsal", l: "Los 3 Chiflados", v: "Dublin", gl: 5, gv: 1 },
+        { fecha: "Apertura 2026 - Semifinales", torneo: "reservafutsal", l: "Los 3 Chiflados", v: "Dublin", gl: 7, gv: 2 },
+    ],
+    "La Estación|Tiro Federal": [
+        { fecha: "Apertura 2026 - Fecha 1", torneo: "futsal", l: "La Estación", v: "Tiro Federal", gl: 7, gv: 1 },
+        { fecha: "Apertura 2026 - Fecha 1", torneo: "reservafutsal", l: "La Estación", v: "Tiro Federal", gl: 1, gv: 1 },
+        { fecha: "Clausura 2026 - Fecha 1", torneo: "futsal", l: "Tiro Federal", v: "La Estación", gl: 3, gv: 1 },
+        { fecha: "Clausura 2026 - Fecha 1", torneo: "reservafutsal", l: "Tiro Federal", v: "La Estación", gl: 3, gv: 1 },
+    ],
+    "Liniers|San Francisco": [
+        { fecha: "Apertura 2026 - Fecha 1", torneo: "futsal", l: "Liniers", v: "San Francisco", gl: 2, gv: 2 },
+        { fecha: "Apertura 2026 - Fecha 1", torneo: "reservafutsal", l: "Liniers", v: "San Francisco", gl: 5, gv: 1 },
+        { fecha: "Torneo 2026 - Fecha 4", torneo: "sub15fem", l: "San Francisco", v: "Liniers", gl: 0, gv: 13 },
+        { fecha: "Torneo 2026 - Fecha 15", torneo: "sub15fem", l: "Liniers", v: "San Francisco", gl: 7, gv: 0 },
+        { fecha: "Clausura 2026 - Fecha 1", torneo: "futsal", l: "San Francisco", v: "Liniers", gl: 4, gv: 0 },
+        { fecha: "Clausura 2026 - Fecha 1", torneo: "reservafutsal", l: "San Francisco", v: "Liniers", gl: 5, gv: 0 },
+        { fecha: "Fecha 7 - Apertura 2026 - 2 may 2026", torneo: "oficial", l: "Liniers", v: "San Francisco", gl: 2, gv: 0, goles_l: ["Massimo Monti (2)"], goles_v: [] },
+        { fecha: "Fecha 7 - Apertura 2026", torneo: "reserva_oficial", l: "Liniers", v: "San Francisco", gl: 0, gv: 0 },
+        { fecha: "Fecha 14 - Apertura 2026 - 27 jun 2026", torneo: "oficial", l: "San Francisco", v: "Liniers", gl: 0, gv: 1, goles_l: [], goles_v: ["Massimo Monti"] },
+        { fecha: "Fecha 14 - Apertura 2026", torneo: "reserva_oficial", l: "San Francisco", v: "Liniers", gl: 2, gv: 0 },
+    ],
+    "Catamarca|Comercial": [
+        { fecha: "Apertura 2026 - Fecha 1", torneo: "futsal", l: "Catamarca", v: "Comercial", gl: 4, gv: 4 },
+        { fecha: "Apertura 2026 - Fecha 1", torneo: "reservafutsal", l: "Catamarca", v: "Comercial", gl: 6, gv: 5 },
+        { fecha: "Fecha 1 - Apertura 2026", torneo: "futsal", l: "Catamarca", v: "Comercial", gl: 4, gv: 4 },
+        { fecha: "Fecha 1 - Apertura 2026", torneo: "futsalreserva", l: "Catamarca", v: "Comercial", gl: 6, gv: 5 }
+    ],
+    "Bella Vista|Pacífico (C)": [
+        { fecha: "Apertura 2026 - Fecha 1", torneo: "senior", l: "Bella Vista", v: "Pacífico (C)", gl: 0, gv: 2, goles_l: [], goles_v: ["Fabián Soto","Leandro Duelle"] },
+        { fecha: "Apertura 2026 - Semifinales", torneo: "senior", l: "Bella Vista", v: "Pacífico (C)", gl: 0, gv: 2, goles_l: [], goles_v: ["Esteban Angelini","Santiago Martín"] },
+    ],
+    "Comercial|Huracán": [
+        { fecha: "Apertura 2026 - Fecha 4", torneo: "futsal", l: "Comercial", v: "Huracán", gl: 7, gv: 2 },
+        { fecha: "Apertura 2026 - Fecha 4", torneo: "reservafutsal", l: "Comercial", v: "Huracán", gl: 2, gv: 3 },
+        { fecha: "Apertura 2026 - Fecha 1", torneo: "senior", l: "Comercial", v: "Huracán", gl: 1, gv: 3, goles_l: ["Sebastián Aristi"], goles_v: ["César Panduro (2)","Sebastián Faillá"] },
+    ],
+    "Pacífico BB|Sansinena": [
+        { fecha: "Fecha 4 - Apertura 2026 - 03 abr 2026", torneo: "oficial", l: "Pacífico BB", v: "Sansinena", gl: 1, gv: 3, goles_l: ["Agustín Guerra"], goles_v: ["Manuel Stortini","Pablo González","Valentín Moral"] },
+        { fecha: "Fecha 4 - Apertura 2026", torneo: "reserva_oficial", l: "Pacífico BB", v: "Sansinena", gl: 2, gv: 0 },
+        { fecha: "Fecha 11 - Apertura 2026 - 07 jun 2026", torneo: "oficial", l: "Sansinena", v: "Pacífico BB", gl: 1, gv: 0, goles_l: ["Valentín Moral"], goles_v: [] },
+        { fecha: "Fecha 11 - Apertura 2026", torneo: "reserva_oficial", l: "Sansinena", v: "Pacífico BB", gl: 2, gv: 3 },
+        { fecha: "Apertura 2026 - Fecha 1", torneo: "senior", l: "Sansinena", v: "Pacífico BB", gl: 0, gv: 1, goles_l: [], goles_v: ["Ramón López"] },
+        { fecha: "Apertura 2026 - Octavos de Final", torneo: "senior", l: "Sansinena", v: "Pacífico BB", gl: 1, gv: 1, goles_l: ["Emiliano Jofré"], goles_v: ["Carlos Bustos"] },
+    ],
+    "Libertad|Tiro Federal": [
+        { fecha: "Apertura 2026 - Fecha 1", torneo: "senior", l: "Tiro Federal", v: "Libertad", gl: 2, gv: 2, goles_l: ["Juan José Dietz (2)"], goles_v: ["Mariano Moreno","Nicolás Herrera"] },
+        { fecha: "Torneo 2026 - Fecha 5", torneo: "sub15fem", l: "Libertad", v: "Tiro Federal", gl: 0, gv: 2 },
+        { fecha: "Fecha 6 - Apertura 2026 - 25 abr 2026", torneo: "femenino", l: "Libertad", v: "Tiro Federal", gl: 0, gv: 1, goles_l: [], goles_v: ["Morena Juárez"] },
+        { fecha: "Fecha 6 - Apertura 2026", torneo: "reserva_femenino", l: "Libertad", v: "Tiro Federal", gl: 0, gv: 2 },
+        { fecha: "Fecha 13 - Apertura 2026 - 20 jun 2026", torneo: "femenino", l: "Tiro Federal", v: "Libertad", gl: 4, gv: 1, goles_l: ["Abril Sáenz (2)","Daiana Uzdinger","Camila Odriozola"], goles_v: ["Julieta Banega"] },
+        { fecha: "Fecha 13 - Apertura 2026", torneo: "reserva_femenino", l: "Tiro Federal", v: "Libertad", gl: 4, gv: 0 },
+    ],
+    "San Francisco|Sporting": [
+        { fecha: "Fecha 3 - Apertura 2026 - 29 mar", torneo: "oficial", l: "Sporting", v: "San Francisco", gl: 1, gv: 1, goles_l: ["Jonathan Font"], goles_v: ["Jonathan Ramírez"]},
+        { fecha: "Fecha 3 - Apertura 2026", torneo: "reserva_oficial", l: "Sporting", v: "San Francisco", gl: 4, gv: 0},
+        { fecha: "Fecha 10 - Apertura 2026 - 31 may", torneo: "oficial", l: "San Francisco", v: "Sporting", gl: 1, gv: 0, goles_l: ["Juan Romero"], goles_v: []},
+        { fecha: "Fecha 10 - Apertura 2026", torneo: "reserva_oficial", l: "San Francisco", v: "Sporting", gl: 0, gv: 0},
+        { fecha: "Apertura 2026 - Fecha 1", torneo: "senior", l: "Sporting", v: "San Francisco", gl: 1, gv: 0, goles_l: ["Gabriel Bernengo"], goles_v: [] },
+        { fecha: "Torneo 2026 - Fecha 11", torneo: "sub15fem", l: "Sporting", v: "San Francisco", gl: 1, gv: 1 },
+    ],
+    "La Armonía|Sporting": [
+        { fecha: "Torneo 2026 - Fecha 1", torneo: "sub15fem", l: "La Armonía", v: "Sporting", gl: 3, gv: 0 },
+        { fecha: "Torneo 2026 - Fecha 12", torneo: "sub15fem", l: "Sporting", v: "La Armonía", gl: 1, gv: 0 },
+    ],
+    "Bella Vista|Empleados de Comercio": [
+        { fecha: "Torneo 2026 - Fecha 1", torneo: "sub15fem", l: "Empleados de Comercio", v: "Bella Vista", gl: 0, gv: 4 },
+        { fecha: "Torneo 2026 - Fecha 12", torneo: "sub15fem", l: "Bella Vista", v: "Empleados de Comercio", gl: 8, gv: 0 },
+        { fecha: "Fecha 3 - Apertura 2026 - 05 abr", torneo: "femenino", l: "Empleados de Comercio", v: "Bella Vista", gl: 5, gv: 0, goles_l: ["Trinidad Rivas","Antonella Seri","Marianela Santana","Evelyn Alonso","Martina Silva"], goles_v: [] },
+        { fecha: "Fecha 3 - Apertura 2026", torneo: "reserva_femenino", l: "Empleados de Comercio", v: "Bella Vista", gl: 2, gv: 2 },
+        { fecha: "Fecha 10 - Apertura 2026 - 31 abr", torneo: "femenino", l: "Bella Vista", v: "Empleados de Comercio", gl: 1, gv: 2, goles_l: ["Martina Moleker"], goles_v: ["Marianela Santana","Dana Ramos"] },
+        { fecha: "Fecha 10 - Apertura 2026", torneo: "reserva_femenino", l: "Bella Vista", v: "Empleados de Comercio", gl: 0, gv: 0 },
+        { fecha: "Fecha 3 - Clausura 2026 - 09 ago", torneo: "femenino", l: "Empleados de Comercio", v: "Bella Vista", gl: 1, gv: 3, goles_l: [], goles_v: ["Antonia Prada","Mía Hernández","Rocío Castellano"] },
+    ],
+    "Tiro Federal|Villa Mitre": [
+        { fecha: "Fecha 1 - Apertura 2026 - 12 abr", torneo: "femenino", l: "Tiro Federal", v: "Villa Mitre", gl: 4, gv: 3, goles_l: ["Abril Sáenz (3)","Guadalupe Rifo"], goles_v: ["Sol Menéndez Perrone (2)","Morena Beiteleztn"] },
+        { fecha: "Fecha 1 - Apertura 2026", torneo: "reserva_femenino", l: "Tiro Federal", v: "Villa Mitre", gl: 2, gv: 1 },
+        { fecha: "Fecha 11 - Apertura 2026 - 07 jun", torneo: "femenino", l: "Villa Mitre", v: "Tiro Federal", gl: 1, gv: 1, goles_l: ["Sol Menéndez Perrone"], goles_v: ["Morena Juárez"] },
+        { fecha: "Fecha 11 - Apertura 2026", torneo: "reserva_femenino", l: "Villa Mitre", v: "Tiro Federal", gl: 0, gv: 2 },
+        { fecha: "Semifinales - Apertura 2026", torneo: "femenino", l: "Tiro Federal", v: "Villa Mitre", gl: 1, gv: 2, goles_l: ["Morena Juárez"], goles_v: ["Sol Menéndez Perrone","Morena Bouven"] },
+        { fecha: "Torneo 2026 - Fecha 1", torneo: "sub15fem", l: "Villa Mitre", v: "Tiro Federal", gl: 1, gv: 2 },
+        { fecha: "Torneo 2026 - Fecha 12", torneo: "sub15fem", l: "Tiro Federal", v: "Villa Mitre", gl: 2, gv: 2 },
+        { fecha: "Apertura 2026 - Fecha 2", torneo: "futsal", l: "Villa Mitre", v: "Tiro Federal", gl: 7, gv: 1 },
+        { fecha: "Apertura 2026 - Fecha 2", torneo: "reservafutsal", l: "Villa Mitre", v: "Tiro Federal", gl: 4, gv: 1 },
+        { fecha: "Clausura 2026 - Fecha 2", torneo: "futsal", l: "Tiro Federal", v: "Villa Mitre", gl: 4, gv: 5 },
+        { fecha: "Clausura 2026 - Fecha 2", torneo: "reservafutsal", l: "Tiro Federal", v: "Villa Mitre", gl: 1, gv: 3 },
+    ],
+    "Huracán|Libertad": [
+        { fecha: "Torneo 2026 - Fecha 1", torneo: "sub15fem", l: "Libertad", v: "Huracán", gl: 0, gv: 8 },
+        { fecha: "Torneo 2026 - Fecha 12", torneo: "sub15fem", l: "Huracán", v: "Libertad", gl: 1, gv: 0 },
+        { fecha: "Fecha 1 - Clausura 2026 - 02 ago 2026", torneo: "oficial", l: "Libertad", v: "Huracán", gl: 0, gv: 0, goles_l: [], goles_v: [] },
+    ],
+    "Liniers|Olimpo": [
+        { fecha: "Torneo 2026 - Fecha 1", torneo: "sub15fem", l: "Olimpo", v: "Liniers", gl: 0, gv: 12 },
+        { fecha: "Torneo 2026 - Fecha 12", torneo: "sub15fem", l: "Liniers", v: "Olimpo", gl: 10, gv: 0 },
+        { fecha: "Fecha 6 - Torneo 2026 - 03 may", torneo: "segundafemenino", l: "Olimpo", v: "Liniers", gl: 0, gv: 6, goles_l: [], goles_v: ["Isabella Pezzutti (3)","Ailén Márquez","Lola Podestá","Paulina Acevedo"] },
+        { fecha: "Fecha 15 - Torneo 2026 - 05 jul", torneo: "segundafemenino", l: "Liniers", v: "Olimpo", gl: 4, gv: 0, goles_l: ["Paulina Acevedo (3)","Iara Schwab"], goles_v: [] },
+    ],
+    "Juventud Unida|San Francisco": [
+        { fecha: "Torneo 2026 - Fecha 1", torneo: "sub15fem", l: "San Francisco", v: "Juventud Unida", gl: 0, gv: 3 },
+        { fecha: "Torneo 2026 - Fecha 12", torneo: "sub15fem", l: "Juventud Unida", v: "San Francisco", gl: 2, gv: 1 },
+    ],
+    "Libertad|San Francisco": [
+        { fecha: "Fecha 2 - Apertura 2026 - 22 mar 2026", torneo: "oficial", l: "San Francisco", v: "Libertad", gl: 1, gv: 1, goles_l: ["Federico Pinedo"], goles_v: ["Mauro Sabatini"] },
+        { fecha: "Fecha 2 - Apertura 2026", torneo: "reserva_oficial", l: "San Francisco", v: "Libertad", gl: 0, gv: 3 },
+        { fecha: "Fecha 9 - Apertura 2026 - 25 may 2026", torneo: "oficial", l: "Libertad", v: "San Francisco", gl: 2, gv: 0, goles_l: ["Alan Gigena","Matías Mayer"], goles_v: [] },
+        { fecha: "Fecha 9 - Apertura 2026", torneo: "reserva_oficial", l: "Libertad", v: "San Francisco", gl: 2, gv: 0 },
+        { fecha: "Apertura 2026 - Fecha 5", torneo: "senior", l: "Libertad", v: "San Francisco", gl: 3, gv: 0, goles_l: ["Mariano Moreno","Gustavo Peña","Ariel Paredes"], goles_v: [] },
+        { fecha: "Fecha 2 - Clausura 2026 - 09 ago 2026", torneo: "oficial", l: "San Francisco", v: "Libertad", gl: 2, gv: 1, goles_l: ["Alexis Vega","Leonel Romero"], goles_v: ["Nelson Avello"] },
+        { fecha: "Fecha 2 - Clausura 2026", torneo: "reserva_oficial", l: "San Francisco", v: "Libertad", gl: 2, gv: 1 },
+        { fecha: "Torneo 2026 - Fecha 7", torneo: "sub15fem", l: "Libertad", v: "San Francisco", gl: 1, gv: 2 },
+    ],
+    "Bella Vista|Liniers": [
+        { fecha: "Fecha 2 - Apertura 2026 - 24 mar 2026", torneo: "oficial", l: "Bella Vista", v: "Liniers", gl: 0, gv: 1, goles_l: [], goles_v: ["Rodrigo Phillip"] },
+        { fecha: "Fecha 2 - Apertura 2026", torneo: "reserva_oficial", l: "Bella Vista", v: "Liniers", gl: 3, gv: 3 },
+        { fecha: "Fecha 9 - Apertura 2026 - 24 may 2026", torneo: "oficial", l: "Liniers", v: "Bella Vista", gl: 0, gv: 0, goles_l: [], goles_v: [] },
+        { fecha: "Fecha 9 - Apertura 2026", torneo: "reserva_oficial", l: "Liniers", v: "Bella Vista", gl: 1, gv: 3 },
+        { fecha: "Semifinales - Apertura 2026 - 4 jul 2026", torneo: "oficial", l: "Bella Vista", v: "Liniers", gl: 0, gv: 0, pen_l:1, pen_v:3},
+        { fecha: "Torneo 2026 - Fecha 5", torneo: "sub15fem", l: "Liniers", v: "Bella Vista", gl: 6, gv: 2 },
+        { fecha: "Fecha 2 - Clausura 2026 - 09 ago 2026", torneo: "oficial", l: "Bella Vista", v: "Liniers", gl: 0, gv: 0, goles_l: [], goles_v: [] },
+        { fecha: "Fecha 2 - Clausura 2026", torneo: "reserva_oficial", l: "Bella Vista", v: "Liniers", gl: 1, gv: 0 },
+    ],
+    "Huracán|Sporting": [
+        { fecha: "Fecha 2 - Apertura 2026 - 23 mar 2026", torneo: "oficial", l: "Huracán", v: "Sporting", gl: 3, gv: 0, goles_l: ["Iván Agudiak","Agustín Seisdedos","Johan Munives"], goles_v: [] },
+        { fecha: "Fecha 2 - Apertura 2026", torneo: "reserva_oficial", l: "Huracán", v: "Sporting", gl: 0, gv: 3 },
+        { fecha: "Fecha 9 - Apertura 2026 - 25 may 2026", torneo: "oficial", l: "Sporting", v: "Huracán", gl: 1, gv: 3, goles_l: ["Jonathan Font"], goles_v: ["Brian Scalco (2)","Facundo Reynoso"] },
+        { fecha: "Fecha 9 - Apertura 2026", torneo: "reserva_oficial", l: "Sporting", v: "Huracán", gl: 2, gv: 2 },
+        { fecha: "Apertura 2026 - Fecha 4", torneo: "senior", l: "Huracán", v: "Sporting", gl: 1, gv: 5, goles_l: ["Gabriel Brendel"], goles_v: ["Gabriel Bernengo","Maximiliano Rodríguez","Marcos Cossú","Emiliano Sebeca","Alejandro Aparicio"] },
+        { fecha: "Torneo 2026 - Fecha 5", torneo: "sub15fem", l: "Huracán", v: "Sporting", gl: 1, gv: 3 },
+        { fecha: "Fecha 2 - Clausura 2026 - 09 ago 2026", torneo: "oficial", l: "Sporting", v: "Huracán", gl: 0, gv: 0, goles_l: [], goles_v: [] },
+        { fecha: "Fecha 2 - Clausura 2026", torneo: "reserva_oficial", l: "Huracán", v: "Sporting", gl: 2, gv: 3 },
+    ],
+    "Pacífico BB|Rosario PB": [
+        { fecha: "Fecha 2 - Apertura 2026 - 22 mar 2026", torneo: "promocional", l: "Rosario PB", v: "Pacífico BB", gl: 3, gv: 1, goles_l: ["Nicolás Ovando","Agustín Grippaudo","Agustín Trotta"], goles_v: ["Lisandro Muzzi"] },
+        { fecha: "Fecha 2 - Apertura 2026", torneo: "reserva_promocional", l: "Rosario PB", v: "Pacífico BB", gl: 1, gv: 1 },
+        { fecha: "Fecha 9 - Apertura 2026 - 24 may 2026", torneo: "promocional", l: "Pacífico BB", v: "Rosario PB", gl: 0, gv: 0, goles_l: [], goles_v: [] },
+        { fecha: "Fecha 9 - Apertura 2026", torneo: "reserva_promocional", l: "Pacífico BB", v: "Rosario PB", gl: 0, gv: 4 },
+        { fecha: "Fecha 2 - Clausura 2026 - 08 ago 2026", torneo: "promocional", l: "Rosario PB", v: "Pacífico BB", gl: 0, gv: 0, goles_l: [], goles_v: [] },
+    ],
+    "Dublin|Pacífico (C)": [
+        { fecha: "Fecha 2 - Apertura 2026 - 22 mar 2026", torneo: "promocional", l: "Pacífico (C)", v: "Dublin", gl: 1, gv: 2, goles_l: ["Gianni Ferrari"], goles_v: ["Tomás Coronel","Matías San Martín"] },
+        { fecha: "Fecha 2 - Apertura 2026", torneo: "reserva_promocional", l: "Pacífico (C)", v: "Dublin", gl: 1, gv: 1 },
+        { fecha: "Fecha 9 - Apertura 2026 - 24 may 2026", torneo: "promocional", l: "Dublin", v: "Pacífico (C)", gl: 3, gv: 1, goles_l: ["Jonathan Arias (2)","Tomás Coronel"], goles_v: ["Luca Lucas"] },
+        { fecha: "Fecha 9 - Apertura 2026", torneo: "reserva_promocional", l: "Dublin", v: "Pacífico (C)", gl: 1, gv: 1},
+        { fecha: "Fecha 2 - Clausura 2026 - 09 ago 2026", torneo: "promocional", l: "Pacífico (C)", v: "Dublin", gl: 3, gv: 0, goles_l: ["Marcelo Soto","Juan Pablo Molina","Gianni Ferrari"], goles_v: [] },
+        { fecha: "Fecha 2 - Clausura 2026", torneo: "reserva_promocional", l: "Pacífico (C)", v: "Dublin", gl: 4, gv: 4 },
+    ],
+    "Olimpo|Tiro Federal": [
+        { fecha: "Fecha 2 - Apertura 2026 - 23 mar 2026", torneo: "promocional", l: "Olimpo", v: "Tiro Federal", gl: 1, gv: 2, goles_l: ["Pedro Sgattoni"], goles_v: ["Joaquín Laborde","Diego Ocampo"] },
+        { fecha: "Fecha 2 - Apertura 2026", torneo: "reserva_promocional", l: "Olimpo", v: "Tiro Federal", gl: 1, gv: 2 },
+        { fecha: "Fecha 9 - Apertura 2026 - 23 may 2026", torneo: "promocional", l: "Tiro Federal", v: "Olimpo", gl: 0, gv: 1, goles_l: [], goles_v: ["Marcos Acosta"] },
+        { fecha: "Fecha 9 - Apertura 2026", torneo: "reserva_promocional", l: "Tiro Federal", v: "Olimpo", gl: 1, gv: 2 },
+        { fecha: "Torneo 2026 - Fecha 6", torneo: "sub15fem", l: "Tiro Federal", v: "Olimpo", gl: 0, gv: 0 },
+        { fecha: "Fecha 2 - Clausura 2026 - 08 ago 2026", torneo: "promocional", l: "Olimpo", v: "Tiro Federal", gl: 3, gv: 2, goles_l: ["Nahuel Colmenares (2)","Santiago Llanos"], goles_v: ["Juan Ignacio Talmón","Rodrigo Belasque"] },
+        { fecha: "Fecha 2 - Clausura 2026", torneo: "reserva_promocional", l: "Olimpo", v: "Tiro Federal", gl: 2, gv: 1 },
+    ],
+    "Comercial|Sansinena": [
+        { fecha: "Fecha 2 - Apertura 2026 - 24 mar 2026", torneo: "promocional", l: "Sansinena", v: "Comercial", gl: 1, gv: 1, goles_l: ["Manuel Stortini"], goles_v: ["Alejo Gil"] },
+        { fecha: "Fecha 2 - Apertura 2026", torneo: "reserva_promocional", l: "Sansinena", v: "Comercial", gl: 0, gv: 2 },
+        { fecha: "Fecha 9 - Apertura 2026 - 23 may 2026", torneo: "promocional", l: "Comercial", v: "Sansinena", gl: 0, gv: 1, goles_l: [], goles_v: ["Manuel Stortini"] },
+        { fecha: "Fecha 9 - Apertura 2026", torneo: "reserva_promocional", l: "Comercial", v: "Sansinena", gl: 1, gv: 1 },
+        { fecha: "Apertura 2026 - Fecha 3", torneo: "senior", l: "Comercial", v: "Sansinena", gl: 0, gv: 3, goles_l: [], goles_v: ["Emiliano Jofré","Fabio Lucanera","Juan Pablo Pascualini"] },
+        { fecha: "Semifinales - Apertura 2026 - 4 jul 2026", torneo: "promocional", l: "Comercial", v: "Sansinena", gl: 0, gv: 0, pen_l:3, pen_v:2},
+        { fecha: "Fecha 2 - Clausura 2026 - 08 ago 2026", torneo: "promocional", l: "Sansinena", v: "Comercial", gl: 2, gv: 0, goles_l: ["Valentín Moral","Manuel Stortini"], goles_v: [] },
+    ],
+    "Círculo Dep.|Villa Mitre": [
+        { fecha: "Fecha 2 - Fase inicial - 29 mar 2026", torneo: "federala", l: "Villa Mitre", v: "Círculo Dep.", gl: 2, gv: 0, goles_l: ["Pablo Mujica","Marcos Escobar"], goles_v: [] },
+        { fecha: "Fecha 11 - Fase inicial - 31 may 2026", torneo: "federala", l: "Círculo Dep.", v: "Villa Mitre", gl: 0, gv: 0, goles_l: [], goles_v: [] },
+    ],
+    "Bella Vista|Sporting": [
+        { fecha: "Fecha 4 - Apertura 2026 - 05 abr 2026", torneo: "oficial", l: "Sporting", v: "Bella Vista", gl: 3, gv: 0, goles_l: ["Jonathan Font (2)","Matías Chamares"], goles_v: [] },
+        { fecha: "Fecha 4 - Apertura 2026", torneo: "reserva_oficial", l: "Sporting", v: "Bella Vista", gl: 3, gv: 2 },
+        { fecha: "Fecha 11 - Apertura 2026 - 07 jun 2026", torneo: "oficial", l: "Bella Vista", v: "Sporting", gl: 3, gv: 0, goles_l: ["Rodrigo Gómez (2)","Felipe Acharez"], goles_v: [] },
+        { fecha: "Fecha 11 - Apertura 2026", torneo: "reserva_oficial", l: "Bella Vista", v: "Sporting", gl: 2, gv: 3 },
+        { fecha: "Fecha 2 - Apertura 2026 - 28 mar", torneo: "femenino", l: "Bella Vista", v: "Sporting", gl: 2, gv: 3, goles_l: ["Victoria Toloza","Mahia Romero"], goles_v: ["Sofía Mattos (2)","Alexia Villani"] },
+        { fecha: "Fecha 2 - Apertura 2026", torneo: "reserva_femenino", l: "Bella Vista", v: "Sporting", gl: 2, gv: 1 },
+        { fecha: "Fecha 9 - Apertura 2026 - 25 may", torneo: "femenino", l: "Sporting", v: "Bella Vista", gl: 4, gv: 1, goles_l: ["Sofía Mattos (2)","Lucía Aranda","Yazmín Fehrenbacher"], goles_v: ["Victoria Toloza"] },
+        { fecha: "Fecha 9 - Apertura 2026", torneo: "reserva_femenino", l: "Sporting", v: "Bella Vista", gl: 0, gv: 4 },
+        { fecha: "Semifinales - Apertura 2026", torneo: "reserva_oficial", l: "Sporting", v: "Bella Vista", gl: 0, gv: 0, pen_l:3, pen_v:2 },
+        { fecha: "Fecha 2 - Clausura 2026 - 01 ago", torneo: "femenino", l: "Bella Vista", v: "Sporting", gl: 2, gv: 3, goles_l: ["Mía González","Narela Roth"], goles_v: ["Alexis Villani","Alexia Villani","Fiorella Jael"] },
+        { fecha: "Fecha 2 - Clausura 2026", torneo: "reserva_femenino", l: "Bella Vista", v: "Sporting", gl: 2, gv: 0 },
+        { fecha: "Torneo 2026 - Fecha 6", torneo: "sub15fem", l: "Sporting", v: "Bella Vista", gl: 0, gv: 2 },
+        { fecha: "Apertura 2026 - Fecha 9", torneo: "senior", l: "Sporting", v: "Bella Vista", gl: 0, gv: 3, goles_l: [], goles_v: ["Luciano Álvarez","Víctor Torrero","Fernando Lucas"] },
+    ],
+    "Municipales|Villa Mitre": [
+        { fecha: "Fecha 2 - Apertura 2026 - 28 mar", torneo: "femenino", l: "Villa Mitre", v: "Municipales", gl: 1, gv: 5, goles_l: ["Agustina Rodríguez"], goles_v: ["Valeria Navarrete (2)","Victoria Nervi","Ludmila Fernández","Stefanía Sueyro"] },
+        { fecha: "Fecha 2 - Apertura 2026", torneo: "reserva_femenino", l: "Villa Mitre", v: "Empleados de Comercio", gl: 1, gv: 0 },
+        { fecha: "Fecha 9 - Apertura 2026 - 24 may", torneo: "femenino", l: "Municipales", v: "Villa Mitre", gl: 2, gv: 2, goles_l: ["Stefanía Sueyro","Valeria Navarrete"], goles_v: ["Jéssica Mella","Sol Menéndez Perrone"] },
+        { fecha: "Fecha 9 - Apertura 2026", torneo: "reserva_femenino", l: "Municipales", v: "Villa Mitre", gl: 3, gv: 1 },
+        { fecha: "Final - Apertura 2026", torneo: "femenino", l: "Municipales", v: "Villa Mitre", gl: 0, gv: 2, goles_l: [], goles_v: ["Lucrecia Semper","Morena Bouven"] },
+        { fecha: "Final Extra - Apertura 2026", torneo: "femenino", l: "Municipales", v: "Villa Mitre", gl: 3, gv: 2, goles_l: ["Valeria Navarrete (2)","Tania Espíndola"], goles_v: ["Sol Menéndez Perrone","Morena Bouven"] },
+        { fecha: "Semifinales - Apertura 2026", torneo: "reserva_femenino", l: "Villa Mitre", v: "Municipales", gl: 0, gv: 0, pen_l:3, pen_v:4 },
+        { fecha: "Torneo Federal Femenino 2026 - Primera Ronda - Ida - 1 ago", torneo: "femenino", l: "Villa Mitre", v: "Municipales", gl: 4, gv: 1, goles_l: ["Lucrecia Semper (2)","Morena Bouven","Sol Menéndez Perrone"], goles_v: [] },
+        { fecha: "Fecha 2 - Clausura 2026 - 2 ago", torneo: "femenino", l: "Villa Mitre", v: "Municipales", gl: 2, gv: 2, goles_l: ["Morena Bouven","Sofía Gómez"], goles_v: ["Tania Espíndola","Stefanía Sueyro"] },
+        { fecha: "Fecha 2 - Clausura 2026", torneo: "reserva_femenino", l: "Villa Mitre", v: "Empleados de Comercio", gl: 1, gv: 0 },
+        { fecha: "Torneo Federal Femenino 2026 - Primera Ronda - Vuelta - 8 ago", torneo: "femenino", l: "Municipales", v: "Villa Mitre", gl: 1, gv: 2, goles_l: [], goles_v: [] },
+    ],
+    "Empleados de Comercio|Libertad": [
+        { fecha: "Fecha 2 - Apertura 2026 - 28 mar", torneo: "femenino", l: "Libertad", v: "Empleados de Comercio", gl: 0, gv: 5, goles_l: [], goles_v: ["Marianela Santana (4)","Trinidad Rivas"] },
+        { fecha: "Fecha 2 - Apertura 2026", torneo: "reserva_femenino", l: "Libertad", v: "Empleados de Comercio", gl: 0, gv: 2 },
+        { fecha: "Fecha 9 - Apertura 2026 - 25 may", torneo: "femenino", l: "Empleados de Comercio", v: "Libertad", gl: 4, gv: 0, goles_l: ["Marianela Santana (3)","Alison Guerrero"], goles_v: [] },
+        { fecha: "Fecha 9 - Apertura 2026", torneo: "reserva_femenino", l: "Empleados de Comercio", v: "Libertad", gl: 5, gv: 0 },
+        { fecha: "Fecha 2 - Clausura 2026 - 02 ago", torneo: "femenino", l: "Libertad", v: "Empleados de Comercio", gl: 0, gv: 0, goles_l: [], goles_v: [] },
+        { fecha: "Torneo 2026 - Fecha 9", torneo: "sub15fem", l: "Libertad", v: "Empleados de Comercio", gl: 0, gv: 2 },
+    ],
+    "La Armonía|Tiro Federal": [
+        { fecha: "Fecha 2 - Apertura 2026 - 29 mar", torneo: "femenino", l: "Tiro Federal", v: "La Armonía", gl: 4, gv: 0, goles_l: ["Alfonsina Royo","Candela Salgado","Camila Odriozola","Gabriela Cabrera"], goles_v: [] },
+        { fecha: "Fecha 2 - Apertura 2026", torneo: "reserva_femenino", l: "Tiro Federal", v: "La Armonía", gl: 5, gv: 0 },
+        { fecha: "Fecha 9 - Apertura 2026 - 23 may", torneo: "femenino", l: "La Armonía", v: "Tiro Federal", gl: 0, gv: 2, goles_l: [], goles_v: ["Abril Sáenz (2)"] },
+        { fecha: "Fecha 9 - Apertura 2026", torneo: "reserva_femenino", l: "La Armonía", v: "Tiro Federal", gl: 1, gv: 1 },
+        { fecha: "Apertura 2026 - Fecha 3", torneo: "sub15fem", l: "La Armonía", v: "Tiro Federal", gl: 0, gv: 1 },
+        { fecha: "Apertura 2026 - Fecha 14", torneo: "sub15fem", l: "Tiro Federal", v: "La Armonía", gl: 2, gv: 0 },
+        { fecha: "Fecha 2 - Clausura  2026 - 02 ago", torneo: "femenino", l: "Tiro Federal", v: "La Armonía", gl: 4, gv: 0, goles_l: ["Morena Juárez (2)","Magalí Toloza","Aylén Baratcabal"], goles_v: [] },
+    ],
+    "Rosario PB|Sansinena": [
+        { fecha: "Fecha 2 - Apertura 2026 - 28 mar", torneo: "segundafemenino", l: "Sansinena", v: "Rosario PB", gl: 2, gv: 7, goles_l: ["Daniela Abello (2)"], goles_v: ["Rubí Pedernera","Antonella Obregón","Bárbara Aguirre","Ayelén Zeballos","Juliana Ruiz","Mariela Sollosky","Carolina Díaz"] },
+        { fecha: "Fecha 2 - Torneo 2026", torneo: "reserva_segundafemenino", l: "Sansinena", v: "Rosario PB", gl: 1, gv: 3 },
+        { fecha: "Fecha 11 - Apertura 2026 - 07 jun", torneo: "segundafemenino", l: "Rosario PB", v: "Sansinena", gl: 6, gv: 0, goles_l: ["Bárbara Aguire (3)","Celeste Medina (2)","Juliana Ruiz"], goles_v: [] },
+        { fecha: "Fecha 11 - Torneo 2026", torneo: "reserva_segundafemenino", l: "Rosario PB", v: "Sansinena", gl: 5, gv: 1 },
+        { fecha: "Fecha 7 - Apertura 2026 - 2 may 2026", torneo: "promocional", l: "Rosario PB", v: "Sansinena", gl: 4, gv: 4, goles_l: ["Sebastián Mendoza","Favio Durán","Agustín Grippaudo","Nicolás Ovando"], goles_v: ["Manuel Stortini (2)","Diego Romero (2)"] },
+        { fecha: "Fecha 7 - Apertura 2026", torneo: "reserva_promocional", l: "Rosario PB", v: "Sansinena", gl: 1, gv: 0 },
+        { fecha: "Fecha 14 - Apertura 2026 - 28 jun 2026", torneo: "promocional", l: "Sansinena", v: "Rosario PB", gl: 0, gv: 2, goles_l: [], goles_v: ["Agustín Grippaudo","Pedro Fernández"] },
+        { fecha: "Fecha 14 - Torneo 2026", torneo: "reserva_promocional", l: "Sansinena", v: "Rosario PB", gl: 0, gv: 1 },
+    ],
+    "Huracán|Liniers": [
+        { fecha: "Fecha 5 - Apertura 2026 - 12 abr 2026", torneo: "oficial", l: "Huracán", v: "Liniers", gl: 1, gv: 0, goles_l: ["Brian Scalco"], goles_v: [] },
+        { fecha: "Fecha 5 - Apertura 2026", torneo: "reserva_oficial", l: "Huracán", v: "Liniers", gl: 1, gv: 0 },
+        { fecha: "Fecha 12 - Apertura 2026 - 14 jun 2026", torneo: "oficial", l: "Liniers", v: "Huracán", gl: 0, gv: 0, goles_l: [], goles_v: [] },
+        { fecha: "Fecha 12 - Apertura 2026", torneo: "reserva_oficial", l: "Liniers", v: "Huracán", gl: 1, gv: 2 },
+        { fecha: "Fecha 2 - Apertura 2026 - 28 mar", torneo: "segundafemenino", l: "Liniers", v: "Huracán", gl: 5, gv: 0, goles_l: ["Paulina Acevedo (2)","Ailén Márquez","María Paz Marino","Lucía Julián"], goles_v: [] },
+        { fecha: "Fecha 11 - Apertura 2026 - 07 jun", torneo: "segundafemenino", l: "Liniers", v: "Huracán", gl: 7, gv: 0, goles_l: ["Paulina Acevedo (3)","María Paz Marino","Agustina Borda","Lucía Julián","Ainara Izaguirre"], goles_v: [] },
+        { fecha: "Apertura 2026 - Fecha 3", torneo: "sub15fem", l: "Liniers", v: "Huracán", gl: 5, gv: 0 },
+        { fecha: "Apertura 2026 - Fecha 14", torneo: "sub15fem", l: "Huracán", v: "Liniers", gl: 0, gv: 7 },
+        { fecha: "Final - Apertura 2026 - 12 jul 2026", torneo: "oficial", l: "Huracán", v: "Liniers", gl: 0, gv: 1, goles_l: [], goles_v: ["Fabián Dauwalder (e/c)"] },
+        { fecha: "Final Extra - Apertura 2026 - 26 jul 2026", torneo: "oficial", l: "Huracán", v: "Liniers", gl: 2, gv: 0, goles_l: ["Iván Aguadiak","Brian Scalco"], goles_v: [] },
+        { fecha: "Apertura 2026 - Fecha 11", torneo: "futsal", l: "Huracán", v: "Liniers", gl: 0, gv: 1 },
+        { fecha: "Apertura 2026 - Fecha 11", torneo: "futsalreserva", l: "Huracán", v: "Liniers", gl: 0, gv: 1 },
+    ],
+    "Estrella de Oro|San Francisco": [
+        { fecha: "Fecha 2 - Apertura 2026 - 29 mar", torneo: "segundafemenino", l: "Estrella de Oro", v: "San Francisco", gl: 3, gv: 3, goles_l: ["Costanza Franco (2)","Mariana González"], goles_v: ["Clara Iturrioz (2)","Ailín Randisi"] },
+        { fecha: "Fecha 2 - Torneo 2026", torneo: "reserva_segundafemenino", l: "Estrella de Oro", v: "San Francisco", gl: 2, gv: 1 },
+        { fecha: "Fecha 11 - Apertura 2026 - 07 jun", torneo: "segundafemenino", l: "San Francisco", v: "Estrella de Oro", gl: 3, gv: 1, goles_l: ["Florencia Sorbellini","Clara Iturrioz","Ariana Adassus"], goles_v: ["Sabrina Genchi"] },
+        { fecha: "Fecha 11 - Torneo  2026", torneo: "reserva_segundafemenino", l: "San Francisco", v: "Estrella de Oro", gl: 1, gv: 0 },
+    ],
+    "Olimpo|Pacífico (C)": [
+        { fecha: "Fecha 2 - Apertura 2026 - 29 mar", torneo: "segundafemenino", l: "Olimpo", v: "Pacífico (C)", gl: 1, gv: 0, goles_l: ["Lourdes Antonietti"], goles_v: [] },
+        { fecha: "Fecha 11 - Apertura 2026 - 07 jun", torneo: "segundafemenino", l: "Pacífico (C)", v: "Olimpo", gl: 2, gv: 4, goles_l: ["Milena Morresi","Bianca Pasqualini"], goles_v: ["Brisa Oyarce","Pablo Dambolena","Yazmín Romero","Sofía Cáceres"] },
+        { fecha: "Fecha 5 - Apertura 2026 - 11 abr 2026", torneo: "promocional", l: "Pacífico (C)", v: "Olimpo", gl: 0, gv: 0, goles_l: [], goles_v: [] },
+        { fecha: "Fecha 5 - Apertura 2026", torneo: "reserva_promocional", l: "Pacífico (C)", v: "Olimpo", gl: 0, gv: 1 },
+        { fecha: "Fecha 12 - Apertura 2026 - 15 jun 2026", torneo: "promocional", l: "Olimpo", v: "Pacífico (C)", gl: 1, gv: 2, goles_l: ["Thiago Bedolla"], goles_v: ["Donato Angelini","Gianni Ferrari"] },
+        { fecha: "Fecha 12 - Apertura 2026", torneo: "reserva_promocional", l: "Olimpo", v: "Pacífico (C)", gl: 0, gv: 0 },
+    ],
+    "Comercial|Dublin": [
+        { fecha: "Fecha 4 - Apertura 2026 - 03 abr 2026", torneo: "oficial", l: "Comercial", v: "Dublin", gl: 1, gv: 1, goles_l: ["Emiliano Brizzi"], goles_v: ["Marcos Pérez"] },
+        { fecha: "Fecha 4 - Apertura 2026", torneo: "reserva_oficial", l: "Comercial", v: "Dublin", gl: 1, gv: 0 },
+        { fecha: "Fecha 11 - Apertura 2026 - 06 jun 2026", torneo: "oficial", l: "Dublin", v: "Comercial", gl: 0, gv: 1, goles_l: [], goles_v: ["Emiliano Brizzi"] },
+        { fecha: "Fecha 11 - Apertura 2026", torneo: "reserva_oficial", l: "Dublin", v: "Comercial", gl: 0, gv: 4 },
+        { fecha: "Apertura 2026 - Fecha 2", torneo: "futsal", l: "Comercial", v: "Dublin", gl: 5, gv: 1 },
+        { fecha: "Apertura 2026 - Fecha 2", torneo: "reservafutsal", l: "Comercial", v: "Dublin", gl: 4, gv: 5 },
+        { fecha: "Clausura 2026 - Fecha 2", torneo: "futsal", l: "Dublin", v: "Comercial", gl: 3, gv: 4 },
+        { fecha: "Clausura 2026 - Fecha 2", torneo: "reservafutsal", l: "Dublin", v: "Comercial", gl: 3, gv: 2 },
+    ],
+    "Catamarca|La Esperanza": [
+        { fecha: "Apertura 2026 - Fecha 2", torneo: "futsal", l: "La Esperanza", v: "Catamarca", gl: 7, gv: 3 },
+        { fecha: "Apertura 2026 - Fecha 2", torneo: "reservafutsal", l: "La Esperanza", v: "Dublin", gl: 4, gv: 5 },
+        { fecha: "Clausura 2026 - Fecha 2", torneo: "futsal", l: "Catamarca", v: "La Esperanza", gl: 2, gv: 7 },
+        { fecha: "Clausura 2026 - Fecha 2", torneo: "reservafutsal", l: "Catamarca", v: "La Esperanza", gl: 2, gv: 7 },
+    ],
+    "Dep. Futsal|Petroquímicos": [
+        { fecha: "Apertura 2026 - Fecha 2", torneo: "futsal", l: "Petroquímicos", v: "Dep. Futsal", gl: 8, gv: 4 },
+        { fecha: "Apertura 2026 - Fecha 2", torneo: "reservafutsal", l: "Petroquímicos", v: "Dep. Futsal", gl: 8, gv: 4 },
+    ],
+    "Liniers|Los 3 Chiflados": [
+        { fecha: "Apertura 2026 - Fecha 2", torneo: "futsal", l: "Los 3 Chiflados", v: "Liniers", gl: 3, gv: 3 },
+        { fecha: "Apertura 2026 - Fecha 2", torneo: "reservafutsal", l: "Los 3 Chiflados", v: "Liniers", gl: 3, gv: 1 },
+        { fecha: "Clausura 2026 - Fecha 2", torneo: "futsal", l: "Liniers", v: "Los 3 Chiflados", gl: 1, gv: 2 },
+        { fecha: "Clausura 2026 - Fecha 2", torneo: "reservafutsal", l: "Liniers", v: "Los 3 Chiflados", gl: 1, gv: 5 },
+    ],
+    "La Estación|Pacífico BB": [
+        { fecha: "Apertura 2026 - Fecha 2", torneo: "futsal", l: "La Estación", v: "Pacífico BB", gl: 8, gv: 5 },
+        { fecha: "Apertura 2026 - Fecha 2", torneo: "reservafutsal", l: "La Estación", v: "Pacífico BB", gl: 2, gv: 4 },
+        { fecha: "Apertura 2026 - Cuartos de final", torneo: "futsal", l: "La Estación", v: "Pacífico BB", gl: 5, gv: 2 },
+        { fecha: "Clasura 2026 - Fecha 2", torneo: "futsal", l: "Pacífico BB", v: "La Estación", gl: 3, gv: 6 },
+        { fecha: "Clausura 2026 - Fecha 2", torneo: "reservafutsal", l: "Pacífico BB", v: "La Estación", gl: 0, gv: 4 },
+    ],
+    "Huracán|San Francisco": [
+        { fecha: "Apertura 2026 - Fecha 2", torneo: "futsal", l: "San Francisco", v: "Huracán", gl: 9, gv: 6 },
+        { fecha: "Apertura 2026 - Fecha 2", torneo: "reservafutsal", l: "San Francisco", v: "Huracán", gl: 2, gv: 0 },
+        { fecha: "Fecha 3 - Apertura 2026 - 05 abr", torneo: "segundafemenino", l: "San Francisco", v: "Huracán", gl: 10, gv: 0, goles_l: ["Clara Iturrioz (4)","Julieta Coronel (2)","Ailín Randisi (2)","Luciana Sosa","Rocío de Mirta"], goles_v: []},
+        { fecha: "Fecha 3 - Torneo 2026", torneo: "reserva_segundafemenino", l: "San Francisco", v: "Huracán", gl: 3, gv: 0},
+        { fecha: "Fecha 12 - Apertura 2026 - 14 jun", torneo: "segundafemenino", l: "Huracán", v: "San Francisco", gl: 1, gv: 8, goles_l: [], goles_v: ["Luciana Sosa (2)","Clara Iturrioz (2)","Ariana Adassus","Ailín Randisi","Florencia Sorbellini","Milagros Fernández"]},
+        { fecha: "Fecha 6 - Apertura 2026 - 18 abr 2026", torneo: "oficial", l: "San Francisco", v: "Huracán", gl: 0, gv: 0, goles_l: [], goles_v: [] },
+        { fecha: "Fecha 6 - Apertura 2026", torneo: "reserva_oficial", l: "San Francisco", v: "Huracán", gl: 5, gv: 2 },
+        { fecha: "Fecha 13 - Apertura 2026 - 23 jun 2026", torneo: "oficial", l: "Huracán", v: "San Francisco", gl: 1, gv: 1, goles_l: ["Walter Linares"], goles_v: ["Federico Pinedo"] },
+        { fecha: "Fecha 13 - Apertura 2026", torneo: "reserva_oficial", l: "Huracán", v: "San Francisco", gl: 0, gv: 0 },
+        { fecha: "Apertura 2026 - Fecha 7", torneo: "senior", l: "San Francisco", v: "Huracán", gl: 3, gv: 2, goles_l: ["Patricio Muñoz","Federico Timi","Diego Vaquero"], goles_v: ["Juan Pablo Campos","César Panduro"] },
+        { fecha: "Apertura 2026 - Octavos de Final", torneo: "senior", l: "Huracán", v: "San Francisco", gl: 0, gv: 3, goles_l: [], goles_v: ["Ángel Martínez","Juan Pérez","Federico Timi"] },
+        { fecha: "Torneo 2026 - Fecha 9", torneo: "sub15fem", l: "Huracán", v: "San Francisco", gl: 1, gv: 2 },
+    ],
+    "Comercial|Pacífico BB": [
+        { fecha: "Apertura 2026 - Fecha 2", torneo: "senior", l: "Pacífico BB", v: "Comercial", gl: 1, gv: 5, goles_l: ["Ramón López"], goles_v: ["Maximiliano Casas","Sebastián Aristi (2)","Emiliano Esmoli"] },
+        { fecha: "Fecha 6 - Apertura 2026 - 19 abr 2026", torneo: "promocional", l: "Pacífico BB", v: "Comercial", gl: 0, gv: 1, goles_l: [], goles_v: ["Francisco Centeno"] },
+        { fecha: "Fecha 6 - Apertura 2026", torneo: "reserva_promocional", l: "Pacífico BB", v: "Comercial", gl: 0, gv: 1 },
+        { fecha: "Fecha 13 - Apertura 2026 - 21 jun 2026", torneo: "promocional", l: "Comercial", v: "Pacífico BB", gl: 3, gv: 1, goles_l: ["Mateo Silenzi","Baltasar Gómez","Santiago Storti"], goles_v: ["Miqueas Vásquez"] },
+        { fecha: "Fecha 13 - Apertura 2026", torneo: "reserva_promocional", l: "Comercial", v: "Pacífico BB", gl: 1, gv: 1 },
+        { fecha: "Apertura 2026 - Fecha 13", torneo: "futsal", l: "Comercial", v: "Pacífico BB", gl: 5, gv: 0 },
+        { fecha: "Apertura 2026 - Fecha 13", torneo: "futsalreserva", l: "Comercial", v: "Pacífico BB", gl: 4, gv: 4 },
+    ],
+    "Huracán|Tiro Federal": [
+        { fecha: "Apertura 2026 - Fecha 2", torneo: "senior", l: "Huracán", v: "Tiro Federal", gl: 6, gv: 1, goles_l: ["Felipe Hippendinger (3)","César Panduro (3)"], goles_v: ["Guido Leobono"] },
+        { fecha: "Apertura 2026 - Fecha 7", torneo: "futsal", l: "Huracán", v: "Tiro Federal", gl: 1, gv: 2 },
+        { fecha: "Apertura 2026 - Fecha 7", torneo: "futsalreserva", l: "Huracán", v: "Tiro Federal", gl: 0, gv: 4 },
+    ],
+    "Pacífico (C)|Sporting": [
+        { fecha: "Apertura 2026 - Fecha 2", torneo: "senior", l: "Pacífico (C)", v: "Sporting", gl: 0, gv: 3, goles_l: [], goles_v: ["Marcos Cossú","Paolo Quioga","Maximiliano Rodríguez"] },
+        { fecha: "Apertura 2026 - Final", torneo: "senior", l: "Sporting", v: "Pacífico (C)", gl: 1, gv: 2, goles_l: ["Alejandro Aparicio"], goles_v: ["Leandro Duelle (2)"] },
+        { fecha: "Torneo 2026 - Fecha 7", torneo: "sub15fem", l: "Huracán", v: "Tiro Federal", gl: 0, gv: 3 },
+    ],
+    "Empleados de Comercio|Sporting": [
+        { fecha: "Fecha 1 - Apertura 2026 - 12 abr", torneo: "femenino", l: "Empleados de Comercio", v: "Sporting", gl: 2, gv: 1, goles_l: ["Dana Ramos","Marianela Santana"], goles_v: ["Sofía Mattos"] },
+        { fecha: "Fecha 1 - Apertura 2026", torneo: "reserva_femenino", l: "Empleados de Comercio", v: "Sporting", gl: 1, gv: 0 },
+        { fecha: "Fecha 11 - Apertura 2026 - 06 jun", torneo: "femenino", l: "Sporting", v: "Empleados de Comercio", gl: 1, gv: 1, goles_l: ["Débora Farías"], goles_v: ["Valentina Díaz"] },
+        { fecha: "Fecha 11 - Apertura 2026", torneo: "reserva_femenino", l: "Sporting", v: "Empleados de Comercio", gl: 0, gv: 1 },
+        { fecha: "Torneo 2026 - Fecha 2", torneo: "sub15fem", l: "Sporting", v: "Empleados de Comercio", gl: 2, gv: 1 },
+        { fecha: "Torneo 2026 - Fecha 13", torneo: "sub15fem", l: "Empleados de Comercio", v: "Sporting", gl: 0, gv: 4 },
+    ],
+    "Juventud Unida|La Armonía": [
+        { fecha: "Torneo 2026 - Fecha 2", torneo: "sub15fem", l: "Juventud Unida", v: "La Armonía", gl: 6, gv: 1 },
+        { fecha: "Torneo 2026 - Fecha 13", torneo: "sub15fem", l: "La Armonía", v: "Juventud Unida", gl: 1, gv: 2 },
+    ],
+    "Huracán|Olimpo": [
+        { fecha: "Torneo 2026 - Fecha 2", torneo: "sub15fem", l: "Huracán", v: "Olimpo", gl: 1, gv: 0 },
+        { fecha: "Torneo 2026 - Fecha 13", torneo: "sub15fem", l: "Olimpo", v: "Huracán", gl: 1, gv: 0 },
+    ],
+    "San Francisco|Tiro Federal": [
+        { fecha: "Torneo 2026 - Fecha 2", torneo: "sub15fem", l: "Tiro Federal", v: "San Francisco", gl: 1, gv: 1 },
+        { fecha: "Torneo 2026 - Fecha 13", torneo: "sub15fem", l: "San Francisco", v: "Tiro Federal", gl: 1, gv: 1 },
+        { fecha: "Apertura 2026 - Fecha 6", torneo: "senior", l: "San Francisco", v: "Tiro Federal", gl: 4, gv: 1, goles_l: ["Damián Vidal","Sebastián Bacuco","Juan Ignacio Nielsen","Pablo Montalva"], goles_v: ["Gustavo Derrac"] },
+        { fecha: "Apertura 2026 - Fecha 10", torneo: "futsal", l: "Tiro Federal", v: "San Francisco", gl: 5, gv: 5 },
+        { fecha: "Apertura 2026 - Fecha 10", torneo: "futsalreserva", l: "Tiro Federal", v: "San Francisco", gl: 2, gv: 5 },
+    ],
+    "Huracán|Villa Mitre": [
+        { fecha: "Fecha 3 - Apertura 2026 - 28 mar", torneo: "oficial", l: "Villa Mitre", v: "Huracán", gl: 0, gv: 1, goles_l: [], goles_v: ["Agustín Seisdedos"]},
+        { fecha: "Fecha 3 - Apertura 2026", torneo: "reserva_oficial", l: "Villa Mitre", v: "Huracán", gl: 6, gv: 0},
+        { fecha: "Fecha 10 - Apertura 2026 - 01 jun", torneo: "oficial", l: "Huracán", v: "Villa Mitre", gl: 0, gv: 0, goles_l: [], goles_v: []},
+        { fecha: "Fecha 10 - Apertura 2026", torneo: "reserva_oficial", l: "Huracán", v: "Villa Mitre", gl: 1, gv: 1},
+        { fecha: "Semifinales - Apertura 2026 - 4 jul 2026", torneo: "oficial", l: "Huracán", v: "Villa Mitre", gl: 1, gv: 0, goles_l: ["Iván Agudiak"], goles_v: [] },
+        { fecha: "Torneo 2026 - Fecha 8", torneo: "sub15fem", l: "Villa Mitre", v: "Huracán", gl: 1, gv: 0 },
+        { fecha: "Apertura 2026 - Fecha 12", torneo: "futsal", l: "Huracán", v: "Villa Mitre", gl: 3, gv: 7 },
+        { fecha: "Apertura 2026 - Fecha 12", torneo: "futsalreserva", l: "Huracán", v: "Villa Mitre", gl: 1, gv: 6 },
+    ],
+    "La Armonía|Liniers": [
+        { fecha: "Fecha 3 - Apertura 2026 - 29 mar", torneo: "oficial", l: "Liniers", v: "La Armonía", gl: 4, gv: 1, goles_l: ["Valentín Bertoni","Rodrigo Phillip","Salvador Maio","Ramiro Ullmann"], goles_v: ["Franco Cuello"]},
+        { fecha: "Fecha 3 - Apertura 2026", torneo: "reserva_oficial", l: "Liniers", v: "La Armonía", gl: 3, gv: 2},
+        { fecha: "Fecha 10 - Apertura 2026 - 31 may", torneo: "oficial", l: "La Armonía", v: "Liniers", gl: 0, gv: 0, goles_l: [], goles_v: []},
+        { fecha: "Fecha 10 - Apertura 2026", torneo: "reserva_oficial", l: "La Armonía", v: "Liniers", gl: 3, gv: 1},
+        { fecha: "Torneo 2026 - Fecha 6", torneo: "sub15fem", l: "La Armonía", v: "Liniers", gl: 0, gv: 1 },
+    ],
+    "Comercial|Olimpo": [
+        { fecha: "Fecha 3 - Apertura 2026 - 28 mar", torneo: "promocional", l: "Comercial", v: "Olimpo", gl: 1, gv: 0, goles_l: ["Francisco Centeno"], goles_v: []},
+        { fecha: "Fecha 3 - Apertura 2026", torneo: "reserva_promocional", l: "Comercial", v: "Olimpo", gl: 1, gv: 0},
+        { fecha: "Fecha 10 - Apertura 2026 - 30 may", torneo: "promocional", l: "Olimpo", v: "Comercial", gl: 1, gv: 2, goles_l: ["Galo Fogel"], goles_v: ["Alejo Gil","Joaquín Racchi"]},
+        { fecha: "Fecha 10 - Apertura 2026", torneo: "reserva_promocional", l: "Olimpo", v: "Comercial", gl: 2, gv: 1},
+    ],
+    "Rosario PB|Tiro Federal": [
+        { fecha: "Fecha 3 - Apertura 2026 - 28 mar", torneo: "promocional", l: "Tiro Federal", v: "Rosario PB", gl: 2, gv: 0, goles_l: ["Diego Cuevas","Joaquín Laborde"], goles_v: []},
+        { fecha: "Fecha 3 - Apertura 2026", torneo: "reserva_promocional", l: "Tiro Federal", v: "Rosario PB", gl: 2, gv: 1},
+        { fecha: "Fecha 10 - Apertura 2026 - 31 may", torneo: "promocional", l: "Rosario PB", v: "Tiro Federal", gl: 0, gv: 3, goles_l: [], goles_v: ["Agustín Calamante (2)","Franco Fraysse"]},
+        { fecha: "Fecha 10 - Apertura 2026", torneo: "reserva_promocional", l: "Rosario PB", v: "Tiro Federal", gl: 1, gv: 0},
+        { fecha: "Semifinales - Apertura 2026 - 4 jul 2026", torneo: "promocional", l: "Tiro Federal", v: "Rosario PB", gl: 4, gv: 0, goles_l: ["Mariano McCoubrey (2)","Genaro Fraysse","Gino Carrozzi"], goles_v: [] },
+        { fecha: "Final - Apertura 2026", torneo: "reserva_promocional", l: "Tiro Federal", v: "Rosario PB", gl: 1, gv: 1, pen_l:4, pen_v:5 },
+    ],
+    "Pacífico (C)|Pacífico BB": [
+        { fecha: "Fecha 3 - Apertura 2026 - 29 mar", torneo: "promocional", l: "Pacífico BB", v: "Pacífico (C)", gl: 3, gv: 2, goles_l: ["Juan Nomdedeu","Enzo Rossi","Leandro Martínez"], goles_v: ["Donatello Scaringi","Luca Lucas"]},
+        { fecha: "Fecha 3 - Apertura 2026", torneo: "reserva_promocional", l: "Pacífico BB", v: "Pacífico (C)", gl: 3, gv: 0},
+        { fecha: "Fecha 10 - Apertura 2026 - 31 may", torneo: "promocional", l: "Pacífico (C)", v: "Pacífico BB", gl: 0, gv: 0, goles_l: [], goles_v: []},
+        { fecha: "Fecha 10 - Apertura 2026", torneo: "reserva_promocional", l: "Pacífico (C)", v: "Pacífico BB", gl: 1, gv: 1},
+        { fecha: "Apertura 2026 - Fecha 6", torneo: "senior", l: "Pacífico BB", v: "Pacífico (C)", gl: 0, gv: 1, goles_l: [], goles_v: ["Pablo Berra"] },
+    ],
+    "Dublin|Sansinena": [
+        { fecha: "Fecha 3 - Apertura 2026 - 29 mar", torneo: "promocional", l: "Sansinena", v: "Dublin", gl: 0, gv: 0, goles_l: [""], goles_v: []},
+        { fecha: "Fecha 3 - Apertura 2026", torneo: "reserva_promocional", l: "Sansinena", v: "Dublin", gl: 1, gv: 4},
+        { fecha: "Fecha 10 - Apertura 2026 - 31 may", torneo: "promocional", l: "Dublin", v: "Sansinena", gl: 2, gv: 2, goles_l: ["Octavio Tocchio","Marcelo Leal"], goles_v: ["Víctor Mareco","Manuel Stortini"]},
+        { fecha: "Fecha 10 - Apertura 2026", torneo: "reserva_promocional", l: "Dublin", v: "Sansinena", gl: 2, gv: 3},
+    ],
+    "Guillermo Brown|Olimpo": [
+        { fecha: "Fecha 3 - Fase inicial - 05 abr 2026", torneo: "federala", l: "Guillermo Brown", v: "Olimpo", gl: 0, gv: 2, goles_l: [], goles_v: ["Brian Guille","Enzo Coacci"] },
+        { fecha: "Fecha 3 - Fase inicial - 07 jun 2026", torneo: "federala", l: "Olimpo", v: "Guillermo Brown", gl: 0, gv: 0, goles_l: [], goles_v: [] },
+    ],
+    "Liniers|Petroquímicos": [
+        { fecha: "Fecha 3 - Apertura 2026 - 04 abr", torneo: "segundafemenino", l: "Liniers", v: "Petroquímicos", gl: 4, gv: 2, goles_l: ["Paulina Acevedo","Cindy Paillamilla","Ailén Márquez","Iara Schwab"], goles_v: ["Nicole Montenegro","Paola Vallejos"]},
+        { fecha: "Fecha 3 - Torneo 2026", torneo: "reserva_segundafemenino", l: "Liniers", v: "Petroquímicos", gl: 3, gv: 1},
+        { fecha: "Fecha 12 - Apertura 2026 - 14 jun", torneo: "segundafemenino", l: "Petroquímicos", v: "Liniers", gl: 1, gv: 2, goles_l: ["Paula Rodríguez"], goles_v: ["Iara Schwab","Paulina Acevedo"]},
+        { fecha: "Fecha 12 - Torneo 2026", torneo: "reserva_segundafemenino", l: "Petroquímicos", v: "Liniers", gl: 0, gv: 3},
+        { fecha: "Apertura 2026 - Fecha 13", torneo: "futsal", l: "Petroquímicos", v: "Liniers", gl: 3, gv: 1 },
+        { fecha: "Apertura 2026 - Fecha 13", torneo: "futsalreserva", l: "Petroquímicos", v: "Liniers", gl: 3, gv: 9 },
+    ],
+    "Olimpo|Sansinena": [
+        { fecha: "Fecha 3 - Apertura 2026 - 05 abr", torneo: "segundafemenino", l: "Sansinena", v: "Olimpo", gl: 2, gv: 1, goles_l: ["Estefanía Arapey","Melina Gómez"], goles_v: ["Flavia Curín"]},
+        { fecha: "Fecha 12 - Apertura 2026 - 14 jun", torneo: "segundafemenino", l: "Olimpo", v: "Sansinena", gl: 0, gv: 0, goles_l: [], goles_v: []},
+        { fecha: "Fecha 6 - Apertura 2026 - 19 abr 2026", torneo: "promocional", l: "Sansinena", v: "Olimpo", gl: 0, gv: 1, goles_l: [], goles_v: ["Marcos Acosta"] },
+        { fecha: "Fecha 6 - Apertura 2026", torneo: "reserva_promocional", l: "Sansinena", v: "Olimpo", gl: 2, gv: 5 },
+        { fecha: "Fecha 13 - Apertura 2026 - 21 jun 2026", torneo: "promocional", l: "Olimpo", v: "Sansinena", gl: 2, gv: 3, goles_l: ["William Vidal","Felipe Santamarina"], goles_v: ["Manuel Stortini (2)","Santiago González"] },
+        { fecha: "Fecha 13 - Apertura 2026", torneo: "reserva_promocional", l: "Olimpo", v: "Sansinena", gl: 1, gv: 0 },
+    ],
+    "Estrella de Oro|Rosario PB": [
+        { fecha: "Fecha 3 - Apertura 2026 - 05 abr", torneo: "segundafemenino", l: "Rosario PB", v: "Estrella de Oro", gl: 3, gv: 3, goles_l: ["Juliana Ruiz (2)","Bárbara Aguirre"], goles_v: ["Mariana González (2)","Constanza Franco"]},
+        { fecha: "Fecha 3 - Torneo 2026", torneo: "reserva_segundafemenino", l: "Rosario PB", v: "Estrella de Oro", gl: 3, gv: 1},
+        { fecha: "Fecha 12 - Apertura 2026 - 14 jun", torneo: "segundafemenino", l: "Estrella de Oro", v: "Rosario PB", gl: 1, gv: 5, goles_l: ["Natalia Ríos"], goles_v: ["Juliana Ruiz (2)","Valentina Cavalli","Carolina Díaz","Celeste Medina"]},
+        { fecha: "Fecha 12 - Torneo 2026", torneo: "reserva_segundafemenino", l: "Estrella de Oro", v: "Rosario PB", gl: 1, gv: 1},
+    ],
+    "Bella Vista|Huracán": [
+        { fecha: "Apertura 2026 - Fecha 3", torneo: "senior", l: "Bella Vista", v: "Huracán", gl: 1, gv: 0, goles_l: ["Maximiliano Álvarez"], goles_v: [] },
+        { fecha: "Torneo 2026 - Fecha 4", torneo: "sub15fem", l: "Bella Vista", v: "Huracán", gl: 4, gv: 0 },
+        { fecha: "Torneo 2026 - Fecha 15", torneo: "sub15fem", l: "Huracán", v: "Bella Vista", gl: 0, gv: 7 },
+        { fecha: "Fecha 7 - Apertura 2026 - 2 may 2026", torneo: "oficial", l: "Huracán", v: "Bella Vista", gl: 2, gv: 2, goles_l: ["Lautaro Cerato","Walter Linares"], goles_v: ["Maximiliano Gandolfo","Gabino Bellegia"] },
+        { fecha: "Fecha 7 - Apertura 2026", torneo: "reserva_oficial", l: "Huracán", v: "Bella Vista", gl: 1, gv: 1 },
+        { fecha: "Fecha 14 - Apertura 2026 - 27 jun 2026", torneo: "oficial", l: "Bella Vista", v: "Huracán", gl: 2, gv: 0, goles_l: ["Lucas Martínez","Gabino Bellegia"], goles_v: [] },
+        { fecha: "Fecha 14 - Apertura 2026", torneo: "reserva_oficial", l: "Bella Vista", v: "Huracán", gl: 2, gv: 0 },
+    ],
+    "Pacífico (C)|San Francisco": [
+        { fecha: "Apertura 2026 - Fecha 3", torneo: "senior", l: "Pacífico (C)", v: "San Francisco", gl: 2, gv: 1, goles_l: ["Fabián Soto","Nicolás Arroyo"], goles_v: ["Gabriel Duawalder"] },
+        { fecha: "Fecha 5 - Torneo 2026 - 19 abr", torneo: "segundafemenino", l: "San Francisco", v: "Pacífico (C)", gl: 7, gv: 0, goles_l: ["Milagos Fernández (3)","Ariana Adassus (2)","Clara Iturrioz","Ailín Randisi"], goles_v: [] },
+        { fecha: "Fecha 14 - Torneo 2026 - 28 jun", torneo: "segundafemenino", l: "Pacífico (C)", v: "San Francisco ", gl: 0, gv: 1, goles_l: [], goles_v: ["Elena Spinucci"] },
+    ],
+    "Pacífico BB|Tiro Federal": [
+        { fecha: "Apertura 2026 - Fecha 3", torneo: "senior", l: "Tiro Federal", v: "Pacífico BB", gl: 2, gv: 2, goles_l: ["Juan José Dietz (2)"], goles_v: ["Maximiliano Delaudo (2)"] },
+    ],
+    "Libertad|Sporting": [
+        { fecha: "Apertura 2026 - Fecha 3", torneo: "senior", l: "Sporting", v: "Libertad", gl: 2, gv: 1, goles_l: ["Marcos Cossú","Maximiliano Rodríguez"], goles_v: ["Rodrigo García"] },
+        { fecha: "Apertura 2026 - Fecha 3", torneo: "sub15fem", l: "Libertad", v: "Sporting", gl: 0, gv: 7 },
+        { fecha: "Apertura 2026 - Fecha 14", torneo: "sub15fem", l: "Sporting", v: "Libertad", gl: 5, gv: 1 },
+        { fecha: "Fecha 7 - Apertura 2026 - 25 abr 2026", torneo: "promocional", l: "Tiro Federal", v: "Pacífico BB", gl: 3, gv: 0, goles_l: ["Diego Ocampo","Genaro Fraysse","Franco Fraysse"], goles_v: [] },
+        { fecha: "Fecha 7 - Apertura 2026", torneo: "reserva_promocional", l: "Tiro Federal", v: "Pacífico BB", gl: 2, gv: 2 },
+        { fecha: "Fecha 14 - Apertura 2026 - 28 jun 2026", torneo: "promocional", l: "Pacífico BB", v: "Tiro Federal", gl: 0, gv: 2, goles_l: [], goles_v: ["Agustín Cabrera","Franco Lefiñir"] },
+        { fecha: "Fecha 14 - Apertura 2026", torneo: "reserva_promocional", l: "Pacífico BB", v: "Tiro Federal", gl: 1, gv: 4 },
+        { fecha: "Fecha 7 - Apertura 2026 - 25 may", torneo: "femenino", l: "Sporting", v: "Libertad", gl: 5, gv: 1, goles_l: ["Sofía Mattos (3)","Alexia Villani (2)"], goles_v: ["Melany García"] },
+        { fecha: "Fecha 1 - Apertura 2026", torneo: "reserva_femenino", l: "Sporting", v: "Libertad", gl: 1, gv: 0 },
+        { fecha: "Fecha 14 - Apertura 2026 - 28 jun", torneo: "femenino", l: "Libertad", v: "Sporting", gl: 2, gv: 0, goles_l: ["Antonella De Vega","Jazmín Reyes"], goles_v: [] },
+        { fecha: "Fecha 14 - Apertura 2026", torneo: "reserva_femenino", l: "Libertad", v: "Sporting", gl: 3, gv: 0 },
+    ],
+    "Bella Vista|Olimpo": [
+        { fecha: "Apertura 2026 - Fecha 3", torneo: "sub15fem", l: "Olimpo", v: "Bella Vista", gl: 1, gv: 14 },
+        { fecha: "Apertura 2026 - Fecha 14", torneo: "sub15fem", l: "Bella Vista", v: "Olimpo", gl: 6, gv: 0 },
+        { fecha: "Fecha 5 - Apertura 2026 - 12 abr 2026", torneo: "oficial", l: "Libertad", v: "Sporting", gl: 1, gv: 1, goles_l: ["Federico López (e/c)"], goles_v: ["Luis De Los Santos"] },
+        { fecha: "Fecha 5 - Apertura 2026", torneo: "reserva_oficial", l: "Libertad", v: "Sporting", gl: 0, gv: 1 },
+        { fecha: "Fecha 12 - Apertura 2026 - 14 jun 2026", torneo: "oficial", l: "Sporting", v: "Libertad", gl: 1, gv: 1, goles_l: ["Erico Walker"], goles_v: ["Juan Ignacio Mazzella"] },
+        { fecha: "Fecha 12 - Apertura 2026", torneo: "reserva_oficial", l: "Sporting", v: "Libertad", gl: 1, gv: 2 },
+    ],
+    "San Francisco|Villa Mitre": [
+        { fecha: "Fecha 4 - Apertura 2026 - 02 abr 2026", torneo: "oficial", l: "Villa Mitre", v: "San Francisco", gl: 1, gv: 0, goles_l: ["Martín Aguirre"], goles_v: [] },
+        { fecha: "Fecha 4 - Apertura 2026", torneo: "reserva_oficial", l: "Villa Mitre", v: "San Francisco", gl: 2, gv: 4 },
+        { fecha: "Fecha 11 - Apertura 2026 - 07 jun 2026", torneo: "oficial", l: "San Francisco", v: "Villa Mitre", gl: 0, gv: 2, goles_l: [], goles_v: ["Juan Acosta","Rodrigo Cardoso"] },
+        { fecha: "Fecha 11 - Apertura 2026", torneo: "reserva_oficial", l: "San Francisco", v: "Villa Mitre", gl: 1, gv: 3 },
+        { fecha: "Apertura 2026 - Fecha 3", torneo: "sub15fem", l: "San Francisco", v: "Villa Mitre", gl: 0, gv: 4 },
+        { fecha: "Apertura 2026 - Fecha 14", torneo: "sub15fem", l: "Villa Mitre", v: "San Francisco", gl: 3, gv: 0 },
+        { fecha: "Apertura 2026 - Fecha 5", torneo: "futsal", l: "San Francisco", v: "Villa Mitre", gl: 2, gv: 2 },
+        { fecha: "Apertura 2026 - Fecha 5", torneo: "reservafutsal", l: "San Francisco", v: "Villa Mitre", gl: 2, gv: 4 },
+    ],
+    "Empleados de Comercio|Juventud Unida": [
+        { fecha: "Apertura 2026 - Fecha 3", torneo: "sub15fem", l: "Empleados de Comercio", v: "Juventud Unida", gl: 0, gv: 4 },
+        { fecha: "Apertura 2026 - Fecha 14", torneo: "sub15fem", l: "Juventud Unida", v: "Empleados de Comercio", gl: 2, gv: 0 },
+    ],
+    "Dep. Futsal|San Francisco": [
+        { fecha: "Apertura 2026 - Fecha 3", torneo: "futsal", l: "Dep. Futsal", v: "San Francisco", gl: 5, gv: 2 },
+        { fecha: "Apertura 2026 - Fecha 3", torneo: "reservafutsal", l: "Dep. Futsal", v: "San Francisco", gl: 3, gv: 4 },
+    ],
+    "Comercial|Liniers": [
+        { fecha: "Apertura 2026 - Fecha 3", torneo: "futsal", l: "Liniers", v: "Comercial", gl: 5, gv: 5 },
+        { fecha: "Apertura 2026 - Fecha 3", torneo: "reservafutsal", l: "Liniers", v: "Comercial", gl: 1, gv: 1 },
+    ],
+    "Huracán|Los 3 Chiflados": [
+        { fecha: "Apertura 2026 - Fecha 3", torneo: "futsal", l: "Huracán", v: "Los 3 Chiflados", gl: 2, gv: 10 },
+        { fecha: "Apertura 2026 - Fecha 3", torneo: "reservafutsal", l: "Huracán", v: "Los 3 Chiflados", gl: 0, gv: 5 },
+    ],
+    "Dublin|La Esperanza": [
+        { fecha: "Apertura 2026 - Fecha 3", torneo: "futsal", l: "Dublin", v: "La Esperanza", gl: 0, gv: 2 },
+        { fecha: "Apertura 2026 - Fecha 3", torneo: "reservafutsal", l: "Dublin", v: "La Esperanza", gl: 1, gv: 2 },
+    ],
+    "Catamarca|La Estación": [
+        { fecha: "Apertura 2026 - Fecha 3", torneo: "futsal", l: "Catamarca", v: "La Estación", gl: 0, gv: 7 },
+        { fecha: "Apertura 2026 - Fecha 3", torneo: "reservafutsal", l: "Catamarca", v: "La Estación", gl: 5, gv: 6 },
+    ],
+    "Petroquímicos|Villa Mitre": [
+        { fecha: "Apertura 2026 - Fecha 3", torneo: "futsal", l: "Petroquímicos", v: "Villa Mitre", gl: 3, gv: 6 },
+        { fecha: "Apertura 2026 - Fecha 3", torneo: "reservafutsal", l: "Petroquímicos", v: "Villa Mitre", gl: 4, gv: 4 },
+        { fecha: "Apertura 2026 - Semifinales", torneo: "reservafutsal", l: "Villa Mitre", v: "Petroquímicos", gl: 5, gv: 6 },
+    ],
+    "Pacífico BB|Tiro Federal": [
+        { fecha: "Apertura 2026 - Fecha 3", torneo: "futsal", l: "Pacífico BB", v: "Tiro Federal", gl: 2, gv: 5 },
+        { fecha: "Apertura 2026 - Fecha 3", torneo: "reservafutsal", l: "Pacífico BB", v: "Tiro Federal", gl: 3, gv: 4 },
+    ],
+    "Sporting|Villa Mitre": [
+        { fecha: "Fecha 3 - Apertura 2026 - 04 abr", torneo: "femenino", l: "Sporting", v: "Villa Mitre", gl: 2, gv: 1, goles_l: ["Alexia Villani","Lucía Aranda"], goles_v: ["Florencia Pinedo"] },
+        { fecha: "Fecha 3 - Apertura 2026", torneo: "reserva_femenino", l: "Sporting", v: "Villa Mitre", gl: 0, gv: 5 },
+        { fecha: "Fecha 10 - Apertura 2026 - 30 abr", torneo: "femenino", l: "Villa Mitre", v: "Sporting", gl: 5, gv: 1, goles_l: ["Sol Menéndez Perrone (2)","Vera Moggia","Daiana Lotto","Paola Melgarejo"], goles_v: ["Débora Farías"] },
+        { fecha: "Fecha 10 - Apertura 2026", torneo: "reserva_femenino", l: "Villa Mitre", v: "Sporting", gl: 2, gv: 0 },
+        { fecha: "Fecha 7 - Apertura 2026 - 25 abr 2026", torneo: "oficial", l: "Villa Mitre", v: "Sporting", gl: 0, gv: 2, goles_l: [], goles_v: ["Genaro Siracusa","Matías Chamares"] },
+        { fecha: "Fecha 7 - Apertura 2026", torneo: "reserva_oficial", l: "Villa Mitre", v: "Sporting", gl: 4, gv: 3 },
+        { fecha: "Fecha 14 - Apertura 2026 - 27 jun 2026", torneo: "oficial", l: "Sporting", v: "Villa Mitre", gl: 4, gv: 0, goles_l: ["Valentín Barone","Jonathan Font","Maximiliano Tejada","Tomás Vázquez García"], goles_v: [] },
+        { fecha: "Fecha 14 - Apertura 2026", torneo: "reserva_oficial", l: "Sporting", v: "Villa Mitre", gl: 1, gv: 2 },
+        { fecha: "Final - Apertura 2026", torneo: "reserva_oficial", l: "Sporting", v: "Villa Mitre", gl: 2, gv: 2, pen_l:4, pen_v:5 },
+        { fecha: "Final Extra - Apertura 2026", torneo: "reserva_oficial", l: "Sporting", v: "Villa Mitre", gl: 2, gv: 1 },
+        { fecha: "Fecha 3 - Clausura 2026 - 09 ago", torneo: "femenino", l: "Sporting", v: "Villa Mitre", gl: 0, gv: 5, goles_l: [], goles_v: ["Sol Menéndez Perrone (3)","Sofía Gómez","Morena Bouven"] },
+        { fecha: "Fecha 3 - Clausura 2026", torneo: "reserva_femenino", l: "Sporting", v: "Villa Mitre", gl: 0, gv: 3 },
+        { fecha: "Torneo 2026 - Fecha 10", torneo: "sub15fem", l: "Villa Mitre", v: "Sporting", gl: 2, gv: 1 },
+    ],
+    "Municipales|Tiro Federal": [
+        { fecha: "Fecha 3 - Apertura 2026 - 05 abr", torneo: "femenino", l: "Municipales", v: "Tiro Federal", gl: 4, gv: 2, goles_l: ["Ivana Lindstrom (2)","Ludmila Fernández","Victoria Nervi"], goles_v: ["Abril Sáenz (2)"] },
+        { fecha: "Fecha 3 - Apertura 2026", torneo: "reserva_femenino", l: "Municipales", v: "Tiro Federal", gl: 2, gv: 2 },
+        { fecha: "Fecha 10 - Apertura 2026 - 31 abr", torneo: "femenino", l: "Tiro Federal", v: "Municipales", gl: 3, gv: 2, goles_l: ["Abril Sáenz (2)","Gabriela Cabrera"], goles_v: ["Luana Villanueva","Victoria Nervi"] },
+        { fecha: "Fecha 10 - Apertura 2026", torneo: "reserva_femenino", l: "Tiro Federal", v: "Municipales", gl: 3, gv: 2 },
+        { fecha: "Fecha 3 - Clausura 2026", torneo: "reserva_femenino", l: "Municipales", v: "Tiro Federal", gl: 1, gv: 1 },
+    ],
+    "La Armonía|Libertad": [
+        { fecha: "Fecha 3 - Apertura 2026 - 05 abr", torneo: "femenino", l: "La Armonía", v: "Libertad", gl: 2, gv: 0, goles_l: ["Aixa Bruzzone (2)"], goles_v: [] },
+        { fecha: "Fecha 3 - Apertura 2026", torneo: "reserva_femenino", l: "La Armonía", v: "Libertad", gl: 2, gv: 4 },
+        { fecha: "Fecha 10 - Apertura 2026 - 31 abr", torneo: "femenino", l: "Libertad", v: "La Armonía", gl: 1, gv: 2, goles_l: ["Jazmín Reyes"], goles_v: ["Natalia Morinigo (2)"] },
+        { fecha: "Fecha 10 - Apertura 2026", torneo: "reserva_femenino", l: "Libertad", v: "La Armonía", gl: 0, gv: 2 },
+        { fecha: "Fecha 7 - Apertura 2026 - 2 may 2026", torneo: "oficial", l: "La Armonía", v: "Libertad", gl: 1, gv: 1, goles_l: ["Julio Acosta"], goles_v: ["Mauro Sabatini"] },
+        { fecha: "Fecha 7 - Apertura 2026", torneo: "reserva_oficial", l: "La Armonía", v: "Libertad", gl: 0, gv: 3 },
+        { fecha: "Fecha 14 - Apertura 2026 - 27 jun 2026", torneo: "oficial", l: "Libertad", v: "La Armonía", gl: 0, gv: 1, goles_l: [], goles_v: ["Ezequiel Intrevado"] },
+        { fecha: "Fecha 14 - Apertura 2026", torneo: "reserva_oficial", l: "Libertad", v: "La Armonía", gl: 1, gv: 0 },
+        { fecha: "Torneo 2026 - Fecha 8", torneo: "sub15fem", l: "La Armonía", v: "Libertad", gl: 2, gv: 0 },
+    ],
+    "Libertad|Pacífico (C)": [
+        { fecha: "Apertura 2026 - Fecha 4", torneo: "senior", l: "Libertad", v: "Pacífico (C)", gl: 5, gv: 1, goles_l: ["Luis Kihn (2)","Mariano Moreno","Gustavo Peña","César Pascal"], goles_v: ["Nicolás Arroyo"] },
+        { fecha: "Apertura 2026 - Octavos de Final", torneo: "senior", l: "Pacífico (C)", v: "Libertad", gl: 2, gv: 2, goles_l: ["Leandro Duelle","Esteban Angelini"], goles_v: ["Matías Vázquez","Pablo Cerra"] },
+    ],
+    "Comercial|San Francisco": [
+        { fecha: "Apertura 2026 - Fecha 4", torneo: "senior", l: "San Francisco", v: "Comercial", gl: 1, gv: 2, goles_l: ["Marcos Ramos"], goles_v: ["Sebastián Racchi (2)"] },
+        { fecha: "Apertura 2026 - Cuartos de Final", torneo: "senior", l: "Comercial", v: "San Francisco", gl: 3, gv: 1, goles_l: ["Sebastián Racchi","Emanuel Ihitz","Maximiliano Casas"], goles_v: ["Juan Pérez"] },
+        { fecha: "Apertura 2026 - Fecha 7", torneo: "futsal", l: "San Francisco", v: "Comercial", gl: 2, gv: 1 },
+        { fecha: "Apertura 2026 - Fecha 7", torneo: "futsalreserva", l: "San Francisco", v: "Comercial", gl: 2, gv: 3 },
+    ],
+    "Sansinena|Tiro Federal": [
+        { fecha: "Apertura 2026 - Fecha 4", torneo: "senior", l: "Sansinena", v: "Tiro Federal", gl: 2, gv: 1, goles_l: ["Marcos Pierucci","Juan Francisco Molina"], goles_v: ["Juan José Dietz"] },
+        { fecha: "Fecha 5 - Apertura 2026 - 11 abr 2026", torneo: "promocional", l: "Sansinena", v: "Tiro Federal", gl: 0, gv: 0, goles_l: [], goles_v: [] },
+        { fecha: "Fecha 5 - Apertura 2026", torneo: "reserva_promocional", l: "Sansinena", v: "Tiro Federal", gl: 1, gv: 2},
+        { fecha: "Fecha 12 - Apertura 2026 - 13 jun 2026", torneo: "promocional", l: "Tiro Federal", v: "Sansinena", gl: 4, gv: 0, goles_l: ["Agustín Cabrera","Agustín Restiffo","Diego Ocampo","Joaquín Laborde"], goles_v: [] },
+        { fecha: "Fecha 12 - Apertura 2026", torneo: "reserva_promocional", l: "Tiro Federal", v: "Sansinena", gl: 2, gv: 0 },
+    ],
+    "Bella Vista|Pacífico BB": [
+        { fecha: "Apertura 2026 - Fecha 4", torneo: "senior", l: "Pacífico BB", v: "Bella Vista", gl: 1, gv: 1, goles_l: [], goles_v: [] },
+    ],
+    "Olimpo|Sporting": [
+        { fecha: "Torneo 2026 - Fecha 4", torneo: "sub15fem", l: "Sporting", v: "Olimpo", gl: 2, gv: 0 },
+        { fecha: "Torneo 2026 - Fecha 15", torneo: "sub15fem", l: "Olimpo", v: "Sporting", gl: 0, gv: 1 },
+    ],
+    "Juventud Unida|Libertad": [
+        { fecha: "Torneo 2026 - Fecha 4", torneo: "sub15fem", l: "Juventud Unida", v: "Libertad", gl: 4, gv: 0 },
+        { fecha: "Torneo 2026 - Fecha 15", torneo: "sub15fem", l: "Libertad", v: "Juventud Unida", gl: 0, gv: 0 },
+    ],
+    "Olimpo|Sol de Mayo": [
+        { fecha: "Fecha 4 - Fase inicial - 12 abr 2026", torneo: "federala", l: "Olimpo", v: "Sol de Mayo", gl: 1, gv: 0, goles_l: ["Cristian Amarilla"], goles_v: [] },
+        { fecha: "Fecha 13 - Fase inicial - 14 jun 2026", torneo: "federala", l: "Sol de Mayo", v: "Olimpo", gl: 1, gv: 1, goles_l: ["Diego Zalazar"], goles_v: ["Antú Hernández"] },
+    ],
+    "Germinal|Villa Mitre": [
+        { fecha: "Fecha 4 - Fase inicial - 12 abr 2026", torneo: "federala", l: "Germinal", v: "Villa Mitre", gl: 1, gv: 0, goles_l: ["Thomas Olivieri"], goles_v: [] },
+        { fecha: "Fecha 13 - Fase inicial - 14 jun2026", torneo: "federala", l: "Villa Mitre", v: "Germinal", gl: 0, gv: 0, goles_l: [], goles_v: [] },
+    ],
+    "Petroquímicos|San Francisco": [
+        { fecha: "Apertura 2026 - Fecha 4", torneo: "futsal", l: "San Francisco", v: "Petroquímicos", gl: 0, gv: 3 },
+        { fecha: "Apertura 2026 - Fecha 4", torneo: "reservafutsal", l: "San Francisco", v: "Petroquímicos", gl: 1, gv: 9 },
+        { fecha: "Fecha 4 - Torneo 2026 - 11 abr", torneo: "segundafemenino", l: "Petroquímicos", v: "San Francisco", gl: 0, gv: 1, goles_l: [], goles_v: ["Clara Iturrioz"] },
+        { fecha: "Fecha 4 - Torneo 2026", torneo: "reserva_segundafemenino", l: "Petroquímicos", v: "San Francisco", gl: 1, gv: 2 },
+        { fecha: "Fecha 13 - Torneo 2026 - 20 jun", torneo: "segundafemenino", l: "San Francisco", v: "Petroquímicos", gl: 0, gv: 1, goles_l: [], goles_v: ["Renata Segovia"] },
+        { fecha: "Fecha 13 - Torneo 2026", torneo: "reserva_segundafemenino", l: "San Francisco", v: "Petroquímicos", gl: 2, gv: 1 },
+    ],
+    "Estrella de Oro|Sansinena": [
+        { fecha: "Fecha 4 - Torneo 2026 - 12 abr", torneo: "segundafemenino", l: "Estrella de Oro", v: "Sansinena", gl: 1, gv: 0, goles_l: ["Aldana Fuentes"], goles_v: [] },
+        { fecha: "Fecha 4 - Torneo 2026", torneo: "reserva_segundafemenino", l: "Estrella de Oro", v: "Sansinena", gl: 3, gv: 1 },
+        { fecha: "Fecha 13 - Torneo 2026 - 21 jun", torneo: "segundafemenino", l: "Sansinena", v: "Estrella de Oro", gl: 0, gv: 0, goles_l: [], goles_v: [] },
+        { fecha: "Fecha 13 - Torneo 2026", torneo: "reserva_segundafemenino", l: "Sansinena", v: "Estrella de Oro", gl: 0, gv: 6 },
+    ],
+    "Liniers|Pacífico (C)": [
+        { fecha: "Fecha 4 - Torneo 2026 - 12 abr", torneo: "segundafemenino", l: "Pacífico (C)", v: "Liniers", gl: 0, gv: 4, goles_l: [], goles_v: ["Liz Marcolini","Isabella Pezzutti","Lucía Julián","Lola Podestá"] },
+        { fecha: "Fecha 13 - Torneo 2026 - 20 jun", torneo: "segundafemenino", l: "Liniers", v: "Pacífico (C)", gl: 7, gv: 0, goles_l: ["Agustina Borda (2)","Iara Schwab (2)","Isabella Pezzutti","Paz Cutrín","Ailén Márquez"], goles_v: [] },
+    ],
+    "Huracán|Rosario PB": [
+        { fecha: "Fecha 4 - Torneo 2026 - 12 abr", torneo: "segundafemenino", l: "Huracán", v: "Rosario PB", gl: 1, gv: 10, goles_l: ["Natasha Mella"], goles_v: ["Celeste Medina (2)","Bárbara Aguirre (2)","Carolina Díaz","Juliana Ruiz","Julieta Díaz","Noemí Benítez","Valentina Cavalli","María Arroyo"] },
+        { fecha: "Fecha 4 - Torneo 2026", torneo: "reserva_segundafemenino", l: "Huracán", v: "Rosario PB", gl: 0, gv: 4 },
+        { fecha: "Fecha 13 - Torneo 2026 - 21 jun", torneo: "segundafemenino", l: "Rosario PB", v: "Huracán", gl: 9, gv: 2, goles_l: ["Mariela Sollosky (2)","Celeste Medina (2)","Juliana Ruiz","Valentina Cavalli","Ayelén Zeballos","Carolina Díaz","Bárbara Aguirre"], goles_v: [] },
+    ],
+    "Huracán|La Armonía": [
+        { fecha: "Fecha 4 - Apertura 2026 - 03 abr 2026", torneo: "oficial", l: "La Armonía", v: "Huracán", gl: 2, gv: 3, goles_l: ["Enrique Narvay","Matías Malmoria"], goles_v: ["Lautaro Cerato (3)"] },
+        { fecha: "Fecha 4 - Apertura 2026", torneo: "reserva_oficial", l: "La Armonía", v: "Huracán", gl: 5, gv: 1 },
+        { fecha: "Fecha 11 - Apertura 2026 - 06 jun 2026", torneo: "oficial", l: "Huracán", v: "La Armonía", gl: 3, gv: 0, goles_l: ["Brian Scalco (2)","Tomás Segovia"], goles_v: [] },
+        { fecha: "Fecha 11 - Apertura 2026", torneo: "reserva_oficial", l: "Huracán", v: "La Armonía", gl: 0, gv: 0 },
+        { fecha: "Torneo 2026 - Fecha 10", torneo: "sub15fem", l: "La Armonía", v: "Huracán", gl: 1, gv: 0 },
+    ],
+    "Libertad|Liniers": [
+        { fecha: "Fecha 4 - Apertura 2026 - 04 abr 2026", torneo: "oficial", l: "Liniers", v: "Libertad", gl: 0, gv: 1, goles_l: [], goles_v: ["Nahuel Sánchez"] },
+        { fecha: "Fecha 4 - Apertura 2026", torneo: "reserva_oficial", l: "Liniers", v: "Libertad", gl: 0, gv: 0 },
+        { fecha: "Fecha 11 - Apertura 2026 - 07 jun 2026", torneo: "oficial", l: "Libertad", v: "Liniers", gl: 1, gv: 5, goles_l: ["Franco Pane"], goles_v: ["Valentín Bertoni (2)","Salvador Maio","Rodrigo Phillip","Joaquín Castro"] },
+        { fecha: "Fecha 11 - Apertura 2026", torneo: "reserva_oficial", l: "Libertad", v: "Liniers", gl: 1, gv: 0 },
+        { fecha: "Torneo 2026 - Fecha 10", torneo: "sub15fem", l: "Libertad", v: "Liniers", gl: 0, gv: 8 },
+    ],
+    "Pacífico (C)|Tiro Federal": [
+        { fecha: "Fecha 4 - Apertura 2026 - 03 abr 2026", torneo: "promocional", l: "Tiro Federal", v: "Pacífico (C)", gl: 1, gv: 1, goles_l: ["Nahuel Colmenares (2)"], goles_v: ["Ezequiel Katz","Agustín Grippaudo"] },
+        { fecha: "Fecha 4 - Apertura 2026", torneo: "reserva_promocional", l: "Tiro Federal", v: "Pacífico (C)", gl: 6, gv: 3 },
+        { fecha: "Fecha 11 - Apertura 2026 - 06 jun 2026", torneo: "promocional", l: "Pacífico (C)", v: "Tiro Federal", gl: 1, gv: 2, goles_l: ["Juan Pablo Molina"], goles_v: ["Franco Fraysse","Sebastián Mancinelli"] },
+        { fecha: "Fecha 11 - Apertura 2026", torneo: "reserva_promocional", l: "Pacífico (C)", v: "Tiro Federal", gl: 3, gv: 3 },
+        { fecha: "Apertura 2026 - Fecha 9", torneo: "senior", l: "Pacífico (C)", v: "Tiro Federal", gl: 5, gv: 4, goles_l: ["Esteban Angelini (3)","Leonardo Duelle (2)"], goles_v: ["Juan José Dietz (2)","Javier Muñoz","Lucas Sauer"] },
+    ],
+    "Bella Vista|La Armonía": [
+        { fecha: "Fecha 1 - Apertura 2026 - 11 abr", torneo: "femenino", l: "Bella Vista", v: "La Armonía", gl: 2, gv: 0, goles_l: ["Victoria Toloza","Mahia Romero"], goles_v: [] },
+        { fecha: "Fecha 1 - Apertura 2026", torneo: "reserva_femenino", l: "Bella Vista", v: "La Armonía", gl: 0, gv: 0 },
+        { fecha: "Fecha 11 - Apertura 2026 - 07 jun", torneo: "femenino", l: "La Armonía", v: "Bella Vista", gl: 0, gv: 1, goles_l: [], goles_v: ["Antonia Prada"] },
+        { fecha: "Fecha 11 - Apertura 2026", torneo: "reserva_femenino", l: "La Armonía", v: "Bella Vista", gl: 1, gv: 4 },
+        { fecha: "Fecha 6 - Apertura 2026 - 19 abr 2026", torneo: "oficial", l: "Bella Vista", v: "La Armonía", gl: 1, gv: 0, goles_l: ["Rodrigo Gómez"], goles_v: [] },
+        { fecha: "Fecha 6 - Apertura 2026", torneo: "reserva_oficial", l: "Bella Vista", v: "La Armonía", gl: 3, gv: 1 },
+        { fecha: "Fecha 13 - Apertura 2026 - 20 jun 2026", torneo: "oficial", l: "La Armonía", v: "Bella Vista", gl: 1, gv: 3, goles_l: ["Alex Muzi"], goles_v: ["Rodrigo Gómez (2)","Leandro Rosales"] },
+        { fecha: "Fecha 13 - Apertura 2026", torneo: "reserva_oficial", l: "La Armonía", v: "Bella Vista", gl: 2, gv: 3 },
+        { fecha: "Torneo 2026 - Fecha 11", torneo: "sub15fem", l: "Bella Vista", v: "La Armonía", gl: 5, gv: 0 },
+    ],
+    "Libertad|Municipales": [
+        { fecha: "Fecha 1 - Apertura 2026 - 12 abr", torneo: "femenino", l: "Libertad", v: "Municipales", gl: 0, gv: 2, goles_l: [], goles_v: ["Victoria Nervi","Ivana Lindstrom"] },
+        { fecha: "Fecha 1 - Apertura 2026", torneo: "reserva_femenino", l: "Libertad", v: "Municipales", gl: 0, gv: 6 },
+        { fecha: "Fecha 11 - Apertura 2026 - 07 jun", torneo: "femenino", l: "Municipales", v: "Libertad", gl: 4, gv: 0, goles_l: ["Stefania Sueyro (2)","Valeria Navarrete","Rosario Damiani"], goles_v: [] },
+        { fecha: "Fecha 11 - Apertura 2026", torneo: "reserva_femenino", l: "Municipales", v: "Libertad", gl: 6, gv: 0 },
+    ],
+    "La Esperanza|Liniers": [
+        { fecha: "Apertura 2026 - Fecha 4", torneo: "futsal", l: "La Esperanza", v: "Liniers", gl: 1, gv: 7 },
+        { fecha: "Apertura 2026 - Fecha 4", torneo: "reservafutsal", l: "La Esperanza", v: "Liniers", gl: 4, gv: 6 },
+    ],
+    "Dublin|La Estación": [
+        { fecha: "Apertura 2026 - Fecha 4", torneo: "futsal", l: "La Estación", v: "Dublin", gl: 1, gv: 0 },
+        { fecha: "Apertura 2026 - Fecha 4", torneo: "reservafutsal", l: "La Estación", v: "Dublin", gl: 8, gv: 0 },
+    ],
+    "Pacífico BB|Villa Mitre": [
+        { fecha: "Apertura 2026 - Fecha 4", torneo: "futsal", l: "Villa Mitre", v: "Pacífico BB", gl: 3, gv: 1 },
+        { fecha: "Apertura 2026 - Fecha 4", torneo: "reservafutsal", l: "Villa Mitre", v: "Pacífico BB", gl: 8, gv: 5 },
+    ],
+    "Dep. Futsal|Los 3 Chiflados": [
+        { fecha: "Apertura 2026 - Fecha 4", torneo: "futsal", l: "Los 3 Chiflados", v: "Dep. Futsal", gl: 8, gv: 4 },
+        { fecha: "Apertura 2026 - Fecha 4", torneo: "reservafutsal", l: "Los 3 Chiflados", v: "Dep. Futsal", gl: 8, gv: 0 },
+    ],
+    "Catamarca|Tiro Federal": [
+        { fecha: "Apertura 2026 - Fecha 4", torneo: "futsal", l: "Tiro Federal", v: "Catamarca", gl: 1, gv: 0 },
+        { fecha: "Apertura 2026 - Fecha 4", torneo: "reservafutsal", l: "Tiro Federal", v: "Catamarca", gl: 2, gv: 3 },
+    ],
+    "Libertad|Villa Mitre": [
+        { fecha: "Semifinales - Apertura 2026", torneo: "reserva_oficial", l: "Libertad", v: "Villa Mitre", gl: 0, gv: 1 },
+        { fecha: "Fecha 5 - Apertura 2026 - 19 abr", torneo: "femenino", l: "Villa Mitre", v: "Libertad", gl: 12, gv: 0, goles_l: ["Agustina Rodríguez (5)","Sol Menéndez Perone (3)","Lucrecia Semper (2)","Romina Schill","Morena Bouven"], goles_v: [] },
+        { fecha: "Fecha 5 - Apertura 2026", torneo: "reserva_femenino", l: "Villa Mitre", v: "Libertad", gl: 6, gv: 0 },
+        { fecha: "Fecha 12 - Apertura 2026 - 15 jun", torneo: "femenino", l: "Libertad", v: "Villa Mitre", gl: 2, gv: 8, goles_l: ["Julieta Banega","Teresa Mella"], goles_v: ["Sol Menéndez Perrone (3)","Paola Melgarejo (2)","Morena Bouven","Lucrecia Semper","Bernardita Tocchio"] },
+        { fecha: "Fecha 12 - Apertura 2026", torneo: "reserva_femenino", l: "Libertad", v: "Villa Mitre", gl: 1, gv: 1 },
+        { fecha: "Torneo 2026 - Fecha 6", torneo: "sub15fem", l: "Villa Mitre", v: "Libertad", gl: 3, gv: 1 },
+        { fecha: "Fecha 6 - Apertura 2026 - 18 abr 2026", torneo: "oficial", l: "Libertad", v: "Villa Mitre", gl: 2, gv: 1, goles_l: ["Franco Pane","Agustín Cocciarini"], goles_v: ["Ramiro Gerk"] },
+        { fecha: "Fecha 6 - Apertura 2026", torneo: "reserva_oficial", l: "Libertad", v: "Villa Mitre", gl: 0, gv: 3 },
+        { fecha: "Fecha 13 - Apertura 2026 - 21 jun 2026", torneo: "oficial", l: "Villa Mitre", v: "Libertad", gl: 0, gv: 0, goles_l: [], goles_v: [] },
+        { fecha: "Fecha 13 - Apertura 2026", torneo: "reserva_oficial", l: "Villa Mitre", v: "Libertad", gl: 0, gv: 0 },
+    ],
+    "Bella Vista|Villa Mitre": [
+        { fecha: "Fecha 5 - Apertura 2026 - 12 abr 2026", torneo: "oficial", l: "Bella Vista", v: "Villa Mitre", gl: 3, gv: 0, goles_l: ["Nahuel Bardella","Gabino Belleggia","Lucas Martínez"], goles_v: [] },
+        { fecha: "Fecha 5 - Apertura 2026", torneo: "reserva_oficial", l: "Bella Vista", v: "Villa Mitre", gl: 2, gv: 1 },
+        { fecha: "Fecha 12 - Apertura 2026 - 15 jun 2026", torneo: "oficial", l: "Villa Mitre", v: "Bella Vista", gl: 1, gv: 1, goles_l: ["Julián Monteverde"], goles_v: ["Rodrigo Gómez"] },
+        { fecha: "Fecha 12 - Apertura 2026", torneo: "reserva_oficial", l: "Villa Mitre", v: "Bella Vista", gl: 2, gv: 1 },
+        { fecha: "Fecha 6 - Apertura 2026 - 26 abr 2026", torneo: "femenino", l: "Bella Vista", v: "Villa Mitre", gl: 1, gv: 4, goles_l: ["Rocío Castellano"], goles_v: ["Lucrecia Semper (2)","Agustina Rodríguez","Sol Menéndez Perrone"] },
+        { fecha: "Fecha 6 - Apertura 2026", torneo: "reserva_femenino", l: "Bella Vista", v: "Villa Mitre", gl: 0, gv: 2 },
+        { fecha: "Fecha 13 - Apertura 2026 - 21 jun 2026", torneo: "femenino", l: "Villa Mitre", v: "Bella Vista", gl: 5, gv: 0, goles_l: ["Sol Menéndez Perrone (2)","Morena Bouven","Lucrecia Semper","Vera Moggia"], goles_v: [] },
+        { fecha: "Fecha 13 - Apertura 2026", torneo: "reserva_femenino", l: "Villa Mitre", v: "Bella Vista", gl: 0, gv: 2 },
+        { fecha: "Torneo 2026 - Fecha 9", torneo: "sub15fem", l: "Bella Vista", v: "Villa Mitre", gl: 5, gv: 0 },
+    ],
+    "La Armonía|San Francisco": [
+        { fecha: "Fecha 5 - Apertura 2026 - 12 abr 2026", torneo: "oficial", l: "San Francisco", v: "La Armonía", gl: 1, gv: 2, goles_l: ["Federico Pinedo"], goles_v: ["Enrique Narvay","Ezequiel Intrevado"] },
+        { fecha: "Fecha 5 - Apertura 2026", torneo: "reserva_oficial", l: "San Francisco", v: "La Armonía", gl: 0, gv: 2 },
+        { fecha: "Fecha 12 - Apertura 2026 - 14 jun 2026", torneo: "oficial", l: "La Armonía", v: "San Francisco", gl: 0, gv: 1, goles_l: [], goles_v: ["Leonel Romero"] },
+        { fecha: "Fecha 12 - Apertura 2026", torneo: "reserva_oficial", l: "La Armonía", v: "San Francisco", gl: 2, gv: 5 },
+        { fecha: "Torneo 2026 - Fecha 5", torneo: "sub15fem", l: "La Armonía", v: "San Francisco", gl: 1, gv: 2 },
+    ],
+    "Dublin|Pacífico BB": [
+        { fecha: "Fecha 5 - Apertura 2026 - 11 abr 2026", torneo: "promocional", l: "Dublin", v: "Pacífico BB", gl: 1, gv: 0, goles_l: ["Jonathan Arias"], goles_v: [] },
+        { fecha: "Fecha 5 - Apertura 2026", torneo: "reserva_promocional", l: "Dublin", v: "Pacífico BB", gl: 2, gv: 0 },
+        { fecha: "Fecha 12 - Apertura 2026 - 15 jun 2026", torneo: "promocional", l: "Pacífico BB", v: "Dublin", gl: 0, gv: 0, goles_l: [], goles_v: [] },
+        { fecha: "Fecha 12 - Apertura 2026", torneo: "reserva_promocional", l: "Pacífico BB", v: "Dublin", gl: 0, gv: 2 },
+        { fecha: "Apertura 2026 - Fecha 6", torneo: "futsal", l: "Pacífico BB", v: "Dublin", gl: 6, gv: 4 },
+        { fecha: "Apertura 2026 - Fecha 6", torneo: "reservafutsal", l: "Pacífico BB", v: "Dublin", gl: 5, gv: 6 },
+    ],
+    "Comercial|Rosario PB": [
+        { fecha: "Fecha 5 - Apertura 2026 - 11 abr 2026", torneo: "promocional", l: "Rosario PB", v: "Comercial", gl: 2, gv: 0, goles_l: ["Sebastián Mendoza","Agustín Grippaudo"], goles_v: [] },
+        { fecha: "Fecha 5 - Apertura 2026", torneo: "reserva_promocional", l: "Rosario PB", v: "Comercial", gl: 1, gv: 1 }, 
+       { fecha: "Fecha 12 - Apertura 2026 - 13 jun 2026", torneo: "promocional", l: "Comercial", v: "Rosario PB", gl: 0, gv: 1, goles_l: [], goles_v: ["Sebastián Mendoza"] },
+        { fecha: "Fecha 12 - Apertura 2026", torneo: "reserva_promocional", l: "Comercial", v: "Rosario PB", gl: 2, gv: 2 },
+    ],
+    "Kimberley|Olimpo": [
+        { fecha: "Fecha 5 - Fase inicial - 18 abr 2026", torneo: "federala", l: "Kimberley", v: "Olimpo", gl: 0, gv: 1, goles_l: [], goles_v: ["Cristian Ibarra"] },
+        { fecha: "Fecha 14 - Fase inicial - 20 jun 2026", torneo: "federala", l: "Olimpo", v: "Kimberley", gl: 0, gv: 0, goles_l: [], goles_v: [] },
+    ],
+    "Santamarina|Villa Mitre": [
+        { fecha: "Fecha 5 - Fase inicial - 19 abr 2026", torneo: "federala", l: "Villa Mitre", v: "Santamairna", gl: 0, gv: 0, goles_l: [], goles_v: [] },
+        { fecha: "Fecha 14 - Fase inicial - 20 jun 2026", torneo: "federala", l: "Santamarina", v: "Villa Mitre", gl: 0, gv: 2, goles_l: [], goles_v: ["Jerónimo Almada","Santiago Gómez"] },
+    ],
+    "Empleados de Comercio|Villa Mitre": [
+        { fecha: "Fecha 7 - Apertura 2026 - 10 may", torneo: "femenino", l: "Villa Mitre", v: "Empleados de Comercio", gl: 8, gv: 1, goles_l: ["Lucrecia Semper (3)","Agustina Rodríguez (2)","Morena Bouven (2)","Vera Moggia"], goles_v: ["Gimena Scheffer"] },
+        { fecha: "Fecha 7 - Apertura 2026", torneo: "reserva_femenino", l: "Villa Mitre", v: "Empleados de Comercio", gl: 1, gv: 0 },
+        { fecha: "Fecha 14 - Apertura 2026 - 28 jun", torneo: "femenino", l: "Empleados de Comercio", v: "Villa Mitre", gl: 0, gv: 12, goles_l: [], goles_v: ["Dana Ramos (3)","Sol Menéndez Perrone (2)","Morena Bouven (2)","Jessica Mella (2)","Paola Melgarejo","Cinthia Quiroga","Vera Moggia"] },
+        { fecha: "Fecha 14 - Apertura 2026", torneo: "reserva_femenino", l: "Empleados de Comercio", v: "Villa Mitre", gl: 1, gv: 3 },
+        { fecha: "Torneo 2026 - Fecha 5", torneo: "sub15fem", l: "Empleados de Comercio", v: "Villa Mitre", gl: 0, gv: 2 },
+    ],
+    "Juventud Unida|Olimpo": [
+        { fecha: "Torneo 2026 - Fecha 5", torneo: "sub15fem", l: "Olimpo", v: "Juventud Unida", gl: 1, gv: 1 },
+    ],
+    "Bella Vista|Sansinena": [
+        { fecha: "Apertura 2026 - Fecha 5", torneo: "senior", l: "Bella Vista", v: "Sansinena", gl: 3, gv: 1, goles_l: ["Gustavo Pereyra","Fabián Merlini","Matías Roque"], goles_v: ["Emiliano Jofré"] },
+    ],
+    "Huracán|Pacífico (C)": [
+        { fecha: "Apertura 2026 - Fecha 5", torneo: "senior", l: "Pacífico (C)", v: "Huracán", gl: 4, gv: 8, goles_l: ["Esteban Angelini","Silvio Pagalday","Matías Aldunate","Nicolás Becher"], goles_v: ["César Panduro (3)","Héctor Soto Sassi (2)","Sebastián Faillá","Felipe Hippendinger","Javier Bicciconti"] },
+        { fecha: "Fecha 9 - Torneo 2026 - 23 may", torneo: "segundafemenino", l: "Huracán", v: "Pacífico (C)", gl: 3, gv: 1, goles_l: ["Keila Iglesias (3)"], goles_v: ["Carolina Delorte"] },
+        { fecha: "Fecha 18 - Torneo 2026 - 02 ago", torneo: "segundafemenino", l: "Pacífico (C)", v: "Huracán", gl: 0, gv: 4, goles_l: [], goles_v: ["Rosa Chávez (2)","Nahiara Gualas","Luciana Huichal"] },
+    ],
+    "Pacífico BB|Sporting": [
+        { fecha: "Apertura 2026 - Fecha 5", torneo: "senior", l: "Sporting", v: "Pacífico BB", gl: 1, gv: 0, goles_l: ["Marcos Cossú"], goles_v: [] },
+    ],
+    "Olimpo|Petroquímicos": [
+        { fecha: "Fecha 8 - Torneo 2026 - 23 may", torneo: "segundafemenino", l: "Olimpo", v: "Petroquímicos", gl: 0, gv: 0 },
+        { fecha: "Fecha 18 - Torneo 2026 - 01 ago", torneo: "segundafemenino", l: "Petroquímicos", v: "Olimpo", gl: 5, gv: 0, goles_l: ["Renata Segovia","Nicole Montenegro","Cintia Saavedra","Romina Zarza","Morena Varela"], goles_v: [] },
+    ],
+    "Rosario PB|San Francisco": [
+        { fecha: "Fecha 8 - Torneo 2026 - 23 may", torneo: "segundafemenino", l: "Rosario PB", v: "San Francisco", gl: 0, gv: 4, goles_l: [], goles_v: ["Ariana Adassus (2)","Florencia Sorbellini","Julieta Viera"] },
+        { fecha: "Fecha 9 - Torneo 2026", torneo: "reserva_segundafemenino", l: "Rosario PB", v: "San Francisco", gl: 0, gv: 0 },
+        { fecha: "Fecha 18 - Torneo 2026 - 01 ago", torneo: "segundafemenino", l: "San Francisco", v: "Rosario PB", gl: 1, gv: 0, goles_l: ["Ariana Adassus"], goles_v: [] },
+        { fecha: "Fecha 18 - Torneo 2026", torneo: "reserva_segundafemenino", l: "San Francisco", v: "Rosario", gl: 3, gv: 1 },
+    ],
+    "Comercial|Dep. Futsal": [
+        { fecha: "Apertura 2026 - Fecha 5", torneo: "futsal", l: "Dep. Futsal", v: "Comercial", gl: 1, gv: 8 },
+        { fecha: "Apertura 2026 - Fecha 5", torneo: "reservafutsal", l: "Dep. Futsal", v: "Comercial", gl: 4, gv: 4 },
+    ],
+    "Dublin|Tiro Federal": [
+        { fecha: "Apertura 2026 - Fecha 5", torneo: "futsal", l: "Dublin", v: "Tiro Federal", gl: 3, gv: 1 },
+        { fecha: "Apertura 2026 - Fecha 5", torneo: "reservafutsal", l: "Dublin", v: "Tiro Federal", gl: 1, gv: 1 },
+        { fecha: "Fecha 6 - Apertura 2026 - 18 abr 2026", torneo: "promocional", l: "Dublin", v: "Tiro Federal", gl: 1, gv: 0, goles_l: ["Marcos Pérez"], goles_v: [] },
+        { fecha: "Fecha 6 - Apertura 2026", torneo: "reserva_promocional", l: "Dublin", v: "Tiro Federal", gl: 2, gv: 3 },
+        { fecha: "Fecha 13 - Apertura 2026 - 20 jun 2026", torneo: "promocional", l: "Tiro Federal", v: "Dublin", gl: 4, gv: 0, goles_l: ["Franco Fraysse","Tiago Papalardo","Mariano McCoubrey","Francisco Vallejos (e/c)"], goles_v: [] },
+        { fecha: "Fecha 13 - Apertura 2026", torneo: "reserva_promocional", l: "Tiro Federal", v: "Dublin", gl: 0, gv: 0 },
+    ],
+    "La Estación|Liniers": [
+        { fecha: "Apertura 2026 - Fecha 5", torneo: "futsal", l: "Liniers", v: "La Estación", gl: 2, gv: 7 },
+        { fecha: "Apertura 2026 - Fecha 5", torneo: "reservafutsal", l: "Liniers", v: "La Estación", gl: 3, gv: 3 },
+    ],
+    "Catamarca|Pacífico BB": [
+        { fecha: "Apertura 2026 - Fecha 5", torneo: "futsal", l: "Catamarca", v: "Pacífico BB", gl: 2, gv: 6 },
+        { fecha: "Apertura 2026 - Fecha 5", torneo: "reservafutsal", l: "Catamarca", v: "Pacífico BB", gl: 11, gv: 1 },
+    ],
+    "Huracán|La Esperanza": [
+        { fecha: "Apertura 2026 - Fecha 5", torneo: "futsal", l: "Huracán", v: "La Esperanza", gl: 1, gv: 5 },
+        { fecha: "Apertura 2026 - Fecha 5", torneo: "reservafutsal", l: "Huracán", v: "La Esperanza", gl: 1, gv: 3 },
+    ],
+    "Los 3 Chiflados|Petroquímicos": [
+        { fecha: "Apertura 2026 - Fecha 5", torneo: "futsal", l: "Petroquímicos", v: "Los 3 Chiflados", gl: 2, gv: 11 },
+        { fecha: "Apertura 2026 - Fecha 5", torneo: "reservafutsal", l: "Petroquímicos", v: "Los 3 Chiflados", gl: 3, gv: 3 },
+        { fecha: "Apertura 2026 - Final", torneo: "reservafutsal", l: "Los 3 Chiflados", v: "Petroquímicos", gl: 4, gv: 1 },
+    ],
+    "Liniers|Sansinena": [
+        { fecha: "Fecha 8 - Torneo 2026 - 23 may", torneo: "segundafemenino", l: "Sansinena", v: "Liniers", gl: 0, gv: 3, goles_l: [], goles_v: ["Paulina Acevedo (2)","Paz Cutrín"] },
+        { fecha: "Fecha 9 - Torneo 2026", torneo: "reserva_segundafemenino", l: "Sansinena", v: "Liniers", gl: 0, gv: 11 },
+        { fecha: "Fecha 18 - Torneo 2026 - 02 ago", torneo: "segundafemenino", l: "Liniers", v: "Sansinena", gl: 7, gv: 1, goles_l: ["Paulina Acevedo (4)","Agustina Borda","Paz Cutrín","Daniela Lara"], goles_v: ["Stephanie Arriagada"] },
+        { fecha: "Fecha 18 - Torneo 2026", torneo: "reserva_segundafemenino", l: "Liniers", v: "Sansinena", gl: 10, gv: 0 },
+    ],
+    "Juventud Antoniana|Olimpo": [
+        { fecha: "Fecha 1 - Nonagonal - 02 ago 2026", torneo: "federala", l: "Olimpo", v: "Juventud Antoniana", gl: 0, gv: 0, goles_l: [], goles_v: [] },
+    ],
+    "Atenas de Río Cuarto|Villa Mitre": [
+        { fecha: "Fecha 1 - Nonagonal - 02 ago 2026", torneo: "federala", l: "Atenas de Río Cuarto", v: "Villa Mitre", gl: 0, gv: 1, goles_l: [], goles_v: ["Leonel Monti"] },
+    ],
+    "Petroquímicos|Rosario PB": [
+        { fecha: "Fecha 5 - Torneo 2026 - 18 abr", torneo: "segundafemenino", l: "Rosario PB", v: "Petroquímicos", gl: 0, gv: 2, goles_l: [], goles_v: ["Paola Vallejos","Paula Rodríguez"] },
+        { fecha: "Fecha 5 - Torneo 2026", torneo: "reserva_segundafemenino", l: "Rosario PB", v: "Petroquímicos", gl: 0, gv: 0 },
+        { fecha: "Fecha 14 - Torneo 2026 - 28 jun", torneo: "segundafemenino", l: "Petroquímicos", v: "Rosario PB", gl: 1, gv: 0, goles_l: ["Cintia Saavedra"], goles_v: [] },
+        { fecha: "Fecha 14 - Torneo 2026", torneo: "reserva_segundafemenino", l: "Petroquímicos", v: "Rosario PB", gl: 1, gv: 3 },
+    ],
+    "Huracán|Sansinena": [
+        { fecha: "Fecha 5 - Torneo 2026 - 19 abr", torneo: "segundafemenino", l: "Sansinena", v: "Huracán", gl: 3, gv: 0, goles_l: ["Daniela Abello","Marisol Huenupi","Melina Gómez"], goles_v: [] },
+        { fecha: "Fecha 5 - Torneo 2026", torneo: "reserva_segundafemenino", l: "Sansinena", v: "Huracán", gl: 0, gv: 1 },
+        { fecha: "Fecha 14 - Torneo 2026 - 27 jun", torneo: "segundafemenino", l: "Huracán", v: "Sansinena", gl: 2, gv: 0, goles_l: ["Keila Iglesias (2)"], goles_v: [] },
+        { fecha: "Apertura 2026 - Fecha 9", torneo: "senior", l: "Huracán", v: "Sansinena", gl: 2, gv: 3, goles_l: ["Facundo Pereyra (2)"], goles_v: ["Emiliano Jofré","Sebastián Bettinelli","Mauricio Díaz"] },
+    ],
+    "Estrella de Oro|Olimpo": [
+        { fecha: "Fecha 5 - Torneo 2026 - 19 abr", torneo: "segundafemenino", l: "Estrella de Oro", v: "Olimpo", gl: 5, gv: 1, goles_l: ["Mariana González (3)","Agustina Coronel (2)"], goles_v: ["Lourdes Antonietti"] },
+        { fecha: "Fecha 14 - Torneo 2026 - 28 jun", torneo: "segundafemenino", l: "Olimpo", v: "Estrella de Oro", gl: 1, gv: 2, goles_l: ["Paloma Dambolena"], goles_v: ["Luana Anfossi (2)"] },
+    ],
+    "Empleados de Comercio|La Armonía": [
+        { fecha: "Fecha 5 - Apertura 2026 - 18 abr", torneo: "femenino", l: "La Armonía", v: "Empleados de Comercio", gl: 0, gv: 4, goles_l: [], goles_v: ["Marianela Santana (2)","Julieta Tourn","Martina Silva"] },
+        { fecha: "Fecha 5 - Apertura 2026", torneo: "reserva_femenino", l: "La Armonía", v: "Empleados de Comercio", gl: 0, gv: 0 },
+        { fecha: "Fecha 12 - Apertura 2026 - 14 jun", torneo: "femenino", l: "Empleados de Comercio", v: "La Armonía", gl: 1, gv: 3, goles_l: ["Emilia Del Riego"], goles_v: ["Natalia Morinigo","Renata Pérez","Gimena Cruz"] },
+        { fecha: "Fecha 12 - Apertura 2026", torneo: "reserva_femenino", l: "La Armonía", v: "Empleados de Comercio", gl: 1, gv: 1 },
+        { fecha: "Torneo 2026 - Fecha 7", torneo: "sub15fem", l: "Empleados de Comercio", v: "La Armonía", gl: 0, gv: 1 },
+    ],
+    "Bella Vista|Municipales": [
+        { fecha: "Fecha 5 - Apertura 2026 - 18 abr", torneo: "femenino", l: "Bella Vista", v: "Municipales", gl: 1, gv: 4, goles_l: ["Martina Moleker"], goles_v: ["Antonella Ferrada (2)","Ludmila Fernández","Victoria Nervi"] },
+        { fecha: "Fecha 5 - Apertura 2026", torneo: "reserva_femenino", l: "Bella Vista", v: "Municipales", gl: 1, gv: 1 },
+        { fecha: "Fecha 12 - Apertura 2026 - 15 jun", torneo: "femenino", l: "Municipales", v: "Bella Vista", gl: 6, gv: 1, goles_l: ["Valeria Navarrete (3)","Victoria Nervi (2)","Stefanía Sueyro"], goles_v: ["Martina Trejo"] },
+        { fecha: "Fecha 12 - Apertura 2026", torneo: "reserva_femenino", l: "Municipales", v: "Bella Vista", gl: 1, gv: 1 },
+        { fecha: "Final - Apertura 2026", torneo: "reserva_femenino", l: "Municipales", v: "Bella Vista", gl: 0, gv: 2 },
+    ],
+    "Sporting|Tiro Federal": [
+        { fecha: "Fecha 5 - Apertura 2026 - 19 abr", torneo: "femenino", l: "Sporting", v: "Tiro Federal", gl: 0, gv: 7, goles_l: [], goles_v: ["Guadalupe Rifo (2)","Candela Salgado","Agostina Caballero","Morena Juárez","Alfonsina Royo","Camila Odriozola"] },
+        { fecha: "Fecha 5 - Apertura 2026", torneo: "reserva_femenino", l: "Sporting", v: "Tiro Federal", gl: 1, gv: 6 },
+        { fecha: "Fecha 12 - Apertura 2026 - 15 jun", torneo: "femenino", l: "Tiro Federal", v: "Sporting", gl: 4, gv: 0, goles_l: ["Alfonsina Royo","Abril Sáenz","Camila Odrizola","Morena Juárez"], goles_v: [] },
+        { fecha: "Fecha 12 - Apertura 2026", torneo: "reserva_femenino", l: "Tiro Federal", v: "Sporting", gl: 0, gv: 0 },
+        { fecha: "Apertura 2026 - Fecha 8", torneo: "senior", l: "Tiro Federal", v: "Sporting", gl: 2, gv: 5, goles_l: ["Lucas Sauer","Mauricio Oldani"], goles_v: ["Marcos Cossú (3)","Javier Magnani","Maximiliano Rodríguez"] },
+        { fecha: "Torneo 2026 - Fecha 9", torneo: "sub15fem", l: "Sporting", v: "Tiro Federal", gl: 0, gv: 1 },
+    ],
+    "Sansinena|Sporting": [
+        { fecha: "Apertura 2026 - Fecha 6", torneo: "senior", l: "Sansinena", v: "Sporting", gl: 3, gv: 1, goles_l: ["Marcos Pierucci (2)","Emiliano Jofré"], goles_v: ["Gabriel Bernengo"] },
+    ],
+    "Bella Vista|Comercial": [
+        { fecha: "Apertura 2026 - Fecha 6", torneo: "senior", l: "Comercial", v: "Bella Vista", gl: 1, gv: 1, goles_l: ["Emanuel Ihitz"], goles_v: ["Fabián Merlini"] },
+    ],
+    "Empleados de Comercio|San Francisco": [
+        { fecha: "Torneo 2026 - Fecha 6", torneo: "sub15fem", l: "San Francisco", v: "Empleados de Comercio", gl: 5, gv: 0 },
+    ],
+    "Huracán|Juventud Unida": [
+        { fecha: "Torneo 2026 - Fecha 6", torneo: "sub15fem", l: "Juventud Unida", v: "Huracán", gl: 2, gv: 0 },
+    ],
+    "Empleados de Comercio|Municipales": [
+        { fecha: "Semifinales - Apertura 2026", torneo: "femenino", l: "Municipales", v: "Empleados de Comercio", gl: 11, gv: 0, goles_l: ["Luana Villanueva (4)","Marianela Santana (2)","Victoria Nervi","Stefania Sueyro","Tanía Espíndola","Ivana Lindstrom","Agustina Malaspina (e/c)"], goles_v: [] },
+        { fecha: "Fecha 6 - Apertura 2026 - 26 abr 2026", torneo: "femenino", l: "Empleados de Comercio", v: "Municipales", gl: 0, gv: 2, goles_l: [], goles_v: ["Valeria Navarrete","Luján Díaz"] },
+        { fecha: "Fecha 6 - Apertura 2026", torneo: "reserva_femenino", l: "Empleados de Comercio", v: "Municipales", gl: 0, gv: 0 },
+        { fecha: "Fecha 13 - Apertura 2026 - 21 jun 2026", torneo: "femenino", l: "Municipales", v: "Empleados de Comercio", gl: 3, gv: 0, goles_l: ["xxx"], goles_v: [] },
+        { fecha: "Fecha 13 - Apertura 2026", torneo: "reserva_femenino", l: "Municipales", v: "Empleados de Comercio", gl: 2, gv: 0 },
+    ],
+    "Bella Vista|Tiro Federal": [
+        { fecha: "Fecha 7 - Apertura 2026 - 10 may", torneo: "femenino", l: "Tiro Federal", v: "Bella Vista", gl: 3, gv: 1, goles_l: ["Candela Salgado (2)","Morena Juárez"], goles_v: ["Tatiana García"] },
+        { fecha: "Fecha 1 - Apertura 2026", torneo: "reserva_femenino", l: "Tiro Federal", v: "Bella Vista", gl: 3, gv: 1 },
+        { fecha: "Fecha 14 - Apertura 2026 - 28 jun", torneo: "femenino", l: "Bella Vista", v: "Tiro Federal", gl: 0, gv: 3, goles_l: [], goles_v: ["Abril Sáenz (3)"] },
+        { fecha: "Fecha 14 - Apertura 2026", torneo: "reserva_femenino", l: "Bella Vista", v: "Tiro Federal", gl: 1, gv: 1 },
+        { fecha: "Semifinales - Apertura 2026", torneo: "reserva_femenino", l: "Tiro Federal", v: "Bella Vista", gl: 0, gv: 1 },
+        { fecha: "Final Extra - Apertura 2026", torneo: "reserva_femenino", l: "Tiro Federal", v: "Bella Vista", gl: 1, gv: 1, pen_l:3, pen_v:1 },
+        { fecha: "Apertura 2026 - Fecha 7", torneo: "senior", l: "Bella Vista", v: "Tiro Federal", gl: 2, gv: 1, goles_l: ["Fabián Merlini (2)"], goles_v: ["Javier Muñoz"] },
+        { fecha: "Torneo 2026 - Fecha 8", torneo: "sub15fem", l: "Tiro Federal", v: "Bella Vista", gl: 0, gv: 6 },
+    ],
+    "Comercial|Los 3 Chiflados": [
+        { fecha: "Apertura 2026 - Fecha 8", torneo: "futsal", l: "Comercial", v: "Los 3 Chiflados", gl: 3, gv: 7 },
+        { fecha: "Apertura 2026 - Fecha 8", torneo: "futsalreserva", l: "Comercial", v: "Los 3 Chiflados", gl: 4, gv: 6 },
+        { fecha: "Apertura 2026 - Cuartos de final", torneo: "futsal", l: "Los 3 Chiflados", v: "Comercial", gl: 3, gv: 3 },
+    ],
+    "La Esperanza|Tiro Federal": [
+        { fecha: "Apertura 2026 - Fecha 13", torneo: "futsal", l: "La Esperanza", v: "Tiro Federal", gl: 9, gv: 3 },
+        { fecha: "Apertura 2026 - Fecha 13", torneo: "futsalreserva", l: "La Esperanza", v: "Tiro Federal", gl: 5, gv: 6 },
+        { fecha: "Apertura 2026 - Cuartos de final", torneo: "futsal", l: "La Esperanza", v: "Tiro Federal", gl: 6, gv: 2 },
+    ],
+    "La Esperanza|Villa Mitre": [
+        { fecha: "Apertura 2026 - Fecha 11", torneo: "futsal", l: "La Esperanza", v: "Villa Mitre", gl: 7, gv: 3 },
+        { fecha: "Apertura 2026 - Fecha 11", torneo: "futsalreserva", l: "La Esperanza", v: "Villa Mitre", gl: 0, gv: 1 },
+        { fecha: "Apertura 2026 - Semifinal", torneo: "futsal", l: "La Esperanza", v: "Villa Mitre", gl: 3, gv: 4 },
+    ],
+    "La Estación|Los 3 Chiflados": [
+        { fecha: "Apertura 2026 - Fecha 10", torneo: "futsal", l: "La Estación", v: "Los 3 Chiflados", gl: 3, gv: 3 },
+        { fecha: "Apertura 2026 - Fecha 10", torneo: "futsalreserva", l: "La Estación", v: "Los 3 Chiflados", gl: 0, gv: 3 },
+        { fecha: "Apertura 2026 - Semifinal", torneo: "futsal", l: "La Estación", v: "Los 3 Chiflados", gl: 2, gv: 2 },
+    ],
+    "La Estación|Villa Mitre": [
+        { fecha: "Apertura 2026 - Fecha 13", torneo: "futsal", l: "Villa Mitre", v: "La Estación", gl: 6, gv: 3 },
+        { fecha: "Apertura 2026 - Fecha 13", torneo: "futsalreserva", l: "Villa Mitre", v: "La Estación", gl: 5, gv: 2 },
+        { fecha: "Apertura 2026 - Cuartos de final", torneo: "reservafutsal", l: "Villa Mitre", v: "La Estación", gl: 4, gv: 4 },
+        { fecha: "Apertura 2026 - Final", torneo: "futsal", l: "La Estación", v: "Villa Mitre", gl: 3, gv: 3, pen_l:4, pen_v:3 },
+    ],
+    "Los 3 Chiflados|San Francisco": [
+        { fecha: "Apertura 2026 - Fecha 6", torneo: "futsal", l: "Los 3 Chiflados", v: "San Francisco", gl: 8, gv: 4 },
+        { fecha: "Apertura 2026 - Fecha 6", torneo: "reservafutsal", l: "Los 3 Chiflados", v: "San Francisco", gl: 6, gv: 1 },
+        { fecha: "Apertura 2026 - Cuartos de final", torneo: "reservafutsal", l: "Los 3 Chiflados", v: "San Francisco", gl: 3, gv: 3 },
+    ],
+    "Dublin|Liniers": [
+        { fecha: "Apertura 2026 - Fecha 9", torneo: "futsal", l: "Liniers", v: "Dublin", gl: 5, gv: 3 },
+        { fecha: "Apertura 2026 - Fecha 9", torneo: "futsalreserva", l: "Liniers", v: "Dublin", gl: 5, gv: 3 },
+        { fecha: "Apertura 2026 - Cuartos de final", torneo: "reservafutsal", l: "Liniers", v: "Dublin", gl: 3, gv: 5 },
+    ],
+    "La Esperanza|Petroquímicos": [
+        { fecha: "Apertura 2026 - Fecha 7", torneo: "futsal", l: "Petroquímicos", v: "La Esperanza", gl: 2, gv: 3 },
+        { fecha: "Apertura 2026 - Fecha 7", torneo: "futsalreserva", l: "Petroquímicos", v: "La Esperanza", gl:2, gv: 6 },
+        { fecha: "Apertura 2026 - Cuartos de final", torneo: "reservafutsal", l: "Petroquímicos", v: "La Esperanza", gl: 4, gv: 2 },
+    ],
+    "Comercial|Petroquímicos": [
+        { fecha: "Apertura 2026 - Fecha 6", torneo: "futsal", l: "Comercial", v: "Petroquímicos", gl: 3, gv: 0 },
+        { fecha: "Apertura 2026 - Fecha 6", torneo: "reservafutsal", l: "Comercial", v: "Petroquímicos", gl: 0, gv: 3 },
+    ],
+    "Liniers|Tiro Federal": [
+        { fecha: "Apertura 2026 - Fecha 6", torneo: "futsal", l: "Tiro Federal", v: "Liniers", gl: 2, gv: 4 },
+        { fecha: "Apertura 2026 - Fecha 6", torneo: "reservafutsal", l: "Tiro Federal", v: "Liniers", gl: 2, gv: 7 },
+        { fecha: "Torneo 2026 - Fecha 11", torneo: "sub15fem", l: "Liniers", v: "Tiro Federal", gl: 7, gv: 0 },
+    ],
+    "Huracán|La Estación": [
+        { fecha: "Apertura 2026 - Fecha 6", torneo: "futsal", l: "La Estación", v: "Huracán", gl: 5, gv: 2 },
+        { fecha: "Apertura 2026 - Fecha 6", torneo: "reservafutsal", l: "La Estación", v: "Huracán", gl: 5, gv: 5 },
+    ],
+    "Dep. Futsal|La Esperanza": [
+        { fecha: "Apertura 2026 - Fecha 6", torneo: "futsal", l: "La Esperanza", v: "Dep. Futsal", gl: 7, gv: 3 },
+        { fecha: "Apertura 2026 - Fecha 6", torneo: "reservafutsal", l: "La Esperanza", v: "Dep. Futsal", gl: 5, gv: 2 },
+    ],
+    "Catamarca|Villa Mitre": [
+       { fecha: "Apertura 2026 - Fecha 6", torneo: "futsal", l: "Villa Mitre", v: "Dep. Futsal", gl: 4, gv: 3 },
+        { fecha: "Apertura 2026 - Fecha 6", torneo: "reservafutsal", l: "Villa Mitre", v: "Dep. Futsal", gl: 4, gv: 4 },
+    ],
+    "Círculo Dep.|Olimpo": [
+        { fecha: "Fecha 6 - Fase inicial - 26 abr 2026", torneo: "federala", l: "Olimpo", v: "Círculo Dep.", gl: 1, gv: 0, goles_l: ["Federico González"], goles_v: [] },
+        { fecha: "Fecha 15 - Fase inicial - 26 jun 2026", torneo: "federala", l: "Círculo Dep.", v: "Olimpo", gl: 1, gv: 1, goles_l: ["Imanol Iriberri"], goles_v: ["Federico González"] },
+    ],
+    "Alvarado|Villa Mitre.": [
+        { fecha: "Fecha 6 - Fase inicial - 25 abr 2026", torneo: "federala", l: "Alvarado", v: "Villa Mitre", gl: 1, gv: 1, goles_l: ["Santiago Gutiérrez"], goles_v: ["Jerónimo Almada"] },
+        { fecha: "Fecha 15 - Fase inicial - 26 jun 2026", torneo: "federala", l: "Villa Mitre", v: "Alvarado", gl: 1, gv: 0, goles_l: ["Víctor Ayala"], goles_v: [] },
+    ],
+    "Estrella de Oro|Huracán": [
+        { fecha: "Fecha 6 - Torneo 2026 - 25 abr", torneo: "segundafemenino", l: "Huracán", v: "Estrella de Oro", gl: 0, gv: 2, goles_l: [], goles_v: ["Mariana González","Luana Anfossi"] },
+        { fecha: "Fecha 6 - Torneo 2026", torneo: "reserva_segundafemenino", l: "Huracán", v: "Estrella de Oro", gl: 0, gv: 1 },
+        { fecha: "Fecha 15 - Torneo 2026 - 05 jul", torneo: "segundafemenino", l: "Estrella de Oro", v: "Huracán", gl: 2, gv: 1, goles_l: ["Luana Anfossi","Mariana González"], goles_v: ["Natasha Mella"] },
+    ],
+    "Pacífico (C)|Rosario PB": [
+        { fecha: "Fecha 6 - Torneo 2026 - 02 may", torneo: "segundafemenino", l: "Pacífico (C)", v: "Rosario PB", gl: 0, gv: 9, goles_l: [], goles_v: ["Bárbara Aguirre (4)","Carolina Díaz (3)","Julieta Díaz","Juliana Ruiz"] },
+        { fecha: "Fecha 15 - Torneo 2026 - 05 jul", torneo: "segundafemenino", l: "Rosario PB", v: "Pacífico (C)", gl: 6, gv: 2, goles_l: ["Carolina Díaz (3)","Bárbara Aguirre","Valentina Cavalli","Mariela Sollosky"], goles_v: ["Gianna Gerling","Natali Recagno"] },
+        { fecha: "Fecha 6 - Apertura 2026 - 18 abr 2026", torneo: "promocional", l: "Pacífico (C)", v: "Rosario PB", gl: 3, gv: 3, goles_l: ["Donatello Scaringi (2)","Emanuel López"], goles_v: ["Ezequiel Katz (2)","Sebastián Mendoza"] },
+        { fecha: "Fecha 6 - Apertura 2026", torneo: "reserva_promocional", l: "Pacífico (C)", v: "Rosario PB", gl: 1, gv: 1 },
+        { fecha: "Fecha 13 - Apertura 2026 - 20 jun 2026", torneo: "promocional", l: "Rosario PB", v: "Pacífico (C)", gl: 5, gv: 0, goles_l: ["Agustín Grippaudo (2)","Favio Durán","Azelo Zweedyk","Tomás Franchi"], goles_v: [] },
+        { fecha: "Fecha 13 - Apertura 2026", torneo: "reserva_promocional", l: "Rosario PB", v: "Pacífico (C)", gl: 2, gv: 0 },
+    ],
+    "Petroquímicos|Sansinena": [
+        { fecha: "Fecha 6 - Torneo 2026 - 02 may", torneo: "segundafemenino", l: "Petroquímicos", v: "Sansinena", gl: 3, gv: 0, goles_l: ["Sofía Trejo","Renata Segovia","Paula Rodríguez"], goles_v: [] },
+        { fecha: "Fecha 6 - Torneo 2026", torneo: "reserva_segundafemenino", l: "Petroquímicos", v: "Sansinena", gl: 2, gv: 2 },
+        { fecha: "Fecha 15 - Torneo 2026 - 05 jul", torneo: "segundafemenino", l: "Sansinena", v: "Petroquímicos", gl: 1, gv: 3, goles_l: ["Melina Gómez"], goles_v: ["Morena Varela (2)","Nicole Montenegro"] },
+        { fecha: "Fecha 15 - Torneo 2026", torneo: "reserva_segundafemenino", l: "Sansinena", v: "Petroquímicos", gl: 0, gv: 1 },
+    ],
+    "Cipolletti|Villa Mitre": [
+        { fecha: "Fecha 2 - Nonagonal - 08 ago 2026", torneo: "federala", l: "Villa Mitre", v: "Cipolletti", gl: 1, gv: 1, goles_l: ["Marcos Escobar"], goles_v: ["Gonzalo Lucero"] },
+    ],
+    "Huracán Las Heras|Olimpo": [
+        { fecha: "Fecha 2 - Nonagonal - 08 ago 2026", torneo: "federala", l: "Huracán Las Heras", v: "Olimpo", gl: 0, gv: 1, goles_l: [], goles_v: ["Marcelo Olivera"] },
+    ],
+    "Liniers|Sporting": [
+        { fecha: "Fecha 6 - Apertura 2026 - 18 abr 2026", torneo: "oficial", l: "Sporting", v: "Liniers", gl: 0, gv: 0, goles_l: [], goles_v: [] },
+        { fecha: "Fecha 6 - Apertura 2026", torneo: "reserva_oficial", l: "Sporting", v: "Liniers", gl: 1, gv: 0 },
+        { fecha: "Fecha 13 - Apertura 2026 - 20 jun 2026", torneo: "oficial", l: "Liniers", v: "Sporting", gl: 3, gv: 0, goles_l: ["Massimo Monti (2)","Simón Biondo"], goles_v: [] },
+        { fecha: "Fecha 13 - Apertura 2026", torneo: "reserva_oficial", l: "Liniers", v: "Sporting", gl: 1, gv: 2 },
+        { fecha: "Torneo 2026 - Fecha 7", torneo: "sub15fem", l: "Liniers", v: "Sporting", gl: 8, gv: 0 },
+    ],
+    "Dublin|Olimpo": [
+        { fecha: "Fecha 7 - Apertura 2026 - 25 abr 2026", torneo: "promocional", l: "Olimpo", v: "Dublin", gl: 3, gv: 0, goles_l: ["William Vidal","Joaquín Vidal","Nahuel Colmenares"], goles_v: [] },
+        { fecha: "Fecha 7 - Apertura 2026", torneo: "reserva_promocional", l: "Olimpo", v: "Dublin", gl: 3, gv: 1 },
+        { fecha: "Fecha 14 - Apertura 2026 - 28 jun 2026", torneo: "promocional", l: "Dublin", v: "Olimpo", gl: 0, gv: 2, goles_l: [], goles_v: ["Nahuel Colmenares (2)"] },
+        { fecha: "Fecha 14 - Apertura 2026", torneo: "reserva_promocional", l: "Dublin", v: "Olimpo", gl: 0, gv: 1 },
+    ],
+    "Comercial|Pacífico (C)": [
+        { fecha: "Fecha 7 - Apertura 2026 - 25 abr 2026", torneo: "promocional", l: "Comercial", v: "Pacífico (C)", gl: 2, gv: 1, goles_l: ["Juan Wunderlich","Mauricio Villalobos"], goles_v: ["Gianni Ferrari"] },
+        { fecha: "Fecha 7 - Apertura 2026", torneo: "reserva_promocional", l: "Comercial", v: "Pacífico (C)", gl: 2, gv: 1 },
+        { fecha: "Fecha 14 - Apertura 2026 - 28 jun 2026", torneo: "promocional", l: "Pacífico (C)", v: "Comercial", gl: 0, gv: 4, goles_l: [], goles_v: ["Joaquín Racchi (2)","Thiago Priegue (2)"] },
+        { fecha: "Fecha 14 - Apertura 2026", torneo: "reserva_promocional", l: "Pacífico (C)", v: "Comercial", gl: 1, gv: 4 },
+        { fecha: "Apertura 2026 - Fecha 8", torneo: "senior", l: "Comercial", v: "Pacífico (C)", gl: 5, gv: 0, goles_l: ["Nicolás Custodio (3)","Emanuel Ihitz","Santiago Ayala"], goles_v: [] },
+    ],
+    "Olimpo|Villa Mitre": [
+        { fecha: "Fecha 7 - Fase inicial - 3 may 2026", torneo: "federala", l: "Villa Mitre", v: "Olimpo", gl: 0, gv: 0 },
+        { fecha: "Fecha 16 - Fase inicial - 26 jun 2026", torneo: "federala", l: "Olimpo", v: "Villa Mitre", gl: 0, gv: 0 },
+        { fecha: "Torneo 2026 - Fecha 7", torneo: "sub15fem", l: "Olimpo", v: "Villa Mitre", gl: 2, gv: 3 },
+    ],
+    "Germinal|Olimpo": [
+        { fecha: "Fecha 8 - Fase inicial - 10 may 2026", torneo: "federala", l: "Olimpo", v: "Germinal", gl: 1, gv: 0, goles_l: [], goles_v: ["Antú Hernández"]  },
+        { fecha: "Fecha 17 - Fase inicial - 12 jul 2026", torneo: "federala", l: "Germinal", v: "Olimpo", gl: 0, gv: 1 },
+    ],
+    "Guillermo Brown|Villa Mitre": [
+        { fecha: "Fecha 8 - Fase inicial - 10 may 2026", torneo: "federala", l: "Guillermo Brown", v: "Villa Mitre", gl: 1, gv: 0, goles_l: ["Ignacio Vallejos"], goles_v: []  },
+        { fecha: "Fecha 17 - Fase inicial - 26 jun 2026", torneo: "federala", l: "Villa Mitre", v: "Guillermo Brown", gl: 3, gv: 0, goles_l: ["Tomás Ibarra","Carlos Battigelli","Leonel Monti"], goles_v: [] },
+    ],
+    "Libertad|Pacífico BB": [
+        { fecha: "Apertura 2026 - Fecha 7", torneo: "senior", l: "Libertad", v: "Pacífico BB", gl: 1, gv: 2, goles_l: ["Gustavo Peña"], goles_v: ["Ramón López","Hernán Sacripandi"] },
+    ],
+    "Comercial|Sporting": [
+        { fecha: "Apertura 2026 - Fecha 7", torneo: "senior", l: "Sporting", v: "Comercial", gl: 1, gv: 2, goles_l: ["Marcos Cossú"], goles_v: ["Maximiliano Casas","Nicolás Custodio"] },
+        { fecha: "Apertura 2026 - Semifinales", torneo: "senior", l: "Sporting", v: "Comercial", gl: 2, gv: 0, goles_l: ["Marcos Cossú","José Alberto Mosqueira"], goles_v: [] },
+    ],
+    "Huracán|Pacífico BB": [
+        { fecha: "Apertura 2026 - Fecha 8", torneo: "senior", l: "Pacífico BB", v: "Huracán", gl: 2, gv: 3, goles_l: ["Maximiliano Delaudo","Hernán Sangripandi"], goles_v: ["César Panduro (2)","Sergio Pereyra"] },
+        { fecha: "Apertura 2026 - Fecha 8", torneo: "futsal", l: "Pacífico BB", v: "Huracán", gl: 8, gv: 3 },
+        { fecha: "Apertura 2026 - Fecha 8", torneo: "futsalreserva", l: "Pacífico BB", v: "Huracán", gl: 6, gv: 4 },
+    ],
+    "Libertad|Sansinena": [
+        { fecha: "Apertura 2026 - Fecha 8", torneo: "senior", l: "Sansinena", v: "Libertad", gl: 1, gv: 1, goles_l: ["Emiliano Scheffer"], goles_v: ["Pablo Cerra"] }
+    ],
+    "Pacífico BB|San Francisco": [
+        { fecha: "Apertura 2026 - Fecha 9", torneo: "senior", l: "San Francisco", v: "Pacífico BB", gl: 4, gv: 1, goles_l: ["Ángel Martínez (2)","Víctor Martínez","Juan Pérez"], goles_v: ["Ramón López"] },
+        { fecha: "Apertura 2026 - Fecha 11", torneo: "futsal", l: "San Francisco", v: "Pacífico BB", gl: 5, gv: 5 },
+        { fecha: "Apertura 2026 - Fecha 11", torneo: "futsalreserva", l: "San Francisco", v: "Pacífico BB", gl: 4, gv: 2 },
+    ],
+    "Comercial|Libertad": [
+        { fecha: "Apertura 2026 - Fecha 9", torneo: "senior", l: "Libertad", v: "Comercial", gl: 1, gv: 2, goles_l: ["Sergio Pascal"], goles_v: ["Emiliano Esmoli (2)"] },
+    ],
+    "Bella Vista|Juventud Unida": [
+        { fecha: "Torneo 2026 - Fecha 7", torneo: "sub15fem", l: "Bella Vista", v: "Juventud Unida", gl: 7, gv: 0 },
+    ],
+    "Empleados de Comercio|Liniers": [
+        { fecha: "Torneo 2026 - Fecha 8", torneo: "sub15fem", l: "Empleados de Comercio", v: "Liniers", gl: 0, gv: 10 },
+    ],
+    "Juventud Unida|Sporting": [
+        { fecha: "Torneo 2026 - Fecha 8", torneo: "sub15fem", l: "Juventud Unida", v: "Sporting", gl: 2, gv: 2 },
+    ],
+    "Juventud Unida|Liniers": [
+        { fecha: "Torneo 2026 - Fecha 9", torneo: "sub15fem", l: "Liniers", v: "Juventud Unida", gl: 6, gv: 0 },
+    ],
+    "La Armonía|Olimpo": [
+        { fecha: "Torneo 2026 - Fecha 9", torneo: "sub15fem", l: "Olimpo", v: "La Armonía", gl: 1, gv: 2 },
+    ],
+    "Empleados de Comercio|Olimpo": [
+        { fecha: "Torneo 2026 - Fecha 10", torneo: "sub15fem", l: "Empleados de Comercio", v: "Olimpo", gl: 0, gv: 1 },
+    ],
+    "Juventud Unida|Tiro Federal": [
+        { fecha: "Torneo 2026 - Fecha 10", torneo: "sub15fem", l: "Tiro Federal", v: "Juventud Unida", gl: 2, gv: 1 },
+    ],
+    "Libertad|Olimpo": [
+        { fecha: "Torneo 2026 - Fecha 11", torneo: "sub15fem", l: "Olimpo", v: "Libertad", gl: 1, gv: 1 },
+    ],
+    "Juventud Unida|Villa Mitre": [
+        { fecha: "Torneo 2026 - Fecha 11", torneo: "sub15fem", l: "Juventud Unida", v: "Villa Mitre", gl: 1, gv: 1 },
+    ],
+    "Empleados de Comercio|Huracán": [
+        { fecha: "Torneo 2026 - Fecha 11", torneo: "sub15fem", l: "Huracán", v: "Empleados de Comercio", gl: 0, gv: 2 },
+    ],
+    "Los 3 Chiflados|Villa Mitre": [
+        { fecha: "Apertura 2026 - Fecha 7", torneo: "futsal", l: "Los 3 Chiflados", v: "Villa Mitre", gl: 7, gv: 2 },
+        { fecha: "Apertura 2026 - Fecha 7", torneo: "futsalreserva", l: "Los 3 Chiflados", v: "Villa Mitre", gl: 4, gv: 3 },
+    ],
+    "Catamarca|Dublin": [
+        { fecha: "Apertura 2026 - Fecha 7", torneo: "futsal", l: "Dublin", v: "Catamarca", gl: 2, gv: 5 },
+        { fecha: "Apertura 2026 - Fecha 7", torneo: "futsalreserva", l: "Dublin", v: "Catamarca", gl: 4, gv: 2 },
+    ],
+    "Dep. Futsal|La Estación": [
+        { fecha: "Apertura 2026 - Fecha 7", torneo: "futsal", l: "Dep. Futsal", v: "La Estación", gl: 0, gv: 1 },
+        { fecha: "Apertura 2026 - Fecha 7", torneo: "futsalreserva", l: "Dep. Futsal", v: "La Estación", gl: 0, gv: 1 },
+    ],
+    "Liniers|Pacífico BB": [
+        { fecha: "Apertura 2026 - Fecha 7", torneo: "futsal", l: "Liniers", v: "Pacífico BB", gl: 7, gv: 8 },
+        { fecha: "Apertura 2026 - Fecha 7", torneo: "futsalreserva", l: "Liniers", v: "Pacífico BB", gl: 1, gv: 9 },
+    ],
+    "La Esperanza|San Francisco": [
+        { fecha: "Apertura 2026 - Fecha 8", torneo: "futsal", l: "La Esperanza", v: "San Francisco", gl: 7, gv: 4 },
+        { fecha: "Apertura 2026 - Fecha 8", torneo: "futsalreserva", l: "La Esperanza", v: "San Francisco", gl: 4, gv: 2 },
+    ],
+    "Catamarca|Liniers": [
+        { fecha: "Apertura 2026 - Fecha 8", torneo: "futsal", l: "Catamarca", v: "Liniers", gl: 4, gv: 7 },
+        { fecha: "Apertura 2026 - Fecha 8", torneo: "futsalreserva", l: "Catamarca", v: "Liniers", gl: 6, gv: 9 },
+    ],
+    "La Estación|Petroquímicos": [
+        { fecha: "Apertura 2026 - Fecha 8", torneo: "futsal", l: "La Estación", v: "Petroquímicos", gl: 4, gv: 1 },
+        { fecha: "Apertura 2026 - Fecha 8", torneo: "futsalreserva", l: "La Estación", v: "Petroquímicos", gl: 3, gv: 2 },
+    ],
+    "Dublin|Villa Mitre": [
+        { fecha: "Apertura 2026 - Fecha 8", torneo: "futsal", l: "Villa Mitre", v: "Dublin", gl: 4, gv: 2 },
+        { fecha: "Apertura 2026 - Fecha 8", torneo: "futsalreserva", l: "Villa Mitre", v: "Dublin", gl: 5, gv: 1 },
+    ],
+    "Dep. Futsal|Tiro Federal": [
+        { fecha: "Apertura 2026 - Fecha 8", torneo: "futsal", l: "Tiro Federal", v: "Dep. Futsal", gl: 8, gv: 1 },
+        { fecha: "Apertura 2026 - Fecha 8", torneo: "futsalreserva", l: "Tiro Federal", v: "Dep. Futsal", gl: 1, gv: 3 },
+    ],
+    "Comercial|Villa Mitre": [
+        { fecha: "Apertura 2026 - Fecha 9", torneo: "futsal", l: "Comercial", v: "Villa Mitre", gl: 5, gv: 6 },
+        { fecha: "Apertura 2026 - Fecha 9", torneo: "futsalreserva", l: "Comercial", v: "Villa Mitre", gl: 1, gv: 5 },
+    ],
+    "Dep. Futsal|Pacífico BB": [
+        { fecha: "Apertura 2026 - Fecha 9", torneo: "futsal", l: "Dep. Futsal", v: "Pacífico BB", gl: 4, gv: 6 },
+        { fecha: "Apertura 2026 - Fecha 9", torneo: "futsalreserva", l: "Dep. Futsal", v: "Pacífico BB", gl: 1, gv: 1 },
+    ],
+    "Catamarca|Huracán": [
+        { fecha: "Apertura 2026 - Fecha 9", torneo: "futsal", l: "Huracán", v: "Catamarca", gl: 3, gv: 7 },
+        { fecha: "Apertura 2026 - Fecha 9", torneo: "futsalreserva", l: "Huracán", v: "Catamarca", gl: 4, gv: 3 },
+    ],
+    "Petroquímicos|Tiro Federal": [
+        { fecha: "Apertura 2026 - Fecha 9", torneo: "futsal", l: "Petroquímicos", v: "Tiro Federal", gl: 1, gv: 3 },
+        { fecha: "Apertura 2026 - Fecha 9", torneo: "futsalreserva", l: "Petroquímicos", v: "Tiro Federal", gl: 8, gv: 3 },
+    ],
+    "La Estación|San Francisco": [
+        { fecha: "Apertura 2026 - Fecha 9", torneo: "futsal", l: "San Francisco", v: "La Estación", gl: 4, gv: 5 },
+        { fecha: "Apertura 2026 - Fecha 9", torneo: "futsalreserva", l: "San Francisco", v: "La Estación", gl: 2, gv: 2 },
+    ],
+    "La Esperanza|Los 3 Chiflados": [
+        { fecha: "Apertura 2026 - Fecha 9", torneo: "futsal", l: "Los 3 Chiflados", v: "La Esperanza", gl: 2, gv: 2 },
+        { fecha: "Apertura 2026 - Fecha 9", torneo: "futsalreserva", l: "Los 3 Chiflados", v: "La Esperanza", gl: 4, gv: 1 },
+    ],
+    "Comercial|La Esperanza": [
+        { fecha: "Apertura 2026 - Fecha 10", torneo: "futsal", l: "La Esperanza", v: "Comercial", gl: 5, gv: 4 },
+        { fecha: "Apertura 2026 - Fecha 10", torneo: "futsalreserva", l: "La Esperanza", v: "Comercial", gl: 4, gv: 1 },
+    ],
+    "Dublin|Huracán": [
+        { fecha: "Apertura 2026 - Fecha 10", torneo: "futsal", l: "Dublin", v: "Huracán", gl: 8, gv: 1 },
+        { fecha: "Apertura 2026 - Fecha 10", torneo: "futsalreserva", l: "Dublin", v: "Huracán", gl: 4, gv: 2 },
+    ],
+    "Pacífico BB|Petroquímicos": [
+        { fecha: "Apertura 2026 - Fecha 10", torneo: "futsal", l: "Pacífico BB", v: "Petroquímicos", gl: 6, gv: 3 },
+        { fecha: "Apertura 2026 - Fecha 10", torneo: "futsalreserva", l: "Pacífico BB", v: "Petroquímicos", gl: 2, gv: 2 },
+    ],
+    "Catamarca|Dep. Futsal": [
+        { fecha: "Apertura 2026 - Fecha 10", torneo: "futsal", l: "Catamarca", v: "Dep. Futsal", gl: 1, gv: 0 },
+        { fecha: "Apertura 2026 - Fecha 10", torneo: "futsalreserva", l: "Catamarca", v: "Dep. Futsal", gl: 1, gv: 0 },
+    ],
+    "Dep. Futsal|Dublin": [
+        { fecha: "Apertura 2026 - Fecha 11", torneo: "futsal", l: "Dep. Futsal", v: "Dublin", gl: 3, gv: 2 },
+        { fecha: "Apertura 2026 - Fecha 11", torneo: "futsalreserva", l: "Dep. Futsal", v: "Dublin", gl: 3, gv: 3 },
+    ],
+    "Comercial|La Estación": [
+        { fecha: "Apertura 2026 - Fecha 11", torneo: "futsal", l: "Comercial", v: "La Estación", gl: 3, gv: 8 },
+        { fecha: "Apertura 2026 - Fecha 11", torneo: "futsalreserva", l: "Comercial", v: "La Estación", gl: 6, gv: 4 },
+    ],
+    "Los 3 Chiflados|Tiro Federal": [
+        { fecha: "Apertura 2026 - Fecha 11", torneo: "futsal", l: "Los 3 Chiflados", v: "Tiro Federal", gl: 3, gv: 0 },
+        { fecha: "Apertura 2026 - Fecha 11", torneo: "futsalreserva", l: "Los 3 Chiflados", v: "Tiro Federal", gl: 4, gv: 0 },
+    ],
+    "Catamarca|Petroquímicos": [
+        { fecha: "Apertura 2026 - Fecha 11", torneo: "futsal", l: "Petroquímicos", v: "Catamarca", gl: 6, gv: 0 },
+        { fecha: "Apertura 2026 - Fecha 11", torneo: "futsalreserva", l: "Petroquímicos", v: "Catamarca", gl: 12, gv: 0 },
+    ],
+    "La Esperanza|La Estación": [
+        { fecha: "Apertura 2026 - Fecha 12", torneo: "futsal", l: "La Estación", v: "La Esperanza", gl: 6, gv: 5 },
+        { fecha: "Apertura 2026 - Fecha 12", torneo: "futsalreserva", l: "La Estación", v: "La Esperanza", gl: 3, gv: 3 },
+    ],
+    "Dep. Futsal|Liniers": [
+        { fecha: "Apertura 2026 - Fecha 12", torneo: "futsal", l: "Liniers", v: "Dep. Futsal", gl: 3, gv: 3 },
+        { fecha: "Apertura 2026 - Fecha 12", torneo: "futsalreserva", l: "Liniers", v: "Dep. Futsal", gl: 5, gv: 1 },
+    ],
+    "Los 3 Chiflados|Pacífico BB": [
+        { fecha: "Apertura 2026 - Fecha 12", torneo: "futsal", l: "Pacífico BB", v: "Los 3 Chiflados", gl: 4, gv: 11 },
+        { fecha: "Apertura 2026 - Fecha 12", torneo: "futsalreserva", l: "Pacífico BB", v: "Los 3 Chiflados", gl: 0, gv: 6 },
+    ],
+    "Catamarca|San Francisco": [
+        { fecha: "Apertura 2026 - Fecha 12", torneo: "futsal", l: "Catamarca", v: "San Francisco", gl: 1, gv: 2 },
+        { fecha: "Apertura 2026 - Fecha 12", torneo: "futsalreserva", l: "Catamarca", v: "San Francisco", gl: 1, gv: 3 },
+    ],
+    "Dublin|Petroquímicos": [
+        { fecha: "Apertura 2026 - Fecha 12", torneo: "futsal", l: "Dublin", v: "Petroquímicos", gl: 2, gv: 5 },
+        { fecha: "Apertura 2026 - Fecha 12", torneo: "futsalreserva", l: "Dublin", v: "Petroquímicos", gl: 2, gv: 5 },
+    ],
+    "Dep. Futsal|Huracán": [
+        { fecha: "Apertura 2026 - Fecha 13", torneo: "futsal", l: "Dep. Futsal", v: "Huracán", gl: 10, gv: 2 },
+        { fecha: "Apertura 2026 - Fecha 13", torneo: "futsalreserva", l: "Dep. Futsal", v: "Huracán", gl: 6, gv: 2 },
+    ],
+    "Catamarca|Los 3 Chiflados": [
+        { fecha: "Apertura 2026 - Fecha 13", torneo: "futsal", l: "Los 3 Chiflados", v: "Catamarca", gl: 13, gv: 1 },
+        { fecha: "Apertura 2026 - Fecha 13", torneo: "futsalreserva", l: "Los 3 Chiflados", v: "Catamarca", gl: 5, gv: 1 },
+    ],
+    "Dublin|San Francisco": [
+        { fecha: "Apertura 2026 - Fecha 13", torneo: "futsal", l: "San Francisco", v: "Dublin", gl: 3, gv: 3 },
+        { fecha: "Apertura 2026 - Fecha 13", torneo: "futsalreserva", l: "San Francisco", v: "Dublin", gl: 3, gv: 7 },
+    ],
+    "La Armonía|Municipales": [
+        { fecha: "Fecha 7 - Apertura 2026 - 10 may", torneo: "femenino", l: "Municipales", v: "La Armonía", gl: 3, gv: 0, goles_l: ["Victoria Nervi","Ludmila Fernández","Ivana Lindstrom"], goles_v: [] },
+        { fecha: "Fecha 1 - Apertura 2026", torneo: "reserva_femenino", l: "Municipales", v: "La Armonía", gl: 6, gv: 0 },
+        { fecha: "Fecha 14 - Apertura 2026 - 28 jun", torneo: "femenino", l: "La Armonía", v: "Municipales", gl: 1, gv: 4, goles_l: ["Briana Gallardo"], goles_v: ["Victoria Nervi (2)","Luján Díaz","Ivana Lindstom"] },
+        { fecha: "Fecha 14 - Apertura 2026", torneo: "reserva_femenino", l: "La Armonía", v: "Municipales", gl: 0, gv: 2 },
     ],
 };
 
@@ -16249,13 +17328,13 @@ function generarReserva(cat) {
                        {n:"Villa Mitre",   cl:"villamitre",   pj:1, pg:0, pe:0, pp:1, gf:0, gc:4, pts:0}],
         'promocional':[
                        {n:"Rosario PB",          cl:"rosariopb",        pj:1, pg:1, pe:0, pp:0, gf:3, gc:2, pts:3},
+                       {n:"Olimpo <b>(A)</b>",              cl:"olimpo",           pj:1, pg:1, pe:0, pp:0, gf:2, gc:1, pts:3},
                        {n:"Pacífico BB",         cl:"pacificobb",       pj:1, pg:0, pe:1, pp:0, gf:4, gc:4, pts:1},
                        {n:"Dublin",              cl:"dublin",           pj:2, pg:0, pe:1, pp:1, gf:6, gc:7, pts:1},
-                       {n:"Olimpo <b>(A)</b>",              cl:"olimpo",           pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0},
-                       {n:"Tiro Federal",        cl:"tirofederal",      pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0},
                        {n:"Comercial",           cl:"comercial",        pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0},
                        {n:"Sansinena",           cl:"sansinena",        pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0},
-                       {n:"Pacífico (C)", cl:"pacificocabildo",  pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0}],
+                       {n:"Pacífico (C)", cl:"pacificocabildo",  pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0},
+                       {n:"Tiro Federal",        cl:"tirofederal",      pj:1, pg:0, pe:0, pp:1, gf:1, gc:2, pts:0}],
         'segundafemenino': [
             {n:"Liniers <b>(C)</b>",             cl:"liniers",         pj:13, pg:11, pe:2, pp:0, gf:54, gc:9, pts:35},
             {n:"San Francisco",       cl:"sanfrancisco",    pj:12, pg:8, pe:2, pp:2, gf:26, gc:12, pts:26},
@@ -17793,6 +18872,11 @@ function generarHistorial() {
                         { nombre: "Germinal",        clase: "germinal",    cat: "Federal A" },
                         { nombre: "Guillermo Brown", clase: "gbrown",      cat: "Federal A" },
                         { nombre: "Círculo Dep.",    clase: "circulo",     cat: "Federal A" },
+                        { nombre: "Cipolletti",    clase: "cipolletti",     cat: "Federal A" },
+                        { nombre: "Atenas de Río Cuarto",    clase: "atenasrc",     cat: "Federal A" },
+                        { nombre: "Juventud Antoniana",    clase: "jantoniana",     cat: "Federal A" },
+                        { nombre: "Argentino de Monte Maíz",    clase: "argmontemaiz",     cat: "Federal A" },
+                        { nombre: "Huracán Las Heras",    clase: "huracanlh",     cat: "Federal A" },
                         { nombre: "Huracán",    clase: "huracan",     cat: "Copa Argentina", catKey: "copaargentina" }
                     ]
                 },
