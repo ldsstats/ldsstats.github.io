@@ -569,7 +569,7 @@ const BD_FIXTURES_FUTSAL = [
         {l:"Comercial",       v:"Catamarca",     gl:10, gv:3, goles_l:["Ricardo Lagos (4)","Jonatan Kippes (3)","Juan Muñoz (2)","Ivo Basich"], goles_v:[]},
         {l:"La Estación",    v:"Tiro Federal",     gl:3, gv:1, goles_l:["Eric Martin","Gastón Aravena","Octavio Kerman"], goles_v:["Alejandro Saldívar"]},
         {l:"San Francisco",    v:"Liniers",     gl:0, gv:4, goles_l:[], goles_v:["Franco Tirabasso (2)","Emiliano Tomasetti","Marcelo De Lucía"]},
-        {l:"Los 3 Chiflados",          v:"Dublin",     gl:null, gv:null},
+        {l:"Los 3 Chiflados",          v:"Dublin",     gl:5, gv:3, goles_l:["Iván Zapata (3)","Lino Bognanni","Diego Santiváñez"], goles_v:["Agustín Miguel"]},
         {l:"Villa Mitre",     v:"Dep. Futsal",     gl:null, gv:null},
         {l:"Petroquímicos",         v:"Huracán",   gl:null,    gv:null}
     ]},
@@ -1963,7 +1963,7 @@ function generarHome() {
                 {l:"Olimpo", v:"Tiro Federal", hora:"15:30", gl:2, gv:1, claseL:"olimpo", claseV:"tirofederal"},
             ]},
             { nombre: "FECHA 1 - FUTSAL - CLAUSURA (REPROGRAMADO)", cat: "futsal", torLink: "futsal", noAutoResult: true, partidos: [
-                {l:"Los 3 Chiflados", v:"Dublin", hora:"22:00", gl:null, gv:null,nota:"en cancha de La Curtiembre - <b>DUBLIN COMENZÓ EL PARTIDO GANANDO 1-0, RESULTADO CON EL QUE FUE SUSPENDIDO LA PRIMERA VEZ</b>"},
+                {l:"Los 3 Chiflados", v:"Dublin", hora:"22:00", gl:5, gv:3,nota:"en cancha de La Curtiembre - <b>DUBLIN COMENZÓ EL PARTIDO GANANDO 1-0, RESULTADO CON EL QUE FUE SUSPENDIDO LA PRIMERA VEZ</b>"},
             ]},
        ]},
         { id: "2026-08-11", label: "MAR 11/08", torneos: [
@@ -16113,8 +16113,9 @@ const BD_H2H = {
     "Dublin|Los 3 Chiflados": [
         { fecha: "Apertura 2026 - Fecha 1", torneo: "futsal", l: "Dublin", v: "Los 3 Chiflados", gl: 6, gv: 2 },
         { fecha: "Apertura 2026 - Fecha 1", torneo: "reservafutsal", l: "Dublin", v: "Los 3 Chiflados", gl: 0, gv: 7 },
-        { fecha: "Clausura 2026 - Fecha 1", torneo: "reservafutsal", l: "Los 3 Chiflados", v: "Dublin", gl: 5, gv: 1 },
         { fecha: "Apertura 2026 - Semifinales", torneo: "reservafutsal", l: "Los 3 Chiflados", v: "Dublin", gl: 7, gv: 2 },
+        { fecha: "Clausura 2026 - Fecha 1", torneo: "futsal", l: "Los 3 Chiflados", v: "Dublin", gl: 5, gv: 3 },
+        { fecha: "Clausura 2026 - Fecha 1", torneo: "reservafutsal", l: "Los 3 Chiflados", v: "Dublin", gl: 5, gv: 1 },
     ],
     "La Estación|Tiro Federal": [
         { fecha: "Apertura 2026 - Fecha 1", torneo: "futsal", l: "La Estación", v: "Tiro Federal", gl: 7, gv: 1 },
@@ -17591,12 +17592,12 @@ const BD_POS_FUTSAL = {
     principal: [
         {n:"La Esperanza",    cl:"laesperanza",    pj:2,pg:2,pe:0,pp:0,gf:12, gc:4, pts:6},
         {n:"Comercial",       cl:"comercial",    pj:2,pg:2,pe:0,pp:0,gf:14, gc:6, pts:6},        {n:"La Estación <b>(A)</b>",     cl:"laestacion",    pj:2,pg:2,pe:0,pp:0,gf:9, gc:4, pts:6},
+        {n:"Los 3 Chiflados", cl:"los3chiflados",    pj:2,pg:2,pe:0,pp:0,gf:7, gc:4, pts:6},
         {n:"Petroquímicos",   cl:"petroquimicos",    pj:2,pg:2,pe:0,pp:0,gf:0, gc:0, pts:6},
         {n:"Villa Mitre",     cl:"villamitre",    pj:2,pg:2,pe:0,pp:0,gf:5, gc:4, pts:6},
         {n:"Liniers",         cl:"liniers",    pj:2,pg:1,pe:1,pp:0,gf:5, gc:2, pts:3},
-        {n:"Los 3 Chiflados", cl:"los3chiflados",    pj:1,pg:1,pe:0,pp:0,gf:2, gc:1, pts:3},
         {n:"San Francisco",   cl:"sanfrancisco",    pj:2,pg:1,pe:0,pp:1,gf:0, gc:4, pts:3},
-        {n:"Dublin",          cl:"dublin",    pj:1,pg:0,pe:0,pp:1,gf:3, gc:4, pts:0},
+        {n:"Dublin",          cl:"dublin",    pj:2,pg:0,pe:0,pp:2,gf:6, gc:9, pts:0},
         {n:"Tiro Federal",    cl:"tirofederal",    pj:2,pg:0,pe:0,pp:2,gf:5, gc:8, pts:0},
         {n:"Pacífico BB",     cl:"pacificobb",    pj:2,pg:0,pe:0,pp:2,gf:5, gc:11, pts:0},
         {n:"Catamarca",       cl:"catamarca",    pj:2,pg:0,pe:0,pp:2,gf:4, gc:17, pts:0},
@@ -17747,16 +17748,16 @@ if ((p.goles_l && p.goles_l.length) || (p.goles_v && p.goles_v.length)) {
     });
     html += `</tbody></table>`;
     if (modo === 'principal') {
-html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'><b>📌 Puntos en juego:</b> 36 tras terminar la fecha 1<br><b>(A)</b> Campeón del Apertura<br><b>(-)</b> Se bajó de la competencia para el Clausura</div>`;
+html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'><b>📌 Puntos en juego:</b> 33 tras terminar la fecha 2<br><b>(A)</b> Campeón del Apertura<br><b>(-)</b> Se bajó de la competencia para el Clausura</div>`;
     } else if (modo === 'reserva') {
-        html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'><b>📌 Puntos en juego:</b> 36 tras terminar la fecha 1<br><b>(A)</b> Campeón del Apertura<br><b>(-)</b> Se bajó de la competencia para el Clausura</div>`;
+        html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'><b>📌 Puntos en juego:</b> 33 tras terminar la fecha 2<br><b>(A)</b> Campeón del Apertura<br><b>(-)</b> Se bajó de la competencia para el Clausura</div>`;
     }
     return html;
 }
 
 const BD_GOLEADORES_FUTSAL = [
     { club: "Dublin",          clase: "dublin",    act: "fecha 2",       goleadores: [
-    { nombre: "Agustín Miguel",          equipo: "Dublin",   goles: 2 },
+    { nombre: "Agustín Miguel",          equipo: "Dublin",   goles: 3 },
     { nombre: "Matías Fonollosa",          equipo: "Dublin",   goles: 1 },
 ] },
 
@@ -17799,8 +17800,10 @@ const BD_GOLEADORES_FUTSAL = [
     { club: "Pacífico BB",     clase: "pacificobb",    act: null,       goleadores: [] },
 
     { club: "Los 3 Chiflados", clase: "los3chiflados",    act: "fecha 2",       goleadores: [
-    { nombre: "Iván Zapata",          equipo: "Los 3 Chiflados",   goles: 1 },
+    { nombre: "Iván Zapata",          equipo: "Los 3 Chiflados",   goles: 4 },
     { nombre: "Martín Kloberdans",          equipo: "Los 3 Chiflados",   goles: 1 },
+    { nombre: "Lino Bognanni",          equipo: "Los 3 Chiflados",   goles: 1 },
+    { nombre: "Diego Santiváñez",          equipo: "Los 3 Chiflados",   goles: 1 },
 ] },
 
     { club: "La Esperanza",    clase: "laesperanza",    act: "fecha 1",       goleadores: [
