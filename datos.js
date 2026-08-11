@@ -1869,95 +1869,7 @@ const BD_FECHA_META = {
 function generarHome() {
     const agenda = [
 
-        { id: "2026-08-04", label: "MAR 04/08", torneos: [
-            { nombre: "FECHA 2 - FUTSAL - CLAUSURA", cat: "futsal", torLink: "futsal", noAutoResult: true, partidos: [
-                {l:"Liniers", v:"Los 3 Chiflados", hora:"22:00", gl:1, gv:2,nota:"en cancha de Don Bosco"},
-            ]},
-       ]},
-        { id: "2026-08-05", label: "MIÉR 05/08", torneos: [
-            { nombre: "FECHA 2 - FUTSAL - CLAUSURA", cat: "futsal", torLink: "futsal", noAutoResult: true, partidos: [
-                {l:"Dublin", v:"Comercial", hora:"22:00", gl:3, gv:4,nota:"en cancha de Don Bosco"},
-            ]},
-            { nombre: "FECHA 1 — TORNEO DE SELECCIÓN SUB 15", cat: "torneoseleccion15", torLink: "torneoseleccion15", noAutoResult: true, partidos: [
-                {l:"Olavarría", v:"Tres Arroyos", hora:"16:00", gl:0, gv:2, claseL:"olavarria", claseV:"tresarroyos", nota:"<b>Zona 1</b>"},
-{l:"Ayacucho", v:"Necochea", hora:"16:00", gl:2, gv:3, claseL:"ayacucho", claseV:"necochea", nota:"<b>Zona 2</b>"},
-{l:"Tandil", v:"Azul", hora:"16:00", gl:3, gv:2, claseL:"tandil", claseV:"azul", nota:"<b>Zona 2</b>"},
-            ]},
-       ]},
-        { id: "2026-08-06", label: "JUE 06/08", torneos: [
-            { nombre: "FECHA 2 - FUTSAL - CLAUSURA", cat: "futsal", torLink: "futsal", noAutoResult: true, partidos: [
-                {l:"Pacífico BB", v:"La Estación", hora:"22:00", gl:3, gv:6,nota:"en cancha de Don Bosco"},
-            ]},
-       ]},
-        { id: "2026-08-07", label: "VIE 07/08", torneos: [
-            { nombre: "FECHA 2 - FUTSAL - CLAUSURA", cat: "futsal", torLink: "futsal", noAutoResult: true, partidos: [
-                {l:"Catamarca", v:"La Esperanza", hora:"22:00", gl:2, gv:7,nota:"en cancha de Petroquímicos"},
-                {l:"Tiro Federal", v:"Villa Mitre", hora:"22:30", gl:4, gv:5,nota:"en cancha de Tiro Federal"},
-            ]},
-            { nombre: "REGIONAL FEMENINO - PARTIDOS DE VUELTA (VILLA MITRE Y MUNICIPALES)", cat: "regamateurfem", torLink: "regamateurfem", noAutoResult: true, partidos: [
-                {l:"Alvarado", v:"San Lorenzo (MdP)", hora:"15:00", gl:0, gv:1, claseL:"alvarado", claseV:"sanlorenzomgp", nota:"<b>San Lorenzo ganó la serie por 5-1</b>"},
-            ]},
-            { nombre: "FECHA 1 — TORNEO DE SELECCIÓN SUB 15", cat: "torneoseleccion15", torLink: "torneoseleccion15", noAutoResult: true, partidos: [
-                {l:"Dolores", v:"General Madariaga", hora:"19:00", gl:1, gv:2, claseL:"dolores", claseV:"madariaga", nota:"<b>Zona 3</b>"},
-            ]},
-       ]},
-        { id: "2026-08-08", label: "SÁB 08/08", torneos: [
-            { nombre: "FECHA 2 - PROMOCIONAL - CLAUSURA", cat: "promocional", torLink: "promocional", noAutoResult: true, partidos: [
-                {l:"Rosario PB", v:"Pacífico BB", hora:"15:00", gl:0, gv:0,nota:"a puertas cerradas"},
-                {l:"Olimpo", v:"Tiro Federal", hora:"15:00", gl:3, gv:2},
-                {l:"Sansinena", v:"Comercial", hora:"15:00", gl:2, gv:0},
-            ]},
-            { nombre: "FECHA 3 - FEMENINO - CLAUSURA", cat: "femenino", torLink: "femenino", noAutoResult: true, partidos: [
-                {l:"La Armonía", v:"Libertad", hora:"15:30", gl:null, gv:null,nota:"<b>PARTIDO REPROGRAMADO</b>"},
-            ]},
-            { nombre: "FECHA 19 - 2° FEMENINO", cat: "segundafemenino", torLink: "segundafemenino", noAutoResult: true, partidos: [
-                {l:"Sansinena", v:"San Francisco", hora:"15:30", gl:null, gv:null,nota:"<b>PARTIDO REPROGRAMADO</b>"},
-            ]},
-            { nombre: "FECHA 15 - SUB 15 FEMENINO", cat: "sub15fem", torLink: "sub15fem", noAutoResult: true, partidos: [
-                {l:"Libertad", v:"Juventud Unida", hora:"11:00", gl:0, gv:0},
-                {l:"Liniers", v:"San Francisco", hora:"15:00", gl:7, gv:0},
-                {l:"La Armonía", v:"Villa Mitre", hora:"11:00", gl:null, gv:null,nota:"PARTIDO REPROGRAMADO"},
-            ]},
-            { nombre: "FECHA 2 - NONAGONAL - FEDERAL A", cat: "federala", torLink: "federala", noAutoResult: true, partidos: [
-                {l:"Villa Mitre", v:"Cipoletti", hora:"15:30", gl:1, gv:1, claseL:"villamitre", claseV:"cipolletti"},
-                {l:"Huracán Las Heras", v:"Olimpo", hora:"15:30", gl:0, gv:1, claseL:"huracanlh", claseV:"olimpo"},
-            ]},
-            { nombre: "REGIONAL FEMENINO - PARTIDOS DE VUELTA (VILLA MITRE Y MUNICIPALES)", cat: "regamateurfem", torLink: "regamateurfem", noAutoResult: true, partidos: [
-                {l:"Ciudad de Olavarría", v:"Estudiantes Unidos", hora:"14:00", gl:2, gv:2, claseL:"ciudadolavarria", claseV:"estudiantesunidos", nota:"<b>Ciudad de Olavarría ganó la serie por 3-2</b>"},
-                {l:"Municipales", v:"Villa Mitre", hora:"15:00", gl:1, gv:2, claseL:"municipales", claseV:"villamitre", nota:"<b>Villa Mitre ganó la serie por 6-2</b>"},
-                {l:"San José de Azul", v:"Alumni Azuleño", hora:"15:00", gl:0, gv:0, claseL:"sanjoseazul", claseV:"alumniazuleno", nota:"<b>Alumni Azuleño ganó la serie por 5-2</b>"},
-                {l:"Huracán de Pellegrini", v:"Racing de Fortín Olavarría", hora:"16:00", gl:2, gv:1, claseL:"huracan", claseV:"racingfortin", nota:"<b>Racing ganó la serie por 10-3</b>"},
-            ]},
-       ]},
-        { id: "2026-08-09", label: "DOM 09/08", torneos: [
-            { nombre: "FECHA 2 - OFICIAL - CLAUSURA", cat: "oficial", torLink: "oficial", noAutoResult: true, partidos: [
-                {l:"Sporting", v:"Huracán", hora:"15:00", gl:0, gv:0,nota:"sin visitantes"},
-                {l:"La Armonía", v:"Villa Mitre", hora:"15:00", gl:0, gv:0},
-                {l:"Bella Vista", v:"Liniers", hora:"15:00", gl:0, gv:0},
-                {l:"San Francisco", v:"Libertad", hora:"15:00", gl:2, gv:1},
-            ]},
-            { nombre: "FECHA 2 - PROMOCIONAL - CLAUSURA", cat: "promocional", torLink: "promocional", noAutoResult: true, partidos: [
-                {l:"Pacífico (C)", v:"Dublin", hora:"15:00", gl:3, gv:0},
-            ]},
-            { nombre: "FECHA 3 - FEMENINO - CLAUSURA", cat: "femenino", torLink: "femenino", noAutoResult: true, partidos: [
-                {l:"Municipales", v:"Tiro Federal", hora:"15:30", gl:3, gv:1,nota:"<b>suspendido por incidentes entre las jugadoras a falta de 10 minutos</b>"},
-                {l:"Empleados de Comercio", v:"Bella Vista", hora:"15:30", gl:1, gv:3},
-                {l:"Sporting", v:"Villa Mitre", hora:"17:00", gl:0, gv:5},
-            ]},
-            { nombre: "FECHA 19 - 2° FEMENINO", cat: "segundafemenino", torLink: "segundafemenino", noAutoResult: true, partidos: [
-                {l:"Olimpo", v:"Rosario PB", hora:"15:30", gl:2, gv:7},
-                {l:"Petroquímicos", v:"Pacífico (C)", hora:"15:30", gl:3, gv:0,nota:"en el predio de La Armonía"},
-                {l:"Estrella de Oro", v:"Liniers", hora:"16:15", gl:0, gv:1,nota:"en el sinténtico de Villa Mitre"},
-            ]},
-            { nombre: "FECHA 15 - SUB 15 FEMENINO", cat: "sub15fem", torLink: "sub15fem", noAutoResult: true, partidos: [
-                {l:"Empleados de Comercio", v:"Tiro Federal", hora:"13:15", gl:0, gv:0},
-                {l:"Olimpo", v:"Sporting", hora:"13:45", gl:0, gv:1},
-                {l:"Bella Vista", v:"Huracán", hora:"16:00", gl:7, gv:0},
-            ]},
-            { nombre: "REGIONAL FEMENINO - PARTIDOS DE VUELTA (VILLA MITRE Y MUNICIPALES)", cat: "regamateurfem", torLink: "regamateurfem", noAutoResult: true, partidos: [
-                {l:"Dep. San José de Tandil", v:"Juventud Unida de Tandil", hora:"15:00", gl:2, gv:0, claseL:"depsanjose", claseV:"juventudunidatandil", nota:"<b>San José ganó la serie por 2-0</b>"},
-            ]},
-       ]},
+
         { id: "2026-08-10", label: "LUN 10/08", torneos: [
             { nombre: "FECHA 2 - PROMOCIONAL - RESERVA", cat: "reserva_promocional", torLink: "reserva_promocional", noAutoResult: true, partidos: [
                 {l:"Olimpo", v:"Tiro Federal", hora:"15:30", gl:2, gv:1, claseL:"olimpo", claseV:"tirofederal"},
@@ -1974,13 +1886,38 @@ function generarHome() {
                 {l:"Rosario PB", v:"Pacífico BB", hora:"15:30", gl:null, gv:null, claseL:"rosariopb", claseV:"pacificobb"},
                 {l:"Sansinena", v:"Comercial", hora:"16:00", gl:null, gv:null, claseL:"sansinena", claseV:"comercial"},
             ]},
+            { nombre: "FECHA 2 - TORNEO DE SELECCIONES SUB-15 (LIGA DEL SUR)", cat: "torneoseleccion15", torLink: "torneoseleccion15", noAutoResult: true, partidos: [
+            {l:"Azul", v:"Ayacucho", hora:"16:00", gl:null, gv:null, claseL:"azul", claseV:"ayacucho"},
+    ]},
        ]},
         { id: "2026-08-12", label: "MIÉR 12/08", torneos: [
+    { nombre: "FECHA 3 - FUTSAL - CLAUSURA", cat: "futsal", torLink: "futsal", noAutoResult: true, partidos: [
+        {l:"Comercial", v:"Liniers", hora:"22:00", gl:null, gv:null, nota:"en cancha de Comercial"},
+        {l:"La Estación", v:"Catamarca", hora:"22:00", gl:null, gv:null, nota:"en cancha de Don Bosco"},
+    ]},
             { nombre: "FEDERAL A - NONAGONAL - FECHA 3", cat: "federala", torLink: "federala", noAutoResult: true, partidos: [
-                {l:"Alvarado", v:"Huracán Las Heras", hora:"15:30", gl:null, gv:null, claseL:"alvarado", claseV:"huracanlh"},
-                {l:"Cipolletti", v:"Argentino de Monte Maiz", hora:"15:30", gl:null, gv:null, claseL:"cipolletti", claseV:"argmontemaiz"},
-                {l:"Olimpo", v:"Villa Mitre", hora:"19:30", gl:null, gv:null, claseL:"olimpo", claseV:"villamitre"},
-                {l:"Atenas", v:"Kimberley", hora:"21:00", gl:null, gv:null, claseL:"atenasrc", claseV:"kimberley"},
+            {l:"Alvarado", v:"Huracán Las Heras", hora:"15:30", gl:null, gv:null, claseL:"alvarado", claseV:"huracanlh"},
+            {l:"Cipolletti", v:"Argentino de Monte Maiz", hora:"15:30", gl:null, gv:null, claseL:"cipolletti", claseV:"argmontemaiz"},
+            {l:"Olimpo", v:"Villa Mitre", hora:"19:30", gl:null, gv:null, claseL:"olimpo", claseV:"villamitre"},
+            {l:"Atenas", v:"Kimberley", hora:"21:00", gl:null, gv:null, claseL:"atenasrc", claseV:"kimberley"},
+            ]},
+            { nombre: "FECHA 2 - TORNEO DE SELECCIONES SUB-15 (LIGA DEL SUR)", cat: "torneoseleccion15", torLink: "torneoseleccion15", noAutoResult: true, partidos: [
+            {l:"Necochea", v:"Tandil", hora:"15:00", gl:null, gv:null, claseL:"necochea", claseV:"tandil"},
+            {l:"La Costa", v:"Dolores", hora:"15:30", gl:null, gv:null, claseL:"lacosta", claseV:"dolores"},
+            {l:"Trenque Lauquen", v:"Pehuajó", hora:"20:00", gl:null, gv:null, claseL:"trenquelauquen", claseV:"pehuajo"},
+    ]},
+       ]},
+        { id: "2026-08-13", label: "JUE 13/08", torneos: [
+            { nombre: "FECHA 2 - TORNEO DE SELECCIONES SUB-15", cat: "torneoseleccion15", torLink: "torneoseleccion15", noAutoResult: true, partidos: [
+            {l:"Liga del Sur", v:"Olavarría", hora:"15:30", gl:null, gv:null, claseL:"ldsbb", claseV:"olavarria", nota:"en cancha de Liniers"},
+            ]},
+            { nombre: "FECHA 3 - FUTSAL - CLAUSURA", cat: "futsal", torLink: "futsal", noAutoResult: true, partidos: [
+                {l:"La Esperanza", v:"Dublin", hora:"22:00", gl:null, gv:null,nota:"en cancha de Don Bosco"},
+            ]},
+       ]},
+        { id: "2026-08-14", label: "VIE 14/08", torneos: [
+            { nombre: "FECHA 3 - FUTSAL - CLAUSURA", cat: "futsal", torLink: "futsal", noAutoResult: true, partidos: [
+                {l:"Tiro Federal", v:"Petroquímicos", hora:"22:30", gl:null, gv:null,nota:"en cancha de Tiro Federal"},
             ]},
        ]},
 ];
