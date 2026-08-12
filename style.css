@@ -97,6 +97,30 @@ tr[onclick]:hover td { background-color: #e8f5e9 !important; }
 .trenquelauquen::before { content: "LTF"; color: #fff; font-size: 5px; font-weight: bold; }
 .pehuajo { background: #1bd2e3; }
 .pehuajo::before { content: "LPF"; color: #2e22ba; font-size: 5px; font-weight: bold; }
+.sanvicente::before { content: "SV"; color: #000000; font-size: 10px; font-weight: bold; }
+.laplata::before { content: "LP"; color: #000000; font-size: 10px; font-weight: bold; }
+.guatrachepais::before { content: "GUA"; color: #000000; font-size: 10px; font-weight: bold; }
+.tartagal::before { content: "TAR"; color: #000000; font-size: 10px; font-weight: bold; }
+.jujuy::before { content: "JUJ"; color: #000000; font-size: 10px; font-weight: bold; }
+.tucuman::before { content: "TUC"; color: #000000; font-size: 10px; font-weight: bold; }
+.valleviejo::before { content: "VV"; color: #000000; font-size: 10px; font-weight: bold; }
+.tinogasta::before { content: "T"; color: #000000; font-size: 10px; font-weight: bold; }
+.catamarcapais::before { content: "CAT"; color: #000000; font-size: 10px; font-weight: bold; }
+.riocuarto::before { content: "RC"; color: #000000; font-size: 10px; font-weight: bold; }
+.rodeo::before { content: "ROD"; color: #000000; font-size: 10px; font-weight: bold; }
+.sanjuan::before { content: "SJ"; color: #000000; font-size: 10px; font-weight: bold; }
+.albardon::before { content: "ALB"; color: #000000; font-size: 10px; font-weight: bold; }
+.malague::before { content: "MAL"; color: #000000; font-size: 10px; font-weight: bold; }
+.tupungato::before { content: "TUP"; color: #000000; font-size: 10px; font-weight: bold; }
+.lagunapaiva::before { content: "LP"; color: #000000; font-size: 10px; font-weight: bold; }
+.parana::before { content: "PAR"; color: #000000; font-size: 10px; font-weight: bold; }
+.sanjorge::before { content: "SJ"; color: #000000; font-size: 10px; font-weight: bold; }
+.rafaela::before { content: "RAF"; color: #000000; font-size: 10px; font-weight: bold; }
+.sannicolas::before { content: "SN"; color: #000000; font-size: 10px; font-weight: bold; }
+.sanpedro::before { content: "SP"; color: #000000; font-size: 10px; font-weight: bold; }
+.chacabuco::before { content: "CHA"; color: #000000; font-size: 10px; font-weight: bold; }
+.bariloche::before { content: "BAR"; color: #000000; font-size: 10px; font-weight: bold; }
+.trelew::before { content: "TRE"; color: #000000; font-size: 10px; font-weight: bold; }
 
 /* MENÚ DESPLEGABLE */
 .bloque-titulo.sin-drop { cursor: pointer; text-align: left; }

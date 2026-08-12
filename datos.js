@@ -956,6 +956,12 @@ BD_FIXTURES_SUB.sub13.find(f=>f.fecha===10).partidos.forEach(p=>{
     if(p.l==="Kimberley"&&p.v==="Santamarina"){p.gl=5;p.gv=0;}
     if(p.l==="Mac Allister"&&p.v==="Balompié"){p.gl=2;p.gv=1;}
 });
+BD_FIXTURES_SUB.sub13.find(f=>f.fecha===11).partidos.forEach(p=>{
+    if(p.l==="Villa Mitre"&&p.v==="Kimberley"){p.gl=2;p.gv=1;}
+    if(p.l==="Olimpo"&&p.v==="Mac Allister"){p.gl=1;p.gv=4;}
+    if(p.l==="Balompié"&&p.v==="Alvarado"){p.gl=null;p.gv=null;}
+});
+
 
 BD_FIXTURES_SUB.sub15.find(f=>f.fecha===1).partidos.forEach(p=>{
     if(p.l==="Villa Mitre"&&p.v==="Olimpo"){p.gl=1;p.gv=2;p.goles_l=["Santiago Sánchez"];p.goles_v=["Thiago Alfredo","Galo Martínez"];}
@@ -1007,6 +1013,11 @@ BD_FIXTURES_SUB.sub15.find(f=>f.fecha===10).partidos.forEach(p=>{
     if(p.l==="Kimberley"&&p.v==="Santamarina"){p.gl=5;p.gv=0;}
     if(p.l==="Mac Allister"&&p.v==="Balompié"){p.gl=2;p.gv=0;}
 });
+BD_FIXTURES_SUB.sub15.find(f=>f.fecha===11).partidos.forEach(p=>{
+    if(p.l==="Villa Mitre"&&p.v==="Kimberley"){p.gl=0;p.gv=0;}
+    if(p.l==="Olimpo"&&p.v==="Mac Allister"){p.gl=2;p.gv=2;}
+    if(p.l==="Balompié"&&p.v==="Alvarado"){p.gl=null;p.gv=null;}
+});
 
 BD_FIXTURES_SUB.sub17.find(f=>f.fecha===1).partidos.forEach(p=>{
     if(p.l==="Villa Mitre"&&p.v==="Olimpo"){p.gl=1;p.gv=1;p.goles_l=["Mateo Luzuriaga"];p.goles_v=["Benicio Hernández"];}
@@ -1057,6 +1068,11 @@ BD_FIXTURES_SUB.sub17.find(f=>f.fecha===10).partidos.forEach(p=>{
     if(p.l==="Alvarado"&&p.v==="Villa Mitre"){p.gl=1;p.gv=1;}
     if(p.l==="Kimberley"&&p.v==="Santamarina"){p.gl=3;p.gv=1;}
     if(p.l==="Mac Allister"&&p.v==="Balompié"){p.gl=1;p.gv=2;}
+});
+BD_FIXTURES_SUB.sub17.find(f=>f.fecha===11).partidos.forEach(p=>{
+    if(p.l==="Villa Mitre"&&p.v==="Kimberley"){p.gl=1;p.gv=0;}
+    if(p.l==="Olimpo"&&p.v==="Mac Allister"){p.gl=0;p.gv=0;}
+    if(p.l==="Balompié"&&p.v==="Alvarado"){p.gl=null;p.gv=null;}
 });
 
 
@@ -1204,7 +1220,7 @@ BD_FIXTURES.oficial.reserva.push(
         {l:"Huracán",      v:"Sporting",      gl:2,   gv:3},
         {l:"San Francisco",v:"Libertad",      gl:2,   gv:1},
         {l:"Bella Vista",  v:"Liniers",       gl:1,   gv:0},
-        {l:"La Armonía",   v:"Villa Mitre",   gl:null,   gv:null}
+        {l:"La Armonía",   v:"Villa Mitre",   gl:1,   gv:2}
     ]},
     { fecha: 3, partidos: [
         {l:"Villa Mitre",      v:"Huracán",      gl:null,   gv:null},
@@ -1291,7 +1307,7 @@ BD_FIXTURES.promocional.reserva.push(
     { fecha: 2, partidos: [
         {l:"Pacífico (C)", v:"Dublin",      gl:4,   gv:4},
         {l:"Olimpo",              v:"Tiro Federal",gl:2,   gv:1},
-        {l:"Rosario PB",          v:"Pacífico BB", gl:null,   gv:null},
+        {l:"Rosario PB",          v:"Pacífico BB", gl:2,   gv:0},
         {l:"Sansinena",           v:"Comercial",   gl:null,   gv:null}
     ]},
     { fecha: 3, partidos: [
@@ -1842,7 +1858,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 19).partidos.forEach(p
 });
 
 
-let diaSeleccionadoHome = "2026-08-11"; 
+let diaSeleccionadoHome = "2026-08-12"; 
 let mercadoPasesAbierto = false;
 
 function toggleMercadoPasesHome() {
@@ -1879,15 +1895,15 @@ function generarHome() {
             ]},
        ]},
         { id: "2026-08-11", label: "MAR 11/08", torneos: [
-            { nombre: "FECHA 2 - OFICIAL - RESERVA", cat: "reservaoficial", torLink: "reservaoficial", noAutoResult: true, partidos: [
-                {l:"La Armonía", v:"Villa Mitre", hora:"15:30", gl:null, gv:null, claseL:"laarmonia", claseV:"villamitre"},
+            { nombre: "FECHA 2 - OFICIAL - RESERVA", cat: "reserva_oficial", torLink: "reserva_oficial", noAutoResult: true, partidos: [
+                {l:"La Armonía", v:"Villa Mitre", hora:"15:30", gl:1, gv:2, claseL:"laarmonia", claseV:"villamitre"},
             ]},
             { nombre: "FECHA 2 - PROMOCIONAL - RESERVA", cat: "reservapromocional", torLink: "reservapromocional", noAutoResult: true, partidos: [
-                {l:"Rosario PB", v:"Pacífico BB", hora:"15:30", gl:null, gv:null, claseL:"rosariopb", claseV:"pacificobb"},
+                {l:"Rosario PB", v:"Pacífico BB", hora:"15:30", gl:2, gv:0, claseL:"rosariopb", claseV:"pacificobb"},
                 {l:"Sansinena", v:"Comercial", hora:"16:00", gl:null, gv:null, claseL:"sansinena", claseV:"comercial"},
             ]},
             { nombre: "FECHA 2 - TORNEO DE SELECCIONES SUB-15 (LIGA DEL SUR)", cat: "torneoseleccion15", torLink: "torneoseleccion15", noAutoResult: true, partidos: [
-            {l:"Azul", v:"Ayacucho", hora:"16:00", gl:null, gv:null, claseL:"azul", claseV:"ayacucho"},
+            {l:"Azul", v:"Ayacucho", hora:"16:00", gl:2, gv:2, claseL:"azul", claseV:"ayacucho"},
     ]},
        ]},
         { id: "2026-08-12", label: "MIÉR 12/08", torneos: [
@@ -1898,7 +1914,7 @@ function generarHome() {
             { nombre: "FEDERAL A - NONAGONAL - FECHA 3", cat: "federala", torLink: "federala", noAutoResult: true, partidos: [
             {l:"Alvarado", v:"Huracán Las Heras", hora:"15:30", gl:null, gv:null, claseL:"alvarado", claseV:"huracanlh"},
             {l:"Cipolletti", v:"Argentino de Monte Maiz", hora:"15:30", gl:null, gv:null, claseL:"cipolletti", claseV:"argmontemaiz"},
-            {l:"Olimpo", v:"Villa Mitre", hora:"19:30", gl:null, gv:null, claseL:"olimpo", claseV:"villamitre"},
+            {l:"<b>Olimpo</b>", v:"<b>Villa Mitre</b>", hora:"19:30", gl:null, gv:null, claseL:"olimpo", claseV:"villamitre"},
             {l:"Atenas", v:"Kimberley", hora:"21:00", gl:null, gv:null, claseL:"atenasrc", claseV:"kimberley"},
             ]},
             { nombre: "FECHA 2 - TORNEO DE SELECCIONES SUB-15 (LIGA DEL SUR)", cat: "torneoseleccion15", torLink: "torneoseleccion15", noAutoResult: true, partidos: [
@@ -1906,10 +1922,18 @@ function generarHome() {
             {l:"La Costa", v:"Dolores", hora:"15:30", gl:null, gv:null, claseL:"lacosta", claseV:"dolores"},
             {l:"Trenque Lauquen", v:"Pehuajó", hora:"20:00", gl:null, gv:null, claseL:"trenquelauquen", claseV:"pehuajo"},
     ]},
+            { nombre: "COPA PAÍS (LIGA DEL SUR)", cat: "copapais", torLink: "copapais", noAutoResult: true, partidos: [
+            {l:"La Plata", v:"San Vicente", hora:"15:00", gl:null, gv:null, claseL:"laplata", claseV:"sanvicente",nota:"<b>PARTIDO DE IDA</b>"},
+            {l:"Rodeo", v:"San Juan", hora:"16:00", gl:null, gv:null, claseL:"rodeo", claseV:"sanjuan",nota:"<b>1° FECHA - GRUPO DE TRES</b>"},
+            {l:"Tartagal", v:"Jujuy", hora:"16:30", gl:null, gv:null, claseL:"tartagal", claseV:"jujuy",nota:"<b>PARTIDO DE IDA</b>"},
+            {l:"Valle Viejo", v:"Tinogasta", hora:"17:00", gl:null, gv:null, claseL:"valleviejo", claseV:"tinogasta",nota:"<b>1° FECHA - GRUPO DE TRES</b>"},
+            {l:"San Pedro", v:"San Nicolás", hora:"20:00", gl:null, gv:null, claseL:"sanpedro", claseV:"sannicolas",nota:"<b>PARTIDO DE IDA</b>"},
+            {l:"San Jorge", v:"Rafaela", claseL:"sanjorge", claseV:"rafaela", hora:"21:00", gl:null, gv:null,nota:"<b>PARTIDO DE IDA</b>"},
+    ]},
        ]},
         { id: "2026-08-13", label: "JUE 13/08", torneos: [
             { nombre: "FECHA 2 - TORNEO DE SELECCIONES SUB-15", cat: "torneoseleccion15", torLink: "torneoseleccion15", noAutoResult: true, partidos: [
-            {l:"Liga del Sur", v:"Olavarría", hora:"15:30", gl:null, gv:null, claseL:"ldsbb", claseV:"olavarria", nota:"en cancha de Liniers"},
+            {l:"<b>Liga del Sur</b>", v:"Olavarría", hora:"15:30", gl:null, gv:null, claseL:"ldsbb", claseV:"olavarria", nota:"en cancha de Liniers"},
             ]},
             { nombre: "FECHA 3 - FUTSAL - CLAUSURA", cat: "futsal", torLink: "futsal", noAutoResult: true, partidos: [
                 {l:"La Esperanza", v:"Dublin", hora:"22:00", gl:null, gv:null,nota:"en cancha de Don Bosco"},
@@ -1918,6 +1942,12 @@ function generarHome() {
         { id: "2026-08-14", label: "VIE 14/08", torneos: [
             { nombre: "FECHA 3 - FUTSAL - CLAUSURA", cat: "futsal", torLink: "futsal", noAutoResult: true, partidos: [
                 {l:"Tiro Federal", v:"Petroquímicos", hora:"22:30", gl:null, gv:null,nota:"en cancha de Tiro Federal"},
+            ]},
+       ]},
+        { id: "2026-08-19", label: "MIÉR 19/08", torneos: [
+            { nombre: "COPA PAÍS (LIGA DEL SUR)", cat: "copapais", torLink: "copapais", noAutoResult: true, partidos: [
+            {l:"Laguna Paiva", v:"Paraná", hora:"16:00", gl:null, gv:null, claseL:"lagunapaiva", claseV:"parana",nota:"<b>PARTIDO DE IDA</b>"},
+            {l:"Guatraché", v:"<b>Liga del Sur</b>", hora:"20:30", gl:null, gv:null, claseL:"guatrachepais", claseV:"ldsbb",nota:"<b>PARTIDO DE IDA</b>"},
             ]},
        ]},
 ];
@@ -15878,6 +15908,7 @@ const BD_H2H = {
         { fecha: "Fecha 9 - Apertura 2026", torneo: "reserva_oficial", l: "Villa Mitre", v: "La Armonía", gl: 1, gv: 1 },
         { fecha: "Torneo 2026 - Fecha 4", torneo: "sub15fem", l: "Villa Mitre", v: "La Armonía", gl: 0, gv: 0 },
         { fecha: "Fecha 2 - Clausura 2026 - 09 ago 2026", torneo: "oficial", l: "La Armonía", v: "Villa Mitre", gl: 0, gv: 0, goles_l: [], goles_v: [] },
+        { fecha: "Fecha 2 - Clausura 2026", torneo: "reserva_oficial", l: "La Armonía", v: "Villa Mitre", gl: 1, gv: 2 },
     ],
     "Empleados de Comercio|Tiro Federal": [
         { fecha: "Fecha 1 - Apertura 2026 - 22 mar", torneo: "femenino", l: "Empleados de Comercio", v: "Tiro Federal", gl: 2, gv: 2, goles_l: ["Marianela Santana","Trinidad Rivas"], goles_v: ["Abril Sáenz (2)"]},
@@ -16035,38 +16066,38 @@ const BD_H2H = {
     ],
     "Dep. Futsal|Villa Mitre": [
         { fecha: "Apertura 2026 - Fecha 1", torneo: "futsal", l: "Dep. Futsal", v: "Villa Mitre", gl: 2, gv: 4 },
-        { fecha: "Apertura 2026 - Fecha 1", torneo: "reservafutsal", l: "Dep. Futsal", v: "Villa Mitre", gl: 2, gv: 6 },
+        { fecha: "Apertura 2026 - Fecha 1", torneo: "futsalreserva", l: "Dep. Futsal", v: "Villa Mitre", gl: 2, gv: 6 },
     ],
     "La Esperanza|Pacífico BB": [
         { fecha: "Apertura 2026 - Fecha 1", torneo: "futsal", l: "Pacífico BB", v: "La Esperanza", gl: 2, gv: 6 },
-        { fecha: "Apertura 2026 - Fecha 1", torneo: "reservafutsal", l: "Pacífico BB", v: "La Esperanza", gl: 6, gv: 6 },
+        { fecha: "Apertura 2026 - Fecha 1", torneo: "futsalreserva", l: "Pacífico BB", v: "La Esperanza", gl: 6, gv: 6 },
         { fecha: "Clausura 2026 - Fecha 1", torneo: "futsal", l: "La Esperanza", v: "Pacífico BB", gl: 5, gv: 2 },
-        { fecha: "Clausura 2026 - Fecha 1", torneo: "reservafutsal", l: "La Esperanza", v: "Pacífico BB", gl: 2, gv: 0 },
+        { fecha: "Clausura 2026 - Fecha 1", torneo: "futsalreserva", l: "La Esperanza", v: "Pacífico BB", gl: 2, gv: 0 },
     ],
     "Huracán|Petroquímicos": [
         { fecha: "Apertura 2026 - Fecha 1", torneo: "futsal", l: "Huracán", v: "Petroquímicas", gl: 3, gv: 10 },
-        { fecha: "Apertura 2026 - Fecha 1", torneo: "reservafutsal", l: "Huracán", v: "Petroquímicos", gl: 0, gv: 8 },
+        { fecha: "Apertura 2026 - Fecha 1", torneo: "futsalreserva", l: "Huracán", v: "Petroquímicos", gl: 0, gv: 8 },
     ],
     "Dublin|Los 3 Chiflados": [
         { fecha: "Apertura 2026 - Fecha 1", torneo: "futsal", l: "Dublin", v: "Los 3 Chiflados", gl: 6, gv: 2 },
-        { fecha: "Apertura 2026 - Fecha 1", torneo: "reservafutsal", l: "Dublin", v: "Los 3 Chiflados", gl: 0, gv: 7 },
-        { fecha: "Apertura 2026 - Semifinales", torneo: "reservafutsal", l: "Los 3 Chiflados", v: "Dublin", gl: 7, gv: 2 },
+        { fecha: "Apertura 2026 - Fecha 1", torneo: "futsalreserva", l: "Dublin", v: "Los 3 Chiflados", gl: 0, gv: 7 },
+        { fecha: "Apertura 2026 - Semifinales", torneo: "futsalreserva", l: "Los 3 Chiflados", v: "Dublin", gl: 7, gv: 2 },
         { fecha: "Clausura 2026 - Fecha 1", torneo: "futsal", l: "Los 3 Chiflados", v: "Dublin", gl: 5, gv: 3 },
-        { fecha: "Clausura 2026 - Fecha 1", torneo: "reservafutsal", l: "Los 3 Chiflados", v: "Dublin", gl: 5, gv: 1 },
+        { fecha: "Clausura 2026 - Fecha 1", torneo: "futsalreserva", l: "Los 3 Chiflados", v: "Dublin", gl: 5, gv: 1 },
     ],
     "La Estación|Tiro Federal": [
         { fecha: "Apertura 2026 - Fecha 1", torneo: "futsal", l: "La Estación", v: "Tiro Federal", gl: 7, gv: 1 },
-        { fecha: "Apertura 2026 - Fecha 1", torneo: "reservafutsal", l: "La Estación", v: "Tiro Federal", gl: 1, gv: 1 },
+        { fecha: "Apertura 2026 - Fecha 1", torneo: "futsalreserva", l: "La Estación", v: "Tiro Federal", gl: 1, gv: 1 },
         { fecha: "Clausura 2026 - Fecha 1", torneo: "futsal", l: "Tiro Federal", v: "La Estación", gl: 3, gv: 1 },
-        { fecha: "Clausura 2026 - Fecha 1", torneo: "reservafutsal", l: "Tiro Federal", v: "La Estación", gl: 3, gv: 1 },
+        { fecha: "Clausura 2026 - Fecha 1", torneo: "futsalreserva", l: "Tiro Federal", v: "La Estación", gl: 3, gv: 1 },
     ],
     "Liniers|San Francisco": [
         { fecha: "Apertura 2026 - Fecha 1", torneo: "futsal", l: "Liniers", v: "San Francisco", gl: 2, gv: 2 },
-        { fecha: "Apertura 2026 - Fecha 1", torneo: "reservafutsal", l: "Liniers", v: "San Francisco", gl: 5, gv: 1 },
+        { fecha: "Apertura 2026 - Fecha 1", torneo: "futsalreserva", l: "Liniers", v: "San Francisco", gl: 5, gv: 1 },
         { fecha: "Torneo 2026 - Fecha 4", torneo: "sub15fem", l: "San Francisco", v: "Liniers", gl: 0, gv: 13 },
         { fecha: "Torneo 2026 - Fecha 15", torneo: "sub15fem", l: "Liniers", v: "San Francisco", gl: 7, gv: 0 },
         { fecha: "Clausura 2026 - Fecha 1", torneo: "futsal", l: "San Francisco", v: "Liniers", gl: 4, gv: 0 },
-        { fecha: "Clausura 2026 - Fecha 1", torneo: "reservafutsal", l: "San Francisco", v: "Liniers", gl: 5, gv: 0 },
+        { fecha: "Clausura 2026 - Fecha 1", torneo: "futsalreserva", l: "San Francisco", v: "Liniers", gl: 5, gv: 0 },
         { fecha: "Fecha 7 - Apertura 2026 - 2 may 2026", torneo: "oficial", l: "Liniers", v: "San Francisco", gl: 2, gv: 0, goles_l: ["Massimo Monti (2)"], goles_v: [] },
         { fecha: "Fecha 7 - Apertura 2026", torneo: "reserva_oficial", l: "Liniers", v: "San Francisco", gl: 0, gv: 0 },
         { fecha: "Fecha 14 - Apertura 2026 - 27 jun 2026", torneo: "oficial", l: "San Francisco", v: "Liniers", gl: 0, gv: 1, goles_l: [], goles_v: ["Massimo Monti"] },
@@ -16074,7 +16105,7 @@ const BD_H2H = {
     ],
     "Catamarca|Comercial": [
         { fecha: "Apertura 2026 - Fecha 1", torneo: "futsal", l: "Catamarca", v: "Comercial", gl: 4, gv: 4 },
-        { fecha: "Apertura 2026 - Fecha 1", torneo: "reservafutsal", l: "Catamarca", v: "Comercial", gl: 6, gv: 5 },
+        { fecha: "Apertura 2026 - Fecha 1", torneo: "futsalreserva", l: "Catamarca", v: "Comercial", gl: 6, gv: 5 },
         { fecha: "Fecha 1 - Apertura 2026", torneo: "futsal", l: "Catamarca", v: "Comercial", gl: 4, gv: 4 },
         { fecha: "Fecha 1 - Apertura 2026", torneo: "futsalreserva", l: "Catamarca", v: "Comercial", gl: 6, gv: 5 }
     ],
@@ -16084,7 +16115,7 @@ const BD_H2H = {
     ],
     "Comercial|Huracán": [
         { fecha: "Apertura 2026 - Fecha 4", torneo: "futsal", l: "Comercial", v: "Huracán", gl: 7, gv: 2 },
-        { fecha: "Apertura 2026 - Fecha 4", torneo: "reservafutsal", l: "Comercial", v: "Huracán", gl: 2, gv: 3 },
+        { fecha: "Apertura 2026 - Fecha 4", torneo: "futsalreserva", l: "Comercial", v: "Huracán", gl: 2, gv: 3 },
         { fecha: "Apertura 2026 - Fecha 1", torneo: "senior", l: "Comercial", v: "Huracán", gl: 1, gv: 3, goles_l: ["Sebastián Aristi"], goles_v: ["César Panduro (2)","Sebastián Faillá"] },
     ],
     "Pacífico BB|Sansinena": [
@@ -16133,9 +16164,9 @@ const BD_H2H = {
         { fecha: "Torneo 2026 - Fecha 1", torneo: "sub15fem", l: "Villa Mitre", v: "Tiro Federal", gl: 1, gv: 2 },
         { fecha: "Torneo 2026 - Fecha 12", torneo: "sub15fem", l: "Tiro Federal", v: "Villa Mitre", gl: 2, gv: 2 },
         { fecha: "Apertura 2026 - Fecha 2", torneo: "futsal", l: "Villa Mitre", v: "Tiro Federal", gl: 7, gv: 1 },
-        { fecha: "Apertura 2026 - Fecha 2", torneo: "reservafutsal", l: "Villa Mitre", v: "Tiro Federal", gl: 4, gv: 1 },
+        { fecha: "Apertura 2026 - Fecha 2", torneo: "futsalreserva", l: "Villa Mitre", v: "Tiro Federal", gl: 4, gv: 1 },
         { fecha: "Clausura 2026 - Fecha 2", torneo: "futsal", l: "Tiro Federal", v: "Villa Mitre", gl: 4, gv: 5 },
-        { fecha: "Clausura 2026 - Fecha 2", torneo: "reservafutsal", l: "Tiro Federal", v: "Villa Mitre", gl: 1, gv: 3 },
+        { fecha: "Clausura 2026 - Fecha 2", torneo: "futsalreserva", l: "Tiro Federal", v: "Villa Mitre", gl: 1, gv: 3 },
     ],
     "Huracán|Libertad": [
         { fecha: "Torneo 2026 - Fecha 1", torneo: "sub15fem", l: "Libertad", v: "Huracán", gl: 0, gv: 8 },
@@ -16188,6 +16219,7 @@ const BD_H2H = {
         { fecha: "Fecha 9 - Apertura 2026 - 24 may 2026", torneo: "promocional", l: "Pacífico BB", v: "Rosario PB", gl: 0, gv: 0, goles_l: [], goles_v: [] },
         { fecha: "Fecha 9 - Apertura 2026", torneo: "reserva_promocional", l: "Pacífico BB", v: "Rosario PB", gl: 0, gv: 4 },
         { fecha: "Fecha 2 - Clausura 2026 - 08 ago 2026", torneo: "promocional", l: "Rosario PB", v: "Pacífico BB", gl: 0, gv: 0, goles_l: [], goles_v: [] },
+        { fecha: "Fecha 2 - Clausura 2026", torneo: "reserva_promocional", l: "Rosario PB", v: "Pacífico BB", gl: 2, gv: 0 },
     ],
     "Dublin|Pacífico (C)": [
         { fecha: "Fecha 2 - Apertura 2026 - 22 mar 2026", torneo: "promocional", l: "Pacífico (C)", v: "Dublin", gl: 1, gv: 2, goles_l: ["Gianni Ferrari"], goles_v: ["Tomás Coronel","Matías San Martín"] },
@@ -16308,36 +16340,36 @@ const BD_H2H = {
         { fecha: "Fecha 11 - Apertura 2026 - 06 jun 2026", torneo: "oficial", l: "Dublin", v: "Comercial", gl: 0, gv: 1, goles_l: [], goles_v: ["Emiliano Brizzi"] },
         { fecha: "Fecha 11 - Apertura 2026", torneo: "reserva_oficial", l: "Dublin", v: "Comercial", gl: 0, gv: 4 },
         { fecha: "Apertura 2026 - Fecha 2", torneo: "futsal", l: "Comercial", v: "Dublin", gl: 5, gv: 1 },
-        { fecha: "Apertura 2026 - Fecha 2", torneo: "reservafutsal", l: "Comercial", v: "Dublin", gl: 4, gv: 5 },
+        { fecha: "Apertura 2026 - Fecha 2", torneo: "futsalreserva", l: "Comercial", v: "Dublin", gl: 4, gv: 5 },
         { fecha: "Clausura 2026 - Fecha 2", torneo: "futsal", l: "Dublin", v: "Comercial", gl: 3, gv: 4 },
-        { fecha: "Clausura 2026 - Fecha 2", torneo: "reservafutsal", l: "Dublin", v: "Comercial", gl: 3, gv: 2 },
+        { fecha: "Clausura 2026 - Fecha 2", torneo: "futsalreserva", l: "Dublin", v: "Comercial", gl: 3, gv: 2 },
     ],
     "Catamarca|La Esperanza": [
         { fecha: "Apertura 2026 - Fecha 2", torneo: "futsal", l: "La Esperanza", v: "Catamarca", gl: 7, gv: 3 },
-        { fecha: "Apertura 2026 - Fecha 2", torneo: "reservafutsal", l: "La Esperanza", v: "Dublin", gl: 4, gv: 5 },
+        { fecha: "Apertura 2026 - Fecha 2", torneo: "futsalreserva", l: "La Esperanza", v: "Dublin", gl: 4, gv: 5 },
         { fecha: "Clausura 2026 - Fecha 2", torneo: "futsal", l: "Catamarca", v: "La Esperanza", gl: 2, gv: 7 },
-        { fecha: "Clausura 2026 - Fecha 2", torneo: "reservafutsal", l: "Catamarca", v: "La Esperanza", gl: 2, gv: 7 },
+        { fecha: "Clausura 2026 - Fecha 2", torneo: "futsalreserva", l: "Catamarca", v: "La Esperanza", gl: 2, gv: 7 },
     ],
     "Dep. Futsal|Petroquímicos": [
         { fecha: "Apertura 2026 - Fecha 2", torneo: "futsal", l: "Petroquímicos", v: "Dep. Futsal", gl: 8, gv: 4 },
-        { fecha: "Apertura 2026 - Fecha 2", torneo: "reservafutsal", l: "Petroquímicos", v: "Dep. Futsal", gl: 8, gv: 4 },
+        { fecha: "Apertura 2026 - Fecha 2", torneo: "futsalreserva", l: "Petroquímicos", v: "Dep. Futsal", gl: 8, gv: 4 },
     ],
     "Liniers|Los 3 Chiflados": [
         { fecha: "Apertura 2026 - Fecha 2", torneo: "futsal", l: "Los 3 Chiflados", v: "Liniers", gl: 3, gv: 3 },
-        { fecha: "Apertura 2026 - Fecha 2", torneo: "reservafutsal", l: "Los 3 Chiflados", v: "Liniers", gl: 3, gv: 1 },
+        { fecha: "Apertura 2026 - Fecha 2", torneo: "futsalreserva", l: "Los 3 Chiflados", v: "Liniers", gl: 3, gv: 1 },
         { fecha: "Clausura 2026 - Fecha 2", torneo: "futsal", l: "Liniers", v: "Los 3 Chiflados", gl: 1, gv: 2 },
-        { fecha: "Clausura 2026 - Fecha 2", torneo: "reservafutsal", l: "Liniers", v: "Los 3 Chiflados", gl: 1, gv: 5 },
+        { fecha: "Clausura 2026 - Fecha 2", torneo: "futsalreserva", l: "Liniers", v: "Los 3 Chiflados", gl: 1, gv: 5 },
     ],
     "La Estación|Pacífico BB": [
         { fecha: "Apertura 2026 - Fecha 2", torneo: "futsal", l: "La Estación", v: "Pacífico BB", gl: 8, gv: 5 },
-        { fecha: "Apertura 2026 - Fecha 2", torneo: "reservafutsal", l: "La Estación", v: "Pacífico BB", gl: 2, gv: 4 },
+        { fecha: "Apertura 2026 - Fecha 2", torneo: "futsalreserva", l: "La Estación", v: "Pacífico BB", gl: 2, gv: 4 },
         { fecha: "Apertura 2026 - Cuartos de final", torneo: "futsal", l: "La Estación", v: "Pacífico BB", gl: 5, gv: 2 },
         { fecha: "Clasura 2026 - Fecha 2", torneo: "futsal", l: "Pacífico BB", v: "La Estación", gl: 3, gv: 6 },
-        { fecha: "Clausura 2026 - Fecha 2", torneo: "reservafutsal", l: "Pacífico BB", v: "La Estación", gl: 0, gv: 4 },
+        { fecha: "Clausura 2026 - Fecha 2", torneo: "futsalreserva", l: "Pacífico BB", v: "La Estación", gl: 0, gv: 4 },
     ],
     "Huracán|San Francisco": [
         { fecha: "Apertura 2026 - Fecha 2", torneo: "futsal", l: "San Francisco", v: "Huracán", gl: 9, gv: 6 },
-        { fecha: "Apertura 2026 - Fecha 2", torneo: "reservafutsal", l: "San Francisco", v: "Huracán", gl: 2, gv: 0 },
+        { fecha: "Apertura 2026 - Fecha 2", torneo: "futsalreserva", l: "San Francisco", v: "Huracán", gl: 2, gv: 0 },
         { fecha: "Fecha 3 - Apertura 2026 - 05 abr", torneo: "segundafemenino", l: "San Francisco", v: "Huracán", gl: 10, gv: 0, goles_l: ["Clara Iturrioz (4)","Julieta Coronel (2)","Ailín Randisi (2)","Luciana Sosa","Rocío de Mirta"], goles_v: []},
         { fecha: "Fecha 3 - Torneo 2026", torneo: "reserva_segundafemenino", l: "San Francisco", v: "Huracán", gl: 3, gv: 0},
         { fecha: "Fecha 12 - Apertura 2026 - 14 jun", torneo: "segundafemenino", l: "Huracán", v: "San Francisco", gl: 1, gv: 8, goles_l: [], goles_v: ["Luciana Sosa (2)","Clara Iturrioz (2)","Ariana Adassus","Ailín Randisi","Florencia Sorbellini","Milagros Fernández"]},
@@ -16507,7 +16539,7 @@ const BD_H2H = {
         { fecha: "Apertura 2026 - Fecha 3", torneo: "sub15fem", l: "San Francisco", v: "Villa Mitre", gl: 0, gv: 4 },
         { fecha: "Apertura 2026 - Fecha 14", torneo: "sub15fem", l: "Villa Mitre", v: "San Francisco", gl: 3, gv: 0 },
         { fecha: "Apertura 2026 - Fecha 5", torneo: "futsal", l: "San Francisco", v: "Villa Mitre", gl: 2, gv: 2 },
-        { fecha: "Apertura 2026 - Fecha 5", torneo: "reservafutsal", l: "San Francisco", v: "Villa Mitre", gl: 2, gv: 4 },
+        { fecha: "Apertura 2026 - Fecha 5", torneo: "futsalreserva", l: "San Francisco", v: "Villa Mitre", gl: 2, gv: 4 },
     ],
     "Empleados de Comercio|Juventud Unida": [
         { fecha: "Apertura 2026 - Fecha 3", torneo: "sub15fem", l: "Empleados de Comercio", v: "Juventud Unida", gl: 0, gv: 4 },
@@ -16515,32 +16547,32 @@ const BD_H2H = {
     ],
     "Dep. Futsal|San Francisco": [
         { fecha: "Apertura 2026 - Fecha 3", torneo: "futsal", l: "Dep. Futsal", v: "San Francisco", gl: 5, gv: 2 },
-        { fecha: "Apertura 2026 - Fecha 3", torneo: "reservafutsal", l: "Dep. Futsal", v: "San Francisco", gl: 3, gv: 4 },
+        { fecha: "Apertura 2026 - Fecha 3", torneo: "futsalreserva", l: "Dep. Futsal", v: "San Francisco", gl: 3, gv: 4 },
     ],
     "Comercial|Liniers": [
         { fecha: "Apertura 2026 - Fecha 3", torneo: "futsal", l: "Liniers", v: "Comercial", gl: 5, gv: 5 },
-        { fecha: "Apertura 2026 - Fecha 3", torneo: "reservafutsal", l: "Liniers", v: "Comercial", gl: 1, gv: 1 },
+        { fecha: "Apertura 2026 - Fecha 3", torneo: "futsalreserva", l: "Liniers", v: "Comercial", gl: 1, gv: 1 },
     ],
     "Huracán|Los 3 Chiflados": [
         { fecha: "Apertura 2026 - Fecha 3", torneo: "futsal", l: "Huracán", v: "Los 3 Chiflados", gl: 2, gv: 10 },
-        { fecha: "Apertura 2026 - Fecha 3", torneo: "reservafutsal", l: "Huracán", v: "Los 3 Chiflados", gl: 0, gv: 5 },
+        { fecha: "Apertura 2026 - Fecha 3", torneo: "futsalreserva", l: "Huracán", v: "Los 3 Chiflados", gl: 0, gv: 5 },
     ],
     "Dublin|La Esperanza": [
         { fecha: "Apertura 2026 - Fecha 3", torneo: "futsal", l: "Dublin", v: "La Esperanza", gl: 0, gv: 2 },
-        { fecha: "Apertura 2026 - Fecha 3", torneo: "reservafutsal", l: "Dublin", v: "La Esperanza", gl: 1, gv: 2 },
+        { fecha: "Apertura 2026 - Fecha 3", torneo: "futsalreserva", l: "Dublin", v: "La Esperanza", gl: 1, gv: 2 },
     ],
     "Catamarca|La Estación": [
         { fecha: "Apertura 2026 - Fecha 3", torneo: "futsal", l: "Catamarca", v: "La Estación", gl: 0, gv: 7 },
-        { fecha: "Apertura 2026 - Fecha 3", torneo: "reservafutsal", l: "Catamarca", v: "La Estación", gl: 5, gv: 6 },
+        { fecha: "Apertura 2026 - Fecha 3", torneo: "futsalreserva", l: "Catamarca", v: "La Estación", gl: 5, gv: 6 },
     ],
     "Petroquímicos|Villa Mitre": [
         { fecha: "Apertura 2026 - Fecha 3", torneo: "futsal", l: "Petroquímicos", v: "Villa Mitre", gl: 3, gv: 6 },
-        { fecha: "Apertura 2026 - Fecha 3", torneo: "reservafutsal", l: "Petroquímicos", v: "Villa Mitre", gl: 4, gv: 4 },
-        { fecha: "Apertura 2026 - Semifinales", torneo: "reservafutsal", l: "Villa Mitre", v: "Petroquímicos", gl: 5, gv: 6 },
+        { fecha: "Apertura 2026 - Fecha 3", torneo: "futsalreserva", l: "Petroquímicos", v: "Villa Mitre", gl: 4, gv: 4 },
+        { fecha: "Apertura 2026 - Semifinales", torneo: "futsalreserva", l: "Villa Mitre", v: "Petroquímicos", gl: 5, gv: 6 },
     ],
     "Pacífico BB|Tiro Federal": [
         { fecha: "Apertura 2026 - Fecha 3", torneo: "futsal", l: "Pacífico BB", v: "Tiro Federal", gl: 2, gv: 5 },
-        { fecha: "Apertura 2026 - Fecha 3", torneo: "reservafutsal", l: "Pacífico BB", v: "Tiro Federal", gl: 3, gv: 4 },
+        { fecha: "Apertura 2026 - Fecha 3", torneo: "futsalreserva", l: "Pacífico BB", v: "Tiro Federal", gl: 3, gv: 4 },
     ],
     "Sporting|Villa Mitre": [
         { fecha: "Fecha 3 - Apertura 2026 - 04 abr", torneo: "femenino", l: "Sporting", v: "Villa Mitre", gl: 2, gv: 1, goles_l: ["Alexia Villani","Lucía Aranda"], goles_v: ["Florencia Pinedo"] },
@@ -16613,7 +16645,7 @@ const BD_H2H = {
     ],
     "Petroquímicos|San Francisco": [
         { fecha: "Apertura 2026 - Fecha 4", torneo: "futsal", l: "San Francisco", v: "Petroquímicos", gl: 0, gv: 3 },
-        { fecha: "Apertura 2026 - Fecha 4", torneo: "reservafutsal", l: "San Francisco", v: "Petroquímicos", gl: 1, gv: 9 },
+        { fecha: "Apertura 2026 - Fecha 4", torneo: "futsalreserva", l: "San Francisco", v: "Petroquímicos", gl: 1, gv: 9 },
         { fecha: "Fecha 4 - Torneo 2026 - 11 abr", torneo: "segundafemenino", l: "Petroquímicos", v: "San Francisco", gl: 0, gv: 1, goles_l: [], goles_v: ["Clara Iturrioz"] },
         { fecha: "Fecha 4 - Torneo 2026", torneo: "reserva_segundafemenino", l: "Petroquímicos", v: "San Francisco", gl: 1, gv: 2 },
         { fecha: "Fecha 13 - Torneo 2026 - 20 jun", torneo: "segundafemenino", l: "San Francisco", v: "Petroquímicos", gl: 0, gv: 1, goles_l: [], goles_v: ["Renata Segovia"] },
@@ -16674,23 +16706,23 @@ const BD_H2H = {
     ],
     "La Esperanza|Liniers": [
         { fecha: "Apertura 2026 - Fecha 4", torneo: "futsal", l: "La Esperanza", v: "Liniers", gl: 1, gv: 7 },
-        { fecha: "Apertura 2026 - Fecha 4", torneo: "reservafutsal", l: "La Esperanza", v: "Liniers", gl: 4, gv: 6 },
+        { fecha: "Apertura 2026 - Fecha 4", torneo: "futsalreserva", l: "La Esperanza", v: "Liniers", gl: 4, gv: 6 },
     ],
     "Dublin|La Estación": [
         { fecha: "Apertura 2026 - Fecha 4", torneo: "futsal", l: "La Estación", v: "Dublin", gl: 1, gv: 0 },
-        { fecha: "Apertura 2026 - Fecha 4", torneo: "reservafutsal", l: "La Estación", v: "Dublin", gl: 8, gv: 0 },
+        { fecha: "Apertura 2026 - Fecha 4", torneo: "futsalreserva", l: "La Estación", v: "Dublin", gl: 8, gv: 0 },
     ],
     "Pacífico BB|Villa Mitre": [
         { fecha: "Apertura 2026 - Fecha 4", torneo: "futsal", l: "Villa Mitre", v: "Pacífico BB", gl: 3, gv: 1 },
-        { fecha: "Apertura 2026 - Fecha 4", torneo: "reservafutsal", l: "Villa Mitre", v: "Pacífico BB", gl: 8, gv: 5 },
+        { fecha: "Apertura 2026 - Fecha 4", torneo: "futsalreserva", l: "Villa Mitre", v: "Pacífico BB", gl: 8, gv: 5 },
     ],
     "Dep. Futsal|Los 3 Chiflados": [
         { fecha: "Apertura 2026 - Fecha 4", torneo: "futsal", l: "Los 3 Chiflados", v: "Dep. Futsal", gl: 8, gv: 4 },
-        { fecha: "Apertura 2026 - Fecha 4", torneo: "reservafutsal", l: "Los 3 Chiflados", v: "Dep. Futsal", gl: 8, gv: 0 },
+        { fecha: "Apertura 2026 - Fecha 4", torneo: "futsalreserva", l: "Los 3 Chiflados", v: "Dep. Futsal", gl: 8, gv: 0 },
     ],
     "Catamarca|Tiro Federal": [
         { fecha: "Apertura 2026 - Fecha 4", torneo: "futsal", l: "Tiro Federal", v: "Catamarca", gl: 1, gv: 0 },
-        { fecha: "Apertura 2026 - Fecha 4", torneo: "reservafutsal", l: "Tiro Federal", v: "Catamarca", gl: 2, gv: 3 },
+        { fecha: "Apertura 2026 - Fecha 4", torneo: "futsalreserva", l: "Tiro Federal", v: "Catamarca", gl: 2, gv: 3 },
     ],
     "Libertad|Villa Mitre": [
         { fecha: "Semifinales - Apertura 2026", torneo: "reserva_oficial", l: "Libertad", v: "Villa Mitre", gl: 0, gv: 1 },
@@ -16728,7 +16760,7 @@ const BD_H2H = {
         { fecha: "Fecha 12 - Apertura 2026 - 15 jun 2026", torneo: "promocional", l: "Pacífico BB", v: "Dublin", gl: 0, gv: 0, goles_l: [], goles_v: [] },
         { fecha: "Fecha 12 - Apertura 2026", torneo: "reserva_promocional", l: "Pacífico BB", v: "Dublin", gl: 0, gv: 2 },
         { fecha: "Apertura 2026 - Fecha 6", torneo: "futsal", l: "Pacífico BB", v: "Dublin", gl: 6, gv: 4 },
-        { fecha: "Apertura 2026 - Fecha 6", torneo: "reservafutsal", l: "Pacífico BB", v: "Dublin", gl: 5, gv: 6 },
+        { fecha: "Apertura 2026 - Fecha 6", torneo: "futsalreserva", l: "Pacífico BB", v: "Dublin", gl: 5, gv: 6 },
     ],
     "Comercial|Rosario PB": [
         { fecha: "Fecha 5 - Apertura 2026 - 11 abr 2026", torneo: "promocional", l: "Rosario PB", v: "Comercial", gl: 2, gv: 0, goles_l: ["Sebastián Mendoza","Agustín Grippaudo"], goles_v: [] },
@@ -16777,11 +16809,11 @@ const BD_H2H = {
     ],
     "Comercial|Dep. Futsal": [
         { fecha: "Apertura 2026 - Fecha 5", torneo: "futsal", l: "Dep. Futsal", v: "Comercial", gl: 1, gv: 8 },
-        { fecha: "Apertura 2026 - Fecha 5", torneo: "reservafutsal", l: "Dep. Futsal", v: "Comercial", gl: 4, gv: 4 },
+        { fecha: "Apertura 2026 - Fecha 5", torneo: "futsalreserva", l: "Dep. Futsal", v: "Comercial", gl: 4, gv: 4 },
     ],
     "Dublin|Tiro Federal": [
         { fecha: "Apertura 2026 - Fecha 5", torneo: "futsal", l: "Dublin", v: "Tiro Federal", gl: 3, gv: 1 },
-        { fecha: "Apertura 2026 - Fecha 5", torneo: "reservafutsal", l: "Dublin", v: "Tiro Federal", gl: 1, gv: 1 },
+        { fecha: "Apertura 2026 - Fecha 5", torneo: "futsalreserva", l: "Dublin", v: "Tiro Federal", gl: 1, gv: 1 },
         { fecha: "Fecha 6 - Apertura 2026 - 18 abr 2026", torneo: "promocional", l: "Dublin", v: "Tiro Federal", gl: 1, gv: 0, goles_l: ["Marcos Pérez"], goles_v: [] },
         { fecha: "Fecha 6 - Apertura 2026", torneo: "reserva_promocional", l: "Dublin", v: "Tiro Federal", gl: 2, gv: 3 },
         { fecha: "Fecha 13 - Apertura 2026 - 20 jun 2026", torneo: "promocional", l: "Tiro Federal", v: "Dublin", gl: 4, gv: 0, goles_l: ["Franco Fraysse","Tiago Papalardo","Mariano McCoubrey","Francisco Vallejos (e/c)"], goles_v: [] },
@@ -16789,20 +16821,20 @@ const BD_H2H = {
     ],
     "La Estación|Liniers": [
         { fecha: "Apertura 2026 - Fecha 5", torneo: "futsal", l: "Liniers", v: "La Estación", gl: 2, gv: 7 },
-        { fecha: "Apertura 2026 - Fecha 5", torneo: "reservafutsal", l: "Liniers", v: "La Estación", gl: 3, gv: 3 },
+        { fecha: "Apertura 2026 - Fecha 5", torneo: "futsalreserva", l: "Liniers", v: "La Estación", gl: 3, gv: 3 },
     ],
     "Catamarca|Pacífico BB": [
         { fecha: "Apertura 2026 - Fecha 5", torneo: "futsal", l: "Catamarca", v: "Pacífico BB", gl: 2, gv: 6 },
-        { fecha: "Apertura 2026 - Fecha 5", torneo: "reservafutsal", l: "Catamarca", v: "Pacífico BB", gl: 11, gv: 1 },
+        { fecha: "Apertura 2026 - Fecha 5", torneo: "futsalreserva", l: "Catamarca", v: "Pacífico BB", gl: 11, gv: 1 },
     ],
     "Huracán|La Esperanza": [
         { fecha: "Apertura 2026 - Fecha 5", torneo: "futsal", l: "Huracán", v: "La Esperanza", gl: 1, gv: 5 },
-        { fecha: "Apertura 2026 - Fecha 5", torneo: "reservafutsal", l: "Huracán", v: "La Esperanza", gl: 1, gv: 3 },
+        { fecha: "Apertura 2026 - Fecha 5", torneo: "futsalreserva", l: "Huracán", v: "La Esperanza", gl: 1, gv: 3 },
     ],
     "Los 3 Chiflados|Petroquímicos": [
         { fecha: "Apertura 2026 - Fecha 5", torneo: "futsal", l: "Petroquímicos", v: "Los 3 Chiflados", gl: 2, gv: 11 },
-        { fecha: "Apertura 2026 - Fecha 5", torneo: "reservafutsal", l: "Petroquímicos", v: "Los 3 Chiflados", gl: 3, gv: 3 },
-        { fecha: "Apertura 2026 - Final", torneo: "reservafutsal", l: "Los 3 Chiflados", v: "Petroquímicos", gl: 4, gv: 1 },
+        { fecha: "Apertura 2026 - Fecha 5", torneo: "futsalreserva", l: "Petroquímicos", v: "Los 3 Chiflados", gl: 3, gv: 3 },
+        { fecha: "Apertura 2026 - Final", torneo: "futsalreserva", l: "Los 3 Chiflados", v: "Petroquímicos", gl: 4, gv: 1 },
     ],
     "Liniers|Sansinena": [
         { fecha: "Fecha 8 - Torneo 2026 - 23 may", torneo: "segundafemenino", l: "Sansinena", v: "Liniers", gl: 0, gv: 3, goles_l: [], goles_v: ["Paulina Acevedo (2)","Paz Cutrín"] },
@@ -16906,44 +16938,44 @@ const BD_H2H = {
     "La Estación|Villa Mitre": [
         { fecha: "Apertura 2026 - Fecha 13", torneo: "futsal", l: "Villa Mitre", v: "La Estación", gl: 6, gv: 3 },
         { fecha: "Apertura 2026 - Fecha 13", torneo: "futsalreserva", l: "Villa Mitre", v: "La Estación", gl: 5, gv: 2 },
-        { fecha: "Apertura 2026 - Cuartos de final", torneo: "reservafutsal", l: "Villa Mitre", v: "La Estación", gl: 4, gv: 4 },
+        { fecha: "Apertura 2026 - Cuartos de final", torneo: "futsalreserva", l: "Villa Mitre", v: "La Estación", gl: 4, gv: 4 },
         { fecha: "Apertura 2026 - Final", torneo: "futsal", l: "La Estación", v: "Villa Mitre", gl: 3, gv: 3, pen_l:4, pen_v:3 },
     ],
     "Los 3 Chiflados|San Francisco": [
         { fecha: "Apertura 2026 - Fecha 6", torneo: "futsal", l: "Los 3 Chiflados", v: "San Francisco", gl: 8, gv: 4 },
-        { fecha: "Apertura 2026 - Fecha 6", torneo: "reservafutsal", l: "Los 3 Chiflados", v: "San Francisco", gl: 6, gv: 1 },
-        { fecha: "Apertura 2026 - Cuartos de final", torneo: "reservafutsal", l: "Los 3 Chiflados", v: "San Francisco", gl: 3, gv: 3 },
+        { fecha: "Apertura 2026 - Fecha 6", torneo: "futsalreserva", l: "Los 3 Chiflados", v: "San Francisco", gl: 6, gv: 1 },
+        { fecha: "Apertura 2026 - Cuartos de final", torneo: "futsalreserva", l: "Los 3 Chiflados", v: "San Francisco", gl: 3, gv: 3 },
     ],
     "Dublin|Liniers": [
         { fecha: "Apertura 2026 - Fecha 9", torneo: "futsal", l: "Liniers", v: "Dublin", gl: 5, gv: 3 },
         { fecha: "Apertura 2026 - Fecha 9", torneo: "futsalreserva", l: "Liniers", v: "Dublin", gl: 5, gv: 3 },
-        { fecha: "Apertura 2026 - Cuartos de final", torneo: "reservafutsal", l: "Liniers", v: "Dublin", gl: 3, gv: 5 },
+        { fecha: "Apertura 2026 - Cuartos de final", torneo: "futsalreserva", l: "Liniers", v: "Dublin", gl: 3, gv: 5 },
     ],
     "La Esperanza|Petroquímicos": [
         { fecha: "Apertura 2026 - Fecha 7", torneo: "futsal", l: "Petroquímicos", v: "La Esperanza", gl: 2, gv: 3 },
         { fecha: "Apertura 2026 - Fecha 7", torneo: "futsalreserva", l: "Petroquímicos", v: "La Esperanza", gl:2, gv: 6 },
-        { fecha: "Apertura 2026 - Cuartos de final", torneo: "reservafutsal", l: "Petroquímicos", v: "La Esperanza", gl: 4, gv: 2 },
+        { fecha: "Apertura 2026 - Cuartos de final", torneo: "futsalreserva", l: "Petroquímicos", v: "La Esperanza", gl: 4, gv: 2 },
     ],
     "Comercial|Petroquímicos": [
         { fecha: "Apertura 2026 - Fecha 6", torneo: "futsal", l: "Comercial", v: "Petroquímicos", gl: 3, gv: 0 },
-        { fecha: "Apertura 2026 - Fecha 6", torneo: "reservafutsal", l: "Comercial", v: "Petroquímicos", gl: 0, gv: 3 },
+        { fecha: "Apertura 2026 - Fecha 6", torneo: "futsalreserva", l: "Comercial", v: "Petroquímicos", gl: 0, gv: 3 },
     ],
     "Liniers|Tiro Federal": [
         { fecha: "Apertura 2026 - Fecha 6", torneo: "futsal", l: "Tiro Federal", v: "Liniers", gl: 2, gv: 4 },
-        { fecha: "Apertura 2026 - Fecha 6", torneo: "reservafutsal", l: "Tiro Federal", v: "Liniers", gl: 2, gv: 7 },
+        { fecha: "Apertura 2026 - Fecha 6", torneo: "futsalreserva", l: "Tiro Federal", v: "Liniers", gl: 2, gv: 7 },
         { fecha: "Torneo 2026 - Fecha 11", torneo: "sub15fem", l: "Liniers", v: "Tiro Federal", gl: 7, gv: 0 },
     ],
     "Huracán|La Estación": [
         { fecha: "Apertura 2026 - Fecha 6", torneo: "futsal", l: "La Estación", v: "Huracán", gl: 5, gv: 2 },
-        { fecha: "Apertura 2026 - Fecha 6", torneo: "reservafutsal", l: "La Estación", v: "Huracán", gl: 5, gv: 5 },
+        { fecha: "Apertura 2026 - Fecha 6", torneo: "futsalreserva", l: "La Estación", v: "Huracán", gl: 5, gv: 5 },
     ],
     "Dep. Futsal|La Esperanza": [
         { fecha: "Apertura 2026 - Fecha 6", torneo: "futsal", l: "La Esperanza", v: "Dep. Futsal", gl: 7, gv: 3 },
-        { fecha: "Apertura 2026 - Fecha 6", torneo: "reservafutsal", l: "La Esperanza", v: "Dep. Futsal", gl: 5, gv: 2 },
+        { fecha: "Apertura 2026 - Fecha 6", torneo: "futsalreserva", l: "La Esperanza", v: "Dep. Futsal", gl: 5, gv: 2 },
     ],
     "Catamarca|Villa Mitre": [
        { fecha: "Apertura 2026 - Fecha 6", torneo: "futsal", l: "Villa Mitre", v: "Dep. Futsal", gl: 4, gv: 3 },
-        { fecha: "Apertura 2026 - Fecha 6", torneo: "reservafutsal", l: "Villa Mitre", v: "Dep. Futsal", gl: 4, gv: 4 },
+        { fecha: "Apertura 2026 - Fecha 6", torneo: "futsalreserva", l: "Villa Mitre", v: "Dep. Futsal", gl: 4, gv: 4 },
     ],
     "Círculo Dep.|Olimpo": [
         { fecha: "Fecha 6 - Fase inicial - 26 abr 2026", torneo: "federala", l: "Olimpo", v: "Círculo Dep.", gl: 1, gv: 0, goles_l: ["Federico González"], goles_v: [] },
@@ -17261,17 +17293,17 @@ function generarReserva(cat) {
                        {n:"Liniers",       cl:"liniers",      pj:2, pg:1, pe:0, pp:1, gf:4, gc:1, pts:3},
                        {n:"Libertad",      cl:"libertad",     pj:2, pg:1, pe:0, pp:1, gf:5, gc:3, pts:3},
                        {n:"San Francisco", cl:"sanfrancisco", pj:2, pg:1, pe:0, pp:1, gf:4, gc:4, pts:3},
-                       {n:"La Armonía",    cl:"laarmonia",    pj:1, pg:0, pe:1, pp:0, gf:2, gc:2, pts:1},
-                       {n:"Huracán",       cl:"huracan",      pj:2, pg:0, pe:0, pp:2, gf:3, gc:7, pts:0},
-                       {n:"Villa Mitre",   cl:"villamitre",   pj:1, pg:0, pe:0, pp:1, gf:0, gc:4, pts:0}],
+                       {n:"Villa Mitre",   cl:"villamitre",   pj:2, pg:1, pe:0, pp:1, gf:2, gc:5, pts:3},
+                       {n:"La Armonía",    cl:"laarmonia",    pj:2, pg:0, pe:1, pp:1, gf:3, gc:4, pts:1},
+                       {n:"Huracán",       cl:"huracan",      pj:2, pg:0, pe:0, pp:2, gf:3, gc:7, pts:0}],
         'promocional':[
-                       {n:"Rosario PB",          cl:"rosariopb",        pj:1, pg:1, pe:0, pp:0, gf:3, gc:2, pts:3},
+                       {n:"Rosario PB",          cl:"rosariopb",        pj:2, pg:2, pe:0, pp:0, gf:5, gc:2, pts:6},
                        {n:"Olimpo <b>(A)</b>",              cl:"olimpo",           pj:1, pg:1, pe:0, pp:0, gf:2, gc:1, pts:3},
-                       {n:"Pacífico BB",         cl:"pacificobb",       pj:1, pg:0, pe:1, pp:0, gf:4, gc:4, pts:1},
                        {n:"Dublin",              cl:"dublin",           pj:2, pg:0, pe:1, pp:1, gf:6, gc:7, pts:1},
+                       {n:"Pacífico BB",         cl:"pacificobb",       pj:2, pg:0, pe:1, pp:1, gf:4, gc:6, pts:1},
                        {n:"Comercial",           cl:"comercial",        pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0},
                        {n:"Sansinena",           cl:"sansinena",        pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0},
-                       {n:"Pacífico (C)", cl:"pacificocabildo",  pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0},
+                       {n:"Pacífico (C)", cl:"pacificocabildo",  pj:1, pg:0, pe:1, pp:0, gf:4, gc:4, pts:1},
                        {n:"Tiro Federal",        cl:"tirofederal",      pj:1, pg:0, pe:0, pp:1, gf:1, gc:2, pts:0}],
         'segundafemenino': [
             {n:"Liniers <b>(C)</b>",             cl:"liniers",         pj:13, pg:11, pe:2, pp:0, gf:54, gc:9, pts:35},
@@ -17331,37 +17363,37 @@ html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-a
 
 const BD_POS_SUB = {
     sub13: [
-        {nombre:"Villa Mitre <b>(C)</b>",  clase:"villamitre",  pj:9,pg:8,pe:1,pp:0,gf:26,gc:7,pts:25},
-        {nombre:"Mac Allister", clase:"macallister", pj:9,pg:7,pe:0,pp:2,gf:25,gc:6,pts:21},
-        {nombre:"Kimberley",    clase:"kimberley",   pj:8,pg:4,pe:1,pp:3,gf:14,gc:10,pts:13},
+        {nombre:"Villa Mitre <b>(C)</b>",  clase:"villamitre",  pj:10,pg:9,pe:1,pp:0,gf:28,gc:8,pts:28},
+        {nombre:"Mac Allister", clase:"macallister", pj:10,pg:8,pe:0,pp:2,gf:29,gc:7,pts:24},
+        {nombre:"Kimberley",    clase:"kimberley",   pj:9,pg:4,pe:1,pp:4,gf:15,gc:12,pts:13},
         {nombre:"Balompié",     clase:"balompie",    pj:8,pg:3,pe:3,pp:2,gf:13,gc:10,pts:12},
         {nombre:"Alvarado <b>(X)</b>",     clase:"alvarado",    pj:9,pg:3,pe:0,pp:6,gf:11,gc:19,pts:9},
-        {nombre:"Olimpo <b>(X)</b>",       clase:"olimpo",      pj:8,pg:2,pe:0,pp:6,gf:10,gc:20,pts:6},
+        {nombre:"Olimpo <b>(X)</b>",       clase:"olimpo",      pj:9,pg:2,pe:0,pp:7,gf:11,gc:24,pts:6},
         {nombre:"Santamarina <b>(X)</b>",  clase:"santamarina", pj:9,pg:0,pe:1,pp:8,gf:5,gc:32,pts:1}
     ],
     sub15: [
-        {nombre:"Mac Allister <b>(C)</b>", clase:"macallister", pj:9,pg:8,pe:1,pp:0,gf:14,gc:2,pts:25},
-        {nombre:"Kimberley",    clase:"kimberley",   pj:9,pg:4,pe:2,pp:2,gf:14,gc:9,pts:14},
+        {nombre:"Mac Allister <b>(C)</b>", clase:"macallister", pj:10,pg:8,pe:2,pp:0,gf:16,gc:4,pts:26},
+        {nombre:"Kimberley",    clase:"kimberley",   pj:9,pg:4,pe:3,pp:2,gf:14,gc:9,pts:15},
         {nombre:"Alvarado",     clase:"alvarado",    pj:9,pg:3,pe:4,pp:2,gf:17,gc:11,pts:13},
         {nombre:"Balompié",     clase:"balompie",    pj:8,pg:3,pe:2,pp:3,gf:13,gc:10,pts:11},
-        {nombre:"Olimpo",       clase:"olimpo",      pj:8,pg:2,pe:3,pp:3,gf:8,gc:12,pts:9},
+        {nombre:"Olimpo",       clase:"olimpo",      pj:9,pg:2,pe:4,pp:3,gf:10,gc:14,pts:10},
         {nombre:"Santamarina",  clase:"santamarina", pj:9,pg:1,pe:2,pp:6,gf:3,gc:17,pts:5},
-        {nombre:"Villa Mitre",  clase:"villamitre",  pj:9,pg:1,pe:2,pp:6,gf:8,gc:16,pts:5}
+        {nombre:"Villa Mitre",  clase:"villamitre",  pj:10,pg:1,pe:3,pp:6,gf:8,gc:16,pts:6}
     ],
     sub17: [
-        {nombre:"Kimberley",    clase:"kimberley",   pj:8,pg:5,pe:2,pp:1,gf:12,gc:6,pts:17},
-        {nombre:"Mac Allister", clase:"macallister", pj:9,pg:4,pe:4,pp:1,gf:20,gc:6,pts:16},
+        {nombre:"Kimberley",    clase:"kimberley",   pj:9,pg:5,pe:2,pp:2,gf:12,gc:7,pts:17},
+        {nombre:"Mac Allister", clase:"macallister", pj:10,pg:4,pe:5,pp:1,gf:20,gc:6,pts:17},
         {nombre:"Balompié",     clase:"balompie",    pj:8,pg:5,pe:1,pp:2,gf:15,gc:13,pts:16},
         {nombre:"Alvarado",     clase:"alvarado",    pj:9,pg:3,pe:3,pp:3,gf:13,gc:12,pts:12},
-        {nombre:"Olimpo",       clase:"olimpo",      pj:8,pg:3,pe:1,pp:4,gf:11,gc:13,pts:10},
-        {nombre:"Villa Mitre",  clase:"villamitre",  pj:9,pg:1,pe:5,pp:3,gf:6,gc:9,pts:8},
+        {nombre:"Villa Mitre",  clase:"villamitre",  pj:10,pg:2,pe:5,pp:3,gf:7,gc:9,pts:11},
+        {nombre:"Olimpo",       clase:"olimpo",      pj:9,pg:3,pe:2,pp:4,gf:11,gc:13,pts:11},
         {nombre:"Santamarina <b>(X)</b>",  clase:"santamarina", pj:9,pg:1,pe:0,pp:8,gf:6,gc:24,pts:3}
     ]
 };
 
 const BD_GOL_SUB = {
     sub13: [
-        {jugador:"Santiago Martínez", equipo:"Villa Mitre", clase:"villamitre", n:11},
+        {jugador:"Santiago Martínez", equipo:"Villa Mitre", clase:"villamitre", n:13},
         {jugador:"Valentino Altfater",    equipo:"Villa Mitre", clase:"villamitre", n:6},
         {jugador:"Ringo Melcon",      equipo:"Villa Mitre", clase:"villamitre", n:3},
         {jugador:"León Cáceres",      equipo:"Olimpo",      clase:"olimpo",     n:2},
@@ -17376,13 +17408,14 @@ const BD_GOL_SUB = {
         {jugador:"Mikeas Jara Godoy",      equipo:"Olimpo",      clase:"olimpo",     n:1},
         {jugador:"Enzo Salinas",      equipo:"Olimpo",      clase:"olimpo",     n:1},
         {jugador:"Thiago Espinoza",      equipo:"Olimpo",      clase:"olimpo",     n:1},
-        {jugador:"Bastián González",      equipo:"Olimpo",      clase:"olimpo",     n:1}
+        {jugador:"Bastián González",      equipo:"Olimpo",      clase:"olimpo",     n:1},
+        {jugador:"Juan Ignacio Ulmann",      equipo:"Olimpo",      clase:"olimpo",     n:1}
     ],
     sub15: [
         {jugador:"Galo Martínez",     equipo:"Olimpo",      clase:"olimpo",     n:4},
+        {jugador:"Ciro Barra",     equipo:"Olimpo",      clase:"olimpo",     n:3},
         {jugador:"Santiago Sánchez",  equipo:"Villa Mitre", clase:"villamitre", n:2},
         {jugador:"Thiago Alfredo",    equipo:"Olimpo",      clase:"olimpo",     n:1},
-        {jugador:"Ciro Barra",     equipo:"Olimpo",      clase:"olimpo",     n:1},
         {jugador:"Simón Schmid",     equipo:"Olimpo",      clase:"olimpo",     n:1},
         {jugador:"Matías Duarte",     equipo:"Olimpo",      clase:"olimpo",     n:1},
         {jugador:"Cardozo",    equipo:"Villa Mitre", clase:"villamitre", n:1},
@@ -17398,10 +17431,10 @@ const BD_GOL_SUB = {
         {jugador:"Agustín Dolagaray", equipo:"Olimpo",      clase:"olimpo",     n:2},
         {jugador:"Valentín Miñoz",      equipo:"Olimpo",      clase:"olimpo",     n:2},
         {jugador:"Valentino Kurtz", equipo:"Olimpo",      clase:"olimpo",     n:2},
+        {jugador:"Alejo Albarracín",   equipo:"Villa Mitre", clase:"villamitre", n:2},
         {jugador:"Kraemer",    equipo:"Villa Mitre", clase:"villamitre", n:1},
         {jugador:"Mateo Luzuriaga",   equipo:"Villa Mitre", clase:"villamitre", n:1},
         {jugador:"Rodríguez",   equipo:"Villa Mitre", clase:"villamitre", n:1},
-        {jugador:"Alejo Albarracín",   equipo:"Villa Mitre", clase:"villamitre", n:1},
         {jugador:"Quiroga",   equipo:"Villa Mitre", clase:"villamitre", n:1}
     ]
 };
@@ -17427,7 +17460,7 @@ function generarSub() {
 
     categorias.forEach(cat => {
         const fixtures = BD_FIXTURES_SUB[cat.key] || [];
-        const n = estado[`fecha_${cat.key}`] || 10;
+        const n = estado[`fecha_${cat.key}`] || 11;
         const f = fixtures.find(x => x.fecha === n) || { partidos: [], libre: null };
 
         // Posiciones manuales
@@ -18478,8 +18511,8 @@ const BD_COPA_PAIS = {
         titulo: "ZONA PAMPEANA SUR",
         tipo: "final",
         partidos: [
-            { ronda: "Final de Región", l: "Guatraché", v: "Liga del Sur", fecha: "Miércoles 12 de agosto", gl: null, gv: null, goles_l: [], goles_v: [] },
-            { ronda: "Final de Región (vuelta)", l: "Liga del Sur", v: "Guatraché", fecha: "Miércoles 19 de agosto", gl: null, gv: null, goles_l: [], goles_v: [] },
+            { ronda: "Final de Región", l: "Guatraché", v: "Liga del Sur", fecha: "Miércoles 19 de agosto", gl: null, gv: null, goles_l: [], goles_v: [] },
+            { ronda: "Final de Región (vuelta)", l: "Liga del Sur", v: "Guatraché", fecha: "Miércoles 26 de agosto", gl: null, gv: null, goles_l: [], goles_v: [] },
         ]
     },
 
@@ -18578,8 +18611,8 @@ const BD_COPA_PAIS = {
         titulo: "LITORAL SUR",
         tipo: "eliminatoria",
         partidos: [
-            { ronda: "1° Ronda - P1 (ida)", l: "Laguna Paiva", v: "Paraná", fecha: "Miércoles 12 de agosto", gl: null, gv: null, goles_l: [], goles_v: [] },
-            { ronda: "1° Ronda - P1 (vuelta)", l: "Paraná", v: "Laguna Paiva", fecha: "Miércoles 19 de agosto", gl: null, gv: null, goles_l: [], goles_v: [] },
+            { ronda: "1° Ronda - P1 (ida)", l: "Laguna Paiva", v: "Paraná", fecha: "Miércoles 19 de agosto", gl: null, gv: null, goles_l: [], goles_v: [] },
+            { ronda: "1° Ronda - P1 (vuelta)", l: "Paraná", v: "Laguna Paiva", fecha: "Miércoles 26 de agosto", gl: null, gv: null, goles_l: [], goles_v: [] },
             { ronda: "1° Ronda - P2 (ida)", l: "Rafaela", v: "San Jorge", fecha: "Miércoles 12 de agosto", gl: null, gv: null, goles_l: [], goles_v: [], separador: true },
             { ronda: "1° Ronda - P2 (vuelta)", l: "San Jorge", v: "Rafaela", fecha: "Miércoles 19 de agosto", gl: null, gv: null, goles_l: [], goles_v: [] },
             { ronda: "Final de Región (ida)", l: "Laguna Paiva/Paraná", v: "San Jorge/Rafaela", fecha: "Miércoles 26 de agosto", gl: null, gv: null, goles_l: [], goles_v: [], separador: true },
@@ -21961,8 +21994,8 @@ function generarTorneoSeleccion15() {
         { label:"ZONA 2", equipos:[
             { nombre:"Necochea",          key:"necochea",       pj:1,pg:1,pe:0,pp:0,gf:3,gc:2,pts:3 },
             { nombre:"Tandil",            key:"tandil",         pj:1,pg:1,pe:0,pp:0,gf:3,gc:2,pts:3 },
-            { nombre:"Azul",              key:"azul",           pj:1,pg:0,pe:0,pp:1,gf:2,gc:3,pts:0 },
-            { nombre:"Ayacucho",          key:"ayacucho",       pj:1,pg:0,pe:0,pp:1,gf:2,gc:3,pts:0 },
+            { nombre:"Azul",              key:"azul",           pj:2,pg:0,pe:1,pp:1,gf:4,gc:5,pts:1 },
+            { nombre:"Ayacucho",          key:"ayacucho",       pj:2,pg:0,pe:1,pp:1,gf:4,gc:5,pts:1 },
         ]},
         { label:"ZONA 3", equipos:[
             { nombre:"General Madariaga", key:"madariaga",      pj:1,pg:1,pe:0,pp:0,gf:2,gc:1,pts:3 },
@@ -21976,7 +22009,7 @@ function generarTorneoSeleccion15() {
         ]},
     ];
 
-    const n = estado.fecha_sel15 || 1;
+    const n = estado.fecha_sel15 || 2;
     const f = fixture.find(x => x.n === n) || fixture[0];
     const e = k => `<span style="display:inline-flex;align-items:center;vertical-align:middle;">${esc[k]||''}</span>`;
 
