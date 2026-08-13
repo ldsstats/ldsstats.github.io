@@ -1102,9 +1102,9 @@ BD_FIXTURES.federala.nonagonal = [
     ], libre: "Kimberley" },
 
     { fecha: 3, partidos: [
-        { l: "Alvarado", v: "Huracán Las Heras", gl: null, gv: null, dia:"Miér 12/08", hora:"15:30", goles_l:[], goles_v:[] },
-        { l: "Cipolletti", v: "Argentino de Monte Maíz", gl: null, gv: null, dia:"Miér 12/08", hora:"15:30", goles_l:[], goles_v:[] },
-        { l: "Olimpo", v: "Villa Mitre", gl: null, gv: null, dia:"Miér 12/08", hora:"19:30", goles_l:[], goles_v:[] },
+        { l: "Alvarado", v: "Huracán Las Heras", gl: 1, gv: 0, dia:"Miér 12/08", hora:"15:30", goles_l:["Germán Sosa"], goles_v:[] },
+        { l: "Cipolletti", v: "Argentino de Monte Maíz", gl: 1, gv: 0, dia:"Miér 12/08", hora:"15:30", goles_l:["Fernando Pettineroli"], goles_v:[] },
+        { l: "Olimpo", v: "Villa Mitre", gl: 2, gv: 0, dia:"Miér 12/08", hora:"19:30", goles_l:["Marcelo Olivera","Cristian Amarilla"], goles_v:[] },
         { l: "Atenas de Río Cuarto", v: "Kimberley", gl: null, gv: null, dia:"Miér 12/08", hora:"22:00", goles_l:[], goles_v:[] }
     ], libre: "Juventud Antoniana" },
     { fecha: 4, partidos: [
@@ -1300,7 +1300,7 @@ BD_FIXTURES.oficial.reserva.push(
 BD_FIXTURES.promocional.reserva.push(
     { fecha: 1, partidos: [
         {l:"Dublin",      v:"Rosario PB",          gl:2,   gv:3},
-        {l:"Sansinena",   v:"Pacífico (C)", gl:null,   gv:null},
+        {l:"Sansinena",   v:"Pacífico (C)", gl:5,   gv:2},
         {l:"Pacífico BB", v:"Olimpo",              gl:null,   gv:null},
         {l:"Tiro Federal",v:"Comercial",           gl:null,   gv:null}
     ]},
@@ -1912,9 +1912,9 @@ function generarHome() {
         {l:"La Estación", v:"Catamarca", hora:"22:00", gl:null, gv:null, nota:"en cancha de Don Bosco"},
     ]},
             { nombre: "FEDERAL A - NONAGONAL - FECHA 3", cat: "federala", torLink: "federala", noAutoResult: true, partidos: [
-            {l:"Alvarado", v:"Huracán Las Heras", hora:"15:30", gl:null, gv:null, claseL:"alvarado", claseV:"huracanlh"},
-            {l:"Cipolletti", v:"Argentino de Monte Maiz", hora:"15:30", gl:null, gv:null, claseL:"cipolletti", claseV:"argmontemaiz"},
-            {l:"<b>Olimpo</b>", v:"<b>Villa Mitre</b>", hora:"19:30", gl:null, gv:null, claseL:"olimpo", claseV:"villamitre"},
+            {l:"Alvarado", v:"Huracán Las Heras", hora:"15:30", gl:1, gv:0, claseL:"alvarado", claseV:"huracanlh"},
+            {l:"Cipolletti", v:"Argentino de Monte Maiz", hora:"15:30", gl:1, gv:0, claseL:"cipolletti", claseV:"argmontemaiz"},
+            {l:"<b>Olimpo</b>", v:"<b>Villa Mitre</b>", hora:"19:30", gl:2, gv:0, claseL:"olimpo", claseV:"villamitre"},
             {l:"Atenas", v:"Kimberley", hora:"21:00", gl:null, gv:null, claseL:"atenasrc", claseV:"kimberley"},
             ]},
             { nombre: "FECHA 2 - TORNEO DE SELECCIONES SUB-15 (LIGA DEL SUR)", cat: "torneoseleccion15", torLink: "torneoseleccion15", noAutoResult: true, partidos: [
@@ -16002,6 +16002,7 @@ const BD_H2H = {
         { fecha: "Fecha 1 - Apertura 2026", torneo: "reserva_promocional", l: "Sansinena", v: "Pacífico (C)", gl: 1, gv: 0 },
         { fecha: "Fecha 8 - Apertura 2026", torneo: "reserva_promocional", l: "Pacífico (C)", v: "Sansinena", gl: 2, gv: 3 },
         { fecha: "Fecha 1 - Clausura 2026 - 02 ago 2026", torneo: "promocional", l: "Sansinena", v: "Pacífico (C)", gl: 1, gv: 1, goles_l: ["Gerónimo Fernández"], goles_v: ["Marcelo Soto"] },
+        { fecha: "Fecha 1 - Clausura 2026", torneo: "reserva_promocional", l: "Sansinena", v: "Pacífico (C)", gl: 5, gv: 2 },
         { fecha: "Apertura 2026 - Fecha 7", torneo: "senior", l: "Sansinena", v: "Pacífico (C)", gl: 1, gv: 3, goles_l: ["Emiliano Jofré"], goles_v: ["Leandro Duelle (2)","Esteban Angelini"] },
         { fecha: "Apertura 2026 - Cuartos de Final", torneo: "senior", l: "Pacífico (C)", v: "Sansinena", gl: 4, gv: 1, goles_l: ["Fabián Soto (2)","Leandro Duelle","Esteban Angelini"], goles_v: ["Cristian González"] },
     ],
@@ -17033,6 +17034,7 @@ const BD_H2H = {
     "Olimpo|Villa Mitre": [
         { fecha: "Fecha 7 - Fase inicial - 3 may 2026", torneo: "federala", l: "Villa Mitre", v: "Olimpo", gl: 0, gv: 0 },
         { fecha: "Fecha 16 - Fase inicial - 26 jun 2026", torneo: "federala", l: "Olimpo", v: "Villa Mitre", gl: 0, gv: 0 },
+        { fecha: "Fecha 3 - Nonagonal - 12 ago 2026", torneo: "federala", l: "Olimpo", v: "Villa Mitre", gl: 2, gv: 0, goles_l: ["Marcelo Olivera","Cristian Amarilla"], goles_v: [] },
         { fecha: "Torneo 2026 - Fecha 7", torneo: "sub15fem", l: "Olimpo", v: "Villa Mitre", gl: 2, gv: 3 },
     ],
     "Germinal|Olimpo": [
@@ -17298,12 +17300,12 @@ function generarReserva(cat) {
                        {n:"Huracán",       cl:"huracan",      pj:2, pg:0, pe:0, pp:2, gf:3, gc:7, pts:0}],
         'promocional':[
                        {n:"Rosario PB",          cl:"rosariopb",        pj:2, pg:2, pe:0, pp:0, gf:5, gc:2, pts:6},
+                       {n:"Sansinena",           cl:"sansinena",        pj:1, pg:1, pe:0, pp:0, gf:5, gc:2, pts:3},
                        {n:"Olimpo <b>(A)</b>",              cl:"olimpo",           pj:1, pg:1, pe:0, pp:0, gf:2, gc:1, pts:3},
                        {n:"Dublin",              cl:"dublin",           pj:2, pg:0, pe:1, pp:1, gf:6, gc:7, pts:1},
                        {n:"Pacífico BB",         cl:"pacificobb",       pj:2, pg:0, pe:1, pp:1, gf:4, gc:6, pts:1},
                        {n:"Comercial",           cl:"comercial",        pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0},
-                       {n:"Sansinena",           cl:"sansinena",        pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0},
-                       {n:"Pacífico (C)", cl:"pacificocabildo",  pj:1, pg:0, pe:1, pp:0, gf:4, gc:4, pts:1},
+                       {n:"Pacífico (C)", cl:"pacificocabildo",  pj:2, pg:0, pe:1, pp:1, gf:6, gc:9, pts:1},
                        {n:"Tiro Federal",        cl:"tirofederal",      pj:1, pg:0, pe:0, pp:1, gf:1, gc:2, pts:0}],
         'segundafemenino': [
             {n:"Liniers <b>(C)</b>",             cl:"liniers",         pj:13, pg:11, pe:2, pp:0, gf:54, gc:9, pts:35},
