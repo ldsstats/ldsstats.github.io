@@ -304,7 +304,7 @@ const idaFederal = [
     { fecha: 9, libre: "Alvarado", partidos: [{l:"Germinal", v:"Guillermo Brown", gl:1, gv:1, dia:"Dom 17/05", hora:"15:00", goles_l:["Ignacio Terán"], goles_v:["Patricio Cucchi"]}, {l:"Villa Mitre", v:"Sol de Mayo", gl:2, gv:1, dia:"Dom 17/05", hora:"15:00", goles_l:["Enzo González","Thiago Pérez"], goles_v:["Kevin Pereyra"]}, {l:"Círculo Dep.", v:"Kimberley", gl:0, gv:1, dia:"Dom 17/05", hora:"15:00", goles_l:[], goles_v:["Santiago Castillo"]}, {l:"Santamarina", v:"Olimpo", gl:0, gv:0, dia:"Dom 17/05", hora:"18:10"}] }
 ];
 
-let fechaNonagonal = 3;
+let fechaNonagonal = 4;
 
 function cambiarFechaNonagonal(n) {
     fechaNonagonal = n;
@@ -1988,6 +1988,12 @@ function generarHome() {
             { nombre: "SUB-15 FEMENINO - FECHA 16", cat: "sub15fem", torLink: "sub15fem", noAutoResult: true, partidos: [
                 {l:"Tiro Federal", v:"Libertad", hora:"10:30", gl:null, gv:null},
                 {l:"Sporting", v:"Huracán", hora:"11:00", gl:null, gv:null},
+            ]},
+            { nombre: "FEDERAL A - FECHA 4 - NONAGONAL", cat: "federala", torLink: "federala", noAutoResult: true, partidos: [
+                {l:"Argentino (MM)", v:"Olimpo", hora:"15:00", gl:null, gv:null, claseL:"argmontemaiz", claseV:"olimpo"},
+                {l:"Kimberley", v:"Cipolletti", hora:"15:00", gl:null, gv:null, claseL:"kimberley", claseV:"cipolletti"},
+                {l:"Villa Mitre", v:"Alvarado", hora:"15:30", gl:null, gv:null, claseL:"villamitre", claseV:"alvarado"},
+                {l:"Huracán Las Heras", v:"Juv. Antoniana", hora:"15:30", gl:null, gv:null, claseL:"huracanlh", claseV:"jantoniana"},
             ]},
        ]},
         { id: "2026-08-17", label: "LUN 17/08", torneos: [
@@ -22267,7 +22273,29 @@ function generarTorneoSeleccion15() {
         plantelHtml += `<div style="display:inline-flex;align-items:center;gap:4px;font-size:11px;padding:3px 7px;background:#f0f7f0;border-radius:4px;border:1px solid #c8e6c9;"><div class="escudo ${j.key}" style="display:inline-block;vertical-align:middle;"></div> ${j.nombre}</div>`;
     });
     plantelHtml += `</div><div style="font-size:10px;color:#555;border-top:1px solid #ddd;padding-top:6px;"><b>CUERPO TÉCNICO</b><br>DT: Federico Nieto · AC: Pablo Sánchez · AC: Fabián Tourn · PF: Roberto Gauna · Ent. Arquero: Diego Verdugo · Aux: Hugo Ríos · Uti: Fabián Moretti</div></div>`;
-    let html = `<div class="header-t">TORNEO DE SELECCIÓN — SUB 15</div>` + plantelHtml;
+    const golesLdS = {};
+    fixture.forEach(f2 => {
+        f2.partidos.forEach(p => {
+            if (p.gl === null) return;
+            if (p.l === "Liga del Sur") (p.goles_l || []).forEach(nombre => {
+                golesLdS[nombre] = (golesLdS[nombre] || 0) + 1;
+            });
+            if (p.v === "Liga del Sur") (p.goles_v || []).forEach(nombre => {
+                golesLdS[nombre] = (golesLdS[nombre] || 0) + 1;
+            });
+        });
+    });
+    const listaGolesLdS = Object.entries(golesLdS).sort((a, b) => b[1] - a[1]);
+    let golesHtml = '';
+    if (listaGolesLdS.length > 0) {
+        golesHtml = `<div class="header-t" style="cursor:pointer;" onclick="document.getElementById('goles-sub15').style.display=document.getElementById('goles-sub15').style.display==='none'?'block':'none'">▶ GOLEADORES — LIGA DEL SUR</div><div id="goles-sub15" style="display:none;"><table><tbody>`;
+        listaGolesLdS.forEach(([nombre, goles]) => {
+            golesHtml += `<tr><td style="text-align:left;padding-left:8px;font-size:12px;">${nombre}</td><td class="c-stat"><b>${goles}</b></td></tr>`;
+        });
+        golesHtml += `</tbody></table></div>`;
+    }
+
+    let html = `<div class="header-t">TORNEO DE SELECCIÓN — SUB 15</div>` + plantelHtml + golesHtml;
 
     html += `<div class="nav-fechas">`;
     for (let i = 1; i <= 6; i++) {
@@ -22316,25 +22344,6 @@ function generarTorneoSeleccion15() {
         });
         html += `</tbody></table>`;
     });
-    const golesLdS = {};
-    fixture.forEach(f2 => {
-        f2.partidos.forEach(p => {
-            if (p.gl === null) return;
-            if (p.l === "Liga del Sur") (p.goles_l || []).forEach(nombre => {
-                golesLdS[nombre] = (golesLdS[nombre] || 0) + 1;
-            });
-            if (p.v === "Liga del Sur") (p.goles_v || []).forEach(nombre => {
-                golesLdS[nombre] = (golesLdS[nombre] || 0) + 1;
-            });
-        });
-    });
-    const listaGolesLdS = Object.entries(golesLdS).sort((a, b) => b[1] - a[1]);
-    if (listaGolesLdS.length > 0) {
-        html += `<div class="header-t">GOLEADORES — LIGA DEL SUR</div><table><tbody>`;
-        listaGolesLdS.forEach(([nombre, goles]) => {
-            html += `<tr><td style="text-align:left;padding-left:8px;font-size:12px;">${nombre}</td><td class="c-stat"><b>${goles}</b></td></tr>`;
-        });
-        html += `</tbody></table>`;
-    }
+
     return html;
 }
