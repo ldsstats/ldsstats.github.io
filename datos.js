@@ -465,7 +465,7 @@ const BD_FIXTURES_FUTSAL_RESERVA = [
     { fecha: 3, partidos: [
         {l:"Comercial",         v:"Liniers",     gl:3, gv:6, goles_l:["Rodrigo Carvajal","Facundo Diez","..."], goles_v:["Manuel Tejedor (2)","Franco Colombi (2)","Juan Antonello","Juan Flores"]},
         {l:"Catamarca",       v:"La Estación",     gl:2, gv:5, goles_l:[], goles_v:["Gustavo Morán (3)","Fermín Jara","Joaquín Trujillo"]},
-        {l:"Dublin",          v:"La Esperanza",     gl:null, gv:null},
+        {l:"Dublin",          v:"La Esperanza",     gl:4, gv:5},
         {l:"Pacífico BB",     v:"Tiro Federal",     gl:null, gv:null},
         {l:"Petroquímicos",   v:"Villa Mitre",     gl:null, gv:null},
         {l:"Huracán",         v:"Los 3 Chiflados",     gl:null, gv:null},
@@ -585,7 +585,7 @@ const BD_FIXTURES_FUTSAL = [
     { fecha: 3, partidos: [
         {l:"Comercial",         v:"Liniers",     gl:6, gv:3, goles_l:["Jonatan Kippes (2)","Ricardo Lagos (2)","Leonel Torres","Alexis Salinas"], goles_v:[]},
         {l:"Catamarca",       v:"La Estación",     gl:2, gv:6, goles_l:[], goles_v:["Diego Romano (2)","Jonathan Carunchio (2)","Bernabé Storni","Tobias Montiel"]},
-        {l:"Dublin",          v:"La Esperanza",     gl:null, gv:null},
+        {l:"Dublin",          v:"La Esperanza",     gl:1, gv:5},
         {l:"Pacífico BB",     v:"Tiro Federal",     gl:null, gv:null},
         {l:"Petroquímicos",   v:"Villa Mitre",     gl:null, gv:null},
         {l:"Huracán",         v:"Los 3 Chiflados",     gl:null, gv:null},
@@ -1858,7 +1858,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 19).partidos.forEach(p
 });
 
 
-let diaSeleccionadoHome = "2026-08-13"; 
+let diaSeleccionadoHome = "2026-08-14"; 
 let mercadoPasesAbierto = false;
 
 function toggleMercadoPasesHome() {
@@ -1936,7 +1936,7 @@ function generarHome() {
             {l:"<b>Liga del Sur</b>", v:"Olavarría", hora:"15:30", gl:3, gv:0, claseL:"ldsbb", claseV:"olavarria", nota:"en cancha de Liniers"},
             ]},
             { nombre: "FECHA 3 - FUTSAL - CLAUSURA", cat: "futsal", torLink: "futsal", noAutoResult: true, partidos: [
-                {l:"La Esperanza", v:"Dublin", hora:"22:00", gl:null, gv:null,nota:"en cancha de Don Bosco"},
+                {l:"La Esperanza", v:"Dublin", hora:"22:00", gl:5, gv:1,nota:"en cancha de Don Bosco"},
             ]},
        ]},
         { id: "2026-08-14", label: "VIE 14/08", torneos: [
@@ -16567,6 +16567,8 @@ const BD_H2H = {
     "Dublin|La Esperanza": [
         { fecha: "Apertura 2026 - Fecha 3", torneo: "futsal", l: "Dublin", v: "La Esperanza", gl: 0, gv: 2 },
         { fecha: "Apertura 2026 - Fecha 3", torneo: "futsalreserva", l: "Dublin", v: "La Esperanza", gl: 1, gv: 2 },
+        { fecha: "Clausura 2026 - Fecha 3", torneo: "futsal", l: "La Esperanza", v: "Dublin", gl: 5, gv: 1 },
+        { fecha: "Clausura 2026 - Fecha 3", torneo: "futsalreserva", l: "La Esperanza", v: "Dublin", gl: 5, gv: 4 },
     ],
     "Catamarca|La Estación": [
         { fecha: "Apertura 2026 - Fecha 3", torneo: "futsal", l: "Catamarca", v: "La Estación", gl: 0, gv: 7 },
@@ -17602,17 +17604,17 @@ function generarSub() {
 
 const BD_POS_FUTSAL = {
     principal: [
+        {n:"La Esperanza",    cl:"laesperanza",    pj:3,pg:3,pe:0,pp:0,gf:17, gc:5, pts:9},
         {n:"Comercial",       cl:"comercial",    pj:3,pg:3,pe:0,pp:0,gf:20, gc:9, pts:9},
         {n:"La Estación <b>(A)</b>",     cl:"laestacion",    pj:3,pg:3,pe:0,pp:0,gf:15, gc:6, pts:9},
         {n:"Los 3 Chiflados", cl:"los3chiflados",    pj:3,pg:3,pe:0,pp:0,gf:7, gc:4, pts:9},
-        {n:"La Esperanza",    cl:"laesperanza",    pj:2,pg:2,pe:0,pp:0,gf:12, gc:4, pts:6},
         {n:"Villa Mitre",     cl:"villamitre",    pj:2,pg:2,pe:0,pp:0,gf:5, gc:4, pts:6},
         {n:"Petroquímicos",   cl:"petroquimicos",    pj:2,pg:2,pe:0,pp:0,gf:0, gc:0, pts:6},
         {n:"San Francisco",   cl:"sanfrancisco",    pj:3,pg:2,pe:0,pp:1,gf:0, gc:4, pts:6},
         {n:"Liniers",         cl:"liniers",    pj:3,pg:1,pe:0,pp:2,gf:8, gc:8, pts:3},
-        {n:"Dublin",          cl:"dublin",    pj:2,pg:0,pe:0,pp:2,gf:6, gc:9, pts:0},
         {n:"Tiro Federal",    cl:"tirofederal",    pj:2,pg:0,pe:0,pp:2,gf:5, gc:8, pts:0},
         {n:"Pacífico BB",     cl:"pacificobb",    pj:2,pg:0,pe:0,pp:2,gf:5, gc:11, pts:0},
+        {n:"Dublin",          cl:"dublin",    pj:3,pg:0,pe:0,pp:3,gf:7, gc:14, pts:0},
         {n:"Catamarca",       cl:"catamarca",    pj:2,pg:0,pe:0,pp:2,gf:7, gc:23, pts:0},
         {n:"<s>Dep. Futsal</s> <b>(-)</b>",     cl:"depfutsal",    pj:0,pg:0,pe:0,pp:0,gf:0, gc:0, pts:0},
         {n:"<s>Huracán</s> <b>(-)</b>",         cl:"huracan",    pj:0,pg:0,pe:0,pp:0,gf:0, gc:0, pts:0}
@@ -17620,12 +17622,12 @@ const BD_POS_FUTSAL = {
     reserva: [
         {n:"La Estación",     cl:"laestacion",    pj:3,pg:3,pe:0,pp:0,gf:12, gc:3, pts:9},
         {n:"Los 3 Chiflados <b>(A)</b>", cl:"los3chiflados",    pj:3,pg:3,pe:0,pp:0,gf:10, gc:2, pts:9},
-        {n:"La Esperanza",    cl:"laesperanza",    pj:2,pg:2,pe:0,pp:0,gf:9, gc:2, pts:6},
+        {n:"La Esperanza",    cl:"laesperanza",    pj:3,pg:3,pe:0,pp:0,gf:14, gc:6, pts:9},
         {n:"Villa Mitre",     cl:"villamitre",    pj:2,pg:2,pe:0,pp:0,gf:3, gc:1, pts:6},
         {n:"Liniers",         cl:"liniers",    pj:3,pg:2,pe:0,pp:1,gf:12, gc:8, pts:6},
         {n:"Petroquímicos",   cl:"petroquimicos",    pj:2,pg:2,pe:0,pp:0,gf:0, gc:0, pts:6},
         {n:"San Francisco",   cl:"sanfrancisco",    pj:3,pg:2,pe:0,pp:1,gf:0, gc:5, pts:6},
-        {n:"Dublin",          cl:"dublin",    pj:2,pg:1,pe:0,pp:1,gf:4, gc:7, pts:3},
+        {n:"Dublin",          cl:"dublin",    pj:3,pg:1,pe:0,pp:2,gf:8, gc:11, pts:3},
         {n:"Comercial",       cl:"comercial",    pj:3,pg:0,pe:1,pp:2,gf:8, gc:12, pts:1},
         {n:"Catamarca",       cl:"catamarca",    pj:3,pg:0,pe:1,pp:2,gf:7, gc:15, pts:1},
         {n:"Tiro Federal",    cl:"tirofederal",    pj:2,pg:0,pe:0,pp:2,gf:2, gc:6, pts:0},
