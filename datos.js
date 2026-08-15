@@ -466,7 +466,7 @@ const BD_FIXTURES_FUTSAL_RESERVA = [
         {l:"Comercial",         v:"Liniers",     gl:3, gv:6, goles_l:["Rodrigo Carvajal","Facundo Diez","..."], goles_v:["Manuel Tejedor (2)","Franco Colombi (2)","Juan Antonello","Juan Flores"]},
         {l:"Catamarca",       v:"La Estación",     gl:2, gv:5, goles_l:[], goles_v:["Gustavo Morán (3)","Fermín Jara","Joaquín Trujillo"]},
         {l:"Dublin",          v:"La Esperanza",     gl:4, gv:5},
-        {l:"Pacífico BB",     v:"Tiro Federal",     gl:null, gv:null},
+        {l:"Pacífico BB",     v:"Tiro Federal",     gl:2, gv:1},
         {l:"Petroquímicos",   v:"Villa Mitre",     gl:null, gv:null},
         {l:"Huracán",         v:"Los 3 Chiflados",     gl:null, gv:null},
         {l:"Dep. Futsal",     v:"San Francisco",     gl:null, gv:null},
@@ -586,7 +586,7 @@ const BD_FIXTURES_FUTSAL = [
         {l:"Comercial",         v:"Liniers",     gl:6, gv:3, goles_l:["Jonatan Kippes (2)","Ricardo Lagos (2)","Leonel Torres","Alexis Salinas"], goles_v:[]},
         {l:"Catamarca",       v:"La Estación",     gl:2, gv:6, goles_l:[], goles_v:["Diego Romano (2)","Jonathan Carunchio (2)","Bernabé Storni","Tobias Montiel"]},
         {l:"Dublin",          v:"La Esperanza",     gl:1, gv:5},
-        {l:"Pacífico BB",     v:"Tiro Federal",     gl:null, gv:null},
+        {l:"Pacífico BB",     v:"Tiro Federal",     gl:4, gv:5, goles_l:[], goles_v:["Alejandro Saldívar (2)","Marcelo Aguirre (2)","Bruno Cronier"]},
         {l:"Petroquímicos",   v:"Villa Mitre",     gl:null, gv:null},
         {l:"Huracán",         v:"Los 3 Chiflados",     gl:null, gv:null},
         {l:"Dep. Futsal",     v:"San Francisco",     gl:null, gv:null},
@@ -1858,7 +1858,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 19).partidos.forEach(p
 });
 
 
-let diaSeleccionadoHome = "2026-08-14"; 
+let diaSeleccionadoHome = "2026-08-15"; 
 let mercadoPasesAbierto = false;
 
 function toggleMercadoPasesHome() {
@@ -1941,7 +1941,7 @@ function generarHome() {
        ]},
         { id: "2026-08-14", label: "VIE 14/08", torneos: [
             { nombre: "FECHA 3 - FUTSAL - CLAUSURA", cat: "futsal", torLink: "futsal", noAutoResult: true, partidos: [
-                {l:"Tiro Federal", v:"Pacífico BB", hora:"22:30", gl:null, gv:null,nota:"en cancha de Tiro Federal"},
+                {l:"Tiro Federal", v:"Pacífico BB", hora:"22:30", gl:5, gv:4,nota:"en cancha de Tiro Federal"},
             ]},
        ]},
         { id: "2026-08-15", label: "SÁB 15/08", torneos: [
@@ -16569,9 +16569,6 @@ const BD_H2H = {
         { fecha: "Fecha 5 - Torneo 2026 - 19 abr", torneo: "segundafemenino", l: "San Francisco", v: "Pacífico (C)", gl: 7, gv: 0, goles_l: ["Milagos Fernández (3)","Ariana Adassus (2)","Clara Iturrioz","Ailín Randisi"], goles_v: [] },
         { fecha: "Fecha 14 - Torneo 2026 - 28 jun", torneo: "segundafemenino", l: "Pacífico (C)", v: "San Francisco ", gl: 0, gv: 1, goles_l: [], goles_v: ["Elena Spinucci"] },
     ],
-    "Pacífico BB|Tiro Federal": [
-        { fecha: "Apertura 2026 - Fecha 3", torneo: "senior", l: "Tiro Federal", v: "Pacífico BB", gl: 2, gv: 2, goles_l: ["Juan José Dietz (2)"], goles_v: ["Maximiliano Delaudo (2)"] },
-    ],
     "Libertad|Sporting": [
         { fecha: "Apertura 2026 - Fecha 3", torneo: "senior", l: "Sporting", v: "Libertad", gl: 2, gv: 1, goles_l: ["Marcos Cossú","Maximiliano Rodríguez"], goles_v: ["Rodrigo García"] },
         { fecha: "Apertura 2026 - Fecha 3", torneo: "sub15fem", l: "Libertad", v: "Sporting", gl: 0, gv: 7 },
@@ -16639,8 +16636,11 @@ const BD_H2H = {
         { fecha: "Apertura 2026 - Semifinales", torneo: "futsalreserva", l: "Villa Mitre", v: "Petroquímicos", gl: 5, gv: 6 },
     ],
     "Pacífico BB|Tiro Federal": [
+        { fecha: "Apertura 2026 - Fecha 3", torneo: "senior", l: "Tiro Federal", v: "Pacífico BB", gl: 2, gv: 2, goles_l: ["Juan José Dietz (2)"], goles_v: ["Maximiliano Delaudo (2)"] },
         { fecha: "Apertura 2026 - Fecha 3", torneo: "futsal", l: "Pacífico BB", v: "Tiro Federal", gl: 2, gv: 5 },
         { fecha: "Apertura 2026 - Fecha 3", torneo: "futsalreserva", l: "Pacífico BB", v: "Tiro Federal", gl: 3, gv: 4 },
+        { fecha: "Clasura 2026 - Fecha 3", torneo: "futsal", l: "Tiro Federal", v: "Pacífico BB", gl: 5, gv: 4 },
+        { fecha: "Clausura 2026 - Fecha 3", torneo: "futsalreserva", l: "Tiro Federal", v: "Pacífico BB", gl: 1, gv: 2 },
     ],
     "Sporting|Villa Mitre": [
         { fecha: "Fecha 3 - Apertura 2026 - 04 abr", torneo: "femenino", l: "Sporting", v: "Villa Mitre", gl: 2, gv: 1, goles_l: ["Alexia Villani","Lucía Aranda"], goles_v: ["Florencia Pinedo"] },
@@ -17668,8 +17668,8 @@ const BD_POS_FUTSAL = {
         {n:"Petroquímicos",   cl:"petroquimicos",    pj:2,pg:2,pe:0,pp:0,gf:0, gc:0, pts:6},
         {n:"San Francisco",   cl:"sanfrancisco",    pj:3,pg:2,pe:0,pp:1,gf:0, gc:4, pts:6},
         {n:"Liniers",         cl:"liniers",    pj:3,pg:1,pe:0,pp:2,gf:8, gc:8, pts:3},
-        {n:"Tiro Federal",    cl:"tirofederal",    pj:2,pg:0,pe:0,pp:2,gf:5, gc:8, pts:0},
-        {n:"Pacífico BB",     cl:"pacificobb",    pj:2,pg:0,pe:0,pp:2,gf:5, gc:11, pts:0},
+        {n:"Tiro Federal",    cl:"tirofederal",    pj:3,pg:1,pe:0,pp:2,gf:10, gc:12, pts:3},
+        {n:"Pacífico BB",     cl:"pacificobb",    pj:3,pg:0,pe:0,pp:3,gf:9, gc:16, pts:0},
         {n:"Dublin",          cl:"dublin",    pj:3,pg:0,pe:0,pp:3,gf:7, gc:14, pts:0},
         {n:"Catamarca",       cl:"catamarca",    pj:2,pg:0,pe:0,pp:2,gf:7, gc:23, pts:0},
         {n:"<s>Dep. Futsal</s> <b>(-)</b>",     cl:"depfutsal",    pj:0,pg:0,pe:0,pp:0,gf:0, gc:0, pts:0},
@@ -17684,10 +17684,10 @@ const BD_POS_FUTSAL = {
         {n:"Petroquímicos",   cl:"petroquimicos",    pj:2,pg:2,pe:0,pp:0,gf:0, gc:0, pts:6},
         {n:"San Francisco",   cl:"sanfrancisco",    pj:3,pg:2,pe:0,pp:1,gf:0, gc:5, pts:6},
         {n:"Dublin",          cl:"dublin",    pj:3,pg:1,pe:0,pp:2,gf:8, gc:11, pts:3},
+        {n:"Pacífico BB",     cl:"pacificobb",    pj:3,pg:1,pe:0,pp:2,gf:2, gc:7, pts:3},
         {n:"Comercial",       cl:"comercial",    pj:3,pg:0,pe:1,pp:2,gf:8, gc:12, pts:1},
         {n:"Catamarca",       cl:"catamarca",    pj:3,pg:0,pe:1,pp:2,gf:7, gc:15, pts:1},
-        {n:"Tiro Federal",    cl:"tirofederal",    pj:2,pg:0,pe:0,pp:2,gf:2, gc:6, pts:0},
-        {n:"Pacífico BB",     cl:"pacificobb",    pj:2,pg:0,pe:0,pp:2,gf:0, gc:6, pts:0},
+        {n:"Tiro Federal",    cl:"tirofederal",    pj:3,pg:0,pe:0,pp:3,gf:3, gc:8, pts:0},
         {n:"<s>Dep. Futsal</s> <b>(-)</b>",     cl:"depfutsal",    pj:0,pg:0,pe:0,pp:0,gf:0, gc:0, pts:0},
         {n:"<s>Huracán</s> <b>(-)</b>",         cl:"huracan",    pj:0,pg:0,pe:0,pp:0,gf:0, gc:0, pts:0}
     ]
@@ -17834,12 +17834,13 @@ const BD_GOLEADORES_FUTSAL = [
 
     { club: "Villa Mitre",     clase: "villamitre",    act: null,       goleadores: [] },
 
-    { club: "Tiro Federal", clase: "tirofederal",    act: "fecha 2",       goleadores: [
-    { nombre: "Alejandro Saldívar",          equipo: "Tiro Federal",   goles: 1 },
+    { club: "Tiro Federal", clase: "tirofederal",    act: "fecha 3",       goleadores: [
+    { nombre: "Alejandro Saldívar",          equipo: "Tiro Federal",   goles: 3 },
+    { nombre: "Bruno Cronier",          equipo: "Tiro Federal",   goles: 2 },
     { nombre: "Nicolás Romano",          equipo: "Tiro Federal",   goles: 1 },
     { nombre: "Iñaki Iriarte",          equipo: "Tiro Federal",   goles: 1 },
-    { nombre: "Bruno Cronier",          equipo: "Tiro Federal",   goles: 1 },
     { nombre: "Franco Gesto",          equipo: "Tiro Federal",   goles: 1 },
+    { nombre: "Marcelo Aguirre",          equipo: "Tiro Federal",   goles: 1 },
 ] },
 
     { club: "San Francisco",   clase: "sanfrancisco",    act: null,       goleadores: [] },
