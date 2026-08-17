@@ -1955,6 +1955,7 @@ function generarHome() {
             { nombre: "COPA PAÍS (LIGA DEL SUR)", cat: "copapais", torLink: "copapais", noAutoResult: true, partidos: [
             {l:"Laguna Paiva", v:"Paraná", hora:"16:00", gl:null, gv:null, claseL:"lagunapaiva", claseV:"parana",nota:"<b>PARTIDO DE IDA</b>"},
             {l:"Jujuy", v:"Tartagal", hora:"16:30", gl:null, gv:null, claseL:"jujuy", claseV:"tartagal",nota:"<b>Ida: 0-1</b>"},
+            {l:"Laguna Paiva", v:"Paraná", hora:"19:00", gl:null, gv:null, claseL:"lagunapaiva", claseV:"parana",nota:"<b>PARTIDO DE IDA</b>"},
             {l:"Guatraché", v:"<b>Liga del Sur</b>", hora:"20:30", gl:null, gv:null, claseL:"guatrachepais", claseV:"ldsbb",nota:"<b>PARTIDO DE IDA</b>"},
             ]},
             { nombre: "FECHA 3 - TORNEO DE SELECCIONES SUB-15 (LIGA DEL SUR)", cat: "torneoseleccion15", torLink: "torneoseleccion15", noAutoResult: true, partidos: [
@@ -18690,8 +18691,8 @@ const BD_COPA_PAIS = {
         titulo: "ZONA MENDOZA",
         tipo: "eliminatoria", 
         partidos: [
-            { ronda: "1° Ronda (ida)", l: "Malargüe", v: "Tupungato", fecha: "Miércoles 12 de agosto", gl: null, gv: null, goles_l: [], goles_v: [] },
-            { ronda: "1° Ronda (vuelta)", l: "Tupungato", v: "Malargüe", fecha: "Miércoles 19 de agosto", gl: null, gv: null, goles_l: [], goles_v: [] },
+            { ronda: "1° Ronda (ida)", l: "<s>Malargüe</s>", v: "<b>Tupungato</b>", fecha: "Miércoles 12 de agosto", gl: null, gv: null, goles_l: [], goles_v: [] },
+            { ronda: "1° Ronda (vuelta)", l: "<b>Tupungato</b>", v: "<s>Malargüe</s>", fecha: "Miércoles 19 de agosto", gl: null, gv: null, goles_l: [], goles_v: [] },
         ]
     },
 
@@ -18701,7 +18702,7 @@ const BD_COPA_PAIS = {
         partidos: [
             { ronda: "1° Ronda - P1 (ida)", l: "Laguna Paiva", v: "Paraná", fecha: "Miércoles 19 de agosto", gl: null, gv: null, goles_l: [], goles_v: [] },
             { ronda: "1° Ronda - P1 (vuelta)", l: "Paraná", v: "Laguna Paiva", fecha: "Miércoles 26 de agosto", gl: null, gv: null, goles_l: [], goles_v: [] },
-            { ronda: "1° Ronda - P2 (ida)", l: "Rafaela", v: "San Jorge", fecha: "Miércoles 12 de agosto", gl: 0, gv: 1, goles_l: [], goles_v: [], separador: true },
+            { ronda: "1° Ronda - P2 (ida)", l: "Rafaela", v: "San Jorge", fecha: "Miércoles 12 de agosto", gl: 1, gv: 0, goles_l: [], goles_v: [], separador: true },
             { ronda: "1° Ronda - P2 (vuelta)", l: "San Jorge", v: "Rafaela", fecha: "Miércoles 19 de agosto", gl: null, gv: null, goles_l: [], goles_v: [] },
         ]
     },
@@ -18747,8 +18748,8 @@ const BD_COPA_PAIS_SEGUNDA_RONDA = [
         titulo: "ZONA MENDOZA/CUYO",
         tipo: "final",
         partidos: [
-            { ronda: "2° Ronda (ida)", l: "Malargüe/Tupungato", v: "Ganador Zona Cuyo", fecha: "", gl: null, gv: null, goles_l: [], goles_v: [] },
-            { ronda: "2° Ronda (vuelta)", l: "Ganador Zona Cuyo", v: "Malargüe/Tupungato", fecha: "", gl: null, gv: null, goles_l: [], goles_v: [] },
+            { ronda: "2° Ronda (ida)", l: "Tupungato", v: "Ganador Zona Cuyo", fecha: "", gl: null, gv: null, goles_l: [], goles_v: [] },
+            { ronda: "2° Ronda (vuelta)", l: "Ganador Zona Cuyo", v: "Tupungato", fecha: "", gl: null, gv: null, goles_l: [], goles_v: [] },
         ]
     },
     {
