@@ -1226,7 +1226,7 @@ BD_FIXTURES.oficial.reserva.push(
         {l:"Villa Mitre",      v:"Huracán",      gl:4,   gv:3},
         {l:"Sporting",v:"San Francisco",      gl:1,   gv:0},
         {l:"Liniers",  v:"La Armonía",       gl:0,   gv:1},
-        {l:"Libertad",   v:"Bella Vista",   gl:null,   gv:null}
+        {l:"Libertad",   v:"Bella Vista",   gl:1,   gv:2}
     ]},
     { fecha: 4, partidos: [
         {l:"Villa Mitre",   v:"San Francisco",   gl:null,   gv:null},
@@ -1966,7 +1966,7 @@ function generarHome() {
        ]},
         { id: "2026-08-19", label: "MIÉR 19/08", torneos: [
             { nombre: "OFICIAL RESERVA - FECHA 3 - CLAUSURA", cat: "reserva_oficial", torLink: "reserva_oficial", noAutoResult: true, partidos: [
-            {l:"Libertad", v:"Bella Vista", hora:"15:30", gl:null, gv:null, claseL:"libertad", claseV:"bellavista"},
+            {l:"Libertad", v:"Bella Vista", hora:"15:30", gl:1, gv:2, claseL:"libertad", claseV:"bellavista"},
             ]},
             { nombre: "COPA PAÍS (LIGA DEL SUR)", cat: "copapais", torLink: "copapais", noAutoResult: true, partidos: [
             {l:"San Vicente", v:"La Plata", hora:"14:30", gl:null, gv:null, claseL:"sanvicente", claseV:"laplata",nota:"<b>Ida: 0-5</b>"},
@@ -17413,13 +17413,13 @@ function generarReserva(cat) {
     // Tabla de posiciones — solo puntos, calculados desde fixtures
     const BD_RESERVA_POS = {
         'oficial':    [
+                       {n:"Bella Vista",   cl:"bellavista",   pj:3, pg:3, pe:0, pp:0, gf:6, gc:3, pts:9},
                        {n:"Sporting <b>(A)</b>",      cl:"sporting",     pj:3, pg:2, pe:1, pp:0, gf:6, gc:4, pts:7},
-                       {n:"Bella Vista",   cl:"bellavista",   pj:2, pg:2, pe:0, pp:0, gf:4, gc:2, pts:6},
                        {n:"Villa Mitre",   cl:"villamitre",   pj:3, pg:2, pe:0, pp:1, gf:6, gc:8, pts:6},
-                       {n:"Liniers",       cl:"liniers",      pj:3, pg:1, pe:0, pp:2, gf:4, gc:2, pts:3},
-                       {n:"Libertad",      cl:"libertad",     pj:2, pg:1, pe:0, pp:1, gf:5, gc:3, pts:3},
-                       {n:"San Francisco", cl:"sanfrancisco", pj:3, pg:1, pe:0, pp:2, gf:4, gc:5, pts:3},
                        {n:"La Armonía",    cl:"laarmonia",    pj:3, pg:1, pe:1, pp:1, gf:4, gc:4, pts:4},
+                       {n:"Liniers",       cl:"liniers",      pj:3, pg:1, pe:0, pp:2, gf:4, gc:2, pts:3},
+                       {n:"Libertad",      cl:"libertad",     pj:3, pg:1, pe:0, pp:2, gf:6, gc:5, pts:3},
+                       {n:"San Francisco", cl:"sanfrancisco", pj:3, pg:1, pe:0, pp:2, gf:4, gc:5, pts:3},
                        {n:"Huracán",       cl:"huracan",      pj:3, pg:0, pe:0, pp:3, gf:6, gc:11, pts:0}],
         'promocional':[
                        {n:"Rosario PB",          cl:"rosariopb",        pj:3, pg:2, pe:0, pp:1, gf:6, gc:4, pts:6},
