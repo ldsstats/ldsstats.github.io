@@ -1927,7 +1927,7 @@ function generarHome() {
             {l:"Jujuy", v:"Tartagal", hora:"16:30", gl:2, gv:0, claseL:"jujuy", claseV:"tartagal",nota:"<b>Ida: 0-1</b>"},
             {l:"Catamarca", v:"Valle Viejo", hora:"17:00", gl:2, gv:0, claseL:"catamarcapais", claseV:"valleviejo",nota:"<b>2° FECHA</b>"},
             {l:"San Nicolás", v:"San Pedro", hora:"20:00", gl:1, gv:0, claseL:"sannicolas", claseV:"sanpedro",nota:"<b>Ida: 2-2</b>"},
-            {l:"Guatraché", v:"<b>Liga del Sur</b>", hora:"20:30", gl:null, gv:null, claseL:"guatrachepais", claseV:"ldsbb",nota:"<b>PARTIDO DE IDA</b>"},
+            {l:"Guatraché", v:"<b>Liga del Sur</b>", hora:"20:30", gl:0, gv:0, claseL:"guatrachepais", claseV:"ldsbb",nota:"<b>PARTIDO DE IDA</b>"},
             ]},
             { nombre: "FECHA 3 - TORNEO DE SELECCIONES SUB-15 (LIGA DEL SUR)", cat: "torneoseleccion15", torLink: "torneoseleccion15", noAutoResult: true, partidos: [
             {l:"Azul", v:"Necochea", hora:"15:00", gl:3, gv:2, claseL:"azul", claseV:"necochea",nota:"<b>Zona 2</b>"},
@@ -22367,7 +22367,7 @@ function generarTorneoSeleccion15() {
     const fixture = [
         { n:1, dia:"Mié 5/8",  partidos:[{l:"Olavarría",    v:"Tres Arroyos", lk:"olavarria",  vk:"tresarroyos", gl:0, gv:2}], libre:"Liga del Sur" },
         { n:2, dia:"Mié 12/8", partidos:[{l:"Liga del Sur", v:"Olavarría",    lk:"ldsbb",      vk:"olavarria",   gl:3, gv:0, goles_l:["Theo Barros","Lucio Riaño","Galo Martínez"], goles_v:[]}], libre:"Tres Arroyos" },
-        { n:3, dia:"Mié 19/8", partidos:[{l:"Tres Arroyos", v:"Liga del Sur", lk:"tresarroyos",vk:"ldsbb",       gl:null, gv:null}], libre:"Olavarría" },
+        { n:3, dia:"Mié 19/8", partidos:[{l:"Tres Arroyos", v:"Liga del Sur", lk:"tresarroyos",vk:"ldsbb",       gl:2, gv:0}], libre:"Olavarría" },
         { n:4, dia:"Mié 26/8", partidos:[{l:"Tres Arroyos", v:"Olavarría",    lk:"tresarroyos",vk:"olavarria",   gl:null, gv:null}], libre:"Liga del Sur" },
         { n:5, dia:"Mié 2/9",  partidos:[{l:"Olavarría",    v:"Liga del Sur", lk:"olavarria",  vk:"ldsbb",       gl:null, gv:null}], libre:"Tres Arroyos" },
         { n:6, dia:"Mié 8/9",  partidos:[{l:"Liga del Sur", v:"Tres Arroyos", lk:"ldsbb",      vk:"tresarroyos", gl:null, gv:null}], libre:"Olavarría" },
