@@ -820,7 +820,7 @@ const idaSub15Fem = [
         {l:"Bella Vista",           v:"Sporting",         gl:null, gv:null},
         {l:"Olimpo",                v:"Tiro Federal",     gl:null, gv:null},
         {l:"Huracán",               v:"Juventud Unida",   gl:null, gv:null},
-        {l:"Liniers",               v:"La Armonía",       gl:null, gv:null}
+        {l:"Liniers",               v:"La Armonía",       gl:5, gv:0}
     ]},
     { fecha: 18, partidos: [
         {l:"Juventud Unida",        v:"Bella Vista",      gl:null, gv:null},
@@ -1390,7 +1390,7 @@ const idaPromoClausura = [
     { fecha: 1,  partidos: [{l:"Pacífico BB",  v:"Olimpo",       gl:0, gv:2, dia:"Sáb 01/08", hora:"15:00", goles_l:[], goles_v:["Valentín Quidel","Santiago Llanos"]}, {l:"Rosario PB",      v:"Dublin",   gl:1, gv:0, dia:"Sáb 01/08", hora:"15:00", goles_l:["Nicolás Ovando"], goles_v:[]}, {l:"Tiro Federal",v:"Comercial",    gl:4, gv:0, dia:"Sáb 01/08", hora:"15:00", goles_l:["Agustín Restiffo","Franco Fraysse","Mariano McCoubrey","Joaquín Laborde"], goles_v:[]}, {l:"Sansinena",   v:"Pacífico (C)", gl:1, gv:1, dia:"Dom 02/08", hora:"15:00", goles_l:["Gerónimo Fernández"], goles_v:["Marcelo Soto"]}] },
     { fecha: 2,  partidos: [{l:"Rosario PB",   v:"Pacífico BB",  gl:0, gv:0, dia:"Sáb 08/08", hora:"15:00", goles_l:[], goles_v:[]}, {l:"Olimpo",      v:"Tiro Federal", gl:3, gv:2, dia:"Sáb 08/08", hora:"15:00", goles_l:["Nahuel Colmenares (2)","Santiago Llanos"], goles_v:["Juan Ignacio Talmón","Rodrigo Belasque"]}, {l:"Sansinena",   v:"Comercial",    gl:2, gv:0, dia:"Sáb 08/08", hora:"15:00", goles_l:["Valentín Moral","Manuel Stortini"], goles_v:[]}, {l:"Pacífico (C)",v:"Dublin",       gl:3, gv:0, dia:"Dom 09/08", hora:"15:00", goles_l:["Marcelo Soto","Juan Pablo Molina","Gianni Ferrari"], goles_v:[]}] },
     { fecha: 3,  partidos: [{l:"Comercial",    v:"Olimpo",       gl:1, gv:1, dia:"Sáb 15/08", hora:"15:00", goles_l:["Alejo Gil"], goles_v:["Felipe Santamarina"]}, {l:"Tiro Federal",v:"Rosario PB",   gl:1, gv:1, dia:"Sáb 15/08", hora:"15:30", goles_l:["Gino Carrozzi"], goles_v:["Agustín Trotta"]}, {l:"Pacífico BB", v:"Pacífico (C)", gl:1, gv:2, dia:"Dom 16/08", hora:"15:30", goles_l:["Lisandro Muzi"], goles_v:["Juan Pablo Molina (2)"]}, {l:"Sansinena",   v:"Dublin",       gl:2, gv:2, dia:"Lun 17/08", hora:"15:30", goles_l:["Marcelo Leal","Santiago Somovilla"], goles_v:["Gerónimo Fernández (2)"]}] },
-    { fecha: 4,  partidos: [{l:"Comercial",    v:"Dublin",       gl:3, gv:2, dia:"Sáb 22/08", hora:"15:30", goles_l:["Santiago Giorgis","Alejo Gil","Fernando Kessler"], goles_v:["Nahuel Cornou (2)"]}, {l:"Tiro Federal",v:"Pacífico (C)", gl:2, gv:2, dia:"Sáb 22/08", hora:"15:30", goles_l:["Joaquín Laborde","Gino Carrozzi"], goles_v:["Gianni Ferrari (2)"]}, {l:"Olimpo",      v:"Rosario PB",   gl:null, gv:null, dia:"Dom 23/08", hora:"15:30", goles_l:[], goles_v:[]}, {l:"Pacífico BB", v:"Sansinena",    gl:null, gv:null, dia:"Dom 23/08", hora:"15:30", goles_l:[], goles_v:[]}] },
+    { fecha: 4,  partidos: [{l:"Comercial",    v:"Dublin",       gl:3, gv:2, dia:"Sáb 22/08", hora:"15:30", goles_l:["Santiago Giorgis","Alejo Gil","Fernando Kessler"], goles_v:["Nahuel Cornou (2)"]}, {l:"Tiro Federal",v:"Pacífico (C)", gl:2, gv:2, dia:"Sáb 22/08", hora:"15:30", goles_l:["Joaquín Laborde","Gino Carrozzi"], goles_v:["Gianni Ferrari (2)"]}, {l:"Olimpo",      v:"Rosario PB",   gl:1, gv:1, dia:"Dom 23/08", hora:"11:00", goles_l:["Fabricio Ibarra"], goles_v:["Nicolás Ovando"]}, {l:"Pacífico BB", v:"Sansinena",    gl:null, gv:null, dia:"Dom 23/08", hora:"15:30", goles_l:[], goles_v:[]}] },
     { fecha: 5,  partidos: [{l:"Rosario PB",   v:"Comercial",    gl:null, gv:null}, {l:"Sansinena",   v:"Tiro Federal", gl:null, gv:null}, {l:"Pacífico (C)",v:"Olimpo",       gl:null, gv:null}, {l:"Dublin",      v:"Pacífico BB",  gl:null, gv:null}] },
     { fecha: 6,  partidos: [{l:"Dublin",       v:"Tiro Federal", gl:null, gv:null}, {l:"Pacífico (C)",v:"Rosario PB",   gl:null, gv:null}, {l:"Sansinena",   v:"Olimpo",       gl:null, gv:null}, {l:"Pacífico BB", v:"Comercial",    gl:null, gv:null}] },
     { fecha: 7,  partidos: [{l:"Olimpo",       v:"Dublin",       gl:null, gv:null}, {l:"Tiro Federal",v:"Pacífico BB",  gl:null, gv:null}, {l:"Comercial",   v:"Pacífico (C)", gl:null, gv:null}, {l:"Rosario PB",  v:"Sansinena",    gl:null, gv:null}] },
@@ -1986,8 +1986,8 @@ function generarHome() {
             {l:"Villa Mitre", v:"San Francisco", hora:"15:30", gl:null, gv:null, claseL:"villamitre", claseV:"sanfrancisco"}
             ]},
             { nombre: "PROMOCIONAL - FECHA 4 - CLAUSURA", cat: "promocional", torLink: "promocional", noAutoResult: true, partidos: [
-            {l:"Olimpo", v:"Rosario PB", hora:"11:00", gl:null, gv:null, claseL:"olimpo", claseV:"rosariopb",nota:"<b>en cancha de Liniers y sin visitantes</b>"},
-            {l:"Pacífico BB", v:"Sansinena", hora:"11:00", gl:null, gv:null, claseL:"pacificobb", claseV:"sansinena"}
+            {l:"Olimpo", v:"Rosario PB", hora:"11:00", gl:1, gv:1, claseL:"olimpo", claseV:"rosariopb",nota:"<b>en cancha de Liniers y sin visitantes</b>"},
+            {l:"Pacífico BB", v:"Sansinena", hora:"15:30", gl:null, gv:null, claseL:"pacificobb", claseV:"sansinena"}
             ]},
             { nombre: "FEMENINO - FECHA 5 - CLAUSURA", cat: "femenino", torLink: "femenino", noAutoResult: true, partidos: [
             {l:"Municipales", v:"Bella Vista", hora:"15:30", gl:null, gv:null, claseL:"municipales", claseV:"bellavista"},
@@ -16122,6 +16122,7 @@ const BD_H2H = {
         { fecha: "Semifinales - Apertura 2026", torneo: "reserva_promocional", l: "Olimpo", v: "Rosario PB", gl: 0, gv: 0, pen_l:3, pen_v:1 },
         { fecha: "Final Extra - Apertura 2026", torneo: "reserva_promocional", l: "Olimpo", v: "Rosario PB", gl: 2, gv: 0 },
         { fecha: "Fecha 19 - Torneo 2026 - 09 ago", torneo: "segundafemenino", l: "Olimpo", v: "Rosario PB", gl: 2, gv: 7, goles_l: ["Sofía Cáceres","Mía Cibelli"], goles_v: ["Celeste Medina  (2)","Ayelén Zeballos (2)","Alejandra Sturtz","Julieta Díaz","Valentina Cavalli"] },
+        { fecha: "Fecha 4 - Clausura 2026 - 23 ago", torneo: "oficial", l: "Olimpo", v: "Rosario PB", gl: 1, gv: 1, goles_l: ["Fabricio Ibarra"], goles_v: ["Nicolás Ovando"] },
     ],
     "Pacífico (C)|Petroquímicos": [
         { fecha: "Fecha 1 - Torneo 2026 - 24 mar", torneo: "segundafemenino", l: "Pacífico (C)", v: "Petroquímicos", gl: 1, gv: 5, goles_l: ["Bianca Pascualini"], goles_v: ["Nicole Montenegro (2)","Paola Vallejos","Renata Segovia","Lucía Vallejos"] },
@@ -16530,6 +16531,7 @@ const BD_H2H = {
         { fecha: "Torneo 2026 - Fecha 6", torneo: "sub15fem", l: "La Armonía", v: "Liniers", gl: 0, gv: 1 },
         { fecha: "Fecha 3 - Clausura 2026 - 16 ago", torneo: "oficial", l: "Liniers", v: "La Armonía", gl: 0, gv: 1, goles_l: [], goles_v: ["Alex Muzi"]},
         { fecha: "Fecha 3 - Clausura 2026", torneo: "reserva_oficial", l: "Liniers", v: "La Armonía", gl: 0, gv: 1},
+        { fecha: "Torneo 2026 - Fecha 17", torneo: "sub15fem", l: "Liniers", v: "La Armonía", gl: 5, gv: 0 },
     ],
     "Comercial|Olimpo": [
         { fecha: "Fecha 3 - Apertura 2026 - 28 mar", torneo: "promocional", l: "Comercial", v: "Olimpo", gl: 1, gv: 0, goles_l: ["Francisco Centeno"], goles_v: []},
@@ -20224,9 +20226,15 @@ const BD_GOLEADORES_CLAUSURA_PROMOCIONAL = [
           { fecha: "Fecha 3", rival: "Comercial", gl: 1, gv: 1, condicion: "Visitante", goles: 1 }
       ]
     },
-{ jugador: "Nicolás Ovando", equipo: "Rosario PB", goles: 1,
+{ jugador: "Fabricio Ibarra", equipo: "Olimpo", goles: 1,
       partidos: [
-          { fecha: "Fecha 1", rival: "Dublin", gl: 1, gv: 0, condicion: "Local", goles: 1 }
+          { fecha: "Fecha 4", rival: "Rosario PB", gl: 1, gv: 1, condicion: "Local", goles: 1 }
+      ]
+    },
+{ jugador: "Nicolás Ovando", equipo: "Rosario PB", goles: 2,
+      partidos: [
+          { fecha: "Fecha 1", rival: "Dublin", gl: 1, gv: 0, condicion: "Local", goles: 1 },
+          { fecha: "Fecha 4", rival: "Olimpo", gl: 1, gv: 1, condicion: "Visitante", goles: 1 }
       ]
     },
 { jugador: "Agustín Trotta", equipo: "Rosario PB", goles: 1,
@@ -21296,8 +21304,8 @@ const BD_POSICIONES = {
         ],
         clausura: [
             { nombre: "Pacífico (C)",        clase: "pacificocabildo", pj:4, pg:2, pe:2, pp:0, gf:8, gc:4, pts:8 },
-            { nombre: "Olimpo",              clase: "olimpo",          pj:3, pg:2, pe:1, pp:0, gf:6, gc:3, pts:7 },
-            { nombre: "Rosario PB",          clase: "rosariopb",       pj:3, pg:1, pe:2, pp:0, gf:2, gc:1, pts:5 },
+            { nombre: "Olimpo",              clase: "olimpo",          pj:4, pg:2, pe:2, pp:0, gf:7, gc:4, pts:8 },
+            { nombre: "Rosario PB",          clase: "rosariopb",       pj:4, pg:1, pe:3, pp:0, gf:3, gc:2, pts:6 },
             { nombre: "Sansinena",           clase: "sansinena",       pj:3, pg:1, pe:2, pp:0, gf:5, gc:3, pts:5 },
             { nombre: "Tiro Federal",        clase: "tirofederal",     pj:4, pg:1, pe:2, pp:1, gf:9, gc:6, pts:5 },
             { nombre: "Comercial <b>(A)</b>",           clase: "comercial",       pj:4, pg:1, pe:1, pp:2, gf:4, gc:9, pts:4 },
