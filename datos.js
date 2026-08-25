@@ -817,8 +817,8 @@ const idaSub15Fem = [
     { fecha: 17, partidos: [
         {l:"Empleados de Comercio", v:"San Francisco",    gl:0, gv:5},
         {l:"Libertad",              v:"Villa Mitre",          gl:1, gv:1},
-        {l:"Bella Vista",           v:"Sporting",         gl:null, gv:null},
-        {l:"Olimpo",                v:"Tiro Federal",     gl:null, gv:null},
+        {l:"Bella Vista",           v:"Sporting",         gl:5, gv:0},
+        {l:"Olimpo",                v:"Tiro Federal",     gl:1, gv:2},
         {l:"Huracán",               v:"Juventud Unida",   gl:2, gv:2},
         {l:"Liniers",               v:"La Armonía",       gl:5, gv:0}
     ]},
@@ -1229,8 +1229,8 @@ BD_FIXTURES.oficial.reserva.push(
         {l:"Libertad",   v:"Bella Vista",   gl:1,   gv:2}
     ]},
     { fecha: 4, partidos: [
-        {l:"Villa Mitre",   v:"San Francisco",   gl:null,   gv:null},
-        {l:"La Armonía",   v:"Huracán",   gl:null,   gv:null},
+        {l:"Villa Mitre",   v:"San Francisco",   gl:2,   gv:2},
+        {l:"La Armonía",   v:"Huracán",   gl:2,   gv:2},
         {l:"Liniers",   v:"Libertad",   gl:1,   gv:0},
         {l:"Sporting",   v:"Bella Vista",   gl:1,   gv:1}
     ]},
@@ -1676,7 +1676,7 @@ BD_FIXTURES.femenino.reserva.find(f => f.fecha === 4).partidos.forEach(p => {
 BD_FIXTURES.femenino.reserva.find(f => f.fecha === 5).partidos.forEach(p => {
     if (p.l === "Bella Vista" && p.v === "Municipales") { p.gl = 2; p.gv = 0; delete p.dia; delete p.hora; }
     if (p.l === "Sporting" && p.v === "Tiro Federal") { p.gl = 0; p.gv = 1; delete p.dia; delete p.hora; }
-    if (p.l === "Villa Mitre" && p.v === "Libertad") { p.gl = null; p.gv = null; delete p.dia; delete p.hora; }
+    if (p.l === "Villa Mitre" && p.v === "Libertad") { p.gl = 2; p.gv = 1; delete p.dia; delete p.hora; }
     if (p.l === "La Armonía" && p.v === "Empleados de Comercio") { p.gl = null; p.gv = null; p.goles_l = []; p.goles_v = []; delete p.dia; delete p.hora; }
 });
 BD_FIXTURES.femenino.reserva.find(f => f.fecha === 6).partidos.forEach(p => {
@@ -16223,6 +16223,7 @@ const BD_H2H = {
         { fecha: "Torneo 2026 - Fecha 6", torneo: "sub15fem", l: "Tiro Federal", v: "Olimpo", gl: 0, gv: 0 },
         { fecha: "Fecha 2 - Clausura 2026 - 08 ago 2026", torneo: "promocional", l: "Olimpo", v: "Tiro Federal", gl: 3, gv: 2, goles_l: ["Nahuel Colmenares (2)","Santiago Llanos"], goles_v: ["Juan Ignacio Talmón","Rodrigo Belasque"] },
         { fecha: "Fecha 2 - Clausura 2026", torneo: "reserva_promocional", l: "Olimpo", v: "Tiro Federal", gl: 2, gv: 1 },
+        { fecha: "Torneo 2026 - Fecha 17", torneo: "sub15fem", l: "Olimpo", v: "Tiro Federal", gl: 1, gv: 2 },
     ],
     "Comercial|Sansinena": [
         { fecha: "Fecha 2 - Apertura 2026 - 24 mar 2026", torneo: "promocional", l: "Sansinena", v: "Comercial", gl: 1, gv: 1, goles_l: ["Manuel Stortini"], goles_v: ["Alejo Gil"] },
@@ -16251,9 +16252,11 @@ const BD_H2H = {
         { fecha: "Fecha 2 - Clausura 2026 - 01 ago", torneo: "femenino", l: "Bella Vista", v: "Sporting", gl: 2, gv: 3, goles_l: ["Mía González","Narela Roth"], goles_v: ["Alexis Villani","Alexia Villani","Fiorella Jael"] },
         { fecha: "Fecha 2 - Clausura 2026", torneo: "reserva_femenino", l: "Bella Vista", v: "Sporting", gl: 2, gv: 0 },
         { fecha: "Torneo 2026 - Fecha 6", torneo: "sub15fem", l: "Sporting", v: "Bella Vista", gl: 0, gv: 2 },
+        { fecha: "Torneo 2026 - Fecha 17", torneo: "sub15fem", l: "Bella Vista", v: "Sporting", gl: 5, gv: 0 },
         { fecha: "Apertura 2026 - Fecha 9", torneo: "senior", l: "Sporting", v: "Bella Vista", gl: 0, gv: 3, goles_l: [], goles_v: ["Luciano Álvarez","Víctor Torrero","Fernando Lucas"] },
         { fecha: "Fecha 4 - Apertura 2026 - 05 abr 2026", torneo: "oficial", l: "Sporting", v: "Bella Vista", gl: 3, gv: 0, goles_l: ["Jonathan Font (2)","Matías Chamares"], goles_v: [] },
         { fecha: "Fecha 4 - Clausura 2026 - 23 ago", torneo: "oficial", l: "Sporting", v: "Bella Vista", gl: 1, gv: 1, goles_l: ["Jonathan Font"], goles_v: ["Matías Mayer"] },
+        { fecha: "Fecha 4 - Clausura 2026", torneo: "reserva_oficial", l: "Sporting", v: "Bella Vista", gl: 1, gv: 1 },
     ],
     "Municipales|Villa Mitre": [
         { fecha: "Fecha 2 - Apertura 2026 - 28 mar", torneo: "femenino", l: "Villa Mitre", v: "Municipales", gl: 1, gv: 5, goles_l: ["Agustina Rodríguez"], goles_v: ["Valeria Navarrete (2)","Victoria Nervi","Ludmila Fernández","Stefanía Sueyro"] },
@@ -16549,6 +16552,7 @@ const BD_H2H = {
         { fecha: "Apertura 2026 - Fecha 5", torneo: "futsal", l: "San Francisco", v: "Villa Mitre", gl: 2, gv: 2 },
         { fecha: "Apertura 2026 - Fecha 5", torneo: "futsalreserva", l: "San Francisco", v: "Villa Mitre", gl: 2, gv: 4 },
         { fecha: "Fecha 4 - Clausura 2026 - 23 ago", torneo: "oficial", l: "Villa Mitre", v: "San Francisco", gl: 0, gv: 0, goles_l: [], goles_v: [] },
+        { fecha: "Fecha 4 - Clausura 2026", torneo: "reserva_oficial", l: "Villa Mitre", v: "San Francisco", gl: 2, gv: 2 },
     ],
     "Empleados de Comercio|Juventud Unida": [
         { fecha: "Apertura 2026 - Fecha 3", torneo: "sub15fem", l: "Empleados de Comercio", v: "Juventud Unida", gl: 0, gv: 4 },
@@ -16697,6 +16701,7 @@ const BD_H2H = {
         { fecha: "Fecha 11 - Apertura 2026", torneo: "reserva_oficial", l: "Huracán", v: "La Armonía", gl: 0, gv: 0 },
         { fecha: "Torneo 2026 - Fecha 10", torneo: "sub15fem", l: "La Armonía", v: "Huracán", gl: 1, gv: 0 },
         { fecha: "Fecha 4 - Clausura 2026 - 23 ago", torneo: "oficial", l: "La Armonía", v: "Huracán", gl: 2, gv: 2, goles_l: ["Axel Lagos","Julio Acosta"], goles_v: ["Iván Agudiak","Leonel Navarro"] },
+        { fecha: "Fecha 4 - Clausura 2026", torneo: "reserva_oficial", l: "La Armonía", v: "Huracán", gl: 2, gv: 2 },
     ],
     "Libertad|Liniers": [
         { fecha: "Fecha 4 - Apertura 2026 - 04 abr 2026", torneo: "oficial", l: "Liniers", v: "Libertad", gl: 0, gv: 1, goles_l: [], goles_v: ["Nahuel Sánchez"] },
@@ -16705,6 +16710,7 @@ const BD_H2H = {
         { fecha: "Fecha 11 - Apertura 2026", torneo: "reserva_oficial", l: "Libertad", v: "Liniers", gl: 1, gv: 0 },
         { fecha: "Torneo 2026 - Fecha 10", torneo: "sub15fem", l: "Libertad", v: "Liniers", gl: 0, gv: 8 },
         { fecha: "Fecha 4 - Clausura 2026 - 22 ago 2026", torneo: "oficial", l: "Liniers", v: "Libertad", gl: 1, gv: 1, goles_l: ["Joaquín Castro"], goles_v: ["Daniel Pékel"] },
+        { fecha: "Fecha 4 - Clausura 2026", torneo: "reserva_oficial", l: "Liniers", v: "Libertad", gl: 1, gv: 0 },
     ],
     "Pacífico (C)|Tiro Federal": [
         { fecha: "Fecha 4 - Apertura 2026 - 03 abr 2026", torneo: "promocional", l: "Tiro Federal", v: "Pacífico (C)", gl: 1, gv: 1, goles_l: ["Nahuel Colmenares (2)"], goles_v: ["Ezequiel Katz","Agustín Grippaudo"] },
@@ -16774,6 +16780,7 @@ const BD_H2H = {
         { fecha: "Fecha 13 - Apertura 2026 - 21 jun 2026", torneo: "oficial", l: "Villa Mitre", v: "Libertad", gl: 0, gv: 0, goles_l: [], goles_v: [] },
         { fecha: "Fecha 13 - Apertura 2026", torneo: "reserva_oficial", l: "Villa Mitre", v: "Libertad", gl: 0, gv: 0 },
         { fecha: "Torneo 2026 - Fecha 17", torneo: "sub15fem", l: "Libertad", v: "Villa Mitre", gl: 1, gv: 1 },
+        { fecha: "Fecha 5 - Clausura 2026", torneo: "reserva_femenino", l: "Villa Mitre", v: "Libertad", gl: 2, gv: 1 },
     ],
     "Bella Vista|Villa Mitre": [
         { fecha: "Fecha 5 - Apertura 2026 - 12 abr 2026", torneo: "oficial", l: "Bella Vista", v: "Villa Mitre", gl: 3, gv: 0, goles_l: ["Nahuel Bardella","Gabino Belleggia","Lucas Martínez"], goles_v: [] },
@@ -17385,12 +17392,12 @@ function generarReserva(cat) {
         'oficial':    [
                        {n:"Bella Vista",   cl:"bellavista",   pj:4, pg:3, pe:1, pp:0, gf:7, gc:4, pts:10},
                        {n:"Sporting <b>(A)</b>",      cl:"sporting",     pj:4, pg:2, pe:2, pp:0, gf:7, gc:5, pts:8},
-                       {n:"Villa Mitre",   cl:"villamitre",   pj:3, pg:2, pe:0, pp:1, gf:6, gc:8, pts:6},
-                       {n:"La Armonía",    cl:"laarmonia",    pj:3, pg:1, pe:1, pp:1, gf:4, gc:4, pts:4},
+                       {n:"Villa Mitre",   cl:"villamitre",   pj:4, pg:2, pe:1, pp:1, gf:8, gc:10, pts:7},
+                       {n:"La Armonía",    cl:"laarmonia",    pj:4, pg:1, pe:2, pp:1, gf:6, gc:6, pts:5},
                        {n:"Liniers",       cl:"liniers",      pj:4, pg:2, pe:0, pp:2, gf:4, gc:2, pts:3},
                        {n:"Libertad",      cl:"libertad",     pj:4, pg:1, pe:0, pp:3, gf:6, gc:6, pts:3},
-                       {n:"San Francisco", cl:"sanfrancisco", pj:3, pg:1, pe:0, pp:2, gf:4, gc:5, pts:3},
-                       {n:"Huracán",       cl:"huracan",      pj:3, pg:0, pe:0, pp:3, gf:6, gc:11, pts:0}],
+                       {n:"San Francisco", cl:"sanfrancisco", pj:4, pg:1, pe:10, pp:2, gf:6, gc:7, pts:4},
+                       {n:"Huracán",       cl:"huracan",      pj:4, pg:0, pe:1, pp:3, gf:8, gc:13, pts:1}],
         'promocional':[
                        {n:"Olimpo <b>(A)</b>",              cl:"olimpo",           pj:3, pg:3, pe:0, pp:0, gf:8, gc:3, pts:9},
                        {n:"Sansinena",           cl:"sansinena",        pj:3, pg:2, pe:0, pp:1, gf:9, gc:4, pts:6},
@@ -17412,8 +17419,8 @@ function generarReserva(cat) {
         'femenino':   [
             {n:"Bella Vista",           cl:"bellavista", pj:5,pg:5, pe:0, pp:0, gf:11, gc:0, pts:15},
             {n:"Tiro Federal <b>(A)</b>",          cl:"tirofederal",pj:5,pg:4, pe:1, pp:0, gf:3, gc:1, pts:13},
-            {n:"Villa Mitre",           cl:"villamitre", pj:4,pg:3, pe:0, pp:1, gf:4, gc:1, pts:9},
-            {n:"Libertad",              cl:"libertad",   pj:4,pg:2, pe:0, pp:2, gf:0, gc:16, pts:6},
+            {n:"Villa Mitre",           cl:"villamitre", pj:5,pg:4, pe:0, pp:1, gf:6, gc:2, pts:12},
+            {n:"Libertad",              cl:"libertad",   pj:5,pg:2, pe:0, pp:3, gf:1, gc:18, pts:6},
             {n:"Municipales",           cl:"municipales",pj:5,pg:1, pe:2, pp:2, gf:11, gc:5, pts:5},
             {n:"Sporting",              cl:"sporting",  pj:5,pg:1, pe:1, pp:3, gf:1, gc:7, pts:4},
             {n:"<s>Empleados de Comercio</s> <b>(-)</b>", cl:"empleados", pj:0,pg:0, pe:0, pp:0, gf:0, gc:0, pts:0},
