@@ -1865,12 +1865,12 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 20).partidos.forEach(p
 // Reserva 2° Femenino - resultados F21
 BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 21).partidos.forEach(p => {
     if (p.l === "Huracán" && p.v === "San Francisco") { p.gl = null; p.gv = null; }
-    if (p.l === "Petroquímicos" && p.v === "Liniers") { p.gl = null; p.gv = null; }
+    if (p.l === "Petroquímicos" && p.v === "Liniers") { p.gl = 1; p.gv = 2; }
     if (p.l === "Estrella de Oro" && p.v === "Rosario PB") { p.gl = 1; p.gv = 2; }
 });
 
 
-let diaSeleccionadoHome = "2026-08-25"; 
+let diaSeleccionadoHome = "2026-08-26"; 
 let mercadoPasesAbierto = false;
 
 function toggleMercadoPasesHome() {
@@ -1900,22 +1900,37 @@ function generarHome() {
 
         { id: "2026-08-25", label: "MAR 25/08", torneos: [
             { nombre: "TORNEO DE SELECCIONES (LIGA DEL SUR) - FECHA 4", cat: "torneoseleccion15", torLink: "torneoseleccion15", noAutoResult: true, partidos: [
-            {l:"Azul", v:"Tandil", hora:"20:00", gl:null, gv:null, claseL:"azul", claseV:"tandil",nota:"<b>Zona 2 2</b>"}
+            {l:"Azul", v:"Tandil", hora:"20:00", gl:1, gv:1, claseL:"azul", claseV:"tandil",nota:"<b>Zona 2 2</b>"}
             ]},
        ]},
         { id: "2026-08-26", label: "MIÉR 26/08", torneos: [
+            { nombre: "FUTSAL - FECHA 5", cat: "torneoseleccion15", torLink: "torneoseleccion15", noAutoResult: true, partidos: [
+            {l:"Pacífico BB", v:"Catamarca", hora:"22:00", gl:null, gv:null, claseL:"pacificobb", claseV:"catamarca",nota:"<b>en cancha de Don Bosco</b>"}
+            ]},
+            { nombre: "COPA PAÍS - PRIMERA RONDA", cat: "copapais", torLink: "copapais", noAutoResult: true, partidos: [
+            {l:"Liga del Sur", v:"Guatraché", hora:"15:30", gl:null, gv:null, claseL:"ldsbb", claseV:"guatrachepais",nota:"<b>REPROGRAMADO PARA EL MIÉRCOLES 2 DE SEPTIEMBRE POR LA LLUVIA</b>"},
+            ]},
             { nombre: "TORNEO DE SELECCIONES (LIGA DEL SUR) - FECHA 4", cat: "torneoseleccion15", torLink: "torneoseleccion15", noAutoResult: true, partidos: [
             {l:"Necochea", v:"Ayacucho", hora:"15:30", gl:null, gv:null, claseL:"necochea", claseV:"ayacucho",nota:"<b>Zona 2</b>"},
             {l:"Pehuajó", v:"Guatraché", hora:"15:30", gl:null, gv:null, claseL:"pehuajo", claseV:"guatrache",nota:"<b>Zona 4 - Fecha 3</b>"},
             {l:"Tres Arroyos", v:"Olavarría", hora:"16:30", gl:null, gv:null, claseL:"tresarroyos", claseV:"olavarria",nota:"<b>Zona 1 (Liga del Sur tiene fecha libre)</b>"},
             {l:"General Madariaga", v:"Dolores", hora:"20:00", gl:null, gv:null, claseL:"madariaga", claseV:"dolores",nota:"<b>Zona 3</b>"}
             ]},
-            { nombre: "COPA PAÍS - PRIMERA RONDA", cat: "copapais", torLink: "copapais", noAutoResult: true, partidos: [
-            {l:"Liga del Sur", v:"Guatraché", hora:"15:30", gl:null, gv:null, claseL:"ldsbb", claseV:"guatrachepais",nota:"<b>En cancha de Sansinena - Ida: 0-0</b>"},
-            ]},
             { nombre: "SUB 13, 15 Y 17 - FECHA 12", cat: "sub131517", torLink: "sub131517", noAutoResult: true, partidos: [
             {l:"Santamarina", v:"Villa Mitre", hora:"10:00", gl:null, gv:null, claseL:"santamarina", claseV:"villamitre",nota:"A las 10hs juega el Sub 17; a las 11:45hs el Sub 15 y a las 13hs el Sub 13"},
             {l:"Alvarado", v:"Olimpo", hora:"12:00", gl:null, gv:null, claseL:"alvarado", claseV:"olimpo",nota:"A las 12hs juega el Sub 17; a las 13:45hs el Sub 15 y a las 15hs el Sub 13"},
+            ]},
+       ]},
+        { id: "2026-08-27", label: "JUE 27/08", torneos: [
+            { nombre: "FUTSAL - FECHA 5", cat: "torneoseleccion15", torLink: "torneoseleccion15", noAutoResult: true, partidos: [
+            {l:"La Estación", v:"Liniers", hora:"22:00", gl:null, gv:null, claseL:"laestacion", claseV:"liniers",nota:"<b>en cancha de Don Bosco</b>"}
+            ]},
+       ]},
+        { id: "2026-08-28", label: "VIE 28/08", torneos: [
+            { nombre: "FUTSAL - FECHA 5", cat: "torneoseleccion15", torLink: "torneoseleccion15", noAutoResult: true, partidos: [
+            {l:"Villa Mitre", v:"San Francisco", hora:"22:00", gl:null, gv:null, claseL:"villamitre", claseV:"sanfrancisco",nota:"<b>en cancha de Don Bosco</b>"},
+            {l:"Los 3 Chiflados", v:"Petroquímicos", hora:"22:00", gl:null, gv:null, claseL:"los3chiflados", claseV:"petroquimicos",nota:"<b>en cancha de La Curtiembre</b>"},
+            {l:"Tiro Federal", v:"Dublin", hora:"22:00", gl:null, gv:null, claseL:"tirofederal", claseV:"dublin",nota:"<b>en cancha de Tiro Federal</b>"}
             ]},
        ]},
     ];
@@ -16487,6 +16502,7 @@ const BD_H2H = {
         { fecha: "Fecha 12 - Torneo 2026 - 14 jun", torneo: "segundafemenino", l: "Petroquímicos", v: "Liniers", gl: 1, gv: 2, goles_l: ["Paula Rodríguez"], goles_v: ["Iara Schwab","Paulina Acevedo"]},
         { fecha: "Fecha 12 - Torneo 2026", torneo: "reserva_segundafemenino", l: "Petroquímicos", v: "Liniers", gl: 0, gv: 3},
         { fecha: "Fecha 21 - Torneo 2026 - 22 ago", torneo: "segundafemenino", l: "Petroquímicos", v: "Liniers", gl: 0, gv: 2, goles_l: [], goles_v: []},
+        { fecha: "Fecha 21 - Torneo 2026", torneo: "reserva_segundafemenino", l: "Petroquímicos", v: "Liniers", gl: 1, gv: 2},
         { fecha: "Apertura 2026 - Fecha 13", torneo: "futsal", l: "Petroquímicos", v: "Liniers", gl: 3, gv: 1 },
         { fecha: "Apertura 2026 - Fecha 13", torneo: "futsalreserva", l: "Petroquímicos", v: "Liniers", gl: 3, gv: 9 },
     ],
@@ -17408,12 +17424,12 @@ function generarReserva(cat) {
                        {n:"Pacífico (C)", cl:"pacificocabildo",  pj:4, pg:0, pe:1, pp:3, gf:6, gc:15, pts:1},
                        {n:"Comercial",           cl:"comercial",        pj:3, pg:0, pe:0, pp:3, gf:2, gc:7, pts:0},],
         'segundafemenino': [
-            {n:"Liniers <b>(C)</b>",             cl:"liniers",         pj:13, pg:11, pe:2, pp:0, gf:54, gc:9, pts:35},
+            {n:"Liniers <b>(C)</b>",             cl:"liniers",         pj:14, pg:12, pe:2, pp:0, gf:56, gc:10, pts:38,
             {n:"San Francisco",       cl:"sanfrancisco",    pj:13, pg:9, pe:2, pp:2, gf:29, gc:13, pts:29},
             {n:"Rosario PB",          cl:"rosariopb",       pj:13, pg:8, pe:2, pp:3, gf:27, gc:17, pts:26},
             {n:"Estrella de Oro",     cl:"estrellaoro",     pj:15, pg:7, pe:2, pp:6, gf:24, gc:21, pts:23},
             {n:"<s>Huracán</s> <b>(-)</b>",             cl:"huracan",         pj:11, pg:2, pe:0, pp:9, gf:6, gc:19, pts:6},
-            {n:"Petroquímicos",       cl:"petroquimicos",   pj:11, pg:1, pe:1, pp:9, gf:9, gc:22, pts:4},
+            {n:"Petroquímicos",       cl:"petroquimicos",   pj:12, pg:1, pe:1, pp:10, gf:10, gc:24, pts:4},
             {n:"<s>Sansinena</s> <b>(-)</b>",           cl:"sansinena",       pj:12, pg:1, pe:1, pp:10, gf:8, gc:55, pts:4}
         ],
         'femenino':   [
@@ -22782,8 +22798,8 @@ function generarTorneoSeleccion15() {
             { nombre:"Olavarría",         key:"olavarria",      pj:2,pg:0,pe:0,pp:2,gf:0,gc:5,pts:0 },
         ]},
         { label:"ZONA 2", equipos:[
-            { nombre:"Tandil",            key:"tandil",         pj:3,pg:3,pe:0,pp:0,gf:7,gc:7,pts:9 },
-            { nombre:"Azul",              key:"azul",           pj:3,pg:1,pe:1,pp:1,gf:7,gc:7,pts:4 },
+            { nombre:"Tandil",            key:"tandil",         pj:4,pg:3,pe:1,pp:0,gf:8,gc:8,pts:10 },
+            { nombre:"Azul",              key:"azul",           pj:4,pg:1,pe:2,pp:1,gf:8,gc:8,pts:5 },
             { nombre:"Necochea",          key:"necochea",       pj:3,pg:1,pe:0,pp:1,gf:6,gc:7,pts:3 },
             { nombre:"Ayacucho",          key:"ayacucho",       pj:3,pg:0,pe:1,pp:2,gf:4,gc:8,pts:1 },
         ]},
