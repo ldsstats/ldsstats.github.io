@@ -961,6 +961,11 @@ BD_FIXTURES_SUB.sub13.find(f=>f.fecha===11).partidos.forEach(p=>{
     if(p.l==="Olimpo"&&p.v==="Mac Allister"){p.gl=1;p.gv=4;}
     if(p.l==="Balompié"&&p.v==="Alvarado"){p.gl=4;p.gv=2;}
 });
+BD_FIXTURES_SUB.sub13.find(f=>f.fecha===12).partidos.forEach(p=>{
+    if(p.l==="Alvarado"&&p.v==="Olimpo"){p.gl=2;p.gv=1;}
+    if(p.l==="Kimberley"&&p.v==="Balompié"){p.gl=null;p.gv=null;}
+    if(p.l==="Santamarina"&&p.v==="Villa Mitre"){p.gl=1;p.gv=5;}
+});
 
 
 BD_FIXTURES_SUB.sub15.find(f=>f.fecha===1).partidos.forEach(p=>{
@@ -1018,6 +1023,11 @@ BD_FIXTURES_SUB.sub15.find(f=>f.fecha===11).partidos.forEach(p=>{
     if(p.l==="Olimpo"&&p.v==="Mac Allister"){p.gl=2;p.gv=2;}
     if(p.l==="Balompié"&&p.v==="Alvarado"){p.gl=2;p.gv=0;}
 });
+BD_FIXTURES_SUB.sub15.find(f=>f.fecha===12).partidos.forEach(p=>{
+    if(p.l==="Alvarado"&&p.v==="Olimpo"){p.gl=1;p.gv=1;}
+    if(p.l==="Kimberley"&&p.v==="Balompié"){p.gl=null;p.gv=null;}
+    if(p.l==="Santamarina"&&p.v==="Villa Mitre"){p.gl=0;p.gv=2;}
+});
 
 BD_FIXTURES_SUB.sub17.find(f=>f.fecha===1).partidos.forEach(p=>{
     if(p.l==="Villa Mitre"&&p.v==="Olimpo"){p.gl=1;p.gv=1;p.goles_l=["Mateo Luzuriaga"];p.goles_v=["Benicio Hernández"];}
@@ -1073,6 +1083,11 @@ BD_FIXTURES_SUB.sub17.find(f=>f.fecha===11).partidos.forEach(p=>{
     if(p.l==="Villa Mitre"&&p.v==="Kimberley"){p.gl=1;p.gv=0;}
     if(p.l==="Olimpo"&&p.v==="Mac Allister"){p.gl=0;p.gv=0;}
     if(p.l==="Balompié"&&p.v==="Alvarado"){p.gl=0;p.gv=2;}
+});
+BD_FIXTURES_SUB.sub17.find(f=>f.fecha===12).partidos.forEach(p=>{
+    if(p.l==="Alvarado"&&p.v==="Olimpo"){p.gl=3;p.gv=0;}
+    if(p.l==="Kimberley"&&p.v==="Balompié"){p.gl=null;p.gv=null;}
+    if(p.l==="Santamarina"&&p.v==="Villa Mitre"){p.gl=0;p.gv=2;}
 });
 
 
@@ -1911,14 +1926,14 @@ function generarHome() {
             {l:"Liga del Sur", v:"Guatraché", hora:"15:30", gl:null, gv:null, claseL:"ldsbb", claseV:"guatrachepais",nota:"<b>REPROGRAMADO PARA EL MIÉRCOLES 2 DE SEPTIEMBRE POR LA LLUVIA</b>"},
             ]},
             { nombre: "TORNEO DE SELECCIONES (LIGA DEL SUR) - FECHA 4", cat: "torneoseleccion15", torLink: "torneoseleccion15", noAutoResult: true, partidos: [
-            {l:"Necochea", v:"Ayacucho", hora:"15:30", gl:null, gv:null, claseL:"necochea", claseV:"ayacucho",nota:"<b>Zona 2</b>"},
-            {l:"Pehuajó", v:"Guatraché", hora:"15:30", gl:null, gv:null, claseL:"pehuajo", claseV:"guatrache",nota:"<b>Zona 4 - Fecha 3</b>"},
-            {l:"Tres Arroyos", v:"Olavarría", hora:"16:30", gl:null, gv:null, claseL:"tresarroyos", claseV:"olavarria",nota:"<b>Zona 1 (Liga del Sur tiene fecha libre)</b>"},
+            {l:"Necochea", v:"Ayacucho", hora:"15:30", gl:2, gv:0, claseL:"necochea", claseV:"ayacucho",nota:"<b>Zona 2</b>"},
+            {l:"Pehuajó", v:"Guatraché", hora:"15:30", gl:2, gv:0, claseL:"pehuajo", claseV:"guatrache",nota:"<b>Zona 4 - Fecha 3</b>"},
+            {l:"Tres Arroyos", v:"Olavarría", hora:"16:30", gl:1, gv:2, claseL:"tresarroyos", claseV:"olavarria",nota:"<b>Zona 1 (Liga del Sur tiene fecha libre)</b>"},
             {l:"General Madariaga", v:"Dolores", hora:"20:00", gl:null, gv:null, claseL:"madariaga", claseV:"dolores",nota:"<b>Zona 3</b>"}
             ]},
             { nombre: "SUB 13, 15 Y 17 - FECHA 12", cat: "sub131517", torLink: "sub131517", noAutoResult: true, partidos: [
-            {l:"Santamarina", v:"Villa Mitre", hora:"10:00", gl:null, gv:null, claseL:"santamarina", claseV:"villamitre",nota:"A las 10hs juega el Sub 17; a las 11:45hs el Sub 15 y a las 13hs el Sub 13"},
-            {l:"Alvarado", v:"Olimpo", hora:"12:00", gl:null, gv:null, claseL:"alvarado", claseV:"olimpo",nota:"A las 12hs juega el Sub 17; a las 13:45hs el Sub 15 y a las 15hs el Sub 13"},
+            {l:"Santamarina", v:"Villa Mitre", hora:"10:00", gl:0, gv:9, claseL:"santamarina", claseV:"villamitre",nota:"<b>EL RESULTADO EQUIVALE A LOS PUNTOS SACADOS POR CADA EQUIPO</b>"},
+            {l:"Alvarado", v:"Olimpo", hora:"12:00", gl:7, gv:1, claseL:"alvarado", claseV:"olimpo",nota:"<b>EL RESULTADO EQUIVALE A LOS PUNTOS SACADOS POR CADA EQUIPO</b>"},
             ]},
        ]},
         { id: "2026-08-27", label: "JUE 27/08", torneos: [
@@ -1936,6 +1951,16 @@ function generarHome() {
         { id: "2026-08-29", label: "SÁB 29/08", torneos: [
             { nombre: "REGIONAL FEDERAL AMATEUR FEMENINO - TERCERA RONDA - IDA", cat: "regamateurfem", torLink: "regamateurfem", noAutoResult: true, partidos: [
             {l:"Ciudad de Olavarría", v:"Villa Mitre", hora:"14:00", gl:null, gv:null, claseL:"ciudadolavarria", claseV:"villamitre",nota:"<b>en cancha de Embajadores</b>"},
+            ]},
+            { nombre: "REGIONAL FEDERAL AMATEUR - PRIMERA RONDA - 1°FECHA", cat: "regamateurfem", torLink: "regamateurfem", noAutoResult: true, partidos: [
+            {l:"Atlético Villegas", v:"Santa Rita", hora:"19:00", gl:null, gv:null, claseL:"atlvillegas", claseV:"santarita",nota:"<b>Zona 2</b>"},
+            {l:"All Boys (SR)", v:"Santa Rosa", hora:"20:00", gl:null, gv:null, claseL:"allboyssr", claseV:"santarosa",nota:"<b>Zona 1</b>"},
+            ]},
+       ]},
+        { id: "2026-08-30", label: "DOM 30/08", torneos: [
+            { nombre: "REGIONAL FEDERAL AMATEUR - PRIMERA RONDA - 1°FECHA", cat: "regamateurfem", torLink: "regamateurfem", noAutoResult: true, partidos: [
+            {l:"Huracán", v:"Sarmiento de Pigué", hora:"15:30", gl:null, gv:null, claseL:"huracan", claseV:"sarmientopigue",nota:"<b>Zona 3</b>"},
+            {l:"Ferro de Pico", v:"All Boys (Trenel)", hora:"15:30", gl:null, gv:null, claseL:"ferropico", claseV:"allboystrenel",nota:"<b>Zona 1</b>"},
             ]},
        ]},
     ];
@@ -17486,37 +17511,37 @@ html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-a
 
 const BD_POS_SUB = {
     sub13: [
-        {nombre:"Villa Mitre <b>(C)</b>",  clase:"villamitre",  pj:10,pg:9,pe:1,pp:0,gf:28,gc:8,pts:28},
+        {nombre:"Villa Mitre <b>(C)</b>",  clase:"villamitre",  pj:11,pg:10,pe:1,pp:0,gf:33,gc:9,pts:31},
         {nombre:"Mac Allister <b>(C)</b>", clase:"macallister", pj:10,pg:8,pe:0,pp:2,gf:29,gc:7,pts:24},
         {nombre:"Balompié <b>(X)</b>",     clase:"balompie",    pj:9,pg:4,pe:3,pp:2,gf:17,gc:12,pts:15},
         {nombre:"Kimberley <b>(X)</b>",    clase:"kimberley",   pj:9,pg:4,pe:1,pp:4,gf:15,gc:12,pts:13},
-        {nombre:"Alvarado <b>(X)</b>",     clase:"alvarado",    pj:10,pg:3,pe:0,pp:7,gf:13,gc:23,pts:9},
-        {nombre:"Olimpo <b>(X)</b>",       clase:"olimpo",      pj:9,pg:2,pe:0,pp:7,gf:11,gc:24,pts:6},
+        {nombre:"Alvarado <b>(X)</b>",     clase:"alvarado",    pj:11,pg:4,pe:0,pp:7,gf:15,gc:24,pts:12},
+        {nombre:"Olimpo <b>(X)</b>",       clase:"olimpo",      pj:11,pg:2,pe:0,pp:9,gf:13,gc:31,pts:6},
         {nombre:"Santamarina <b>(X)</b>",  clase:"santamarina", pj:9,pg:0,pe:1,pp:8,gf:5,gc:32,pts:1}
     ],
     sub15: [
         {nombre:"Mac Allister <b>(C)</b>", clase:"macallister", pj:10,pg:8,pe:2,pp:0,gf:16,gc:4,pts:26},
         {nombre:"Kimberley",    clase:"kimberley",   pj:9,pg:4,pe:3,pp:2,gf:14,gc:9,pts:15},
         {nombre:"Balompié",     clase:"balompie",    pj:9,pg:4,pe:2,pp:3,gf:15,gc:10,pts:14},
-        {nombre:"Alvarado",     clase:"alvarado",    pj:10,pg:3,pe:4,pp:3,gf:17,gc:13,pts:13},
-        {nombre:"Olimpo",       clase:"olimpo",      pj:9,pg:2,pe:4,pp:3,gf:10,gc:14,pts:10},
-        {nombre:"Villa Mitre <b>(X)</b>",  clase:"villamitre",  pj:10,pg:1,pe:3,pp:6,gf:8,gc:16,pts:6},
-        {nombre:"Santamarina <b>(X)</b>",  clase:"santamarina", pj:9,pg:1,pe:2,pp:6,gf:3,gc:17,pts:5}
+        {nombre:"Alvarado",     clase:"alvarado",    pj:11,pg:3,pe:5,pp:3,gf:18,gc:14,pts:14},
+        {nombre:"Olimpo",       clase:"olimpo",      pj:10,pg:2,pe:4,pp:3,gf:11,gc:15,pts:11},
+        {nombre:"Villa Mitre <b>(X)</b>",  clase:"villamitre",  pj:12,pg:2,pe:3,pp:6,gf:10,gc:16,pts:9},
+        {nombre:"Santamarina <b>(X)</b>",  clase:"santamarina", pj:10,pg:1,pe:2,pp:7,gf:3,gc:19,pts:5}
     ],
     sub17: [
+        {nombre:"Alvarado",     clase:"alvarado",    pj:11,pg:5,pe:3,pp:3,gf:18,gc:12,pts:18},
         {nombre:"Kimberley",    clase:"kimberley",   pj:9,pg:5,pe:2,pp:2,gf:12,gc:7,pts:17},
         {nombre:"Mac Allister", clase:"macallister", pj:10,pg:4,pe:5,pp:1,gf:20,gc:6,pts:17},
         {nombre:"Balompié",     clase:"balompie",    pj:9,pg:5,pe:1,pp:3,gf:15,gc:15,pts:16},
-        {nombre:"Alvarado",     clase:"alvarado",    pj:10,pg:4,pe:3,pp:3,gf:15,gc:12,pts:15},
-        {nombre:"Villa Mitre",  clase:"villamitre",  pj:10,pg:2,pe:5,pp:3,gf:7,gc:9,pts:11},
-        {nombre:"Olimpo",       clase:"olimpo",      pj:9,pg:3,pe:2,pp:4,gf:11,gc:13,pts:11},
-        {nombre:"Santamarina <b>(X)</b>",  clase:"santamarina", pj:9,pg:1,pe:0,pp:8,gf:6,gc:24,pts:3}
+        {nombre:"Villa Mitre",  clase:"villamitre",  pj:11,pg:3,pe:5,pp:3,gf:9,gc:9,pts:14},
+        {nombre:"Olimpo",       clase:"olimpo",      pj:10,pg:3,pe:2,pp:5,gf:11,gc:16,pts:11},
+        {nombre:"Santamarina <b>(X)</b>",  clase:"santamarina", pj:10,pg:1,pe:0,pp:9,gf:6,gc:26,pts:3}
     ]
 };
 
 const BD_GOL_SUB = {
     sub13: [
-        {jugador:"Santiago Martínez", equipo:"Villa Mitre", clase:"villamitre", n:13},
+        {jugador:"Santiago Martínez", equipo:"Villa Mitre", clase:"villamitre", n:16},
         {jugador:"Valentino Altfater",    equipo:"Villa Mitre", clase:"villamitre", n:6},
         {jugador:"Ringo Melcon",      equipo:"Villa Mitre", clase:"villamitre", n:3},
         {jugador:"León Cáceres",      equipo:"Olimpo",      clase:"olimpo",     n:2},
@@ -17524,6 +17549,8 @@ const BD_GOL_SUB = {
         {jugador:"Martiniano Vergara",    equipo:"Villa Mitre", clase:"villamitre", n:2},
         {jugador:"Enzo Rossi",    equipo:"Villa Mitre", clase:"villamitre", n:1},
         {jugador:"Bautista Scalco",    equipo:"Villa Mitre", clase:"villamitre", n:1},
+        {jugador:"Benjamín Ruiz",    equipo:"Villa Mitre", clase:"villamitre", n:1},
+        {jugador:"Francisco Sañudo",    equipo:"Villa Mitre", clase:"villamitre", n:1},
         {jugador:"Santino Canales",   equipo:"Olimpo",      clase:"olimpo",     n:1},
         {jugador:"Juan Ignacio Aguado",      equipo:"Olimpo",      clase:"olimpo",     n:1},
         {jugador:"Santino Figueroa",      equipo:"Olimpo",      clase:"olimpo",     n:1},
@@ -17532,14 +17559,16 @@ const BD_GOL_SUB = {
         {jugador:"Enzo Salinas",      equipo:"Olimpo",      clase:"olimpo",     n:1},
         {jugador:"Thiago Espinoza",      equipo:"Olimpo",      clase:"olimpo",     n:1},
         {jugador:"Bastián González",      equipo:"Olimpo",      clase:"olimpo",     n:1},
-        {jugador:"Juan Ignacio Ulmann",      equipo:"Olimpo",      clase:"olimpo",     n:1}
+        {jugador:"Juan Ignacio Ulmann",      equipo:"Olimpo",      clase:"olimpo",     n:1},
+        {jugador:"Miqueas Jara Godoy",      equipo:"Olimpo",      clase:"olimpo",     n:1}
     ],
     sub15: [
         {jugador:"Galo Martínez",     equipo:"Olimpo",      clase:"olimpo",     n:4},
         {jugador:"Ciro Barra",     equipo:"Olimpo",      clase:"olimpo",     n:3},
         {jugador:"Santiago Sánchez",  equipo:"Villa Mitre", clase:"villamitre", n:2},
+        {jugador:"Milton Berdugo",    equipo:"Villa Mitre", clase:"villamitre", n:2},
+        {jugador:"Simón Schmidt",     equipo:"Olimpo",      clase:"olimpo",     n:2},
         {jugador:"Thiago Alfredo",    equipo:"Olimpo",      clase:"olimpo",     n:1},
-        {jugador:"Simón Schmid",     equipo:"Olimpo",      clase:"olimpo",     n:1},
         {jugador:"Matías Duarte",     equipo:"Olimpo",      clase:"olimpo",     n:1},
         {jugador:"Cardozo",    equipo:"Villa Mitre", clase:"villamitre", n:1},
         {jugador:"Schefer",    equipo:"Villa Mitre", clase:"villamitre", n:1},
@@ -17558,6 +17587,8 @@ const BD_GOL_SUB = {
         {jugador:"Kraemer",    equipo:"Villa Mitre", clase:"villamitre", n:1},
         {jugador:"Mateo Luzuriaga",   equipo:"Villa Mitre", clase:"villamitre", n:1},
         {jugador:"Rodríguez",   equipo:"Villa Mitre", clase:"villamitre", n:1},
+        {jugador:"Benjamín Martín",   equipo:"Villa Mitre", clase:"villamitre", n:1},
+        {jugador:"Paul Rearte",   equipo:"Villa Mitre", clase:"villamitre", n:1},
         {jugador:"Quiroga",   equipo:"Villa Mitre", clase:"villamitre", n:1}
     ]
 };
@@ -21514,12 +21545,12 @@ const BD_REG_AMATEUR_TEMPORADA = {
         },
         { titulo: "ZONA 1",
           fixture: [
-              { fecha:1, partidos:[{ l:"Ferro", v:"All Boys (GP)", gl:null, gv:null, goles_l:[], goles_v:[] },{ l:"All Boys (SR)", v:"Santa Rosa", gl:null, gv:null, goles_l:[], goles_v:[] }] },
-              { fecha:2, partidos:[{ l:"Santa Rosa", v:"Ferro", gl:null, gv:null, goles_l:[], goles_v:[] },{ l:"All Boys (GP)", v:"All Boys (SR)", gl:null, gv:null, goles_l:[], goles_v:[] }] },
-              { fecha:3, partidos:[{ l:"Ferro", v:"All Boys (SR)", gl:null, gv:null, goles_l:[], goles_v:[] },{ l:"Santa Rosa", v:"All Boys (GP)", gl:null, gv:null, goles_l:[], goles_v:[] }] },
-              { fecha:4, partidos:[{ l:"All Boys (GP)", v:"Ferro", gl:null, gv:null, goles_l:[], goles_v:[] },{ l:"Santa Rosa", v:"All Boys (SR)", gl:null, gv:null, goles_l:[], goles_v:[] }] },
-              { fecha:5, partidos:[{ l:"Ferro", v:"Santa Rosa", gl:null, gv:null, goles_l:[], goles_v:[] },{ l:"All Boys (SR)", v:"All Boys (GP)", gl:null, gv:null, goles_l:[], goles_v:[] }] },
-              { fecha:6, partidos:[{ l:"All Boys (SR)", v:"Ferro", gl:null, gv:null, goles_l:[], goles_v:[] },{ l:"All Boys (GP)", v:"Santa Rosa", gl:null, gv:null, goles_l:[], goles_v:[] }] },
+              { fecha:1, partidos:[{ l:"Ferro", v:"All Boys (Trenel)", gl:null, gv:null, goles_l:[], goles_v:[] },{ l:"All Boys (SR)", v:"Santa Rosa", gl:null, gv:null, goles_l:[], goles_v:[] }] },
+              { fecha:2, partidos:[{ l:"Santa Rosa", v:"Ferro", gl:null, gv:null, goles_l:[], goles_v:[] },{ l:"All Boys (Trenel)", v:"All Boys (SR)", gl:null, gv:null, goles_l:[], goles_v:[] }] },
+              { fecha:3, partidos:[{ l:"Ferro", v:"All Boys (SR)", gl:null, gv:null, goles_l:[], goles_v:[] },{ l:"Santa Rosa", v:"All Boys (Trenel)", gl:null, gv:null, goles_l:[], goles_v:[] }] },
+              { fecha:4, partidos:[{ l:"All Boys (Trenel)", v:"Ferro", gl:null, gv:null, goles_l:[], goles_v:[] },{ l:"Santa Rosa", v:"All Boys (SR)", gl:null, gv:null, goles_l:[], goles_v:[] }] },
+              { fecha:5, partidos:[{ l:"Ferro", v:"Santa Rosa", gl:null, gv:null, goles_l:[], goles_v:[] },{ l:"All Boys (SR)", v:"All Boys (Trenel)", gl:null, gv:null, goles_l:[], goles_v:[] }] },
+              { fecha:6, partidos:[{ l:"All Boys (SR)", v:"Ferro", gl:null, gv:null, goles_l:[], goles_v:[] },{ l:"All Boys (Trenel)", v:"Santa Rosa", gl:null, gv:null, goles_l:[], goles_v:[] }] },
           ],
           puntosEnJuego: "18 tras la fecha 0",
           txtClasifica: "Clasifica a la 3° ronda",
@@ -21528,7 +21559,7 @@ const BD_REG_AMATEUR_TEMPORADA = {
               { nombre: "All Boys (Santa Rosa)", pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0 },
               { nombre: "Santa Rosa", pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0 },
               { nombre: "Ferro de Pico", pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0 },
-              { nombre: "All Boys (Gral. Pico)", pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0 },
+              { nombre: "All Boys (Trenel)", pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0 },
           ]
         },
         { titulo: "ZONA 2",
@@ -21551,12 +21582,12 @@ const BD_REG_AMATEUR_TEMPORADA = {
         },
         { titulo: "ZONA 4",
           fixture: [
-              { fecha:1, libre:"Valeria del Mar", partidos:[{ l:"Quilmes", v:"Dep. Norte", gl:null, gv:null, goles_l:[], goles_v:[] }] },
-              { fecha:2, libre:"Dep. Norte", partidos:[{ l:"Valeria del Mar", v:"Quilmes", gl:null, gv:null, goles_l:[], goles_v:[] }] },
-              { fecha:3, libre:"Quilmes", partidos:[{ l:"Dep. Norte", v:"Valeria del Mar", gl:null, gv:null, goles_l:[], goles_v:[] }] },
-              { fecha:4, libre:"Valeria del Mar", partidos:[{ l:"Dep. Norte", v:"Quilmes", gl:null, gv:null, goles_l:[], goles_v:[] }] },
-              { fecha:5, libre:"Dep. Norte", partidos:[{ l:"Quilmes", v:"Valeria del Mar", gl:null, gv:null, goles_l:[], goles_v:[] }] },
-              { fecha:6, libre:"Quilmes", partidos:[{ l:"Valeria del Mar", v:"Dep. Norte", gl:null, gv:null, goles_l:[], goles_v:[] }] },
+              { fecha:1, libre:"Def. Valeria del Mar", partidos:[{ l:"Quilmes", v:"Dep. Norte", gl:null, gv:null, goles_l:[], goles_v:[] }] },
+              { fecha:2, libre:"Dep. Norte", partidos:[{ l:"Def. Valeria del Mar", v:"Quilmes", gl:null, gv:null, goles_l:[], goles_v:[] }] },
+              { fecha:3, libre:"Quilmes", partidos:[{ l:"Dep. Norte", v:"Def. Valeria del Mar", gl:null, gv:null, goles_l:[], goles_v:[] }] },
+              { fecha:4, libre:"Def. Valeria del Mar", partidos:[{ l:"Dep. Norte", v:"Quilmes", gl:null, gv:null, goles_l:[], goles_v:[] }] },
+              { fecha:5, libre:"Dep. Norte", partidos:[{ l:"Quilmes", v:"Def. Valeria del Mar", gl:null, gv:null, goles_l:[], goles_v:[] }] },
+              { fecha:6, libre:"Quilmes", partidos:[{ l:"Def. Valeria del Mar", v:"Dep. Norte", gl:null, gv:null, goles_l:[], goles_v:[] }] },
           ],
           puntosEnJuego: "12 tras la fecha 0",
           txtClasifica: "Clasifica a 2° o 3° ronda (Revisar tabla de primeros)",
@@ -21564,7 +21595,7 @@ const BD_REG_AMATEUR_TEMPORADA = {
           posiciones: [
               { nombre: "Quilmes (MdP)", pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0 },
               { nombre: "Dep. Norte", pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0 },
-              { nombre: "Valeria del Mar", pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0 },
+              { nombre: "Def. Valeria del Mar", pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0 },
           ]
         },
         { titulo: "ZONA 5",
@@ -22798,15 +22829,15 @@ function generarTorneoSeleccion15() {
 
     const zonas = [
         { label:"ZONA 1", equipos:[
-            { nombre:"Tres Arroyos",      key:"tresarroyos",    pj:2,pg:2,pe:0,pp:0,gf:4,gc:0,pts:6 },
+            { nombre:"Tres Arroyos",      key:"tresarroyos",    pj:3,pg:2,pe:0,pp:1,gf:5,gc:2,pts:6 },
             { nombre:"Liga del Sur",      key:"ldsbb",          pj:2,pg:1,pe:0,pp:1,gf:3,gc:2,pts:3 },
-            { nombre:"Olavarría",         key:"olavarria",      pj:2,pg:0,pe:0,pp:2,gf:0,gc:5,pts:0 },
+            { nombre:"Olavarría",         key:"olavarria",      pj:3,pg:1,pe:0,pp:2,gf:2,gc:6,pts:3 },
         ]},
         { label:"ZONA 2", equipos:[
             { nombre:"Tandil",            key:"tandil",         pj:4,pg:3,pe:1,pp:0,gf:8,gc:8,pts:10 },
+            { nombre:"Necochea",          key:"necochea",       pj:4,pg:2,pe:0,pp:1,gf:8,gc:7,pts:6 },
             { nombre:"Azul",              key:"azul",           pj:4,pg:1,pe:2,pp:1,gf:8,gc:8,pts:5 },
-            { nombre:"Necochea",          key:"necochea",       pj:3,pg:1,pe:0,pp:1,gf:6,gc:7,pts:3 },
-            { nombre:"Ayacucho",          key:"ayacucho",       pj:3,pg:0,pe:1,pp:2,gf:4,gc:8,pts:1 },
+            { nombre:"Ayacucho",          key:"ayacucho",       pj:4,pg:0,pe:1,pp:3,gf:4,gc:10,pts:1 },
         ]},
         { label:"ZONA 3", equipos:[
             { nombre:"General Madariaga", key:"madariaga",      pj:2,pg:2,pe:0,pp:0,gf:4,gc:1,pts:6 },
@@ -22815,8 +22846,8 @@ function generarTorneoSeleccion15() {
         ]},
         { label:"ZONA 4", equipos:[
             { nombre:"Trenque Lauquen",   key:"trenquelauquen", pj:2,pg:2,pe:0,pp:0,gf:5,gc:0,pts:6 },
-            { nombre:"Guatraché",         key:"guatrache",      pj:1,pg:0,pe:0,pp:1,gf:0,gc:2,pts:0 },
-            { nombre:"Pehuajó",           key:"pehuajo",        pj:1,pg:0,pe:0,pp:1,gf:0,gc:3,pts:0 },
+            { nombre:"Pehuajó",           key:"pehuajo",        pj:2,pg:1,pe:0,pp:1,gf:2,gc:3,pts:3 },
+            { nombre:"Guatraché",         key:"guatrache",      pj:2,pg:0,pe:0,pp:2,gf:0,gc:4,pts:0 },
         ]},
     ];
 

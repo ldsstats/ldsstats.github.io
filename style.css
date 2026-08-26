@@ -99,28 +99,28 @@ tr[onclick]:hover td { background-color: #e8f5e9 !important; }
 .pehuajo::before { content: "LPF"; color: #2e22ba; font-size: 5px; font-weight: bold; }
 .sanvicente::before { content: "SV"; color: #000000; font-size: 10px; font-weight: bold; }
 .laplata::before { content: "LP"; color: #000000; font-size: 10px; font-weight: bold; }
-.guatrachepais::before { content: "GUA"; color: #000000; font-size: 10px; font-weight: bold; }
-.tartagal::before { content: "TAR"; color: #000000; font-size: 10px; font-weight: bold; }
-.jujuy::before { content: "JUJ"; color: #000000; font-size: 10px; font-weight: bold; }
+.guatrachepais::before { content: "GU"; color: #000000; font-size: 10px; font-weight: bold; }
+.tartagal::before { content: "TA"; color: #000000; font-size: 10px; font-weight: bold; }
+.jujuy::before { content: "JU"; color: #000000; font-size: 10px; font-weight: bold; }
 .tucuman::before { content: "TUC"; color: #000000; font-size: 10px; font-weight: bold; }
 .valleviejo::before { content: "VV"; color: #000000; font-size: 10px; font-weight: bold; }
-.tinogasta::before { content: "T"; color: #000000; font-size: 10px; font-weight: bold; }
-.catamarcapais::before { content: "CAT"; color: #000000; font-size: 10px; font-weight: bold; }
+.tinogasta::before { content: "TI"; color: #000000; font-size: 10px; font-weight: bold; }
+.catamarcapais::before { content: "CA"; color: #000000; font-size: 10px; font-weight: bold; }
 .riocuarto::before { content: "RC"; color: #000000; font-size: 10px; font-weight: bold; }
-.rodeo::before { content: "ROD"; color: #000000; font-size: 10px; font-weight: bold; }
+.rodeo::before { content: "RO"; color: #000000; font-size: 10px; font-weight: bold; }
 .sanjuan::before { content: "SJ"; color: #000000; font-size: 10px; font-weight: bold; }
-.albardon::before { content: "ALB"; color: #000000; font-size: 10px; font-weight: bold; }
-.malague::before { content: "MAL"; color: #000000; font-size: 10px; font-weight: bold; }
-.tupungato::before { content: "TUP"; color: #000000; font-size: 10px; font-weight: bold; }
-.lagunapaiva::before { content: "LP"; color: #000000; font-size: 10px; font-weight: bold; }
-.parana::before { content: "PAR"; color: #000000; font-size: 10px; font-weight: bold; }
-.sanjorge::before { content: "SJ"; color: #000000; font-size: 10px; font-weight: bold; }
-.rafaela::before { content: "RAF"; color: #000000; font-size: 10px; font-weight: bold; }
+.albardon::before { content: "AL"; color: #000000; font-size: 10px; font-weight: bold; }
+.malague::before { content: "MA"; color: #000000; font-size: 10px; font-weight: bold; }
+.tupungato::before { content: "TU"; color: #000000; font-size: 10px; font-weight: bold; }
+.lagunapaiva::before { content: "PA"; color: #000000; font-size: 10px; font-weight: bold; }
+.parana::before { content: "PR"; color: #000000; font-size: 10px; font-weight: bold; }
+.sanjorge::before { content: "SG"; color: #000000; font-size: 10px; font-weight: bold; }
+.rafaela::before { content: "RF"; color: #000000; font-size: 10px; font-weight: bold; }
 .sannicolas::before { content: "SN"; color: #000000; font-size: 10px; font-weight: bold; }
 .sanpedro::before { content: "SP"; color: #000000; font-size: 10px; font-weight: bold; }
 .chacabuco::before { content: "CHA"; color: #000000; font-size: 10px; font-weight: bold; }
-.bariloche::before { content: "BAR"; color: #000000; font-size: 10px; font-weight: bold; }
-.trelew::before { content: "TRE"; color: #000000; font-size: 10px; font-weight: bold; }
+.bariloche::before { content: "BA"; color: #000000; font-size: 10px; font-weight: bold; }
+.trelew::before { content: "TR"; color: #000000; font-size: 10px; font-weight: bold; }
 
 /* MENÚ DESPLEGABLE */
 .bloque-titulo.sin-drop { cursor: pointer; text-align: left; }
@@ -301,6 +301,22 @@ tr[onclick]:hover td { background-color: #e8f5e9 !important; }
 .racingfortin { background: linear-gradient(90deg, #4793f5 20%, #ffffff 20%, #ffffff 40%, #4793f5 40%, #4793f5 60%, #ffffff 60%, #ffffff 80%, #4793f5 80%); }
 .juventudunidatandil { background-color: #ffffff; position: relative; }
 .juventudunidatandil::before { content: ""; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: linear-gradient(-45deg, transparent 46%, black 46%, black 54%, transparent 54%); }
+.sarmientopigue { background: linear-gradient(90deg, navy 0%, navy 20%, white 20%, white 40%, navy 40%, navy 60%, white 60%, white 80%, navy 80%, navy 100%); }
+.ferrolavarria { background: linear-gradient(90deg, #87CEEB 0%, #87CEEB 20%, white 20%, white 40%, #87CEEB 40%, #87CEEB 60%, white 60%, white 80%, #87CEEB 80%, #87CEEB 100%); }
+.ferropico { background: linear-gradient(45deg, green 0%, green 40%, white 40%, white 60%, green 60%, green 100%); }
+.estudiantesolavarria { background: linear-gradient(90deg, #000 20%, #fff 20%, #fff 40%, #000 40%, #000 60%, #fff 60%, #fff 80%, #000 80%); }
+.argentino25demayo { background: linear-gradient(90deg, #000 20%, #fbff00 20%, #fbff00 40%, #000 40%, #000 60%, #fbff00 60%, #fbff00 80%, #000 80%); }
+.embajadoresolavarria { background: linear-gradient(to right, #1900ff 0%, #1806bf 33.33%, #007816 33.33%, #007816 66.66%, #1900ff 66.66%, #1806bf 100%); }
+.indeptesancayetano { background: linear-gradient(135deg, #fff 46%, #001f5b 46%, #001f5b 54%, #fff 54%); }
+.ministerio { background: linear-gradient(to bottom, #fff 30%, #003193 30%, #003193 70%, #fff 70%); }
+.quilmesmdp { background: linear-gradient(to right,#E20B28 0%,#E20B28 17%,#000 17%,#000 20%,#fff 20%,#fff 37%,#000 37%,#000 40%,#E20B28 40%,#E20B28 60%,#000 60%,#000 63%,#fff 63%,#fff 80%,#000 80%,#000 83%,#E20B28 83%,#E20B28 100%); }
+.depnorte { background: linear-gradient(90deg, #000 20%, #fbff00 20%, #fbff00 40%, #000 40%, #000 60%, #fbff00 60%, #fbff00 80%, #000 80%); }
+.defvaleriadelmar { background: linear-gradient(to bottom,#fff 0%,#fff 50%,#01F7F4 50%,#01F7F4 100%); }
+.atlvillegas { background: #082148; }
+.santarita { background: linear-gradient(to right,#fff 0%,#fff 50%,#082148 50%,#082148 100%); }
+.fctrenquelauquen { background: linear-gradient(135deg,transparent 0%,transparent 17%,#F10008 17%,#F10008 25%,transparent 25%,transparent 42%,#F10008 42%,#F10008 50%,transparent 50%,transparent 67%,#F10008 67%,#F10008 75%,transparent 75%); }
+.allboyssr { background: linear-gradient(to bottom,#2F257E 0%,#2F257E 35%,#F1E31A 35%,#F1E31A 65%,#2F257E 65%,#2F257E 100%); }
+.allboystrenel { background: linear-gradient(to right,#2F257E 0%,#2F257E 20%,#F1E31A 20%,#F1E31A 40%,#2F257E 40%,#2F257E 60%,#F1E31A 60%,#F1E31A 80%,#2F257E 80%,#2F257E 100%); }
 
 /* ── MERCADO DE PASES ── */
 .mp-visera {
