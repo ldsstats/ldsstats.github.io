@@ -1933,6 +1933,11 @@ function generarHome() {
             {l:"Tiro Federal", v:"Dublin", hora:"22:00", gl:null, gv:null, claseL:"tirofederal", claseV:"dublin",nota:"<b>en cancha de Tiro Federal</b>"}
             ]},
        ]},
+        { id: "2026-08-29", label: "SÁB 29/08", torneos: [
+            { nombre: "REGIONAL FEDERAL AMATEUR FEMENINO - TERCERA RONDA - IDA", cat: "regamateurfem", torLink: "regamateurfem", noAutoResult: true, partidos: [
+            {l:"Ciudad de Olavarría", v:"Villa Mitre", hora:"14:00", gl:null, gv:null, claseL:"ciudadolavarria", claseV:"villamitre",nota:"<b>en cancha de Embajadores</b>"},
+            ]},
+       ]},
     ];
 
     let html = `<div class="mp-visera" onclick="toggleMercadoPasesHome()">
