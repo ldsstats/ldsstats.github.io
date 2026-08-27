@@ -1924,6 +1924,10 @@ function generarHome() {
             ]},
             { nombre: "COPA PAÍS - PRIMERA RONDA", cat: "copapais", torLink: "copapais", noAutoResult: true, partidos: [
             {l:"Liga del Sur", v:"Guatraché", hora:"15:30", gl:null, gv:null, claseL:"ldsbb", claseV:"guatrachepais",nota:"<b>REPROGRAMADO PARA EL MIÉRCOLES 2 DE SEPTIEMBRE POR LA LLUVIA</b>"},
+            {l:"Tinogasta", v:"Catamarca", hora:"15:30", gl:2, gv:5, claseL:"tinogasta", claseV:"catamarcapais",nota:"<b>ZONA CATAMARCA - FECHA 3</b>"},
+            {l:"Laguna Paiva", v:"Paraná", hora:"15:30", gl:1, gv:3, claseL:"lagunapaiva", claseV:"parana",nota:"<b>ZONA LITORAL SUR - IDA</b>"},
+            {l:"San Juan", v:"Albardón", hora:"21:00", gl:null, gv:null, claseL:"sanjuan", claseV:"albardon",nota:"<b>ZONA CUYO - FECHA 3</b>"},
+            {l:"San Jorge", v:"Rafaela", hora:"21:00", gl:null, gv:null, claseL:"sanjorge", claseV:"rafaela",nota:"<b>ZONA LITORAL SUR - IDA: 0-1</b>"},
             ]},
             { nombre: "TORNEO DE SELECCIONES (LIGA DEL SUR) - FECHA 4", cat: "torneoseleccion15", torLink: "torneoseleccion15", noAutoResult: true, partidos: [
             {l:"Necochea", v:"Ayacucho", hora:"15:30", gl:2, gv:0, claseL:"necochea", claseV:"ayacucho",nota:"<b>Zona 2</b>"},
@@ -18707,7 +18711,7 @@ const BD_COPA_PAIS = {
                 { l: "Catamarca", v: "Valle Viejo", fecha: "Miércoles 19 de agosto", gl: 2, gv: 0, goles_l: [], goles_v: [] }
             ]},
             { fecha: 3, libre: "Valle Viejo", partidos: [
-                { l: "Tinogasta", v: "Catamarca", fecha: "Miércoles 26 de agosto", gl: null, gv: null, goles_l: [], goles_v: [] }
+                { l: "Tinogasta", v: "Catamarca", fecha: "Miércoles 26 de agosto", gl: 2, gv: 5, goles_l: [], goles_v: [] }
             ]},
             { fecha: 4, libre: "Catamarca", partidos: [
                 { l: "Tinogasta", v: "Valle Viejo", fecha: "Miércoles 2 de septiembre", gl: null, gv: null, goles_l: [], goles_v: [] }
@@ -18720,9 +18724,9 @@ const BD_COPA_PAIS = {
             ]},
         ],
         posiciones: [
+            { nombre: "Catamarca",  pj:2, pg:2, pe:0, pp:0, gf:7, gc:2, pts:6 },
             { nombre: "Valle Viejo",pj:2, pg:1, pe:0, pp:1, gf:7, gc:3, pts:3 },
-            { nombre: "Catamarca",  pj:1, pg:1, pe:0, pp:0, gf:2, gc:0, pts:3 },
-            { nombre: "Tinogasta",  pj:1, pg:0, pe:0, pp:1, gf:1, gc:7, pts:0 },
+            { nombre: "Tinogasta",  pj:2, pg:0, pe:0, pp:2, gf:3, gc:12, pts:0 },
         ]
     },
 
@@ -18769,8 +18773,8 @@ const BD_COPA_PAIS = {
         titulo: "LITORAL SUR",
         tipo: "eliminatoria",
         partidos: [
-            { ronda: "1° Ronda - P1 (ida)", l: "Laguna Paiva", v: "Paraná", fecha: "Miércoles 19 de agosto", gl: null, gv: null, goles_l: [], goles_v: [] },
-            { ronda: "1° Ronda - P1 (vuelta)", l: "Paraná", v: "Laguna Paiva", fecha: "Miércoles 26 de agosto", gl: null, gv: null, goles_l: [], goles_v: [] },
+            { ronda: "1° Ronda - P1 (ida)", l: "Laguna Paiva", v: "Paraná", fecha: "Miércoles 26 de agosto", gl: 1, gv: 3, goles_l: [], goles_v: [] },
+            { ronda: "1° Ronda - P1 (vuelta)", l: "Paraná", v: "Laguna Paiva", fecha: "Miércoles 02 de septiembre", gl: null, gv: null, goles_l: [], goles_v: [] },
             { ronda: "1° Ronda - P2 (ida)", l: "Rafaela", v: "San Jorge", fecha: "Miércoles 12 de agosto", gl: 1, gv: 0, goles_l: [], goles_v: [], separador: true },
             { ronda: "1° Ronda - P2 (vuelta)", l: "San Jorge", v: "Rafaela", fecha: "Miércoles 26 de agosto", gl: null, gv: null, goles_l: [], goles_v: [] },
         ]
