@@ -317,6 +317,14 @@ tr[onclick]:hover td { background-color: #e8f5e9 !important; }
 .fctrenquelauquen { background: linear-gradient(135deg,transparent 0%,transparent 17%,#F10008 17%,#F10008 25%,transparent 25%,transparent 42%,#F10008 42%,#F10008 50%,transparent 50%,transparent 67%,#F10008 67%,#F10008 75%,transparent 75%); }
 .allboyssr { background: linear-gradient(to bottom,#2F257E 0%,#2F257E 35%,#F1E31A 35%,#F1E31A 65%,#2F257E 65%,#2F257E 100%); }
 .allboystrenel { background: linear-gradient(to right,#2F257E 0%,#2F257E 20%,#F1E31A 20%,#F1E31A 40%,#2F257E 40%,#2F257E 60%,#F1E31A 60%,#F1E31A 80%,#2F257E 80%,#2F257E 100%); }
+.santarosa::before { content: "SR"; color: #000000; font-size: 8px; font-weight: bold; }
+.lomanegra::before { content: "LN"; color: #0181BF; font-size: 8px; font-weight: bold; }
+.racingolavarria { background: #3C3488; }
+.racingolavarria::before { content: "★"; color: #fff; font-size: 9px; position: absolute; top: 2px; left: 0; width: 100%; text-align: center; }
+.villadiazvelez { background: #F75701; }
+.villadiazvelez::before { content: "VDV"; color: #fff; font-size: 5px; font-weight: bold; position: absolute; top: 2px; left: 0; width: 100%; text-align: center; }
+.elfortin { background: #012E95; }
+.elfortin::before { content: "🏰"; font-size: 9px; filter: brightness(0) invert(1); }
 
 /* ── MERCADO DE PASES ── */
 .mp-visera {
