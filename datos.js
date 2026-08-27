@@ -22826,7 +22826,7 @@ function generarTorneoSeleccion15() {
         { n:1, dia:"Mié 5/8",  partidos:[{l:"Olavarría",    v:"Tres Arroyos", lk:"olavarria",  vk:"tresarroyos", gl:0, gv:2}], libre:"Liga del Sur" },
         { n:2, dia:"Mié 12/8", partidos:[{l:"Liga del Sur", v:"Olavarría",    lk:"ldsbb",      vk:"olavarria",   gl:3, gv:0, goles_l:["Theo Barros","Lucio Riaño","Galo Martínez"], goles_v:[]}], libre:"Tres Arroyos" },
         { n:3, dia:"Mié 19/8", partidos:[{l:"Tres Arroyos", v:"Liga del Sur", lk:"tresarroyos",vk:"ldsbb",       gl:2, gv:0}], libre:"Olavarría" },
-        { n:4, dia:"Mié 26/8", partidos:[{l:"Tres Arroyos", v:"Olavarría",    lk:"tresarroyos",vk:"olavarria",   gl:null, gv:null}], libre:"Liga del Sur" },
+        { n:4, dia:"Mié 26/8", partidos:[{l:"Tres Arroyos", v:"Olavarría",    lk:"tresarroyos",vk:"olavarria",   gl:1, gv:2}], libre:"Liga del Sur" },
         { n:5, dia:"Mié 2/9",  partidos:[{l:"Olavarría",    v:"Liga del Sur", lk:"olavarria",  vk:"ldsbb",       gl:null, gv:null}], libre:"Tres Arroyos" },
         { n:6, dia:"Mié 8/9",  partidos:[{l:"Liga del Sur", v:"Tres Arroyos", lk:"ldsbb",      vk:"tresarroyos", gl:null, gv:null}], libre:"Olavarría" },
     ];
