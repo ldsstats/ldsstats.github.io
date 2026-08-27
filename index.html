@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>LdS Stats - 2026</title>
-    <link rel="stylesheet" href="style.css?v=7778">
+    <link rel="stylesheet" href="style.css?v=7">
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#111111">
     <!-- Google Analytics -->
@@ -32,7 +32,7 @@
     z-index: 999;
     pointer-events: none;
     letter-spacing: 0.3px;
-">🕐 Última actualización: Jue 27/08 00:00hs</div>
+">🕐 Última actualización: Jue 27/08 16:45hs</div>
 
 <div id="container-principal">
     <div id="logo-header"><img src="au11.png" style="height:80px;" alt="LdS Stats"></div>
@@ -165,15 +165,15 @@
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-<script src="datos.js?v=7778"></script>
+<script src="datos.js?v=7"></script>
 <script>
     let estado = { torneo: 'home', categoria: '', fecha: 1 };
     let estadoAnterior = { torneo: 'home', categoria: '', fecha: 1 };
 
     // Última actualización por sección — modificar según corresponda
     const ULTIMA_ACT = {
-        default:        "Jue 27/08 00:00hs",
-        home:        "Jue 27/08 00:00hs",
+        default:        "Jue 27/08 16:45hs",
+        home:        "Jue 27/08 16:45hs",
         apertura_oficial:   "Dom 02/08 21:30hs",
         clausura_oficial:   "Dom 23/08 21:00hs",
         historial:   "Jue 27/08 00:00hs",
@@ -292,7 +292,7 @@
         }
         estado.torneo = tor;
         estado.categoria = cat;
-        estado.fecha = (tor === 'apertura' && (cat === 'oficial' || cat === 'promocional')) ? 1 : (tor === 'clausura' && (cat === 'oficial' || cat === 'promocional')) ? 4 : (tor === 'posiciones' && cat === 'federala') ? 18 : (tor === 'apertura' && cat === 'femenino') ? 14 : (tor === 'clausura' && cat === 'femenino') ? 5 : (tor === 'torneo2026' && cat === 'segundafemenino') ? 21 : (tor === 'futsal') ? 4 : (tor === 'futsalreserva') ? 4 : (tor === 'sub15fem') ? 17 : 1; 
+        estado.fecha = (tor === 'apertura' && (cat === 'oficial' || cat === 'promocional')) ? 1 : (tor === 'clausura' && (cat === 'oficial' || cat === 'promocional')) ? 5 : (tor === 'posiciones' && cat === 'federala') ? 18 : (tor === 'apertura' && cat === 'femenino') ? 14 : (tor === 'clausura' && cat === 'femenino') ? 6 : (tor === 'torneo2026' && cat === 'segundafemenino') ? 22 : (tor === 'futsal') ? 5 : (tor === 'futsalreserva') ? 5 : (tor === 'sub15fem') ? 17 : 1; 
         actualizarVista();
         document.documentElement.scrollTop = 0;
         document.body.scrollTop = 0;
@@ -526,7 +526,7 @@
                 cont.innerHTML = generarTablaFederal(estado.etapaFederal || 'nonagonal');
             } else if (estado.torneo === 'reserva') {
                 if (!estado._reservaIniciada || estado._reservaCat !== estado.categoria) {
-                    estado.fecha = (estado.categoria === 'oficial' || estado.categoria === 'promocional') ? 4 : (estado.categoria === 'femenino') ? 5 : (estado.categoria === 'segundafemenino') ? 21 : 1;
+                    estado.fecha = (estado.categoria === 'oficial' || estado.categoria === 'promocional') ? 5 : (estado.categoria === 'femenino') ? 6 : (estado.categoria === 'segundafemenino') ? 22 : 1;
                     estado._reservaIniciada = true;
                     estado._reservaCat = estado.categoria;
                 }

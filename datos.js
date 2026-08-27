@@ -304,7 +304,7 @@ const idaFederal = [
     { fecha: 9, libre: "Alvarado", partidos: [{l:"Germinal", v:"Guillermo Brown", gl:1, gv:1, dia:"Dom 17/05", hora:"15:00", goles_l:["Ignacio Terán"], goles_v:["Patricio Cucchi"]}, {l:"Villa Mitre", v:"Sol de Mayo", gl:2, gv:1, dia:"Dom 17/05", hora:"15:00", goles_l:["Enzo González","Thiago Pérez"], goles_v:["Kevin Pereyra"]}, {l:"Círculo Dep.", v:"Kimberley", gl:0, gv:1, dia:"Dom 17/05", hora:"15:00", goles_l:[], goles_v:["Santiago Castillo"]}, {l:"Santamarina", v:"Olimpo", gl:0, gv:0, dia:"Dom 17/05", hora:"18:10"}] }
 ];
 
-let fechaNonagonal = 5;
+let fechaNonagonal = 6;
 
 function cambiarFechaNonagonal(n) {
     fechaNonagonal = n;
@@ -1167,7 +1167,7 @@ const idaOficialClausura = [
     { fecha: 2,  partidos: [{l:"La Armonía",  v:"Villa Mitre",   gl:0, gv:0, dia:"Dom 09/08", hora:"15:00", goles_l:[], goles_v:[]}, {l:"San Francisco",v:"Libertad",     gl:2, gv:1, dia:"Dom 09/08", hora:"15:00", goles_l:["Alexis Vega","Leonel Romero"], goles_v:["Nelson Avello"]}, {l:"Huracán",     v:"Sporting",      gl:0, gv:0, dia:"Dom 09/08", hora:"15:00", goles_l:[], goles_v:[]}, {l:"Bella Vista", v:"Liniers",       gl:0, gv:0, dia:"Dom 09/08", hora:"15:00", goles_l:[], goles_v:[]}] },
     { fecha: 3,  partidos: [{l:"Sporting",    v:"San Francisco", gl:1, gv:1, dia:"Dom 16/08", hora:"15:30", goles_l:["Erico Walker"], goles_v:["Alexis Vega"]}, {l:"Liniers",     v:"La Armonía",    gl:0, gv:1, dia:"Dom 16/08", hora:"15:30", goles_l:[], goles_v:["Alex Muzi"]}, {l:"Libertad",    v:"Bella Vista",   gl:0, gv:0, dia:"Dom 16/08", hora:"15:30", goles_l:[], goles_v:[]}, {l:"Villa Mitre", v:"Huracán",       gl:2, gv:2, dia:"Dom 16/08", hora:"15:30", goles_l:["Ramiro Gerk","Julián Monteverde"], goles_v:["Eric Lischeske","Agustín Seisdedos"]}] },
     { fecha: 4,  partidos: [{l:"Liniers",     v:"Libertad",      gl:1, gv:1, dia:"Sáb 22/08", hora:"15:30", goles_l:["Joaquín Castro"], goles_v:["Daniel Pékel"]}, {l:"Villa Mitre", v:"San Francisco", gl:0, gv:0, dia:"Dom 23/08", hora:"15:30", goles_l:[], goles_v:[]}, {l:"La Armonía",  v:"Huracán",       gl:2, gv:2, dia:"Dom 23/08", hora:"15:30", goles_l:["Axel Lagos","Julio Acosta"], goles_v:["Iván Agudiak","Leonel Navarro"]}, {l:"Sporting",    v:"Bella Vista",   gl:1, gv:1, dia:"Dom 23/08", hora:"15:30", goles_l:["Jonathan Font"], goles_v:["Matías Mayer"]}] },
-    { fecha: 5,  partidos: [{l:"Bella Vista", v:"Villa Mitre",   gl:null, gv:null}, {l:"Libertad",    v:"Sporting",      gl:null, gv:null}, {l:"San Francisco",v:"La Armonía",    gl:null, gv:null}, {l:"Huracán",     v:"Liniers",       gl:null, gv:null}] },
+    { fecha: 5,  partidos: [{l:"Huracán",     v:"Liniers",       gl:null, gv:null, dia:"Vie 28/08", hora:"19:00", goles_l:[], goles_v:[]}, {l:"Bella Vista", v:"Villa Mitre",   gl:null, gv:null, dia:"Sáb 29/08", hora:"15:30", goles_l:[], goles_v:[]}, {l:"San Francisco",v:"La Armonía",    gl:null, gv:null, dia:"Sáb 29/08", hora:"15:30", goles_l:[], goles_v:[]}, {l:"Libertad",    v:"Sporting",      gl:null, gv:null, dia:"Dom 30/08", hora:"15:30", goles_l:[], goles_v:[]}] },
     { fecha: 6,  partidos: [{l:"Libertad",    v:"Villa Mitre",   gl:null, gv:null}, {l:"San Francisco",v:"Huracán",       gl:null, gv:null}, {l:"Sporting",    v:"Liniers",       gl:null, gv:null}, {l:"Bella Vista", v:"La Armonía",    gl:null, gv:null}] },
     { fecha: 7,  partidos: [{l:"Villa Mitre", v:"Sporting",      gl:null, gv:null}, {l:"Huracán",     v:"Bella Vista",   gl:null, gv:null}, {l:"La Armonía",  v:"Libertad",      gl:null, gv:null}, {l:"Liniers",     v:"San Francisco", gl:null, gv:null}] },
     { fecha: 8,  partidos: [{l:"Huracán",     v:"Libertad",      gl:null, gv:null}, {l:"La Armonía",  v:"Sporting",      gl:null, gv:null}, {l:"San Francisco",v:"Bella Vista",   gl:null, gv:null}, {l:"Villa Mitre",     v:"Liniers",   gl:null, gv:null}] },
@@ -1406,7 +1406,7 @@ const idaPromoClausura = [
     { fecha: 2,  partidos: [{l:"Rosario PB",   v:"Pacífico BB",  gl:0, gv:0, dia:"Sáb 08/08", hora:"15:00", goles_l:[], goles_v:[]}, {l:"Olimpo",      v:"Tiro Federal", gl:3, gv:2, dia:"Sáb 08/08", hora:"15:00", goles_l:["Nahuel Colmenares (2)","Santiago Llanos"], goles_v:["Juan Ignacio Talmón","Rodrigo Belasque"]}, {l:"Sansinena",   v:"Comercial",    gl:2, gv:0, dia:"Sáb 08/08", hora:"15:00", goles_l:["Valentín Moral","Manuel Stortini"], goles_v:[]}, {l:"Pacífico (C)",v:"Dublin",       gl:3, gv:0, dia:"Dom 09/08", hora:"15:00", goles_l:["Marcelo Soto","Juan Pablo Molina","Gianni Ferrari"], goles_v:[]}] },
     { fecha: 3,  partidos: [{l:"Comercial",    v:"Olimpo",       gl:1, gv:1, dia:"Sáb 15/08", hora:"15:00", goles_l:["Alejo Gil"], goles_v:["Felipe Santamarina"]}, {l:"Tiro Federal",v:"Rosario PB",   gl:1, gv:1, dia:"Sáb 15/08", hora:"15:30", goles_l:["Gino Carrozzi"], goles_v:["Agustín Trotta"]}, {l:"Pacífico BB", v:"Pacífico (C)", gl:1, gv:2, dia:"Dom 16/08", hora:"15:30", goles_l:["Lisandro Muzi"], goles_v:["Juan Pablo Molina (2)"]}, {l:"Sansinena",   v:"Dublin",       gl:2, gv:2, dia:"Lun 17/08", hora:"15:30", goles_l:["Marcelo Leal","Santiago Somovilla"], goles_v:["Gerónimo Fernández (2)"]}] },
     { fecha: 4,  partidos: [{l:"Comercial",    v:"Dublin",       gl:3, gv:2, dia:"Sáb 22/08", hora:"15:30", goles_l:["Santiago Giorgis","Alejo Gil","Fernando Kessler"], goles_v:["Nahuel Cornou (2)"]}, {l:"Tiro Federal",v:"Pacífico (C)", gl:2, gv:2, dia:"Sáb 22/08", hora:"15:30", goles_l:["Joaquín Laborde","Gino Carrozzi"], goles_v:["Gianni Ferrari (2)"]}, {l:"Olimpo",      v:"Rosario PB",   gl:1, gv:1, dia:"Dom 23/08", hora:"11:00", goles_l:["Fabricio Ibarra"], goles_v:["Nicolás Ovando"]}, {l:"Pacífico BB", v:"Sansinena",    gl:1, gv:1, dia:"Dom 23/08", hora:"15:30", goles_l:["Javier Maciel"], goles_v:["Manuel Stortini"]}] },
-    { fecha: 5,  partidos: [{l:"Rosario PB",   v:"Comercial",    gl:null, gv:null}, {l:"Sansinena",   v:"Tiro Federal", gl:null, gv:null}, {l:"Pacífico (C)",v:"Olimpo",       gl:null, gv:null}, {l:"Dublin",      v:"Pacífico BB",  gl:null, gv:null}] },
+    { fecha: 5,  partidos: [{l:"Rosario PB",   v:"Comercial",    gl:null, gv:null, dia:"Sáb 29/08", hora:"15:30", goles_l:[], goles_v:[]}, {l:"Pacífico (C)",v:"Olimpo",       gl:null, gv:null, dia:"Sáb 29/08", hora:"15:30", goles_l:[], goles_v:[]}, {l:"Dublin",      v:"Pacífico BB",  gl:null, gv:null, dia:"Dom 30/08", hora:"15:30", goles_l:[], goles_v:[]}, {l:"Sansinena",   v:"Tiro Federal", gl:null, gv:null, dia:"Dom 30/08", hora:"15:30", goles_l:[], goles_v:[]}] },
     { fecha: 6,  partidos: [{l:"Dublin",       v:"Tiro Federal", gl:null, gv:null}, {l:"Pacífico (C)",v:"Rosario PB",   gl:null, gv:null}, {l:"Sansinena",   v:"Olimpo",       gl:null, gv:null}, {l:"Pacífico BB", v:"Comercial",    gl:null, gv:null}] },
     { fecha: 7,  partidos: [{l:"Olimpo",       v:"Dublin",       gl:null, gv:null}, {l:"Tiro Federal",v:"Pacífico BB",  gl:null, gv:null}, {l:"Comercial",   v:"Pacífico (C)", gl:null, gv:null}, {l:"Rosario PB",  v:"Sansinena",    gl:null, gv:null}] },
     { fecha: 8,  partidos: [{l:"Olimpo",       v:"Pacífico BB",  gl:null, gv:null}, {l:"Pacífico (C)",v:"Sansinena",    gl:null, gv:null}, {l:"Dublin",  v:"Rosario PB",       gl:null, gv:null}, {l:"Comercial",   v:"Tiro Federal", gl:null, gv:null}] },
@@ -1946,6 +1946,9 @@ function generarHome() {
             ]},
        ]},
         { id: "2026-08-28", label: "VIE 28/08", torneos: [
+            { nombre: "OFICIAL - CLAUSURA - 5°FECHA", cat: "oficial", torLink: "oficial", noAutoResult: true, partidos: [
+            {l:"Huracán", v:"Liniers", hora:"19:00", gl:null, gv:null, claseL:"huracan", claseV:"liniers"},
+            ]},
             { nombre: "FUTSAL - FECHA 5", cat: "torneoseleccion15", torLink: "torneoseleccion15", noAutoResult: true, partidos: [
             {l:"Villa Mitre", v:"San Francisco", hora:"22:00", gl:null, gv:null, claseL:"villamitre", claseV:"sanfrancisco",nota:"<b>en cancha de Don Bosco</b>"},
             {l:"Los 3 Chiflados", v:"Petroquímicos", hora:"22:00", gl:null, gv:null, claseL:"los3chiflados", claseV:"petroquimicos",nota:"<b>en cancha de La Curtiembre</b>"},
@@ -1953,6 +1956,14 @@ function generarHome() {
             ]},
        ]},
         { id: "2026-08-29", label: "SÁB 29/08", torneos: [
+            { nombre: "OFICIAL - CLAUSURA - 5°FECHA", cat: "oficial", torLink: "oficial", noAutoResult: true, partidos: [
+            {l:"Bella Vista", v:"Villa Mitre", hora:"15:30", gl:null, gv:null, claseL:"bellavista", claseV:"villamitre"},
+            {l:"San Francisco", v:"La Armonía", hora:"15:30", gl:null, gv:null, claseL:"sanfrancisco", claseV:"laarmonia"},
+            ]},
+            { nombre: "PROMOCIONAL - CLAUSURA - 5°FECHA", cat: "oficial", torLink: "oficial", noAutoResult: true, partidos: [
+            {l:"Pacífico (C)", v:"Olimpo", hora:"15:30", gl:null, gv:null, claseL:"pacificoc", claseV:"olimpo"},
+            {l:"Rosario PB", v:"Comercial", hora:"15:30", gl:null, gv:null, claseL:"rosariopb", claseV:"comercial"},
+            ]},
             { nombre: "REGIONAL FEDERAL AMATEUR FEMENINO - TERCERA RONDA - IDA", cat: "regamateurfem", torLink: "regamateurfem", noAutoResult: true, partidos: [
             {l:"Ciudad de Olavarría", v:"Villa Mitre", hora:"14:00", gl:null, gv:null, claseL:"ciudadolavarria", claseV:"villamitre",nota:"<b>en cancha de Embajadores</b>"},
             ]},
@@ -1962,6 +1973,13 @@ function generarHome() {
             ]},
        ]},
         { id: "2026-08-30", label: "DOM 30/08", torneos: [
+            { nombre: "OFICIAL - CLAUSURA - 5°FECHA", cat: "oficial", torLink: "oficial", noAutoResult: true, partidos: [
+            {l:"Libertad", v:"Sporting", hora:"15:30", gl:null, gv:null, claseL:"libertad", claseV:"sporting"},
+            ]},
+            { nombre: "PROMOCIONAL - CLAUSURA - 5°FECHA", cat: "oficial", torLink: "oficial", noAutoResult: true, partidos: [
+            {l:"Sansinena", v:"Tiro Federal", hora:"15:30", gl:null, gv:null, claseL:"sansinena", claseV:"tirofederal"},
+            {l:"Pacífico BB", v:"Dublin", hora:"15:30", gl:null, gv:null, claseL:"dublin", claseV:"pacificobb",nota:"Cambio de localía - El Ministerio de Seguridad no habilitó la cancha de Dublin"},
+            ]},
             { nombre: "REGIONAL FEDERAL AMATEUR - PRIMERA RONDA - 1°FECHA", cat: "regamateurfem", torLink: "regamateurfem", noAutoResult: true, partidos: [
             {l:"Huracán de White", v:"Sarmiento de Pigué", hora:"15:30", gl:null, gv:null, claseL:"huracan", claseV:"sarmientopigue",nota:"<b>Zona 3</b>"},
             {l:"Ferro de Pico", v:"All Boys (Trenel)", hora:"15:30", gl:null, gv:null, claseL:"ferropico", claseV:"allboystrenel",nota:"<b>Zona 1</b>"},
@@ -20484,7 +20502,7 @@ function navegarPerfilGoleadorClausura(cat, jugador, equipo, origen, totalOverri
     html += `<div style="display:flex;align-items:center;gap:10px;padding:10px 14px;background:#f0f7f0;border-bottom:1px solid #c8e6c9;">
         <div class="escudo ${escudo}"></div>
         <div><div style="font-size:13px;font-weight:bold;">${equipo}</div>
-        <div style="font-size:11px;color:#555;">${totalMostrar} gol${totalMostrar!==1?'es':''} ${etiquetaMostrar}</div></div>
+        <div style="font-size:11px;color:#555;">${totalMostrar} gol${totalMostrar!==1?'es':''} en contra ${etiquetaMostrar}</div></div>
     </div>`;
     const partidos = g.partidos || [];
     if (partidos.length === 0) {
@@ -20506,8 +20524,7 @@ function navegarPerfilGoleadorClausura(cat, jugador, equipo, origen, totalOverri
                     <div class="escudo ${escRival}" style="flex-shrink:0;"></div>
                     <span>${p.condicion === 'Local' ? 'vs' : 'en'} ${p.rival}</span>
                 </div>
-                <div style="width:40px;text-align:center;font-size:11px;">${p.gl}-${p.gv}</div>
-                <div style="width:30px;text-align:center;font-weight:bold;">${p.goles}</div>
+                <div style="width:40px;text-align:center;font-size:11px;">${p.gl}-${p.gv}</div>                <div style="width:50px;text-align:center;font-weight:bold;font-size:10px;">${p.goles} (e/c)</div>
             </div>`;
         });
         html += `</div>`;
@@ -20635,6 +20652,14 @@ if (torneo === 'total') {
             golesTotal[key].n += g.goles;
         });
 
+        const ecClausuraTotal = cat === 'oficial' ? BD_EC_CLAUSURA_OFICIAL : BD_EC_CLAUSURA_PROMOCIONAL;
+        (ecClausuraTotal || []).forEach(g => {
+            const key = resolverKeyCat(g.jugador, g.equipo);
+            const equipo = resolverEquipoCat(g.jugador, g.equipo);
+            if (!ecTotal[key]) ecTotal[key] = { jugador: g.jugador, equipo, n: 0, origen: 'clausura' };
+            ecTotal[key].n += g.goles;
+        });
+
         const listaTotal = Object.values(golesTotal).sort((a,b) => b.n - a.n || a.equipo.localeCompare(b.equipo) || a.jugador.localeCompare(b.jugador));
         const listaECTotal = Object.values(ecTotal).sort((a,b) => b.n - a.n || a.equipo.localeCompare(b.equipo) || a.jugador.localeCompare(b.jugador));
 
@@ -20648,7 +20673,7 @@ if (torneo === 'total') {
                 style="font-size:10px;padding:4px 12px;border:1px solid #1a4a2e;border-radius:12px;cursor:pointer;font-weight:bold;background:#1a4a2e;color:#fff;">Total</button>
         </div>`;
 
-        const renderTablaTotalCat = (titulo, datos) => {
+        const renderTablaTotalCat = (titulo, datos, esEC) => {
             if (datos.length === 0) return '';
             let h = `<div class="header-t">${titulo}</div><table>
             <thead><tr>
@@ -20670,7 +20695,9 @@ if (torneo === 'total') {
                 });
                 const jugNorm = g.jugador.replace(/'/g, "\\'");
                 const eqNorm = g.equipo.split(' / ').pop().replace(/'/g, "\\'");
-                const clickFn = g.origen === 'clausura' ? `navegarPerfilGoleadorClausura('${cat}','${jugNorm}','${eqNorm}','total',${g.n})` : `verPerfilJugador('${jugNorm}','${eqNorm}','total',${g.n},'${cat}')`;
+                const clickFn = g.origen === 'clausura'
+                    ? (esEC ? `navegarPerfilECClausura('${cat}','${jugNorm}','${eqNorm}','total',${g.n})` : `navegarPerfilGoleadorClausura('${cat}','${jugNorm}','${eqNorm}','total',${g.n})`)
+                    : `verPerfilJugador('${jugNorm}','${eqNorm}','total',${g.n},'${cat}')`;
                 h += `<tr>
                     <td class="c-pos">${pos}</td>
                     <td style="text-align:left;padding-left:8px;font-size:12px;cursor:pointer;color:#00331a;font-weight:bold;" onclick="${clickFn}">${g.jugador} ▶</td>
@@ -20682,8 +20709,8 @@ if (torneo === 'total') {
         };
 
         return tabsHtmlTotal +
-               renderTablaTotalCat(`GOLEADORES — ${catLabelTotal} (TOTAL)`, listaTotal) +
-               renderTablaTotalCat(`GOLES EN CONTRA — ${catLabelTotal} (TOTAL)`, listaECTotal);
+               renderTablaTotalCat(`GOLEADORES — ${catLabelTotal} (TOTAL)`, listaTotal, false) +
+               renderTablaTotalCat(`GOLES EN CONTRA — ${catLabelTotal} (TOTAL)`, listaECTotal, true);
     }
     const ap = BD_FIXTURES[cat].apertura.flatMap(f => f.partidos);
     partidos = ap;
