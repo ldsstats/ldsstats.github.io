@@ -1933,7 +1933,7 @@ function generarHome() {
             {l:"Necochea", v:"Ayacucho", hora:"15:30", gl:2, gv:0, claseL:"necochea", claseV:"ayacucho",nota:"<b>Zona 2</b>"},
             {l:"Pehuajó", v:"Guatraché", hora:"15:30", gl:2, gv:0, claseL:"pehuajo", claseV:"guatrache",nota:"<b>Zona 4 - Fecha 3</b>"},
             {l:"Tres Arroyos", v:"Olavarría", hora:"16:30", gl:1, gv:2, claseL:"tresarroyos", claseV:"olavarria",nota:"<b>Zona 1 (Liga del Sur tiene fecha libre)</b>"},
-            {l:"General Madariaga", v:"Dolores", hora:"20:00", gl:null, gv:null, claseL:"madariaga", claseV:"dolores",nota:"<b>Zona 3</b>"}
+            {l:"General Madariaga", v:"Dolores", hora:"20:00", gl:1, gv:0, claseL:"madariaga", claseV:"dolores",nota:"<b>Zona 3</b>"}
             ]},
             { nombre: "SUB 13, 15 Y 17 - FECHA 12", cat: "sub131517", torLink: "sub131517", noAutoResult: true, partidos: [
             {l:"Santamarina", v:"Villa Mitre", hora:"10:00", gl:0, gv:9, claseL:"santamarina", claseV:"villamitre",nota:"<b>EL RESULTADO EQUIVALE A LOS PUNTOS SACADOS POR CADA EQUIPO</b>"},
@@ -22844,9 +22844,9 @@ function generarTorneoSeleccion15() {
             { nombre:"Ayacucho",          key:"ayacucho",       pj:4,pg:0,pe:1,pp:3,gf:4,gc:10,pts:1 },
         ]},
         { label:"ZONA 3", equipos:[
-            { nombre:"General Madariaga", key:"madariaga",      pj:2,pg:2,pe:0,pp:0,gf:4,gc:1,pts:6 },
+            { nombre:"General Madariaga", key:"madariaga",      pj:3,pg:3,pe:0,pp:0,gf:5,gc:1,pts:9 },
             { nombre:"La Costa",          key:"lacosta",        pj:2,pg:0,pe:1,pp:2,gf:0,gc:2,pts:1 },
-            { nombre:"Dolores",           key:"dolores",        pj:2,pg:0,pe:1,pp:1,gf:1,gc:2,pts:1 },
+            { nombre:"Dolores",           key:"dolores",        pj:3,pg:0,pe:1,pp:2,gf:1,gc:3,pts:1 },
         ]},
         { label:"ZONA 4", equipos:[
             { nombre:"Trenque Lauquen",   key:"trenquelauquen", pj:2,pg:2,pe:0,pp:0,gf:5,gc:0,pts:6 },
