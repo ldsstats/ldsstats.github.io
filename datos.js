@@ -1135,10 +1135,10 @@ BD_FIXTURES.federala.nonagonal = [
         { l: "Cipolletti", v: "Atenas de Río Cuarto", gl: 2, gv: 2, dia:"Dom 23/08", hora:"15:30", goles_l:["Martín Peralta","Nicolás Trejo"], goles_v:["Alejo Mainero","Facundo Quiroga"] },
     ], libre: "Huracán Las Heras" },
     { fecha: 6, partidos: [
-        { l: "Villa Mitre", v: "Huracán Las Heras", gl: null, gv: null },
-        { l: "Atenas de Río Cuarto", v: "Olimpo", gl: null, gv: null },
-        { l: "Kimberley", v: "Alvarado", gl: null, gv: null },
-        { l: "Argentino de Monte Maíz", v: "Juventud Antoniana", gl: null, gv: null }
+        { l: "Kimberley", v: "Alvarado", gl: null, gv: null, dia:"Dom 28/08", hora:"15:00", goles_l:[], goles_v:[] },
+        { l: "Villa Mitre", v: "Huracán Las Heras", gl: null, gv: null, dia:"Dom 28/08", hora:"15:30", goles_l:[], goles_v:[] },
+        { l: "Argentino de Monte Maíz", v: "Juventud Antoniana", gl: null, gv: null, dia:"Dom 28/08", hora:"15:45", goles_l:[], goles_v:[] },
+        { l: "Atenas de Río Cuarto", v: "Olimpo", gl: null, gv: null, dia:"Dom 28/08", hora:"16:30", goles_l:[], goles_v:[] },
     ], libre: "Cipolletti" },
     { fecha: 7, partidos: [
         { l: "Cipolletti", v: "Olimpo", gl: null, gv: null },
@@ -2005,6 +2005,12 @@ function generarHome() {
             { nombre: "SUB-15 FEMENINO - FECHA 18", cat: "sub15fem", torLink: "sub15fem", noAutoResult: true, partidos: [
             {l:"San Francisco", v:"Libertad", hora:"11:00", gl:null, gv:null, claseL:"sanfrancisco", claseV:"libertad"},
             {l:"La Armonía", v:"Empleados de Comercio", hora:"13:00", gl:null, gv:null, claseL:"laarmonia", claseV:"empleados"},
+            ]},
+            { nombre: "FEDERAL A - NONAGONAL - FECHA 6", cat: "federala", torLink: "federala", noAutoResult: true, partidos: [
+            {l:"Kimberley", v:"Alvarado", hora:"15:00", gl:null, gv:null, claseL:"kimberley", claseV:"alvarado"},
+            {l:"Villa Mitre", v:"Huracán Las Heras", hora:"15:30", gl:null, gv:null, claseL:"villamitre", claseV:"huracanlh"},
+            {l:"Argentino de Monte Maíz", v:"Juventud Antoniana", hora:"15:45", gl:null, gv:null, claseL:"argmontemaiz", claseV:"jantoniana"},
+            {l:"Atenas de Río Cuarto", v:"Olimpo", hora:"16:30", gl:null, gv:null, claseL:"atenasrc", claseV:"olimpo"},
             ]},
             { nombre: "REGIONAL FEDERAL AMATEUR - PRIMERA RONDA - 1°FECHA", cat: "regamateurfem", torLink: "regamateurfem", noAutoResult: true, partidos: [
             {l:"Huracán de White", v:"Sarmiento de Pigué", hora:"15:30", gl:null, gv:null, claseL:"huracan", claseV:"sarmientopigue",nota:"<b>Zona 3</b>"},
