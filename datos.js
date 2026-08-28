@@ -1250,10 +1250,10 @@ BD_FIXTURES.oficial.reserva.push(
         {l:"Sporting",   v:"Bella Vista",   gl:1,   gv:1}
     ]},
     { fecha: 5, partidos: [
+        {l:"Huracán",   v:"Liniers",   gl:1,   gv:1},
         {l:"Bella Vista",   v:"Villa Mitre",   gl:null,   gv:null},
-        {l:"Libertad",   v:"Sporting",   gl:null,   gv:null},
         {l:"San Francisco",   v:"La Armonía",   gl:null,   gv:null},
-        {l:"Huracán",   v:"Liniers",   gl:null,   gv:null}
+        {l:"Libertad",   v:"Sporting",   gl:null,   gv:null}
     ]},
     { fecha: 6, partidos: [
         {l:"Libertad",   v:"Villa Mitre",   gl:null, gv:null},
@@ -1952,7 +1952,7 @@ function generarHome() {
             { nombre: "FUTSAL - FECHA 5", cat: "futsal", torLink: "futsal", noAutoResult: true, partidos: [
             {l:"Villa Mitre", v:"San Francisco", hora:"22:00", gl:null, gv:null, claseL:"villamitre", claseV:"sanfrancisco",nota:"<b>en cancha de Don Bosco</b>"},
             {l:"Los 3 Chiflados", v:"Petroquímicos", hora:"22:00", gl:null, gv:null, claseL:"los3chiflados", claseV:"petroquimicos",nota:"<b>en cancha de La Curtiembre</b>"},
-            {l:"Tiro Federal", v:"Dublin", hora:"22:00", gl:null, gv:null, claseL:"tirofederal", claseV:"dublin",nota:"<b>en cancha de Tiro Federal</b>"}
+            {l:"Tiro Federal", v:"Dublin", hora:"22:30", gl:null, gv:null, claseL:"tirofederal", claseV:"dublin",nota:"<b>en cancha de Tiro Federal</b>"}
             ]},
        ]},
         { id: "2026-08-29", label: "SÁB 29/08", torneos: [
@@ -16411,6 +16411,7 @@ const BD_H2H = {
         { fecha: "Apertura 2026 - Fecha 11", torneo: "futsal", l: "Huracán", v: "Liniers", gl: 0, gv: 1 },
         { fecha: "Apertura 2026 - Fecha 11", torneo: "futsalreserva", l: "Huracán", v: "Liniers", gl: 0, gv: 1 },
         { fecha: "Fecha 20 - Torneo 2026 - 15 ago", torneo: "segundafemenino", l: "Liniers", v: "Huracán", gl: 8, gv: 1, goles_l: ["Paz Cutrín (3)","María Paz Marino (2)","Paulina Acevedo (2)","Victoria Sánchez"], goles_v: ["Keila Iglesias"] },
+        { fecha: "Fecha 5 - Clausura 2026", torneo: "reserva_oficial", l: "Huracán", v: "Liniers", gl: 1, gv: 1 },
     ],
     "Estrella de Oro|San Francisco": [
         { fecha: "Fecha 2 - Torneo 2026 - 29 mar", torneo: "segundafemenino", l: "Estrella de Oro", v: "San Francisco", gl: 3, gv: 3, goles_l: ["Costanza Franco (2)","Mariana González"], goles_v: ["Clara Iturrioz (2)","Ailín Randisi"] },
@@ -17497,10 +17498,10 @@ function generarReserva(cat) {
                        {n:"Sporting <b>(A)</b>",      cl:"sporting",     pj:4, pg:2, pe:2, pp:0, gf:7, gc:5, pts:8},
                        {n:"Villa Mitre",   cl:"villamitre",   pj:4, pg:2, pe:1, pp:1, gf:8, gc:10, pts:7},
                        {n:"La Armonía",    cl:"laarmonia",    pj:4, pg:1, pe:2, pp:1, gf:6, gc:6, pts:5},
-                       {n:"Liniers",       cl:"liniers",      pj:4, pg:2, pe:0, pp:2, gf:4, gc:2, pts:3},
+                       {n:"Liniers",       cl:"liniers",      pj:5, pg:2, pe:1, pp:2, gf:5, gc:3, pts:4},
                        {n:"Libertad",      cl:"libertad",     pj:4, pg:1, pe:0, pp:3, gf:6, gc:6, pts:3},
                        {n:"San Francisco", cl:"sanfrancisco", pj:4, pg:1, pe:10, pp:2, gf:6, gc:7, pts:4},
-                       {n:"Huracán",       cl:"huracan",      pj:4, pg:0, pe:1, pp:3, gf:8, gc:13, pts:1}],
+                       {n:"Huracán",       cl:"huracan",      pj:5, pg:0, pe:2, pp:3, gf:9, gc:14, pts:2}],
         'promocional':[
                        {n:"Olimpo <b>(A)</b>",              cl:"olimpo",           pj:3, pg:3, pe:0, pp:0, gf:8, gc:3, pts:9},
                        {n:"Sansinena",           cl:"sansinena",        pj:3, pg:2, pe:0, pp:1, gf:9, gc:4, pts:6},
