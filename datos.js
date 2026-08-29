@@ -483,7 +483,7 @@ const BD_FIXTURES_FUTSAL_RESERVA = [
     { fecha: 5, partidos: [
         {l:"Pacífico BB",       v:"Catamarca",     gl:3, gv:5},
         {l:"La Estación",         v:"Liniers",     gl:6, gv:8},
-        {l:"Tiro Federal",          v:"Dublin",     gl:null, gv:null},
+        {l:"Tiro Federal",          v:"Dublin",     gl:1, gv:1},
         {l:"Villa Mitre",   v:"San Francisco",     gl:5, gv:2},
         {l:"Los 3 Chiflados",   v:"Petroquímicos",     gl:null, gv:null},
         {l:"Dep. Futsal",     v:"Comercial",     gl:null, gv:null},
@@ -603,7 +603,7 @@ const BD_FIXTURES_FUTSAL = [
     { fecha: 5, partidos: [
         {l:"Pacífico BB",       v:"Catamarca",     gl:5, gv:3},
         {l:"La Estación",         v:"Liniers",     gl:6, gv:1},
-        {l:"Tiro Federal",          v:"Dublin",     gl:null, gv:null},
+        {l:"Tiro Federal",          v:"Dublin",     gl:2, gv:1},
         {l:"Villa Mitre",   v:"San Francisco",     gl:null, gv:null},
         {l:"Los 3 Chiflados",   v:"Petroquímicos",     gl:null, gv:null},
         {l:"Dep. Futsal",     v:"Comercial",     gl:null, gv:null},
@@ -1952,7 +1952,7 @@ function generarHome() {
             { nombre: "FUTSAL - FECHA 5", cat: "futsal", torLink: "futsal", noAutoResult: true, partidos: [
             {l:"Villa Mitre", v:"San Francisco", hora:"22:00", gl:5, gv:3, claseL:"villamitre", claseV:"sanfrancisco",nota:"<b>en cancha de Don Bosco</b>"},
             {l:"Los 3 Chiflados", v:"Petroquímicos", hora:"22:00", gl:null, gv:null, claseL:"los3chiflados", claseV:"petroquimicos",nota:"<b>en cancha de La Curtiembre</b>"},
-            {l:"Tiro Federal", v:"Dublin", hora:"22:30", gl:null, gv:null, claseL:"tirofederal", claseV:"dublin",nota:"<b>en cancha de Tiro Federal</b>"}
+            {l:"Tiro Federal", v:"Dublin", hora:"22:30", gl:2, gv:1, claseL:"tirofederal", claseV:"dublin",nota:"<b>en cancha de Tiro Federal</b>"}
             ]},
        ]},
         { id: "2026-08-29", label: "SÁB 29/08", torneos: [
@@ -16972,6 +16972,8 @@ const BD_H2H = {
     "Dublin|Tiro Federal": [
         { fecha: "Apertura 2026 - Fecha 5", torneo: "futsal", l: "Dublin", v: "Tiro Federal", gl: 3, gv: 1 },
         { fecha: "Apertura 2026 - Fecha 5", torneo: "futsalreserva", l: "Dublin", v: "Tiro Federal", gl: 1, gv: 1 },
+        { fecha: "Clausura 2026 - Fecha 5", torneo: "futsal", l: "Tiro Federal", v: "Dublin", gl: 2, gv: 1 },
+        { fecha: "Clausura 2026 - Fecha 5", torneo: "futsalreserva", l: "Tiro Federal", v: "Dublin", gl: 1, gv: 1 },
         { fecha: "Fecha 6 - Apertura 2026 - 18 abr 2026", torneo: "promocional", l: "Dublin", v: "Tiro Federal", gl: 1, gv: 0, goles_l: ["Marcos Pérez"], goles_v: [] },
         { fecha: "Fecha 6 - Apertura 2026", torneo: "reserva_promocional", l: "Dublin", v: "Tiro Federal", gl: 2, gv: 3 },
         { fecha: "Fecha 13 - Apertura 2026 - 20 jun 2026", torneo: "promocional", l: "Tiro Federal", v: "Dublin", gl: 4, gv: 0, goles_l: ["Franco Fraysse","Tiago Papalardo","Mariano McCoubrey","Francisco Vallejos (e/c)"], goles_v: [] },
@@ -17788,10 +17790,10 @@ const BD_POS_FUTSAL = {
         {n:"Villa Mitre",     cl:"villamitre",    pj:5,pg:3,pe:1,pp:1,gf:21, gc:21, pts:10},
         {n:"San Francisco",   cl:"sanfrancisco",    pj:5,pg:3,pe:0,pp:2,gf:7, gc:12, pts:9},
         {n:"Petroquímicos",   cl:"petroquimicos",    pj:4,pg:3,pe:0,pp:1,gf:10, gc:8, pts:9},
-        {n:"Tiro Federal",    cl:"tirofederal",    pj:4,pg:2,pe:0,pp:2,gf:12, gc:12, pts:6},
+        {n:"Tiro Federal",    cl:"tirofederal",    pj:5,pg:3,pe:0,pp:2,gf:14, gc:13, pts:9},
         {n:"Pacífico BB",     cl:"pacificobb",    pj:5,pg:1,pe:1,pp:3,gf:21, gc:26, pts:4},
         {n:"Liniers",         cl:"liniers",    pj:5,pg:1,pe:0,pp:4,gf:11, gc:18, pts:3},
-        {n:"Dublin",          cl:"dublin",    pj:4,pg:0,pe:0,pp:4,gf:10, gc:19, pts:0},
+        {n:"Dublin",          cl:"dublin",    pj:5,pg:0,pe:0,pp:5,gf:11, gc:21, pts:0},
         {n:"Catamarca",       cl:"catamarca",    pj:4,pg:0,pe:0,pp:4,gf:10, gc:30, pts:0},
         {n:"<s>Dep. Futsal</s> <b>(-)</b>",     cl:"depfutsal",    pj:0,pg:0,pe:0,pp:0,gf:0, gc:0, pts:0},
         {n:"<s>Huracán</s> <b>(-)</b>",         cl:"huracan",    pj:0,pg:0,pe:0,pp:0,gf:0, gc:0, pts:0}
@@ -17806,9 +17808,9 @@ const BD_POS_FUTSAL = {
         {n:"Comercial",       cl:"comercial",    pj:5,pg:2,pe:1,pp:2,gf:8, gc:12, pts:7},
         {n:"Catamarca",       cl:"catamarca",    pj:5,pg:2,pe:1,pp:2,gf:17, gc:22, pts:7},
         {n:"San Francisco",   cl:"sanfrancisco",    pj:5,pg:2,pe:0,pp:3,gf:7, gc:18, pts:6},
-        {n:"Dublin",          cl:"dublin",    pj:4,pg:1,pe:0,pp:3,gf:11, gc:15, pts:3},
+        {n:"Dublin",          cl:"dublin",    pj:5,pg:1,pe:1,pp:3,gf:12, gc:16, pts:4},
         {n:"Pacífico BB",     cl:"pacificobb",    pj:5,pg:1,pe:0,pp:4,gf:9, gc:17, pts:3},
-        {n:"Tiro Federal",    cl:"tirofederal",    pj:4,pg:0,pe:0,pp:4,gf:7, gc:13, pts:0},
+        {n:"Tiro Federal",    cl:"tirofederal",    pj:5,pg:0,pe:1,pp:4,gf:8, gc:14, pts:1},
         {n:"<s>Dep. Futsal</s> <b>(-)</b>",     cl:"depfutsal",    pj:0,pg:0,pe:0,pp:0,gf:0, gc:0, pts:0},
         {n:"<s>Huracán</s> <b>(-)</b>",         cl:"huracan",    pj:0,pg:0,pe:0,pp:0,gf:0, gc:0, pts:0}
     ]
@@ -17956,12 +17958,12 @@ const BD_GOLEADORES_FUTSAL = [
 
     { club: "Villa Mitre",     clase: "villamitre",    act: null,       goleadores: [] },
 
-    { club: "Tiro Federal", clase: "tirofederal",    act: "fecha 4",       goleadores: [
-    { nombre: "Alejandro Saldívar",          equipo: "Tiro Federal",   goles: 3 },
+    { club: "Tiro Federal", clase: "tirofederal",    act: "fecha 5",       goleadores: [
+    { nombre: "Alejandro Saldívar",          equipo: "Tiro Federal",   goles: 4 },
     { nombre: "Bruno Cronier",          equipo: "Tiro Federal",   goles: 2 },
     { nombre: "Nicolás Romano",          equipo: "Tiro Federal",   goles: 2 },
     { nombre: "Iñaki Iriarte",          equipo: "Tiro Federal",   goles: 2 },
-    { nombre: "Franco Gesto",          equipo: "Tiro Federal",   goles: 1 },
+    { nombre: "Franco Gesto",          equipo: "Tiro Federal",   goles: 2 },
     { nombre: "Marcelo Aguirre",          equipo: "Tiro Federal",   goles: 1 },
 ] },
 
