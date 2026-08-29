@@ -1950,7 +1950,7 @@ function generarHome() {
             {l:"Huracán", v:"Liniers", hora:"19:00", gl:1, gv:0, claseL:"huracan", claseV:"liniers"},
             ]},
             { nombre: "FUTSAL - FECHA 5", cat: "futsal", torLink: "futsal", noAutoResult: true, partidos: [
-            {l:"Villa Mitre", v:"San Francisco", hora:"22:00", gl:null, gv:null, claseL:"villamitre", claseV:"sanfrancisco",nota:"<b>en cancha de Don Bosco</b>"},
+            {l:"Villa Mitre", v:"San Francisco", hora:"22:00", gl:5, gv:3, claseL:"villamitre", claseV:"sanfrancisco",nota:"<b>en cancha de Don Bosco</b>"},
             {l:"Los 3 Chiflados", v:"Petroquímicos", hora:"22:00", gl:null, gv:null, claseL:"los3chiflados", claseV:"petroquimicos",nota:"<b>en cancha de La Curtiembre</b>"},
             {l:"Tiro Federal", v:"Dublin", hora:"22:30", gl:null, gv:null, claseL:"tirofederal", claseV:"dublin",nota:"<b>en cancha de Tiro Federal</b>"}
             ]},
@@ -16658,7 +16658,7 @@ const BD_H2H = {
         { fecha: "Apertura 2026 - Fecha 14", torneo: "sub15fem", l: "Villa Mitre", v: "San Francisco", gl: 3, gv: 0 },
         { fecha: "Apertura 2026 - Fecha 5", torneo: "futsal", l: "San Francisco", v: "Villa Mitre", gl: 2, gv: 2 },
         { fecha: "Apertura 2026 - Fecha 5", torneo: "futsalreserva", l: "San Francisco", v: "Villa Mitre", gl: 2, gv: 4 },
-
+        { fecha: "Clausura 2026 - Fecha 5", torneo: "futsal", l: "Villa Mitre", v: "San Francisco", gl: 5, gv: 3 },
         { fecha: "Clausura 2026 - Fecha 5", torneo: "futsalreserva", l: "Villa Mitre", v: "San Francisco", gl: 5, gv: 2 },
         { fecha: "Fecha 4 - Clausura 2026 - 23 ago", torneo: "oficial", l: "Villa Mitre", v: "San Francisco", gl: 0, gv: 0, goles_l: [], goles_v: [] },
         { fecha: "Fecha 4 - Clausura 2026", torneo: "reserva_oficial", l: "Villa Mitre", v: "San Francisco", gl: 2, gv: 2 },
@@ -17785,9 +17785,9 @@ const BD_POS_FUTSAL = {
         {n:"La Esperanza",    cl:"laesperanza",    pj:5,pg:5,pe:0,pp:0,gf:21, gc:7, pts:15},
         {n:"Los 3 Chiflados", cl:"los3chiflados",    pj:5,pg:5,pe:0,pp:0,gf:13, gc:5, pts:15},
         {n:"La Estación <b>(A)</b>",     cl:"laestacion",    pj:4,pg:4,pe:0,pp:0,gf:20, gc:9, pts:12},
-        {n:"San Francisco",   cl:"sanfrancisco",    pj:4,pg:3,pe:0,pp:1,gf:4, gc:7, pts:9},
+        {n:"Villa Mitre",     cl:"villamitre",    pj:5,pg:3,pe:1,pp:1,gf:21, gc:21, pts:10},
+        {n:"San Francisco",   cl:"sanfrancisco",    pj:5,pg:3,pe:0,pp:2,gf:7, gc:12, pts:9},
         {n:"Petroquímicos",   cl:"petroquimicos",    pj:4,pg:3,pe:0,pp:1,gf:10, gc:8, pts:9},
-        {n:"Villa Mitre",     cl:"villamitre",    pj:4,pg:2,pe:1,pp:1,gf:16, gc:18, pts:7},
         {n:"Tiro Federal",    cl:"tirofederal",    pj:4,pg:2,pe:0,pp:2,gf:12, gc:12, pts:6},
         {n:"Pacífico BB",     cl:"pacificobb",    pj:5,pg:1,pe:1,pp:3,gf:21, gc:26, pts:4},
         {n:"Liniers",         cl:"liniers",    pj:5,pg:1,pe:0,pp:4,gf:11, gc:18, pts:3},
