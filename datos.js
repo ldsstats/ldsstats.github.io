@@ -1885,7 +1885,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 21).partidos.forEach(p
 });
 
 
-let diaSeleccionadoHome = "2026-08-29"; 
+let diaSeleccionadoHome = "2026-08-30"; 
 let mercadoPasesAbierto = false;
 
 function toggleMercadoPasesHome() {
@@ -1969,19 +1969,9 @@ function generarHome() {
             { nombre: "REGIONAL FEDERAL AMATEUR FEMENINO - TERCERA RONDA - IDA", cat: "regamateurfem", torLink: "regamateurfem", noAutoResult: true, partidos: [
             {l:"Ciudad de Olavarría", v:"Villa Mitre", hora:"14:00", gl:3, gv:2, claseL:"ciudadolavarria", claseV:"villamitre",nota:"<b>en cancha de Embajadores</b>"},
             ]},
-            { nombre: "REGIONAL FEDERAL AMATEUR - PRIMERA RONDA (REGIÓN HURACÁN) - 1°FECHA", cat: "regamateurfem", torLink: "regamateurfem", noAutoResult: true, partidos: [
-            {l:"Atlético Villegas", v:"Santa Rita", hora:"19:00", gl:null, gv:null, claseL:"atlvillegas", claseV:"santarita",nota:"<b>Zona 2</b>"},
-            {l:"All Boys (SR)", v:"Santa Rosa", hora:"20:00", gl:null, gv:null, claseL:"allboyssr", claseV:"santarosa",nota:"<b>Zona 1</b>"},
-            ]},
-            { nombre: "PROMOCIONAL - CLAUSURA - 5°FECHA", cat: "oficial", torLink: "oficial", noAutoResult: true, partidos: [
-            {l:"Pacífico (C)", v:"Olimpo", hora:"15:30", gl:null, gv:null, claseL:"pacificoc", claseV:"olimpo",nota:"<b>SUSPENDIDO POR CLIMA</b>"},
-            ]},
-            { nombre: "FEMENINO - CLAUSURA - FECHA 6", cat: "femenino", torLink: "femenino", noAutoResult: true, partidos: [
-            {l:"Empleados de Comercio", v:"Municipales", hora:"13:15", gl:null, gv:null, claseL:"empleados", claseV:"municipales",nota:"<b>SUSPENDIDO POR CLIMA</b>"},
-            {l:"Libertad", v:"Tiro Federal", hora:"15:30", gl:null, gv:null, claseL:"libertad", claseV:"tirofederal",nota:"<b>SUSPENDIDO POR CLIMA</b>"},
-            ]},
-            { nombre: "2° FEMENINO - FECHA 22", cat: "segundafemenino", torLink: "segundafemenino", noAutoResult: true, partidos: [
-            {l:"Liniers", v:"Pacífico (C)", hora:"13:15", gl:null, gv:null, claseL:"liniers", claseV:"pacificoc",nota:"<b>SUSPENDIDO POR CLIMA</b>"},
+            { nombre: "REGIONAL FEDERAL AMATEUR - PRIMERA RONDA (REGIÓN HURACÁN) - 1°FECHA", cat: "regamateurtemporada", torLink: "regamateurtemporada", noAutoResult: true, partidos: [
+            {l:"Atlético Villegas", v:"Santa Rita", hora:"19:00", gl:2, gv:2, claseL:"atlvillegas", claseV:"santarita",nota:"<b>Zona 2</b>"},
+            {l:"All Boys (SR)", v:"Santa Rosa", hora:"20:00", gl:4, gv:1, claseL:"allboyssr", claseV:"santarosa",nota:"<b>Zona 1</b>"},
             ]},
        ]},
         { id: "2026-08-30", label: "DOM 30/08", torneos: [
@@ -2011,7 +2001,7 @@ function generarHome() {
             {l:"Argentino de Monte Maíz", v:"Juventud Antoniana", hora:"15:45", gl:null, gv:null, claseL:"argmontemaiz", claseV:"jantoniana"},
             {l:"Atenas de Río Cuarto", v:"Olimpo", hora:"16:30", gl:null, gv:null, claseL:"atenasrc", claseV:"olimpo"},
             ]},
-            { nombre: "REGIONAL FEDERAL AMATEUR - PRIMERA RONDA - 1°FECHA", cat: "regamateurfem", torLink: "regamateurfem", noAutoResult: true, partidos: [
+            { nombre: "REGIONAL FEDERAL AMATEUR - PRIMERA RONDA - 1°FECHA", cat: "regamateurtemporada", torLink: "regamateurtemporada", noAutoResult: true, partidos: [
             {l:"Huracán de White", v:"Sarmiento de Pigué", hora:"15:30", gl:null, gv:null, claseL:"huracan", claseV:"sarmientopigue",nota:"<b>Zona 3</b>"},
             {l:"Ferro de Pico", v:"All Boys (Trenel)", hora:"15:30", gl:null, gv:null, claseL:"ferropico", claseV:"allboystrenel",nota:"<b>Zona 1</b>"},
             {l:"Independiente (SC)", v:"Ministerio", hora:"15:30", gl:null, gv:null, claseL:"indeptesancayetano", claseV:"ministerio",nota:"<b>Zona 5</b>"},
@@ -2024,6 +2014,7 @@ function generarHome() {
         { id: "2026-08-31", label: "LUN 31/08", torneos: [
             { nombre: "PROMOCIONAL - CLAUSURA - 5°FECHA", cat: "promocional", torLink: "promocional", noAutoResult: true, partidos: [
             {l:"Rosario PB", v:"Comercial", hora:"15:30", gl:null, gv:null, claseL:"rosariopb", claseV:"comercial"},
+            {l:"Pacífico (C)", v:"Olimpo", hora:"16:00", gl:null, gv:null, claseL:"pacificoc", claseV:"olimpo"},
             ]},
        ]},
     ];
@@ -17797,7 +17788,7 @@ const BD_POS_FUTSAL = {
         {n:"La Esperanza",    cl:"laesperanza",    pj:5,pg:5,pe:0,pp:0,gf:21, gc:7, pts:15},
         {n:"Los 3 Chiflados", cl:"los3chiflados",    pj:5,pg:5,pe:0,pp:0,gf:26, gc:10, pts:15},
         {n:"Comercial",       cl:"comercial",    pj:5,pg:5,pe:0,pp:0,gf:20, gc:9, pts:15},
-        {n:"La Estación <b>(A)</b>",     cl:"laestacion",    pj:5,pg:5,pe:0,pp:0,gf:26, gc:30, pts:15},
+        {n:"La Estación <b>(A)</b>",     cl:"laestacion",    pj:5,pg:5,pe:0,pp:0,gf:26, gc:10, pts:15},
         {n:"Villa Mitre",     cl:"villamitre",    pj:5,pg:3,pe:1,pp:1,gf:21, gc:21, pts:10},
         {n:"Tiro Federal",    cl:"tirofederal",    pj:5,pg:3,pe:0,pp:2,gf:14, gc:13, pts:9},
         {n:"San Francisco",   cl:"sanfrancisco",    pj:5,pg:3,pe:0,pp:2,gf:7, gc:12, pts:9},
@@ -21710,14 +21701,14 @@ if (tor === 'apertura' && cat === 'promocional') {
    ══════════════════════════════════════════════════════════ */
 const BD_REG_AMATEUR_TEMPORADA = {
     mejoresPrimeros: [
-        { nombre: "A definir", pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0 },
+        { nombre: "Atlético Villegas", pj:1, pg:0, pe:1, pp:0, gf:2, gc:2, pts:1 },
         { nombre: "A definir", pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0 },
         { nombre: "A definir", pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0 },
         { nombre: "A definir", pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0 },
         { nombre: "A definir", pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0 },
     ],
     mejoresSegundos: [
-        { nombre: "A definir", pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0 },
+        { nombre: "Santa Rita", pj:1, pg:0, pe:1, pp:0, gf:2, gc:2, pts:1 },
         { nombre: "A definir", pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0 },
         { nombre: "A definir", pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0 },
         { nombre: "A definir", pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0 },
@@ -21744,7 +21735,7 @@ const BD_REG_AMATEUR_TEMPORADA = {
         },
         { titulo: "ZONA 1",
           fixture: [
-              { fecha:1, partidos:[{ l:"Ferro", v:"All Boys (Trenel)", gl:null, gv:null, goles_l:[], goles_v:[] },{ l:"All Boys (SR)", v:"Santa Rosa", gl:null, gv:null, goles_l:[], goles_v:[] }] },
+              { fecha:1, partidos:[{ l:"All Boys (SR)", v:"Santa Rosa", gl:4, gv:1, goles_l:[], goles_v:[] }, { l:"Ferro", v:"All Boys (Trenel)", gl:null, gv:null, goles_l:[], goles_v:[] }] },
               { fecha:2, partidos:[{ l:"Santa Rosa", v:"Ferro", gl:null, gv:null, goles_l:[], goles_v:[] },{ l:"All Boys (Trenel)", v:"All Boys (SR)", gl:null, gv:null, goles_l:[], goles_v:[] }] },
               { fecha:3, partidos:[{ l:"Ferro", v:"All Boys (SR)", gl:null, gv:null, goles_l:[], goles_v:[] },{ l:"Santa Rosa", v:"All Boys (Trenel)", gl:null, gv:null, goles_l:[], goles_v:[] }] },
               { fecha:4, partidos:[{ l:"All Boys (Trenel)", v:"Ferro", gl:null, gv:null, goles_l:[], goles_v:[] },{ l:"Santa Rosa", v:"All Boys (SR)", gl:null, gv:null, goles_l:[], goles_v:[] }] },
@@ -21755,28 +21746,28 @@ const BD_REG_AMATEUR_TEMPORADA = {
           txtClasifica: "Clasifica a la 3° ronda",
           txtElimina: "Clasifica a la 2° ronda",
           posiciones: [
-              { nombre: "All Boys (Santa Rosa)", pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0 },
-              { nombre: "Santa Rosa", pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0 },
-              { nombre: "Ferro de Pico", pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0 },
-              { nombre: "All Boys (Trenel)", pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0 },
+              { nombre: "All Boys (Santa Rosa)", pj:1, pg:1, pe:0, pp:0, gf:4, gc:1, pts:3 },
+              { nombre: "Ferro de Pico",         pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0 },
+              { nombre: "All Boys (Trenel)",     pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0 },
+              { nombre: "Santa Rosa",            pj:1, pg:0, pe:0, pp:1, gf:1, gc:4, pts:0 },
           ]
         },
         { titulo: "ZONA 2",
           fixture: [
-              { fecha:1, libre:"Trenque Lauquen", partidos:[{ l:"Atl. Villegas", v:"Santa Rita", gl:null, gv:null, goles_l:[], goles_v:[] }] },
+              { fecha:1, libre:"Trenque Lauquen", partidos:[{ l:"Atl. Villegas", v:"Santa Rita", gl:2, gv:2, goles_l:[], goles_v:[] }] },
               { fecha:2, libre:"Santa Rita", partidos:[{ l:"Trenque Lauquen", v:"Atl. Villegas", gl:null, gv:null, goles_l:[], goles_v:[] }] },
               { fecha:3, libre:"Atl. Villegas", partidos:[{ l:"Santa Rita", v:"Trenque Lauquen", gl:null, gv:null, goles_l:[], goles_v:[] }] },
               { fecha:4, libre:"Trenque Lauquen", partidos:[{ l:"Santa Rita", v:"Atl. Villegas", gl:null, gv:null, goles_l:[], goles_v:[] }] },
               { fecha:5, libre:"Santa Rita", partidos:[{ l:"Atl. Villegas", v:"Trenque Lauquen", gl:null, gv:null, goles_l:[], goles_v:[] }] },
               { fecha:6, libre:"Atl. Villegas", partidos:[{ l:"Trenque Lauquen", v:"Santa Rita", gl:null, gv:null, goles_l:[], goles_v:[] }] },
           ],
-          puntosEnJuego: "12 tras la fecha 0",
+          puntosEnJuego: "<b>9</b> para los que tienen 1 partido tras la fecha 1; <b>12</b> para los que tienen 0 partidos",
           txtClasifica: "Clasifica a 2° o 3° ronda (Revisar tabla de primeros)",
           txtElimina: "Clasifica a 2° ronda o eliminado (Revisar tabla de segundos)",
           posiciones: [
-              { nombre: "Atlético Villegas", pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0 },
-              { nombre: "Santa Rita", pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0 },
-              { nombre: "Trenque Lauquen", pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0 },
+              { nombre: "Atlético Villegas", pj:1, pg:0, pe:1, pp:0, gf:2, gc:2, pts:1 },
+              { nombre: "Santa Rita",        pj:1, pg:0, pe:1, pp:0, gf:2, gc:2, pts:1 },
+              { nombre: "Trenque Lauquen",   pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0 },
           ]
         },
         { titulo: "ZONA 4",
@@ -21894,7 +21885,7 @@ function generarRegAmateurTemporada() {
         h += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>${puntosEnJuego || 'XX'}</b></div>`;
         h += `<div style="background:#f9f9f9;padding:5px 8px;font-size:9px;color:#666;text-align:center;border-top:1px solid #eee;">
             <span class="p-playoff" style="padding:1px 6px;border-radius:3px;">Verde</span> ${txtClasifica || 'Clasifica'} &nbsp;|&nbsp;
-            <span class="p-naranja" style="padding:1px 6px;border-radius:3px;">Rojo</span> ${txtElimina || 'Elimina'}
+            <span class="p-blanco" style="padding:1px 6px;border-radius:3px;">Blanco</span> ${txtElimina || 'Elimina'}
         </div>`;
         return h;
     };
