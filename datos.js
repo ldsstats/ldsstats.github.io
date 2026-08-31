@@ -1891,7 +1891,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 22).partidos.forEach(p
 });
 
 
-let diaSeleccionadoHome = "2026-08-30"; 
+let diaSeleccionadoHome = "2026-08-31"; 
 let mercadoPasesAbierto = false;
 
 function toggleMercadoPasesHome() {
@@ -2009,12 +2009,12 @@ function generarHome() {
             ]},
             { nombre: "REGIONAL FEDERAL AMATEUR - PRIMERA RONDA - 1°FECHA", cat: "regamateurtemporada", torLink: "regamateurtemporada", noAutoResult: true, partidos: [
             {l:"Huracán de White", v:"Sarmiento de Pigué", hora:"15:30", gl:1, gv:0, claseL:"huracan", claseV:"sarmientopigue",nota:"<b>Zona 3</b>"},
-            {l:"Ferro de Pico", v:"All Boys (Trenel)", hora:"15:30", gl:null, gv:null, claseL:"ferropico", claseV:"allboystrenel",nota:"<b>Zona 1</b>"},
-            {l:"Independiente (SC)", v:"Ministerio", hora:"15:30", gl:null, gv:null, claseL:"indeptesancayetano", claseV:"ministerio",nota:"<b>Zona 5</b>"},
-            {l:"Quilmes", v:"Dep. Norte", hora:"16:00", gl:null, gv:null, claseL:"quilmesmdp", claseV:"depnorte",nota:"<b>Zona 4</b>"},
-            {l:"Racing de Olavarría", v:"Embajadores", hora:"16:00", gl:null, gv:null, claseL:"racingolavarria", claseV:"embajadoresolavarria",nota:"<b>Zona 6</b>"},
-            {l:"Loma Negra", v:"Estudiantes (O)", hora:"16:00", gl:null, gv:null, claseL:"lomanegra", claseV:"estudiantesolavarria",nota:"<b>Zona 7</b>"},
-            {l:"Argentinos", v:"El Fortín", hora:"17:30", gl:null, gv:null, claseL:"argentino25demayo", claseV:"elfortin",nota:"<b>Zona 7</b>"},
+            {l:"Ferro de Pico", v:"All Boys (Trenel)", hora:"15:30", gl:1, gv:1, claseL:"ferropico", claseV:"allboystrenel",nota:"<b>Zona 1</b>"},
+            {l:"Independiente (SC)", v:"Ministerio", hora:"15:30", gl:0, gv:0, claseL:"indeptesancayetano", claseV:"ministerio",nota:"<b>Zona 5</b>"},
+            {l:"Quilmes", v:"Dep. Norte", hora:"16:00", gl:0, gv:0, claseL:"quilmesmdp", claseV:"depnorte",nota:"<b>Zona 4</b>"},
+            {l:"Racing de Olavarría", v:"Embajadores", hora:"16:00", gl:1, gv:1, claseL:"racingolavarria", claseV:"embajadoresolavarria",nota:"<b>Zona 6</b>"},
+            {l:"Loma Negra", v:"Estudiantes (O)", hora:"16:00", gl:1, gv:2, claseL:"lomanegra", claseV:"estudiantesolavarria",nota:"<b>Zona 7</b>"},
+            {l:"Argentinos", v:"El Fortín", hora:"17:30", gl:1, gv:0, claseL:"argentino25demayo", claseV:"elfortin",nota:"<b>Zona 7</b>"},
             ]},
        ]},
         { id: "2026-08-31", label: "LUN 31/08", torneos: [
@@ -17460,7 +17460,7 @@ const BD_H2H = {
         { fecha: "Torneo Federal Femenino 2026 - Tercera Ronda - Ida - 29 ago", torneo: "regamateurfem", l: "Ciudad de Olavarría", v: "Villa Mitre", gl: 3, gv: 2, goles_l: [], goles_v: [] },
     ],
     "Huracán|Sarmiento de Pigué": [
-        { fecha: "Torneo Regional Federal Amateur 2026 - 1° Fecha - 1° Ronda - 30 ago", torneo: "regamateurtemp", l: "Huracán", v: "Sarmiento de Pigué", gl: 1, gv: 0, goles_l: ["Tomás Segovia"], goles_v: [] },
+        { fecha: "Regional Amateur 2026 - Fecha 1", torneo: "regamateurtemp", l: "Huracán", v: "Sarmiento de Pigué", gl: 1, gv: 0, goles_l: ["Tomás Segovia"], goles_v: [] },
     ],
 };
 
@@ -17803,15 +17803,15 @@ function generarSub() {
 const BD_POS_FUTSAL = {
     principal: [
         {n:"La Esperanza",    cl:"laesperanza",    pj:5,pg:5,pe:0,pp:0,gf:21, gc:7, pts:15},
-        {n:"Los 3 Chiflados", cl:"los3chiflados",    pj:5,pg:5,pe:0,pp:0,gf:26, gc:10, pts:15},
         {n:"Comercial",       cl:"comercial",    pj:5,pg:5,pe:0,pp:0,gf:20, gc:9, pts:15},
         {n:"La Estación <b>(A)</b>",     cl:"laestacion",    pj:5,pg:5,pe:0,pp:0,gf:26, gc:10, pts:15},
+        {n:"Los 3 Chiflados <b>(*)</b>", cl:"los3chiflados",    pj:5,pg:4,pe:0,pp:1,gf:15, gc:2, pts:12},
         {n:"Villa Mitre",     cl:"villamitre",    pj:5,pg:3,pe:1,pp:1,gf:21, gc:21, pts:10},
         {n:"Tiro Federal",    cl:"tirofederal",    pj:5,pg:3,pe:0,pp:2,gf:14, gc:13, pts:9},
         {n:"San Francisco",   cl:"sanfrancisco",    pj:5,pg:3,pe:0,pp:2,gf:7, gc:12, pts:9},
         {n:"Petroquímicos",   cl:"petroquimicos",    pj:5,pg:3,pe:0,pp:2,gf:10, gc:16, pts:9},
         {n:"Pacífico BB",     cl:"pacificobb",    pj:5,pg:1,pe:1,pp:3,gf:17, gc:21, pts:4},
-        {n:"Liniers",         cl:"liniers",    pj:5,pg:1,pe:0,pp:4,gf:11, gc:18, pts:3},
+        {n:"Liniers <b>(*)</b>",         cl:"liniers",    pj:5,pg:1,pe:0,pp:4,gf:10, gc:17, pts:3},
         {n:"Dublin",          cl:"dublin",    pj:5,pg:0,pe:0,pp:5,gf:11, gc:21, pts:0},
         {n:"Catamarca",       cl:"catamarca",    pj:5,pg:0,pe:0,pp:5,gf:10, gc:30, pts:0},
         {n:"<s>Dep. Futsal</s> <b>(-)</b>",     cl:"depfutsal",    pj:0,pg:0,pe:0,pp:0,gf:0, gc:0, pts:0},
@@ -17961,9 +17961,9 @@ if ((p.goles_l && p.goles_l.length) || (p.goles_v && p.goles_v.length)) {
     });
     html += `</tbody></table>`;
     if (modo === 'principal') {
-html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'><b>📌 Puntos en juego:</b> 27 tras terminar la fecha 4<br><b>(A)</b> Campeón del Apertura<br><b>(-)</b> Se bajó de la competencia para el Clausura</div>`;
+html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'><b>📌 Puntos en juego:</b> 24 tras terminar la fecha 5<br><b>(A)</b> Campeón del Apertura<br><b>(*)</b> Se les do por perdido el partido a ambos (1-0) por incidentes tras el partido<br><b>(-)</b> Se bajó de la competencia para el Clausura</div>`;
     } else if (modo === 'reserva') {
-        html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'><b>📌 Puntos en juego:</b> 27 tras terminar la fecha 4<br><b>(A)</b> Campeón del Apertura<br><b>(-)</b> Se bajó de la competencia para el Clausura</div>`;
+        html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'><b>📌 Puntos en juego:</b> 24 tras terminar la fecha 5<br><b>(A)</b> Campeón del Apertura<br><b>(-)</b> Se bajó de la competencia para el Clausura</div>`;
     }
     return html;
 }
@@ -21764,18 +21764,18 @@ if (tor === 'apertura' && cat === 'promocional') {
    ══════════════════════════════════════════════════════════ */
 const BD_REG_AMATEUR_TEMPORADA = {
     mejoresPrimeros: [
+        { nombre: "Huracán", pj:1, pg:1, pe:0, pp:0, gf:1, gc:0, pts:3 },
         { nombre: "Atlético Villegas", pj:1, pg:0, pe:1, pp:0, gf:2, gc:2, pts:1 },
-        { nombre: "A definir", pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0 },
-        { nombre: "A definir", pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0 },
-        { nombre: "A definir", pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0 },
-        { nombre: "A definir", pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0 },
+        { nombre: "Embajadores (Olavarría)", pj:1, pg:0, pe:1, pp:0, gf:1, gc:1, pts:1 },
+        { nombre: "Quilmes (MdP)", pj:1, pg:0, pe:1, pp:0, gf:0, gc:0, pts:1 },
+        { nombre: "Independiente (San Cayetano)", pj:1, pg:0, pe:1, pp:0, gf:0, gc:0, pts:1 },
     ],
     mejoresSegundos: [
         { nombre: "Santa Rita", pj:1, pg:0, pe:1, pp:0, gf:2, gc:2, pts:1 },
-        { nombre: "A definir", pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0 },
-        { nombre: "A definir", pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0 },
-        { nombre: "A definir", pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0 },
-        { nombre: "A definir", pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0 },
+        { nombre: "Racing (Olavarría)", pj:1, pg:0, pe:1, pp:0, gf:1, gc:1, pts:1 },
+        { nombre: "Dep. Norte", pj:1, pg:0, pe:1, pp:0, gf:0, gc:0, pts:1 },
+        { nombre: "Ministerio (Necochea)", pj:1, pg:0, pe:1, pp:0, gf:0, gc:0, pts:1 },
+        { nombre: "Sarmiento de Pigué", pj:1, pg:0, pe:0, pp:1, gf:0, gc:1, pts:0 },
     ],
     zonas: [
         { titulo: "ZONA 3",
@@ -21787,7 +21787,7 @@ const BD_REG_AMATEUR_TEMPORADA = {
               { fecha:5, libre:"Sarmiento de Pigué", partidos:[{ l:"Huracán", v:"Ferro de Olavarría", gl:null, gv:null, goles_l:[], goles_v:[] }] },
               { fecha:6, libre:"Huracán", partidos:[{ l:"Ferro de Olavarría", v:"Sarmiento de Pigué", gl:null, gv:null, goles_l:[], goles_v:[] }] },
           ],
-          puntosEnJuego: "12 tras la fecha 0",
+          puntosEnJuego: "<b>9</b> tras la fecha 1 para los que tienen un partido jugados; <b>12</b> para los que tienen 0 partidos jugados",
           txtClasifica: "Clasifica a 2° o 3° ronda (Revisar tabla de primeros)",
           txtElimina: "Clasifica a 2° ronda o eliminado (Revisar tabla de segundos)",
           posiciones: [
@@ -21798,20 +21798,20 @@ const BD_REG_AMATEUR_TEMPORADA = {
         },
         { titulo: "ZONA 1",
           fixture: [
-              { fecha:1, partidos:[{ l:"All Boys (SR)", v:"Santa Rosa", gl:4, gv:1, goles_l:[], goles_v:[] }, { l:"Ferro", v:"All Boys (Trenel)", gl:null, gv:null, goles_l:[], goles_v:[] }] },
+              { fecha:1, partidos:[{ l:"All Boys (SR)", v:"Santa Rosa", gl:4, gv:1, goles_l:[], goles_v:[] }, { l:"Ferro", v:"All Boys (Trenel)", gl:1, gv:1, goles_l:[], goles_v:[] }] },
               { fecha:2, partidos:[{ l:"Santa Rosa", v:"Ferro", gl:null, gv:null, goles_l:[], goles_v:[] },{ l:"All Boys (Trenel)", v:"All Boys (SR)", gl:null, gv:null, goles_l:[], goles_v:[] }] },
               { fecha:3, partidos:[{ l:"Ferro", v:"All Boys (SR)", gl:null, gv:null, goles_l:[], goles_v:[] },{ l:"Santa Rosa", v:"All Boys (Trenel)", gl:null, gv:null, goles_l:[], goles_v:[] }] },
               { fecha:4, partidos:[{ l:"All Boys (Trenel)", v:"Ferro", gl:null, gv:null, goles_l:[], goles_v:[] },{ l:"Santa Rosa", v:"All Boys (SR)", gl:null, gv:null, goles_l:[], goles_v:[] }] },
               { fecha:5, partidos:[{ l:"Ferro", v:"Santa Rosa", gl:null, gv:null, goles_l:[], goles_v:[] },{ l:"All Boys (SR)", v:"All Boys (Trenel)", gl:null, gv:null, goles_l:[], goles_v:[] }] },
               { fecha:6, partidos:[{ l:"All Boys (SR)", v:"Ferro", gl:null, gv:null, goles_l:[], goles_v:[] },{ l:"All Boys (Trenel)", v:"Santa Rosa", gl:null, gv:null, goles_l:[], goles_v:[] }] },
           ],
-          puntosEnJuego: "18 tras la fecha 0",
+          puntosEnJuego: "15 tras la fecha 1",
           txtClasifica: "Clasifica a la 3° ronda",
           txtElimina: "Clasifica a la 2° ronda",
           posiciones: [
               { nombre: "All Boys (Santa Rosa)", pj:1, pg:1, pe:0, pp:0, gf:4, gc:1, pts:3 },
-              { nombre: "Ferro de Pico",         pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0 },
-              { nombre: "All Boys (Trenel)",     pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0 },
+              { nombre: "Ferro de Pico",         pj:1, pg:0, pe:1, pp:0, gf:1, gc:1, pts:1 },
+              { nombre: "All Boys (Trenel)",     pj:1, pg:0, pe:1, pp:0, gf:1, gc:1, pts:1 },
               { nombre: "Santa Rosa",            pj:1, pg:0, pe:0, pp:1, gf:1, gc:4, pts:0 },
           ]
         },
@@ -21835,75 +21835,76 @@ const BD_REG_AMATEUR_TEMPORADA = {
         },
         { titulo: "ZONA 4",
           fixture: [
-              { fecha:1, libre:"Def. Valeria del Mar", partidos:[{ l:"Quilmes", v:"Dep. Norte", gl:null, gv:null, goles_l:[], goles_v:[] }] },
+              { fecha:1, libre:"Def. Valeria del Mar", partidos:[{ l:"Quilmes", v:"Dep. Norte", gl:0, gv:0, goles_l:[], goles_v:[] }] },
               { fecha:2, libre:"Dep. Norte", partidos:[{ l:"Def. Valeria del Mar", v:"Quilmes", gl:null, gv:null, goles_l:[], goles_v:[] }] },
               { fecha:3, libre:"Quilmes", partidos:[{ l:"Dep. Norte", v:"Def. Valeria del Mar", gl:null, gv:null, goles_l:[], goles_v:[] }] },
               { fecha:4, libre:"Def. Valeria del Mar", partidos:[{ l:"Dep. Norte", v:"Quilmes", gl:null, gv:null, goles_l:[], goles_v:[] }] },
               { fecha:5, libre:"Dep. Norte", partidos:[{ l:"Quilmes", v:"Def. Valeria del Mar", gl:null, gv:null, goles_l:[], goles_v:[] }] },
               { fecha:6, libre:"Quilmes", partidos:[{ l:"Def. Valeria del Mar", v:"Dep. Norte", gl:null, gv:null, goles_l:[], goles_v:[] }] },
           ],
-          puntosEnJuego: "12 tras la fecha 0",
+          puntosEnJuego: "<b>9</b> tras la fecha 1 para los que tienen un partido jugados; <b>12</b> para los que tienen 0 partidos jugados",
           txtClasifica: "Clasifica a 2° o 3° ronda (Revisar tabla de primeros)",
           txtElimina: "Clasifica a 2° ronda o eliminado (Revisar tabla de segundos)",
           posiciones: [
-              { nombre: "Quilmes (MdP)", pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0 },
-              { nombre: "Dep. Norte", pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0 },
+              { nombre: "Quilmes (MdP)",        pj:1, pg:0, pe:1, pp:0, gf:0, gc:0, pts:1 },
+              { nombre: "Dep. Norte",           pj:1, pg:0, pe:1, pp:0, gf:0, gc:0, pts:1 },
               { nombre: "Def. Valeria del Mar", pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0 },
           ]
         },
         { titulo: "ZONA 5",
           fixture: [
-              { fecha:1, libre:"Villa Díaz Vélez", partidos:[{ l:"Independiente", v:"Ministerio", gl:null, gv:null, goles_l:[], goles_v:[] }] },
+              { fecha:1, libre:"Villa Díaz Vélez", partidos:[{ l:"Independiente", v:"Ministerio", gl:0, gv:0, goles_l:[], goles_v:[] }] },
               { fecha:2, libre:"Ministerio", partidos:[{ l:"Villa Díaz Vélez", v:"Independiente", gl:null, gv:null, goles_l:[], goles_v:[] }] },
               { fecha:3, libre:"Independiente", partidos:[{ l:"Ministerio", v:"Villa Díaz Vélez", gl:null, gv:null, goles_l:[], goles_v:[] }] },
               { fecha:4, libre:"Villa Díaz Vélez", partidos:[{ l:"Ministerio", v:"Independiente", gl:null, gv:null, goles_l:[], goles_v:[] }] },
               { fecha:5, libre:"Ministerio", partidos:[{ l:"Independiente", v:"Villa Díaz Vélez", gl:null, gv:null, goles_l:[], goles_v:[] }] },
               { fecha:6, libre:"Independiente", partidos:[{ l:"Villa Díaz Vélez", v:"Ministerio", gl:null, gv:null, goles_l:[], goles_v:[] }] },
           ],
-          puntosEnJuego: "12 tras la fecha 0",
+          puntosEnJuego: "<b>9</b> tras la fecha 1 para los que tienen un partido jugados; <b>12</b> para los que tienen 0 partidos jugados",
           txtClasifica: "Clasifica a 2° o 3° ronda (Revisar tabla de primeros)",
           txtElimina: "Clasifica a 2° ronda o eliminado (Revisar tabla de segundos)",
           posiciones: [
-              { nombre: "Independiente (San Cayetano)", pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0 },
-              { nombre: "Ministerio (Necochea)", pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0 },
-              { nombre: "Villa Díaz Vélez (Necochea)", pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0 },
+              { nombre: "Independiente (San Cayetano)", pj:1, pg:0, pe:1, pp:0, gf:0, gc:0, pts:1 },
+              { nombre: "Ministerio (Necochea)",        pj:1, pg:0, pe:1, pp:0, gf:0, gc:0, pts:1 },
+              { nombre: "Villa Díaz Vélez (Necochea)",  pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0 },
           ]
         },
         { titulo: "ZONA 6",
           fixture: [
-              { fecha:1, libre:"Balonpié", partidos:[{ l:"Racing", v:"Embajadores", gl:null, gv:null, goles_l:[], goles_v:[] }] },
+              { fecha:1, libre:"Balonpié", partidos:[{ l:"Racing", v:"Embajadores", gl:1, gv:1, goles_l:[], goles_v:[] }] },
               { fecha:2, libre:"Embajadores", partidos:[{ l:"Balonpié", v:"Racing", gl:null, gv:null, goles_l:[], goles_v:[] }] },
               { fecha:3, libre:"Racing", partidos:[{ l:"Embajadores", v:"Balonpié", gl:null, gv:null, goles_l:[], goles_v:[] }] },
               { fecha:4, libre:"Balonpié", partidos:[{ l:"Embajadores", v:"Racing", gl:null, gv:null, goles_l:[], goles_v:[] }] },
               { fecha:5, libre:"Embajadores", partidos:[{ l:"Racing", v:"Balonpié", gl:null, gv:null, goles_l:[], goles_v:[] }] },
               { fecha:6, libre:"Racing", partidos:[{ l:"Balonpié", v:"Embajadores", gl:null, gv:null, goles_l:[], goles_v:[] }] },
           ],
-          puntosEnJuego: "12 tras la fecha 0",
+          puntosEnJuego: "<b>9</b> tras la fecha 1 para los que tienen un partido jugados; <b>12</b> para los que tienen 0 partidos jugados",
           txtClasifica: "Clasifica a 2° o 3° ronda (Revisar tabla de primeros)",
           txtElimina: "Clasifica a 2° ronda o eliminado (Revisar tabla de segundos)",
           posiciones: [
-              { nombre: "Embajadores (Olavarría)", pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0 },
-              { nombre: "Racing (Olavarría)", pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0 },
-              { nombre: "Balonpié", pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0 },
+              { nombre: "Embajadores (Olavarría)", pj:1, pg:0, pe:1, pp:0, gf:1, gc:1, pts:1 },
+              { nombre: "Racing (Olavarría)",      pj:1, pg:0, pe:1, pp:0, gf:1, gc:1, pts:1 },
+              { nombre: "Balonpié",                pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0 },
           ]
         },
         { titulo: "ZONA 7",
           fixture: [
-              { fecha:1, partidos:[{ l:"Argentinos", v:"El Fortín", gl:null, gv:null, goles_l:[], goles_v:[] },{ l:"Loma Negra", v:"Estudiantes", gl:null, gv:null, goles_l:[], goles_v:[] }] },
+              { fecha:1, partidos:[{ l:"Argentinos", v:"El Fortín", gl:1, gv:0, goles_l:[], goles_v:[] },{ l:"Loma Negra", v:"Estudiantes", gl:1, gv:2, goles_l:[], goles_v:[] }] },
               { fecha:2, partidos:[{ l:"Estudiantes", v:"Argentinos", gl:null, gv:null, goles_l:[], goles_v:[] },{ l:"El Fortín", v:"Loma Negra", gl:null, gv:null, goles_l:[], goles_v:[] }] },
               { fecha:3, partidos:[{ l:"Argentinos", v:"Loma Negra", gl:null, gv:null, goles_l:[], goles_v:[] },{ l:"Estudiantes", v:"El Fortín", gl:null, gv:null, goles_l:[], goles_v:[] }] },
               { fecha:4, partidos:[{ l:"El Fortín", v:"Argentinos", gl:null, gv:null, goles_l:[], goles_v:[] },{ l:"Estudiantes", v:"Loma Negra", gl:null, gv:null, goles_l:[], goles_v:[] }] },
               { fecha:5, partidos:[{ l:"Argentinos", v:"Estudiantes", gl:null, gv:null, goles_l:[], goles_v:[] },{ l:"Loma Negra", v:"El Fortín", gl:null, gv:null, goles_l:[], goles_v:[] }] },
               { fecha:6, partidos:[{ l:"Loma Negra", v:"Argentinos", gl:null, gv:null, goles_l:[], goles_v:[] },{ l:"El Fortín", v:"Estudiantes", gl:null, gv:null, goles_l:[], goles_v:[] }] },
           ],
-          puntosEnJuego: "18 tras la fecha 0",
+          puntosEnJuego: "15 tras la fecha 1",
           txtClasifica: "Clasifica a la 3° ronda",
           txtElimina: "Clasifica a la 2° ronda",
           posiciones: [
-              { nombre: "Loma Negra (Olavarría)", pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0 },
-              { nombre: "Estudiantes (Olavarría)", pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0 },
-              { nombre: "El Fortín (Olavarría)", pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0 },
-              { nombre: "Argentinos (25 de Mayo)", pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0 },
+
+              { nombre: "Estudiantes (Olavarría)", pj:1, pg:1, pe:0, pp:0, gf:2, gc:1, pts:3 },
+              { nombre: "Argentinos (25 de Mayo)", pj:1, pg:1, pe:0, pp:0, gf:1, gc:0, pts:3 },
+              { nombre: "El Fortín (Olavarría)",   pj:1, pg:0, pe:0, pp:1, gf:0, gc:1, pts:0 },
+              { nombre: "Loma Negra (Olavarría)",  pj:1, pg:0, pe:0, pp:1, gf:1, gc:2, pts:0 }
           ]
         },
     ]
@@ -21955,11 +21956,36 @@ function generarRegAmateurTemporada() {
 
     // Mejores Primeros
     html += `<div class="header-t" style="cursor:pointer;" onclick="document.getElementById('rat-primeros').style.display=document.getElementById('rat-primeros').style.display==='none'?'block':'none'">▶ MEJORES 1° DE GRUPOS DE TRES EQUIPOS</div>
-    <div id="rat-primeros" style="display:none;">${renderTablaPos(BD_REG_AMATEUR_TEMPORADA.mejoresPrimeros, 'primeros', '12', 'Clasifican a 3° ronda', 'Clasifican a 2° ronda')}</div>`;
+    <div id="rat-primeros" style="display:none;">${renderTablaPos(BD_REG_AMATEUR_TEMPORADA.mejoresPrimeros, 'primeros', '9', 'Clasifican a 3° ronda', 'Clasifican a 2° ronda')}</div>`;
 
     // Mejores Segundos
     html += `<div class="header-t" style="cursor:pointer;" onclick="document.getElementById('rat-segundos').style.display=document.getElementById('rat-segundos').style.display==='none'?'block':'none'">▶ MEJORES 2° DE GRUPOS DE TRES EQUIPOS</div>
-    <div id="rat-segundos" style="display:none;">${renderTablaPos(BD_REG_AMATEUR_TEMPORADA.mejoresSegundos, 'segundos', '12', 'Clasifica a la 2° ronda', 'Eliminado')}</div>`;
+    <div id="rat-segundos" style="display:none;">${renderTablaPos(BD_REG_AMATEUR_TEMPORADA.mejoresSegundos, 'segundos', '9', 'Clasifica a la 2° ronda', 'Eliminado')}</div>`;
+
+    const golesRegAmateur = {};
+    BD_REG_AMATEUR_TEMPORADA.zonas.forEach(zona => {
+        zona.fixture.forEach(f => {
+            f.partidos.forEach(p => {
+                if (p.gl === null) return;
+                if (p.l === "Huracán") (p.goles_l || []).forEach(nombre => {
+                    golesRegAmateur[nombre] = (golesRegAmateur[nombre] || 0) + 1;
+                });
+                if (p.v === "Huracán") (p.goles_v || []).forEach(nombre => {
+                    golesRegAmateur[nombre] = (golesRegAmateur[nombre] || 0) + 1;
+                });
+            });
+        });
+    });
+    const listaGolesRegAmateur = Object.entries(golesRegAmateur).sort((a, b) => b[1] - a[1]);
+    let golesHtmlRegAmateur = '';
+    if (listaGolesRegAmateur.length > 0) {
+        golesHtmlRegAmateur = `<div class="header-t" style="cursor:pointer;" onclick="document.getElementById('goles-regamateur').style.display=document.getElementById('goles-regamateur').style.display==='none'?'block':'none'">▶ GOLEADORES — HURACÁN</div><div id="goles-regamateur" style="display:none;"><table><tbody>`;
+        listaGolesRegAmateur.forEach(([nombre, goles]) => {
+            golesHtmlRegAmateur += `<tr><td style="text-align:left;padding-left:8px;font-size:12px;">${nombre}</td><td class="c-stat"><b>${goles}</b></td></tr>`;
+        });
+        golesHtmlRegAmateur += `</tbody></table></div>`;
+    }
+    html += golesHtmlRegAmateur;
 
     // Zonas
     BD_REG_AMATEUR_TEMPORADA.zonas.forEach(zona => {
