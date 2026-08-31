@@ -72,7 +72,7 @@
             <div class="bloque-titulo con-drop" onclick="toggleMenu(this)">REG. AMATEUR <span class="flecha">▼</span></div>
             <div class="bloque-links">
                 <a href="#" onclick="navegar('regamateurtemporada')">Temporada 2026</a>
-                <a href="#" onclick="navegar('proximamente')">Goleadores</a>
+                <a href="#" onclick="navegar('goleadoresregamateur')">Goleadores</a>
                 <a href="#" onclick="navegar('regamateurfem')">Femenino 2026</a>
                 <a href="#" onclick="navegar('goleadorasregamateurfem')">Goleadoras</a>
             </div>
@@ -292,7 +292,7 @@
         }
         estado.torneo = tor;
         estado.categoria = cat;
-        estado.fecha = (tor === 'apertura' && (cat === 'oficial' || cat === 'promocional')) ? 1 : (tor === 'clausura' && (cat === 'oficial' || cat === 'promocional')) ? 5 : (tor === 'posiciones' && cat === 'federala') ? 18 : (tor === 'apertura' && cat === 'femenino') ? 14 : (tor === 'clausura' && cat === 'femenino') ? 6 : (tor === 'torneo2026' && cat === 'segundafemenino') ? 22 : (tor === 'futsal') ? 5 : (tor === 'futsalreserva') ? 5 : (tor === 'sub15fem') ? 17 : 1; 
+        estado.fecha = (tor === 'apertura' && (cat === 'oficial' || cat === 'promocional')) ? 1 : (tor === 'clausura' && (cat === 'oficial' || cat === 'promocional')) ? 5 : (tor === 'posiciones' && cat === 'federala') ? 18 : (tor === 'apertura' && cat === 'femenino') ? 14 : (tor === 'clausura' && cat === 'femenino') ? 6 : (tor === 'torneo2026' && cat === 'segundafemenino') ? 22 : (tor === 'futsal') ? 5 : (tor === 'futsalreserva') ? 5 : (tor === 'sub15fem') ? 18 : 1; 
         actualizarVista();
         document.documentElement.scrollTop = 0;
         document.body.scrollTop = 0;
@@ -502,6 +502,8 @@
                 cont.innerHTML = generarRegAmateurFem();
             } else if (estado.torneo === 'regamateurtemporada') {
                 cont.innerHTML = generarRegAmateurTemporada();
+            } else if (estado.torneo === 'goleadoresregamateur') {
+                cont.innerHTML = generarGoleadoresRegAmateur();
             } else if (estado.torneo === 'goleadorasregamateurfem') {
                 cont.innerHTML = generarGoleadorasRegAmateurFem();
             } else if (estado.torneo === 'copa_argentina') {
