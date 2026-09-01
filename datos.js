@@ -1920,6 +1920,9 @@ function generarHome() {
 
 
         { id: "2026-09-02", label: "MIÉR 02/09", torneos: [
+            { nombre: "SUB 15 FEMENINO | FECHA 18", cat: "sub15fem", torLink: "sub15fem", noAutoResult: true, partidos: [
+            {l:"Juventud Unida", v:"Bella Vista", hora:"15:00", gl:null, gv:null, claseL:"juventudunida", claseV:"bellavista",nota:"Reprogramado del último sábado"},
+            ]},
             { nombre: "TORNEO DE SELECCIONES | SUB 15 | FECHA 5", cat: "torneoseleccion15", torLink: "torneoseleccion15", noAutoResult: true, partidos: [
             {l:"Olavarría", v:"<b>Liga del Sur</b>", hora:"15:00", gl:null, gv:null, claseL:"olavarria", claseV:"ldsbb",nota:"Zona 1"},
             {l:"Ayacucho", v:"Azul", hora:"20:00", gl:null, gv:null, claseL:"ayacucho", claseV:"azul",nota:"Zona 2"},
@@ -22216,7 +22219,9 @@ function verPerfilJugadoraRegAmateurFem(jugadora, equipo) {
         });
         html += `</div>`;
     }
-
+    document.getElementById('contenido').innerHTML = html;
+    document.documentElement.scrollTop = 0;
+}
 function generarGoleadoresRegAmateur() {
     const lista = (BD_GOLEADORES_REGAMATEUR || []).slice().sort((a,b) => b.goles - a.goles || a.jugador.localeCompare(b.jugador));
 
@@ -22277,10 +22282,6 @@ function verPerfilJugadorRegAmateur(jugador) {
         });
         html += `</div>`;
     }
-
-    document.getElementById('contenido').innerHTML = html;
-    document.documentElement.scrollTop = 0;
-}
 
     document.getElementById('contenido').innerHTML = html;
     document.documentElement.scrollTop = 0;
