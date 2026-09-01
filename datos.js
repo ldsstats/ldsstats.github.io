@@ -826,7 +826,7 @@ const idaSub15Fem = [
         {l:"Tiro Federal",          v:"Huracán",          gl:3, gv:0},
         {l:"Sporting",              v:"Liniers",          gl:0, gv:5},
         {l:"Juventud Unida",        v:"Bella Vista",      gl:null, gv:null},
-        {l:"La Armonía",            v:"Empleados de Comercio", gl:null, gv:null},
+        {l:"La Armonía",            v:"Empleados de Comercio", gl:1, gv:1},
         {l:"San Francisco",         v:"Libertad",         gl:6, gv:1},
         {l:"Villa Mitre",           v:"Olimpo",           gl:null, gv:null}
     ]},
@@ -1251,7 +1251,7 @@ BD_FIXTURES.oficial.reserva.push(
     ]},
     { fecha: 5, partidos: [
         {l:"Huracán",   v:"Liniers",   gl:1,   gv:1},
-        {l:"Bella Vista",   v:"Villa Mitre",   gl:null,   gv:null},
+        {l:"Bella Vista",   v:"Villa Mitre",   gl:1,   gv:3},
         {l:"San Francisco",   v:"La Armonía",   gl:null,   gv:null},
         {l:"Libertad",   v:"Sporting",   gl:null,   gv:null}
     ]},
@@ -1339,7 +1339,7 @@ BD_FIXTURES.promocional.reserva.push(
     ]},
     { fecha: 5, partidos: [
         {l:"Rosario PB",      v:"Comercial",          gl:null,   gv:null},
-        {l:"Sansinena",   v:"Tiro Federal", gl:null,   gv:null},
+        {l:"Sansinena",   v:"Tiro Federal", gl:1,   gv:1},
         {l:"Pacífico (C)", v:"Olimpo",              gl:null,   gv:null},
         {l:"Pacífico BB",v:"Dublin",           gl:5,   gv:0}
     ]},
@@ -1891,7 +1891,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 22).partidos.forEach(p
 });
 
 
-let diaSeleccionadoHome = "2026-08-31"; 
+let diaSeleccionadoHome = "2026-09-02"; 
 let mercadoPasesAbierto = false;
 
 function toggleMercadoPasesHome() {
@@ -1919,73 +1919,20 @@ function generarHome() {
     const agenda = [
 
 
-        { id: "2026-08-29", label: "SÁB 29/08", torneos: [
-            { nombre: "OFICIAL - CLAUSURA - 5°FECHA", cat: "oficial", torLink: "oficial", noAutoResult: true, partidos: [
-            {l:"Bella Vista", v:"Villa Mitre", hora:"15:30", gl:1, gv:0, claseL:"bellavista", claseV:"villamitre"},
-            {l:"San Francisco", v:"La Armonía", hora:"15:30", gl:1, gv:0, claseL:"sanfrancisco", claseV:"laarmonia"},
-            ]},
-            { nombre: "SUB-15 FEMENINO - FECHA 18", cat: "sub15fem", torLink: "sub15fem", noAutoResult: true, partidos: [
-            {l:"Tiro Federal", v:"Huracán", hora:"09:30", gl:3, gv:0, claseL:"tirofederal", claseV:"huracan"},
-            {l:"Sporting", v:"Liniers", hora:"11:00", gl:0, gv:5, claseL:"sporting", claseV:"liniers"},
-            {l:"Villa Mitre", v:"Olimpo", hora:"16:00", gl:null, gv:null, claseL:"villamitre", claseV:"olimpo"},
-            {l:"Juventud Unida", v:"Bella Vista", hora:"16:00", gl:null, gv:null, claseL:"juventudunida", claseV:"bellavista"},
-            ]},
-            { nombre: "REGIONAL FEDERAL AMATEUR FEMENINO - TERCERA RONDA - IDA", cat: "regamateurfem", torLink: "regamateurfem", noAutoResult: true, partidos: [
-            {l:"Ciudad de Olavarría", v:"Villa Mitre", hora:"14:00", gl:3, gv:2, claseL:"ciudadolavarria", claseV:"villamitre",nota:"<b>en cancha de Embajadores</b>"},
-            ]},
-            { nombre: "REGIONAL FEDERAL AMATEUR - PRIMERA RONDA (REGIÓN HURACÁN) - 1°FECHA", cat: "regamateurtemporada", torLink: "regamateurtemporada", noAutoResult: true, partidos: [
-            {l:"Atlético Villegas", v:"Santa Rita", hora:"19:00", gl:2, gv:2, claseL:"atlvillegas", claseV:"santarita",nota:"<b>Zona 2</b>"},
-            {l:"All Boys (SR)", v:"Santa Rosa", hora:"20:00", gl:4, gv:1, claseL:"allboyssr", claseV:"santarosa",nota:"<b>Zona 1</b>"},
-            ]},
-       ]},
-        { id: "2026-08-30", label: "DOM 30/08", torneos: [
-            { nombre: "OFICIAL - CLAUSURA - 5°FECHA", cat: "oficial", torLink: "oficial", noAutoResult: true, partidos: [
-            {l:"Libertad", v:"Sporting", hora:"15:30", gl:0, gv:0, claseL:"libertad", claseV:"sporting"},
-            ]},
-            { nombre: "PROMOCIONAL - CLAUSURA - 5°FECHA", cat: "promocional", torLink: "promocional", noAutoResult: true, partidos: [
-            {l:"Sansinena", v:"Tiro Federal", hora:"15:30", gl:1, gv:3, claseL:"sansinena", claseV:"tirofederal"},
-            {l:"Pacífoco BB", v:"Dublin", hora:"15:30", gl:2, gv:0, claseL:"dublin", claseV:"pacificobb",nota:"Cambio de localía - El Ministerio de Seguridad no habilitó la cancha de Dublin"},
-            ]},
-            { nombre: "FEMENINO - CLAUSURA - FECHA 6", cat: "femenino", torLink: "femenino", noAutoResult: true, partidos: [
-            {l:"La Armonía", v:"Sporting", hora:"15:30", gl:0, gv:0, claseL:"laarmonia", claseV:"sporting"},
-            {l:"Bella Vista", v:"Villa Mitre", hora:"16:30", gl:1, gv:5, claseL:"bellavista", claseV:"villamitre"},
-            ]},
-            { nombre: "2° FEMENINO - FECHA 22", cat: "segundafemenino", torLink: "segundafemenino", noAutoResult: true, partidos: [
-            {l:"Sansinena", v:"Estrella de Oro", hora:"11:00", gl:1, gv:2, claseL:"sansinena", claseV:"estrellaoro"},
-            {l:"San Francisco", v:"Petroquímicos", hora:"15:30", gl:1, gv:2, claseL:"sanfrancisco", claseV:"petroquimicos"},
-            {l:"Rosario PB", v:"Huracán", hora:"16:00", gl:7, gv:0, claseL:"rosariopb", claseV:"huracan"},
-            ]},
-            { nombre: "SUB-15 FEMENINO - FECHA 18", cat: "sub15fem", torLink: "sub15fem", noAutoResult: true, partidos: [
-            {l:"San Francisco", v:"Libertad", hora:"11:00", gl:6, gv:1, claseL:"sanfrancisco", claseV:"libertad"},
-            {l:"La Armonía", v:"Empleados de Comercio", hora:"13:00", gl:null, gv:null, claseL:"laarmonia", claseV:"empleados"},
-            ]},
-            { nombre: "FEDERAL A - NONAGONAL - FECHA 6", cat: "federala", torLink: "federala", noAutoResult: true, partidos: [
-            {l:"Kimberley", v:"Alvarado", hora:"15:00", gl:0, gv:2, claseL:"kimberley", claseV:"alvarado"},
-            {l:"Villa Mitre", v:"Huracán Las Heras", hora:"15:30", gl:3, gv:0, claseL:"villamitre", claseV:"huracanlh"},
-            {l:"Argentino de Monte Maíz", v:"Juventud Antoniana", hora:"15:45", gl:1, gv:0, claseL:"argmontemaiz", claseV:"jantoniana"},
-            {l:"Atenas de Río Cuarto", v:"Olimpo", hora:"16:30", gl:1, gv:0, claseL:"atenasrc", claseV:"olimpo"},
-            ]},
-            { nombre: "REGIONAL FEDERAL AMATEUR - PRIMERA RONDA - 1°FECHA", cat: "regamateurtemporada", torLink: "regamateurtemporada", noAutoResult: true, partidos: [
-            {l:"Huracán de White", v:"Sarmiento de Pigué", hora:"15:30", gl:1, gv:0, claseL:"huracan", claseV:"sarmientopigue",nota:"<b>Zona 3</b>"},
-            {l:"Ferro de Pico", v:"All Boys (Trenel)", hora:"15:30", gl:1, gv:1, claseL:"ferropico", claseV:"allboystrenel",nota:"<b>Zona 1</b>"},
-            {l:"Independiente (SC)", v:"Ministerio", hora:"15:30", gl:0, gv:0, claseL:"indeptesancayetano", claseV:"ministerio",nota:"<b>Zona 5</b>"},
-            {l:"Quilmes", v:"Dep. Norte", hora:"16:00", gl:0, gv:0, claseL:"quilmesmdp", claseV:"depnorte",nota:"<b>Zona 4</b>"},
-            {l:"Racing de Olavarría", v:"Embajadores", hora:"16:00", gl:1, gv:1, claseL:"racingolavarria", claseV:"embajadoresolavarria",nota:"<b>Zona 6</b>"},
-            {l:"Loma Negra", v:"Estudiantes (O)", hora:"16:00", gl:1, gv:2, claseL:"lomanegra", claseV:"estudiantesolavarria",nota:"<b>Zona 7</b>"},
-            {l:"Argentinos", v:"El Fortín", hora:"17:30", gl:1, gv:0, claseL:"argentino25demayo", claseV:"elfortin",nota:"<b>Zona 7</b>"},
-            ]},
-       ]},
-        { id: "2026-08-31", label: "LUN 31/08", torneos: [
-            { nombre: "PROMOCIONAL - CLAUSURA - 5°FECHA", cat: "promocional", torLink: "promocional", noAutoResult: true, partidos: [
-            {l:"Rosario PB", v:"Comercial", hora:"15:30", gl:1, gv:1, claseL:"rosariopb", claseV:"comercial"},
-            {l:"Pacífico (C)", v:"Olimpo", hora:"16:00", gl:0, gv:5, claseL:"pacificoc", claseV:"olimpo"},
-            ]},
-       ]},
         { id: "2026-09-02", label: "MIÉR 02/09", torneos: [
             { nombre: "TORNEO DE SELECCIONES | SUB 15 | FECHA 5", cat: "torneoseleccion15", torLink: "torneoseleccion15", noAutoResult: true, partidos: [
             {l:"Olavarría", v:"<b>Liga del Sur</b>", hora:"15:00", gl:null, gv:null, claseL:"olavarria", claseV:"ldsbb",nota:"Zona 1"},
             {l:"Ayacucho", v:"Azul", hora:"20:00", gl:null, gv:null, claseL:"ayacucho", claseV:"azul",nota:"Zona 2"},
             {l:"Tandil", v:"Necochea", hora:"20:00", gl:null, gv:null, claseL:"tandil", claseV:"necochea",nota:"Zona 2"},
+            ]},
+            { nombre: "COPA PAÍS | PRIMERA RONDA", cat: "copapais", torLink: "copapais", noAutoResult: true, partidos: [
+            {l:"<b>Liga del Sur</b>", v:"Guatraché", hora:"15:30", gl:null, gv:null, claseL:"ldsbb", claseV:"guatrachepais",nota:"<b>Zona Pampeana Sur - Ida: 0-0 | En cancha de Sansinena</b>"},
+            {l:"Paraná", v:"Laguna Paiva", hora:"16:00", gl:null, gv:null, claseL:"parana", claseV:"lagunapaiva",nota:"<b>Zona Litoral Sur - Ida: 3-1 | En cancha de Sansinena</b>"},
+            {l:"Tigonasta", v:"Valle Viejo", hora:"16:00", gl:null, gv:null, claseL:"tinogasta", claseV:"valleviejo",nota:"<b>Zona Catamarca - Fecha 4"},
+            {l:"San Juan", v:"Rodeo", hora:"21:00", gl:null, gv:null, claseL:"sanjuan", claseV:"rodeo",nota:"<b>Zona Cuyo - Fecha 4"},
+            ]},
+            { nombre: "COPA PAÍS | SEGUNDA RONDA", cat: "copapais", torLink: "copapais", noAutoResult: true, partidos: [
+            {l:"San Nicolás", v:"Chacabuco", hora:"20:00", gl:null, gv:null, claseL:"sannicolas", claseV:"chacabuco",nota:"<b>Zona Pampeana Norte - Segunda ronda - Ida: 2-0"},
             ]},
        ]},
         { id: "2026-09-03", label: "JUE 03/09", torneos: [
@@ -16726,6 +16673,7 @@ const BD_H2H = {
         { fecha: "Fecha 12 - Apertura 2026 - 13 jun 2026", torneo: "promocional", l: "Tiro Federal", v: "Sansinena", gl: 4, gv: 0, goles_l: ["Agustín Cabrera","Agustín Restiffo","Diego Ocampo","Joaquín Laborde"], goles_v: [] },
         { fecha: "Fecha 12 - Apertura 2026", torneo: "reserva_promocional", l: "Tiro Federal", v: "Sansinena", gl: 2, gv: 0 },
         { fecha: "Fecha 5 - Clausura 2026 - 30 ago 2026", torneo: "promocional", l: "Sansinena", v: "Tiro Federal", gl: 1, gv: 3, goles_l: ["Santiago González"], goles_v: ["Gino Carrozzi (2)","Juan Ignacio Talmón"] },
+        { fecha: "Fecha 5 - Clausura 2026", torneo: "reserva_promocional", l: "Sansinena", v: "Tiro Federal", gl: 1, gv: 1},
     ],
     "Bella Vista|Pacífico BB": [
         { fecha: "Apertura 2026 - Fecha 4", torneo: "senior", l: "Pacífico BB", v: "Bella Vista", gl: 1, gv: 1, goles_l: [], goles_v: [] },
@@ -16874,8 +16822,9 @@ const BD_H2H = {
         { fecha: "Fecha 13 - Apertura 2026", torneo: "reserva_femenino", l: "Villa Mitre", v: "Bella Vista", gl: 0, gv: 2 },
         { fecha: "Torneo 2026 - Fecha 9", torneo: "sub15fem", l: "Bella Vista", v: "Villa Mitre", gl: 5, gv: 0 },
         { fecha: "Fecha 5 - Clausura 2026 - 29 ago 2026", torneo: "oficial", l: "Bella Vista", v: "Villa Mitre", gl: 1, gv: 0, goles_l: ["Rodrigo Gómez"], goles_v: [] },
+        { fecha: "Fecha 5 - Clausura 2026", torneo: "reserva_oficial", l: "Bella Vista", v: "Villa Mitre", gl: 1, gv: 3 },
         { fecha: "Fecha 6 - Clausura 2026 - 30 ago 2026", torneo: "femenino", l: "Bella Vista", v: "Villa Mitre", gl: 1, gv: 5, goles_l: ["Carla D'Ottavio"], goles_v: ["Lucrecia Semper (2)","Celeste Lopetegui","Vera Moggia","Paola Melgarejo"] },
-        { fecha: "Fecha 6 - Clausura 2026", torneo: "reserva_oficial", l: "Bella Vista", v: "Villa Mitre", gl: 2, gv: 0 },
+        { fecha: "Fecha 6 - Clausura 2026", torneo: "reserva_femenino", l: "Bella Vista", v: "Villa Mitre", gl: 2, gv: 0 },
     ],
     "La Armonía|San Francisco": [
         { fecha: "Fecha 5 - Apertura 2026 - 12 abr 2026", torneo: "oficial", l: "San Francisco", v: "La Armonía", gl: 1, gv: 2, goles_l: ["Federico Pinedo"], goles_v: ["Enrique Narvay","Ezequiel Intrevado"] },
@@ -17019,6 +16968,7 @@ const BD_H2H = {
         { fecha: "Fecha 12 - Apertura 2026 - 14 jun", torneo: "femenino", l: "Empleados de Comercio", v: "La Armonía", gl: 1, gv: 3, goles_l: ["Emilia Del Riego"], goles_v: ["Natalia Morinigo","Renata Pérez","Gimena Cruz"] },
         { fecha: "Fecha 12 - Apertura 2026", torneo: "reserva_femenino", l: "La Armonía", v: "Empleados de Comercio", gl: 1, gv: 1 },
         { fecha: "Torneo 2026 - Fecha 7", torneo: "sub15fem", l: "Empleados de Comercio", v: "La Armonía", gl: 0, gv: 1 },
+        { fecha: "Torneo 2026 - Fecha 18", torneo: "sub15fem", l: "La Armonía", v: "Empleados de Comercio", gl: 1, gv: 1 },
         { fecha: "Fecha 5 - Clausura 2026 - 22 ago", torneo: "femenino", l: "La Armonía", v: "Empleados de Comercio", gl: 2, gv: 0, goles_l: ["Natalia Morinigo","Briana Gallardo"], goles_v: [] },
     ],
     "Bella Vista|Municipales": [
@@ -17497,9 +17447,9 @@ function generarReserva(cat) {
     // Tabla de posiciones — solo puntos, calculados desde fixtures
     const BD_RESERVA_POS = {
         'oficial':    [
-                       {n:"Bella Vista",   cl:"bellavista",   pj:4, pg:3, pe:1, pp:0, gf:7, gc:4, pts:10},
+                       {n:"Bella Vista",   cl:"bellavista",   pj:5, pg:3, pe:1, pp:1, gf:8, gc:7, pts:10},
+                       {n:"Villa Mitre",   cl:"villamitre",   pj:5, pg:3, pe:1, pp:1, gf:11, gc:11, pts:10},
                        {n:"Sporting <b>(A)</b>",      cl:"sporting",     pj:4, pg:2, pe:2, pp:0, gf:7, gc:5, pts:8},
-                       {n:"Villa Mitre",   cl:"villamitre",   pj:4, pg:2, pe:1, pp:1, gf:8, gc:10, pts:7},
                        {n:"La Armonía",    cl:"laarmonia",    pj:4, pg:1, pe:2, pp:1, gf:6, gc:6, pts:5},
                        {n:"Liniers",       cl:"liniers",      pj:5, pg:2, pe:1, pp:2, gf:5, gc:3, pts:4},
                        {n:"Libertad",      cl:"libertad",     pj:4, pg:1, pe:0, pp:3, gf:6, gc:6, pts:3},
@@ -17508,9 +17458,9 @@ function generarReserva(cat) {
         'promocional':[
                        {n:"Olimpo <b>(A)</b>",              cl:"olimpo",           pj:3, pg:3, pe:0, pp:0, gf:8, gc:3, pts:9},
                        {n:"Pacífico BB",         cl:"pacificobb",       pj:4, pg:3, pe:0, pp:1, gf:7, gc:2, pts:9},
-                       {n:"Sansinena",           cl:"sansinena",        pj:3, pg:2, pe:0, pp:1, gf:9, gc:4, pts:6},
+                       {n:"Sansinena",           cl:"sansinena",        pj:4, pg:2, pe:1, pp:1, gf:10, gc:5, pts:7},
+                       {n:"Tiro Federal",        cl:"tirofederal",      pj:4, pg:2, pe:1, pp:1, gf:9, gc:4, pts:7},
                        {n:"Rosario PB",          cl:"rosariopb",        pj:4, pg:2, pe:0, pp:2, gf:8, gc:9, pts:6},
-                       {n:"Tiro Federal",        cl:"tirofederal",      pj:3, pg:2, pe:0, pp:1, gf:8, gc:3, pts:6},
                        {n:"Dublin",              cl:"dublin",           pj:4, pg:1, pe:1, pp:2, gf:8, gc:13, pts:4},
                        {n:"Pacífico (C)", cl:"pacificocabildo",  pj:4, pg:0, pe:1, pp:3, gf:6, gc:15, pts:1},
                        {n:"Comercial",           cl:"comercial",        pj:3, pg:0, pe:0, pp:3, gf:2, gc:7, pts:0},],
@@ -18899,7 +18849,7 @@ const BD_COPA_PAIS_SEGUNDA_RONDA = [
         titulo: "ZONA PAMPEANA NORTE",
         tipo: "final",
         partidos: [
-            { ronda: "2° Ronda (ida)", l: "Chacabuco", v: "San Nicolás", fecha: "", gl: null, gv: null, goles_l: [], goles_v: [] },
+            { ronda: "2° Ronda (ida)", l: "Chacabuco", v: "San Nicolás", fecha: "", gl: 0, gv: 2, goles_l: [], goles_v: [] },
             { ronda: "2° Ronda (vuelta)", l: "San Nicolás", v: "Chacabuco", fecha: "", gl: null, gv: null, goles_l: [], goles_v: [] },
         ]
     },
