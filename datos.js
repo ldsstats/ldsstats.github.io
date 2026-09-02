@@ -1926,13 +1926,8 @@ function generarHome() {
             { nombre: "SUB 15 FEMENINO | FECHA 18", cat: "sub15fem", torLink: "sub15fem", noAutoResult: true, partidos: [
             {l:"Juventud Unida", v:"Bella Vista", hora:"15:00", gl:null, gv:null, claseL:"juventudunida", claseV:"bellavista",nota:"Reprogramado del último sábado"},
             ]},
-            { nombre: "TORNEO DE SELECCIONES | SUB 15 | FECHA 5", cat: "torneoseleccion15", torLink: "torneoseleccion15", noAutoResult: true, partidos: [
-            {l:"Olavarría", v:"<b>Liga del Sur</b>", hora:"15:00", gl:null, gv:null, claseL:"olavarria", claseV:"ldsbb",nota:"Zona 1"},
-            {l:"Ayacucho", v:"Azul", hora:"20:00", gl:null, gv:null, claseL:"ayacucho", claseV:"azul",nota:"Zona 2"},
-            {l:"Tandil", v:"Necochea", hora:"20:00", gl:null, gv:null, claseL:"tandil", claseV:"necochea",nota:"Zona 2"},
-            ]},
             { nombre: "COPA PAÍS | PRIMERA RONDA", cat: "copapais", torLink: "copapais", noAutoResult: true, partidos: [
-            {l:"<b>Liga del Sur</b>", v:"Guatraché", hora:"15:30", gl:null, gv:null, claseL:"ldsbb", claseV:"guatrachepais",nota:"<b>Zona Pampeana Sur - Ida: 0-0 | En cancha de Sansinena</b>"},
+            {l:"<b>Liga del Sur</b>", v:"Guatraché", hora:"15:30", gl:2, gv:1, claseL:"ldsbb", claseV:"guatrachepais",nota:"<b>Zona Pampeana Sur - Ida: 0-0 | En cancha de Sansinena</b>"},
             {l:"Paraná", v:"Laguna Paiva", hora:"16:00", gl:null, gv:null, claseL:"parana", claseV:"lagunapaiva",nota:"<b>Zona Litoral Sur - Ida: 3-1 | En cancha de Sansinena</b>"},
             {l:"Tigonasta", v:"Valle Viejo", hora:"16:00", gl:null, gv:null, claseL:"tinogasta", claseV:"valleviejo",nota:"<b>Zona Catamarca - Fecha 4"},
             {l:"San Juan", v:"Rodeo", hora:"21:00", gl:null, gv:null, claseL:"sanjuan", claseV:"rodeo",nota:"<b>Zona Cuyo - Fecha 4"},
@@ -1940,12 +1935,17 @@ function generarHome() {
             { nombre: "COPA PAÍS | SEGUNDA RONDA", cat: "copapais", torLink: "copapais", noAutoResult: true, partidos: [
             {l:"San Nicolás", v:"Chacabuco", hora:"20:00", gl:null, gv:null, claseL:"sannicolas", claseV:"chacabuco",nota:"<b>Zona Pampeana Norte - Segunda ronda - Ida: 2-0"},
             ]},
+            { nombre: "TORNEO DE SELECCIONES | SUB 15 | FECHA 5", cat: "torneoseleccion15", torLink: "torneoseleccion15", noAutoResult: true, partidos: [
+            {l:"Ayacucho", v:"Azul", hora:"20:00", gl:null, gv:null, claseL:"ayacucho", claseV:"azul",nota:"Zona 2"},
+            {l:"Tandil", v:"Necochea", hora:"20:00", gl:null, gv:null, claseL:"tandil", claseV:"necochea",nota:"Zona 2"},
+            ]},
        ]},
         { id: "2026-09-03", label: "JUE 03/09", torneos: [
             { nombre: "FUTSAL | CLAUSURA | FECHA 6", cat: "futsal", torLink: "futsal", noAutoResult: true, partidos: [
             {l:"Dublin", v:"Pacífico BB", hora:"22:00", gl:null, gv:null, claseL:"dublin", claseV:"pacificobb",nota:"en cancha de Don Bosco"},
             ]},
             { nombre: "TORNEO DE SELECCIONES | SUB 15 | FECHA 5 (LIGA DEL SUR)", cat: "torneoseleccion15", torLink: "torneoseleccion15", noAutoResult: true, partidos: [
+            {l:"Olavarría", v:"<b>Liga del Sur</b>", hora:"14:00", gl:null, gv:null, claseL:"olavarria", claseV:"ldsbb",nota:"Zona 1"},
             {l:"Pehuajó", v:"Trenque Lauquen", hora:"16:00", gl:null, gv:null, claseL:"pehuajo", claseV:"trenquelauquen",nota:"Zona 4"},
             {l:"Dolores", v:"La Costa", hora:"18:00", gl:null, gv:null, claseL:"dolores", claseV:"lacosta",nota:"Zona 3"},
             ]},
@@ -18714,8 +18714,8 @@ const BD_COPA_PAIS = {
         titulo: "ZONA PAMPEANA SUR",
         tipo: "final",
         partidos: [
-            { ronda: "Final de Región", l: "Guatraché", v: "Liga del Sur", fecha: "Miércoles 19 de agosto", gl: 0, gv: 0, goles_l: [], goles_v: [] },
-            { ronda: "Final de Región (vuelta)", l: "Liga del Sur", v: "Guatraché", fecha: "Miércoles 02 de septiembre", gl: null, gv: null, goles_l: [], goles_v: [] },
+            { ronda: "Final de Región", l: "Guatraché", v: "<b>Liga del Sur</b>", fecha: "Miércoles 19 de agosto", gl: 0, gv: 0, goles_l: [], goles_v: [] },
+            { ronda: "Final de Región (vuelta)", l: "<b>Liga del Sur</b>", v: "Guatraché", fecha: "Miércoles 02 de septiembre", gl: 2, gv: 1, goles_l: ["Enzo Paredes","Matías Malmoria"], goles_v: [] },
         ]
     },
 
