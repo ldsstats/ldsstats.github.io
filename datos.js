@@ -490,13 +490,13 @@ const BD_FIXTURES_FUTSAL_RESERVA = [
         {l:"Huracán",         v:"La Esperanza",     gl:null, gv:null},
     ]},
     { fecha: 6, partidos: [
-        {l:"Pacífico BB",     v:"Dublin",     gl:null, gv:null},
-        {l:"Comercial",       v:"Petroquímicos",     gl:null, gv:null},
+        {l:"Catamarca",     v:"Villa Mitre",     gl:null, gv:null},
+        {l:"Dublin",     v:"Pacífico BB",     gl:null, gv:null},
+        {l:"Petroquímicos",       v:"Comercial",     gl:null, gv:null},
         {l:"Tiro Federal",    v:"Liniers",     gl:null, gv:null},
-        {l:"Los 3 Chiflados", v:"San Francisco",     gl:null, gv:null},
+        {l:"San Francisco", v:"Los 3 Chiflados",     gl:null, gv:null},
         {l:"La Estación",     v:"Huracán",     gl:null, gv:null},
         {l:"La Esperanza",    v:"Dep. Futsal",     gl:null, gv:null},
-        {l:"Villa Mitre",     v:"Catamarca",     gl:null, gv:null},
     ]},
     { fecha: 7, partidos: [
         {l:"Los 3 Chiflados", v:"Villa Mitre",     gl:null, gv:null},
@@ -610,13 +610,13 @@ const BD_FIXTURES_FUTSAL = [
         {l:"Huracán",         v:"La Esperanza",     gl:null, gv:null},
     ]},
     { fecha: 6, partidos: [
-        {l:"Pacífico BB",     v:"Dublin",     gl:null, gv:null},
-        {l:"Comercial",       v:"Petroquímicos",     gl:null, gv:null},
+        {l:"Catamarca",     v:"Villa Mitre",     gl:null, gv:null},
+        {l:"Dublin",     v:"Pacífico BB",     gl:null, gv:null},
+        {l:"Petroquímicos",       v:"Comercial",     gl:null, gv:null},
         {l:"Tiro Federal",    v:"Liniers",     gl:null, gv:null},
-        {l:"Los 3 Chiflados", v:"San Francisco",     gl:null, gv:null},
+        {l:"San Francisco", v:"Los 3 Chiflados",     gl:null, gv:null},
         {l:"La Estación",     v:"Huracán",     gl:null, gv:null},
         {l:"La Esperanza",    v:"Dep. Futsal",     gl:null, gv:null},
-        {l:"Villa Mitre",     v:"Catamarca",     gl:null, gv:null},
     ]},
     { fecha: 7, partidos: [
         {l:"Los 3 Chiflados", v:"Villa Mitre",     gl:null, gv:null},
@@ -1338,7 +1338,7 @@ BD_FIXTURES.promocional.reserva.push(
         {l:"Pacífico BB",v:"Sansinena",           gl:1,   gv:0}
     ]},
     { fecha: 5, partidos: [
-        {l:"Rosario PB",      v:"Comercial",          gl:null,   gv:null},
+        {l:"Rosario PB",      v:"Comercial",          gl:1,   gv:0},
         {l:"Sansinena",   v:"Tiro Federal", gl:1,   gv:1},
         {l:"Pacífico (C)", v:"Olimpo",              gl:null,   gv:null},
         {l:"Pacífico BB",v:"Dublin",           gl:5,   gv:0}
@@ -1920,6 +1920,9 @@ function generarHome() {
 
 
         { id: "2026-09-02", label: "MIÉR 02/09", torneos: [
+            { nombre: "FUTSAL | CLAUSURA | FECHA 6", cat: "futsal", torLink: "futsal", noAutoResult: true, partidos: [
+            {l:"Catamarca", v:"Villa Mitre", hora:"22:00", gl:null, gv:null, claseL:"catamarca", claseV:"villamitre",nota:"en cancha de Don Bosco"},
+            ]},
             { nombre: "SUB 15 FEMENINO | FECHA 18", cat: "sub15fem", torLink: "sub15fem", noAutoResult: true, partidos: [
             {l:"Juventud Unida", v:"Bella Vista", hora:"15:00", gl:null, gv:null, claseL:"juventudunida", claseV:"bellavista",nota:"Reprogramado del último sábado"},
             ]},
@@ -1939,9 +1942,19 @@ function generarHome() {
             ]},
        ]},
         { id: "2026-09-03", label: "JUE 03/09", torneos: [
+            { nombre: "FUTSAL | CLAUSURA | FECHA 6", cat: "futsal", torLink: "futsal", noAutoResult: true, partidos: [
+            {l:"Dublin", v:"Pacífico BB", hora:"22:00", gl:null, gv:null, claseL:"dublin", claseV:"pacificobb",nota:"en cancha de Don Bosco"},
+            ]},
             { nombre: "TORNEO DE SELECCIONES | SUB 15 | FECHA 5 (LIGA DEL SUR)", cat: "torneoseleccion15", torLink: "torneoseleccion15", noAutoResult: true, partidos: [
             {l:"Pehuajó", v:"Trenque Lauquen", hora:"16:00", gl:null, gv:null, claseL:"pehuajo", claseV:"trenquelauquen",nota:"Zona 4"},
             {l:"Dolores", v:"La Costa", hora:"18:00", gl:null, gv:null, claseL:"dolores", claseV:"lacosta",nota:"Zona 3"},
+            ]},
+       ]},
+        { id: "2026-09-04", label: "VIE 04/09", torneos: [
+            { nombre: "FUTSAL | CLAUSURA | FECHA 6", cat: "futsal", torLink: "futsal", noAutoResult: true, partidos: [
+            {l:"San Francisco", v:"Los 3 Chiflados", hora:"22:00", gl:null, gv:null, claseL:"sanfrancisco", claseV:"los3chiflados",nota:"en cancha de La Curtiembre"},
+            {l:"Petroquímicos", v:"Comercial", hora:"22:00", gl:null, gv:null, claseL:"petroquimicos", claseV:"comercial",nota:"en cancha de Petroquímicos"},
+            {l:"Tiro Federal", v:"Liniers", hora:"22:00", gl:null, gv:null, claseL:"tirofederal", claseV:"liniers",nota:"en cancha de Tiro Federal"},
             ]},
        ]},
     ];
@@ -16854,6 +16867,7 @@ const BD_H2H = {
        { fecha: "Fecha 12 - Apertura 2026 - 13 jun 2026", torneo: "promocional", l: "Comercial", v: "Rosario PB", gl: 0, gv: 1, goles_l: [], goles_v: ["Sebastián Mendoza"] },
         { fecha: "Fecha 12 - Apertura 2026", torneo: "reserva_promocional", l: "Comercial", v: "Rosario PB", gl: 2, gv: 2 },
         { fecha: "Fecha 5 - Clausura 2026 - 31 ago 2026", torneo: "promocional", l: "Rosario PB", v: "Comercial", gl: 1, gv: 1, goles_l: ["Sebastián Mendoza"], goles_v: ["Mateo Silenzi"] },
+        { fecha: "Fecha 5 - Clasura 2026", torneo: "reserva_promocional", l: "Rosario PB", v: "Comercial", gl: 1, gv: 0 }, 
     ],
     "Kimberley|Olimpo": [
         { fecha: "Fecha 5 - Fase inicial - 18 abr 2026", torneo: "federala", l: "Kimberley", v: "Olimpo", gl: 0, gv: 1, goles_l: [], goles_v: ["Cristian Ibarra"] },
@@ -17460,13 +17474,12 @@ function generarReserva(cat) {
                        {n:"Huracán",       cl:"huracan",      pj:5, pg:0, pe:2, pp:3, gf:9, gc:14, pts:2}],
         'promocional':[
                        {n:"Olimpo <b>(A)</b>",              cl:"olimpo",           pj:3, pg:3, pe:0, pp:0, gf:8, gc:3, pts:9},
-                       {n:"Pacífico BB",         cl:"pacificobb",       pj:4, pg:3, pe:0, pp:1, gf:7, gc:2, pts:9},
+                       {n:"Pacífico BB",         cl:"pacificobb",       pj:4, pg:3, pe:0, pp:1, gf:7, gc:2, pts:9},                       {n:"Rosario PB",          cl:"rosariopb",        pj:5, pg:3, pe:0, pp:2, gf:9, gc:9, pts:9},
                        {n:"Sansinena",           cl:"sansinena",        pj:4, pg:2, pe:1, pp:1, gf:10, gc:5, pts:7},
                        {n:"Tiro Federal",        cl:"tirofederal",      pj:4, pg:2, pe:1, pp:1, gf:9, gc:4, pts:7},
-                       {n:"Rosario PB",          cl:"rosariopb",        pj:4, pg:2, pe:0, pp:2, gf:8, gc:9, pts:6},
                        {n:"Dublin",              cl:"dublin",           pj:4, pg:1, pe:1, pp:2, gf:8, gc:13, pts:4},
                        {n:"Pacífico (C)", cl:"pacificocabildo",  pj:4, pg:0, pe:1, pp:3, gf:6, gc:15, pts:1},
-                       {n:"Comercial",           cl:"comercial",        pj:3, pg:0, pe:0, pp:3, gf:2, gc:7, pts:0},],
+                       {n:"Comercial",           cl:"comercial",        pj:4, pg:0, pe:0, pp:4, gf:2, gc:8, pts:0},],
         'segundafemenino': [
             {n:"Liniers <b>(C)</b>",             cl:"liniers",         pj:14, pg:12, pe:2, pp:0, gf:56, gc:10, pts:38},
             {n:"San Francisco",       cl:"sanfrancisco",    pj:14, pg:10, pe:2, pp:2, gf:32, gc:13, pts:32},
@@ -17887,7 +17900,7 @@ if ((p.goles_l && p.goles_l.length) || (p.goles_v && p.goles_v.length)) {
     });
     html += `</tbody></table>`;
     if (modo === 'principal') {
-html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'><b>📌 Puntos en juego:</b> 24 tras terminar la fecha 5<br><b>(A)</b> Campeón del Apertura<br><b>(*)</b> Se les do por perdido el partido a ambos (1-0) por incidentes tras el partido<br><b>(-)</b> Se bajó de la competencia para el Clausura</div>`;
+html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'><b>📌 Puntos en juego:</b> 24 tras terminar la fecha 5<br><b>(A)</b> Campeón del Apertura<br><b>(*)</b> Se les dio por perdido el partido a ambos (1-0) por incidentes tras el juego<br><b>(-)</b> Se bajó de la competencia para el Clausura</div>`;
     } else if (modo === 'reserva') {
         html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'><b>📌 Puntos en juego:</b> 24 tras terminar la fecha 5<br><b>(A)</b> Campeón del Apertura<br><b>(-)</b> Se bajó de la competencia para el Clausura</div>`;
     }
