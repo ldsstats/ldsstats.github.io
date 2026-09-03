@@ -825,7 +825,7 @@ const idaSub15Fem = [
     { fecha: 18, partidos: [
         {l:"Tiro Federal",          v:"Huracán",          gl:3, gv:0},
         {l:"Sporting",              v:"Liniers",          gl:0, gv:5},
-        {l:"Juventud Unida",        v:"Bella Vista",      gl:null, gv:null},
+        {l:"Juventud Unida",        v:"Bella Vista",      gl:1, gv:7},
         {l:"La Armonía",            v:"Empleados de Comercio", gl:1, gv:1},
         {l:"San Francisco",         v:"Libertad",         gl:6, gv:1},
         {l:"Villa Mitre",           v:"Olimpo",           gl:null, gv:null}
@@ -1252,7 +1252,7 @@ BD_FIXTURES.oficial.reserva.push(
     { fecha: 5, partidos: [
         {l:"Huracán",   v:"Liniers",   gl:1,   gv:1},
         {l:"Bella Vista",   v:"Villa Mitre",   gl:1,   gv:3},
-        {l:"San Francisco",   v:"La Armonía",   gl:null,   gv:null},
+        {l:"San Francisco",   v:"La Armonía",   gl:2,   gv:4},
         {l:"Libertad",   v:"Sporting",   gl:null,   gv:null}
     ]},
     { fecha: 6, partidos: [
@@ -1316,7 +1316,7 @@ BD_FIXTURES.promocional.reserva.push(
     { fecha: 1, partidos: [
         {l:"Dublin",      v:"Rosario PB",          gl:2,   gv:3},
         {l:"Sansinena",   v:"Pacífico (C)", gl:5,   gv:2},
-        {l:"Pacífico BB", v:"Olimpo",              gl:null,   gv:null},
+        {l:"Pacífico BB", v:"Olimpo",              gl:0,   gv:1},
         {l:"Tiro Federal",v:"Comercial",           gl:null,   gv:null}
     ]},
     { fecha: 2, partidos: [
@@ -1924,12 +1924,12 @@ function generarHome() {
             {l:"Catamarca", v:"Villa Mitre", hora:"22:00", gl:null, gv:null, claseL:"catamarca", claseV:"villamitre",nota:"en cancha de Don Bosco"},
             ]},
             { nombre: "SUB 15 FEMENINO | FECHA 18", cat: "sub15fem", torLink: "sub15fem", noAutoResult: true, partidos: [
-            {l:"Juventud Unida", v:"Bella Vista", hora:"15:00", gl:null, gv:null, claseL:"juventudunida", claseV:"bellavista",nota:"Reprogramado del último sábado"},
+            {l:"Juventud Unida", v:"Bella Vista", hora:"15:00", gl:1, gv:7, claseL:"juventudunida", claseV:"bellavista",nota:"Reprogramado del último sábado"},
             ]},
             { nombre: "COPA PAÍS | PRIMERA RONDA", cat: "copapais", torLink: "copapais", noAutoResult: true, partidos: [
             {l:"<b>Liga del Sur</b>", v:"Guatraché", hora:"15:30", gl:2, gv:1, claseL:"ldsbb", claseV:"guatrachepais",nota:"<b>Zona Pampeana Sur - Ida: 0-0 | En cancha de Sansinena</b>"},
-            {l:"Paraná", v:"Laguna Paiva", hora:"16:00", gl:null, gv:null, claseL:"parana", claseV:"lagunapaiva",nota:"<b>Zona Litoral Sur - Ida: 3-1 | En cancha de Sansinena</b>"},
-            {l:"Tigonasta", v:"Valle Viejo", hora:"16:00", gl:null, gv:null, claseL:"tinogasta", claseV:"valleviejo",nota:"<b>Zona Catamarca - Fecha 4"},
+            {l:"Paraná", v:"Laguna Paiva", hora:"16:00", gl:4, gv:0, claseL:"parana", claseV:"lagunapaiva",nota:"<b>Zona Litoral Sur - Ida: 3-1 | En cancha de Sansinena</b>"},
+            {l:"Tigonasta", v:"Valle Viejo", hora:"16:00", gl:2, gv:5, claseL:"tinogasta", claseV:"valleviejo",nota:"<b>Zona Catamarca - Fecha 4"},
             {l:"San Juan", v:"Rodeo", hora:"21:00", gl:null, gv:null, claseL:"sanjuan", claseV:"rodeo",nota:"<b>Zona Cuyo - Fecha 4"},
             ]},
             { nombre: "COPA PAÍS | SEGUNDA RONDA", cat: "copapais", torLink: "copapais", noAutoResult: true, partidos: [
@@ -16017,6 +16017,7 @@ const BD_H2H = {
         { fecha: "Fecha 1 - Apertura 2026", torneo: "reserva_promocional", l: "Pacífico BB", v: "Olimpo", gl: 1, gv: 3 },
         { fecha: "Fecha 8 - Apertura 2026", torneo: "reserva_promocional", l: "Pacífico BB", v: "Olimpo", gl: 0, gv: 2, goles_l: [], goles_v: ["Valentín Quidel","Santiago Llanos"] },
         { fecha: "Fecha 1 - Clausura 2026 - 01 ago 2026", torneo: "promocional", l: "Pacífico BB", v: "Olimpo", gl: 0, gv: 0 },
+        { fecha: "Fecha 1 - Clausura 2026", torneo: "reserva_promocional", l: "Pacífico BB", v: "Olimpo", gl: 0, gv: 1 },
     ],
     "Pacífico (C)|Sansinena": [
         { fecha: "Fecha 1 - Apertura 2026 - 15 mar 2026", torneo: "promocional", l: "Sansinena", v: "Pacífico (C)", gl: 3, gv: 3, goles_l: ["Pablo González","Valentín Moral","Manuel Stortini"], goles_v: ["Gianni Ferrari (2)","Emanuel López"] },
@@ -16850,6 +16851,7 @@ const BD_H2H = {
         { fecha: "Torneo 2026 - Fecha 5", torneo: "sub15fem", l: "La Armonía", v: "San Francisco", gl: 1, gv: 2 },
         { fecha: "Torneo 2026 - Fecha 16", torneo: "sub15fem", l: "San Francisco", v: "La Armonía", gl: 3, gv: 1 },
         { fecha: "Fecha 5 - Clausura 2026 - 29 ago 2026", torneo: "oficial", l: "San Francisco", v: "La Armonía", gl: 1, gv: 0, goles_l: ["Marcelo Castellano"], goles_v: [] },
+        { fecha: "Fecha 5 - Clausura 2026", torneo: "reserva_oficial", l: "San Francisco", v: "La Armonía", gl: 2, gv: 4 },
     ],
     "Dublin|Pacífico BB": [
         { fecha: "Fecha 5 - Apertura 2026 - 11 abr 2026", torneo: "promocional", l: "Dublin", v: "Pacífico BB", gl: 1, gv: 0, goles_l: ["Jonathan Arias"], goles_v: [] },
@@ -17467,14 +17469,14 @@ function generarReserva(cat) {
                        {n:"Bella Vista",   cl:"bellavista",   pj:5, pg:3, pe:1, pp:1, gf:8, gc:7, pts:10},
                        {n:"Villa Mitre",   cl:"villamitre",   pj:5, pg:3, pe:1, pp:1, gf:11, gc:11, pts:10},
                        {n:"Sporting <b>(A)</b>",      cl:"sporting",     pj:4, pg:2, pe:2, pp:0, gf:7, gc:5, pts:8},
-                       {n:"La Armonía",    cl:"laarmonia",    pj:4, pg:1, pe:2, pp:1, gf:6, gc:6, pts:5},
-                       {n:"Liniers",       cl:"liniers",      pj:5, pg:2, pe:1, pp:2, gf:5, gc:3, pts:4},
+                       {n:"La Armonía",    cl:"laarmonia",    pj:5, pg:2, pe:2, pp:1, gf:10, gc:8, pts:8},
+                       {n:"Liniers",       cl:"liniers",      pj:5, pg:2, pe:1, pp:2, gf:5, gc:3, pts:7},
+                       {n:"San Francisco", cl:"sanfrancisco", pj:5, pg:1, pe:10, pp:3, gf:8, gc:11, pts:4},
                        {n:"Libertad",      cl:"libertad",     pj:4, pg:1, pe:0, pp:3, gf:6, gc:6, pts:3},
-                       {n:"San Francisco", cl:"sanfrancisco", pj:4, pg:1, pe:10, pp:2, gf:6, gc:7, pts:4},
                        {n:"Huracán",       cl:"huracan",      pj:5, pg:0, pe:2, pp:3, gf:9, gc:14, pts:2}],
         'promocional':[
-                       {n:"Olimpo <b>(A)</b>",              cl:"olimpo",           pj:3, pg:3, pe:0, pp:0, gf:8, gc:3, pts:9},
-                       {n:"Pacífico BB",         cl:"pacificobb",       pj:4, pg:3, pe:0, pp:1, gf:7, gc:2, pts:9},                       {n:"Rosario PB",          cl:"rosariopb",        pj:5, pg:3, pe:0, pp:2, gf:9, gc:9, pts:9},
+                       {n:"Olimpo <b>(A)</b>",              cl:"olimpo",           pj:4, pg:4, pe:0, pp:0, gf:9, gc:3, pts:12},
+                       {n:"Pacífico BB",         cl:"pacificobb",       pj:5, pg:3, pe:0, pp:2, gf:7, gc:3, pts:9},                       {n:"Rosario PB",          cl:"rosariopb",        pj:5, pg:3, pe:0, pp:2, gf:9, gc:9, pts:9},
                        {n:"Sansinena",           cl:"sansinena",        pj:4, pg:2, pe:1, pp:1, gf:10, gc:5, pts:7},
                        {n:"Tiro Federal",        cl:"tirofederal",      pj:4, pg:2, pe:1, pp:1, gf:9, gc:4, pts:7},
                        {n:"Dublin",              cl:"dublin",           pj:4, pg:1, pe:1, pp:2, gf:8, gc:13, pts:4},
@@ -18714,8 +18716,8 @@ const BD_COPA_PAIS = {
         titulo: "ZONA PAMPEANA SUR",
         tipo: "final",
         partidos: [
-            { ronda: "Final de Región", l: "Guatraché", v: "<b>Liga del Sur</b>", fecha: "Miércoles 19 de agosto", gl: 0, gv: 0, goles_l: [], goles_v: [] },
-            { ronda: "Final de Región (vuelta)", l: "<b>Liga del Sur</b>", v: "Guatraché", fecha: "Miércoles 02 de septiembre", gl: 2, gv: 1, goles_l: ["Enzo Paredes","Matías Malmoria"], goles_v: [] },
+            { ronda: "Final de Región", l: "<s>Guatraché</s>", v: "<b>Liga del Sur</b>", fecha: "Miércoles 19 de agosto", gl: 0, gv: 0, goles_l: [], goles_v: [] },
+            { ronda: "Final de Región (vuelta)", l: "<b>Liga del Sur</b>", v: "<s>Guatraché</s>", fecha: "Miércoles 02 de septiembre", gl: 2, gv: 1, goles_l: ["Enzo Paredes","Matías Malmoria"], goles_v: [] },
         ]
     },
 
@@ -18742,7 +18744,7 @@ const BD_COPA_PAIS = {
                 { l: "Tinogasta", v: "Catamarca", fecha: "Miércoles 26 de agosto", gl: 2, gv: 5, goles_l: [], goles_v: [] }
             ]},
             { fecha: 4, libre: "Catamarca", partidos: [
-                { l: "Tinogasta", v: "Valle Viejo", fecha: "Miércoles 2 de septiembre", gl: null, gv: null, goles_l: [], goles_v: [] }
+                { l: "Tinogasta", v: "Valle Viejo", fecha: "Miércoles 2 de septiembre", gl: 2, gv: 5, goles_l: [], goles_v: [] }
             ]},
             { fecha: 5, libre: "Tinogasta", partidos: [
                 { l: "Valle Viejo", v: "Catamarca", fecha: "Miércoles 9 de septiembre", gl: null, gv: null, goles_l: [], goles_v: [] }
@@ -18753,8 +18755,8 @@ const BD_COPA_PAIS = {
         ],
         posiciones: [
             { nombre: "Catamarca",  pj:2, pg:2, pe:0, pp:0, gf:7, gc:2, pts:6 },
-            { nombre: "Valle Viejo",pj:2, pg:1, pe:0, pp:1, gf:7, gc:3, pts:3 },
-            { nombre: "Tinogasta",  pj:2, pg:0, pe:0, pp:2, gf:3, gc:12, pts:0 },
+            { nombre: "Valle Viejo",pj:3, pg:2, pe:0, pp:1, gf:12, gc:5, pts:6 },
+            { nombre: "Tinogasta",  pj:3, pg:0, pe:0, pp:3, gf:5, gc:17, pts:0 },
         ]
     },
 
@@ -18801,8 +18803,8 @@ const BD_COPA_PAIS = {
         titulo: "LITORAL SUR",
         tipo: "eliminatoria",
         partidos: [
-            { ronda: "1° Ronda - P1 (ida)", l: "Laguna Paiva", v: "Paraná", fecha: "Miércoles 26 de agosto", gl: 1, gv: 3, goles_l: [], goles_v: [] },
-            { ronda: "1° Ronda - P1 (vuelta)", l: "Paraná", v: "Laguna Paiva", fecha: "Miércoles 02 de septiembre", gl: null, gv: null, goles_l: [], goles_v: [] },
+            { ronda: "1° Ronda - P1 (ida)", l: "<s>Laguna Paiva</s>", v: "<b>Paraná</b>", fecha: "Miércoles 26 de agosto", gl: 1, gv: 3, goles_l: [], goles_v: [] },
+            { ronda: "1° Ronda - P1 (vuelta)", l: "<b>Paraná</b>", v: "<s>Laguna Paiva</s>", fecha: "Miércoles 02 de septiembre", gl: 4, gv: 0, goles_l: [], goles_v: [] },
             { ronda: "1° Ronda - P2 (ida)", l: "<s>Rafaela</s>", v: "<b>San Jorge</b>", fecha: "Miércoles 12 de agosto", gl: 1, gv: 0, goles_l: [], goles_v: [], separador: true },
             { ronda: "1° Ronda - P2 (vuelta)", l: "<b>San Jorge</b>", v: "<s>Rafaela</s>", fecha: "Miércoles 26 de agosto", gl: 1, gv: 0, pen_l:4, pen_v:2, goles_l: [], goles_v: [] },
         ]
