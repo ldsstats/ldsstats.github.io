@@ -1891,7 +1891,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 22).partidos.forEach(p
 });
 
 
-let diaSeleccionadoHome = "2026-09-02"; 
+let diaSeleccionadoHome = "2026-09-03"; 
 let mercadoPasesAbierto = false;
 
 function toggleMercadoPasesHome() {
@@ -1930,14 +1930,14 @@ function generarHome() {
             {l:"<b>Liga del Sur</b>", v:"Guatraché", hora:"15:30", gl:2, gv:1, claseL:"ldsbb", claseV:"guatrachepais",nota:"<b>Zona Pampeana Sur - Ida: 0-0 | En cancha de Sansinena</b>"},
             {l:"Paraná", v:"Laguna Paiva", hora:"16:00", gl:4, gv:0, claseL:"parana", claseV:"lagunapaiva",nota:"<b>Zona Litoral Sur - Ida: 3-1 | En cancha de Sansinena</b>"},
             {l:"Tigonasta", v:"Valle Viejo", hora:"16:00", gl:2, gv:5, claseL:"tinogasta", claseV:"valleviejo",nota:"<b>Zona Catamarca - Fecha 4"},
-            {l:"San Juan", v:"Rodeo", hora:"21:00", gl:null, gv:null, claseL:"sanjuan", claseV:"rodeo",nota:"<b>Zona Cuyo - Fecha 4"},
+            {l:"San Juan", v:"Rodeo", hora:"21:00", gl:7, gv:1, claseL:"sanjuan", claseV:"rodeo",nota:"<b>Zona Cuyo - Fecha 4"},
             ]},
             { nombre: "COPA PAÍS | SEGUNDA RONDA", cat: "copapais", torLink: "copapais", noAutoResult: true, partidos: [
-            {l:"San Nicolás", v:"Chacabuco", hora:"20:00", gl:null, gv:null, claseL:"sannicolas", claseV:"chacabuco",nota:"<b>Zona Pampeana Norte - Segunda ronda - Ida: 2-0"},
+            {l:"San Nicolás", v:"Chacabuco", hora:"20:00", gl:6, gv:1, claseL:"sannicolas", claseV:"chacabuco",nota:"<b>Zona Pampeana Norte - Segunda ronda - Ida: 2-1"},
             ]},
             { nombre: "TORNEO DE SELECCIONES | SUB 15 | FECHA 5", cat: "torneoseleccion15", torLink: "torneoseleccion15", noAutoResult: true, partidos: [
-            {l:"Ayacucho", v:"Azul", hora:"20:00", gl:null, gv:null, claseL:"ayacucho", claseV:"azul",nota:"Zona 2"},
-            {l:"Tandil", v:"Necochea", hora:"20:00", gl:null, gv:null, claseL:"tandil", claseV:"necochea",nota:"Zona 2"},
+            {l:"Ayacucho", v:"Azul", hora:"20:00", gl:1, gv:2, claseL:"ayacucho", claseV:"azul",nota:"Zona 2"},
+            {l:"Tandil", v:"Necochea", hora:"20:00", gl:1, gv:2, claseL:"tandil", claseV:"necochea",nota:"Zona 2"},
             ]},
        ]},
         { id: "2026-09-03", label: "JUE 03/09", torneos: [
@@ -18774,7 +18774,7 @@ const BD_COPA_PAIS = {
                 { l: "San Juan", v: "Albardón", fecha: "Miércoles 26 de agosto", gl: 2, gv: 1, goles_l: [], goles_v: [] }
             ]},
             { fecha: 4, libre: "Albardón", partidos: [
-                { l: "San Juan", v: "Rodeo", fecha: "Miércoles 2 de septiembre", gl: null, gv: null, goles_l: [], goles_v: [] }
+                { l: "San Juan", v: "Rodeo", fecha: "Miércoles 2 de septiembre", gl: 7, gv: 1, goles_l: [], goles_v: [] }
             ]},
             { fecha: 5, libre: "San Juan", partidos: [
                 { l: "Rodeo", v: "Albardón", fecha: "Miércoles 9 de septiembre", gl: null, gv: null, goles_l: [], goles_v: [] }
@@ -18784,9 +18784,9 @@ const BD_COPA_PAIS = {
             ]},
         ],
         posiciones: [
-            { nombre: "San Juan",  pj:2, pg:2, pe:0, pp:0, gf:5, gc:2, pts:6 },
+            { nombre: "San Juan",  pj:3, pg:3, pe:0, pp:0, gf:12, gc:3, pts:9 },
             { nombre: "Albardón",  pj:2, pg:1, pe:0, pp:1, gf:3, gc:3, pts:3 },
-            { nombre: "Rodeo",     pj:2, pg:0, pe:0, pp:2, gf:2, gc:5, pts:0 },
+            { nombre: "Rodeo <b>(X)</b>",     pj:3, pg:0, pe:0, pp:3, gf:3, gc:12, pts:0 },
         ]
     },
 
@@ -18867,8 +18867,8 @@ const BD_COPA_PAIS_SEGUNDA_RONDA = [
         titulo: "ZONA PAMPEANA NORTE",
         tipo: "final",
         partidos: [
-            { ronda: "2° Ronda (ida)", l: "Chacabuco", v: "San Nicolás", fecha: "", gl: 0, gv: 2, goles_l: [], goles_v: [] },
-            { ronda: "2° Ronda (vuelta)", l: "San Nicolás", v: "Chacabuco", fecha: "", gl: null, gv: null, goles_l: [], goles_v: [] },
+            { ronda: "2° Ronda (ida)", l: "<s>Chacabuco</s>", v: "<b>San Nicolás</b>", fecha: "", gl: 1, gv: 2, goles_l: [], goles_v: [] },
+            { ronda: "2° Ronda (vuelta)", l: "<b>San Nicolás</b>", v: "<s>Chacabuco</s>", fecha: "", gl: 6, gv: 1, goles_l: [], goles_v: [] },
         ]
     },
 ];
@@ -23122,10 +23122,10 @@ function generarTorneoSeleccion15() {
             { nombre:"Olavarría",         key:"olavarria",      pj:3,pg:1,pe:0,pp:2,gf:2,gc:6,pts:3 },
         ]},
         { label:"ZONA 2", equipos:[
-            { nombre:"Tandil",            key:"tandil",         pj:4,pg:3,pe:1,pp:0,gf:8,gc:4,pts:10 },
-            { nombre:"Necochea",          key:"necochea",       pj:4,pg:2,pe:0,pp:2,gf:8,gc:7,pts:6 },
-            { nombre:"Azul",              key:"azul",           pj:4,pg:1,pe:2,pp:1,gf:8,gc:8,pts:5 },
-            { nombre:"Ayacucho",          key:"ayacucho",       pj:4,pg:0,pe:1,pp:3,gf:4,gc:10,pts:1 },
+            { nombre:"Tandil",            key:"tandil",         pj:5,pg:3,pe:1,pp:1,gf:9,gc:6,pts:10 },
+            { nombre:"Necochea",          key:"necochea",       pj:5,pg:3,pe:0,pp:2,gf:10,gc:8,pts:9 },
+            { nombre:"Azul",              key:"azul",           pj:5,pg:2,pe:2,pp:1,gf:10,gc:9,pts:8 },
+            { nombre:"Ayacucho",          key:"ayacucho",       pj:5,pg:0,pe:1,pp:4,gf:5,gc:12,pts:1 },
         ]},
         { label:"ZONA 3", equipos:[
             { nombre:"General Madariaga", key:"madariaga",      pj:3,pg:3,pe:0,pp:0,gf:5,gc:1,pts:9 },
