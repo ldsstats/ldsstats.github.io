@@ -963,7 +963,7 @@ BD_FIXTURES_SUB.sub13.find(f=>f.fecha===11).partidos.forEach(p=>{
 });
 BD_FIXTURES_SUB.sub13.find(f=>f.fecha===12).partidos.forEach(p=>{
     if(p.l==="Alvarado"&&p.v==="Olimpo"){p.gl=2;p.gv=1;}
-    if(p.l==="Kimberley"&&p.v==="Balompié"){p.gl=null;p.gv=null;}
+    if(p.l==="Kimberley"&&p.v==="Balompié"){p.gl=0;p.gv=0;}
     if(p.l==="Santamarina"&&p.v==="Villa Mitre"){p.gl=1;p.gv=5;}
 });
 
@@ -17577,8 +17577,8 @@ const BD_POS_SUB = {
     sub13: [
         {nombre:"Villa Mitre <b>(C)</b>",  clase:"villamitre",  pj:11,pg:10,pe:1,pp:0,gf:33,gc:9,pts:31},
         {nombre:"Mac Allister <b>(C)</b>", clase:"macallister", pj:10,pg:8,pe:0,pp:2,gf:29,gc:7,pts:24},
-        {nombre:"Balompié <b>(X)</b>",     clase:"balompie",    pj:9,pg:4,pe:3,pp:2,gf:17,gc:12,pts:15},
-        {nombre:"Kimberley <b>(X)</b>",    clase:"kimberley",   pj:9,pg:4,pe:1,pp:4,gf:15,gc:12,pts:13},
+        {nombre:"Balompié <b>(X)</b>",     clase:"balompie",    pj:10,pg:4,pe:4,pp:2,gf:17,gc:12,pts:16},
+        {nombre:"Kimberley <b>(X)</b>",    clase:"kimberley",   pj:10,pg:4,pe:2,pp:4,gf:15,gc:12,pts:14},
         {nombre:"Alvarado <b>(X)</b>",     clase:"alvarado",    pj:11,pg:4,pe:0,pp:7,gf:15,gc:24,pts:12},
         {nombre:"Olimpo <b>(X)</b>",       clase:"olimpo",      pj:11,pg:2,pe:0,pp:9,gf:13,gc:31,pts:6},
         {nombre:"Santamarina <b>(X)</b>",  clase:"santamarina", pj:10,pg:0,pe:1,pp:9,gf:5,gc:32,pts:1}
