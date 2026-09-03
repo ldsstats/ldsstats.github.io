@@ -1945,7 +1945,7 @@ function generarHome() {
             {l:"Dublin", v:"Pacífico BB", hora:"22:00", gl:null, gv:null, claseL:"dublin", claseV:"pacificobb",nota:"en cancha de Don Bosco"},
             ]},
             { nombre: "TORNEO DE SELECCIONES | SUB 15 | FECHA 5 (LIGA DEL SUR)", cat: "torneoseleccion15", torLink: "torneoseleccion15", noAutoResult: true, partidos: [
-            {l:"Olavarría", v:"<b>Liga del Sur</b>", hora:"14:00", gl:null, gv:null, claseL:"olavarria", claseV:"ldsbb",nota:"Zona 1"},
+            {l:"Olavarría", v:"<b>Liga del Sur</b>", hora:"14:00", gl:1, gv:4, claseL:"olavarria", claseV:"ldsbb",nota:"Zona 1"},
             {l:"Pehuajó", v:"Trenque Lauquen", hora:"16:00", gl:null, gv:null, claseL:"pehuajo", claseV:"trenquelauquen",nota:"Zona 4"},
             {l:"Dolores", v:"La Costa", hora:"18:00", gl:null, gv:null, claseL:"dolores", claseV:"lacosta",nota:"Zona 3"},
             ]},
@@ -1955,6 +1955,26 @@ function generarHome() {
             {l:"San Francisco", v:"Los 3 Chiflados", hora:"22:00", gl:null, gv:null, claseL:"sanfrancisco", claseV:"los3chiflados",nota:"en cancha de La Curtiembre"},
             {l:"Petroquímicos", v:"Comercial", hora:"22:00", gl:null, gv:null, claseL:"petroquimicos", claseV:"comercial",nota:"en cancha de Petroquímicos"},
             {l:"Tiro Federal", v:"Liniers", hora:"22:00", gl:null, gv:null, claseL:"tirofederal", claseV:"liniers",nota:"en cancha de Tiro Federal"},
+            ]},
+       ]},
+        { id: "2026-09-05", label: "SÁB 05/09", torneos: [
+            { nombre: "OFICIAL | CLAUSURA | FECHA 6", cat: "oficial", torLink: "oficial", noAutoResult: true, partidos: [
+            {l:"San Francisco", v:"Huracán", hora:"15:00", gl:null, gv:null, claseL:"sanfrancisco", claseV:"huracan"},
+            ]},
+            { nombre: "PROMOCIONAL | CLAUSURA | FECHA 6", cat: "promocional", torLink: "promocional", noAutoResult: true, partidos: [
+            {l:"Dublin", v:"Tiro Federal", hora:"15:30", gl:null, gv:null, claseL:"dublin", claseV:"tirofederal"},
+            {l:"Pacífico (C)", v:"Rosario PB", hora:"16:00", gl:null, gv:null, claseL:"pacificoc", claseV:"rosariopb"},
+            ]},
+       ]},
+        { id: "2026-09-06", label: "DOM 06/09", torneos: [
+            { nombre: "OFICIAL | CLAUSURA | FECHA 6", cat: "oficial", torLink: "oficial", noAutoResult: true, partidos: [
+            {l:"Bella Vista", v:"La Armonía", hora:"11:00", gl:null, gv:null, claseL:"bellavista", claseV:"laarmonia"},
+            {l:"Libertad", v:"Villa Mitre", hora:"15:30", gl:null, gv:null, claseL:"libertad", claseV:"villamitre"},
+            {l:"Sporting", v:"Liniers", hora:"15:30", gl:null, gv:null, claseL:"sporting", claseV:"liniers"},
+            ]},
+            { nombre: "PROMOCIONAL | CLAUSURA | FECHA 6", cat: "promocional", torLink: "promocional", noAutoResult: true, partidos: [
+            {l:"Sansinena", v:"Olimpo", hora:"11:00", gl:null, gv:null, claseL:"sansinena", claseV:"olimpo"},
+            {l:"Pacífico BB", v:"Comercial", hora:"15:30", gl:null, gv:null, claseL:"pacificobb", claseV:"comercial"},
             ]},
        ]},
     ];
@@ -23111,15 +23131,15 @@ function generarTorneoSeleccion15() {
         { n:2, dia:"Mié 12/8", partidos:[{l:"Liga del Sur", v:"Olavarría",    lk:"ldsbb",      vk:"olavarria",   gl:3, gv:0, goles_l:["Theo Barros","Lucio Riaño","Galo Martínez"], goles_v:[]}], libre:"Tres Arroyos" },
         { n:3, dia:"Mié 19/8", partidos:[{l:"Tres Arroyos", v:"Liga del Sur", lk:"tresarroyos",vk:"ldsbb",       gl:2, gv:0}], libre:"Olavarría" },
         { n:4, dia:"Mié 26/8", partidos:[{l:"Tres Arroyos", v:"Olavarría",    lk:"tresarroyos",vk:"olavarria",   gl:1, gv:2}], libre:"Liga del Sur" },
-        { n:5, dia:"Mié 2/9",  partidos:[{l:"Olavarría",    v:"Liga del Sur", lk:"olavarria",  vk:"ldsbb",       gl:null, gv:null}], libre:"Tres Arroyos" },
+        { n:5, dia:"Mié 2/9",  partidos:[{l:"Olavarría",    v:"Liga del Sur", lk:"olavarria",  vk:"ldsbb",       gl:1, gv:4, goles_l:[], goles_v:["Galo Martínez","Galo Martínez","Simón Schmidt","Valentín Bozzetti"]}], libre:"Tres Arroyos" },
         { n:6, dia:"Mié 8/9",  partidos:[{l:"Liga del Sur", v:"Tres Arroyos", lk:"ldsbb",      vk:"tresarroyos", gl:null, gv:null}], libre:"Olavarría" },
     ];
 
     const zonas = [
         { label:"ZONA 1", equipos:[
             { nombre:"Tres Arroyos",      key:"tresarroyos",    pj:3,pg:2,pe:0,pp:1,gf:5,gc:2,pts:6 },
-            { nombre:"Liga del Sur",      key:"ldsbb",          pj:2,pg:1,pe:0,pp:1,gf:3,gc:2,pts:3 },
-            { nombre:"Olavarría",         key:"olavarria",      pj:3,pg:1,pe:0,pp:2,gf:2,gc:6,pts:3 },
+            { nombre:"Liga del Sur",      key:"ldsbb",          pj:3,pg:2,pe:0,pp:1,gf:7,gc:3,pts:6 },
+            { nombre:"Olavarría",         key:"olavarria",      pj:4,pg:1,pe:0,pp:3,gf:3,gc:10,pts:3 },
         ]},
         { label:"ZONA 2", equipos:[
             { nombre:"Tandil",            key:"tandil",         pj:5,pg:3,pe:1,pp:1,gf:9,gc:6,pts:10 },
