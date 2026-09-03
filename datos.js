@@ -304,7 +304,7 @@ const idaFederal = [
     { fecha: 9, libre: "Alvarado", partidos: [{l:"Germinal", v:"Guillermo Brown", gl:1, gv:1, dia:"Dom 17/05", hora:"15:00", goles_l:["Ignacio Terán"], goles_v:["Patricio Cucchi"]}, {l:"Villa Mitre", v:"Sol de Mayo", gl:2, gv:1, dia:"Dom 17/05", hora:"15:00", goles_l:["Enzo González","Thiago Pérez"], goles_v:["Kevin Pereyra"]}, {l:"Círculo Dep.", v:"Kimberley", gl:0, gv:1, dia:"Dom 17/05", hora:"15:00", goles_l:[], goles_v:["Santiago Castillo"]}, {l:"Santamarina", v:"Olimpo", gl:0, gv:0, dia:"Dom 17/05", hora:"18:10"}] }
 ];
 
-let fechaNonagonal = 6;
+let fechaNonagonal = 7;
 
 function cambiarFechaNonagonal(n) {
     fechaNonagonal = n;
@@ -1959,6 +1959,9 @@ function generarHome() {
             {l:"Petroquímicos", v:"Comercial", hora:"22:00", gl:null, gv:null, claseL:"petroquimicos", claseV:"comercial",nota:"en cancha de Petroquímicos"},
             {l:"Tiro Federal", v:"Liniers", hora:"22:00", gl:null, gv:null, claseL:"tirofederal", claseV:"liniers",nota:"en cancha de Tiro Federal"},
             ]},
+            { nombre: "FEDERAL A | NONAGONAL | FECHA 7", cat: "federala", torLink: "federala", noAutoResult: true, partidos: [
+            {l:"Juventud Antoniana", v:"Kimberley", hora:"22:00", gl:null, gv:null, claseL:"jantoniana", claseV:"kimberley"},
+            ]},
        ]},
         { id: "2026-09-05", label: "SÁB 05/09", torneos: [
             { nombre: "OFICIAL | CLAUSURA | FECHA 6", cat: "oficial", torLink: "oficial", noAutoResult: true, partidos: [
@@ -1984,6 +1987,11 @@ function generarHome() {
             { nombre: "PROMOCIONAL | CLAUSURA | FECHA 6", cat: "promocional", torLink: "promocional", noAutoResult: true, partidos: [
             {l:"Sansinena", v:"Olimpo", hora:"11:00", gl:null, gv:null, claseL:"sansinena", claseV:"olimpo"},
             {l:"Pacífico BB", v:"Comercial", hora:"15:30", gl:null, gv:null, claseL:"pacificobb", claseV:"comercial"},
+            ]},
+              { nombre: "FEDERAL A | NONAGONAL | FECHA 7", cat: "federala", torLink: "federala", noAutoResult: true, partidos: [
+            {l:"Alvarado", v:"Atenas (RC)", hora:"15:00", gl:null, gv:null, claseL:"alvarado", claseV:"atenasrc"},
+            {l:"Olimpo", v:"Cipolletti", hora:"15:30", gl:null, gv:null, claseL:"olimpo", claseV:"cipolletti"},
+            {l:"Huracán Las Heras", v:"Argentino de Monte Maiz", hora:"16:00", gl:null, gv:null, claseL:"huracanlh", claseV:"argmontemaiz"},
             ]},
             { nombre: "REGIONAL AMATEUR | FECHA 2", cat: "regamateurtemporada", torLink: "regamateurtemporada", noAutoResult: true, partidos: [
             {l:"Villa Díaz Vélez", v:"Independiente (San Cayetano)", hora:"11:00", gl:null, gv:null, claseL:"villadiazvelez", claseV:"indeptesancayetano",nota:"Zona 5"},
