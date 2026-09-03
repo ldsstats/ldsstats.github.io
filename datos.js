@@ -17605,8 +17605,8 @@ const BD_POS_SUB = {
         {nombre:"Alvarado",     clase:"alvarado",    pj:11,pg:5,pe:3,pp:3,gf:18,gc:12,pts:18},
         {nombre:"Kimberley",    clase:"kimberley",   pj:10,pg:5,pe:2,pp:3,gf:14,gc:10,pts:17},
         {nombre:"Mac Allister", clase:"macallister", pj:10,pg:4,pe:5,pp:1,gf:20,gc:6,pts:17},
-        {nombre:"Villa Mitre",  clase:"villamitre",  pj:11,pg:3,pe:5,pp:3,gf:9,gc:9,pts:14},
-        {nombre:"Olimpo",       clase:"olimpo",      pj:10,pg:3,pe:2,pp:5,gf:11,gc:16,pts:11},
+        {nombre:"Villa Mitre <b>(X)</b>",  clase:"villamitre",  pj:11,pg:3,pe:5,pp:3,gf:9,gc:9,pts:14},
+        {nombre:"Olimpo <b>(X)</b>",       clase:"olimpo",      pj:10,pg:3,pe:2,pp:5,gf:11,gc:16,pts:11},
         {nombre:"Santamarina <b>(X)</b>",  clase:"santamarina", pj:10,pg:1,pe:0,pp:9,gf:6,gc:26,pts:3}
     ]
 };
