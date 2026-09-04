@@ -382,7 +382,7 @@ const idaSegundaFemenino = [
     { fecha: 20, libre: "Petroquímicos", partidos: [{l:"Sansinena", v:"Rosario PB", gl:0, gv:4, dia:"Sáb 15/08", hora:"13:15", goles_l:[], goles_v:["Valentina Cavalli","Valentina Cavalli","Valentina Cavalli","Celeste Medina"]}, {l:"Estrella de Oro", v:"San Francisco", gl:1, gv:3, dia:"Sáb 15/08", hora:"15:30", goles_l:["Camila Guenchual"], goles_v:["Milagros Fernández","Florencia Sorbellini","Rocío de Mirta"]}, {l:"Olimpo", v:"Pacífico (C)", gl:3, gv:0, dia:"Sáb 15/08", hora:"15:30", goles_l:["Oriana Correa","Mía Cibelli","Dana Placencia"], goles_v:[]}, {l:"Huracán", v:"Liniers", gl:1, gv:8, dia:"Sáb 15/08", hora:"15:30", goles_l:["Keila Iglesias"], goles_v:["Paz Cutrín","Paz Cutrín","Paz Cutrín","Paulina Acevedo","Paulina Acevedo","María Paz Marino","María Paz Marino","Victoria Sánchez"]}] },
     { fecha: 21, libre: "Pacífico (C)", partidos: [{l:"Huracán", v:"San Francisco", gl:1, gv:7, dia:"Sáb 22/08", hora:"15:30", goles_l:[], goles_v:["Clara Iturrioz","Clara Iturrioz","Ariana Adassus","Milagros Fernández","Morena Barzola","Valentina Rebol","Paloma Vidal"]}, {l:"Petroquímicos", v:"Liniers", gl:0, gv:2, dia:"Sáb 22/08", hora:"15:30", goles_l:[], goles_v:["Paulina Acevedo","Ailén Márquez"] }, {l:"Olimpo", v:"Sansinena", gl:1, gv:1, dia:"Dom 23/08", hora:"15:30", goles_l:["Iara Vasileff"], goles_v:["Daniela Abello"] }, {l:"Estrella de Oro", v:"Rosario PB", gl:0, gv:1, dia:"Dom 23/08", hora:"15:30", goles_l:[], goles_v:["Juliana Ruiz"]}] },
     { fecha: 22, libre: "Olimpo", partidos: [{l:"Sansinena", v:"Estrella de Oro", gl:1, gv:2, dia:"Dom 30/08", hora:"11:00", goles_l:["Jocelyn Zarza"], goles_v:["Mariana González","Sabrina Genchi"]}, {l:"San Francisco", v:"Petroquímicos", gl:1, gv:2, dia:"Dom 30/08", hora:"15:30", goles_l:["Florencia Sorbellini"], goles_v:["Renata Segovia","Renata Segovia"]}, {l:"Rosario PB", v:"Huracán", gl:7, gv:0, dia:"Dom 30/08", hora:"16:00", goles_l:["Ayelén Zeballos","Ayelén Zeballos","Magdalena Nievas","Magdalena Nievas","Julieta Díaz","Julieta Ruiz","Mariela Sollosky"], goles_v:[]}, {l:"Liniers", v:"Pacífico (C)", gl:8, gv:0, dia:"Jue 03/08", hora:"13:15", goles_l:["Paz Cutrín","Paz Cutrín","Paz Cutrín","Isabella Pezzutti","Victoria Sánchez","Lola Podestá","Iara Schwab","Giuliana Morano"], goles_v:[]}] },
-    { fecha: 23, libre: "Liniers", partidos: [{l:"Rosario PB/Petroquímicos", v:"Rosario PB/Petroquímicos", gl:null, gv:null}, {l:"San Francisco/Pacífico (C)", v:"San Francisco/Pacífico (C)", gl:null, gv:null}, {l:"Sansinena/Huracán", v:"Sansinena/Huracán", gl:null, gv:null}, {l:"Estrella de Oro/Olimpo", v:"Estrella de Oro/Olimpo", gl:null, gv:null}] },
+    { fecha: 23, libre: "Liniers", partidos: [{l:"Pacífico (C)", v:"San Francisco", gl:null, gv:null, dia:"Sáb 05/09", hora:"12:45", goles_l:[], goles_v:[]}, {l:"Huracán", v:"Sansinena", gl:null, gv:null, dia:"Sáb 05/09", hora:"16:00", goles_l:[], goles_v:[]}, {l:"Petroquímicos", v:"Rosario PB", gl:null, gv:null, dia:"Dom 06/09", hora:"15:30", goles_l:[], goles_v:[]}, {l:"Olimpo", v:"Estrella de Oro", gl:null, gv:null, dia:"Dom 06/09", hora:"15:30", goles_l:[], goles_v:[]}] },
     { fecha: 24, libre: "San Francisco", partidos: [{l:"Petroquímicos/Sansinena", v:"Petroquímicos/Sansinena", gl:null, gv:null}, {l:"Olimpo/Liniers", v:"Olimpo/Liniers", gl:null, gv:null}, {l:"Huracán/Estrella de Oro", v:"Huracán/Estrella de Oro", gl:null, gv:null}, {l:"Pacífico (C)/Rosario PB", v:"Pacífico (C)/Rosario PB", gl:null, gv:null}] },
     { fecha: 25, libre: "Rosario PB", partidos: [{l:"Sansinena/Pacífico (C)", v:"Sansinena/Pacífico (C)", gl:null, gv:null}, {l:"Estrella de Oro/Petroquímicos", v:"Estrella de Oro/Petroquímicos", gl:null, gv:null}, {l:"San Francisco/Liniers", v:"San Francisco/Liniers", gl:null, gv:null}, {l:"Huracán/Olimpo", v:"Huracán/Olimpo", gl:null, gv:null}] },
     { fecha: 26, libre: "Sansinena", partidos: [{l:"San Francisco/Olimpo", v:"San Francisco/Olimpo", gl:null, gv:null}, {l:"Liniers/Rosario PB", v:"Liniers/Rosario PB", gl:null, gv:null}, {l:"Pacífico (C)/Estrella de Oro", v:"Pacífico (C)/Estrella de Oro", gl:null, gv:null}, {l:"Petroquímicos/Huracán", v:"Petroquímicos/Huracán", gl:null, gv:null}] },
@@ -585,7 +585,7 @@ const BD_FIXTURES_FUTSAL = [
     { fecha: 3, partidos: [
         {l:"Comercial",         v:"Liniers",     gl:6, gv:3, goles_l:["Jonatan Kippes (2)","Ricardo Lagos (2)","Leonel Torres","Alexis Salinas"], goles_v:[]},
         {l:"Catamarca",       v:"La Estación",     gl:2, gv:6, goles_l:[], goles_v:["Diego Romano (2)","Jonathan Carunchio (2)","Bernabé Storni","Tobias Montiel"]},
-        {l:"Dublin",          v:"La Esperanza",     gl:1, gv:5, goles_l:[], goles_v:["Bruno Decoud (3)","Rodrigo Decoud","Alexis Vera"]},
+        {l:"Dublin",          v:"La Esperanza",     gl:1, gv:5, goles_l:["Raúl Sepúlveda"], goles_v:["Bruno Decoud (3)","Rodrigo Decoud","Alexis Vera"]},
         {l:"Pacífico BB",     v:"Tiro Federal",     gl:4, gv:5, goles_l:[], goles_v:["Alejandro Saldívar (2)","Marcelo Aguirre (2)","Bruno Cronier"]},
         {l:"Petroquímicos",   v:"Villa Mitre",     gl:7, gv:4},
         {l:"Huracán",         v:"Los 3 Chiflados",     gl:null, gv:null},
@@ -611,7 +611,7 @@ const BD_FIXTURES_FUTSAL = [
     ]},
     { fecha: 6, partidos: [
         {l:"Catamarca",     v:"Villa Mitre",     gl:null, gv:null},
-        {l:"Dublin",     v:"Pacífico BB",     gl:4, gv:2},
+        {l:"Dublin",     v:"Pacífico BB",     gl:4, gv:2, goles_l:["Agustín Miguel","Raúl Sepúlveda (2)","Javier Portillo"], goles_v:[]},
         {l:"Petroquímicos",       v:"Comercial",     gl:null, gv:null},
         {l:"Tiro Federal",    v:"Liniers",     gl:null, gv:null},
         {l:"San Francisco", v:"Los 3 Chiflados",     gl:null, gv:null},
@@ -828,7 +828,7 @@ const idaSub15Fem = [
         {l:"Juventud Unida",        v:"Bella Vista",      gl:1, gv:7},
         {l:"La Armonía",            v:"Empleados de Comercio", gl:1, gv:1},
         {l:"San Francisco",         v:"Libertad",         gl:6, gv:1},
-        {l:"Villa Mitre",           v:"Olimpo",           gl:null, gv:null}
+        {l:"Villa Mitre",           v:"Olimpo",           gl:0, gv:0}
     ]},
     { fecha: 19, partidos: [
         {l:"Liniers",               v:"Empleados de Comercio", gl:null, gv:null},
@@ -1561,10 +1561,10 @@ const idaFemeninoClausura = [
         { l: "Bella Vista",           v: "Villa Mitre",          gl: 1, gv: 5, dia:"Dom 30/08", hora:"16:30", goles_l:["Carla D'Ottavio"], goles_v:["Jessica Mella (2)","Celeste Lopetegui","Vera Moggia","Paola Melgarejo"] },
     ]},
     { fecha: 7, partidos: [
-        { l: "Villa Mitre",           v: "Empleados de Comercio",gl: null, gv: null },
-        { l: "Municipales",           v: "La Armonía",           gl: null, gv: null },
-        { l: "Tiro Federal",          v: "Bella Vista",          gl: null, gv: null },
-        { l: "Sporting",              v: "Libertad",             gl: null, gv: null }
+        { l: "Villa Mitre",           v: "Empleados de Comercio", gl: null, gv: null, dia:"Dom 06/09", hora:"15:30", goles_l:[], goles_v:[] },
+        { l: "Municipales",           v: "La Armonía", gl: null, gv: null, dia:"Dom 06/09", hora:"15:30", goles_l:[], goles_v:[] },
+        { l: "Tiro Federal",          v: "Bella Vista", gl: null, gv: null, dia:"Dom 06/09", hora:"15:30", goles_l:[], goles_v:[] },
+        { l: "Sporting",              v: "Libertad", gl: null, gv: null, dia:"Dom 06/09", hora:"16:30", goles_l:[], goles_v:[] }
     ]},
     { fecha: 8, partidos: [
         { l: "Municipales",           v: "Sporting",             gl: null, gv: null },
@@ -1950,7 +1950,6 @@ function generarHome() {
             ]},
             { nombre: "TORNEO DE SELECCIONES | SUB 15 | FECHA 5 (LIGA DEL SUR)", cat: "torneoseleccion15", torLink: "torneoseleccion15", noAutoResult: true, partidos: [
             {l:"Olavarría", v:"<b>Liga del Sur</b>", hora:"14:00", gl:1, gv:4, claseL:"olavarria", claseV:"ldsbb",nota:"Zona 1"},
-            {l:"Pehuajó", v:"Trenque Lauquen", hora:"16:00", gl:null, gv:null, claseL:"pehuajo", claseV:"trenquelauquen",nota:"Zona 4"},
             {l:"Dolores", v:"La Costa", hora:"18:00", gl:4, gv:2, claseL:"dolores", claseV:"lacosta",nota:"Zona 3"},
             ]},
             { nombre: "REGIONAL AMATEUR | FECHA 2", cat: "regamateurtemporada", torLink: "regamateurtemporada", noAutoResult: true, partidos: [
@@ -1975,6 +1974,16 @@ function generarHome() {
             {l:"Dublin", v:"Tiro Federal", hora:"15:30", gl:null, gv:null, claseL:"dublin", claseV:"tirofederal"},
             {l:"Pacífico (C)", v:"Rosario PB", hora:"16:00", gl:null, gv:null, claseL:"pacificoc", claseV:"rosariopb"},
             ]},
+            { nombre: "2° FEMENINO | FECHA 23", cat: "segundafemenino", torLink: "segundafemenino", noAutoResult: true, partidos: [
+            {l:"Pacífico (C)", v:"San Francisco", hora:"12:45", gl:null, gv:null, claseL:"pacificoc", claseV:"sanfrancisco"},
+            {l:"Huracán", v:"Sansinena", hora:"16:00", gl:null, gv:null, claseL:"huracan", claseV:"sansinena"},
+            ]},
+            { nombre: "SUB 15 | FECHA 19", cat: "sub15fem", torLink: "sub15fem", noAutoResult: true, partidos: [
+            {l:"Huracán", v:"Villa Mitre", hora:"13:00", gl:null, gv:null, claseL:"huracan", claseV:"villamitre"},
+            {l:"Liniers", v:"Empleados de Comercio", hora:"15:00", gl:null, gv:null, claseL:"liniers", claseV:"empleadosdecomercio"},
+            {l:"Bella Vista", v:"Tiro Federal", hora:"15:30", gl:null, gv:null, claseL:"bellavista", claseV:"tirofederal"},
+            {l:"Libertad", v:"La Armonía", hora:"19:00", gl:null, gv:null, claseL:"libertad", claseV:"laarmonia"},
+            ]},
             { nombre: "REGIONAL AMATEUR | FECHA 2", cat: "regamateurtemporada", torLink: "regamateurtemporada", noAutoResult: true, partidos: [
             {l:"Santa Rosa", v:"Ferro de Pico", hora:"16:00", gl:null, gv:null, claseL:"santarosa", claseV:"ferropico",nota:"Zona 1"},
             {l:"Balonpié", v:"Racing de Olavarría", hora:"16:00", gl:null, gv:null, claseL:"balompie", claseV:"racingolavarria",nota:"Zona 6"},
@@ -1991,6 +2000,20 @@ function generarHome() {
             { nombre: "PROMOCIONAL | CLAUSURA | FECHA 6", cat: "promocional", torLink: "promocional", noAutoResult: true, partidos: [
             {l:"Sansinena", v:"Olimpo", hora:"11:00", gl:null, gv:null, claseL:"sansinena", claseV:"olimpo"},
             {l:"Pacífico BB", v:"Comercial", hora:"15:30", gl:null, gv:null, claseL:"pacificobb", claseV:"comercial"},
+            ]},
+            { nombre: "1° FEMENINO | CLAUSURA | FECHA 7", cat: "femenino", torLink: "femenino", noAutoResult: true, partidos: [
+            {l:"Villa Mitre", v:"Empleados de Comercio", hora:"15:30", gl:null, gv:null, claseL:"villamitre", claseV:"empleadosdecomercio"},
+            {l:"Municipales", v:"La Armonía", hora:"15:30", gl:null, gv:null, claseL:"municipales", claseV:"laarmonia"},
+            {l:"Tiro Federal", v:"Bella Vista", hora:"15:30", gl:null, gv:null, claseL:"tirofederal", claseV:"bellavista"},
+            {l:"Libertad", v:"Sporting", hora:"16:30", gl:null, gv:null, claseL:"libertad", claseV:"sporting"},
+            ]},
+            { nombre: "2° FEMENINO | FECHA 23", cat: "segundafemenino", torLink: "segundafemenino", noAutoResult: true, partidos: [
+            {l:"Petroquímicos", v:"Rosario PB", hora:"15:30", gl:null, gv:null, claseL:"petroquimicos", claseV:"rosariopb",nota:"en el predio de UTA"},
+            {l:"Olimpo", v:"Estrella de Oro", hora:"15:30", gl:null, gv:null, claseL:"olimpo", claseV:"estrelladeoro"},
+            ]},
+            { nombre: "SUB 15 | FECHA 19", cat: "sub15fem", torLink: "sub15fem", noAutoResult: true, partidos: [
+            {l:"Olimpo", v:"San Francisco", hora:"12:30", gl:null, gv:null, claseL:"olimpo", claseV:"sanfrancisco"},
+            {l:"Sporting", v:"Juventud Unida", hora:"15:30", gl:null, gv:null, claseL:"sporting", claseV:"junida"},
             ]},
               { nombre: "FEDERAL A | NONAGONAL | FECHA 7", cat: "federala", torLink: "federala", noAutoResult: true, partidos: [
             {l:"Alvarado", v:"Atenas (RC)", hora:"15:00", gl:null, gv:null, claseL:"alvarado", claseV:"atenasrc"},
@@ -16887,7 +16910,7 @@ const BD_H2H = {
         { fecha: "Torneo 2026 - Fecha 9", torneo: "sub15fem", l: "Bella Vista", v: "Villa Mitre", gl: 5, gv: 0 },
         { fecha: "Fecha 5 - Clausura 2026 - 29 ago 2026", torneo: "oficial", l: "Bella Vista", v: "Villa Mitre", gl: 1, gv: 0, goles_l: ["Rodrigo Gómez"], goles_v: [] },
         { fecha: "Fecha 5 - Clausura 2026", torneo: "reserva_oficial", l: "Bella Vista", v: "Villa Mitre", gl: 1, gv: 3 },
-        { fecha: "Fecha 6 - Clausura 2026 - 30 ago 2026", torneo: "femenino", l: "Bella Vista", v: "Villa Mitre", gl: 1, gv: 5, goles_l: ["Carla D'Ottavio"], goles_v: ["Lucrecia Semper (2)","Celeste Lopetegui","Vera Moggia","Paola Melgarejo"] },
+        { fecha: "Fecha 6 - Clausura 2026 - 30 ago 2026", torneo: "femenino", l: "Bella Vista", v: "Villa Mitre", gl: 1, gv: 5, goles_l: ["Carla D'Ottavio"], goles_v: ["Jessica Mella (2)","Celeste Lopetegui","Vera Moggia","Paola Melgarejo"] },
         { fecha: "Fecha 6 - Clausura 2026", torneo: "reserva_femenino", l: "Bella Vista", v: "Villa Mitre", gl: 2, gv: 0 },
     ],
     "La Armonía|San Francisco": [
@@ -17251,6 +17274,7 @@ const BD_H2H = {
         { fecha: "Fecha 16 - Fase inicial - Federal A - 26 jun 2026", torneo: "federala", l: "Olimpo", v: "Villa Mitre", gl: 0, gv: 0 },
         { fecha: "Fecha 3 - Nonagonal - Federal A - 12 ago 2026", torneo: "federala", l: "Olimpo", v: "Villa Mitre", gl: 2, gv: 0, goles_l: ["Marcelo Olivera","Cristian Amarilla"], goles_v: [] },
         { fecha: "Torneo 2026 - Fecha 7", torneo: "sub15fem", l: "Olimpo", v: "Villa Mitre", gl: 2, gv: 3 },
+        { fecha: "Torneo 2026 - Fecha 18", torneo: "sub15fem", l: "Villa Mitre", v: "Olimpo", gl: 0, gv: 0 },
     ],
     "Germinal|Olimpo": [
         { fecha: "Fecha 8 - Fase inicial - 10 may 2026", torneo: "federala", l: "Olimpo", v: "Germinal", gl: 1, gv: 0, goles_l: [], goles_v: ["Antú Hernández"]  },
@@ -17959,10 +17983,12 @@ html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-a
 }
 
 const BD_GOLEADORES_FUTSAL = [
-    { club: "Dublin",          clase: "dublin",    act: "fecha 4 - Sin datos de fecha 3",       goleadores: [
-    { nombre: "Agustín Miguel",          equipo: "Dublin",   goles: 4 },
+    { club: "Dublin",          clase: "dublin",    act: "fecha 6 - Sin datos de fecha 5",       goleadores: [
+    { nombre: "Agustín Miguel",          equipo: "Dublin",   goles: 5 },
+    { nombre: "Raúl Sepúlveda",          equipo: "Dublin",   goles: 3 },
     { nombre: "Matías Gigena",          equipo: "Dublin",   goles: 2 },
     { nombre: "Matías Fonollosa",          equipo: "Dublin",   goles: 1 },
+    { nombre: "Javier Portillo",          equipo: "Dublin",   goles: 1 },
 ] },
 
     { club: "Villa Mitre",     clase: "villamitre",    act: null,       goleadores: [] },
