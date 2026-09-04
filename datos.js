@@ -381,7 +381,7 @@ const idaSegundaFemenino = [
     { fecha: 19, libre: "Huracán", partidos: [{l:"Olimpo", v:"Rosario PB", gl:2, gv:7, dia:"Dom 09/08", hora:"15:30", goles_l:["Mía Cibelli","Sofía Cáceres"], goles_v:["Celeste Medina","Celeste Medina","Ayelén Zeballos","Ayelén Zeballos","Alejandra Sturtz","Julieta Díaz","Valentina Cavalli"]}, {l:"Petroquímicos", v:"Pacífico (C)", gl:3, gv:0, dia:"Dom 09/08", hora:"15:30", goles_l:["Cintia Saavedra","Lidia Espinoza","Romina Zarza"], goles_v:[]}, {l:"Estrella de Oro", v:"Liniers", gl:0, gv:1, dia:"Dom 09/08", hora:"16:15", goles_l:[], goles_v:["María Paz Marino"]}, {l:"Sansinena", v:"San Francisco", gl:1, gv:2, dia:"Sáb 08/08", hora:"15:30", goles_l:["Micaela Gómez"], goles_v:["Morena Barzola","Florencia Sorbellini"]}] },
     { fecha: 20, libre: "Petroquímicos", partidos: [{l:"Sansinena", v:"Rosario PB", gl:0, gv:4, dia:"Sáb 15/08", hora:"13:15", goles_l:[], goles_v:["Valentina Cavalli","Valentina Cavalli","Valentina Cavalli","Celeste Medina"]}, {l:"Estrella de Oro", v:"San Francisco", gl:1, gv:3, dia:"Sáb 15/08", hora:"15:30", goles_l:["Camila Guenchual"], goles_v:["Milagros Fernández","Florencia Sorbellini","Rocío de Mirta"]}, {l:"Olimpo", v:"Pacífico (C)", gl:3, gv:0, dia:"Sáb 15/08", hora:"15:30", goles_l:["Oriana Correa","Mía Cibelli","Dana Placencia"], goles_v:[]}, {l:"Huracán", v:"Liniers", gl:1, gv:8, dia:"Sáb 15/08", hora:"15:30", goles_l:["Keila Iglesias"], goles_v:["Paz Cutrín","Paz Cutrín","Paz Cutrín","Paulina Acevedo","Paulina Acevedo","María Paz Marino","María Paz Marino","Victoria Sánchez"]}] },
     { fecha: 21, libre: "Pacífico (C)", partidos: [{l:"Huracán", v:"San Francisco", gl:1, gv:7, dia:"Sáb 22/08", hora:"15:30", goles_l:[], goles_v:["Clara Iturrioz","Clara Iturrioz","Ariana Adassus","Milagros Fernández","Morena Barzola","Valentina Rebol","Paloma Vidal"]}, {l:"Petroquímicos", v:"Liniers", gl:0, gv:2, dia:"Sáb 22/08", hora:"15:30", goles_l:[], goles_v:["Paulina Acevedo","Ailén Márquez"] }, {l:"Olimpo", v:"Sansinena", gl:1, gv:1, dia:"Dom 23/08", hora:"15:30", goles_l:["Iara Vasileff"], goles_v:["Daniela Abello"] }, {l:"Estrella de Oro", v:"Rosario PB", gl:0, gv:1, dia:"Dom 23/08", hora:"15:30", goles_l:[], goles_v:["Juliana Ruiz"]}] },
-    { fecha: 22, libre: "Olimpo", partidos: [{l:"Liniers", v:"Pacífico (C)", gl:null, gv:null, dia:"Sáb 29/08", hora:"13:15", goles_l:[], goles_v:[]}, {l:"Sansinena", v:"Estrella de Oro", gl:1, gv:2, dia:"Dom 30/08", hora:"11:00", goles_l:["Jocelyn Zarza"], goles_v:["Mariana González","Sabrina Genchi"]}, {l:"San Francisco", v:"Petroquímicos", gl:1, gv:2, dia:"Dom 30/08", hora:"15:30", goles_l:["Florencia Sorbellini"], goles_v:["Renata Segovia","Renata Segovia"]}, {l:"Rosario PB", v:"Huracán", gl:7, gv:0, dia:"Dom 30/08", hora:"16:00", goles_l:["Ayelén Zeballos","Ayelén Zeballos","Magdalena Nievas","Magdalena Nievas","Julieta Díaz","Julieta Ruiz","Mariela Sollosky"], goles_v:[]}] },
+    { fecha: 22, libre: "Olimpo", partidos: [{l:"Sansinena", v:"Estrella de Oro", gl:1, gv:2, dia:"Dom 30/08", hora:"11:00", goles_l:["Jocelyn Zarza"], goles_v:["Mariana González","Sabrina Genchi"]}, {l:"San Francisco", v:"Petroquímicos", gl:1, gv:2, dia:"Dom 30/08", hora:"15:30", goles_l:["Florencia Sorbellini"], goles_v:["Renata Segovia","Renata Segovia"]}, {l:"Rosario PB", v:"Huracán", gl:7, gv:0, dia:"Dom 30/08", hora:"16:00", goles_l:["Ayelén Zeballos","Ayelén Zeballos","Magdalena Nievas","Magdalena Nievas","Julieta Díaz","Julieta Ruiz","Mariela Sollosky"], goles_v:[]}, {l:"Liniers", v:"Pacífico (C)", gl:8, gv:0, dia:"Jue 03/08", hora:"13:15", goles_l:["Paz Cutrín","Paz Cutrín","Paz Cutrín","Isabella Pezzutti","Victoria Sánchez","Lola Podestá","Iara Schwab","Giuliana Morano"], goles_v:[]}] },
     { fecha: 23, libre: "Liniers", partidos: [{l:"Rosario PB/Petroquímicos", v:"Rosario PB/Petroquímicos", gl:null, gv:null}, {l:"San Francisco/Pacífico (C)", v:"San Francisco/Pacífico (C)", gl:null, gv:null}, {l:"Sansinena/Huracán", v:"Sansinena/Huracán", gl:null, gv:null}, {l:"Estrella de Oro/Olimpo", v:"Estrella de Oro/Olimpo", gl:null, gv:null}] },
     { fecha: 24, libre: "San Francisco", partidos: [{l:"Petroquímicos/Sansinena", v:"Petroquímicos/Sansinena", gl:null, gv:null}, {l:"Olimpo/Liniers", v:"Olimpo/Liniers", gl:null, gv:null}, {l:"Huracán/Estrella de Oro", v:"Huracán/Estrella de Oro", gl:null, gv:null}, {l:"Pacífico (C)/Rosario PB", v:"Pacífico (C)/Rosario PB", gl:null, gv:null}] },
     { fecha: 25, libre: "Rosario PB", partidos: [{l:"Sansinena/Pacífico (C)", v:"Sansinena/Pacífico (C)", gl:null, gv:null}, {l:"Estrella de Oro/Petroquímicos", v:"Estrella de Oro/Petroquímicos", gl:null, gv:null}, {l:"San Francisco/Liniers", v:"San Francisco/Liniers", gl:null, gv:null}, {l:"Huracán/Olimpo", v:"Huracán/Olimpo", gl:null, gv:null}] },
@@ -491,7 +491,7 @@ const BD_FIXTURES_FUTSAL_RESERVA = [
     ]},
     { fecha: 6, partidos: [
         {l:"Catamarca",     v:"Villa Mitre",     gl:null, gv:null},
-        {l:"Dublin",     v:"Pacífico BB",     gl:null, gv:null},
+        {l:"Dublin",     v:"Pacífico BB",     gl:6, gv:1},
         {l:"Petroquímicos",       v:"Comercial",     gl:null, gv:null},
         {l:"Tiro Federal",    v:"Liniers",     gl:null, gv:null},
         {l:"San Francisco", v:"Los 3 Chiflados",     gl:null, gv:null},
@@ -611,7 +611,7 @@ const BD_FIXTURES_FUTSAL = [
     ]},
     { fecha: 6, partidos: [
         {l:"Catamarca",     v:"Villa Mitre",     gl:null, gv:null},
-        {l:"Dublin",     v:"Pacífico BB",     gl:null, gv:null},
+        {l:"Dublin",     v:"Pacífico BB",     gl:4, gv:2},
         {l:"Petroquímicos",       v:"Comercial",     gl:null, gv:null},
         {l:"Tiro Federal",    v:"Liniers",     gl:null, gv:null},
         {l:"San Francisco", v:"Los 3 Chiflados",     gl:null, gv:null},
@@ -1141,10 +1141,11 @@ BD_FIXTURES.federala.nonagonal = [
         { l: "Atenas de Río Cuarto", v: "Olimpo", gl: 1, gv: 0, dia:"Dom 28/08", hora:"16:30", goles_l:["Facundo Quiroga"], goles_v:[] },
     ], libre: "Cipolletti" },
     { fecha: 7, partidos: [
-        { l: "Cipolletti", v: "Olimpo", gl: null, gv: null },
-        { l: "Huracán Las Heras", v: "Argentino de Monte Maíz", gl: null, gv: null },
-        { l: "Juventud Antoniana", v: "Kimberley", gl: null, gv: null },
-        { l: "Alvarado", v: "Atenas de Río Cuarto", gl: null, gv: null }
+        { l: "Juventud Antoniana", v: "Kimberley", gl: null, gv: null, dia:"Viér 04/09", hora:"22:00", goles_l:[], goles_v:[] },
+
+        { l: "Alvarado", v: "Atenas de Río Cuarto", gl: null, gv: null, dia:"Dom 05/09", hora:"15:00", goles_l:[], goles_v:[] },
+        { l: "Cipolletti", v: "Olimpo", gl: null, gv: null, dia:"Dom 05/09", hora:"15:30", goles_l:[], goles_v:[] },
+        { l: "Huracán Las Heras", v: "Argentino de Monte Maíz", gl: null, gv: null, dia:"Dom 05/09", hora:"16:00", goles_l:[], goles_v:[] }
     ], libre: "Villa Mitre" },
     { fecha: 8, partidos: [
         { l: "Argentino de Monte Maíz", v: "Villa Mitre", gl: null, gv: null },
@@ -1891,7 +1892,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 22).partidos.forEach(p
 });
 
 
-let diaSeleccionadoHome = "2026-09-03"; 
+let diaSeleccionadoHome = "2026-09-04"; 
 let mercadoPasesAbierto = false;
 
 function toggleMercadoPasesHome() {
@@ -1941,16 +1942,19 @@ function generarHome() {
             ]},
        ]},
         { id: "2026-09-03", label: "JUE 03/09", torneos: [
+            { nombre: "2° FEMENINA | FECHA 22 | REPROGRAMADO", cat: "segundafemenino", torLink: "segundafemenino", noAutoResult: true, partidos: [
+            {l:"Liniers", v:"Pacífico (C)", hora:"20:30", gl:8, gv:0, claseL:"liniers", claseV:"pacificoc"},
+            ]},
             { nombre: "FUTSAL | CLAUSURA | FECHA 6", cat: "futsal", torLink: "futsal", noAutoResult: true, partidos: [
-            {l:"Dublin", v:"Pacífico BB", hora:"22:00", gl:null, gv:null, claseL:"dublin", claseV:"pacificobb",nota:"en cancha de Don Bosco"},
+            {l:"Dublin", v:"Pacífico BB", hora:"22:00", gl:4, gv:2, claseL:"dublin", claseV:"pacificobb",nota:"en cancha de Don Bosco"},
             ]},
             { nombre: "TORNEO DE SELECCIONES | SUB 15 | FECHA 5 (LIGA DEL SUR)", cat: "torneoseleccion15", torLink: "torneoseleccion15", noAutoResult: true, partidos: [
             {l:"Olavarría", v:"<b>Liga del Sur</b>", hora:"14:00", gl:1, gv:4, claseL:"olavarria", claseV:"ldsbb",nota:"Zona 1"},
             {l:"Pehuajó", v:"Trenque Lauquen", hora:"16:00", gl:null, gv:null, claseL:"pehuajo", claseV:"trenquelauquen",nota:"Zona 4"},
-            {l:"Dolores", v:"La Costa", hora:"18:00", gl:null, gv:null, claseL:"dolores", claseV:"lacosta",nota:"Zona 3"},
+            {l:"Dolores", v:"La Costa", hora:"18:00", gl:4, gv:2, claseL:"dolores", claseV:"lacosta",nota:"Zona 3"},
             ]},
             { nombre: "REGIONAL AMATEUR | FECHA 2", cat: "regamateurtemporada", torLink: "regamateurtemporada", noAutoResult: true, partidos: [
-            {l:"FC Trenque Lauquen", v:"Atlético Villegas", hora:"19:30", gl:null, gv:null, claseL:"trenquelauquen", claseV:"atlvillegas",nota:"Zona 2"},
+            {l:"FC Trenque Lauquen", v:"Atlético Villegas", hora:"19:30", gl:0, gv:1, claseL:"trenquelauquen", claseV:"atlvillegas",nota:"Zona 2"},
             ]},
        ]},
         { id: "2026-09-04", label: "VIE 04/09", torneos: [
@@ -16905,6 +16909,8 @@ const BD_H2H = {
         { fecha: "Apertura 2026 - Fecha 6", torneo: "futsalreserva", l: "Pacífico BB", v: "Dublin", gl: 5, gv: 6 },
         { fecha: "Fecha 5 - Clausura 2026 - 30 ago 2026", torneo: "promocional", l: "Pacífico BB", v: "Dublin", gl: 2, gv: 0, goles_l: ["Miqueas Vásquez","Emanuel Rodríguez"], goles_v: [] },
         { fecha: "Fecha 5 - Clausura 2026", torneo: "reserva_promocional", l: "Pacífico BB", v: "Dublin", gl: 5, gv: 0 },
+        { fecha: "Clausura 2026 - Fecha 6", torneo: "futsal", l: "Dublin", v: "Pacífico BB", gl: 4, gv: 2 },
+        { fecha: "Clausura 2026 - Fecha 6", torneo: "futsalreserva", l: "Dublin", v: "Pacífico BB", gl: 6, gv: 1 },
     ],
     "Comercial|Rosario PB": [
         { fecha: "Fecha 5 - Apertura 2026 - 11 abr 2026", torneo: "promocional", l: "Rosario PB", v: "Comercial", gl: 2, gv: 0, goles_l: ["Sebastián Mendoza","Agustín Grippaudo"], goles_v: [] },
@@ -17786,17 +17792,17 @@ function generarSub() {
 
 const BD_POS_FUTSAL = {
     principal: [
-        {n:"La Esperanza",    cl:"laesperanza",    pj:5,pg:5,pe:0,pp:0,gf:21, gc:7, pts:15},
+        {n:"La Esperanza",    cl:"laesperanza",    pj:6,pg:6,pe:0,pp:0,gf:21, gc:7, pts:18},
+        {n:"La Estación <b>(A)</b>",     cl:"laestacion",    pj:6,pg:6,pe:0,pp:0,gf:26, gc:10, pts:18},
         {n:"Comercial",       cl:"comercial",    pj:5,pg:5,pe:0,pp:0,gf:20, gc:9, pts:15},
-        {n:"La Estación <b>(A)</b>",     cl:"laestacion",    pj:5,pg:5,pe:0,pp:0,gf:26, gc:10, pts:15},
         {n:"Los 3 Chiflados <b>(*)</b>", cl:"los3chiflados",    pj:5,pg:4,pe:0,pp:1,gf:15, gc:2, pts:12},
         {n:"Villa Mitre",     cl:"villamitre",    pj:5,pg:3,pe:1,pp:1,gf:21, gc:21, pts:10},
         {n:"Tiro Federal",    cl:"tirofederal",    pj:5,pg:3,pe:0,pp:2,gf:14, gc:13, pts:9},
         {n:"San Francisco",   cl:"sanfrancisco",    pj:5,pg:3,pe:0,pp:2,gf:7, gc:12, pts:9},
         {n:"Petroquímicos",   cl:"petroquimicos",    pj:5,pg:3,pe:0,pp:2,gf:10, gc:16, pts:9},
-        {n:"Pacífico BB",     cl:"pacificobb",    pj:5,pg:1,pe:1,pp:3,gf:17, gc:21, pts:4},
+        {n:"Pacífico BB",     cl:"pacificobb",    pj:6,pg:1,pe:1,pp:4,gf:19, gc:25, pts:4},
         {n:"Liniers <b>(*)</b>",         cl:"liniers",    pj:5,pg:1,pe:0,pp:4,gf:10, gc:17, pts:3},
-        {n:"Dublin",          cl:"dublin",    pj:5,pg:0,pe:0,pp:5,gf:11, gc:21, pts:0},
+        {n:"Dublin",          cl:"dublin",    pj:6,pg:1,pe:0,pp:5,gf:15, gc:23, pts:3},
         {n:"Catamarca",       cl:"catamarca",    pj:5,pg:0,pe:0,pp:5,gf:10, gc:30, pts:0},
         {n:"<s>Dep. Futsal</s> <b>(-)</b>",     cl:"depfutsal",    pj:0,pg:0,pe:0,pp:0,gf:0, gc:0, pts:0},
         {n:"<s>Huracán</s> <b>(-)</b>",         cl:"huracan",    pj:0,pg:0,pe:0,pp:0,gf:0, gc:0, pts:0}
@@ -17804,15 +17810,15 @@ const BD_POS_FUTSAL = {
     reserva: [
         {n:"Villa Mitre",     cl:"villamitre",    pj:5,pg:5,pe:0,pp:0,gf:20, gc:12, pts:15},
         {n:"Los 3 Chiflados <b>(A)</b>", cl:"los3chiflados",    pj:5,pg:5,pe:0,pp:0,gf:16, gc:3, pts:15},
-        {n:"La Estación",     cl:"laestacion",    pj:5,pg:4,pe:0,pp:1,gf:22, gc:14, pts:12},
-        {n:"La Esperanza",    cl:"laesperanza",    pj:5,pg:4,pe:0,pp:1,gf:15, gc:8, pts:12},
+        {n:"La Estación",     cl:"laestacion",    pj:6,pg:5,pe:0,pp:1,gf:22, gc:14, pts:15},
+        {n:"La Esperanza",    cl:"laesperanza",    pj:6,pg:5,pe:0,pp:1,gf:15, gc:8, pts:15},
         {n:"Liniers",         cl:"liniers",    pj:5,pg:4,pe:0,pp:1,gf:22, gc:15, pts:12},
         {n:"Petroquímicos",   cl:"petroquimicos",    pj:5,pg:3,pe:0,pp:2,gf:14, gc:18, pts:9},
         {n:"Comercial",       cl:"comercial",    pj:5,pg:2,pe:1,pp:2,gf: 8, gc:12, pts:7},
         {n:"Catamarca",       cl:"catamarca",    pj:5,pg:2,pe:1,pp:2,gf:17, gc:22, pts:7},
+        {n:"Dublin",          cl:"dublin",    pj:6,pg:2,pe:1,pp:3,gf:18, gc:18, pts:7},
         {n:"San Francisco",   cl:"sanfrancisco",    pj:5,pg:2,pe:0,pp:3,gf:7, gc:18, pts:6},
-        {n:"Dublin",          cl:"dublin",    pj:5,pg:1,pe:1,pp:3,gf:12, gc:17, pts:4},
-        {n:"Pacífico BB",     cl:"pacificobb",    pj:5,pg:1,pe:0,pp:4,gf:9, gc:17, pts:3},
+        {n:"Pacífico BB",     cl:"pacificobb",    pj:6,pg:1,pe:0,pp:5,gf:10, gc:23, pts:3},
         {n:"Tiro Federal",    cl:"tirofederal",    pj:5,pg:0,pe:1,pp:4,gf:8, gc:14, pts:1},
         {n:"<s>Dep. Futsal</s> <b>(-)</b>",     cl:"depfutsal",    pj:0,pg:0,pe:0,pp:0,gf:0, gc:0, pts:0},
         {n:"<s>Huracán</s> <b>(-)</b>",         cl:"huracan",    pj:0,pg:0,pe:0,pp:0,gf:0, gc:0, pts:0}
@@ -18799,7 +18805,7 @@ const BD_COPA_PAIS = {
         posiciones: [
             { nombre: "Catamarca",  pj:2, pg:2, pe:0, pp:0, gf:7, gc:2, pts:6 },
             { nombre: "Valle Viejo",pj:3, pg:2, pe:0, pp:1, gf:12, gc:5, pts:6 },
-            { nombre: "Tinogasta",  pj:3, pg:0, pe:0, pp:3, gf:5, gc:17, pts:0 },
+            { nombre: "Tinogasta <b>(X)</b>",  pj:3, pg:0, pe:0, pp:3, gf:5, gc:17, pts:0 },
         ]
     },
 
@@ -19057,9 +19063,9 @@ function generarCopaPais() {
             f.partidos.forEach(p => { html += renderPartido(p); });
             html += `</table>`;
             const textoPosiciones = zona.titulo === 'ZONA CATAMARCA'
-                ? '📌 Puntos en juego: 6 pts para el que jugó 2 partidos<br>•El 1° clasifica a la Final de Zona Córdoba.'
+                ? '📌 Puntos en juego: 6 pts para el que jugó 2 partidos y 3 pts para el que jugó 3 partidos<br>•El 1° clasifica a la Final de Zona Córdoba.'
                 : zona.titulo === 'ZONA CUYO'
-                ? '📌 Puntos en juego: 6 pts para el que jugó 2 partidos<br>•El 1° clasifica a la Final de Zona Mendoza.'
+                ? '📌 Puntos en juego: 6 pts para el que jugó 2 partidos y 3 pts para el que jugó 3 partidos<br>•El 1° clasifica a la Final de Zona Mendoza.'
                 : '';
             html += renderTablaPos(zona.posiciones, textoPosiciones);
         } else {
@@ -21767,8 +21773,8 @@ if (tor === 'apertura' && cat === 'promocional') {
    ══════════════════════════════════════════════════════════ */
 const BD_REG_AMATEUR_TEMPORADA = {
     mejoresPrimeros: [
+        { nombre: "Atlético Villegas", pj:2, pg:1, pe:1, pp:0, gf:3, gc:2, pts:4 },
         { nombre: "Huracán", pj:1, pg:1, pe:0, pp:0, gf:1, gc:0, pts:3 },
-        { nombre: "Atlético Villegas", pj:1, pg:0, pe:1, pp:0, gf:2, gc:2, pts:1 },
         { nombre: "Embajadores (Olavarría)", pj:1, pg:0, pe:1, pp:0, gf:1, gc:1, pts:1 },
         { nombre: "Quilmes (MdP)", pj:1, pg:0, pe:1, pp:0, gf:0, gc:0, pts:1 },
         { nombre: "Independiente (San Cayetano)", pj:1, pg:0, pe:1, pp:0, gf:0, gc:0, pts:1 },
@@ -21821,19 +21827,19 @@ const BD_REG_AMATEUR_TEMPORADA = {
         { titulo: "ZONA 2",
           fixture: [
               { fecha:1, libre:"Trenque Lauquen", partidos:[{ l:"Atl. Villegas", v:"Santa Rita", gl:2, gv:2, goles_l:[], goles_v:[] }] },
-              { fecha:2, libre:"Santa Rita", partidos:[{ l:"Trenque Lauquen", v:"Atl. Villegas", gl:null, gv:null, goles_l:[], goles_v:[] }] },
+              { fecha:2, libre:"Santa Rita", partidos:[{ l:"Trenque Lauquen", v:"Atl. Villegas", gl:0, gv:1, goles_l:[], goles_v:[] }] },
               { fecha:3, libre:"Atl. Villegas", partidos:[{ l:"Santa Rita", v:"Trenque Lauquen", gl:null, gv:null, goles_l:[], goles_v:[] }] },
               { fecha:4, libre:"Trenque Lauquen", partidos:[{ l:"Santa Rita", v:"Atl. Villegas", gl:null, gv:null, goles_l:[], goles_v:[] }] },
               { fecha:5, libre:"Santa Rita", partidos:[{ l:"Atl. Villegas", v:"Trenque Lauquen", gl:null, gv:null, goles_l:[], goles_v:[] }] },
               { fecha:6, libre:"Atl. Villegas", partidos:[{ l:"Trenque Lauquen", v:"Santa Rita", gl:null, gv:null, goles_l:[], goles_v:[] }] },
           ],
-          puntosEnJuego: "<b>9</b> para los que tienen 1 partido tras la fecha 1; <b>12</b> para los que tienen 0 partidos",
+          puntosEnJuego: "<b>6</b> para los que tienen 2 partido tras la fecha 2; <b>9</b> para los que tienen 1 partido",
           txtClasifica: "Clasifica a 2° o 3° ronda (Revisar tabla de primeros)",
           txtElimina: "Clasifica a 2° ronda o eliminado (Revisar tabla de segundos)",
           posiciones: [
-              { nombre: "Atlético Villegas", pj:1, pg:0, pe:1, pp:0, gf:2, gc:2, pts:1 },
+              { nombre: "Atlético Villegas", pj:2, pg:1, pe:1, pp:0, gf:3, gc:2, pts:4 },
               { nombre: "Santa Rita",        pj:1, pg:0, pe:1, pp:0, gf:2, gc:2, pts:1 },
-              { nombre: "Trenque Lauquen",   pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0 },
+              { nombre: "Trenque Lauquen",   pj:1, pg:0, pe:0, pp:1, gf:0, gc:1, pts:0 },
           ]
         },
         { titulo: "ZONA 4",
@@ -23172,8 +23178,8 @@ function generarTorneoSeleccion15() {
         ]},
         { label:"ZONA 3", equipos:[
             { nombre:"General Madariaga", key:"madariaga",      pj:3,pg:3,pe:0,pp:0,gf:5,gc:1,pts:9 },
-            { nombre:"Dolores",           key:"dolores",        pj:3,pg:0,pe:1,pp:2,gf:1,gc:3,pts:1 },
-            { nombre:"La Costa",          key:"lacosta",        pj:2,pg:0,pe:1,pp:1,gf:0,gc:2,pts:1 },
+            { nombre:"Dolores",           key:"dolores",        pj:4,pg:1,pe:1,pp:2,gf:5,gc:5,pts:4 },
+            { nombre:"La Costa",          key:"lacosta",        pj:3,pg:0,pe:1,pp:2,gf:2,gc:6,pts:1 },
         ]},
         { label:"ZONA 4", equipos:[
             { nombre:"Trenque Lauquen",   key:"trenquelauquen", pj:2,pg:2,pe:0,pp:0,gf:5,gc:0,pts:6 },
