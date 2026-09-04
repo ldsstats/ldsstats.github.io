@@ -1980,9 +1980,12 @@ function generarHome() {
             ]},
             { nombre: "SUB 15 | FECHA 19", cat: "sub15fem", torLink: "sub15fem", noAutoResult: true, partidos: [
             {l:"Huracán", v:"Villa Mitre", hora:"13:00", gl:null, gv:null, claseL:"huracan", claseV:"villamitre"},
-            {l:"Liniers", v:"Empleados de Comercio", hora:"15:00", gl:null, gv:null, claseL:"liniers", claseV:"empleadosdecomercio"},
+            {l:"Liniers", v:"Empleados de Comercio", hora:"15:00", gl:null, gv:null, claseL:"liniers", claseV:"empleados"},
             {l:"Bella Vista", v:"Tiro Federal", hora:"15:30", gl:null, gv:null, claseL:"bellavista", claseV:"tirofederal"},
             {l:"Libertad", v:"La Armonía", hora:"19:00", gl:null, gv:null, claseL:"libertad", claseV:"laarmonia"},
+            ]},
+          { nombre: "REGIONAL FEMENINO | TERCERA RONDA | VUELTA", cat: "regamateurfem", torLink: "regamateurfem", noAutoResult: true, partidos: [
+            {l:"Villa Mitre", v:"Ciudad de Olavarría", hora:"14:00", gl:null, gv:null, claseL:"villamitre", claseV:"ciudadolavarria",nota:"Ida: 2-3"},
             ]},
             { nombre: "REGIONAL AMATEUR | FECHA 2", cat: "regamateurtemporada", torLink: "regamateurtemporada", noAutoResult: true, partidos: [
             {l:"Santa Rosa", v:"Ferro de Pico", hora:"16:00", gl:null, gv:null, claseL:"santarosa", claseV:"ferropico",nota:"Zona 1"},
@@ -17903,7 +17906,7 @@ function generarSub15Fem() {
         </tr>`;
     });
     html += `</tbody></table>`;
-    html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>15</b> tras la finalización de la fecha <b>17</b></div>`;
+    html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>12</b> tras la finalización de la fecha <b>18</b></div>`;
     return html;
 }
 
