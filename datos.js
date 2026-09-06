@@ -1256,10 +1256,10 @@ BD_FIXTURES.oficial.reserva.push(
         {l:"Libertad",   v:"Sporting",   gl:null,   gv:null}
     ]},
     { fecha: 6, partidos: [
-        {l:"Libertad",   v:"Villa Mitre",   gl:null, gv:null},
+        {l:"Libertad",   v:"Villa Mitre",   gl:0, gv:4},
+        {l:"Bella Vista",   v:"La Armonía",   gl:2, gv:3},
         {l:"San Francisco",   v:"Huracán",   gl:null, gv:null},
-        {l:"Sporting",   v:"Liniers",   gl:null, gv:null},
-        {l:"Bella Vista",   v:"La Armonía",   gl:null, gv:null}
+        {l:"Sporting",   v:"Liniers",   gl:null, gv:null}
     ]},
     { fecha: 7, partidos: [
         {l:"Villa Mitre",   v:"Sporting",   gl:null, gv:null},
@@ -17553,13 +17553,12 @@ function generarReserva(cat) {
     // Tabla de posiciones — solo puntos, calculados desde fixtures
     const BD_RESERVA_POS = {
         'oficial':    [
-                       {n:"Bella Vista",   cl:"bellavista",   pj:5, pg:3, pe:1, pp:1, gf:8, gc:7, pts:10},
-                       {n:"Villa Mitre",   cl:"villamitre",   pj:5, pg:3, pe:1, pp:1, gf:11, gc:11, pts:10},
-                       {n:"Sporting <b>(A)</b>",      cl:"sporting",     pj:4, pg:2, pe:2, pp:0, gf:7, gc:5, pts:8},
-                       {n:"La Armonía",    cl:"laarmonia",    pj:5, pg:2, pe:2, pp:1, gf:10, gc:8, pts:8},
+                       {n:"Villa Mitre",   cl:"villamitre",   pj:6, pg:4, pe:1, pp:1, gf:15, gc:11, pts:13},
+                       {n:"La Armonía",    cl:"laarmonia",    pj:6, pg:3, pe:2, pp:1, gf:13, gc:10, pts:11},
+                       {n:"Bella Vista",   cl:"bellavista",   pj:6, pg:3, pe:1, pp:2, gf:10, gc:10, pts:10},                             {n:"Sporting <b>(A)</b>",      cl:"sporting",     pj:4, pg:2, pe:2, pp:0, gf:7, gc:5, pts:8},
                        {n:"Liniers",       cl:"liniers",      pj:5, pg:2, pe:1, pp:2, gf:5, gc:3, pts:7},
                        {n:"San Francisco", cl:"sanfrancisco", pj:5, pg:1, pe:10, pp:3, gf:8, gc:11, pts:4},
-                       {n:"Libertad",      cl:"libertad",     pj:4, pg:1, pe:0, pp:3, gf:6, gc:6, pts:3},
+                       {n:"Libertad",      cl:"libertad",     pj:5, pg:1, pe:0, pp:4, gf:6, gc:10, pts:3},
                        {n:"Huracán",       cl:"huracan",      pj:5, pg:0, pe:2, pp:3, gf:9, gc:14, pts:2}],
         'promocional':[
                        {n:"Olimpo <b>(A)</b>",              cl:"olimpo",           pj:4, pg:4, pe:0, pp:0, gf:9, gc:3, pts:12},
