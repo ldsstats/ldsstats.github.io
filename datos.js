@@ -382,7 +382,7 @@ const idaSegundaFemenino = [
     { fecha: 20, libre: "Petroquímicos", partidos: [{l:"Sansinena", v:"Rosario PB", gl:0, gv:4, dia:"Sáb 15/08", hora:"13:15", goles_l:[], goles_v:["Valentina Cavalli","Valentina Cavalli","Valentina Cavalli","Celeste Medina"]}, {l:"Estrella de Oro", v:"San Francisco", gl:1, gv:3, dia:"Sáb 15/08", hora:"15:30", goles_l:["Camila Guenchual"], goles_v:["Milagros Fernández","Florencia Sorbellini","Rocío de Mirta"]}, {l:"Olimpo", v:"Pacífico (C)", gl:3, gv:0, dia:"Sáb 15/08", hora:"15:30", goles_l:["Oriana Correa","Mía Cibelli","Dana Placencia"], goles_v:[]}, {l:"Huracán", v:"Liniers", gl:1, gv:8, dia:"Sáb 15/08", hora:"15:30", goles_l:["Keila Iglesias"], goles_v:["Paz Cutrín","Paz Cutrín","Paz Cutrín","Paulina Acevedo","Paulina Acevedo","María Paz Marino","María Paz Marino","Victoria Sánchez"]}] },
     { fecha: 21, libre: "Pacífico (C)", partidos: [{l:"Huracán", v:"San Francisco", gl:1, gv:7, dia:"Sáb 22/08", hora:"15:30", goles_l:[], goles_v:["Clara Iturrioz","Clara Iturrioz","Ariana Adassus","Milagros Fernández","Morena Barzola","Valentina Rebol","Paloma Vidal"]}, {l:"Petroquímicos", v:"Liniers", gl:0, gv:2, dia:"Sáb 22/08", hora:"15:30", goles_l:[], goles_v:["Paulina Acevedo","Ailén Márquez"] }, {l:"Olimpo", v:"Sansinena", gl:1, gv:1, dia:"Dom 23/08", hora:"15:30", goles_l:["Iara Vasileff"], goles_v:["Daniela Abello"] }, {l:"Estrella de Oro", v:"Rosario PB", gl:0, gv:1, dia:"Dom 23/08", hora:"15:30", goles_l:[], goles_v:["Juliana Ruiz"]}] },
     { fecha: 22, libre: "Olimpo", partidos: [{l:"Sansinena", v:"Estrella de Oro", gl:1, gv:2, dia:"Dom 30/08", hora:"11:00", goles_l:["Jocelyn Zarza"], goles_v:["Mariana González","Sabrina Genchi"]}, {l:"San Francisco", v:"Petroquímicos", gl:1, gv:2, dia:"Dom 30/08", hora:"15:30", goles_l:["Florencia Sorbellini"], goles_v:["Renata Segovia","Renata Segovia"]}, {l:"Rosario PB", v:"Huracán", gl:7, gv:0, dia:"Dom 30/08", hora:"16:00", goles_l:["Ayelén Zeballos","Ayelén Zeballos","Magdalena Nievas","Magdalena Nievas","Julieta Díaz","Julieta Ruiz","Mariela Sollosky"], goles_v:[]}, {l:"Liniers", v:"Pacífico (C)", gl:8, gv:0, dia:"Jue 03/08", hora:"13:15", goles_l:["Paz Cutrín","Paz Cutrín","Paz Cutrín","Isabella Pezzutti","Victoria Sánchez","Lola Podestá","Iara Schwab","Giuliana Morano"], goles_v:[]}] },
-    { fecha: 23, libre: "Liniers", partidos: [{l:"Pacífico (C)", v:"San Francisco", gl:1, gv:8, dia:"Sáb 05/09", hora:"12:45", goles_l:[], goles_v:["Luciana Sosa","Luciana Sosa","Valentina Rebol","Valentina Rebol","Ariana Adassus","Clara Iturrioz","Florencia Sorbellini","Maira Pedrol"]}, {l:"Huracán", v:"Sansinena", gl:null, gv:null, dia:"Sáb 05/09", hora:"16:00", goles_l:[], goles_v:[]}, {l:"Petroquímicos", v:"Rosario PB", gl:null, gv:null, dia:"Dom 06/09", hora:"15:30", goles_l:[], goles_v:[]}, {l:"Olimpo", v:"Estrella de Oro", gl:null, gv:null, dia:"Dom 06/09", hora:"15:30", goles_l:[], goles_v:[]}] },
+    { fecha: 23, libre: "Liniers", partidos: [{l:"Pacífico (C)", v:"San Francisco", gl:1, gv:8, dia:"Sáb 05/09", hora:"12:45", goles_l:[], goles_v:["Luciana Sosa","Luciana Sosa","Valentina Rebol","Valentina Rebol","Ariana Adassus","Clara Iturrioz","Florencia Sorbellini","Maira Pedrol"]}, {l:"Huracán", v:"Sansinena", gl:0, gv:0, dia:"Sáb 05/09", hora:"16:00", goles_l:[], goles_v:[]}, {l:"Petroquímicos", v:"Rosario PB", gl:null, gv:null, dia:"Dom 06/09", hora:"15:30", goles_l:[], goles_v:[]}, {l:"Olimpo", v:"Estrella de Oro", gl:null, gv:null, dia:"Dom 06/09", hora:"15:30", goles_l:[], goles_v:[]}] },
     { fecha: 24, libre: "San Francisco", partidos: [{l:"Petroquímicos/Sansinena", v:"Petroquímicos/Sansinena", gl:null, gv:null}, {l:"Olimpo/Liniers", v:"Olimpo/Liniers", gl:null, gv:null}, {l:"Huracán/Estrella de Oro", v:"Huracán/Estrella de Oro", gl:null, gv:null}, {l:"Pacífico (C)/Rosario PB", v:"Pacífico (C)/Rosario PB", gl:null, gv:null}] },
     { fecha: 25, libre: "Rosario PB", partidos: [{l:"Sansinena/Pacífico (C)", v:"Sansinena/Pacífico (C)", gl:null, gv:null}, {l:"Estrella de Oro/Petroquímicos", v:"Estrella de Oro/Petroquímicos", gl:null, gv:null}, {l:"San Francisco/Liniers", v:"San Francisco/Liniers", gl:null, gv:null}, {l:"Huracán/Olimpo", v:"Huracán/Olimpo", gl:null, gv:null}] },
     { fecha: 26, libre: "Sansinena", partidos: [{l:"San Francisco/Olimpo", v:"San Francisco/Olimpo", gl:null, gv:null}, {l:"Liniers/Rosario PB", v:"Liniers/Rosario PB", gl:null, gv:null}, {l:"Pacífico (C)/Estrella de Oro", v:"Pacífico (C)/Estrella de Oro", gl:null, gv:null}, {l:"Petroquímicos/Huracán", v:"Petroquímicos/Huracán", gl:null, gv:null}] },
@@ -1975,7 +1975,7 @@ function generarHome() {
             ]},
             { nombre: "2° FEMENINO | FECHA 23", cat: "segundafemenino", torLink: "segundafemenino", noAutoResult: true, partidos: [
             {l:"Pacífico (C)", v:"San Francisco", hora:"12:45", gl:1, gv:8, claseL:"pacificoc", claseV:"sanfrancisco"},
-            {l:"Huracán", v:"Sansinena", hora:"16:00", gl:null, gv:null, claseL:"huracan", claseV:"sansinena"},
+            {l:"Huracán", v:"Sansinena", hora:"16:00", gl:0, gv:0, claseL:"huracan", claseV:"sansinena"},
             ]},
             { nombre: "SUB 15 | FECHA 19", cat: "sub15fem", torLink: "sub15fem", noAutoResult: true, partidos: [
             {l:"Huracán", v:"Villa Mitre", hora:"13:00", gl:0, gv:3, claseL:"huracan", claseV:"villamitre"},
@@ -2011,11 +2011,11 @@ function generarHome() {
             ]},
             { nombre: "2° FEMENINO | FECHA 23", cat: "segundafemenino", torLink: "segundafemenino", noAutoResult: true, partidos: [
             {l:"Petroquímicos", v:"Rosario PB", hora:"15:30", gl:null, gv:null, claseL:"petroquimicos", claseV:"rosariopb",nota:"en el predio de UTA"},
-            {l:"Olimpo", v:"Estrella de Oro", hora:"15:30", gl:null, gv:null, claseL:"olimpo", claseV:"estrelladeoro"},
+            {l:"Olimpo", v:"Estrella de Oro", hora:"15:30", gl:null, gv:null, claseL:"olimpo", claseV:"estrellaoro"},
             ]},
             { nombre: "SUB 15 | FECHA 19", cat: "sub15fem", torLink: "sub15fem", noAutoResult: true, partidos: [
             {l:"Olimpo", v:"San Francisco", hora:"12:30", gl:null, gv:null, claseL:"olimpo", claseV:"sanfrancisco"},
-            {l:"Sporting", v:"Juventud Unida", hora:"15:30", gl:null, gv:null, claseL:"sporting", claseV:"junida"},
+            {l:"Sporting", v:"Juventud Unida", hora:"15:30", gl:null, gv:null, claseL:"sporting", claseV:"juventudunida"},
             ]},
               { nombre: "FEDERAL A | NONAGONAL | FECHA 7", cat: "federala", torLink: "federala", noAutoResult: true, partidos: [
             {l:"Alvarado", v:"Atenas (RC)", hora:"15:00", gl:null, gv:null, claseL:"alvarado", claseV:"atenasrc"},
@@ -17054,6 +17054,7 @@ const BD_H2H = {
         { fecha: "Fecha 5 - Torneo 2026", torneo: "reserva_segundafemenino", l: "Sansinena", v: "Huracán", gl: 0, gv: 1 },
         { fecha: "Fecha 14 - Torneo 2026 - 27 jun", torneo: "segundafemenino", l: "Huracán", v: "Sansinena", gl: 2, gv: 0, goles_l: ["Keila Iglesias (2)"], goles_v: [] },
         { fecha: "Apertura 2026 - Fecha 9", torneo: "senior", l: "Huracán", v: "Sansinena", gl: 2, gv: 3, goles_l: ["Facundo Pereyra (2)"], goles_v: ["Emiliano Jofré","Sebastián Bettinelli","Mauricio Díaz"] },
+        { fecha: "Fecha 23 - Torneo 2026 - 5 ago", torneo: "segundafemenino", l: "Huracán", v: "Sansinena", gl: 0, gv: 0, goles_l: [], goles_v: [] },
     ],
     "Estrella de Oro|Olimpo": [
         { fecha: "Fecha 5 - Torneo 2026 - 19 abr", torneo: "segundafemenino", l: "Estrella de Oro", v: "Olimpo", gl: 5, gv: 1, goles_l: ["Mariana González (3)","Agustina Coronel (2)"], goles_v: ["Lourdes Antonietti"] },
@@ -21723,8 +21724,8 @@ const BD_POSICIONES = {
             { nombre: "Petroquímicos <b>(C)</b>",       clase: "petroquimicos",   pj:19, pg:13, pe:2, pp:4, gf:44, gc:14, pts:41 },
             { nombre: "Rosario PB <b>(C)</b>",          clase: "rosariopb",       pj:20, pg:13, pe:2, pp:5, gf:85, gc:25, pts:41 },
             { nombre: "Estrella de Oro",     clase: "estrellaoro",     pj:20, pg:8, pe:3, pp:9, gf:29, gc:37, pts:27 },
-            { nombre: "Huracán",             clase: "huracan",         pj:19, pg:4, pe:2, pp:13, gf:20, gc:84, pts:14 },
-            { nombre: "Sansinena",           clase: "sansinena",       pj:20, pg:3, pe:4, pp:13, gf:19, gc:53, pts:13 },
+            { nombre: "Huracán",             clase: "huracan",         pj:20, pg:4, pe:3, pp:13, gf:20, gc:84, pts:15 },
+            { nombre: "Sansinena",           clase: "sansinena",       pj:21, pg:3, pe:5, pp:13, gf:19, gc:53, pts:14 },
             { nombre: "Olimpo",              clase: "olimpo",          pj:19, pg:3, pe:4, pp:12, gf:17, gc:54, pts:13 },
             { nombre: "Pacífico (C)", clase: "pacificocabildo", pj:19, pg:0, pe:1, pp:18, gf:8, gc:77, pts:1 },
         ]
