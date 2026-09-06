@@ -382,7 +382,7 @@ const idaSegundaFemenino = [
     { fecha: 20, libre: "Petroquímicos", partidos: [{l:"Sansinena", v:"Rosario PB", gl:0, gv:4, dia:"Sáb 15/08", hora:"13:15", goles_l:[], goles_v:["Valentina Cavalli","Valentina Cavalli","Valentina Cavalli","Celeste Medina"]}, {l:"Estrella de Oro", v:"San Francisco", gl:1, gv:3, dia:"Sáb 15/08", hora:"15:30", goles_l:["Camila Guenchual"], goles_v:["Milagros Fernández","Florencia Sorbellini","Rocío de Mirta"]}, {l:"Olimpo", v:"Pacífico (C)", gl:3, gv:0, dia:"Sáb 15/08", hora:"15:30", goles_l:["Oriana Correa","Mía Cibelli","Dana Placencia"], goles_v:[]}, {l:"Huracán", v:"Liniers", gl:1, gv:8, dia:"Sáb 15/08", hora:"15:30", goles_l:["Keila Iglesias"], goles_v:["Paz Cutrín","Paz Cutrín","Paz Cutrín","Paulina Acevedo","Paulina Acevedo","María Paz Marino","María Paz Marino","Victoria Sánchez"]}] },
     { fecha: 21, libre: "Pacífico (C)", partidos: [{l:"Huracán", v:"San Francisco", gl:1, gv:7, dia:"Sáb 22/08", hora:"15:30", goles_l:[], goles_v:["Clara Iturrioz","Clara Iturrioz","Ariana Adassus","Milagros Fernández","Morena Barzola","Valentina Rebol","Paloma Vidal"]}, {l:"Petroquímicos", v:"Liniers", gl:0, gv:2, dia:"Sáb 22/08", hora:"15:30", goles_l:[], goles_v:["Paulina Acevedo","Ailén Márquez"] }, {l:"Olimpo", v:"Sansinena", gl:1, gv:1, dia:"Dom 23/08", hora:"15:30", goles_l:["Iara Vasileff"], goles_v:["Daniela Abello"] }, {l:"Estrella de Oro", v:"Rosario PB", gl:0, gv:1, dia:"Dom 23/08", hora:"15:30", goles_l:[], goles_v:["Juliana Ruiz"]}] },
     { fecha: 22, libre: "Olimpo", partidos: [{l:"Sansinena", v:"Estrella de Oro", gl:1, gv:2, dia:"Dom 30/08", hora:"11:00", goles_l:["Jocelyn Zarza"], goles_v:["Mariana González","Sabrina Genchi"]}, {l:"San Francisco", v:"Petroquímicos", gl:1, gv:2, dia:"Dom 30/08", hora:"15:30", goles_l:["Florencia Sorbellini"], goles_v:["Renata Segovia","Renata Segovia"]}, {l:"Rosario PB", v:"Huracán", gl:7, gv:0, dia:"Dom 30/08", hora:"16:00", goles_l:["Ayelén Zeballos","Ayelén Zeballos","Magdalena Nievas","Magdalena Nievas","Julieta Díaz","Julieta Ruiz","Mariela Sollosky"], goles_v:[]}, {l:"Liniers", v:"Pacífico (C)", gl:8, gv:0, dia:"Jue 03/08", hora:"13:15", goles_l:["Paz Cutrín","Paz Cutrín","Paz Cutrín","Isabella Pezzutti","Victoria Sánchez","Lola Podestá","Iara Schwab","Giuliana Morano"], goles_v:[]}] },
-    { fecha: 23, libre: "Liniers", partidos: [{l:"Pacífico (C)", v:"San Francisco", gl:null, gv:null, dia:"Sáb 05/09", hora:"12:45", goles_l:[], goles_v:[]}, {l:"Huracán", v:"Sansinena", gl:null, gv:null, dia:"Sáb 05/09", hora:"16:00", goles_l:[], goles_v:[]}, {l:"Petroquímicos", v:"Rosario PB", gl:null, gv:null, dia:"Dom 06/09", hora:"15:30", goles_l:[], goles_v:[]}, {l:"Olimpo", v:"Estrella de Oro", gl:null, gv:null, dia:"Dom 06/09", hora:"15:30", goles_l:[], goles_v:[]}] },
+    { fecha: 23, libre: "Liniers", partidos: [{l:"Pacífico (C)", v:"San Francisco", gl:1, gv:8, dia:"Sáb 05/09", hora:"12:45", goles_l:[], goles_v:["Luciana Sosa","Luciana Sosa","Valentina Rebol","Valentina Rebol","Ariana Adassus","Clara Iturrioz","Florencia Sorbellini","Maira Pedrol"]}, {l:"Huracán", v:"Sansinena", gl:null, gv:null, dia:"Sáb 05/09", hora:"16:00", goles_l:[], goles_v:[]}, {l:"Petroquímicos", v:"Rosario PB", gl:null, gv:null, dia:"Dom 06/09", hora:"15:30", goles_l:[], goles_v:[]}, {l:"Olimpo", v:"Estrella de Oro", gl:null, gv:null, dia:"Dom 06/09", hora:"15:30", goles_l:[], goles_v:[]}] },
     { fecha: 24, libre: "San Francisco", partidos: [{l:"Petroquímicos/Sansinena", v:"Petroquímicos/Sansinena", gl:null, gv:null}, {l:"Olimpo/Liniers", v:"Olimpo/Liniers", gl:null, gv:null}, {l:"Huracán/Estrella de Oro", v:"Huracán/Estrella de Oro", gl:null, gv:null}, {l:"Pacífico (C)/Rosario PB", v:"Pacífico (C)/Rosario PB", gl:null, gv:null}] },
     { fecha: 25, libre: "Rosario PB", partidos: [{l:"Sansinena/Pacífico (C)", v:"Sansinena/Pacífico (C)", gl:null, gv:null}, {l:"Estrella de Oro/Petroquímicos", v:"Estrella de Oro/Petroquímicos", gl:null, gv:null}, {l:"San Francisco/Liniers", v:"San Francisco/Liniers", gl:null, gv:null}, {l:"Huracán/Olimpo", v:"Huracán/Olimpo", gl:null, gv:null}] },
     { fecha: 26, libre: "Sansinena", partidos: [{l:"San Francisco/Olimpo", v:"San Francisco/Olimpo", gl:null, gv:null}, {l:"Liniers/Rosario PB", v:"Liniers/Rosario PB", gl:null, gv:null}, {l:"Pacífico (C)/Estrella de Oro", v:"Pacífico (C)/Estrella de Oro", gl:null, gv:null}, {l:"Petroquímicos/Huracán", v:"Petroquímicos/Huracán", gl:null, gv:null}] },
@@ -1891,7 +1891,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 22).partidos.forEach(p
 });
 
 
-let diaSeleccionadoHome = "2026-09-05"; 
+let diaSeleccionadoHome = "2026-09-06"; 
 let mercadoPasesAbierto = false;
 
 function toggleMercadoPasesHome() {
@@ -1974,7 +1974,7 @@ function generarHome() {
             {l:"Pacífico (C)", v:"Rosario PB", hora:"16:00", gl:1, gv:2, claseL:"pacificoc", claseV:"rosariopb"},
             ]},
             { nombre: "2° FEMENINO | FECHA 23", cat: "segundafemenino", torLink: "segundafemenino", noAutoResult: true, partidos: [
-            {l:"Pacífico (C)", v:"San Francisco", hora:"12:45", gl:null, gv:null, claseL:"pacificoc", claseV:"sanfrancisco"},
+            {l:"Pacífico (C)", v:"San Francisco", hora:"12:45", gl:1, gv:8, claseL:"pacificoc", claseV:"sanfrancisco"},
             {l:"Huracán", v:"Sansinena", hora:"16:00", gl:null, gv:null, claseL:"huracan", claseV:"sansinena"},
             ]},
             { nombre: "SUB 15 | FECHA 19", cat: "sub15fem", torLink: "sub15fem", noAutoResult: true, partidos: [
@@ -1987,10 +1987,10 @@ function generarHome() {
             {l:"Villa Mitre", v:"Ciudad de Olavarría", hora:"14:00", gl:5, gv:0, claseL:"villamitre", claseV:"ciudadolavarria",nota:"Ida: 2-3"},
             ]},
             { nombre: "REGIONAL AMATEUR | FECHA 2", cat: "regamateurtemporada", torLink: "regamateurtemporada", noAutoResult: true, partidos: [
-            {l:"Santa Rosa", v:"Ferro de Pico", hora:"16:00", gl:null, gv:null, claseL:"santarosa", claseV:"ferropico",nota:"Zona 1"},
-            {l:"Balonpié", v:"Racing de Olavarría", hora:"16:00", gl:null, gv:null, claseL:"balompie", claseV:"racingolavarria",nota:"Zona 6"},
-            {l:"All Boys (Trenel)", v:"All Boys (SR)", hora:"18:00", gl:null, gv:null, claseL:"allboystrenel", claseV:"allboyssr",nota:"Zona 1"},
-            {l:"Def. Valeria del Mar", v:"Quilmes (MdP)", hora:"19:00", gl:null, gv:null, claseL:"defvaleriadelmar", claseV:"quilmesmdp",nota:"Zona 4"},
+            {l:"Santa Rosa", v:"Ferro de Pico", hora:"16:00", gl:0, gv:0, claseL:"santarosa", claseV:"ferropico",nota:"Zona 1"},
+            {l:"Balonpié", v:"Racing de Olavarría", hora:"16:00", gl:2, gv:2, claseL:"balompie", claseV:"racingolavarria",nota:"Zona 6"},
+            {l:"All Boys (Trenel)", v:"All Boys (SR)", hora:"18:00", gl:1, gv:0, claseL:"allboystrenel", claseV:"allboyssr",nota:"Zona 1"},
+            {l:"Def. Valeria del Mar", v:"Quilmes (MdP)", hora:"19:00", gl:2, gv:5, claseL:"defvaleriadelmar", claseV:"quilmesmdp",nota:"Zona 4"},
             ]},
        ]},
         { id: "2026-09-06", label: "DOM 06/09", torneos: [
@@ -2004,7 +2004,7 @@ function generarHome() {
             {l:"Pacífico BB", v:"Comercial", hora:"15:30", gl:null, gv:null, claseL:"pacificobb", claseV:"comercial"},
             ]},
             { nombre: "1° FEMENINO | CLAUSURA | FECHA 7", cat: "femenino", torLink: "femenino", noAutoResult: true, partidos: [
-            {l:"Villa Mitre", v:"Empleados de Comercio", hora:"15:30", gl:null, gv:null, claseL:"villamitre", claseV:"empleadosdecomercio"},
+            {l:"Villa Mitre", v:"Empleados de Comercio", hora:"15:30", gl:null, gv:null, claseL:"villamitre", claseV:"empleados"},
             {l:"Municipales", v:"La Armonía", hora:"15:30", gl:null, gv:null, claseL:"municipales", claseV:"laarmonia"},
             {l:"Tiro Federal", v:"Bella Vista", hora:"15:30", gl:null, gv:null, claseL:"tirofederal", claseV:"bellavista"},
             {l:"Libertad", v:"Sporting", hora:"16:30", gl:null, gv:null, claseL:"libertad", claseV:"sporting"},
@@ -16631,6 +16631,7 @@ const BD_H2H = {
         { fecha: "Apertura 2026 - Fecha 3", torneo: "senior", l: "Pacífico (C)", v: "San Francisco", gl: 2, gv: 1, goles_l: ["Fabián Soto","Nicolás Arroyo"], goles_v: ["Gabriel Duawalder"] },
         { fecha: "Fecha 5 - Torneo 2026 - 19 abr", torneo: "segundafemenino", l: "San Francisco", v: "Pacífico (C)", gl: 7, gv: 0, goles_l: ["Milagos Fernández (3)","Ariana Adassus (2)","Clara Iturrioz","Ailín Randisi"], goles_v: [] },
         { fecha: "Fecha 14 - Torneo 2026 - 28 jun", torneo: "segundafemenino", l: "Pacífico (C)", v: "San Francisco ", gl: 0, gv: 1, goles_l: [], goles_v: ["Elena Spinucci"] },
+        { fecha: "Fecha 23 - Torneo 2026 - 05 ago", torneo: "segundafemenino", l: "Pacífico (C)", v: "San Francisco", gl: 1, gv: 8, goles_l: [], goles_v: ["Luciana Sosa","Luciana Sosa","Valentina Rebol","Valentina Rebol","Ariana Adassus","Clara Iturrioz","Florencia Sorbellini","Maira Pedrol"] },
     ],
     "Libertad|Sporting": [
         { fecha: "Apertura 2026 - Fecha 3", torneo: "senior", l: "Sporting", v: "Libertad", gl: 2, gv: 1, goles_l: ["Marcos Cossú","Maximiliano Rodríguez"], goles_v: ["Rodrigo García"] },
@@ -21675,8 +21676,8 @@ const BD_POSICIONES = {
         clausura: [
             { nombre: "Olimpo",              clase: "olimpo",          pj:5, pg:3, pe:2, pp:0, gf:12, gc:4, pts:11 },
             { nombre: "Rosario PB",          clase: "rosariopb",       pj:6, pg:2, pe:4, pp:0, gf:4, gc:6, pts:10 },
-            { nombre: "Pacífico (C)",        clase: "pacificocabildo", pj:6, pg:2, pe:1, pp:3, gf:9, gc:12, pts:8 },
             { nombre: "Tiro Federal",        clase: "tirofederal",     pj:6, pg:3, pe:2, pp:1, gf:16, gc:9, pts:11 },
+            { nombre: "Pacífico (C)",        clase: "pacificocabildo", pj:6, pg:2, pe:1, pp:3, gf:9, gc:12, pts:8 },
             { nombre: "Sansinena",           clase: "sansinena",       pj:5, pg:1, pe:3, pp:1, gf:7, gc:7, pts:6 },
             { nombre: "Pacífico BB",         clase: "pacificobb",      pj:5, pg:1, pe:2, pp:2, gf:4, gc:5, pts:5 },
             { nombre: "Comercial <b>(A)</b>",           clase: "comercial",       pj:5, pg:1, pe:2, pp:2, gf:5, gc:10, pts:5 },
@@ -21718,14 +21719,14 @@ const BD_POSICIONES = {
     segundafemenino: {
         torneo2026: [
             { nombre: "Liniers <b>(C)</b>",             clase: "liniers",         pj:19, pg:17, pe:2, pp:0, gf:74, gc:11, pts:53 },
-            { nombre: "San Francisco <b>(C)</b>",       clase: "sanfrancisco",    pj:20, pg:15, pe:2, pp:3, gf:74, gc:19, pts:47 },
+            { nombre: "San Francisco <b>(C)</b>",       clase: "sanfrancisco",    pj:21, pg:16, pe:2, pp:3, gf:82, gc:20, pts:50 },
             { nombre: "Petroquímicos <b>(C)</b>",       clase: "petroquimicos",   pj:19, pg:13, pe:2, pp:4, gf:44, gc:14, pts:41 },
             { nombre: "Rosario PB <b>(C)</b>",          clase: "rosariopb",       pj:20, pg:13, pe:2, pp:5, gf:85, gc:25, pts:41 },
             { nombre: "Estrella de Oro",     clase: "estrellaoro",     pj:20, pg:8, pe:3, pp:9, gf:29, gc:37, pts:27 },
             { nombre: "Huracán",             clase: "huracan",         pj:19, pg:4, pe:2, pp:13, gf:20, gc:84, pts:14 },
             { nombre: "Sansinena",           clase: "sansinena",       pj:20, pg:3, pe:4, pp:13, gf:19, gc:53, pts:13 },
             { nombre: "Olimpo",              clase: "olimpo",          pj:19, pg:3, pe:4, pp:12, gf:17, gc:54, pts:13 },
-            { nombre: "Pacífico (C)", clase: "pacificocabildo", pj:18, pg:0, pe:1, pp:17, gf:7, gc:69, pts:1 },
+            { nombre: "Pacífico (C)", clase: "pacificocabildo", pj:19, pg:0, pe:1, pp:18, gf:8, gc:77, pts:1 },
         ]
     }
 };
@@ -21843,10 +21844,10 @@ if (tor === 'apertura' && cat === 'promocional') {
    ══════════════════════════════════════════════════════════ */
 const BD_REG_AMATEUR_TEMPORADA = {
     mejoresPrimeros: [
+        { nombre: "Quilmes (MdP)", pj:2, pg:1, pe:1, pp:0, gf:5, gc:2, pts:4 },
         { nombre: "Atlético Villegas", pj:2, pg:1, pe:1, pp:0, gf:3, gc:2, pts:4 },
         { nombre: "Huracán", pj:1, pg:1, pe:0, pp:0, gf:1, gc:0, pts:3 },
-        { nombre: "Embajadores (Olavarría)", pj:1, pg:0, pe:1, pp:0, gf:1, gc:1, pts:1 },
-        { nombre: "Quilmes (MdP)", pj:1, pg:0, pe:1, pp:0, gf:0, gc:0, pts:1 },
+        { nombre: "Racing (Olavarría)", pj:2, pg:0, pe:2, pp:0, gf:3, gc:3, pts:2 },
         { nombre: "Independiente (San Cayetano)", pj:1, pg:0, pe:1, pp:0, gf:0, gc:0, pts:1 },
     ],
     mejoresSegundos: [
@@ -21878,20 +21879,20 @@ const BD_REG_AMATEUR_TEMPORADA = {
         { titulo: "ZONA 1",
           fixture: [
               { fecha:1, partidos:[{ l:"All Boys (SR)", v:"Santa Rosa", gl:4, gv:1, goles_l:[], goles_v:[] }, { l:"Ferro", v:"All Boys (Trenel)", gl:1, gv:1, goles_l:[], goles_v:[] }] },
-              { fecha:2, partidos:[{ l:"Santa Rosa", v:"Ferro", gl:null, gv:null, goles_l:[], goles_v:[] },{ l:"All Boys (Trenel)", v:"All Boys (SR)", gl:null, gv:null, goles_l:[], goles_v:[] }] },
+              { fecha:2, partidos:[{ l:"Santa Rosa", v:"Ferro", gl:0, gv:0, goles_l:[], goles_v:[] },{ l:"All Boys (Trenel)", v:"All Boys (SR)", gl:1, gv:0, goles_l:[], goles_v:[] }] },
               { fecha:3, partidos:[{ l:"Ferro", v:"All Boys (SR)", gl:null, gv:null, goles_l:[], goles_v:[] },{ l:"Santa Rosa", v:"All Boys (Trenel)", gl:null, gv:null, goles_l:[], goles_v:[] }] },
               { fecha:4, partidos:[{ l:"All Boys (Trenel)", v:"Ferro", gl:null, gv:null, goles_l:[], goles_v:[] },{ l:"Santa Rosa", v:"All Boys (SR)", gl:null, gv:null, goles_l:[], goles_v:[] }] },
               { fecha:5, partidos:[{ l:"Ferro", v:"Santa Rosa", gl:null, gv:null, goles_l:[], goles_v:[] },{ l:"All Boys (SR)", v:"All Boys (Trenel)", gl:null, gv:null, goles_l:[], goles_v:[] }] },
               { fecha:6, partidos:[{ l:"All Boys (SR)", v:"Ferro", gl:null, gv:null, goles_l:[], goles_v:[] },{ l:"All Boys (Trenel)", v:"Santa Rosa", gl:null, gv:null, goles_l:[], goles_v:[] }] },
           ],
-          puntosEnJuego: "15 tras la fecha 1",
+          puntosEnJuego: "12 tras la fecha 1",
           txtClasifica: "Clasifica a la 3° ronda",
           txtElimina: "Clasifica a la 2° ronda",
           posiciones: [
-              { nombre: "All Boys (Santa Rosa)", pj:1, pg:1, pe:0, pp:0, gf:4, gc:1, pts:3 },
-              { nombre: "Ferro de Pico",         pj:1, pg:0, pe:1, pp:0, gf:1, gc:1, pts:1 },
-              { nombre: "All Boys (Trenel)",     pj:1, pg:0, pe:1, pp:0, gf:1, gc:1, pts:1 },
-              { nombre: "Santa Rosa",            pj:1, pg:0, pe:0, pp:1, gf:1, gc:4, pts:0 },
+              { nombre: "All Boys (Trenel)",     pj:2, pg:1, pe:1, pp:0, gf:2, gc:1, pts:4 },
+              { nombre: "All Boys (Santa Rosa)", pj:2, pg:1, pe:0, pp:1, gf:4, gc:2, pts:3 },
+              { nombre: "Ferro de Pico",         pj:2, pg:0, pe:2, pp:0, gf:1, gc:1, pts:2 },
+              { nombre: "Santa Rosa",            pj:2, pg:0, pe:1, pp:1, gf:1, gc:4, pts:1 },
           ]
         },
         { titulo: "ZONA 2",
@@ -21915,19 +21916,19 @@ const BD_REG_AMATEUR_TEMPORADA = {
         { titulo: "ZONA 4",
           fixture: [
               { fecha:1, libre:"Def. Valeria del Mar", partidos:[{ l:"Quilmes", v:"Dep. Norte", gl:0, gv:0, goles_l:[], goles_v:[] }] },
-              { fecha:2, libre:"Dep. Norte", partidos:[{ l:"Def. Valeria del Mar", v:"Quilmes", gl:null, gv:null, goles_l:[], goles_v:[] }] },
+              { fecha:2, libre:"Dep. Norte", partidos:[{ l:"Def. Valeria del Mar", v:"Quilmes", gl:2, gv:5, goles_l:[], goles_v:[] }] },
               { fecha:3, libre:"Quilmes", partidos:[{ l:"Dep. Norte", v:"Def. Valeria del Mar", gl:null, gv:null, goles_l:[], goles_v:[] }] },
               { fecha:4, libre:"Def. Valeria del Mar", partidos:[{ l:"Dep. Norte", v:"Quilmes", gl:null, gv:null, goles_l:[], goles_v:[] }] },
               { fecha:5, libre:"Dep. Norte", partidos:[{ l:"Quilmes", v:"Def. Valeria del Mar", gl:null, gv:null, goles_l:[], goles_v:[] }] },
               { fecha:6, libre:"Quilmes", partidos:[{ l:"Def. Valeria del Mar", v:"Dep. Norte", gl:null, gv:null, goles_l:[], goles_v:[] }] },
           ],
-          puntosEnJuego: "<b>9</b> tras la fecha 1 para los que tienen un partido jugados; <b>12</b> para los que tienen 0 partidos jugados",
+          puntosEnJuego: "<b>6</b> tras la fecha 2 para los que tienen dos partidos jugados; <b9</b> para los que tienen un partido jugado",
           txtClasifica: "Clasifica a 2° o 3° ronda (Revisar tabla de primeros)",
           txtElimina: "Clasifica a 2° ronda o eliminado (Revisar tabla de segundos)",
           posiciones: [
-              { nombre: "Quilmes (MdP)",        pj:1, pg:0, pe:1, pp:0, gf:0, gc:0, pts:1 },
+              { nombre: "Quilmes (MdP)",        pj:2, pg:1, pe:1, pp:0, gf:5, gc:2, pts:4 },
               { nombre: "Dep. Norte",           pj:1, pg:0, pe:1, pp:0, gf:0, gc:0, pts:1 },
-              { nombre: "Def. Valeria del Mar", pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0 },
+              { nombre: "Def. Valeria del Mar", pj:1, pg:0, pe:0, pp:1, gf:2, gc:5, pts:0 },
           ]
         },
         { titulo: "ZONA 5",
@@ -21951,19 +21952,19 @@ const BD_REG_AMATEUR_TEMPORADA = {
         { titulo: "ZONA 6",
           fixture: [
               { fecha:1, libre:"Balonpié", partidos:[{ l:"Racing", v:"Embajadores", gl:1, gv:1, goles_l:[], goles_v:[] }] },
-              { fecha:2, libre:"Embajadores", partidos:[{ l:"Balonpié", v:"Racing", gl:null, gv:null, goles_l:[], goles_v:[] }] },
+              { fecha:2, libre:"Embajadores", partidos:[{ l:"Balonpié", v:"Racing", gl:2, gv:2, goles_l:[], goles_v:[] }] },
               { fecha:3, libre:"Racing", partidos:[{ l:"Embajadores", v:"Balonpié", gl:null, gv:null, goles_l:[], goles_v:[] }] },
               { fecha:4, libre:"Balonpié", partidos:[{ l:"Embajadores", v:"Racing", gl:null, gv:null, goles_l:[], goles_v:[] }] },
               { fecha:5, libre:"Embajadores", partidos:[{ l:"Racing", v:"Balonpié", gl:null, gv:null, goles_l:[], goles_v:[] }] },
               { fecha:6, libre:"Racing", partidos:[{ l:"Balonpié", v:"Embajadores", gl:null, gv:null, goles_l:[], goles_v:[] }] },
           ],
-          puntosEnJuego: "<b>9</b> tras la fecha 1 para los que tienen un partido jugados; <b>12</b> para los que tienen 0 partidos jugados",
+          puntosEnJuego: "<b>6</b> tras la fecha 2 para los que tienen dos partido jugados; <b>9</b> para los que tienen un partido jugados",
           txtClasifica: "Clasifica a 2° o 3° ronda (Revisar tabla de primeros)",
           txtElimina: "Clasifica a 2° ronda o eliminado (Revisar tabla de segundos)",
           posiciones: [
+              { nombre: "Racing (Olavarría)",      pj:2, pg:0, pe:2, pp:0, gf:3, gc:3, pts:2 },
               { nombre: "Embajadores (Olavarría)", pj:1, pg:0, pe:1, pp:0, gf:1, gc:1, pts:1 },
-              { nombre: "Racing (Olavarría)",      pj:1, pg:0, pe:1, pp:0, gf:1, gc:1, pts:1 },
-              { nombre: "Balonpié",                pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0 },
+              { nombre: "Balonpié",                pj:1, pg:0, pe:1, pp:0, gf:2, gc:2, pts:1 },
           ]
         },
         { titulo: "ZONA 7",
