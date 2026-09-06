@@ -23160,7 +23160,9 @@ const BD_CAMPEONES_2026 = {
     { anio: "2026", equipo: "Libertad", clase: "libertad", detalle: "Ganador del Apertura 2026 en 8va" },
     { anio: "2026", equipo: "Liniers", clase: "liniers", detalle: "Ganador del Apertura 2026 en 9na" },
 ],
-    infantiles:         [],
+    infantiles:         [
+    { anio: "2026", equipo: "Bella Vista B", clase: "bellavista", detalle: "Campeón de la Zona B de Infantiles 2026" }
+],
     senior:             [
     { anio: "2026", equipo: "Pacífico (C)", clase: "pacificoc", detalle: "Ganador del Apertura 2026 al vencer a Sporting por 2-1 el 22/7/2026" }
 ],
