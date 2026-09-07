@@ -610,11 +610,11 @@ const BD_FIXTURES_FUTSAL = [
         {l:"Huracán",         v:"La Esperanza",     gl:null, gv:null},
     ]},
     { fecha: 6, partidos: [
-        {l:"Catamarca",     v:"Villa Mitre",     gl:null, gv:null},
+        {l:"Catamarca",     v:"Villa Mitre",     gl:2, gv:6},
         {l:"Dublin",     v:"Pacífico BB",     gl:4, gv:2, goles_l:["Agustín Miguel (2)","Raúl Sepúlveda","Javier Portillo"], goles_v:[]},
         {l:"Petroquímicos",       v:"Comercial",     gl:1, gv:2, goles_l:[], goles_v:["Ricardo Lagos","Ivo Basich"]},
         {l:"Tiro Federal",    v:"Liniers",     gl:3, gv:4, goles_l:["Juan Arias","Ezequiel Carreño","Román Mazzello"], goles_v:[]},
-        {l:"San Francisco", v:"Los 3 Chiflados",     gl:null, gv:null},
+        {l:"San Francisco", v:"Los 3 Chiflados",     gl:4, gv:5},
         {l:"La Estación",     v:"Huracán",     gl:null, gv:null},
         {l:"La Esperanza",    v:"Dep. Futsal",     gl:null, gv:null},
     ]},
@@ -1926,7 +1926,7 @@ function generarHome() {
 
         { id: "2026-09-02", label: "MIÉR 02/09", torneos: [
             { nombre: "FUTSAL | CLAUSURA | FECHA 6", cat: "futsal", torLink: "futsal", noAutoResult: true, partidos: [
-            {l:"Catamarca", v:"Villa Mitre", hora:"22:00", gl:null, gv:null, claseL:"catamarca", claseV:"villamitre",nota:"en cancha de Don Bosco"},
+            {l:"Catamarca", v:"Villa Mitre", hora:"22:00", gl:2, gv:6, claseL:"catamarca", claseV:"villamitre",nota:"en cancha de Don Bosco"},
             ]},
             { nombre: "SUB 15 FEMENINO | FECHA 18", cat: "sub15fem", torLink: "sub15fem", noAutoResult: true, partidos: [
             {l:"Juventud Unida", v:"Bella Vista", hora:"15:00", gl:1, gv:7, claseL:"juventudunida", claseV:"bellavista",nota:"Reprogramado del último sábado"},
@@ -1962,7 +1962,7 @@ function generarHome() {
        ]},
         { id: "2026-09-04", label: "VIE 04/09", torneos: [
             { nombre: "FUTSAL | CLAUSURA | FECHA 6", cat: "futsal", torLink: "futsal", noAutoResult: true, partidos: [
-            {l:"San Francisco", v:"Los 3 Chiflados", hora:"22:00", gl:null, gv:null, claseL:"sanfrancisco", claseV:"los3chiflados",nota:"en cancha de La Curtiembre"},
+            {l:"San Francisco", v:"Los 3 Chiflados", hora:"22:00", gl:4, gv:5, claseL:"sanfrancisco", claseV:"los3chiflados",nota:"en cancha de La Curtiembre"},
             {l:"Petroquímicos", v:"Comercial", hora:"22:00", gl:1, gv:2, claseL:"petroquimicos", claseV:"comercial",nota:"en cancha de Petroquímicos"},
             {l:"Tiro Federal", v:"Liniers", hora:"22:00", gl:3, gv:4, claseL:"tirofederal", claseV:"liniers",nota:"en cancha de Tiro Federal"},
             ]},
@@ -17169,6 +17169,7 @@ const BD_H2H = {
         { fecha: "Apertura 2026 - Fecha 6", torneo: "futsal", l: "Los 3 Chiflados", v: "San Francisco", gl: 8, gv: 4 },
         { fecha: "Apertura 2026 - Fecha 6", torneo: "futsalreserva", l: "Los 3 Chiflados", v: "San Francisco", gl: 6, gv: 1 },
         { fecha: "Apertura 2026 - Cuartos de final", torneo: "futsalreserva", l: "Los 3 Chiflados", v: "San Francisco", gl: 3, gv: 3 },
+        { fecha: "Apertura 2026 - Fecha 6", torneo: "futsal", l: "San Francisco", v: "Los 3 Chiflados", gl: 4, gv: 5 },
     ],
     "Dublin|Liniers": [
         { fecha: "Apertura 2026 - Fecha 9", torneo: "futsal", l: "Liniers", v: "Dublin", gl: 5, gv: 3 },
@@ -17201,8 +17202,9 @@ const BD_H2H = {
         { fecha: "Apertura 2026 - Fecha 6", torneo: "futsalreserva", l: "La Esperanza", v: "Dep. Futsal", gl: 5, gv: 2 },
     ],
     "Catamarca|Villa Mitre": [
-       { fecha: "Apertura 2026 - Fecha 6", torneo: "futsal", l: "Villa Mitre", v: "Dep. Futsal", gl: 4, gv: 3 },
-        { fecha: "Apertura 2026 - Fecha 6", torneo: "futsalreserva", l: "Villa Mitre", v: "Dep. Futsal", gl: 4, gv: 4 },
+       { fecha: "Apertura 2026 - Fecha 6", torneo: "futsal", l: "Villa Mitre", v: "Catamarca", gl: 4, gv: 3 },
+        { fecha: "Apertura 2026 - Fecha 6", torneo: "futsalreserva", l: "Villa Mitre", v: "Catamarca", gl: 4, gv: 4 },
+       { fecha: "Clausura 2026 - Fecha 6", torneo: "futsal", l: "Catamarca", v: "Villa Mitre", gl: 2, gv: 6 },
     ],
     "Círculo Dep.|Olimpo": [
         { fecha: "Fecha 6 - Fase inicial - 26 abr 2026", torneo: "federala", l: "Olimpo", v: "Círculo Dep.", gl: 1, gv: 0, goles_l: ["Federico González"], goles_v: [] },
@@ -17855,15 +17857,15 @@ const BD_POS_FUTSAL = {
         {n:"La Esperanza",    cl:"laesperanza",    pj:6,pg:6,pe:0,pp:0,gf:21, gc:7, pts:18},
         {n:"La Estación <b>(A)</b>",     cl:"laestacion",    pj:6,pg:6,pe:0,pp:0,gf:26, gc:10, pts:18},
         {n:"Comercial",       cl:"comercial",    pj:6,pg:6,pe:0,pp:0,gf:22, gc:10, pts:18},
-        {n:"Los 3 Chiflados <b>(*)</b>", cl:"los3chiflados",    pj:5,pg:4,pe:0,pp:1,gf:15, gc:2, pts:12},
-        {n:"Villa Mitre",     cl:"villamitre",    pj:5,pg:3,pe:1,pp:1,gf:21, gc:21, pts:10},
-        {n:"Tiro Federal",    cl:"tirofederal",    pj:5,pg:3,pe:0,pp:2,gf:14, gc:13, pts:9},
-        {n:"San Francisco",   cl:"sanfrancisco",    pj:5,pg:3,pe:0,pp:2,gf:7, gc:12, pts:9},
+        {n:"Los 3 Chiflados <b>(*)</b>", cl:"los3chiflados",    pj:6,pg:5,pe:0,pp:1,gf:20, gc:6, pts:15},
+        {n:"Villa Mitre",     cl:"villamitre",    pj:6,pg:4,pe:1,pp:1,gf:27, gc:23, pts:13},
+        {n:"Tiro Federal",    cl:"tirofederal",    pj:6,pg:3,pe:0,pp:3,gf:17, gc:17, pts:9},
+        {n:"San Francisco",   cl:"sanfrancisco",    pj:6,pg:3,pe:0,pp:3,gf:11, gc:17, pts:9},
         {n:"Petroquímicos",   cl:"petroquimicos",    pj:6,pg:3,pe:0,pp:3,gf:11, gc:18, pts:9},
         {n:"Liniers <b>(*)</b>",         cl:"liniers",    pj:6,pg:2,pe:0,pp:4,gf:14, gc:20, pts:6},
         {n:"Pacífico BB",     cl:"pacificobb",    pj:6,pg:1,pe:1,pp:4,gf:19, gc:25, pts:4},
         {n:"Dublin",          cl:"dublin",    pj:6,pg:1,pe:0,pp:5,gf:15, gc:23, pts:3},
-        {n:"Catamarca",       cl:"catamarca",    pj:5,pg:0,pe:0,pp:5,gf:10, gc:30, pts:0},
+        {n:"Catamarca",       cl:"catamarca",    pj:6,pg:0,pe:0,pp:6,gf:12, gc:36, pts:0},
         {n:"<s>Dep. Futsal</s> <b>(-)</b>",     cl:"depfutsal",    pj:0,pg:0,pe:0,pp:0,gf:0, gc:0, pts:0},
         {n:"<s>Huracán</s> <b>(-)</b>",         cl:"huracan",    pj:0,pg:0,pe:0,pp:0,gf:0, gc:0, pts:0}
     ],
