@@ -1258,7 +1258,7 @@ BD_FIXTURES.oficial.reserva.push(
     { fecha: 6, partidos: [
         {l:"Libertad",   v:"Villa Mitre",   gl:0, gv:4},
         {l:"Bella Vista",   v:"La Armonía",   gl:2, gv:3},
-        {l:"San Francisco",   v:"Huracán",   gl:null, gv:null},
+        {l:"San Francisco",   v:"Huracán",   gl:4, gv:0},
         {l:"Sporting",   v:"Liniers",   gl:0, gv:2}
     ]},
     { fecha: 7, partidos: [
@@ -1344,7 +1344,7 @@ BD_FIXTURES.promocional.reserva.push(
         {l:"Pacífico BB",v:"Dublin",           gl:5,   gv:0}
     ]},
     { fecha: 6, partidos: [
-        {l:"Dublin",      v:"Tiro Federal",          gl:null,   gv:null},
+        {l:"Dublin",      v:"Tiro Federal",          gl:0,   gv:0},
         {l:"Pacífico (C)",   v:"Rosario PB", gl:null,   gv:null},
         {l:"Sansinena", v:"Olimpo",              gl:null,   gv:null},
         {l:"Pacífico BB",v:"Comercial",           gl:3,   gv:1}
@@ -1896,7 +1896,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 23).partidos.forEach(p
 });
 
 
-let diaSeleccionadoHome = "2026-09-08"; 
+let diaSeleccionadoHome = "2026-09-09"; 
 let mercadoPasesAbierto = false;
 
 function toggleMercadoPasesHome() {
@@ -1940,6 +1940,17 @@ function generarHome() {
             {l:"<b>Liga del Sur</b>", v:"Tres Arroyos", hora:"16:00", gl:null, gv:null, claseL:"ldsbb", claseV:"tresarroyos",nota:"<b>Zona 1 - en cancha de San Francisco - El ganador se queda con el #1 de la zona</b>"},
             {l:"Pehuajó", v:"Trenque Lauquen", hora:"16:00", gl:null, gv:null, claseL:"pehuajo", claseV:"trenquelauquen",nota:"<b>Zona 4 - Fecha 4</b>"},
             {l:"Tandil", v:"Ayacucho", hora:"20:00", gl:null, gv:null, claseL:"tandil", claseV:"ayacucho",nota:"<b>Zona 2</b>"},
+            ]},
+            { nombre: "COPA PAIS | (LIGA DEL SUR)", cat: "copapais", torLink: "copapais", noAutoResult: true, partidos: [
+            {l:"La Plata", v:"San Nicolás", hora:"16:00", gl:null, gv:null, claseL:"laplata", claseV:"sannicolas",nota:"<b>Zona Pampeana Norte - Ida - Tercera fase regional </b>"},
+            {l:"Valle Viejo", v:"Catamarca", hora:"16:30", gl:null, gv:null, claseL:"valleviejo", claseV:"catamarcapais",nota:"<b>Zona Catamarca - Fecha 5</b>"},
+            {l:"Rodeo", v:"Albardón", hora:"16:30", gl:null, gv:null, claseL:"rodeo", claseV:"albardon",nota:"<b>Zona Cuyo - Fecha 5</b>"},
+            {l:"Paraná", v:"San Jorge", hora:"21:00", gl:null, gv:null, claseL:"parana", claseV:"sanjorge",nota:"<b>Zona Litoral Sur - Ida - Segunda fase regional </b>"},
+            ]},
+       ]},
+        { id: "2026-09-10", label: "JUE 10/09", torneos: [
+            { nombre: "SUB 15 FEMENINO | FECHA 19 | REPROGRAMADO", cat: "sub15fem", torLink: "sub15fem", noAutoResult: true, partidos: [
+            {l:"Liniers", v:"Empleados de Comercio", hora:"17:30", gl:null, gv:null, claseL:"liniers", claseV:"empleados"},
             ]},
        ]},
         { id: "2026-09-12", label: "SÁB 12/09", torneos: [
@@ -16409,6 +16420,7 @@ const BD_H2H = {
         { fecha: "Apertura 2026 - Octavos de Final", torneo: "senior", l: "Huracán", v: "San Francisco", gl: 0, gv: 3, goles_l: [], goles_v: ["Ángel Martínez","Juan Pérez","Federico Timi"] },
         { fecha: "Torneo 2026 - Fecha 9", torneo: "sub15fem", l: "Huracán", v: "San Francisco", gl: 1, gv: 2 },
         { fecha: "Fecha 6 - Clausura 2026 - 05 ago 2026", torneo: "oficial", l: "San Francisco", v: "Huracán", gl: 1, gv: 1, goles_l: ["Marcelo Castellano"], goles_v: ["Lautaro Torres"] },
+        { fecha: "Fecha 6 - Clausura 2026", torneo: "reserva_oficial", l: "San Francisco", v: "Huracán", gl: 4, gv: 0 },
     ],
     "Comercial|Pacífico BB": [
         { fecha: "Apertura 2026 - Fecha 2", torneo: "senior", l: "Pacífico BB", v: "Comercial", gl: 1, gv: 5, goles_l: ["Ramón López"], goles_v: ["Maximiliano Casas","Sebastián Aristi (2)","Emiliano Esmoli"] },
@@ -16931,6 +16943,7 @@ const BD_H2H = {
         { fecha: "Fecha 13 - Apertura 2026 - 20 jun 2026", torneo: "promocional", l: "Tiro Federal", v: "Dublin", gl: 4, gv: 0, goles_l: ["Franco Fraysse","Tiago Papalardo","Mariano McCoubrey","Francisco Vallejos (e/c)"], goles_v: [] },
         { fecha: "Fecha 13 - Apertura 2026", torneo: "reserva_promocional", l: "Tiro Federal", v: "Dublin", gl: 0, gv: 0 },
         { fecha: "Fecha 6 - Clausura 2026 - 05 ago 2026", torneo: "promocional", l: "Dublin", v: "Tiro Federal", gl: 2, gv: 4, goles_l: ["Leonardo Acosta","Emiliano Dekker"], goles_v: ["Franco Lefiñir","Agustín Restiffo","Gino Carrozzi","Mariano McCoubrey"] },
+        { fecha: "Fecha 6 - Clausura 2026", torneo: "reserva_promocional", l: "Dublin", v: "Tiro Federal", gl: 0, gv: 0 },
     ],
     "La Estación|Liniers": [
         { fecha: "Apertura 2026 - Fecha 5", torneo: "futsal", l: "Liniers", v: "La Estación", gl: 2, gv: 7 },
@@ -17500,16 +17513,16 @@ function generarReserva(cat) {
                        {n:"Bella Vista",   cl:"bellavista",   pj:6, pg:3, pe:1, pp:2, gf:10, gc:10, pts:10},
                        {n:"Liniers",       cl:"liniers",      pj:6, pg:3, pe:1, pp:2, gf:7, gc:3, pts:10},
                        {n:"Sporting <b>(A)</b>",      cl:"sporting",     pj:5, pg:2, pe:2, pp:1, gf:7, gc:7, pts:8},
-                       {n:"San Francisco", cl:"sanfrancisco", pj:5, pg:1, pe:10, pp:3, gf:8, gc:11, pts:4},
+                       {n:"San Francisco", cl:"sanfrancisco", pj:6, pg:2, pe:10, pp:3, gf:12, gc:11, pts:7},
                        {n:"Libertad",      cl:"libertad",     pj:5, pg:1, pe:0, pp:4, gf:6, gc:10, pts:3},
-                       {n:"Huracán",       cl:"huracan",      pj:5, pg:0, pe:2, pp:3, gf:9, gc:14, pts:2}],
+                       {n:"Huracán",       cl:"huracan",      pj:6, pg:0, pe:2, pp:4, gf:9, gc:18, pts:2}],
         'promocional':[
                        {n:"Olimpo <b>(A)</b>",              cl:"olimpo",           pj:4, pg:4, pe:0, pp:0, gf:9, gc:3, pts:12},
                        {n:"Pacífico BB",         cl:"pacificobb",       pj:6, pg:4, pe:0, pp:2, gf:10, gc:4, pts:12},
                        {n:"Rosario PB",          cl:"rosariopb",        pj:5, pg:3, pe:0, pp:2, gf:9, gc:9, pts:9},
+                       {n:"Tiro Federal",        cl:"tirofederal",      pj:5, pg:2, pe:2, pp:1, gf:9, gc:4, pts:8},
                        {n:"Sansinena",           cl:"sansinena",        pj:4, pg:2, pe:1, pp:1, gf:10, gc:5, pts:7},
-                       {n:"Tiro Federal",        cl:"tirofederal",      pj:4, pg:2, pe:1, pp:1, gf:9, gc:4, pts:7},
-                       {n:"Dublin",              cl:"dublin",           pj:4, pg:1, pe:1, pp:2, gf:8, gc:13, pts:4},
+                       {n:"Dublin",              cl:"dublin",           pj:5, pg:1, pe:2, pp:2, gf:8, gc:13, pts:5},
                        {n:"Pacífico (C)", cl:"pacificocabildo",  pj:4, pg:0, pe:1, pp:3, gf:6, gc:15, pts:1},
                        {n:"Comercial",           cl:"comercial",        pj:5, pg:0, pe:0, pp:5, gf:3, gc:11, pts:0},],
         'segundafemenino': [
@@ -18902,16 +18915,16 @@ const BD_COPA_PAIS_SEGUNDA_RONDA = [
         titulo: "ZONA LITORAL SUR",
         tipo: "final",
         partidos: [
-            { ronda: "Final de Región (ida)", l: "Laguna Paiva/Paraná", v: "San Jorge", fecha: "", gl: null, gv: null, goles_l: [], goles_v: [] },
-            { ronda: "Final de Región (vuelta)", l: "Rafaela", v: "Laguna Paiva/Paraná", fecha: "", gl: null, gv: null, goles_l: [], goles_v: [] },
+            { ronda: "Final de Región (ida)", l: "Paraná", v: "San Jorge", fecha: "Miércoles 09 de septiembre", gl: null, gv: null, goles_l: [], goles_v: [] },
+            { ronda: "Final de Región (vuelta)", l: "San Jorge", v: "Paraná", fecha: "", gl: null, gv: null, goles_l: [], goles_v: [] },
         ]
     },
     {
         titulo: "ZONA PAMPEANA NORTE",
         tipo: "final",
         partidos: [
-            { ronda: "2° Ronda (ida)", l: "<s>Chacabuco</s>", v: "<b>San Nicolás</b>", fecha: "", gl: 1, gv: 2, goles_l: [], goles_v: [] },
-            { ronda: "2° Ronda (vuelta)", l: "<b>San Nicolás</b>", v: "<s>Chacabuco</s>", fecha: "", gl: 6, gv: 1, goles_l: [], goles_v: [] },
+            { ronda: "2° Ronda (ida)", l: "<s>Chacabuco</s>", v: "<b>San Nicolás</b>", fecha: "Miércoles 26 de agosto", gl: 1, gv: 2, goles_l: [], goles_v: [] },
+            { ronda: "2° Ronda (vuelta)", l: "<b>San Nicolás</b>", v: "<s>Chacabuco</s>", fecha: "Miércoles 02 de septiembre", gl: 6, gv: 1, goles_l: [], goles_v: [] },
         ]
     },
 ];
@@ -18921,8 +18934,8 @@ const BD_COPA_PAIS_TERCERA_RONDA = [
         titulo: "ZONA PAMPEANA NORTE",
         tipo: "final",
         partidos: [
-            { ronda: "3° Ronda (ida)", l: "La Plata", v: "San Nicolás/Chacabuco", fecha: "", gl: null, gv: null, goles_l: [], goles_v: [] },
-            { ronda: "3° Ronda (vuelta)", l: "San Nicolás/Chacabuco", v: "San Vicente", fecha: "", gl: null, gv: null, goles_l: [], goles_v: [] },
+            { ronda: "3° Ronda (ida)", l: "La Plata", v: "San Nicolás", fecha: "", fecha: "Miércoles 09 de septiembre", gl: null, gv: null, goles_l: [], goles_v: [] },
+            { ronda: "3° Ronda (vuelta)", l: "San Nicolás", v: "San Vicente", fecha: "", gl: null, gv: null, goles_l: [], goles_v: [] },
         ]
     }
 ];
@@ -19044,7 +19057,7 @@ function generarCopaPais() {
         html += `<div class="header-t">${zona.titulo}</div>`;
 
         if (zona.tipo === 'liga') {
-            const n = estado.fechaCopaPais?.[zona.titulo] || 4;
+            const n = estado.fechaCopaPais?.[zona.titulo] || 5;
             const fechas = zona.fixture.length;
             html += `<div class="nav-fechas">`;
             for (let i = 1; i <= fechas; i++) {
