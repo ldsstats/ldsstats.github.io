@@ -1253,7 +1253,7 @@ BD_FIXTURES.oficial.reserva.push(
         {l:"Huracán",   v:"Liniers",   gl:1,   gv:1},
         {l:"Bella Vista",   v:"Villa Mitre",   gl:1,   gv:3},
         {l:"San Francisco",   v:"La Armonía",   gl:2,   gv:4},
-        {l:"Libertad",   v:"Sporting",   gl:null,   gv:null}
+        {l:"Libertad",   v:"Sporting",   gl:1,   gv:2}
     ]},
     { fecha: 6, partidos: [
         {l:"Libertad",   v:"Villa Mitre",   gl:0, gv:4},
@@ -1939,16 +1939,15 @@ function generarHome() {
             {l:"Comercial", v:"San Francisco", hora:"22:00", gl:null, gv:null, claseL:"comercial", claseV:"sanfrancisco",nota:"en cancha de Comercial"},
             ]},
             { nombre: "TORNEO DE SELECCIONES SUB-15 | FECHA 6", cat: "torneoseleccion15", torLink: "torneoseleccion15", noAutoResult: true, partidos: [
-            {l:"La Costa", v:"General Madariaga", hora:"15:00", gl:null, gv:null, claseL:"lacosta", claseV:"madariaga",nota:"<b>Zona 3</b>"},
-            {l:"Necochea", v:"Azul", hora:"15:30", gl:null, gv:null, claseL:"necochea", claseV:"azul",nota:"<b>Zona 2</b>"},
-            {l:"<b>Liga del Sur</b>", v:"Tres Arroyos", hora:"16:00", gl:null, gv:null, claseL:"ldsbb", claseV:"tresarroyos",nota:"<b>Zona 1 - en cancha de San Francisco - El ganador se queda con el #1 de la zona</b>"},
-            {l:"Pehuajó", v:"Trenque Lauquen", hora:"16:00", gl:null, gv:null, claseL:"pehuajo", claseV:"trenquelauquen",nota:"<b>Zona 4 - Fecha 4</b>"},
+            {l:"Necochea", v:"Azul", hora:"15:30", gl:1, gv:2, claseL:"necochea", claseV:"azul",nota:"<b>Zona 2</b>"},
+            {l:"<b>Liga del Sur</b>", v:"Tres Arroyos", hora:"16:00", gl:0, gv:1, claseL:"ldsbb", claseV:"tresarroyos",nota:"<b>Zona 1 - en cancha de San Francisco - El ganador se queda con el #1 de la zona</b>"},
+            {l:"Pehuajó", v:"Trenque Lauquen", hora:"16:00", gl:0, gv:3, claseL:"pehuajo", claseV:"trenquelauquen",nota:"<b>Zona 4 - Fecha 4</b>"},
             {l:"Tandil", v:"Ayacucho", hora:"20:00", gl:null, gv:null, claseL:"tandil", claseV:"ayacucho",nota:"<b>Zona 2</b>"},
             ]},
             { nombre: "COPA PAIS | (LIGA DEL SUR)", cat: "copapais", torLink: "copapais", noAutoResult: true, partidos: [
-            {l:"La Plata", v:"San Nicolás", hora:"16:00", gl:null, gv:null, claseL:"laplata", claseV:"sannicolas",nota:"<b>Zona Pampeana Norte - Ida - Tercera fase regional </b>"},
-            {l:"Valle Viejo", v:"Catamarca", hora:"16:30", gl:null, gv:null, claseL:"valleviejo", claseV:"catamarcapais",nota:"<b>Zona Catamarca - Fecha 5</b>"},
-            {l:"Rodeo", v:"Albardón", hora:"16:30", gl:null, gv:null, claseL:"rodeo", claseV:"albardon",nota:"<b>Zona Cuyo - Fecha 5</b>"},
+            {l:"La Plata", v:"San Nicolás", hora:"16:00", gl:0, gv:0, claseL:"laplata", claseV:"sannicolas",nota:"<b>Zona Pampeana Norte - Ida - Tercera fase regional </b>"},
+            {l:"Valle Viejo", v:"Catamarca", hora:"16:30", gl:0, gv:1, claseL:"valleviejo", claseV:"catamarcapais",nota:"<b>Zona Catamarca - Fecha 5</b>"},
+            {l:"Rodeo", v:"Albardón", hora:"16:30", gl:0, gv:6, claseL:"rodeo", claseV:"albardon",nota:"<b>Zona Cuyo - Fecha 5</b>"},
             {l:"Paraná", v:"San Jorge", hora:"21:00", gl:null, gv:null, claseL:"parana", claseV:"sanjorge",nota:"<b>Zona Litoral Sur - Ida - Segunda fase regional </b>"},
             ]},
        ]},
@@ -1958,6 +1957,9 @@ function generarHome() {
             ]},
             { nombre: "FUTSAL | FECHA 7", cat: "futsal", torLink: "futsal", noAutoResult: true, partidos: [
             {l:"Villa Mitre", v:"Los 3 Chiflados", hora:"22:00", gl:null, gv:null, claseL:"villamitre", claseV:"los3chiflados",nota:"en cancha de Don Bosco"},
+            ]},
+            { nombre: "TORNEO DE SELECCIONES SUB-15 | FECHA 6", cat: "torneoseleccion15", torLink: "torneoseleccion15", noAutoResult: true, partidos: [
+            {l:"La Costa", v:"General Madariaga", hora:"15:00", gl:null, gv:null, claseL:"lacosta", claseV:"madariaga",nota:"<b>Zona 3</b>"},
             ]},
        ]},
         { id: "2026-09-11", label: "VIE 11/09", torneos: [
@@ -16597,6 +16599,7 @@ const BD_H2H = {
         { fecha: "Fecha 12 - Apertura 2026 - 14 jun 2026", torneo: "oficial", l: "Sporting", v: "Libertad", gl: 1, gv: 1, goles_l: ["Erico Walker"], goles_v: ["Juan Ignacio Mazzella"] },
         { fecha: "Fecha 12 - Apertura 2026", torneo: "reserva_oficial", l: "Sporting", v: "Libertad", gl: 1, gv: 2 },
         { fecha: "Fecha 5 - Clausura 2026 - 30 ago 2026", torneo: "oficial", l: "Libertad", v: "Sporting", gl: 0, gv: 0, goles_l: [], goles_v: [] },
+        { fecha: "Fecha 5 - Clausura 2026", torneo: "reserva_oficial", l: "Libertad", v: "Sporting", gl: 1, gv: 2 },
         { fecha: "Fecha 7 - Clausura 2026 - 06 sep", torneo: "femenino", l: "Libertad", v: "Sporting", gl: 1, gv: 1, goles_l: ["Alexia Villani"], goles_v: ["Antonella De Vega"] },
         { fecha: "Fecha 7 - Clausura 2026", torneo: "reserva_femenino", l: "Libertad", v: "Sporting", gl: 1, gv: 0 },
     ],
@@ -17528,11 +17531,11 @@ function generarReserva(cat) {
         'oficial':    [
                        {n:"Villa Mitre",   cl:"villamitre",   pj:6, pg:4, pe:1, pp:1, gf:15, gc:11, pts:13},
                        {n:"La Armonía",    cl:"laarmonia",    pj:6, pg:3, pe:2, pp:1, gf:13, gc:10, pts:11},
+                       {n:"Sporting <b>(A)</b>",      cl:"sporting",     pj:6, pg:3, pe:2, pp:1, gf:9, gc:8, pts:11},
                        {n:"Bella Vista",   cl:"bellavista",   pj:6, pg:3, pe:1, pp:2, gf:10, gc:10, pts:10},
                        {n:"Liniers",       cl:"liniers",      pj:6, pg:3, pe:1, pp:2, gf:7, gc:3, pts:10},
-                       {n:"Sporting <b>(A)</b>",      cl:"sporting",     pj:5, pg:2, pe:2, pp:1, gf:7, gc:7, pts:8},
                        {n:"San Francisco", cl:"sanfrancisco", pj:6, pg:2, pe:10, pp:3, gf:12, gc:11, pts:7},
-                       {n:"Libertad",      cl:"libertad",     pj:5, pg:1, pe:0, pp:4, gf:6, gc:10, pts:3},
+                       {n:"Libertad",      cl:"libertad",     pj:6, pg:1, pe:0, pp:5, gf:7, gc:12, pts:3},
                        {n:"Huracán",       cl:"huracan",      pj:6, pg:0, pe:2, pp:4, gf:9, gc:18, pts:2}],
         'promocional':[
                        {n:"Olimpo <b>(A)</b>",              cl:"olimpo",           pj:4, pg:4, pe:0, pp:0, gf:9, gc:3, pts:12},
@@ -18742,6 +18745,13 @@ function generarSeniorClausura() {
             <td class="c-res">${res}</td>
             <td class="c-vis"><div class="escudo ${clV}" style="display:inline-block;vertical-align:middle;margin-right:4px;"></div> ${p.v}</td>
         </tr>`;
+        if (p.gl !== null && ((p.goles_l && p.goles_l.length) || (p.goles_v && p.goles_v.length))) {
+            html += `<tr style="background:#f9f9f9;"><td colspan="3" style="font-size:9px;color:#666;padding:2px 8px 6px;font-style:italic;text-align:center;">`;
+            if (p.goles_l && p.goles_l.length) html += `⚽ ${p.l}: ${p.goles_l.join(', ')}`;
+            if (p.goles_l?.length && p.goles_v?.length) html += ` &nbsp;|&nbsp; `;
+            if (p.goles_v && p.goles_v.length) html += `⚽ ${p.v}: ${p.goles_v.join(', ')}`;
+            html += `</td></tr>`;
+        }
     });
     html += `</table>`;
     html += `<div class="header-t">POSICIONES — SENIOR CLAUSURA 2026</div>`;
@@ -18813,15 +18823,15 @@ const BD_COPA_PAIS = {
                 { l: "Tinogasta", v: "Valle Viejo", fecha: "Miércoles 2 de septiembre", gl: 2, gv: 5, goles_l: [], goles_v: [] }
             ]},
             { fecha: 5, libre: "Tinogasta", partidos: [
-                { l: "Valle Viejo", v: "Catamarca", fecha: "Miércoles 9 de septiembre", gl: null, gv: null, goles_l: [], goles_v: [] }
+                { l: "Valle Viejo", v: "Catamarca", fecha: "Miércoles 9 de septiembre", gl: 0, gv: 1, goles_l: [], goles_v: [] }
             ]},
             { fecha: 6, libre: "Valle Viejo", partidos: [
                 { l: "Catamarca", v: "Tinogasta", fecha: "Miércoles 16 de septiembre", gl: null, gv: null, goles_l: [], goles_v: [] }
             ]},
         ],
         posiciones: [
-            { nombre: "Catamarca",  pj:2, pg:2, pe:0, pp:0, gf:7, gc:2, pts:6 },
-            { nombre: "Valle Viejo",pj:3, pg:2, pe:0, pp:1, gf:12, gc:5, pts:6 },
+            { nombre: "Catamarca",  pj:3, pg:3, pe:0, pp:0, gf:8, gc:2, pts:9 },
+            { nombre: "Valle Viejo <b>(X)</b>",pj:4, pg:2, pe:0, pp:2, gf:12, gc:6, pts:6 },
             { nombre: "Tinogasta <b>(X)</b>",  pj:3, pg:0, pe:0, pp:3, gf:5, gc:17, pts:0 },
         ]
     },
@@ -18843,7 +18853,7 @@ const BD_COPA_PAIS = {
                 { l: "San Juan", v: "Rodeo", fecha: "Miércoles 2 de septiembre", gl: 7, gv: 1, goles_l: [], goles_v: [] }
             ]},
             { fecha: 5, libre: "San Juan", partidos: [
-                { l: "Rodeo", v: "Albardón", fecha: "Miércoles 9 de septiembre", gl: null, gv: null, goles_l: [], goles_v: [] }
+                { l: "Rodeo", v: "Albardón", fecha: "Miércoles 9 de septiembre", gl: 0, gv: 6, goles_l: [], goles_v: [] }
             ]},
             { fecha: 6, libre: "Rodeo", partidos: [
                 { l: "Albardón", v: "San Juan", fecha: "Miércoles 16 de septiembre", gl: null, gv: null, goles_l: [], goles_v: [] }
@@ -18851,8 +18861,8 @@ const BD_COPA_PAIS = {
         ],
         posiciones: [
             { nombre: "San Juan",  pj:3, pg:3, pe:0, pp:0, gf:12, gc:3, pts:9 },
-            { nombre: "Albardón",  pj:2, pg:1, pe:0, pp:1, gf:3, gc:3, pts:3 },
-            { nombre: "Rodeo <b>(X)</b>",     pj:3, pg:0, pe:0, pp:3, gf:3, gc:12, pts:0 },
+            { nombre: "Albardón",  pj:3, pg:2, pe:0, pp:1, gf:9, gc:3, pts:6 },
+            { nombre: "Rodeo <b>(X)</b>",     pj:4, pg:0, pe:0, pp:4, gf:3, gc:18, pts:0 },
         ]
     },
 
@@ -18917,8 +18927,8 @@ const BD_COPA_PAIS_SEGUNDA_RONDA = [
         titulo: "ZONA CÓRDOBA/CATAMARCA",
         tipo: "final",
         partidos: [
-            { ronda: "Final de Región (ida)", l: "Río Cuarto", v: "Ganador Zona Catamarca", fecha: "", gl: null, gv: null, goles_l: [], goles_v: [] },
-            { ronda: "Final de Región (vuelta)", l: "Ganador Zona Catamarca", v: "Río Cuarto", fecha: "", gl: null, gv: null, goles_l: [], goles_v: [] },
+            { ronda: "Final de Región (ida)", l: "Río Cuarto", v: "Catamarca", fecha: "", gl: null, gv: null, goles_l: [], goles_v: [] },
+            { ronda: "Final de Región (vuelta)", l: "Catamarca", v: "Río Cuarto", fecha: "", gl: null, gv: null, goles_l: [], goles_v: [] },
         ]
     },
     {
@@ -18952,7 +18962,7 @@ const BD_COPA_PAIS_TERCERA_RONDA = [
         titulo: "ZONA PAMPEANA NORTE",
         tipo: "final",
         partidos: [
-            { ronda: "3° Ronda (ida)", l: "La Plata", v: "San Nicolás", fecha: "", fecha: "Miércoles 09 de septiembre", gl: null, gv: null, goles_l: [], goles_v: [] },
+            { ronda: "3° Ronda (ida)", l: "La Plata", v: "San Nicolás", fecha: "", fecha: "Miércoles 09 de septiembre", gl: 0, gv: 0, goles_l: [], goles_v: [] },
             { ronda: "3° Ronda (vuelta)", l: "San Nicolás", v: "San Vicente", fecha: "", gl: null, gv: null, goles_l: [], goles_v: [] },
         ]
     }
@@ -19088,9 +19098,9 @@ function generarCopaPais() {
             f.partidos.forEach(p => { html += renderPartido(p); });
             html += `</table>`;
             const textoPosiciones = zona.titulo === 'ZONA CATAMARCA'
-                ? '📌 Puntos en juego: 6 pts para el que jugó 2 partidos y 3 pts para el que jugó 3 partidos<br>•El 1° clasifica a la Final de Zona Córdoba.'
+                ? '📌 Puntos en juego: 3 pts para el que jugó 3 partidos y 0 pts para el que jugó 5 partidos<br>•El 1° clasifica a la Final de Zona Córdoba.'
                 : zona.titulo === 'ZONA CUYO'
-                ? '📌 Puntos en juego: 6 pts para el que jugó 2 partidos y 3 pts para el que jugó 3 partidos<br>•El 1° clasifica a la Final de Zona Mendoza.'
+                ? '📌 Puntos en juego: 3 pts para el que jugó 3 partidos y 0 pts para el que jugó 5 partidos<br>•El 1° clasifica a la Final de Zona Mendoza.'
                 : '';
             html += renderTablaPos(zona.posiciones, textoPosiciones);
         } else {
@@ -23358,19 +23368,19 @@ function generarTorneoSeleccion15() {
         { n:3, dia:"Mié 19/8", partidos:[{l:"Tres Arroyos", v:"Liga del Sur", lk:"tresarroyos",vk:"ldsbb",       gl:2, gv:0}], libre:"Olavarría" },
         { n:4, dia:"Mié 26/8", partidos:[{l:"Tres Arroyos", v:"Olavarría",    lk:"tresarroyos",vk:"olavarria",   gl:1, gv:2}], libre:"Liga del Sur" },
         { n:5, dia:"Mié 2/9",  partidos:[{l:"Olavarría",    v:"Liga del Sur", lk:"olavarria",  vk:"ldsbb",       gl:1, gv:4, goles_l:[], goles_v:["Galo Martínez","Galo Martínez","Simón Schmidt","Valentín Bozzetti"]}], libre:"Tres Arroyos" },
-        { n:6, dia:"Mié 8/9",  partidos:[{l:"Liga del Sur", v:"Tres Arroyos", lk:"ldsbb",      vk:"tresarroyos", gl:null, gv:null}], libre:"Olavarría" },
+        { n:6, dia:"Mié 8/9",  partidos:[{l:"Liga del Sur", v:"Tres Arroyos", lk:"ldsbb",      vk:"tresarroyos", gl:0, gv:1}], libre:"Olavarría" },
     ];
 
     const zonas = [
         { label:"ZONA 1", equipos:[
-            { nombre:"Tres Arroyos",      key:"tresarroyos",    pj:3,pg:2,pe:0,pp:1,gf:5,gc:2,pts:6 },
-            { nombre:"Liga del Sur",      key:"ldsbb",          pj:3,pg:2,pe:0,pp:1,gf:7,gc:3,pts:6 },
+            { nombre:"Tres Arroyos",      key:"tresarroyos",    pj:4,pg:3,pe:0,pp:1,gf:6,gc:2,pts:9 },
+            { nombre:"Liga del Sur",      key:"ldsbb",          pj:4,pg:2,pe:0,pp:2,gf:7,gc:4,pts:6 },
             { nombre:"Olavarría",         key:"olavarria",      pj:4,pg:1,pe:0,pp:3,gf:3,gc:10,pts:3 },
         ]},
         { label:"ZONA 2", equipos:[
+            { nombre:"Azul",              key:"azul",           pj:6,pg:3,pe:2,pp:1,gf:12,gc:10,pts:11 },
             { nombre:"Tandil",            key:"tandil",         pj:5,pg:3,pe:1,pp:1,gf:9,gc:6,pts:10 },
-            { nombre:"Necochea",          key:"necochea",       pj:5,pg:3,pe:0,pp:2,gf:10,gc:8,pts:9 },
-            { nombre:"Azul",              key:"azul",           pj:5,pg:2,pe:2,pp:1,gf:10,gc:9,pts:8 },
+            { nombre:"Necochea",          key:"necochea",       pj:6,pg:3,pe:0,pp:3,gf:11,gc:10,pts:9 },
             { nombre:"Ayacucho",          key:"ayacucho",       pj:5,pg:0,pe:1,pp:4,gf:5,gc:12,pts:1 },
         ]},
         { label:"ZONA 3", equipos:[
@@ -23379,8 +23389,8 @@ function generarTorneoSeleccion15() {
             { nombre:"La Costa",          key:"lacosta",        pj:3,pg:0,pe:1,pp:2,gf:2,gc:6,pts:1 },
         ]},
         { label:"ZONA 4", equipos:[
-            { nombre:"Trenque Lauquen",   key:"trenquelauquen", pj:2,pg:2,pe:0,pp:0,gf:5,gc:0,pts:6 },
-            { nombre:"Pehuajó",           key:"pehuajo",        pj:2,pg:1,pe:0,pp:1,gf:2,gc:3,pts:3 },
+            { nombre:"Trenque Lauquen",   key:"trenquelauquen", pj:3,pg:3,pe:0,pp:0,gf:8,gc:0,pts:9 },
+            { nombre:"Pehuajó",           key:"pehuajo",        pj:3,pg:1,pe:0,pp:2,gf:2,gc:6,pts:3 },
             { nombre:"Guatraché",         key:"guatrache",      pj:2,pg:0,pe:0,pp:2,gf:0,gc:4,pts:0 },
         ]},
     ];
@@ -23490,7 +23500,8 @@ function generarTorneoSeleccion15() {
         </tr></thead><tbody>`;
         z.equipos.forEach((eq, i) => {
             const dif = eq.gf - eq.gc;
-            html += `<tr>
+            const cl = i < 2 ? 'p-playoff' : '';
+            html += `<tr class="${cl}">
                 <td class="c-pos">${i+1}</td>
                 <td class="c-equipo"><span style="display:inline-flex;align-items:center;gap:5px;">${e(eq.key)} ${eq.nombre}</span></td>
                 <td class="c-stat">${eq.pj}</td><td class="c-stat">${eq.pg}</td><td class="c-stat">${eq.pe}</td>
