@@ -831,7 +831,7 @@ const idaSub15Fem = [
         {l:"Villa Mitre",           v:"Olimpo",           gl:0, gv:0}
     ]},
     { fecha: 19, partidos: [
-        {l:"Liniers",               v:"Empleados de Comercio", gl:null, gv:null},
+        {l:"Liniers",               v:"Empleados de Comercio", gl:6, gv:0},
         {l:"Huracán",               v:"Villa Mitre",      gl:0, gv:3},
         {l:"Olimpo",                v:"San Francisco",    gl:0, gv:3},
         {l:"Sporting",              v:"Juventud Unida",   gl:0, gv:0},
@@ -1953,13 +1953,13 @@ function generarHome() {
        ]},
         { id: "2026-09-10", label: "JUE 10/09", torneos: [
             { nombre: "SUB 15 FEMENINO | FECHA 19 | REPROGRAMADO", cat: "sub15fem", torLink: "sub15fem", noAutoResult: true, partidos: [
-            {l:"Liniers", v:"Empleados de Comercio", hora:"17:30", gl:null, gv:null, claseL:"liniers", claseV:"empleados"},
+            {l:"Liniers", v:"Empleados de Comercio", hora:"17:30", gl:6, gv:0, claseL:"liniers", claseV:"empleados"},
             ]},
             { nombre: "FUTSAL | FECHA 7", cat: "futsal", torLink: "futsal", noAutoResult: true, partidos: [
             {l:"Villa Mitre", v:"Los 3 Chiflados", hora:"22:00", gl:null, gv:null, claseL:"villamitre", claseV:"los3chiflados",nota:"en cancha de Don Bosco"},
             ]},
             { nombre: "TORNEO DE SELECCIONES SUB-15 | FECHA 6", cat: "torneoseleccion15", torLink: "torneoseleccion15", noAutoResult: true, partidos: [
-            {l:"La Costa", v:"General Madariaga", hora:"15:00", gl:null, gv:null, claseL:"lacosta", claseV:"madariaga",nota:"<b>Zona 3</b>"},
+            {l:"La Costa", v:"General Madariaga", hora:"15:00", gl:4, gv:1, claseL:"lacosta", claseV:"madariaga",nota:"<b>Zona 3</b>"},
             ]},
        ]},
         { id: "2026-09-11", label: "VIE 11/09", torneos: [
@@ -17328,6 +17328,7 @@ const BD_H2H = {
     ],
     "Empleados de Comercio|Liniers": [
         { fecha: "Torneo 2026 - Fecha 8", torneo: "sub15fem", l: "Empleados de Comercio", v: "Liniers", gl: 0, gv: 10 },
+        { fecha: "Torneo 2026 - Fecha 19", torneo: "sub15fem", l: "Liniers", v: "Empleados de Comercio", gl: 6, gv: 0 },
     ],
     "Juventud Unida|Sporting": [
         { fecha: "Torneo 2026 - Fecha 8", torneo: "sub15fem", l: "Juventud Unida", v: "Sporting", gl: 2, gv: 2 },
@@ -23413,9 +23414,9 @@ function generarTorneoSeleccion15() {
             { nombre:"Ayacucho",          key:"ayacucho",       pj:6,pg:0,pe:1,pp:5,gf:5,gc:15,pts:1 },
         ]},
         { label:"ZONA 3", equipos:[
-            { nombre:"General Madariaga", key:"madariaga",      pj:3,pg:3,pe:0,pp:0,gf:5,gc:1,pts:9 },
+            { nombre:"General Madariaga", key:"madariaga",      pj:4,pg:3,pe:0,pp:1,gf:6,gc:5,pts:9 },
             { nombre:"Dolores",           key:"dolores",        pj:4,pg:1,pe:1,pp:2,gf:5,gc:5,pts:4 },
-            { nombre:"La Costa",          key:"lacosta",        pj:3,pg:0,pe:1,pp:2,gf:2,gc:6,pts:1 },
+            { nombre:"La Costa",          key:"lacosta",        pj:4,pg:1,pe:1,pp:2,gf:6,gc:7,pts:4 },
         ]},
         { label:"ZONA 4", equipos:[
             { nombre:"Trenque Lauquen",   key:"trenquelauquen", pj:3,pg:3,pe:0,pp:0,gf:8,gc:0,pts:9 },
