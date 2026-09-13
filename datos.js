@@ -1896,7 +1896,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 23).partidos.forEach(p
 });
 
 
-let diaSeleccionadoHome = "2026-09-12"; 
+let diaSeleccionadoHome = "2026-09-13"; 
 let mercadoPasesAbierto = false;
 
 function toggleMercadoPasesHome() {
@@ -2028,9 +2028,9 @@ function generarHome() {
             {l:"Atenas de Río Cuarto", v:"Juventud Antoniana", hora:"16:30", gl:null, gv:null, claseL:"atenasrc", claseV:"jantoniana"},
             ]},
             { nombre: "REGIONAL AMATEUR | FECHA 3 (HURACÁN)", cat: "regamateurtemporada", torLink: "regamateurtemporada", noAutoResult: true, partidos: [
-            {l:"Ministerio", v:"Villa Díaz Vélez", hora:"11:00", gl:null, gv:null, claseL:"ministerio", claseV:"villadiazvelez",nota:"<b>Zona 5</b>"},
             {l:"Embajadores", v:"Balonpié", hora:"15:00", gl:null, gv:null, claseL:"embajadoresolavarria", claseV:"balompie",nota:"<b>Zona 6</b>"},
             {l:"Sarmiento de Pigué", v:"Ferro de Olavarría", hora:"15:30", gl:null, gv:null, claseL:"sarmientopigue", claseV:"ferrolavarria",nota:"<b>Zona 1</b>"},
+            {l:"Ministerio", v:"Villa Díaz Vélez", hora:"15:30", gl:null, gv:null, claseL:"ministerio", claseV:"villadiazvelez",nota:"<b>Zona 5</b>"},
             {l:"Estudiantes (Olavarría)", v:"El Fortín (Olavarría)", hora:"15:30", gl:null, gv:null, claseL:"estudiantesolavarria", claseV:"elfortin",nota:"<b>Zona 7</b>"},
             {l:"Dep. Norte", v:"Def. Valeria del Mar", hora:"16:00", gl:null, gv:null, claseL:"depnorte", claseV:"defvaleriadelmar",nota:"<b>Zona 4</b>"},
             {l:"Argentino (25 de Mayo)", v:"Loma Negra", hora:"15:30", gl:null, gv:null, claseL:"argentino25demayo", claseV:"lomanegra",nota:"<b>Zona 7</b>"},
