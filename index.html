@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>LdS Stats - 2026</title>
-    <link rel="stylesheet" href="style.css?v=77">
+    <link rel="stylesheet" href="style.css?v=777">
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#111111">
     <!-- Google Analytics -->
@@ -32,7 +32,7 @@
     z-index: 999;
     pointer-events: none;
     letter-spacing: 0.3px;
-">🕐 Última actualización: Sáb 12/09 23:00hs</div>
+">🕐 Última actualización: Jue 17/09 08:00hs</div>
 
 <div id="container-principal">
     <div id="logo-header"><img src="au11.png" style="height:80px;" alt="LdS Stats"></div>
@@ -165,53 +165,53 @@
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-<script src="datos.js?v=77"></script>
+<script src="datos.js?v=777"></script>
 <script>
     let estado = { torneo: 'home', categoria: '', fecha: 1 };
     let estadoAnterior = { torneo: 'home', categoria: '', fecha: 1 };
 
     // Última actualización por sección — modificar según corresponda
     const ULTIMA_ACT = {
-        default:        "Dom 13/09 13:00hs",
-        home:        "Dom 13/09 13:00hs",
+        default:        "Jue 17/09 08:00hs",
+        home:        "Jue 17/09 08:00hs",
         apertura_oficial:   "Dom 02/08 21:30hs",
-        clausura_oficial:   "Dom 06/09 21:00hs",
-        historial:   "Dom 13/09 13:00hs",
-        goleadores_oficial:   "Dom 06/09 21:00hs",
-        arqueros_oficial:   "Dom 06/09 21:00hs",
-        reserva_oficial:   "Miér 09/09 00:00hs",
+        clausura_oficial:   "Jue 17/09 08:00hs",
+        historial:   "Jue 17/09 08:00hs",
+        goleadores_oficial:   "Jue 17/09 08:00hs",
+        arqueros_oficial:   "Jue 17/09 08:00hs",
+        reserva_oficial:   "Jue 17/09 08:00hs",
         apertura_promocional:   "Dom 02/08 21:30hs",
-        clausura_promocional:   "Sáb 12/09 23:00hs",
-        goleadores_promocional:   "Sáb 12/09 23:00hs",
-        arqueros_promocional:   "Sáb 12/09 23:00hs",
-        reserva_promocional:   "Miér 09/09 00:00hs",
-        posiciones_federala:   "Dom 06/09 21:00hs",
-        goleadores_federala:   "Dom 06/09 21:00hs",
-        sub131517:   "Jue 03/09 19:00hs",
+        clausura_promocional:   "Jue 17/09 08:00hs",
+        goleadores_promocional:   "Jue 17/09 08:00hs",
+        arqueros_promocional:   "Jue 17/09 08:00hs",
+        reserva_promocional:   "Jue 17/09 08:00hs",
+        posiciones_federala:   "Jue 17/09 08:00hs",
+        goleadores_federala:   "Jue 17/09 08:00hs",
+        sub131517:   "Jue 17/09 08:00hs",
         copa_argentina:   "Dom 29/3 — 21:00hs",
         apertura_femenino:   "Dom 26/07 13:15hs",
-        clausura_femenino:   "Dom 13/09 13:00hs",
-        goleadores_femenino:   "Dom 13/09 13:00hs",
-        reserva_femenino:   "Dom 06/09 21:00hs",
-        torneo2026_segundafemenino:   "Sáb 12/09 23:00hs",
-        goleadores_segundafemenino:   "Sáb 12/09 23:00hs",
-        reserva_segundafemenino:   "Dom 06/09 21:00hs",
-        sub15fem:   "Jue 10/09 21:00hs",
-        torneo2026_senior:   "Sáb 27/06 08:00hs",
-        futsal:   "Sáb 12/09 23:00hs",
-        futsalgoleadores:   "Sáb 12/09 23:00hs",
-        futsalreserva:   "Sáb 12/09 23:00hs",
+        clausura_femenino:   "Jue 17/09 08:00hs",
+        goleadores_femenino:   "Jue 17/09 08:00hs",
+        reserva_femenino:   "Jue 17/09 08:00hs",
+        torneo2026_segundafemenino:   "Jue 17/09 08:00hs",
+        goleadores_segundafemenino:   "Jue 17/09 08:00hs",
+        reserva_segundafemenino:   "Jue 17/09 08:00hs",
+        sub15fem:   "Jue 17/09 08:00hs",
+        torneo2026_senior:   "Jue 17/09 08:00hs",
+        futsal:   "Jue 17/09 08:00hs",
+        futsalgoleadores:   "Jue 17/09 08:00hs",
+        futsalreserva:   "Jue 17/09 08:00hs",
         quienessomos:   "Miér 1/04 — 00:00hs",
         equiposfuera:   "Dom 22/3 — 1:15hs",
         futsalbonaerense:   "Mar 16/06 00:00hs",
         futsalbonaerensepromocional: "Mar 16/06 00:00hs",
         seniorapertura: "Miér 15/07 00:00hs",
-        seniorapertura: "Miér 09/09 16:00hs",
-        seniorgoleadores: "Miér 09/09 20:00hs",
-        copapais: "Jue 10/09 00:00hs",
-        regamateurtemporada: "Vie 11/09 14:00hs",
-        regamateurfem:   "Sáb 12/09 23:00hs",
-        torneoseleccion15: "Jue 10/09 21:00hs",
+        seniorclausura: "Jue 17/09 08:00hs",
+        seniorgoleadores: "Jue 17/09 08:00hs",
+        copapais: "Jue 17/09 08:00hs",
+        regamateurtemporada: "Jue 17/09 08:00hs",
+        regamateurfem:   "Jue 17/09 08:00hs",
+        torneoseleccion15: "Jue 17/09 08:00hs",
         mercadopases_oficial: "Sáb 01/08 16:00hs",
         mercadopases_promocional: "Sáb 01/08 16:00hs",
         mercadopases_femenino: "Lun 27/07 00:08hs",
