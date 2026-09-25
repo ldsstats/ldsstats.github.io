@@ -1937,7 +1937,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 25).partidos.forEach(p
 });
 
 
-let diaSeleccionadoHome = "2026-09-24"; 
+let diaSeleccionadoHome = "2026-09-25"; 
 let mercadoPasesAbierto = false;
 
 function toggleMercadoPasesHome() {
@@ -2003,7 +2003,7 @@ function generarHome() {
        ]},
      { id: "2026-09-24", label: "JUE 24/09", torneos: [
             { nombre: "FUTSAL | CLAUSURA | FECHA 9", cat: "futsal", torLink: "futsal", noAutoResult: true, partidos: [
-            {l:"La Esperanza", v:"Los 3 Chiflados", hora:"22:00", gl:null, gv:null, claseL:"los3chiflados", claseV:"liniers",nota:"en cancha de Don Bosco"},
+            {l:"La Esperanza", v:"Los 3 Chiflados", hora:"22:00", gl:null, gv:null, claseL:"laesperanza", claseV:"los3chiflados",nota:"en cancha de Don Bosco"},
             ]},
             { nombre: "REGIONAL JUVENIL | SUB 13/15/17 | BONAERENSE PAMPEANA SUR | FECHA 14", cat: "sub131517", torLink: "sub131517", noAutoResult: true, partidos: [
             {l:"Villa Mitre", v:"Balonpié", hora:"09:00", gl:null, gv:null, claseL:"villamitre", claseV:"balompie",nota:"<b>RESULTADO EXPRESADO EN PUNTOS GANADOS ENTRE LAS TRES CATEGORÍAS</b>"},
