@@ -2020,7 +2020,7 @@ function generarHome() {
             {l:"Tiro Federal", v:"Petroquímicos", hora:"22:00", gl:null, gv:null, claseL:"tirofederal", claseV:"petroquimicos",nota:"en cancha de Tiro Federal"},
             ]},
             { nombre: "TORNEO SABALITO | DÍA 1", cat: "sabalito", torLink: "sabalito", noAutoResult: true, partidos: [
-            {l:"Bella Vista Verde (Sub 12)", v:"Juventud Unida de Chaco", hora:"17:45", gl:null, gv:null, claseL:"bellavista", claseV:"juvunidachaco"},
+            {l:"Bella Vista Verde (Sub 12)", v:"Juv. Unida de Chaco", hora:"17:45", gl:null, gv:null, claseL:"bellavista", claseV:"juvunidachaco"},
             {l:"Bella Vista Blanco (Sub 12)", v:"Ateneo Vecinos Gral. Cabrera", hora:"19:15", gl:null, gv:null, claseL:"bellavista", claseV:"ateneovecinosgralcabrera"},
             {l:"Bella Vista (Sub 14)", v:"Central Córdoba (Sgo)", hora:"20:20", gl:null, gv:null, claseL:"bellavista", claseV:"centralcbasgo"},
             ]},
@@ -23969,12 +23969,58 @@ const BD_SELECCION15_PLAYOFFS = {
 };
 let etapaSeleccion15 = 'playoffs';
 
+function calcularPosicionesSabalito(zona) {
+    let stats = {};
+
+    zona.forEach(f => {
+        f.partidos.forEach(p => {
+            // Inicializamos el objeto del equipo si no existe en el array
+            if (!stats[p.l]) stats[p.l] = { nombre: p.l, pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0, escudo: p.clL };
+            if (!stats[p.v]) stats[p.v] = { nombre: p.v, pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0, escudo: p.clV };
+
+            // Verificamos si el partido ya tiene un resultado cargado
+            if (p.gl !== null && p.gv !== null) {
+                stats[p.l].pj++;
+                stats[p.v].pj++;
+                stats[p.l].gf += p.gl;
+                stats[p.l].gc += p.gv;
+                stats[p.v].gf += p.gv;
+                stats[p.v].gc += p.gl;
+
+                if (p.gl > p.gv) {
+                    stats[p.l].pg++;
+                    stats[p.l].pts += 3;
+                    stats[p.v].pp++;
+                } else if (p.gl < p.gv) {
+                    stats[p.v].pg++;
+                    stats[p.v].pts += 3;
+                    stats[p.l].pp++;
+                } else {
+                    stats[p.l].pe++;
+                    stats[p.v].pe++;
+                    stats[p.l].pts++;
+                    stats[p.v].pts++;
+                }
+            }
+        });
+    });
+
+    // Convertimos el objeto en array y ordenamos por Puntos, Diferencia de Gol y Goles a Favor
+    return Object.values(stats).sort((a, b) => {
+        if (b.pts !== a.pts) return b.pts - a.pts;
+        let difA = a.gf - a.gc;
+        let difB = b.gf - b.gc;
+        if (difA !== difB) return difB - difA;
+        return b.gf - a.gf;
+    });
+}
+
 const BD_SABALITO = {
     sub12: {
         zonaA: [
             { fecha:1, partidos:[
                 {l:"Sarmiento de Humboldt", v:"Vélez", dia:"Vie 25/9", hora:"10:30", clL:"sarmientohumboldt", clV:"velez", gl:null, gv:null, goles_l:[], goles_v:[]},
-                {l:"Bella Vista Verde", v:"Juventud Unida de Chaco", dia:"Vie 25/9", hora:"17:45", clL:"bellavista", clV:"juvunidachaco", gl:null, gv:null, goles_l:[], goles_v:[]}
+                {l:"Bella Vista Verde", v:"Juv. Unida de Chaco", dia:"Vie 25/9", hora:"17:45", clL:"bellavista", clV:"juvunidachaco", gl:null, gv:null, goles_l:[], goles_v:[]}
             ]},
             { fecha:2, partidos:[
                 {l:"Bella Vista Verde", v:"Sarmiento de Humboldt", dia:"Sáb 26/9", hora:"13:00", clL:"bellavista", clV:"sarmientohumboldt", gl:null, gv:null, goles_l:[], goles_v:[]},
@@ -24033,6 +24079,33 @@ function generarSabalito() {
 
     const renderZonaSabalito = (zona, titulo) => {
         let h = `<div class="header-t">${titulo}</div>`;
+        
+        // 1. Calculamos las posiciones y renderizamos la tabla
+        const posiciones = calcularPosicionesSabalito(zona);
+        
+        h += `<table>
+        <thead><tr><th style="width:25px;">#</th><th style="text-align:left;padding-left:8px;">Equipo</th><th class="c-stat">PJ</th><th class="c-stat">PG</th><th class="c-stat">PE</th><th class="c-stat">PP</th><th class="c-stat">GF</th><th class="c-stat">GC</th><th class="c-stat">Dif</th><th class="c-stat">Pts</th></tr></thead><tbody>`;
+        
+        posiciones.forEach((e, i) => {
+            let dif = e.gf - e.gc;
+            h += `<tr>
+                <td class="c-pos">${i+1}</td>
+                <td class="c-equipo"><div class="escudo ${e.escudo}" style="display:inline-block;vertical-align:middle;margin-right:4px;"></div>${e.nombre}</td>
+                <td class="c-stat">${e.pj}</td>
+                <td class="c-stat">${e.pg}</td>
+                <td class="c-stat">${e.pe}</td>
+                <td class="c-stat">${e.pp}</td>
+                <td class="c-stat">${e.gf}</td>
+                <td class="c-stat">${e.gc}</td>
+                <td class="c-stat">${dif}</td>
+                <td class="c-stat"><b>${e.pts}</b></td>
+            </tr>`;
+        });
+        h += `</tbody></table>`;
+
+        // 2. Renderizamos las fechas del fixture
+        h += `<div class="header-t" style="background:#1a4a2e;font-size:11px;margin-top:10px;">FIXTURE</div>`;
+
         zona.forEach(f => {
             h += `<div style="font-size:10px;font-weight:bold;background:#eee;padding:4px 8px;">FECHA ${f.fecha}</div><table>`;
             f.partidos.forEach(p => {
@@ -24052,6 +24125,16 @@ function generarSabalito() {
             });
             h += `</table>`;
         });
+
+        // 3. Agregamos la tabla general al final de la zona
+        if (subSabalito === 'sub12') {
+            let esZonaA = titulo.toUpperCase().includes("A");
+            let datosZona = esZonaA ? TABLAS_GENERALES_SABALITO.sub12_zonaA : TABLAS_GENERALES_SABALITO.sub12_zonaC;
+            h += generarHTMLTablaGeneral(datosZona, 26, "1° al 16°: Octavos - Copa de Oro | 17° al 22°: Cuartos - Copa de Plata | 23° al 26°: Octavos - Copa de Plata");
+        } else {
+            h += generarHTMLTablaGeneral(TABLAS_GENERALES_SABALITO.sub14, 28, "1° al 16°: Octavos - Copa de Oro | 17° al 20°: Cuartos - Copa de Plata | 21° al 28°: Octavos - Copa de Plata");
+        }
+
         return h;
     };
 
@@ -24068,4 +24151,88 @@ function generarSabalito() {
     }
 
     return html;
+}
+
+// --- 1. DATOS FIJOS DE LAS TABLAS GENERALES ---
+const TABLAS_GENERALES_SABALITO = {
+    sub12_zonaA: [
+        { nombre: "Bella Vista Verde", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
+        { nombre: "Sarmiento de Humboldt", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
+        { nombre: "Juv. Unida de Chaco", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
+        { nombre: "Vélez", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
+        { nombre: "Bella Vista Blanco", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
+        { nombre: "Aldosivi", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
+        { nombre: "Ateneo Vecinos Gral. Cabrera", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
+        { nombre: "Argentino de San Carlos", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
+    ],
+    sub12_zonaC: [
+        // Datos para Sub-12 Zona C
+    ],
+    sub14: [
+        { nombre: "Bella Vista", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
+        { nombre: "Central Córdoba", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
+        { nombre: "Universitario Paraná", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
+        { nombre: "Reconquista CF", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
+    ]
+};
+
+// --- 2. FUNCIONES AUXILIARES ---
+function obtenerListaTablaGeneral(arrayPersonalizado, totalLugares) {
+    let lista = [...(arrayPersonalizado || [])];
+    while (lista.length < totalLugares) {
+        lista.push({ nombre: "A confirmar", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 });
+    }
+    return lista;
+}
+
+function generarHTMLTablaGeneral(equiposArray, totalLugares, leyendaTexto) {
+    let h = `<div class="header-t" style="background:#1a4a2e;font-size:11px;margin-top:15px;">TABLA GENERAL</div>`;
+    h += `<table><thead><tr>
+        <th style="width:25px;">#</th>
+        <th style="text-align:left;padding-left:8px;">Equipo</th>
+        <th class="c-stat">PJ</th><th class="c-stat">PG</th><th class="c-stat">PE</th>
+        <th class="c-stat">PP</th><th class="c-stat">GF</th><th class="c-stat">GC</th>
+        <th class="c-stat">Dif</th><th class="c-stat">Pts</th>
+    </tr></thead><tbody>`;
+
+    let listaFinal = obtenerListaTablaGeneral(equiposArray, totalLugares);
+
+    listaFinal.forEach((e, i) => {
+        let pos = i + 1;
+        let claseColor = "";
+        
+        if (totalLugares === 26) {
+            if (pos <= 16) claseColor = "p-playoff";
+            else if (pos >= 17 && pos <= 22) claseColor = "p-naranja";
+            else claseColor = "p-blanco";
+        } else if (totalLugares === 28) {
+            if (pos <= 16) claseColor = "p-playoff";
+            else if (pos >= 17 && pos <= 20) claseColor = "p-naranja";
+            else claseColor = "p-blanco";
+        }
+
+        let esBellaVista = e.nombre.toLowerCase().includes("bella vista");
+        let estiloEquipo = esBellaVista ? 'c-equipo con-recuadro' : 'c-equipo sin-recuadro';
+        let diferenciaGoles = e.gf - e.gc;
+
+        h += `<tr class="${claseColor}">
+            <td class="c-pos">${pos}</td>
+            <td class="${estiloEquipo}">${e.nombre}</td>
+            <td class="c-stat">${e.pj}</td>
+            <td class="c-stat">${e.pg}</td>
+            <td class="c-stat">${e.pe}</td>
+            <td class="c-stat">${e.pp}</td>
+            <td class="c-stat">${e.gf}</td>
+            <td class="c-stat">${e.gc}</td>
+            <td class="c-stat">${diferenciaGoles}</td>
+            <td class="c-stat"><b>${e.pts}</b></td>
+        </tr>`;
+    });
+
+    h += `</tbody></table>`;
+    h += `<div style="background:#f9f9f9; padding:8px 10px; font-size:10px; border-top:1px solid #ddd; text-align:center;">
+        <b>Referencias:</b> <span>${leyendaTexto}</span>
+    </div>`;
+    
+    return h;
 }
