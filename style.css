@@ -2,7 +2,7 @@ body { font-family: Arial, sans-serif; background-color: #729b3c; background-ima
 #container-principal { width: 100%; max-width: 900px; }
 #logo-header { background-color: #004d26; text-align: center; padding: 8px; border: 1px solid #000; margin-bottom: 8px; }
 #menu-grid { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 10px; }
-.bloque { background-color: #004d26; border: 1px solid #000; width: calc(16.66% - 5px); min-width: 120px; flex-shrink: 0; flex-grow: 1; }
+.bloque { background-color: #004d26; border: 1px solid #000; width: calc(16.66% - 5px); min-width: 120px; flex-shrink: 0; flex-grow: 1; align-self: flex-start; }
 .bloque-titulo { background-color: #00331a; color: #adff2f; font-size: 10px; font-weight: bold; padding: 5px; text-align: center; border-bottom: none; margin-bottom: 0; }
 .bloque a { color: white; text-decoration: none; font-size: 10.5px; font-weight: bold; text-align: center; display: block; padding: 4px 5px; line-height: 1.2; }
 .bloque a:hover { color: #adff2f; background: #00552b; }
@@ -86,7 +86,7 @@ tr[onclick]:hover td { background-color: #e8f5e9 !important; }
 .ayacucho::before { content: "CAF"; color: #1e3b85; font-size: 5px; font-weight: bold; }
 .necochea::before { content: "LNF"; color: #1e3b85; font-size: 5px; font-weight: bold; }
 .tandil { background: #fff; border: 2px solid #009abd; }
-.tandil::before { content: "LTF"; color: #1e3b85; font-size: 4.5px; font-weight: bold; }
+.tandil::before { content: "LTF"; color: #1e3b85; font-size: 5.3px; font-weight: bold; }
 .dolores { background: #1d7a8f; }
 .dolores::before { content: "LD"; color: #fff; font-size: 6px; font-weight: bold; }
 .madariaga { background: linear-gradient(90deg, #4ec3de 20%, #fff 20%, #fff 35%, #4ec3de 35%, #4ec3de 65%, #fff 65%, #fff 80%, #4ec3de 80%); }
@@ -126,6 +126,17 @@ tr[onclick]:hover td { background-color: #e8f5e9 !important; }
 .soldeamericafsa { background-color: #00339C; position: relative; }
 .soldeamericafsa::after { content: "☀️"; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); font-size: 9px; }
 .sanmartinfsa { background: repeating-linear-gradient(180deg, #ffffff, #ffffff 5.3px, #001937 5.3px, #001937 10.6px, #ffffff 10.6px, #ffffff 16px); display:inline-flex; align-items:center; justify-content:center; }
+.ateneovecinosgralcabrera { background: #01A7E9; border: 2px solid #000000; }
+.ateneovecinosgralcabrera::before { content: "AVB"; color: #000000; font-size: 4.5px; font-weight: bold; }
+.aldosivi { background: linear-gradient(90deg, #3A9D6B 20%, #EBD425 20%, #EBD425 40%, #3A9D6B 40%, #3A9D6B 60%, #EBD425 60%, #EBD425 80%, #3A9D6B 80%); }
+.argentinosancarlos  { background: linear-gradient(90deg, #01AAE4 20%, #fff 20%, #fff 40%, #01AAE4 40%, #01AAE4 60%, #fff 60%, #fff 80%, #01AAE4 80%); }
+.juvunidachaco { background: linear-gradient(90deg, #CABF20 50%, #417F46 50%); }
+.velez::after { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: #004da6; clip-path: polygon(0 0, 50% 50%, 100% 0, 100% 25%, 50% 75%, 0 25%); }
+.centralcbasgo { background: linear-gradient(90deg, #000 20%, #fff 20%, #fff 40%, #000 40%, #000 60%, #fff 60%, #fff 80%, #000 80%); }
+.universitarioparana { background: repeating-linear-gradient(180deg, #003197, #003197 5.3px, #fff 5.3px, #003197 10.6px, #003197 10.6px, #003197 16px); display:inline-flex; align-items:center; justify-content:center; }
+.reconquistacf { background: linear-gradient(180deg, #008000 15%, transparent 15%), linear-gradient(90deg, #003093 50%, #F60001 50%); }
+.sarmientohumboldt {background:linear-gradient(180deg,transparent 0% 30%,#FFD700 30% 50%,transparent 50% 100%),linear-gradient(90deg,#000 0% 20%,#FFD700 20% 40%,#000 40% 60%,#FFD700 60% 80%,#000 80% 100%);}
+
 
 /* MENÚ DESPLEGABLE */
 .bloque-titulo.sin-drop { cursor: pointer; text-align: left; }
