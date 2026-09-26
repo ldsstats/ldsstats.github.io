@@ -2020,9 +2020,9 @@ function generarHome() {
             {l:"Tiro Federal", v:"Petroquímicos", hora:"22:00", gl:null, gv:null, claseL:"tirofederal", claseV:"petroquimicos",nota:"en cancha de Tiro Federal"},
             ]},
             { nombre: "TORNEO SABALITO | DÍA 1", cat: "sabalito", torLink: "sabalito", noAutoResult: true, partidos: [
-            {l:"Bella Vista Verde (Sub 12)", v:"Juv. Unida de Chaco", hora:"17:45", gl:null, gv:null, claseL:"bellavista", claseV:"juvunidachaco"},
-            {l:"Bella Vista Blanco (Sub 12)", v:"Ateneo Vecinos Gral. Cabrera", hora:"19:15", gl:null, gv:null, claseL:"bellavista", claseV:"ateneovecinosgralcabrera"},
-            {l:"Bella Vista (Sub 14)", v:"Central Córdoba (Sgo)", hora:"20:20", gl:null, gv:null, claseL:"bellavista", claseV:"centralcbasgo"},
+            {l:"Bella Vista Verde (Sub 12)", v:"Juv. Unida de Chaco", hora:"17:45", gl:0, gv:1, claseL:"bellavista", claseV:"juvunidachaco"},
+            {l:"Bella Vista Blanco (Sub 12)", v:"Ateneo Vecinos Gral. Cabrera", hora:"19:15", gl:0, gv:0, claseL:"bellavista", claseV:"ateneovecinosgralcabrera"},
+            {l:"Bella Vista (Sub 14)", v:"Central Córdoba (Sgo)", hora:"20:20", gl:3, gv:0, claseL:"bellavista", claseV:"centralcbasgo"},
             ]},
        ]},
      { id: "2026-09-26", label: "SÁB 26/09", torneos: [
@@ -24027,7 +24027,7 @@ const BD_SABALITO = {
     sub12: {
         zonaA: [
             { fecha:1, partidos:[
-                {l:"Bella Vista Verde", v:"Juv. Unida de Chaco", dia:"Vie 25/9", hora:"17:45", clL:"bellavista", clV:"juvunidachaco", gl:null, gv:null, goles_l:[], goles_v:[]},
+                {l:"Bella Vista Verde", v:"Juv. Unida de Chaco", dia:"Vie 25/9", hora:"17:45", clL:"bellavista", clV:"juvunidachaco", gl:0, gv:1, goles_l:[], goles_v:[]},
                 {l:"Sarmiento de Humboldt", v:"Vélez", dia:"Sáb 26/9", hora:"10:30", clL:"sarmientohumboldt", clV:"velez", gl:null, gv:null, goles_l:[], goles_v:[]}
             ]},
             { fecha:2, partidos:[
@@ -24041,8 +24041,8 @@ const BD_SABALITO = {
         ],
         zonaC: [
             { fecha:1, partidos:[
-                {l:"Bella Vista Blanco", v:"Ateneo Vecinos Gral. Cabrera", dia:"Vie 25/9", hora:"19:15", clL:"bellavista", clV:"ateneovecinosgralcabrera", gl:null, gv:null, goles_l:[], goles_v:[]},
-                {l:"Aldosivi", v:"Argentino de San Carlos", dia:"Vie 25/9", hora:"20:00", clL:"aldosivi", clV:"argentinosancarlos", gl:null, gv:null, goles_l:[], goles_v:[]}
+                {l:"Bella Vista Blanco", v:"Ateneo Vecinos Gral. Cabrera", dia:"Vie 25/9", hora:"19:15", clL:"bellavista", clV:"ateneovecinosgralcabrera", gl:0, gv:0, goles_l:[], goles_v:[]},
+                {l:"Aldosivi", v:"Argentino de San Carlos", dia:"Vie 25/9", hora:"20:00", clL:"aldosivi", clV:"argentinosancarlos", gl:1, gv:0, goles_l:[], goles_v:[]}
             ]},
             { fecha:2, partidos:[
                 {l:"Bella Vista Blanco", v:"Aldosivi", dia:"Sáb 26/9", hora:"13:00", clL:"bellavista", clV:"aldosivi", gl:null, gv:null, goles_l:[], goles_v:[]},
@@ -24057,7 +24057,7 @@ const BD_SABALITO = {
     sub14: {
         zonaD: [
             { fecha:1, partidos:[
-                {l:"Bella Vista", v:"Central Córdoba", dia:"Vie 25/9", hora:"20:20", clL:"bellavista", clV:"centralcbasgo", gl:null, gv:null, goles_l:[], goles_v:[]},
+                {l:"Bella Vista", v:"Central Córdoba", dia:"Vie 25/9", hora:"20:20", clL:"bellavista", clV:"centralcbasgo", gl:3, gv:0, goles_l:[], goles_v:[]},
                 {l:"Universitario Paraná", v:"Reconquista CF", dia:"Sáb 26/9", hora:"09:40", clL:"universitarioparana", clV:"reconquistacf", gl:null, gv:null, goles_l:[], goles_v:[]}
             ]},
             { fecha:2, partidos:[
@@ -24164,16 +24164,16 @@ function generarSabalito() {
 // --- 1. DATOS FIJOS DE LAS TABLAS GENERALES ---
 const TABLAS_GENERALES_SABALITO = {
     sub12_zonaA: [
-        { nombre: "Bella Vista Verde", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
+        { nombre: "Balonpié", pj: 1, pg: 1, pe: 0, pp: 0, gf: 4, gc: 3, pts: 3 },
+        { nombre: "Aldosivi", pj: 1, pg: 1, pe: 0, pp: 0, gf: 1, gc: 0, pts: 3 },
+        { nombre: "Juv. Unida de Chaco", pj: 1, pg: 1, pe: 0, pp: 0, gf: 1, gc: 0, pts: 3 },
+        { nombre: "Bella Vista Blanco", cl: "bellavista", pj: 1, pg: 0, pe: 1, pp: 0, gf: 0, gc: 0, pts: 1 },
+        { nombre: "Ateneo Vecinos Gral. Cabrera", pj: 1, pg: 0, pe: 1, pp: 0, gf: 0, gc: 0, pts: 1 },
+        { nombre: "Bella Vista Verde", cl: "bellavista", pj: 1, pg: 0, pe: 0, pp: 1, gf: 0, gc: 1, pts: 0 },
+        { nombre: "Argentino de San Carlos", pj: 1, pg: 0, pe: 0, pp: 1, gf: 0, gc: 1, pts: 0 },
+        { nombre: "Central San Carlos", pj: 1, pg: 0, pe: 0, pp: 1, gf: 3, gc: 4, pts: 0 },
         { nombre: "Sarmiento de Humboldt", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
-        { nombre: "Juv. Unida de Chaco", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
         { nombre: "Vélez", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
-        { nombre: "Bella Vista Blanco", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
-        { nombre: "Aldosivi", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
-        { nombre: "Ateneo Vecinos Gral. Cabrera", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
-        { nombre: "Argentino de San Carlos", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
-        { nombre: "Balonpié", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
-        { nombre: "Central San Carlos", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
         { nombre: "River Plate - Filial Paraná", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
         { nombre: "Unión de Santa Fe", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
         { nombre: "Atlético Rafaela", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
@@ -24195,26 +24195,26 @@ const TABLAS_GENERALES_SABALITO = {
         // Datos para Sub-12 Zona C
     ],
     sub14: [
-        { nombre: "Bella Vista", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
-        { nombre: "Central Córdoba", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
+        { nombre: "Defensa y Justicia", pj: 1, pg: 1, pe: 0, pp: 0, gf: 5, gc: 0, pts: 3 },
+        { nombre: "Bella Vista", cl: "bellavista", pj: 1, pg: 1, pe: 0, pp: 0, gf: 3, gc: 0, pts: 3 },
+        { nombre: "Central de Bell Ville", pj: 1, pg: 1, pe: 0, pp: 0, gf: 3, gc: 1, pts: 3 },
+        { nombre: "San Martín de Tucumán", pj: 1, pg: 1, pe: 0, pp: 0, gf: 2, gc: 0, pts: 3 },
+        { nombre: "Kimberley", pj: 1, pg: 0, pe: 1, pp: 0, gf: 1, gc: 1, pts: 1 },
+        { nombre: "Libertad de San Jerónimo", pj: 1, pg: 0, pe: 1, pp: 0, gf: 1, gc: 1, pts: 1 },
+        { nombre: "Ateneo Vecinos Gral. Cabrera", pj: 1, pg: 0, pe: 0, pp: 1, gf: 0, gc: 2, pts: 0 },
+        { nombre: "Def. De Belgrano de Diamante", pj: 1, pg: 0, pe: 0, pp: 1, gf: 1, gc: 3, pts: 0 },
+        { nombre: "Central Córdoba", pj: 1, pg: 0, pe: 0, pp: 1, gf: 0, gc: 3, pts: 0 },
+        { nombre: "Universidad Nacional de Río Cuarto", pj: 1, pg: 0, pe: 0, pp: 1, gf: 0, gc: 5, pts: 0 },
         { nombre: "Universitario Paraná", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
         { nombre: "Reconquista CF", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
-        { nombre: "Central de Bell Ville", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
-        { nombre: "Kimberley", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
-        { nombre: "Def. De Belgrano de Diamante", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
-        { nombre: "Libertad de San Jerónimo", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
         { nombre: "Arenas de Paraná", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
         { nombre: "Cosmos de Santa Fe", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
-        { nombre: "Defensa y Justicia", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
-        { nombre: "Universidad Nacional de Río Cuarto", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
         { nombre: "Academia Crack", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
         { nombre: "Las Pumitas de Caima", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
         { nombre: "San Martín de Marcos Juárez", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
         { nombre: "Unión de SF", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
         { nombre: "River Plate - Filial Paraná", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
-        { nombre: "Ateneo Vecinos Gral. Cabrera", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
         { nombre: "Formadores FC", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
-        { nombre: "San Martín de Tucumán", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
         { nombre: "Atlético Rafaela", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
         { nombre: "Deportivo San Agustín", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
         { nombre: "Galácticas de Calchaquí", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
@@ -24261,13 +24261,14 @@ function generarHTMLTablaGeneral(equiposArray, totalLugares, leyendaTexto) {
             else claseColor = "p-blanco";
         }
 
-        let esBellaVista = e.nombre.toLowerCase().includes("bella vista");
-        let estiloEquipo = esBellaVista ? 'c-equipo con-recuadro' : 'c-equipo sin-recuadro';
         let diferenciaGoles = e.gf - e.gc;
+        let escudoHtml = e.cl
+            ? `<div class="escudo ${e.cl}" style="display:inline-block;vertical-align:middle;margin-right:4px;"></div>`
+            : '';
 
         h += `<tr class="${claseColor}">
             <td class="c-pos">${pos}</td>
-            <td class="${estiloEquipo}">${e.nombre}</td>
+            <td class="c-equipo">${escudoHtml}${e.nombre}</td>
             <td class="c-stat">${e.pj}</td>
             <td class="c-stat">${e.pg}</td>
             <td class="c-stat">${e.pe}</td>
@@ -24281,7 +24282,7 @@ function generarHTMLTablaGeneral(equiposArray, totalLugares, leyendaTexto) {
 
     h += `</tbody></table>`;
     h += `<div style="background:#f9f9f9; padding:8px 10px; font-size:10px; border-top:1px solid #ddd; text-align:center;">
-        <b>Referencias:</b> <span>${leyendaTexto}</span>
+        <span>${leyendaTexto}</span>
     </div>`;
     
     return h;
