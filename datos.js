@@ -520,7 +520,7 @@ const BD_FIXTURES_FUTSAL_RESERVA = [
         {l:"Dublin",         v:"Liniers",     gl:3, gv:2},
         {l:"La Estación",   v:"San Francisco",     gl:7, gv:0},
         {l:"La Esperanza", v:"Los 3 Chflados",     gl:2, gv:5},
-        {l:"Tiro Federal",   v:"Petroquímicos",     gl:null, gv:null},
+        {l:"Tiro Federal",   v:"Petroquímicos",     gl:0, gv:0},
         {l:"Villa Mitre",       v:"Comercial",     gl:null, gv:null},
         {l:"Dep. Futsal",     v:"Pacífico BB",     gl:null, gv:null},
         {l:"Huracán",         v:"Catamarca",     gl:null, gv:null},
@@ -640,7 +640,7 @@ const BD_FIXTURES_FUTSAL = [
         {l:"Dublin",         v:"Liniers",     gl:2, gv:4},
         {l:"La Estación",   v:"San Francisco",     gl:5, gv:0},
         {l:"La Esperanza", v:"Los 3 Chiflados",     gl:3, gv:3},
-        {l:"Tiro Federal",   v:"Petroquímicos",     gl:null, gv:null},
+        {l:"Tiro Federal",   v:"Petroquímicos",     gl:3, gv:3},
         {l:"Villa Mitre",       v:"Comercial",     gl:null, gv:null},
         {l:"Dep. Futsal",     v:"Pacífico BB",     gl:null, gv:null},
         {l:"Huracán",         v:"Catamarca",     gl:null, gv:null},
@@ -1937,7 +1937,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 25).partidos.forEach(p
 });
 
 
-let diaSeleccionadoHome = "2026-09-25"; 
+let diaSeleccionadoHome = "2026-09-26"; 
 let mercadoPasesAbierto = false;
 
 function toggleMercadoPasesHome() {
@@ -2017,7 +2017,7 @@ function generarHome() {
             {l:"Huracán", v:"Sporting", hora:"19:00", gl:2, gv:1, claseL:"huracan", claseV:"sporting",nota:"Sin visitantes"},
             ]},
             { nombre: "FUTSAL | CLAUSURA | FECHA 9", cat: "futsal", torLink: "futsal", noAutoResult: true, partidos: [
-            {l:"Tiro Federal", v:"Petroquímicos", hora:"22:00", gl:null, gv:null, claseL:"tirofederal", claseV:"petroquimicos",nota:"en cancha de Tiro Federal"},
+            {l:"Tiro Federal", v:"Petroquímicos", hora:"22:00", gl:3, gv:3, claseL:"tirofederal", claseV:"petroquimicos",nota:"en cancha de Tiro Federal"},
             ]},
             { nombre: "TORNEO SABALITO | DÍA 1", cat: "sabalito", torLink: "sabalito", noAutoResult: true, partidos: [
             {l:"Bella Vista Verde (Sub 12)", v:"Juv. Unida de Chaco", hora:"17:45", gl:0, gv:1, claseL:"bellavista", claseV:"juvunidachaco"},
@@ -17607,6 +17607,8 @@ const BD_H2H = {
     "Petroquímicos|Tiro Federal": [
         { fecha: "Apertura 2026 - Fecha 9", torneo: "futsal", l: "Petroquímicos", v: "Tiro Federal", gl: 1, gv: 3 },
         { fecha: "Apertura 2026 - Fecha 9", torneo: "futsalreserva", l: "Petroquímicos", v: "Tiro Federal", gl: 8, gv: 3 },
+        { fecha: "Clausura 2026 - Fecha 9", torneo: "futsal", l: "Tiro Federal", v: "Petroquímicos", gl: 3, gv: 3 },
+        { fecha: "Clausura 2026 - Fecha 9", torneo: "futsalreserva", l: "Tiro Federal", v: "Petroquímicos", gl: 0, gv: 0 },
     ],
     "La Estación|San Francisco": [
         { fecha: "Apertura 2026 - Fecha 9", torneo: "futsal", l: "San Francisco", v: "La Estación", gl: 4, gv: 5 },
@@ -18058,10 +18060,10 @@ const BD_POS_FUTSAL = {
         {n:"La Esperanza",    cl:"laesperanza",    pj:9,pg:8,pe:0,pp:1,gf:32, gc:16, pts:24},
         {n:"Comercial",       cl:"comercial",    pj:8,pg:7,pe:0,pp:1,gf:33, gc:18, pts:21},
         {n:"Villa Mitre",     cl:"villamitre",    pj:8,pg:5,pe:1,pp:2,gf:36, gc:29, pts:16},
-        {n:"Tiro Federal",    cl:"tirofederal",    pj:8,pg:5,pe:0,pp:3,gf:17, gc:15, pts:15},
+        {n:"Tiro Federal",    cl:"tirofederal",    pj:9,pg:5,pe:1,pp:3,gf:20, gc:18, pts:16},
         {n:"Pacífico BB",     cl:"pacificobb",    pj:9,pg:4,pe:1,pp:4,gf:29, gc:33, pts:13},
         {n:"Liniers <b>(*)</b>",         cl:"liniers",    pj:9,pg:3,pe:1,pp:5,gf:23, gc:28, pts:10},
-        {n:"Petroquímicos",   cl:"petroquimicos",    pj:8,pg:3,pe:0,pp:5,gf:20, gc:29, pts:9},
+        {n:"Petroquímicos",   cl:"petroquimicos",    pj:9,pg:3,pe:1,pp:5,gf:23, gc:32, pts:10},
         {n:"San Francisco",   cl:"sanfrancisco",    pj:9,pg:3,pe:0,pp:6,gf:15, gc:31, pts:9},
         {n:"Dublin",          cl:"dublin",    pj:9,pg:2,pe:0,pp:7,gf:20, gc:37, pts:6},
         {n:"Catamarca",       cl:"catamarca",    pj:9,pg:1,pe:1,pp:7,gf:19, gc:42, pts:4},
@@ -18074,12 +18076,12 @@ const BD_POS_FUTSAL = {
         {n:"Liniers",         cl:"liniers",    pj:9,pg:7,pe:0,pp:2,gf:48, gc:23, pts:21},
         {n:"La Estación",     cl:"laestacion",    pj:9,pg:7,pe:0,pp:2,gf:35, gc:20, pts:21},
         {n:"Villa Mitre",     cl:"villamitre",    pj:8,pg:6,pe:0,pp:2,gf:34, gc:21, pts:18},
-        {n:"Petroquímicos",   cl:"petroquimicos",    pj:8,pg:5,pe:0,pp:3,gf:34, gc:27, pts:15},
+        {n:"Petroquímicos",   cl:"petroquimicos",    pj:9,pg:5,pe:1,pp:3,gf:34, gc:27, pts:16},
         {n:"Dublin",          cl:"dublin",    pj:9,pg:4,pe:2,pp:3,gf:30, gc:29, pts:14},
         {n:"Catamarca",       cl:"catamarca",    pj:9,pg:3,pe:2,pp:4,gf:25, gc:47, pts:11},
         {n:"Comercial",       cl:"comercial",    pj:8,pg:3,pe:1,pp:4,gf:17, gc:29, pts:10},
         {n:"Pacífico BB",     cl:"pacificobb",    pj:9,pg:3,pe:0,pp:6,gf:13, gc:31, pts:9},
-        {n:"Tiro Federal",    cl:"tirofederal",    pj:8,pg:2,pe:1,pp:5,gf:13, gc:18, pts:7},
+        {n:"Tiro Federal",    cl:"tirofederal",    pj:9,pg:2,pe:2,pp:5,gf:13, gc:18, pts:8},
         {n:"San Francisco",   cl:"sanfrancisco",    pj:9,pg:2,pe:0,pp:7,gf:16, gc:52, pts:6},
         {n:"<s>Dep. Futsal</s> <b>(-)</b>",     cl:"depfutsal",    pj:0,pg:0,pe:0,pp:0,gf:0, gc:0, pts:0},
         {n:"<s>Huracán</s> <b>(-)</b>",         cl:"huracan",    pj:0,pg:0,pe:0,pp:0,gf:0, gc:0, pts:0}
@@ -24028,7 +24030,7 @@ const BD_SABALITO = {
         zonaA: [
             { fecha:1, partidos:[
                 {l:"Bella Vista Verde", v:"Juv. Unida de Chaco", dia:"Vie 25/9", hora:"17:45", clL:"bellavista", clV:"juvunidachaco", gl:0, gv:1, goles_l:[], goles_v:[]},
-                {l:"Sarmiento de Humboldt", v:"Vélez", dia:"Sáb 26/9", hora:"10:30", clL:"sarmientohumboldt", clV:"velez", gl:null, gv:null, goles_l:[], goles_v:[]}
+                {l:"Sarmiento de Humboldt", v:"Vélez", dia:"Sáb 26/9", hora:"10:30", clL:"sarmientohumboldt", clV:"velez", gl:0, gv:6, goles_l:[], goles_v:[]}
             ]},
             { fecha:2, partidos:[
                 {l:"Bella Vista Verde", v:"Sarmiento de Humboldt", dia:"Sáb 26/9", hora:"13:00", clL:"bellavista", clV:"sarmientohumboldt", gl:null, gv:null, goles_l:[], goles_v:[]},
@@ -24058,7 +24060,7 @@ const BD_SABALITO = {
         zonaD: [
             { fecha:1, partidos:[
                 {l:"Bella Vista", v:"Central Córdoba", dia:"Vie 25/9", hora:"20:20", clL:"bellavista", clV:"centralcbasgo", gl:3, gv:0, goles_l:[], goles_v:[]},
-                {l:"Universitario Paraná", v:"Reconquista CF", dia:"Sáb 26/9", hora:"09:40", clL:"universitarioparana", clV:"reconquistacf", gl:null, gv:null, goles_l:[], goles_v:[]}
+                {l:"Universitario Paraná", v:"Reconquista CF", dia:"Sáb 26/9", hora:"09:40", clL:"universitarioparana", clV:"reconquistacf", gl:0, gv:0, goles_l:[], goles_v:[]}
             ]},
             { fecha:2, partidos:[
                 {l:"Central Córdoba", v:"Reconquista CF", dia:"Sáb 26/9", hora:"13:50", clL:"centralcbasgo", clV:"reconquistacf", gl:null, gv:null, goles_l:[], goles_v:[]},
@@ -24164,65 +24166,65 @@ function generarSabalito() {
 // --- 1. DATOS FIJOS DE LAS TABLAS GENERALES ---
 const TABLAS_GENERALES_SABALITO = {
     sub12_zonaA: [
+        { nombre: "Vélez", pj: 1, pg: 1, pe: 0, pp: 0, gf: 6, gc: 0, pts: 3 },
+        { nombre: "Universidad Nacional de Río Cuarto", pj: 1, pg: 1, pe: 0, pp: 0, gf: 5, gc: 0, pts: 3 },
+        { nombre: "Atlético Rafaela", pj: 1, pg: 1, pe: 0, pp: 0, gf: 4, gc: 1, pts: 3 },
+        { nombre: "Juventud de Humboldt", pj: 1, pg: 1, pe: 0, pp: 0, gf: 3, gc: 0, pts: 3 },
+        { nombre: "Atlético Pilar", pj: 1, pg: 1, pe: 0, pp: 0, gf: 3, gc: 1, pts: 3 },
         { nombre: "Balonpié", pj: 1, pg: 1, pe: 0, pp: 0, gf: 4, gc: 3, pts: 3 },
+        { nombre: "La Academia FC", pj: 1, pg: 1, pe: 0, pp: 0, gf: 1, gc: 0, pts: 3 },
+        { nombre: "San Martín de Marcos Juárez", pj: 1, pg: 1, pe: 0, pp: 0, gf: 2, gc: 1, pts: 3 },
         { nombre: "Aldosivi", pj: 1, pg: 1, pe: 0, pp: 0, gf: 1, gc: 0, pts: 3 },
+        { nombre: "Unión de Santa Fe", pj: 1, pg: 1, pe: 0, pp: 0, gf: 3, gc: 2, pts: 3 },
         { nombre: "Juv. Unida de Chaco", pj: 1, pg: 1, pe: 0, pp: 0, gf: 1, gc: 0, pts: 3 },
+        { nombre: "San Lorenzo Esperanza", pj: 1, pg: 0, pe: 1, pp: 0, gf: 2, gc: 2, pts: 1 },
+        { nombre: "Reconquista CF", pj: 1, pg: 0, pe: 1, pp: 0, gf: 2, gc: 2, pts: 1 },
         { nombre: "Bella Vista Blanco", cl: "bellavista", pj: 1, pg: 0, pe: 1, pp: 0, gf: 0, gc: 0, pts: 1 },
         { nombre: "Ateneo Vecinos Gral. Cabrera", pj: 1, pg: 0, pe: 1, pp: 0, gf: 0, gc: 0, pts: 1 },
         { nombre: "Bella Vista Verde", cl: "bellavista", pj: 1, pg: 0, pe: 0, pp: 1, gf: 0, gc: 1, pts: 0 },
         { nombre: "Argentino de San Carlos", pj: 1, pg: 0, pe: 0, pp: 1, gf: 0, gc: 1, pts: 0 },
+        { nombre: "Escuela River - Paraná", pj: 1, pg: 0, pe: 0, pp: 1, gf: 0, gc: 1, pts: 0 },
         { nombre: "Central San Carlos", pj: 1, pg: 0, pe: 0, pp: 1, gf: 3, gc: 4, pts: 0 },
-        { nombre: "Sarmiento de Humboldt", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
-        { nombre: "Vélez", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
-        { nombre: "River Plate - Filial Paraná", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
-        { nombre: "Unión de Santa Fe", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
-        { nombre: "Atlético Rafaela", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
-        { nombre: "Jugamos Todas - Vera", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
-        { nombre: "San Martín de Marcos Juárez", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
-        { nombre: "Unión de Esperanza", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
-        { nombre: "Deportivo San Agustín", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
-        { nombre: "Escuela River - Paraná", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
-        { nombre: "Juventud de Humboldt", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
-        { nombre: "La Academia FC", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
-        { nombre: "Atlético Pilar", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
-        { nombre: "Reconquista CF", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
-        { nombre: "Unión de Sunchales", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
-        { nombre: "Huracán de Diamante", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
-        { nombre: "San Lorenzo Esperanza", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
-        { nombre: "Universidad Nacional de Río Cuarto", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
+        { nombre: "River Plate - Filial Paraná", pj: 1, pg: 0, pe: 0, pp: 1, gf: 2, gc: 3, pts: 0 },
+        { nombre: "Jugamos Todas - Vera", pj: 1, pg: 0, pe: 0, pp: 1, gf: 1, gc: 2, pts: 0 },
+        { nombre: "Unión de Sunchales", pj: 1, pg: 0, pe: 0, pp: 1, gf: 1, gc: 3, pts: 0 },
+        { nombre: "Unión de Esperanza", pj: 1, pg: 0, pe: 0, pp: 1, gf: 1, gc: 4, pts: 0 },
+        { nombre: "Deportivo San Agustín", pj: 1, pg: 0, pe: 0, pp: 1, gf: 0, gc: 3, pts: 0 },
+        { nombre: "Huracán de Diamante", pj: 1, pg: 0, pe: 0, pp: 1, gf: 0, gc: 5, pts: 0 },
+        { nombre: "Sarmiento de Humboldt", pj: 1, pg: 0, pe: 0, pp: 1, gf: 0, gc: 6, pts: 0 },
     ],
     sub12_zonaC: [
         // Datos para Sub-12 Zona C
     ],
     sub14: [
+        { nombre: "River Plate - Filial Paraná", pj: 2, pg: 2, pe: 0, pp: 0, gf: 4, gc: 1, pts: 6 },
         { nombre: "Defensa y Justicia", pj: 1, pg: 1, pe: 0, pp: 0, gf: 5, gc: 0, pts: 3 },
         { nombre: "Bella Vista", cl: "bellavista", pj: 1, pg: 1, pe: 0, pp: 0, gf: 3, gc: 0, pts: 3 },
+        { nombre: "Arenas de Paraná", pj: 1, pg: 1, pe: 0, pp: 0, gf: 3, gc: 0, pts: 3 },
+        { nombre: "Academia Crack", pj: 1, pg: 1, pe: 0, pp: 0, gf: 3, gc: 0, pts: 3 },
+        { nombre: "Galácticas de Calchaquí", pj: 1, pg: 1, pe: 0, pp: 0, gf: 3, gc: 0, pts: 3 },
         { nombre: "Central de Bell Ville", pj: 1, pg: 1, pe: 0, pp: 0, gf: 3, gc: 1, pts: 3 },
         { nombre: "San Martín de Tucumán", pj: 1, pg: 1, pe: 0, pp: 0, gf: 2, gc: 0, pts: 3 },
+        { nombre: "La Academia de Rafaela", pj: 1, pg: 1, pe: 0, pp: 0, gf: 1, gc: 0, pts: 3 },
+        { nombre: "Juventud Unida de Chaco", pj: 1, pg: 0, pe: 1, pp: 0, gf: 1, gc: 1, pts: 1 },
         { nombre: "Kimberley", pj: 1, pg: 0, pe: 1, pp: 0, gf: 1, gc: 1, pts: 1 },
+        { nombre: "Universitario Paraná", pj: 1, pg: 0, pe: 1, pp: 0, gf: 0, gc: 0, pts: 1 },
+        { nombre: "Reconquista CF", pj: 1, pg: 0, pe: 1, pp: 0, gf: 0, gc: 0, pts: 1 },
+        { nombre: "Colón", pj: 1, pg: 0, pe: 1, pp: 0, gf: 1, gc: 1, pts: 1 },
+        { nombre: "San Martín de Marcos Juárez", pj: 1, pg: 0, pe: 1, pp: 0, gf: 1, gc: 1, pts: 1 },
+        { nombre: "Unión de SF", pj: 1, pg: 0, pe: 1, pp: 0, gf: 1, gc: 1, pts: 1 },
         { nombre: "Libertad de San Jerónimo", pj: 1, pg: 0, pe: 1, pp: 0, gf: 1, gc: 1, pts: 1 },
-        { nombre: "Ateneo Vecinos Gral. Cabrera", pj: 1, pg: 0, pe: 0, pp: 1, gf: 0, gc: 2, pts: 0 },
+        { nombre: "San Martín de Progreso", pj: 1, pg: 0, pe: 1, pp: 0, gf: 2, gc: 2, pts: 1 },
+        { nombre: "Atlético Rafaela", pj: 1, pg: 0, pe: 1, pp: 0, gf: 2, gc: 2, pts: 1 },
+        { nombre: "San Lorenzo Esperanza", pj: 1, pg: 0, pe: 0, pp: 1, gf: 0, gc: 1, pts: 0 },
         { nombre: "Def. De Belgrano de Diamante", pj: 1, pg: 0, pe: 0, pp: 1, gf: 1, gc: 3, pts: 0 },
+        { nombre: "Formadores FC", pj: 1, pg: 0, pe: 0, pp: 1, gf: 1, gc: 3, pts: 0 },
+        { nombre: "Ateneo Vecinos Gral. Cabrera", pj: 2, pg: 0, pe: 0, pp: 2, gf: 0, gc: 3, pts: 0 },
+        { nombre: "Cosmos de Santa Fe", pj: 1, pg: 0, pe: 0, pp: 1, gf: 0, gc: 3, pts: 0 },
         { nombre: "Central Córdoba", pj: 1, pg: 0, pe: 0, pp: 1, gf: 0, gc: 3, pts: 0 },
+        { nombre: "Las Pumitas de Caima", pj: 1, pg: 0, pe: 0, pp: 1, gf: 0, gc: 3, pts: 0 },
+        { nombre: "Deportivo San Agustín", pj: 1, pg: 0, pe: 0, pp: 1, gf: 0, gc: 3, pts: 0 },
         { nombre: "Universidad Nacional de Río Cuarto", pj: 1, pg: 0, pe: 0, pp: 1, gf: 0, gc: 5, pts: 0 },
-        { nombre: "Universitario Paraná", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
-        { nombre: "Reconquista CF", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
-        { nombre: "Arenas de Paraná", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
-        { nombre: "Cosmos de Santa Fe", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
-        { nombre: "Academia Crack", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
-        { nombre: "Las Pumitas de Caima", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
-        { nombre: "San Martín de Marcos Juárez", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
-        { nombre: "Unión de SF", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
-        { nombre: "River Plate - Filial Paraná", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
-        { nombre: "Formadores FC", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
-        { nombre: "Atlético Rafaela", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
-        { nombre: "Deportivo San Agustín", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
-        { nombre: "Galácticas de Calchaquí", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
-        { nombre: "San Martín de Progreso", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
-        { nombre: "Colón", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
-        { nombre: "Juventud Unida de Chaco", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
-        { nombre: "La Academia de Rafaela", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
-        { nombre: "San Lorenzo Esperanza", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
     ]
 };
 
