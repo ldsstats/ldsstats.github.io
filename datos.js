@@ -2081,10 +2081,10 @@ function generarHome() {
             {l:"Huracán", v:"La Armonía", hora:"16:30", gl:null, gv:null, claseL:"huracan", claseV:"laarmonia"},
             ]},
             { nombre: "TORNEO SABALITO | DÍA 3 | COPA DE PLATA", cat: "sabalito", torLink: "sabalito", noAutoResult: true, partidos: [
-            {l:"Bella Vista Blanco (Sub 12)", v:"Huracán de Diamante", hora:"12:10", gl:2, gv:0, claseL:"bellavista", claseV:"huracan",nota:"Octavos de Final"},
+            {l:"Bella Vista Blanco (Sub 12)", v:"Huracán de Diamante", hora:"12:10", gl:2, gv:0, claseL:"bellavista", claseV:"aconfirmar",nota:"Octavos de Final"},
             {l:"Bella Vista Verde (Sub 12)", v:"Central San Carlos", hora:"12:10", gl:6, gv:1, claseL:"bellavista", claseV:"aconfirmar",nota:"Octavos de Final"},
-            {l:"Bella Vista (Sub 14)", v:"Central Córdoba", hora:"12:10", gl:1, gv:null, claseL:"bellavista", claseV:"aconfirmar",nota:"Octavos de Final"},
-            {l:"Bella Vista (Sub 14)", v:"Galácticas/Unión", hora:"14:40", gl:1, gv:null, claseL:"bellavista", claseV:"aconfirmar",nota:"Cuartos de Final"},
+            {l:"Bella Vista (Sub 14)", v:"Central Córdoba", hora:"12:10", gl:1, gv:0, claseL:"bellavista", claseV:"aconfirmar",nota:"Octavos de Final"},
+            {l:"Bella Vista (Sub 14)", v:"Galácticas", hora:"14:40", gl:null, gv:null, claseL:"bellavista", claseV:"aconfirmar",nota:"Cuartos de Final"},
             {l:"Bella Vista Verde (Sub 12)", v:"Bella Vista Blanco (Sub 12)", hora:"14:40", gl:null, gv:null, claseL:"bellavista", claseV:"bellavista",nota:"Cuartos de Final"},
             ]},
             { nombre: "FEDERAL A | CUARTOS DE FINAL | IDA", cat: "federala", torLink: "federala", noAutoResult: true, partidos: [
@@ -24439,12 +24439,12 @@ const BD_SABALITO_PLAYOFFS = {
         cuartos: [
             { local: "Formadores FC", visitante: "San Lorenzo Esperanza", gl: 4, gv: 0 },
             { local: "Bella Vista", visitante: "Central Córdoba", gl: 1, gv: 0 },
-            { local: "Galácticas de Calchaquí", visitante: "Unión/Cosmos", gl: null, gv: null },
-            { local: "Arenas de Paraná", visitante: "Las Pumitas/Dep. San Agustín", gl: null, gv: null },
+            { local: "Galácticas de Calchaquí", visitante: "Unión", gl: 2, gv: 0 },
+            { local: "Arenas de Paraná", visitante: "Las Pumitas", gl: 0, gv: 0, pen_l:3, pen_v:1 },
         ],
         semis: [
-            { local: "Bella Vista", visitante: "A confirmar", gl: null, gv: null },
-            { local: "Formadores FC", visitante: "A confirmar", gl: null, gv: null },
+            { local: "Bella Vista", visitante: "Galácticas", gl: null, gv: null },
+            { local: "Formadores FC", visitante: "Arenas", gl: null, gv: null },
         ],
         final: { local: "A confirmar", visitante: "A confirmar", gl: null, gv: null }
     }
