@@ -529,7 +529,7 @@
             } else if (estado.torneo === 'perfil_jugador') {
                 cont.innerHTML = generarPerfilJugador(estado.perfil.jugador, estado.perfil.equipo);
             } else if (estado.categoria === 'federala') {
-                cont.innerHTML = generarTablaFederal(estado.etapaFederal || 'nonagonal');
+                cont.innerHTML = generarTablaFederal(estado.etapaFederal || 'playoffs');
             } else if (estado.torneo === 'reserva') {
                 if (!estado._reservaIniciada || estado._reservaCat !== estado.categoria) {
                     estado.fecha = (estado.categoria === 'oficial' || estado.categoria === 'promocional') ? 9 : (estado.categoria === 'femenino') ? 10 : (estado.categoria === 'segundafemenino') ? 26 : 1;
