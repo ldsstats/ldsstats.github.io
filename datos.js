@@ -2081,9 +2081,11 @@ function generarHome() {
             {l:"Huracán", v:"La Armonía", hora:"16:30", gl:null, gv:null, claseL:"huracan", claseV:"laarmonia"},
             ]},
             { nombre: "TORNEO SABALITO | DÍA 3 | COPA DE PLATA", cat: "sabalito", torLink: "sabalito", noAutoResult: true, partidos: [
-            {l:"Bella Vista Blanco (Sub 12)", v:"Huracán de Diamante", hora:"12:10", gl:null, gv:null, claseL:"bellavista", claseV:"huracan"},
-            {l:"Bella Vista Verde (Sub 12)", v:"Central San Carlos/Sarmiento de Humboldt", hora:"12:10", gl:null, gv:null, claseL:"bellavista", claseV:"aconfirmar"},
-            {l:"Bella Vista (Sub 14)", v:"Central Córdoba/Def. De Belgrano", hora:"12:40", gl:null, gv:null, claseL:"bellavista", claseV:"aconfirmar"},
+            {l:"Bella Vista Blanco (Sub 12)", v:"Huracán de Diamante", hora:"12:10", gl:2, gv:0, claseL:"bellavista", claseV:"huracan",nota:"Octavos de Final"},
+            {l:"Bella Vista Verde (Sub 12)", v:"Central San Carlos", hora:"12:10", gl:6, gv:1, claseL:"bellavista", claseV:"aconfirmar",nota:"Octavos de Final"},
+            {l:"Bella Vista (Sub 14)", v:"Central Córdoba", hora:"12:10", gl:1, gv:null, claseL:"bellavista", claseV:"aconfirmar",nota:"Octavos de Final"},
+            {l:"Bella Vista (Sub 14)", v:"Galácticas/Unión", hora:"14:40", gl:1, gv:null, claseL:"bellavista", claseV:"aconfirmar",nota:"Cuartos de Final"},
+            {l:"Bella Vista Verde (Sub 12)", v:"Bella Vista Blanco (Sub 12)", hora:"14:40", gl:null, gv:null, claseL:"bellavista", claseV:"bellavista",nota:"Cuartos de Final"},
             ]},
             { nombre: "FEDERAL A | CUARTOS DE FINAL | IDA", cat: "federala", torLink: "federala", noAutoResult: true, partidos: [
             {l:"Olimpo", v:"Gimnasia de Chivilcoy", hora:"15:30", gl:null, gv:null, claseL:"olimpo", claseV:"gimnasiachivilcoy"},
