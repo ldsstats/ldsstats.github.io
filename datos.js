@@ -24412,37 +24412,37 @@ function generarHTMLTablaGeneral(equiposArray, totalLugares, leyendaTexto) {
 const BD_SABALITO_PLAYOFFS = {
     sub12: {
         octavos: [
-            { local: "Ateneo Vecinos Gral. Cabrera", visitante: "Deportivo San Agustín", gl: null, gv: null },
-            { local: "Central San Carlos", visitante: "Sarmiento de Humboldt", gl: null, gv: null },
+            { local: "Ateneo Vecinos Gral. Cabrera", visitante: "Deportivo San Agustín", gl: 3, gv: 0 },
+            { local: "Central San Carlos", visitante: "Sarmiento de Humboldt", gl: 1, gv: 1, pen_l:5, pen_v:4 },
         ],
         cuartos: [
-            { local: "Juventud de Humboldt", visitante: "Ateneo/Dep. San Agustín", gl: null, gv: null },
-            { local: "Bella Vista Verde", visitante: "Central SC/Sarmiento", gl: null, gv: null },
-            { local: "Bella Vista Blanco", visitante: "Huracán de Diamante", gl: null, gv: null },
-            { local: "Reconquista CF", visitante: "Jugamos Todas - Vera", gl: null, gv: null },
+            { local: "Juventud de Humboldt", visitante: "Ateneo Vecinos Gral. Cabrera", gl: 0, gv: 0, pen_l:3, pen_v:2 },
+            { local: "Bella Vista Verde", visitante: "Central San Carlos", gl: 6, gv: 1 },
+            { local: "Bella Vista Blanco", visitante: "Huracán de Diamante", gl: 2, gv: 0 },
+            { local: "Reconquista CF", visitante: "Jugamos Todas - Vera", gl: 0, gv: 0, pen_l:3, pen_v:1 },
         ],
         semis: [
-            { local: "A confirmar", visitante: "A confirmar", gl: null, gv: null },
-            { local: "A confirmar", visitante: "A confirmar", gl: null, gv: null },
+            { local: "Bella Vista Verde", visitante: "Bella Vista Blanco", gl: null, gv: null },
+            { local: "Juventud de Humboldt", visitante: "Reconquista CF", gl: null, gv: null },
         ],
         final: { local: "A confirmar", visitante: "A confirmar", gl: null, gv: null }
     },
     sub14: {
         octavos: [
-            { local: "Ateneo Vecinos Gral. Cabrera", visitante: "San Lorenzo Esperanza", gl: null, gv: null },
-            { local: "Central Córdoba (Sgo)", visitante: "Def. de Belgrano de Diamante", gl: null, gv: null },
-            { local: "Unión de SF", visitante: "Cosmos de Santa Fe", gl: null, gv: null },
-            { local: "Las Pumitas", visitante: "Deportivo San Agustín", gl: null, gv: null },
+            { local: "Ateneo Vecinos Gral. Cabrera", visitante: "San Lorenzo Esperanza", gl: 0, gv: 0, pen_l:1, pen_v:4 },
+            { local: "Central Córdoba (Sgo)", visitante: "Def. de Belgrano de Diamante", gl: 1, gv: 1, pen_l:4, pen_v:2 },
+            { local: "Unión de SF", visitante: "Cosmos de Santa Fe", gl: 3, gv: 0 },
+            { local: "Las Pumitas", visitante: "Deportivo San Agustín", gl: 3, gv: 0 },
         ],
         cuartos: [
-            { local: "Formadores FC", visitante: "Ateneo/San Lorenzo", gl: null, gv: null },
-            { local: "Bella Vista", visitante: "Central Córdoba/Def.Belgrano", gl: null, gv: null },
+            { local: "Formadores FC", visitante: "San Lorenzo Esperanza", gl: 4, gv: 0 },
+            { local: "Bella Vista", visitante: "Central Córdoba", gl: 1, gv: 0 },
             { local: "Galácticas de Calchaquí", visitante: "Unión/Cosmos", gl: null, gv: null },
             { local: "Arenas de Paraná", visitante: "Las Pumitas/Dep. San Agustín", gl: null, gv: null },
         ],
         semis: [
-            { local: "A confirmar", visitante: "A confirmar", gl: null, gv: null },
-            { local: "A confirmar", visitante: "A confirmar", gl: null, gv: null },
+            { local: "Bella Vista", visitante: "A confirmar", gl: null, gv: null },
+            { local: "Formadores FC", visitante: "A confirmar", gl: null, gv: null },
         ],
         final: { local: "A confirmar", visitante: "A confirmar", gl: null, gv: null }
     }
@@ -24451,7 +24451,10 @@ const BD_SABALITO_PLAYOFFS = {
 function _renderCruceSabalito(p) {
     const clL = p.local.includes('Bella Vista') ? 'bellavista' : '';
     const clV = p.visitante.includes('Bella Vista') ? 'bellavista' : '';
-    const res = p.gl !== null ? `${p.gl} - ${p.gv}` : 'vs';
+    let res = p.gl !== null ? `${p.gl} - ${p.gv}` : 'vs';
+    if (p.gl !== null && p.pen_l !== undefined && p.pen_v !== undefined) {
+        res += `<br><span style="font-size:8px;color:#888;">(Pen. ${p.pen_l}-${p.pen_v})</span>`;
+    }
     return `<tr>
         <td class="c-loc"><span style="direction:ltr;display:inline-flex;align-items:center;justify-content:flex-end;width:100%;">${p.local} <div class="escudo ${clL}" style="display:inline-block;vertical-align:middle;margin-left:4px;"></div></span></td>
         <td class="c-res">${res}</td>
