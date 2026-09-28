@@ -1202,7 +1202,7 @@ const idaOficialClausura = [
     { fecha: 6,  partidos: [{l:"San Francisco",v:"Huracán", gl:1, gv:1, dia:"Sáb 05/09", hora:"15:00", goles_l:["Marcelo Castellano"], goles_v:["Lautaro Torres"]}, {l:"Bella Vista", v:"La Armonía", gl:2, gv:3, dia:"Dom 06/09", hora:"11:00", goles_l:["Nahuel Bardella","Matías Mayer"], goles_v:["Julio Acosta","Ezequiel Intrevado","Alex Muzi"]}, {l:"Libertad",    v:"Villa Mitre", gl:0, gv:1, dia:"Dom 06/09", hora:"15:30", goles_l:[], goles_v:["Santiago Gómez"]}, {l:"Sporting",    v:"Liniers", gl:1, gv:0, dia:"Dom 06/09", hora:"15:30", goles_l:["Jonathan Font"], goles_v:[]}] },
     { fecha: 7,  partidos: [{l:"Villa Mitre", v:"Sporting", gl:0, gv:0, dia:"Dom 13/09", hora:"15:30", goles_l:[], goles_v:[]}, {l:"Huracán",     v:"Bella Vista", gl:0, gv:0, dia:"Dom 13/09", hora:"15:30", goles_l:[], goles_v:[]}, {l:"La Armonía",  v:"Libertad", gl:0, gv:1, dia:"Dom 13/09", hora:"15:30", goles_l:[], goles_v:["Franco Pane"]}, {l:"Liniers",     v:"San Francisco", gl:2, gv:0, dia:"Dom 13/09", hora:"15:30", goles_l:["Massimo Monti","Simón Biondo"], goles_v:[]}] },
     { fecha: 8,  partidos: [{l:"Villa Mitre",     v:"Liniers",   gl:1, gv:0, dia:"Vie 18/09", hora:"15:30", goles_l:["Julián Monteverde"], goles_v:[]}, {l:"Huracán",     v:"Libertad",      gl:1, gv:0, dia:"Vie 18/09", hora:"19:30", goles_l:["Iván Agudiak"], goles_v:[]}, {l:"San Francisco",v:"Bella Vista",   gl:1, gv:1, dia:"Sáb 19/09", hora:"15:30", goles_l:["Marcelo Castellano"], goles_v:["Gabino Bellegia"]}, {l:"La Armonía",  v:"Sporting",      gl:1, gv:0, dia:"Dom 20/09", hora:"15:30", goles_l:["Ezequiel Intrevado"], goles_v:[]}] },
-    { fecha: 9,  partidos: [{l:"Huracán",    v:"Sporting",       gl:2, gv:1, dia:"Vie 25/09", hora:"19:00", goles_l:["Lautaro Torres","Lautaro Cerato"], goles_v:["Jonathan Font"]}, {l:"Libertad",    v:"San Francisco", gl:1, gv:1, dia:"Sáb 26/09", hora:"15:30", goles_l:["Franco Pane"], goles_v:["Alexis Vega"]}, {l:"Liniers",     v:"Bella Vista",   gl:0, gv:2, dia:"Dom 27/09", hora:"15:30", goles_l:[], goles_v:["Agustín Reule","Felipe Acharez"]}, {l:"Villa Mitre", v:"La Armonía",    gl:null, gv:null, dia:"Lun 28/09", hora:"15:30", goles_l:[], goles_v:[]}] },
+    { fecha: 9,  partidos: [{l:"Huracán",    v:"Sporting",       gl:2, gv:1, dia:"Vie 25/09", hora:"19:00", goles_l:["Lautaro Torres","Lautaro Cerato"], goles_v:["Jonathan Font"]}, {l:"Libertad",    v:"San Francisco", gl:1, gv:1, dia:"Sáb 26/09", hora:"15:30", goles_l:["Franco Pane"], goles_v:["Alexis Vega"]}, {l:"Liniers",     v:"Bella Vista",   gl:0, gv:2, dia:"Dom 27/09", hora:"15:30", goles_l:[], goles_v:["Agustín Reule","Felipe Acharez"]}, {l:"Villa Mitre", v:"La Armonía",    gl:1, gv:1, dia:"Lun 28/09", hora:"15:30", goles_l:["Valentino Valeri"], goles_v:["Julio Acosta"]}] },
     { fecha: 10, partidos: [{l:"Huracán",     v:"Villa Mitre",   gl:null, gv:null}, {l:"San Francisco",v:"Sporting",      gl:null, gv:null}, {l:"La Armonía",  v:"Liniers",       gl:null, gv:null}, {l:"Bella Vista", v:"Libertad",      gl:null, gv:null}] },
     { fecha: 11, partidos: [{l:"San Francisco",v:"Villa Mitre",  gl:null, gv:null}, {l:"Huracán",     v:"La Armonía",    gl:null, gv:null}, {l:"Libertad",    v:"Liniers",       gl:null, gv:null}, {l:"Bella Vista", v:"Sporting",      gl:null, gv:null}] },
     { fecha: 12, partidos: [{l:"Villa Mitre", v:"Bella Vista",   gl:null, gv:null}, {l:"Sporting",    v:"Libertad",      gl:null, gv:null}, {l:"La Armonía",  v:"San Francisco", gl:null, gv:null}, {l:"Liniers",     v:"Huracán",       gl:null, gv:null}] },
@@ -2105,8 +2105,8 @@ function generarHome() {
             ]},
        ]},
      { id: "2026-09-28", label: "LUN 28/09", torneos: [
-            { nombre: "OFICIAL | CLAUSURA | FECHA 9", cat: "regamateurtemp", torLink: "regamateurtemp", noAutoResult: true, partidos: [
-            {l:"Villa Mitre", v:"La Armonía", hora:"15:30", gl:null, gv:null, claseL:"villamitre", claseV:"laarmonia"},
+            { nombre: "OFICIAL | CLAUSURA | FECHA 9", cat: "oficial", torLink: "oficial", noAutoResult: true, partidos: [
+            {l:"Villa Mitre", v:"La Armonía", hora:"15:30", gl:1, gv:1, claseL:"villamitre", claseV:"laarmonia"},
             ]},
        ]},
      { id: "2026-09-30", label: "MIÉR 30/09", torneos: [
@@ -16105,6 +16105,7 @@ const BD_H2H = {
         { fecha: "Fecha 2 - Clausura 2026 - 09 ago 2026", torneo: "oficial", l: "La Armonía", v: "Villa Mitre", gl: 0, gv: 0, goles_l: [], goles_v: [] },
         { fecha: "Fecha 2 - Clausura 2026", torneo: "reserva_oficial", l: "La Armonía", v: "Villa Mitre", gl: 1, gv: 2 },
         { fecha: "Fecha 8 - Clausura 2026 - 13 ago", torneo: "femenino", l: "Villa Mitre", v: "La Armonía", gl: 1, gv: 0, goles_l: ["Renata Trech"], goles_v: [] },
+        { fecha: "Fecha 9 - Clausura 2026 - 28 ago", torneo: "oficial", l: "Villa Mitre", v: "La Armonía", gl: 1, gv: 1, goles_l: ["Valentino Valeri"], goles_v: ["Julio Acosta"] },
     ],
     "Empleados de Comercio|Tiro Federal": [
         { fecha: "Fecha 1 - Apertura 2026 - 22 mar", torneo: "femenino", l: "Empleados de Comercio", v: "Tiro Federal", gl: 2, gv: 2, goles_l: ["Marianela Santana","Trinidad Rivas"], goles_v: ["Abril Sáenz (2)"]},
@@ -18198,7 +18199,8 @@ function generarSub15Fem() {
         <th class="c-stat">Dif</th><th class="c-stat">Pts</th>
     </tr></thead><tbody>`;
     statsS15F.forEach((e, i) => {
-        html += `<tr>
+        const cl = i < 8 ? 'p-playoff' : '';
+        html += `<tr class="${cl}">
             <td class="c-pos">${i+1}</td>
             <td class="c-equipo"><div class="escudo ${e.clase}" style="display:inline-block;vertical-align:middle;margin-right:4px;"></div>${e.nombre}</td>
             <td class="c-stat">${e.pj}</td><td class="c-stat">${e.pg}</td><td class="c-stat">${e.pe}</td>
@@ -20810,6 +20812,11 @@ const BD_GOLEADORES_CLAUSURA_OFICIAL = [
           { fecha: "Fecha 1", rival: "Liniers", gl: 6, gv: 1, condicion: "Visitante", goles: 1 }
       ]
     },
+{ jugador: "Valentino Valeri", equipo: "Villa Mitre", goles: 1,
+      partidos: [
+          { fecha: "Fecha 9", rival: "La Armonía", gl: 1, gv: 1, condicion: "Local", goles: 1 }
+      ]
+    },
 { jugador: "Ramiro Gerk", equipo: "Villa Mitre", goles: 1,
       partidos: [
           { fecha: "Fecha 3", rival: "Huracán", gl: 2, gv: 2, condicion: "Local", goles: 1 }
@@ -20869,10 +20876,11 @@ const BD_GOLEADORES_CLAUSURA_OFICIAL = [
           { fecha: "Fecha 4", rival: "Huracán", gl: 2, gv: 2, condicion: "Local", goles: 1 }
       ]
     },
-{ jugador: "Julio Acosta", equipo: "La Armonía", goles: 2,
+{ jugador: "Julio Acosta", equipo: "La Armonía", goles: 3,
       partidos: [
           { fecha: "Fecha 4", rival: "Huracán", gl: 2, gv: 2, condicion: "Local", goles: 1 },
-          { fecha: "Fecha 6", rival: "Bella Vista", gl: 2, gv: 3, condicion: "Visitante", goles: 1 }
+          { fecha: "Fecha 6", rival: "Bella Vista", gl: 2, gv: 3, condicion: "Visitante", goles: 1 },
+          { fecha: "Fecha 9", rival: "Villa Mitre", gl: 1, gv: 1, condicion: "Visitante", goles: 1 }
       ]
     },
 { jugador: "Ezequiel Intrevado", equipo: "La Armonía", goles: 2,
@@ -22284,11 +22292,11 @@ const BD_POSICIONES = {
         ],
         clausura: [
             { nombre: "Huracán <b>(A)</b>",       clase: "huracan",      pj:9, pg:3, pe:6, pp:0, gf:8, gc:5,  pts:15 },
+            { nombre: "La Armonía",    clase: "laarmonia",    pj:9, pg:3, pe:3, pp:3, gf:7, gc:8,  pts:12 },
             { nombre: "San Francisco", clase: "sanfrancisco", pj:9, pg:3, pe:5, pp:1, gf:9, gc:7,  pts:14 },
             { nombre: "Sporting",      clase: "sporting",     pj:9, pg:2, pe:5, pp:2, gf:6, gc:5,  pts:11 },
             { nombre: "Bella Vista",   clase: "bellavista",   pj:9, pg:2, pe:5, pp:2, gf:8, gc:7,  pts:11 },
-            { nombre: "La Armonía",    clase: "laarmonia",    pj:8, pg:3, pe:2, pp:3, gf:6, gc:7,  pts:11 },
-            { nombre: "Villa Mitre",   clase: "villamitre",   pj:8, pg:2, pe:4, pp:2, gf:6, gc:10,  pts:10 },
+            { nombre: "Villa Mitre",   clase: "villamitre",   pj:9, pg:2, pe:5, pp:2, gf:7, gc:11,  pts:11 },
             { nombre: "Liniers",       clase: "liniers",      pj:9, pg:2, pe:2, pp:5, gf:9, gc:8,  pts:8 },
             { nombre: "Libertad",      clase: "libertad",     pj:9, pg:1, pe:5, pp:3, gf:4, gc:6,  pts:8 },
 ],
@@ -22296,10 +22304,10 @@ const BD_POSICIONES = {
             { nombre: "Huracán <b>(SD)</b>",       clase: "huracan",      pj:23, pg:10, pe:11, pp:2,  gf:30, gc:18, pts:41 },
             { nombre: "Bella Vista",   clase: "bellavista",   pj:23, pg:9,  pe:9,  pp:5,  gf:29, gc:18, pts:36 },
             { nombre: "Liniers",       clase: "liniers",      pj:23, pg:8,  pe:7,  pp:8,  gf:26, gc:15, pts:31 },
-            { nombre: "Villa Mitre",   clase: "villamitre",   pj:22, pg:7,  pe:8,  pp:7,  gf:20, gc:25, pts:29 },
+            { nombre: "Villa Mitre",   clase: "villamitre",   pj:23, pg:7,  pe:9,  pp:7,  gf:21, gc:26, pts:30 },
             { nombre: "San Francisco", clase: "sanfrancisco", pj:23, pg:6,  pe:9,  pp:8,  gf:18, gc:25, pts:27 },
             { nombre: "Libertad",      clase: "libertad",     pj:23, pg:5,  pe:11, pp:7,  gf:18, gc:23, pts:26 },
-            { nombre: "La Armonía",    clase: "laarmonia",    pj:22, pg:7,  pe:4,  pp:11, gf:20, gc:32, pts:25 },
+            { nombre: "La Armonía",    clase: "laarmonia",    pj:23, pg:7,  pe:5,  pp:11, gf:21, gc:33, pts:26 },
             { nombre: "Sporting",      clase: "sporting",     pj:23, pg:5,  pe:9,  pp:9,  gf:21, gc:27, pts:24 }
         ]
     },
@@ -22448,7 +22456,7 @@ if (tor === 'apertura' && cat === 'oficial') {
     return html + "</tbody></table><div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'><b>(C)</b> Clasificado<br><b>(X)</b> Eliminado<br>📌 Puntos en juego: <b>Torneo finalizado</b></div>";
 }
 if (tor === 'clausura' && cat === 'oficial') {
-    return html + "</tbody></table><div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>18</b> tras finalizar la fecha 8<b><br>(A)</b> Ganador del Apertura</br></div>";
+    return html + "</tbody></table><div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>15</b> tras finalizar la fecha 9<b><br>(A)</b> Ganador del Apertura</br></div>";
 }
 if (tor === 'clausura' && cat === 'femenino') {
     const posAcum = BD_POSICIONES['femenino']?.['acumulada'] || [];
@@ -22657,7 +22665,7 @@ function cambiarFechaRegAmateurTemp(titulo, n) {
 function generarRegAmateurTemporada() {
     let html = `<div class="header-t" style="font-size:14px;text-align:center;padding:12px;background:#1a4a2e;color:#fff;">🏆 TORNEO REGIONAL AMATEUR<br><span style="font-size:11px;font-weight:normal;">Región Bonaerense Pampeana Sur</span></div>`;
 
-    const renderTablaPos = (pos, modo, puntosEnJuego, txtClasifica, txtElimina, txtClasifica2, txtClasifica2alt, txtCuatro, blancoElimina) => {
+    const renderTablaPos = (pos, modo, puntosEnJuego, txtClasifica, txtElimina, txtColorElimina) => {
         let h = `<table><thead><tr>
             <th style="width:25px;">#</th>
             <th style="text-align:left;padding-left:8px;">Equipo</th>
@@ -22687,13 +22695,13 @@ function generarRegAmateurTemporada() {
         h += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>${puntosEnJuego || 'XX'}</b></div>`;
         h += `<div style="background:#f9f9f9;padding:5px 8px;font-size:9px;color:#666;text-align:center;border-top:1px solid #eee;">
             <span class="p-playoff" style="padding:1px 6px;border-radius:3px;">Verde</span> ${txtClasifica || 'Clasifica'} &nbsp;|&nbsp;
-            <span class="p-naranja" style="padding:1px 6px;border-radius:3px;">Rojo</span> ${txtElimina || 'Elimina'}
+            <span class="p-naranja" style="padding:1px 6px;border-radius:3px;">${txtColorElimina || 'Rojo'}</span> ${txtElimina || 'Elimina'}
         </div>`;
-        if (txtClasifica2) {
+        if (typeof txtClasifica2 !== 'undefined' && txtClasifica2) {
             h += `<div style="background:#f9f9f9;padding:3px 8px;font-size:9px;color:#666;text-align:center;border-top:1px solid #eee;">
                 <b>(C1)</b> ${txtClasifica2} &nbsp;|&nbsp; <b>(C2)</b> ${txtClasifica2alt || ''} &nbsp;|&nbsp; <b>(X)</b> ${txtElimina || 'Elimina'}
             </div>`;
-        } else if (txtCuatro) {
+        } else if (typeof txtCuatro !== 'undefined' && txtCuatro) {
             h += `<div style="background:#f9f9f9;padding:3px 8px;font-size:9px;color:#666;text-align:center;border-top:1px solid #eee;">
                 <b>(C)</b> Clasificado &nbsp;|&nbsp; <b>(X)</b> Eliminado
             </div>`;
@@ -22707,7 +22715,7 @@ function generarRegAmateurTemporada() {
 
     // Mejores Segundos
     html += `<div class="header-t" style="cursor:pointer;" onclick="document.getElementById('rat-segundos').style.display=document.getElementById('rat-segundos').style.display==='none'?'block':'none'">▶ MEJORES 2° DE GRUPOS DE TRES EQUIPOS</div>
-    <div id="rat-segundos" style="display:none;">${renderTablaPos(BD_REG_AMATEUR_TEMPORADA.mejoresSegundos, 'segundos', 'XX', 'Clasifica a la 2° Ronda', 'Eliminado', null, null, null, true)}</div>`;
+    <div id="rat-segundos" style="display:none;">${renderTablaPos(BD_REG_AMATEUR_TEMPORADA.mejoresSegundos, 'segundos', 'XX', 'Clasifica a la 2° Ronda', 'Eliminado', 'Blanco')}</div>`;
 
 
     // Zonas
