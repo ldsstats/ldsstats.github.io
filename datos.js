@@ -2093,7 +2093,7 @@ function generarHome() {
             {l:"Olimpo", v:"Gimnasia de Chivilcoy", hora:"15:30", gl:2, gv:1, claseL:"olimpo", claseV:"gimnasiachivilcoy"},
             {l:"Defensores de Belgrano", v:"Alvarado", hora:"15:30", gl:2, gv:2, claseL:"defbelgranovr", claseV:"alvarado"},
             {l:"Sol de América", v:"Cipolletti", hora:"19:00", gl:1, gv:0, claseL:"soldeamericafsa", claseV:"cipolletti"},
-            {l:"Atenas de Río Cuarto", v:"San Martín de Formosa", hora:"19:30", gl:null, gv:null, claseL:"atenasrc", claseV:"sanmartinfsa"},
+            {l:"Atenas de Río Cuarto", v:"San Martín de Formosa", hora:"19:30", gl:0, gv:1, claseL:"atenasrc", claseV:"sanmartinfsa"},
             ]},
             { nombre: "REGIONAL FEDERAL AMATEUR | BONAERENSE PAMPEANA SUR | FECHA 5", cat: "federala", torLink: "federala", noAutoResult: true, partidos: [
             {l:"Racing (Olavarría)", v:"Balompie", hora:"15:00", gl:null, gv:null, claseL:"racingolavarria", claseV:"balompie",nota:"Zona 6"},
@@ -24091,7 +24091,7 @@ const BD_FEDERAL_PLAYOFFS = {
             vuelta: { local: "Cipolletti", clL: "cipolletti", visitante: "Sol de América", clV: "soldeamericafsa", gl: null, gv: null, goles_l: [], goles_v: [] }
         },
         {
-            ida:    { local: "Atenas de Río Cuarto", clL: "atenasrc", visitante: "San Martín de Formosa", clV: "sanmartinfsa", gl: null, gv: null, goles_l: [], goles_v: [] },
+            ida:    { local: "Atenas de Río Cuarto", clL: "atenasrc", visitante: "San Martín de Formosa", clV: "sanmartinfsa", gl: 0, gv: 1, goles_l: [], goles_v: [] },
             vuelta: { local: "San Martín de Formosa", clL: "sanmartinfsa", visitante: "Atenas de Río Cuarto", clV: "atenasrc", gl: null, gv: null, goles_l: [], goles_v: [] }
         }
     ]
