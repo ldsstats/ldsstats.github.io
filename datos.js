@@ -2087,7 +2087,7 @@ function generarHome() {
             {l:"Bella Vista (Sub 14)", v:"Galácticas", hora:"14:40", gl:2, gv:0, claseL:"bellavista", claseV:"aconfirmar",nota:"Semifinales"},
             {l:"Bella Vista Verde (Sub 12)", v:"Bella Vista Blanco (Sub 12)", hora:"14:40", gl:1, gv:5, claseL:"bellavista", claseV:"bellavista",nota:"Semifinales"},
             {l:"Bella Vista Blanco (Sub 12)", v:"Reconquista CF", hora:"16:20", gl:1, gv:5, claseL:"bellavista", claseV:"ACONFIRMAR",nota:"Final"},
-            {l:"Bella Vista (Sub 14)", v:"Arenas", hora:"14:40", gl:0, gv:1, claseL:"bellavista", claseV:"aconfirmar",nota:"Final"},
+            {l:"Bella Vista (Sub 14)", v:"Arenas", hora:"14:40", gl:1, gv:0, claseL:"bellavista", claseV:"aconfirmar",nota:"Final"},
             ]},
             { nombre: "FEDERAL A | CUARTOS DE FINAL | IDA", cat: "federala", torLink: "federala", noAutoResult: true, partidos: [
             {l:"Olimpo", v:"Gimnasia de Chivilcoy", hora:"15:30", gl:2, gv:1, claseL:"olimpo", claseV:"gimnasiachivilcoy"},
@@ -24345,6 +24345,10 @@ function generarSabalito() {
                 style="font-size:9px;padding:3px 10px;border:1px solid #1a4a2e;border-radius:10px;cursor:pointer;background:${vistaSabalito==='playoffs'?'#1a4a2e':'#fff'};color:${vistaSabalito==='playoffs'?'#fff':'#1a4a2e'};">Copa de Plata</button>
         </div>`;
         if (vistaSabalito === 'playoffs') {
+        html += `<div style="background:#111;color:#ffd700;text-align:center;padding:10px 12px;display:flex;align-items:center;justify-content:center;gap:10px;border-bottom:2px solid #ffd700;">
+            <img src="Bella_Vista.png" style="width:36px;height:36px;object-fit:contain;border-radius:50%;background:#fff;">
+            <span style="font-size:13px;font-weight:bold;letter-spacing:0.5px;">🏆 BELLA VISTA SUB 14 — GANADOR DE LA COPA DE PLATA</span>
+        </div>`;
             html += _renderBracketSabalito(BD_SABALITO_PLAYOFFS.sub14);
         } else {
             html += renderZonaSabalito(BD_SABALITO.sub14.zonaD, 'ZONA D');
@@ -24516,7 +24520,7 @@ const BD_SABALITO_PLAYOFFS = {
             { local: "Bella Vista", visitante: "Galácticas", gl: 2, gv: 0 },
             { local: "Formadores FC", visitante: "Arenas", gl: 1, gv: 2 },
         ],
-        final: { local: "Bella Vista", visitante: "Arenas", gl: 0, gv: 1 }
+        final: { local: "Bella Vista", visitante: "Arenas", gl: 1, gv: 0 }
     }
 };
 
