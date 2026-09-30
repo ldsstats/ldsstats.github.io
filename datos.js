@@ -1974,12 +1974,15 @@ function generarHome() {
             { nombre: "SENIOR | CLAUSURA | FECHA 4", cat: "seniorclausura", torLink: "seniorclausura", noAutoResult: true, partidos: [
             {l:"Bella Vista", v:"Pacífico BB", hora:"20:00", gl:null, gv:null, claseL:"bellavista", claseV:"pacificobb",nota:"Empleados de Comercio"},
             {l:"Tiro Federal", v:"Sansinena", hora:"21:00", gl:null, gv:null, claseL:"tirofederal", claseV:"sansinena",nota:"Huracán"},
-            {l:"Comercial", v:"San Francisco", hora:"21:00", gl:null, gv:null, claseL:"huracan", claseV:"sanfrancisco",nota:"Comercial"},
+            {l:"Comercial", v:"San Francisco", hora:"21:00", gl:null, gv:null, claseL:"comercial", claseV:"sanfrancisco",nota:"Comercial"},
             {l:"Sporting", v:"Huracán", hora:"21:00", gl:null, gv:null, claseL:"sporting", claseV:"huracan",nota:"Sporting"},
             {l:"Pacífico C", v:"Libertad", hora:"21:30", gl:null, gv:null, claseL:"pacificoc", claseV:"libertad",nota:"Empleados de Comercio"},
             ]},
             { nombre: "SUB 15 FEM | FECHA 21", cat: "sub15fem", torLink: "sub15fem", noAutoResult: true, partidos: [
             {l:"Bella Vista", v:"San Francisco", hora:"18:30", gl:null, gv:null, claseL:"bellavista", claseV:"sanfrancisco"},
+            ]},
+            { nombre: "FUTSAL | CLAUSURA | FECHA 10", cat: "futsal", torLink: "futsal", noAutoResult: true, partidos: [
+            {l:"Comercial", v:"La Esperanza", hora:"22:00", gl:null, gv:null, claseL:"comercial", claseV:"laesperanza",nota:"en cancha de Comercial"},
             ]},
             { nombre: "TORNEO DE SELECCIONES SUB-15", cat: "torneoseleccion15", torLink: "torneoseleccion15", noAutoResult: true, partidos: [
             {l:"Pehuajó", v:"Tres Arroyos", hora:"15:00", gl:null, gv:null, claseL:"pehuajo", claseV:"tresarroyos",nota:"<b>Cuartos de final - Partido de ida</b>"},
@@ -1991,6 +1994,18 @@ function generarHome() {
             {l:"La Plata", v:"San Jorge", hora:"16:00", gl:null, gv:null, claseL:"laplata", claseV:"sanjorge",nota:"<b>Partido de Ida | Cuartos de final | Fase final</b>"},
             {l:"Albardón", v:"Tupungato", hora:"16:30", gl:null, gv:null, claseL:"albardon", claseV:"tupungato",nota:"<b>Ida: 2-3 | Partido por la segunda ronda regional</b>"},
             {l:"Jujuy", v:"Catamarca", hora:"18:00", gl:null, gv:null, claseL:"jujuy", claseV:"catamarcapais",nota:"<b>Partido de Ida | Cuartos de final | Fase final</b>"},
+            ]},
+       ]},
+     { id: "2026-10-01", label: "JUE 01/10", torneos: [
+            { nombre: "FUTSAL | CLAUSURA | FECHA 10", cat: "futsal", torLink: "futsal", noAutoResult: true, partidos: [
+            {l:"Liniers", v:"Villa Mitre", hora:"22:00", gl:null, gv:null, claseL:"liniers", claseV:"villamitre",nota:"en cancha de Don Bosco"},
+            {l:"Los 3 Chiflados", v:"La Estación", hora:"22:00", gl:null, gv:null, claseL:"los3chiflados", claseV:"laestacion",nota:"en cancha de La Curtiembre"},
+            ]},
+       ]},
+     { id: "2026-10-02", label: "VIE 02/10", torneos: [
+            { nombre: "FUTSAL | CLAUSURA | FECHA 10", cat: "futsal", torLink: "futsal", noAutoResult: true, partidos: [
+            {l:"Petroquímicos", v:"Pacífico BB", hora:"22:00", gl:null, gv:null, claseL:"petroquimicos", claseV:"pacificobb",nota:"en cancha de Petroquímicos"},
+            {l:"San Francisco", v:"Tiro Federal", hora:"22:30", gl:null, gv:null, claseL:"sanfrancisco", claseV:"tirofederal",nota:"en cancha de Tiro Federal"},
             ]},
        ]},
     ];
