@@ -1306,7 +1306,7 @@ BD_FIXTURES.oficial.reserva.push(
     ]},
     { fecha: 9, partidos: [
         {l:"Liniers",   v:"Bella Vista",   gl:1, gv:2},
-        {l:"Sporting",   v:"Huracán",   gl:null, gv:null},
+        {l:"Sporting",   v:"Huracán",   gl:2, gv:0},
         {l:"Libertad",   v:"San Francisco",   gl:null, gv:null},
         {l:"Villa Mitre",   v:"La Armonía",   gl:null, gv:null}
     ]},
@@ -1986,6 +1986,11 @@ function generarHome() {
             {l:"Trenque Lauquen", v:"<b>Liga del Sur</b>", hora:"16:00", gl:null, gv:null, claseL:"trenquelauquen", claseV:"ldsbb",nota:"<b>Cuartos de final - Ida: 0-0</b>"},
             {l:"Gral. Madariaga", v:"Azul", hora:"19:00", gl:null, gv:null, claseL:"madariaga", claseV:"azul",nota:"<b>Cuartos de final - Ida: 1-2</b>"},
             {l:"Tandil", v:"Dolores", hora:"19:00", gl:null, gv:null, claseL:"tandil", claseV:"dolores",nota:"<b>Cuartos de final - Ida: 2-1</b>"},
+            ]},
+            { nombre: "COPA PAÍS (LIGA DEL SUR)", cat: "copapais", torLink: "copapais", noAutoResult: true, partidos: [
+            {l:"La Plata", v:"San Jorge", hora:"16:00", gl:null, gv:null, claseL:"laplata", claseV:"sanjorge",nota:"<b>Partido de Ida | Cuartos de final | Fase final</b>"},
+            {l:"Albardón", v:"Tupungato", hora:"16:30", gl:null, gv:null, claseL:"albardon", claseV:"tupungato",nota:"<b>Ida: 2-3 | Partido por la segunda ronda regional</b>"},
+            {l:"Jujuy", v:"Catamarca", hora:"18:00", gl:null, gv:null, claseL:"jujuy", claseV:"catamarcapais",nota:"<b>Partido de Ida | Cuartos de final | Fase final</b>"},
             ]},
        ]},
     ];
@@ -3075,7 +3080,6 @@ const BD_EQUIPOS_FUERA = [
     { anio: "2022-23", equipo: "Sporting", clase: "sporting", torneo: "Regional Amateur",                    instancia: "1ra Ronda" },
     { anio: "2023-24", equipo: "Sporting", clase: "sporting", torneo: "Regional Amateur",                    instancia: "1ra Ronda" },
     { anio: "2024-25", equipo: "Sporting", clase: "sporting", torneo: "Regional Amateur",                    instancia: "4° Ronda Bonaerense Pampeana Sur" },
-    { anio: "2025-26", equipo: "Sporting", clase: "sporting", torneo: "Regional Amateur",                    instancia: "1ra Ronda" },
     { anio: "2025-26", equipo: "Sporting", clase: "sporting", torneo: "Regional Amateur",                    instancia: "1ra Ronda" },
     // Sansinena
     { anio: 2015,    equipo: "Sansinena", clase: "sansinena", torneo: "Federal C 2015",                  instancia: "Campeón" },
@@ -16347,6 +16351,7 @@ const BD_H2H = {
         { fecha: "Fecha 2 - Clausura 2026", torneo: "reserva_promocional", l: "Rosario PB", v: "Pacífico BB", gl: 2, gv: 0 },
         { fecha: "Fecha 9 - Clausura 2026 - 27 ago", torneo: "promocional", l: "Pacífico BB", v: "Rosario PB", gl: 0, gv: 1, goles_l: [], goles_v: ["Matías Otero"] },
         { fecha: "Fecha 9 - Clausura 2026", torneo: "reserva_promocional", l: "Pacífico BB", v: "Rosario PB", gl: 2, gv: 2 },
+        { fecha: "Fecha 9 - Clausura 2026", torneo: "reserva_oficial", l: "Sporting", v: "Huracán", gl: 2, gv: 0 },
     ],
     "Dublin|Pacífico (C)": [
         { fecha: "Fecha 2 - Apertura 2026 - 22 mar 2026", torneo: "promocional", l: "Pacífico (C)", v: "Dublin", gl: 1, gv: 2, goles_l: ["Gianni Ferrari"], goles_v: ["Tomás Coronel","Matías San Martín"] },
@@ -17705,12 +17710,12 @@ function generarReserva(cat) {
     const BD_RESERVA_POS = {
         'oficial':    [
                        {n:"Villa Mitre",   cl:"villamitre",   pj:8, pg:6, pe:1, pp:1, gf:20, gc:12, pts:19},
+                       {n:"Sporting <b>(A)</b>",      cl:"sporting",     pj:9, pg:5, pe:2, pp:2, gf:13, gc:12, pts:17},
                        {n:"Bella Vista",   cl:"bellavista",   pj:9, pg:5, pe:2, pp:2, gf:15, gc:12, pts:17},
-                       {n:"Sporting <b>(A)</b>",      cl:"sporting",     pj:8, pg:4, pe:2, pp:2, gf:11, gc:12, pts:14},
                        {n:"Liniers",       cl:"liniers",      pj:9, pg:4, pe:1, pp:4, gf:12, gc:8, pts:13},
                        {n:"La Armonía",    cl:"laarmonia",    pj:8, pg:3, pe:3, pp:2, gf:14, gc:12, pts:12},
-                       {n:"San Francisco", cl:"sanfrancisco", pj:8, pg:2, pe:10, pp:5, gf:14, gc:16, pts:7},
-                       {n:"Huracán",       cl:"huracan",      pj:8, pg:1, pe:3, pp:4, gf:11, gc:19, pts:6},
+                       {n:"San Francisco", cl:"sanfrancisco", pj:8, pg:2, pe:1, pp:5, gf:14, gc:16, pts:7},
+                       {n:"Huracán",       cl:"huracan",      pj:9, pg:1, pe:3, pp:5, gf:11, gc:21, pts:6},
                        {n:"Libertad",      cl:"libertad",     pj:8, pg:1, pe:1, pp:6, gf:8, gc:14, pts:4}],
         'promocional':[
                        {n:"Sansinena",           cl:"sansinena",        pj:7, pg:5, pe:1, pp:1, gf:16, gc:7, pts:16},
@@ -17783,7 +17788,7 @@ const BD_POS_SUB = {
         {nombre:"Mac Allister <b>(C)</b>", clase:"macallister", pj:12,pg:10,pe:0,pp:2,gf:33,gc:7,pts:30},
         {nombre:"Balompié <b>(X)</b>",     clase:"balompie",    pj:12,pg:5,pe:4,pp:3,gf:23,gc:18,pts:19},
         {nombre:"Kimberley <b>(X)</b>",    clase:"kimberley",   pj:12,pg:5,pe:2,pp:5,gf:18,gc:14,pts:17},
-        {nombre:"Alvarado <b>(X)</b>",     clase:"alvarado",    pj:12,pg:4,pe:0,pp:7,gf:15,gc:27,pts:12},
+        {nombre:"Alvarado <b>(X)</b>",     clase:"alvarado",    pj:12,pg:4,pe:0,pp:8,gf:15,gc:27,pts:12},
         {nombre:"Olimpo <b>(X)</b>",       clase:"olimpo",      pj:12,pg:3,pe:0,pp:9,gf:17,gc:34,pts:9},
         {nombre:"Santamarina <b>(X)</b>",  clase:"santamarina", pj:12,pg:0,pe:1,pp:11,gf:5,gc:40,pts:1}
     ],
@@ -19090,13 +19095,6 @@ const BD_COPA_PAIS = {
 };
 const BD_COPA_PAIS_SEGUNDA_RONDA = [
     {
-        titulo: "ZONA PAMPEANA SUR/PATAGONIA",
-        tipo: "final",
-        partidos: [
-            { ronda: "2° Ronda (Partido único)", l: "Liga del Sur", v: "Trelew", fecha: "Miércoles 7 de octubre", gl: null, gv: null, goles_l: [], goles_v: [] },
-        ]
-    },
-    {
         titulo: "ZONA NORTE",
         tipo: "final",
         partidos: [
@@ -19117,7 +19115,7 @@ const BD_COPA_PAIS_SEGUNDA_RONDA = [
         tipo: "final",
         partidos: [
             { ronda: "2° Ronda (ida)", l: "Tupungato", v: "Albardón", fecha: "Miércoles 23 de septiembre", gl: 3, gv: 2, goles_l: [], goles_v: [] },
-            { ronda: "2° Ronda (vuelta)", l: "Albardón", v: "Tupungato", fecha: "", gl: null, gv: null, goles_l: [], goles_v: [] },
+            { ronda: "2° Ronda (vuelta)", l: "Albardón", v: "Tupungato", fecha: "Miércoles 30 de septiembre", gl: null, gv: null, goles_l: [], goles_v: [] },
         ]
     },
     {
@@ -19147,6 +19145,28 @@ const BD_COPA_PAIS_TERCERA_RONDA = [
             { ronda: "3° Ronda (vuelta)", l: "<s>San Nicolás</s>", v: "<b>La Plata</b>", fecha: "Miércoles 16 de septiembre", gl: 1, gv: 1, pen_l:1, pen_v:3, goles_l: [], goles_v: [] },
         ]
     }
+];
+
+const BD_COPA_PAIS_CUARTOS = [
+    {
+        titulo: "CUARTOS DE FINAL",
+        tipo: "final",
+        partidos: [
+            { ronda: "Partido único", l: "Liga del Sur", v: "Trelew", fecha: "Miércoles 07 de octubre", gl: null, gv: null, goles_l: [], goles_v: [] },
+            { ronda: "Partido de Ida", l: "Jujuy", v: "Catamarca", fecha: "Miércoles 30 de octubre", gl: null, gv: null, goles_l: [], goles_v: [], separador: true },
+            { ronda: "Partido de Ida", l: "La Plata", v: "San Jorge", fecha: "Miércoles 30 de octubre", gl: null, gv: null, goles_l: [], goles_v: [], separador: true },
+        ]
+    },
+];
+
+const BD_COPA_PAIS_SEMIFINALES = [
+    {
+        titulo: "SEMIFINALES",
+        tipo: "final",
+        partidos: [
+            { ronda: "", l: "Ganador Región Cuyo", v: "A confirmar", fecha: "", gl: null, gv: null, goles_l: [], goles_v: [] },
+        ]
+    },
 ];
 
 let rondaCopaPais = 'segunda';
@@ -19237,6 +19257,10 @@ function generarCopaPais() {
             style="font-size:10px;padding:4px 12px;border:1px solid #1a4a2e;border-radius:12px;cursor:pointer;font-weight:bold;background:${rondaCopaPais==='segunda'?'#1a4a2e':'#fff'};color:${rondaCopaPais==='segunda'?'#fff':'#1a4a2e'};">Segunda Ronda Regional</button>
         <button onclick="cambiarRondaCopaPais('tercera')"
             style="font-size:10px;padding:4px 12px;border:1px solid #1a4a2e;border-radius:12px;cursor:pointer;font-weight:bold;background:${rondaCopaPais==='tercera'?'#1a4a2e':'#fff'};color:${rondaCopaPais==='tercera'?'#fff':'#1a4a2e'};">Tercera Ronda Regional</button>
+        <button onclick="cambiarRondaCopaPais('cuartos')"
+            style="font-size:10px;padding:4px 12px;border:1px solid #1a4a2e;border-radius:12px;cursor:pointer;font-weight:bold;background:${rondaCopaPais==='cuartos'?'#1a4a2e':'#fff'};color:${rondaCopaPais==='cuartos'?'#fff':'#1a4a2e'};">Cuartos de final - Ronda Nacional</button>
+        <button onclick="cambiarRondaCopaPais('semifinales')"
+            style="font-size:10px;padding:4px 12px;border:1px solid #1a4a2e;border-radius:12px;cursor:pointer;font-weight:bold;background:${rondaCopaPais==='semifinales'?'#1a4a2e':'#fff'};color:${rondaCopaPais==='cuartos'?'#fff':'#1a4a2e'};">Semifinales - Ronda Nacional</button>
     </div>`;
     if (rondaCopaPais === 'segunda') {
         BD_COPA_PAIS_SEGUNDA_RONDA.forEach(zona => {
@@ -19251,6 +19275,28 @@ function generarCopaPais() {
     }
     if (rondaCopaPais === 'tercera') {
         BD_COPA_PAIS_TERCERA_RONDA.forEach(zona => {
+            html += `<div style="margin-top:16px;">`;
+            html += `<div class="header-t">${zona.titulo}</div>`;
+            html += `<table>`;
+            zona.partidos.forEach(p => { html += renderPartido(p); });
+            html += `</table>`;
+            html += `</div><div style="height:12px;background:#f0f4f0;border-top:1px solid #ddd;border-bottom:1px solid #ddd;margin:8px 0;"></div>`;
+        });
+        return html;
+    }
+    if (rondaCopaPais === 'cuartos') {
+        BD_COPA_PAIS_CUARTOS.forEach(zona => {
+            html += `<div style="margin-top:16px;">`;
+            html += `<div class="header-t">${zona.titulo}</div>`;
+            html += `<table>`;
+            zona.partidos.forEach(p => { html += renderPartido(p); });
+            html += `</table>`;
+            html += `</div><div style="height:12px;background:#f0f4f0;border-top:1px solid #ddd;border-bottom:1px solid #ddd;margin:8px 0;"></div>`;
+        });
+        return html;
+    }
+    if (rondaCopaPais === 'semifinales') {
+        BD_COPA_PAIS_SEMIFINALES.forEach(zona => {
             html += `<div style="margin-top:16px;">`;
             html += `<div class="header-t">${zona.titulo}</div>`;
             html += `<table>`;
@@ -22159,8 +22205,8 @@ const BD_POSICIONES = {
         ],
         clausura: [
             { nombre: "Huracán <b>(A)</b>",       clase: "huracan",      pj:9, pg:3, pe:6, pp:0, gf:8, gc:5,  pts:15 },
-            { nombre: "La Armonía",    clase: "laarmonia",    pj:9, pg:3, pe:3, pp:3, gf:7, gc:8,  pts:12 },
             { nombre: "San Francisco", clase: "sanfrancisco", pj:9, pg:3, pe:5, pp:1, gf:9, gc:7,  pts:14 },
+            { nombre: "La Armonía",    clase: "laarmonia",    pj:9, pg:3, pe:3, pp:3, gf:7, gc:8,  pts:12 },
             { nombre: "Sporting",      clase: "sporting",     pj:9, pg:2, pe:5, pp:2, gf:6, gc:5,  pts:11 },
             { nombre: "Bella Vista",   clase: "bellavista",   pj:9, pg:2, pe:5, pp:2, gf:8, gc:7,  pts:11 },
             { nombre: "Villa Mitre",   clase: "villamitre",   pj:9, pg:2, pe:5, pp:2, gf:7, gc:11,  pts:11 },
