@@ -1986,7 +1986,7 @@ function generarHome() {
             ]},
             { nombre: "TORNEO DE SELECCIONES SUB-15", cat: "torneoseleccion15", torLink: "torneoseleccion15", noAutoResult: true, partidos: [
             {l:"Pehuajó", v:"Tres Arroyos", hora:"15:00", gl:null, gv:null, claseL:"pehuajo", claseV:"tresarroyos",nota:"<b>Cuartos de final - Partido de ida</b>"},
-            {l:"Trenque Lauquen", v:"<b>Liga del Sur</b>", hora:"16:00", gl:null, gv:null, claseL:"trenquelauquen", claseV:"ldsbb",nota:"<b>Cuartos de final - Ida: 0-0</b>"},
+            {l:"Trenque Lauquen", v:"<b>Liga del Sur</b>", hora:"16:00", gl:0, gv:0, pen_l:2, pen_v:1, claseL:"trenquelauquen", claseV:"ldsbb",nota:"<b>Cuartos de final - Ida: 0-0</b>"},
             {l:"Gral. Madariaga", v:"Azul", hora:"19:00", gl:null, gv:null, claseL:"madariaga", claseV:"azul",nota:"<b>Cuartos de final - Ida: 1-2</b>"},
             {l:"Tandil", v:"Dolores", hora:"19:00", gl:null, gv:null, claseL:"tandil", claseV:"dolores",nota:"<b>Cuartos de final - Ida: 2-1</b>"},
             ]},
@@ -24070,8 +24070,8 @@ const BD_FEDERAL_PLAYOFFS = {
 const BD_SELECCION15_PLAYOFFS = {
     cuartos: [
         {
-            ida:    { local: "Liga del Sur", clL: "ldsbb", visitante: "Trenque Lauquen", clV: "trenquelauquen", gl: 0, gv: 0, goles_l: [], goles_v: [] },
-            vuelta: { local: "Trenque Lauquen", clL: "trenquelauquen", visitante: "Liga del Sur", clV: "ldsbb", gl: null, gv: null, goles_l: [], goles_v: [] }
+            ida:    { local: "<s>Liga del Sur</s>", clL: "ldsbb", visitante: "<b>Trenque Lauquen</b>", clV: "trenquelauquen", gl: 0, gv: 0, goles_l: [], goles_v: [] },
+            vuelta: { local: "<b>Trenque Lauquen</b>", clL: "trenquelauquen", visitante: "<s>Liga del Sur</s>", clV: "ldsbb", gl: 0, gv: 0, pen_l:2, pen_v:1, goles_l: [], goles_v: [] }
         },
         {
             ida:    { local: "Dolores", clL: "dolores", visitante: "Tandil", clV: "tandil", gl: 1, gv: 2, goles_l: [], goles_v: [] },
