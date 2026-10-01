@@ -1394,7 +1394,7 @@ BD_FIXTURES.promocional.reserva.push(
     ]},
     { fecha: 9, partidos: [
         {l:"Tiro Federal",   v:"Olimpo", gl:3,   gv:1},
-        {l:"Comercial",      v:"Sansinena",          gl:null,   gv:null},
+        {l:"Comercial",      v:"Sansinena",          gl:2,   gv:2},
         {l:"Dublin", v:"Pacífico (C)",              gl:2,   gv:3},
         {l:"Pacífico BB",v:"Rosario PB",           gl:2,   gv:2}
     ]},
@@ -16438,6 +16438,7 @@ const BD_H2H = {
         { fecha: "Fecha 2 - Clausura 2026", torneo: "reserva_promocional", l: "Sansinena", v: "Comercial", gl: 4, gv: 1 },
         { fecha: "Clausura 2026 - Fecha 3", torneo: "senior", l: "Sansinena", v: "Comercial", gl: 2, gv: 1, goles_l: ["Sebastián Weidele (2)"], goles_v: ["Sebastián Aristi"] },
         { fecha: "Fecha 9 - Clausura 2026 - 26 ago", torneo: "promocional", l: "Comercial", v: "Sansinena", gl: 3, gv: 1, goles_l: ["Leandro Giordano","Joaquín Rachi","Alejo Gil"], goles_v: ["Mauricio Villalobos (e/c)"] },
+        { fecha: "Fecha 9 - Clausura 2026", torneo: "reserva_promocional", l: "Comercial", v: "Sansinena", gl: 2, gv: 2 },
     ],
     "Círculo Dep.|Villa Mitre": [
         { fecha: "Fecha 2 - Fase inicial - 29 mar 2026", torneo: "federala", l: "Villa Mitre", v: "Círculo Dep.", gl: 2, gv: 0, goles_l: ["Pablo Mujica","Marcos Escobar"], goles_v: [] },
@@ -17776,14 +17777,14 @@ function generarReserva(cat) {
                        {n:"Huracán",       cl:"huracan",      pj:9, pg:1, pe:3, pp:5, gf:11, gc:21, pts:6},
                        {n:"Libertad",      cl:"libertad",     pj:8, pg:1, pe:1, pp:6, gf:8, gc:14, pts:4}],
         'promocional':[
-                       {n:"Sansinena",           cl:"sansinena",        pj:7, pg:5, pe:1, pp:1, gf:16, gc:7, pts:16},
+                       {n:"Sansinena",           cl:"sansinena",        pj:8, pg:5, pe:2, pp:1, gf:18, gc:9, pts:17},
                        {n:"Olimpo <b>(A)</b>",              cl:"olimpo",           pj:8, pg:5, pe:1, pp:2, gf:13, gc:9, pts:16},
                        {n:"Rosario PB",          cl:"rosariopb",        pj:9, pg:5, pe:1, pp:3, gf:16, gc:14, pts:16},
                        {n:"Tiro Federal",        cl:"tirofederal",      pj:7, pg:4, pe:2, pp:1, gf:16, gc:6, pts:14},
                        {n:"Pacífico BB",         cl:"pacificobb",       pj:9, pg:4, pe:1, pp:4, gf:14, gc:13, pts:13},
                        {n:"Dublin",              cl:"dublin",           pj:7, pg:1, pe:3, pp:3, gf:8, gc:14, pts:6},
                        {n:"Pacífico (C)", cl:"pacificocabildo",  pj:8, pg:1, pe:1, pp:6, gf:12, gc:26, pts:4},
-                       {n:"Comercial",           cl:"comercial",        pj:6, pg:1, pe:0, pp:5, gf:7, gc:12, pts:3},],
+                       {n:"Comercial",           cl:"comercial",        pj:7, pg:1, pe:1, pp:5, gf:9, gc:14, pts:4},],
         'segundafemenino': [
             {n:"Liniers <b>(C)</b>",             cl:"liniers",         pj:17, pg:15, pe:2, pp:0, gf:65, gc:14, pts:47},
             {n:"San Francisco <b>(C)</b>",       cl:"sanfrancisco",    pj:17, pg:12, pe:2, pp:3, gf:34, gc:14, pts:38},
