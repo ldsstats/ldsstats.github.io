@@ -144,6 +144,7 @@
             <div class="bloque-titulo con-drop" onclick="toggleMenu(this)">JUV. EN LA ZONA <span class="flecha">▼</span></div>
             <div class="bloque-links">
                 <a href="#" onclick="navegar('sub131517')">Sub 13/15/17</a>
+                <a href="#" onclick="navegar('playoffssub13')">Playoffs Sub 13</a>
                 <a href="#" onclick="navegar('torneoseleccion15')">Torneo de Selección - Sub 15</a>
                 <a href="#" onclick="navegar('sabalito')">Torneo Sabalito 2026</a>
             </div>
@@ -518,6 +519,8 @@
                 cont.innerHTML = generarCampeones2026();
             } else if (estado.torneo === 'sub131517') {
                 cont.innerHTML = generarSub();
+            } else if (estado.torneo === 'playoffssub13') {
+                cont.innerHTML = generarPlayoffsSub13();
             } else if (estado.torneo === 'torneoseleccion15') {
                 cont.innerHTML = generarTorneoSeleccion15();
             } else if (estado.torneo === 'sabalito') {
