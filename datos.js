@@ -27,7 +27,8 @@ const BD_EQUIPOS = {
         { nombre: "Atenas de Río Cuarto", clase: "atenasrc" },
         { nombre: "Cipolletti", clase: "cipolletti" },
         { nombre: "Huracán Las Heras", clase: "huracanlh" },
-        { nombre: "Juventud Antoniana", clase: "jantoniana" }
+        { nombre: "Juventud Antoniana", clase: "jantoniana" },
+        { nombre: "Gimnasia de Chivilcoy", clase: "gimnasiachivilcoy" }
     ],
     femenino: [
         { nombre: "Sporting", clase: "sporting" }, { nombre: "Municipales", clase: "municipales" },
@@ -531,7 +532,7 @@ const BD_FIXTURES_FUTSAL_RESERVA = [
         {l:"Pacífico BB",     v:"Petroquímicos",     gl:null, gv:null},
         {l:"Tiro Federal",    v:"San Francisco",     gl:null, gv:null},
         {l:"Villa Mitre",     v:"Liniers",     gl:null, gv:null},
-        {l:"La Estación",     v:"Los 3 Chiflados",     gl:null, gv:null},
+        {l:"Los 3 Chiflados",     v:"La Estación",     gl:5, gv:2},
         {l:"Catamarca",       v:"Dep. Futsal",     gl:null, gv:null},
     ]},
     { fecha: 11, partidos: [
@@ -651,7 +652,7 @@ const BD_FIXTURES_FUTSAL = [
         {l:"Pacífico BB",     v:"Petroquímicos",     gl:null, gv:null},
         {l:"Tiro Federal",    v:"San Francisco",     gl:null, gv:null},
         {l:"Villa Mitre",     v:"Liniers",     gl:null, gv:null},
-        {l:"La Estación",     v:"Los 3 Chiflados",     gl:null, gv:null},
+        {l:"Los 3 Chiflados",     v:"La Estación",     gl:2, gv:4},
         {l:"Catamarca",       v:"Dep. Futsal",     gl:null, gv:null},
     ]},
     { fecha: 11, partidos: [
@@ -902,7 +903,7 @@ function crearFixtureSub(base) {
 const BD_FIXTURES_SUB = {
     sub13: crearFixtureSub(idaSub),
     sub15: crearFixtureSub(idaSub),
-    sub17: crearFixtureSub(idaSub)
+    sub17: crearFixtureSub(idaSub),
 };
 
 // Sub resultados F1
@@ -1942,7 +1943,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 26).partidos.forEach(p
 });
 
 
-let diaSeleccionadoHome = "2026-10-01"; 
+let diaSeleccionadoHome = "2026-10-02"; 
 let mercadoPasesAbierto = false;
 
 function toggleMercadoPasesHome() {
@@ -2004,7 +2005,7 @@ function generarHome() {
      { id: "2026-10-01", label: "JUE 01/10", torneos: [
             { nombre: "FUTSAL | CLAUSURA | FECHA 10", cat: "futsal", torLink: "futsal", noAutoResult: true, partidos: [
             {l:"Liniers", v:"Villa Mitre", hora:"22:00", gl:null, gv:null, claseL:"liniers", claseV:"villamitre",nota:"en cancha de Don Bosco"},
-            {l:"Los 3 Chiflados", v:"La Estación", hora:"22:00", gl:null, gv:null, claseL:"los3chiflados", claseV:"laestacion",nota:"en cancha de La Curtiembre"},
+            {l:"Los 3 Chiflados", v:"La Estación", hora:"22:00", gl:2, gv:4, claseL:"los3chiflados", claseV:"laestacion",nota:"en cancha de La Curtiembre"},
             ]},
        ]},
      { id: "2026-10-02", label: "VIE 02/10", torneos: [
@@ -17298,6 +17299,8 @@ const BD_H2H = {
         { fecha: "Apertura 2026 - Fecha 10", torneo: "futsal", l: "La Estación", v: "Los 3 Chiflados", gl: 3, gv: 3 },
         { fecha: "Apertura 2026 - Fecha 10", torneo: "futsalreserva", l: "La Estación", v: "Los 3 Chiflados", gl: 0, gv: 3 },
         { fecha: "Apertura 2026 - Semifinal", torneo: "futsal", l: "La Estación", v: "Los 3 Chiflados", gl: 2, gv: 2 },
+        { fecha: "Clausura 2026 - Fecha 10", torneo: "futsal", l: "Los 3 Chiflados", v: "La Estación", gl: 5, gv: 2 },
+        { fecha: "Clausura 2026 - Fecha 10", torneo: "futsalreserva", l: "Los 3 Chiflados", v: "La Estación", gl: 2, gv: 4 },
     ],
     "La Estación|Villa Mitre": [
         { fecha: "Apertura 2026 - Fecha 13", torneo: "futsal", l: "Villa Mitre", v: "La Estación", gl: 6, gv: 3 },
@@ -17931,11 +17934,24 @@ const BD_GOL_SUB = {
     ]
 };
 
+const BD_SUB13_PLAYOFFS = {
+    cuartos: [
+        { local: "Villa Mitre", clL: "villamitre", visitante: "Sarmiento de Junín", clV: "sarmientojunin", gl: null, gv: null },
+        { local: "Gimnasia y Tiro", clL: "gimnasiaytiro", visitante: "Desamparados", clV: "desamparados", gl: null, gv: null },
+        { local: "Dep. Maipú", clL: "depmaipu", visitante: "Atlético Tucumán", clV: "atltucuman", gl: null, gv: null },
+        { local: "Boca Unidos", clL: "bocaunidos", visitante: "Rosario Central", clV: "rosariocentral", gl: null, gv: null },
+        { local: "Unión de Santa Fe", clL: "unionsf", visitante: "San Martín de Formosa", clV: "sanmartinfsa", gl: null, gv: null },
+        { local: "Academia Mascherano", clL: "mascherano", visitante: "Mac Allister", clV: "macallister", gl: null, gv: null },
+        { local: "CAI", clL: "cai", visitante: "Maronese", clV: "maronese", gl: null, gv: null },
+        { local: "Independiente NQN", clL: "indeptenqn", visitante: "JJ Moreno", clV: "jjmoreno", gl: null, gv: null }
+    ]
+};
+
 function generarSub() {
     const categorias = [
         { key: 'sub13', label: 'SUB-13' },
         { key: 'sub15', label: 'SUB-15' },
-        { key: 'sub17', label: 'SUB-17' }
+        { key: 'sub17', label: 'SUB-17' },
     ];
 
     let html = `<div class="header-t">FEDERAL JUVENIL — SUB 13/15/17</div>
@@ -17964,6 +17980,14 @@ function generarSub() {
             <span class="sub-cat-arrow" id="arr-${cat.key}">▶</span>
         </div>
         <div class="sub-cat-body" id="body-${cat.key}">`;
+        if (cat.key === 'sub13') {
+            html += `
+<div onclick="document.getElementById('contenido').innerHTML=mostrarSub13Playoffs()"
+    style="background:#7b1a1a;color:#fff;text-align:center;padding:8px 10px;
+    font-size:11px;font-weight:bold;cursor:pointer;border-bottom:2px solid #f0a500;">
+    🏆 PLAYOFFS
+</div>`;
+        }
 
         // Nav fechas
         html += `<div class="nav-fechas">`;
@@ -18049,11 +18073,48 @@ function generarSub() {
     return html;
 }
 
+function mostrarSub13Playoffs() {
+    let html = `<div class="header-t">SUB-13 — PLAYOFFS</div>`;
+
+    html += `
+        <div style="background:#111;color:#ffd700;text-align:center;
+        padding:10px 12px;border-bottom:2px solid #ffd700;">
+            <span style="font-size:13px;font-weight:bold;letter-spacing:0.5px;">
+                🏆 SUB-13 — PLAYOFFS
+            </span>
+        </div>`;
+
+    html += `
+        <div style="padding:8px;background:#f9f9f9;
+        border-bottom:1px solid #ddd;">
+            <button onclick="document.getElementById('contenido').innerHTML=generarSub()"
+                style="font-size:10px;padding:5px 12px;
+                border:1px solid #1a4a2e;border-radius:12px;
+                cursor:pointer;background:#fff;color:#1a4a2e;font-weight:bold;">
+                ← Volver a Sub-13
+            </button>
+        </div>`;
+
+    html += `<div class="header-t" style="font-size:11px;background:#2c6e49;">
+        CUARTOS DE FINAL
+    </div>`;
+
+    html += `<table>`;
+
+    BD_SUB13_PLAYOFFS.cuartos.forEach(p => {
+        html += _renderPartidoPlayoff(p, 'Pendiente');
+    });
+
+    html += `</table>`;
+
+    return html;
+}
+
 
 const BD_POS_FUTSAL = {
     principal: [
-        {n:"La Estación <b>(A)</b>",     cl:"laestacion",    pj:9,pg:9,pe:0,pp:0,gf:40, gc:14, pts:27},
-        {n:"Los 3 Chiflados <b>(*)</b>", cl:"los3chiflados",    pj:9,pg:7,pe:1,pp:1,gf:36, gc:12, pts:25},
+        {n:"La Estación <b>(A)</b>",     cl:"laestacion",    pj:10,pg:10,pe:0,pp:0,gf:44, gc:16, pts:30},
+        {n:"Los 3 Chiflados <b>(*)</b>", cl:"los3chiflados",    pj:10,pg:7,pe:1,pp:2,gf:38, gc:16, pts:25},
         {n:"La Esperanza",    cl:"laesperanza",    pj:10,pg:8,pe:1,pp:1,gf:35, gc:20, pts:25},
         {n:"Comercial",       cl:"comercial",    pj:9,pg:8,pe:0,pp:1,gf:37, gc:21, pts:24},
         {n:"Villa Mitre",     cl:"villamitre",    pj:8,pg:5,pe:1,pp:2,gf:36, gc:29, pts:16},
@@ -18068,10 +18129,10 @@ const BD_POS_FUTSAL = {
         {n:"<s>Huracán</s> <b>(-)</b>",         cl:"huracan",    pj:0,pg:0,pe:0,pp:0,gf:0, gc:0, pts:0}
     ],
     reserva: [
-        {n:"Los 3 Chiflados <b>(A)</b>", cl:"los3chiflados",    pj:9,pg:8,pe:1,pp:0,gf:48, gc:13, pts:25},
+        {n:"Los 3 Chiflados <b>(A)</b>", cl:"los3chiflados",    pj:10,pg:9,pe:1,pp:0,gf:53, gc:15, pts:28},
         {n:"La Esperanza",    cl:"laesperanza",    pj:10,pg:7,pe:2,pp:1,gf:32, gc:17, pts:23},
         {n:"Liniers",         cl:"liniers",    pj:9,pg:7,pe:0,pp:2,gf:48, gc:23, pts:21},
-        {n:"La Estación",     cl:"laestacion",    pj:9,pg:7,pe:0,pp:2,gf:35, gc:20, pts:21},
+        {n:"La Estación",     cl:"laestacion",    pj:10,pg:7,pe:0,pp:3,gf:37, gc:25, pts:21},
         {n:"Villa Mitre",     cl:"villamitre",    pj:8,pg:6,pe:0,pp:2,gf:34, gc:21, pts:18},
         {n:"Petroquímicos",   cl:"petroquimicos",    pj:9,pg:5,pe:1,pp:3,gf:34, gc:27, pts:16},
         {n:"Dublin",          cl:"dublin",    pj:9,pg:4,pe:2,pp:3,gf:30, gc:29, pts:14},
@@ -18659,7 +18720,7 @@ const BD_SENIOR_APERTURA = [
 ];
 const BD_SENIOR_CLAUSURA = [
     { n: "Libertad",      cl: "libertad",     pj:4, pg:3, pe:0, pp:1, gf:7, gc:3, pts:9 },
-    { n: "Pacífico (C)",  cl: "pacificoc",    pj:4, pg:3, pe:0, pp:1, gf:8, gc:7, pts:9 },
+{ n: "Pacífico (C)",  mostrar: "Pacífico (C) <b>(A)</b>", cl: "pacificoc",    pj:4, pg:3, pe:0, pp:1, gf:8, gc:7, pts:9 },
     { n: "Pacífico BB",   cl: "pacificobb",   pj:4, pg:3, pe:0, pp:1, gf:10, gc:9, pts:9 },
     { n: "Huracán",       cl: "huracan",      pj:4, pg:2, pe:1, pp:1, gf:11, gc:8, pts:7 },
     { n: "Sansinena",     cl: "sansinena",    pj:4, pg:2, pe:1, pp:1, gf:7, gc:5, pts:7 },
@@ -19013,7 +19074,7 @@ function generarSeniorClausura() {
         const cl = i < 2 ? 'p-playoff' : 'p-desc';
         html += `<tr class="${cl}">
             <td class="c-pos">${i+1}</td>
-            <td class="c-equipo"><div class="escudo ${e.cl}" style="display:inline-block;vertical-align:middle;margin-right:4px;"></div>${e.n}</td>
+            <td class="c-equipo"><div class="escudo ${e.cl}" style="display:inline-block;vertical-align:middle;margin-right:4px;"></div>${e.mostrar || e.n}</td>
             <td class="c-stat">${e.pj}</td><td class="c-stat">${e.pg}</td><td class="c-stat">${e.pe}</td>
             <td class="c-stat">${e.pp}</td><td class="c-stat">${e.gf}</td><td class="c-stat">${e.gc}</td>
             <td class="c-stat">${dif > 0 ? '+'+dif : dif}</td><td class="c-stat"><b>${e.pts}</b></td>
@@ -22093,7 +22154,7 @@ function generarPerfilJugador(jugador, equipo, origen, totalOverride, catPerfil)
 
         const todosPartidos = fixtures.flatMap(f => f.partidos);
 
-        const playoffsBD = { oficial: BD_OFICIAL_PLAYOFFS, promocional: BD_PROMOCIONAL_PLAYOFFS, femenino: BD_FEMENINO_PLAYOFFS };
+const playoffsBD = { oficial: BD_OFICIAL_PLAYOFFS, promocional: BD_PROMOCIONAL_PLAYOFFS, femenino: BD_FEMENINO_PLAYOFFS, federala: { cuartos: BD_FEDERAL_PLAYOFFS.cuartos.flatMap(serie => [serie.ida, serie.vuelta]) } };
         const pd = playoffsBD[cat];
         if (pd) {
             [...(pd.octavos||[]), ...(pd.cuartos||[]), ...(pd.semifinales||[]), ...(pd.final?[pd.final]:[]), ...(pd.finalExtra?[pd.finalExtra]:[])]
@@ -24536,39 +24597,4 @@ function _renderBracketSabalito(bracket) {
     h += _renderCruceSabalito(bracket.final);
     h += `</table>`;
     return h;
-}
-
-const BD_PLAYOFFS_SUB13 = {
-    cuartos: [
-        { local: "A confirmar", clL: "aconfirmar", visitante: "A confirmar", clV: "aconfirmar", gl: null, gv: null },
-        { local: "A confirmar", clL: "aconfirmar", visitante: "A confirmar", clV: "aconfirmar", gl: null, gv: null },
-        { local: "A confirmar", clL: "aconfirmar", visitante: "A confirmar", clV: "aconfirmar", gl: null, gv: null },
-        { local: "A confirmar", clL: "aconfirmar", visitante: "A confirmar", clV: "aconfirmar", gl: null, gv: null },
-        { local: "A confirmar", clL: "aconfirmar", visitante: "A confirmar", clV: "aconfirmar", gl: null, gv: null },
-        { local: "A confirmar", clL: "aconfirmar", visitante: "A confirmar", clV: "aconfirmar", gl: null, gv: null },
-        { local: "A confirmar", clL: "aconfirmar", visitante: "A confirmar", clV: "aconfirmar", gl: null, gv: null },
-        { local: "A confirmar", clL: "aconfirmar", visitante: "A confirmar", clV: "aconfirmar", gl: null, gv: null },
-    ]
-};
-let etapaPlayoffsSub13 = 'cuartos';
-
-function generarPlayoffsSub13() {
-    const tabsHtml = `<div style="display:flex;gap:6px;padding:8px 8px 4px;background:#f9f9f9;border-bottom:1px solid #eee;">
-        <button onclick="etapaPlayoffsSub13='cuartos';document.getElementById('contenido').innerHTML=generarPlayoffsSub13()"
-            style="font-size:10px;padding:4px 12px;border:1px solid #1a4a2e;border-radius:12px;cursor:pointer;font-weight:bold;background:${etapaPlayoffsSub13==='cuartos'?'#1a4a2e':'#fff'};color:${etapaPlayoffsSub13==='cuartos'?'#fff':'#1a4a2e'};">Cuartos de final</button>
-    </div>`;
-
-    let html = `<div class="header-t" style="font-size:14px;text-align:center;padding:10px;">PLAYOFFS — SUB 13</div>`;
-    html += tabsHtml;
-    html += `<div class="header-t" style="font-size:11px;background:#333;">CUARTOS DE FINAL</div><table>`;
-    BD_PLAYOFFS_SUB13.cuartos.forEach(p => {
-        const res = p.gl !== null ? `${p.gl} - ${p.gv}` : 'vs';
-        html += `<tr>
-            <td class="c-loc"><span style="direction:ltr;display:inline-flex;align-items:center;justify-content:flex-end;width:100%;">${p.local} <div class="escudo ${p.clL}" style="display:inline-block;vertical-align:middle;margin-left:4px;"></div></span></td>
-            <td class="c-res">${res}</td>
-            <td class="c-vis"><div class="escudo ${p.clV}" style="display:inline-block;vertical-align:middle;margin-right:4px;"></div> ${p.visitante}</td>
-        </tr>`;
-    });
-    html += `</table>`;
-    return html;
 }
