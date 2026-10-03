@@ -1943,7 +1943,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 26).partidos.forEach(p
 });
 
 
-let diaSeleccionadoHome = "2026-10-03"; 
+let diaSeleccionadoHome = "2026-10-04"; 
 let mercadoPasesAbierto = false;
 
 function toggleMercadoPasesHome() {
@@ -2054,6 +2054,7 @@ function generarHome() {
             {l:"Gimnasia de Chivilcoy", v:"Olimpo", hora:"17:00", gl:null, gv:null, claseL:"gimnasiachivilcoy", claseV:"olimpo",nota:"<b>Cuartos de final - Ida: 1-2</b>"},
             ]},
             { nombre: "REGIONAL AMATEUR | FECHA 6 | REGIÓN BONAERENSE PAMPEANA SUR", cat: "regamateurfem", torLink: "regamateurfem", noAutoResult: true, partidos: [
+            {l:"Villa Díaz Vélez", v:"Ministerio", hora:"11:00", gl:null, gv:null, claseL:"villadiazvelez", claseV:"ministerio",nota:"<b>Zona 5</b>"},
             {l:"Ferro de Olavarría", v:"Sarmiento de Pigué", hora:"15:30", gl:null, gv:null, claseL:"ferrolavarria", claseV:"sarmientopigue",nota:"<b>Zona 3</b>"},
             {l:"El Fortín", v:"Estudiantes de Olavarría", hora:"15:30", gl:null, gv:null, claseL:"elfortin", claseV:"estudiantesolavarria",nota:"<b>Zona 7</b>"},
             {l:"Loma Negra", v:"Argentinos de 25 de Mayo", hora:"15:30", gl:null, gv:null, claseL:"lomanegra", claseV:"argentino25demayo",nota:"<b>Zona 7</b>"},
