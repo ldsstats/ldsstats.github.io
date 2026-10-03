@@ -1617,7 +1617,7 @@ const idaFemeninoClausura = [
     ]},
     { fecha: 11, partidos: [
         { l: "La Armonía",            v: "Bella Vista",          gl: null, gv: null, dia:"Sáb 03/10", hora:"15:00", goles_l:[], goles_v:[] },
-        { l: "Sporting",              v: "Empleados de Comercio",gl: null, gv: null, dia:"Sáb 03/10", hora:"15:30", goles_l:[], goles_v:[] },
+        { l: "Sporting",              v: "Empleados de Comercio",gl: 3, gv: 2, dia:"Sáb 03/10", hora:"15:30", goles_l:[], goles_v:[] },
         { l: "Municipales",           v: "Libertad",             gl: null, gv: null, dia:"Dom 04/10", hora:"15:30", goles_l:[], goles_v:[] },
         { l: "Villa Mitre",           v: "Tiro Federal",         gl: null, gv: null, dia:"Dom 04/10", hora:"15:45", goles_l:[], goles_v:[] }
     ]},
@@ -1757,10 +1757,10 @@ BD_FIXTURES.femenino.reserva.find(f => f.fecha === 10).partidos.forEach(p => {
     if (p.l === "Libertad" && p.v === "La Armonía") { p.gl = null; p.gv = null; p.goles_l = []; p.goles_v = []; delete p.dia; delete p.hora; }
 });
 BD_FIXTURES.femenino.reserva.find(f => f.fecha === 11).partidos.forEach(p => {
-    if (p.l === "La Armonía" && p.v === "Bella Vista") { p.gl = null; p.gv = null; p.goles_l = []; p.goles_v = []; delete p.dia; delete p.hora; }
     if (p.l === "Municipales" && p.v === "Libertad") { p.gl = null; p.gv = null; p.goles_l = []; p.goles_v = []; delete p.dia; delete p.hora; }
     if (p.l === "Villa Mitre" && p.v === "Tiro Federal") { p.gl = null; p.gv = null; p.goles_l = []; p.goles_v = []; delete p.dia; delete p.hora; }
     if (p.l === "Sporting" && p.v === "Empleados de Comercio") { p.gl = null; p.gv = null; p.goles_l = []; p.goles_v = []; delete p.dia; delete p.hora; }
+    if (p.l === "La Armonía" && p.v === "Bella Vista") { p.gl = null; p.gv = null; p.goles_l = []; p.goles_v = []; delete p.dia; delete p.hora; }
 });
 BD_FIXTURES.femenino.reserva.find(f => f.fecha === 12).partidos.forEach(p => {
     if (p.l === "Empleados de Comercio" && p.v === "La Armonía") { p.gl = null; p.gv = null; p.goles_l = []; p.goles_v = []; delete p.dia; delete p.hora; }
@@ -2021,12 +2021,12 @@ function generarHome() {
             {l:"Pacífico C", v:"Pacífico BB", hora:"16:00", gl:0, gv:2, claseL:"pacificoc", claseV:"pacificobb"},
             ]},
             { nombre: "1°FEMENINO | CLAUSURA | FECHA 11", cat: "femenino", torLink: "femenino", noAutoResult: true, partidos: [
-            {l:"La Armonía", v:"Bella Vista", hora:"15:00", gl:null, gv:null, claseL:"laarmonia", claseV:"bellavista"},
-            {l:"Sporting", v:"Empleados de Comercio", hora:"15:30", gl:null, gv:null, claseL:"sporting", claseV:"empleados"},
+            {l:"Sporting", v:"Empleados de Comercio", hora:"15:30", gl:3, gv:2, claseL:"sporting", claseV:"empleados"},
+            {l:"La Armonía", v:"Bella Vista", hora:"15:00", gl:null, gv:null, claseL:"laarmonia", claseV:"bellavista",nota:"SUSPENDIDO"},
             ]},
             { nombre: "2°FEMENINO | ÚLTIMA FECHA", cat: "segundafemenino", torLink: "segundafemenino", noAutoResult: true, partidos: [
-            {l:"Liniers", v:"Sansinena", hora:"15:30", gl:null, gv:null, claseL:"liniers", claseV:"sansinena"},
-            {l:"San Francisco", v:"Rosario PB", hora:"16:00", gl:null, gv:null, claseL:"sanfrancisco", claseV:"rosariopb"},
+            {l:"Liniers", v:"Sansinena", hora:"15:30", gl:null, gv:null, claseL:"liniers", claseV:"sansinena",nota:"SUSPENDIDO"},
+            {l:"San Francisco", v:"Rosario PB", hora:"16:00", gl:null, gv:null, claseL:"sanfrancisco", claseV:"rosariopb",nota:"SUSPENDIDO"},
             ]},
        ]},
      { id: "2026-10-04", label: "DOM 04/10", torneos: [
@@ -16651,6 +16651,7 @@ const BD_H2H = {
     "Juventud Unida|La Armonía": [
         { fecha: "Torneo 2026 - Fecha 2", torneo: "sub15fem", l: "Juventud Unida", v: "La Armonía", gl: 6, gv: 1 },
         { fecha: "Torneo 2026 - Fecha 13", torneo: "sub15fem", l: "La Armonía", v: "Juventud Unida", gl: 1, gv: 2 },
+        { fecha: "Fecha 11 - Clausura 2026 - 3 oct", torneo: "femenino", l: "Sporting", v: "Empleados de Comercio", gl: 3, gv: 2, goles_l: [], goles_v: [] },
     ],
     "San Francisco|Tiro Federal": [
         { fecha: "Torneo 2026 - Fecha 2", torneo: "sub15fem", l: "Tiro Federal", v: "San Francisco", gl: 1, gv: 1 },
@@ -17828,7 +17829,7 @@ function generarReserva(cat) {
             {n:"Villa Mitre",           cl:"villamitre", pj:10,pg:7, pe:0, pp:3, gf:7, gc:6, pts:21},
             {n:"Municipales",           cl:"municipales",pj:10,pg:5, pe:3, pp:2, gf:18, gc:7, pts:18},
             {n:"Libertad",              cl:"libertad",   pj:10,pg:5, pe:0, pp:5, gf:4, gc:22, pts:15},
-            {n:"Sporting",              cl:"sporting",  pj:10,pg:2, pe:1, pp:7, gf:3, gc:15, pts:7},
+            {n:"Sporting",              cl:"sporting",  pj:11,pg:3, pe:1, pp:7, gf:4, gc:15, pts:10},
             {n:"<s>Empleados de Comercio</s> <b>(-)</b>", cl:"empleados", pj:0,pg:0, pe:0, pp:0, gf:0, gc:0, pts:0},
             {n:"<s>La Armonía</s> <b>(-)</b>",            cl:"laarmonia",  pj:0,pg:0, pe:0, pp:0, gf:0, gc:0, pts:0}
         ]
@@ -22438,18 +22439,17 @@ const BD_POSICIONES = {
             { nombre: "Municipales <b>(A)</b> <b>(C)</b>",           clase: "municipales", pj:10, pg:8, pe:1, pp:1, gf:36, gc:11, pts:25 },
             { nombre: "Tiro Federal <b>(C)</b>",          clase: "tirofederal", pj:10, pg:7, pe:1, pp:2, gf:31, gc:16, pts:22 },
             { nombre: "Bella Vista",           clase: "bellavista",  pj:10, pg:3, pe:3, pp:4, gf:13, gc:17, pts:12 },
-            { nombre: "Empleados de Comercio", clase: "empleados",   pj:10, pg:2, pe:2, pp:6, gf:8, gc:22, pts:8
- },
+            { nombre: "Sporting",              clase: "sporting",    pj:11, pg:2, pe:3, pp:6, gf:10, gc:25, pts:9 },
+            { nombre: "Empleados de Comercio", clase: "empleados",   pj:11, pg:2, pe:2, pp:7, gf:10, gc:25, pts:8 },
             { nombre: "Libertad",              clase: "libertad",    pj:10, pg:1, pe:4, pp:5, gf:5, gc:16, pts:7 },
-            { nombre: "Sporting",              clase: "sporting",    pj:10, pg:1, pe:3, pp:6, gf:7, gc:23, pts:6 },
             { nombre: "La Armonía",            clase: "laarmonia",   pj:10, pg:1, pe:2, pp:7, gf:4, gc:20, pts:5 },
 ],
         acumulada: [
             { nombre: "Municipales <b>(S)</b>",           clase: "municipales", pj:24, pg:19, pe:3, pp:2, gf:83, gc:24, pts:60 },
             { nombre: "Tiro Federal <b>(S)</b>",          clase: "tirofederal", pj:24, pg:18, pe:3, pp:3, gf:69, gc:28, pts:57 },
             { nombre: "Villa Mitre <b>(S)</b>",           clase: "villamitre",  pj:24, pg:17, pe:4, pp:3, gf:100, gc:26, pts:55 },
-            { nombre: "Empleados de Comercio <b>(S)</b>", clase: "empleados",   pj:24, pg:8, pe:4, pp:12, gf:35, gc:56, pts:28 },
-            { nombre: "Sporting <b>(SD)</b>",              clase: "sporting",    pj:24, pg:7, pe:5, pp:12, gf:30, gc:57, pts:26 },
+            { nombre: "Sporting <b>(S)</b>",              clase: "sporting",    pj:25, pg:8, pe:5, pp:12, gf:33, gc:59, pts:29 },
+            { nombre: "Empleados de Comercio <b>(S)</b>", clase: "empleados",   pj:25, pg:8, pe:4, pp:13, gf:37, gc:59, pts:28 },
             { nombre: "Bella Vista",           clase: "bellavista",  pj:24, pg:6, pe:3, pp:15, gf:28, gc:61, pts:21 },
             { nombre: "La Armonía",            clase: "laarmonia",   pj:24, pg:4, pe:2, pp:18, gf:15, gc:57, pts:14 },
             { nombre: "Libertad",              clase: "libertad",    pj:24, pg:3, pe:4, pp:17, gf:15, gc:69, pts:13 }
