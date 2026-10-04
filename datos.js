@@ -2048,13 +2048,13 @@ function generarHome() {
             {l:"Petroquímicos", v:"Olimpo", hora:"15:30", gl:null, gv:null, claseL:"petroquimicos", claseV:"olimpo"},
             ]},
             { nombre: "FEDERAL A | CUARTOS DE FINAL | VUELTA", cat: "federala", torLink: "federala", noAutoResult: true, partidos: [
-            {l:"Cipolletti", v:"Sol de América", hora:"11:00", gl:null, gv:null, claseL:"cipolletti", claseV:"soldeamericafsa",nota:"<b>Cuartos de final - Ida: 0-1</b>"},
+            {l:"Cipolletti", v:"Sol de América", hora:"11:00", gl:6, gv:1, claseL:"cipolletti", claseV:"soldeamericafsa",nota:"<b>Cuartos de final - Ida: 0-1</b>"},
             {l:"Alvarado", v:"Defensores de Belgrano", hora:"15:30", gl:null, gv:null, claseL:"alvarado", claseV:"defbelgranovr",nota:"<b>Cuartos de final - Ida: 2-2</b>"},
             {l:"San Martín de Formosa", v:"Atenas de Río Cuarto", hora:"16:00", gl:null, gv:null, claseL:"sanmartinfsa", claseV:"atenasrc",nota:"<b>Cuartos de final - Ida: 1-0</b>"},
             {l:"Gimnasia de Chivilcoy", v:"Olimpo", hora:"17:00", gl:null, gv:null, claseL:"gimnasiachivilcoy", claseV:"olimpo",nota:"<b>Cuartos de final - Ida: 1-2</b>"},
             ]},
             { nombre: "REGIONAL AMATEUR | FECHA 6 | REGIÓN BONAERENSE PAMPEANA SUR", cat: "regamateurfem", torLink: "regamateurfem", noAutoResult: true, partidos: [
-            {l:"Villa Díaz Vélez", v:"Ministerio", hora:"11:00", gl:null, gv:null, claseL:"villadiazvelez", claseV:"ministerio",nota:"<b>Zona 5</b>"},
+            {l:"Villa Díaz Vélez", v:"Ministerio", hora:"11:00", gl:1, gv:1, claseL:"villadiazvelez", claseV:"ministerio",nota:"<b>Zona 5</b>"},
             {l:"Ferro de Olavarría", v:"Sarmiento de Pigué", hora:"15:30", gl:null, gv:null, claseL:"ferrolavarria", claseV:"sarmientopigue",nota:"<b>Zona 3</b>"},
             {l:"El Fortín", v:"Estudiantes de Olavarría", hora:"15:30", gl:null, gv:null, claseL:"elfortin", claseV:"estudiantesolavarria",nota:"<b>Zona 7</b>"},
             {l:"Loma Negra", v:"Argentinos de 25 de Mayo", hora:"15:30", gl:null, gv:null, claseL:"lomanegra", claseV:"argentino25demayo",nota:"<b>Zona 7</b>"},
@@ -2220,7 +2220,7 @@ function generarTablaFederal(etapa = 'playoffs') {
         BD_FEDERAL_PLAYOFFS.cuartos.forEach(d => {
             htmlP += _renderPartidoPlayoff(d.ida);
             htmlP += _renderPartidoPlayoff(d.vuelta);
-            htmlP += `<tr><td colspan="3" style="padding:0;height:8px;background:#f0f4f0;border-top:1px solid #ddd;border-bottom:1px solid #ddd;"></td></tr>`;
+            htmlP += `<tr><td colspan="3" style="padding:0;height:20px;background:#729b3c;"></td></tr>`;
         });
         htmlP += `</table>`;
         return htmlP;
@@ -22593,8 +22593,8 @@ const BD_REG_AMATEUR_TEMPORADA = {
         { nombre: "Santa Rita", pj:4, pg:3, pe:1, pp:0, gf:10, gc:4, pts:10 },
         { nombre: "Huracán", pj:4, pg:3, pe:0, pp:1, gf:6, gc:2, pts:9 },
         { nombre: "Racing (Olavarría)", pj:4, pg:2, pe:2, pp:0, gf:10, gc:4, pts:8 },
+        { nombre: "Ministerio (Necochea)", pj:4, pg:2, pe:2, pp:0, gf:5, gc:3, pts:8 },
         { nombre: "Dep. Norte", pj:3, pg:2, pe:1, pp:0, gf:3, gc:0, pts:7 },
-        { nombre: "Ministerio (Necochea)", pj:3, pg:2, pe:1, pp:0, gf:4, gc:2, pts:7 },
     ],
     mejoresSegundos: [
         { nombre: "Quilmes (MdP)", pj:4, pg:2, pe:1, pp:1, gf:9, gc:5, pts:7 },
@@ -22635,10 +22635,10 @@ const BD_REG_AMATEUR_TEMPORADA = {
           txtClasifica: "Clasifica a la 3° ronda",
           txtElimina: "Clasifica a la 2° ronda",
           posiciones: [
-              { nombre: "All Boys (Trenel)",     pj:6, pg:2, pe:3, pp:1, gf:6, gc:5, pts:9 },
-              { nombre: "Ferro de Pico",         pj:6, pg:1, pe:5, pp:0, gf:5, gc:3, pts:8 },
-              { nombre: "All Boys (Santa Rosa)", pj:6, pg:1, pe:3, pp:2, gf:7, gc:7, pts:6 },
-              { nombre: "Santa Rosa",            pj:6, pg:1, pe:3, pp:2, gf:6, gc:9, pts:6 },
+              { nombre: "All Boys (Trenel) <b>(C)</b>",     pj:6, pg:2, pe:3, pp:1, gf:6, gc:5, pts:9 },
+              { nombre: "Ferro de Pico <b>(C)</b>",         pj:6, pg:1, pe:5, pp:0, gf:5, gc:3, pts:8 },
+              { nombre: "All Boys (Santa Rosa) <b>(C)</b>", pj:6, pg:1, pe:3, pp:2, gf:7, gc:7, pts:6 },
+              { nombre: "Santa Rosa <b>(C)</b>",            pj:6, pg:1, pe:3, pp:2, gf:6, gc:9, pts:6 },
           ]
         },
         { titulo: "ZONA 2",
@@ -22684,15 +22684,15 @@ const BD_REG_AMATEUR_TEMPORADA = {
               { fecha:3, libre:"Independiente", partidos:[{ l:"Ministerio", v:"Villa Díaz Vélez", gl:2, gv:1, goles_l:[], goles_v:[] }] },
               { fecha:4, libre:"Villa Díaz Vélez", partidos:[{ l:"Ministerio", v:"Independiente", gl:2, gv:1, goles_l:[], goles_v:[] }] },
               { fecha:5, libre:"Ministerio", partidos:[{ l:"Independiente", v:"Villa Díaz Vélez", gl:2, gv:0, goles_l:[], goles_v:[] }] },
-              { fecha:6, libre:"Independiente", partidos:[{ l:"Villa Díaz Vélez", v:"Ministerio", gl:null, gv:null, goles_l:[], goles_v:[] }] },
+              { fecha:6, libre:"Independiente", partidos:[{ l:"Villa Díaz Vélez", v:"Ministerio", gl:1, gv:1, goles_l:[], goles_v:[] }] },
           ],
-          puntosEnJuego: "3",
+          puntosEnJuego: "0",
           txtClasifica: "Clasifica a 2° o 3° ronda (Revisar tabla de primeros)",
           txtElimina: "Clasifica a 2° ronda o eliminado (Revisar tabla de segundos)",
           posiciones: [
-              { nombre: "Ministerio (Necochea) <b>(C)</b>",        pj:3, pg:2, pe:1, pp:0, gf:4, gc:2, pts:7 },
+              { nombre: "Ministerio (Necochea) <b>(C)</b>",        pj:4, pg:2, pe:2, pp:0, gf:5, gc:3, pts:8 },
               { nombre: "Independiente (San Cayetano) <b>(C)</b>", pj:4, pg:2, pe:1, pp:1, gf:5, gc:2, pts:7 },
-              { nombre: "Villa Díaz Vélez (Necochea) <b>(X)</b>",  pj:3, pg:0, pe:0, pp:3, gf:1, gc:6, pts:0 },
+              { nombre: "Villa Díaz Vélez (Necochea) <b>(X)</b>",  pj:4, pg:0, pe:1, pp:3, gf:2, gc:7, pts:1 },
           ]
         },
         { titulo: "ZONA 6",
@@ -24209,8 +24209,8 @@ const BD_FEDERAL_PLAYOFFS = {
             vuelta: { local: "Alvarado", clL: "alvarado", visitante: "Defensores de Belgrano", clV: "defbelgranovr", gl: null, gv: null, goles_l: [], goles_v: [] }
         },
         {
-            ida:    { local: "Sol de América", clL: "soldeamericafsa", visitante: "Cipolletti", clV: "cipolletti", gl: 1, gv: 0, goles_l: [], goles_v: [] },
-            vuelta: { local: "Cipolletti", clL: "cipolletti", visitante: "Sol de América", clV: "soldeamericafsa", gl: null, gv: null, goles_l: [], goles_v: [] }
+            ida:    { local: "<s>Sol de América</s>", clL: "soldeamericafsa", visitante: "<b>Cipolletti</b>", clV: "cipolletti", gl: 1, gv: 0, goles_l: [], goles_v: [] },
+            vuelta: { local: "<b>Cipolletti</b>", clL: "cipolletti", visitante: "<s>Sol de América</s>", clV: "soldeamericafsa", gl: 6, gv: 1, goles_l: [], goles_v: [] }
         },
         {
             ida:    { local: "Atenas de Río Cuarto", clL: "atenasrc", visitante: "San Martín de Formosa", clV: "sanmartinfsa", gl: 0, gv: 1, goles_l: [], goles_v: [] },
