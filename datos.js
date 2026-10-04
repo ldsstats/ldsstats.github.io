@@ -1204,7 +1204,7 @@ const idaOficialClausura = [
     { fecha: 7,  partidos: [{l:"Villa Mitre", v:"Sporting", gl:0, gv:0, dia:"Dom 13/09", hora:"15:30", goles_l:[], goles_v:[]}, {l:"Huracán",     v:"Bella Vista", gl:0, gv:0, dia:"Dom 13/09", hora:"15:30", goles_l:[], goles_v:[]}, {l:"La Armonía",  v:"Libertad", gl:0, gv:1, dia:"Dom 13/09", hora:"15:30", goles_l:[], goles_v:["Franco Pane"]}, {l:"Liniers",     v:"San Francisco", gl:2, gv:0, dia:"Dom 13/09", hora:"15:30", goles_l:["Massimo Monti","Simón Biondo"], goles_v:[]}] },
     { fecha: 8,  partidos: [{l:"Villa Mitre",     v:"Liniers",   gl:1, gv:0, dia:"Vie 18/09", hora:"15:30", goles_l:["Julián Monteverde"], goles_v:[]}, {l:"Huracán",     v:"Libertad",      gl:1, gv:0, dia:"Vie 18/09", hora:"19:30", goles_l:["Iván Agudiak"], goles_v:[]}, {l:"San Francisco",v:"Bella Vista",   gl:1, gv:1, dia:"Sáb 19/09", hora:"15:30", goles_l:["Marcelo Castellano"], goles_v:["Gabino Bellegia"]}, {l:"La Armonía",  v:"Sporting",      gl:1, gv:0, dia:"Dom 20/09", hora:"15:30", goles_l:["Ezequiel Intrevado"], goles_v:[]}] },
     { fecha: 9,  partidos: [{l:"Huracán",    v:"Sporting",       gl:2, gv:1, dia:"Vie 25/09", hora:"19:00", goles_l:["Lautaro Torres","Lautaro Cerato"], goles_v:["Jonathan Font"]}, {l:"Libertad",    v:"San Francisco", gl:1, gv:1, dia:"Sáb 26/09", hora:"15:30", goles_l:["Franco Pane"], goles_v:["Alexis Vega"]}, {l:"Liniers",     v:"Bella Vista",   gl:0, gv:2, dia:"Dom 27/09", hora:"15:30", goles_l:[], goles_v:["Agustín Reule","Felipe Acharez"]}, {l:"Villa Mitre", v:"La Armonía",    gl:1, gv:1, dia:"Lun 28/09", hora:"15:30", goles_l:["Valentino Valeri"], goles_v:["Julio Acosta"]}] },
-    { fecha: 10, partidos: [{l:"Huracán",     v:"Villa Mitre", gl:0, gv:0, dia:"Dom 04/10", hora:"15:30", goles_l:[], goles_v:[]}, {l:"San Francisco",v:"Sporting", gl:0, gv:0, dia:"Dom 04/10", hora:"15:30", goles_l:[], goles_v:[]}, {l:"La Armonía",  v:"Liniers", gl:1, gv:1, dia:"Dom 04/10", hora:"15:30", goles_l:["Pablo Intrevado"], goles_v:["Nicolás Malerba"]}, {l:"Bella Vista", v:"Libertad", gl:2, gv:0, dia:"Dom 04/10", hora:"15:30", goles_l:["Rodrigo Gómez","Gabino Bellegia"], goles_v:[]}] },
+    { fecha: 10, partidos: [{l:"Huracán",     v:"Villa Mitre", gl:0, gv:0, dia:"Dom 04/10", hora:"15:30", goles_l:[], goles_v:[]}, {l:"San Francisco",v:"Sporting", gl:0, gv:0, dia:"Dom 04/10", hora:"15:30", goles_l:[], goles_v:[]}, {l:"La Armonía",  v:"Liniers", gl:1, gv:1, dia:"Dom 04/10", hora:"15:30", goles_l:["Ezequiel Intrevado"], goles_v:["Nicolás Malerba"]}, {l:"Bella Vista", v:"Libertad", gl:2, gv:0, dia:"Dom 04/10", hora:"15:30", goles_l:["Rodrigo Gómez","Gabino Bellegia"], goles_v:[]}] },
     { fecha: 11, partidos: [{l:"San Francisco",v:"Villa Mitre",  gl:null, gv:null}, {l:"Huracán",     v:"La Armonía",    gl:null, gv:null}, {l:"Libertad",    v:"Liniers",       gl:null, gv:null}, {l:"Bella Vista", v:"Sporting",      gl:null, gv:null}] },
     { fecha: 12, partidos: [{l:"Villa Mitre", v:"Bella Vista",   gl:null, gv:null}, {l:"Sporting",    v:"Libertad",      gl:null, gv:null}, {l:"La Armonía",  v:"San Francisco", gl:null, gv:null}, {l:"Liniers",     v:"Huracán",       gl:null, gv:null}] },
     { fecha: 13, partidos: [{l:"Villa Mitre", v:"Libertad",      gl:null, gv:null}, {l:"Huracán",     v:"San Francisco", gl:null, gv:null}, {l:"Liniers",     v:"Sporting",      gl:null, gv:null}, {l:"La Armonía",  v:"Bella Vista",   gl:null, gv:null}] },
@@ -16029,6 +16029,7 @@ const BD_H2H = {
         { fecha: "Fecha 3 - Clausura 2026", torneo: "reserva_oficial", l: "Libertad", v: "Bella Vista", gl: 1, gv: 2 },
         { fecha: "Fecha 8 - Clausura 2026 - 12 ago", torneo: "femenino", l: "Libertad", v: "Bella Vista", gl: 0, gv: 1, goles_l: [], goles_v: ["Antonia Prada"] },
         { fecha: "Fecha 8 - Clausura 2026", torneo: "reserva_femenino", l: "Libertad", v: "Bella Vista", gl: 0, gv: 2 },
+        { fecha: "Fecha 10 - Clausura 2026 - 4 oct", torneo: "oficial", l: "Bella Vista", v: "Libertad", gl: 2, gv: 0, goles_l: ["Gabino Bellegia","Rodrigo Gómez"], goles_v: []},
     ],
     "La Armonía|Villa Mitre": [
         { fecha: "Fecha 1 - Apertura 2026 - 24 mar", torneo: "femenino", l: "La Armonía", v: "Villa Mitre", gl: 1, gv: 5, goles_l: ["Natalia Morinigo"], goles_v: ["Agustina Rodríguez (3)","Morena Bouven","Camila Aliata"]},
@@ -16339,6 +16340,7 @@ const BD_H2H = {
         { fecha: "Fecha 3 - Clausura 2026 - 16 ago", torneo: "oficial", l: "Sporting", v: "San Francisco", gl: 1, gv: 1, goles_l: ["Erico Walker"], goles_v: ["Alexis Vega"]},
         { fecha: "Fecha 3 - Clausura 2026", torneo: "reserva_oficial", l: "Sporting", v: "San Francisco", gl: 1, gv: 0},
         { fecha: "Clausura 2026 - Fecha 1", torneo: "senior", l: "San Francisco", v: "Sporting", gl: 3, gv: 2, goles_l: ["Sebastián Bacuco (2)","Víctor Martínez"], goles_v: ["Paolo Quiroga","Diego Vera"] },
+        { fecha: "Fecha 10 - Clausura 2026 - 04 oct", torneo: "oficial", l: "San Francisco", v: "Sporting", gl: 0, gv: 0, goles_l: [], goles_v: []},
     ],
     "Bella Vista|Empleados de Comercio": [
         { fecha: "Torneo 2026 - Fecha 1", torneo: "sub15fem", l: "Empleados de Comercio", v: "Bella Vista", gl: 0, gv: 4 },
@@ -16675,6 +16677,7 @@ const BD_H2H = {
         { fecha: "Apertura 2026 - Fecha 12", torneo: "futsalreserva", l: "Huracán", v: "Villa Mitre", gl: 1, gv: 6 },
         { fecha: "Fecha 3 - Clausura 2026 - 17 ago", torneo: "oficial", l: "Villa Mitre", v: "Huracán", gl: 2, gv: 2, goles_l: ["Ramiro Gerk","Julián Monteverde"], goles_v: ["Eric Lischeske","Agustín Seisdedos"]},
         { fecha: "Fecha 3 - Clausura 2026", torneo: "reserva_oficial", l: "Villa Mitre", v: "Huracán", gl: 4, gv: 3},
+        { fecha: "Fecha 10 - Clausura 2026 - 04 oct", torneo: "oficial", l: "Huracán", v: "Villa Mitre", gl: 0, gv: 0, goles_l: [], goles_v: []},
     ],
     "La Armonía|Liniers": [
         { fecha: "Fecha 3 - Apertura 2026 - 29 mar", torneo: "oficial", l: "Liniers", v: "La Armonía", gl: 4, gv: 1, goles_l: ["Valentín Bertoni","Rodrigo Phillip","Salvador Maio","Ramiro Ullmann"], goles_v: ["Franco Cuello"]},
@@ -16685,6 +16688,7 @@ const BD_H2H = {
         { fecha: "Fecha 3 - Clausura 2026 - 16 ago", torneo: "oficial", l: "Liniers", v: "La Armonía", gl: 0, gv: 1, goles_l: [], goles_v: ["Alex Muzi"]},
         { fecha: "Fecha 3 - Clausura 2026", torneo: "reserva_oficial", l: "Liniers", v: "La Armonía", gl: 0, gv: 1},
         { fecha: "Torneo 2026 - Fecha 17", torneo: "sub15fem", l: "Liniers", v: "La Armonía", gl: 5, gv: 0 },
+        { fecha: "Fecha 10 - Clausura 2026 - 04 oct", torneo: "oficial", l: "La Armonía", v: "Liniers", gl: 1, gv: 1, goles_l: ["Ezequiel Intrevado"], goles_v: ["Nicolás Malerba"]},
     ],
     "Comercial|Olimpo": [
         { fecha: "Fecha 3 - Apertura 2026 - 28 mar", torneo: "promocional", l: "Comercial", v: "Olimpo", gl: 1, gv: 0, goles_l: ["Francisco Centeno"], goles_v: []},
@@ -16703,6 +16707,7 @@ const BD_H2H = {
         { fecha: "Semifinales - Apertura 2026 - 4 jul 2026", torneo: "promocional", l: "Tiro Federal", v: "Rosario PB", gl: 4, gv: 0, goles_l: ["Mariano McCoubrey (2)","Genaro Fraysse","Gino Carrozzi"], goles_v: [] },
         { fecha: "Final - Apertura 2026", torneo: "reserva_promocional", l: "Tiro Federal", v: "Rosario PB", gl: 1, gv: 1, pen_l:4, pen_v:5 },
         { fecha: "Fecha 3 - Clausura 2026 - 28 mar", torneo: "promocional", l: "Tiro Federal", v: "Rosario PB", gl: 1, gv: 1, goles_l: ["Gino Carrozzi"], goles_v: ["Agustín Trotta"]},
+        { fecha: "Fecha 10 - Clausura 2026 - 04 oct", torneo: "promocional", l: "Rosario PB", v: "Tiro Federal", gl: 0, gv: 0, goles_l: [], goles_v: []},
     ],
     "Pacífico (C)|Pacífico BB": [
         { fecha: "Fecha 3 - Apertura 2026 - 29 mar", torneo: "promocional", l: "Pacífico BB", v: "Pacífico (C)", gl: 3, gv: 2, goles_l: ["Juan Nomdedeu","Enzo Rossi","Leandro Martínez"], goles_v: ["Donatello Scaringi","Luca Lucas"]},
