@@ -2049,16 +2049,16 @@ function generarHome() {
             ]},
             { nombre: "FEDERAL A | CUARTOS DE FINAL | VUELTA", cat: "federala", torLink: "federala", noAutoResult: true, partidos: [
             {l:"Cipolletti", v:"Sol de América", hora:"11:00", gl:6, gv:1, claseL:"cipolletti", claseV:"soldeamericafsa",nota:"<b>Cuartos de final - Ida: 0-1</b>"},
-            {l:"Alvarado", v:"Defensores de Belgrano", hora:"15:30", gl:null, gv:null, claseL:"alvarado", claseV:"defbelgranovr",nota:"<b>Cuartos de final - Ida: 2-2</b>"},
-            {l:"San Martín de Formosa", v:"Atenas de Río Cuarto", hora:"16:00", gl:null, gv:null, claseL:"sanmartinfsa", claseV:"atenasrc",nota:"<b>Cuartos de final - Ida: 1-0</b>"},
-            {l:"Gimnasia de Chivilcoy", v:"Olimpo", hora:"17:00", gl:null, gv:null, claseL:"gimnasiachivilcoy", claseV:"olimpo",nota:"<b>Cuartos de final - Ida: 1-2</b>"},
+            {l:"Alvarado", v:"Defensores de Belgrano", hora:"15:30", gl:2, gv:0, claseL:"alvarado", claseV:"defbelgranovr",nota:"<b>Cuartos de final - Ida: 2-2</b>"},
+            {l:"San Martín de Formosa", v:"Atenas de Río Cuarto", hora:"16:00", gl:1, gv:1, claseL:"sanmartinfsa", claseV:"atenasrc",nota:"<b>Cuartos de final - Ida: 1-0</b>"},
+            {l:"Gimnasia de Chivilcoy", v:"Olimpo", hora:"17:00", gl:1, gv:2, claseL:"gimnasiachivilcoy", claseV:"olimpo",nota:"<b>Cuartos de final - Ida: 1-2</b>"},
             ]},
             { nombre: "REGIONAL AMATEUR | FECHA 6 | REGIÓN BONAERENSE PAMPEANA SUR", cat: "regamateurfem", torLink: "regamateurfem", noAutoResult: true, partidos: [
             {l:"Villa Díaz Vélez", v:"Ministerio", hora:"11:00", gl:1, gv:1, claseL:"villadiazvelez", claseV:"ministerio",nota:"<b>Zona 5</b>"},
-            {l:"Ferro de Olavarría", v:"Sarmiento de Pigué", hora:"15:30", gl:null, gv:null, claseL:"ferrolavarria", claseV:"sarmientopigue",nota:"<b>Zona 3</b>"},
-            {l:"El Fortín", v:"Estudiantes de Olavarría", hora:"15:30", gl:null, gv:null, claseL:"elfortin", claseV:"estudiantesolavarria",nota:"<b>Zona 7</b>"},
-            {l:"Loma Negra", v:"Argentinos de 25 de Mayo", hora:"15:30", gl:null, gv:null, claseL:"lomanegra", claseV:"argentino25demayo",nota:"<b>Zona 7</b>"},
-            {l:"Def. Valeria del Mar", v:"Dep. Norte", hora:"18:00", gl:null, gv:null, claseL:"defvaleriadelmar", claseV:"depnorte",nota:"<b>Zona 4</b>"},
+            {l:"Ferro de Olavarría", v:"Sarmiento de Pigué", hora:"15:30", gl:2, gv:0, claseL:"ferrolavarria", claseV:"sarmientopigue",nota:"<b>Zona 3</b>"},
+            {l:"El Fortín", v:"Estudiantes de Olavarría", hora:"15:30", gl:2, gv:0, claseL:"elfortin", claseV:"estudiantesolavarria",nota:"<b>Zona 7</b>"},
+            {l:"Loma Negra", v:"Argentinos de 25 de Mayo", hora:"15:30", gl:1, gv:2, claseL:"lomanegra", claseV:"argentino25demayo",nota:"<b>Zona 7</b>"},
+            {l:"Def. Valeria del Mar", v:"Dep. Norte", hora:"18:00", gl:0, gv:1, claseL:"defvaleriadelmar", claseV:"depnorte",nota:"<b>Zona 4</b>"},
             ]},
        ]},
     ];
@@ -17219,6 +17219,7 @@ const BD_H2H = {
     ],
     "Gimnasia de Chivilcoy|Olimpo": [
         { fecha: "Cuartos de Final - Ida - 27 ago 2026", torneo: "federala", l: "Olimpo", v: "Gimnasia de Chivilcoy", gl: 2, gv: 1, goles_l: ["Martín Ferreyra","Joaquín Susvielles"], goles_v: ["Marcos Salvaggio"] },
+        { fecha: "Cuartos de Final - Vuelta - 04 oct 2026", torneo: "federala", l: "Gimnasia de Chivilcoy", v: "Olimpo", gl: 1, gv: 2, goles_l: ["Fausto Fiol"], goles_v: ["Diego Ramírez","Brian Guille"] },
     ],
     "Atenas de Río Cuarto|Villa Mitre": [
         { fecha: "Fecha 1 - Nonagonal - 02 ago 2026", torneo: "federala", l: "Atenas de Río Cuarto", v: "Villa Mitre", gl: 0, gv: 1, goles_l: [], goles_v: ["Leonel Monti"] },
@@ -21446,7 +21447,7 @@ function generarGoleadores(cat, torneo) {
         const playoffsFederala = (BD_FEDERAL_PLAYOFFS.cuartos || [])
             .flatMap(serie => [serie.ida, serie.vuelta])
             .filter(p => p.gl !== null)
-            .map(p => ({ l: p.local, v: p.visitante, gl: p.gl, gv: p.gv, goles_l: p.goles_l || [], goles_v: p.goles_v || [] }));
+            .map(p => ({ l: p.local.replace(/<[^>]+>/g, ''), v: p.visitante.replace(/<[^>]+>/g, ''), gl: p.gl, gv: p.gv, goles_l: p.goles_l || [], goles_v: p.goles_v || [] }));
 partidos = [...BD_FIXTURES.federala.posiciones.flatMap(f => f.partidos), ...BD_FIXTURES.federala.nonagonal.flatMap(f => f.partidos), ...playoffsFederala];
     } else if (cat === 'oficial' || cat === 'promocional') {
     if (torneo === 'clausura') {
@@ -22209,7 +22210,7 @@ function generarPerfilJugador(jugador, equipo, origen, totalOverride, catPerfil)
 
         const todosPartidos = fixtures.flatMap(f => f.partidos);
 
-const playoffsBD = { oficial: BD_OFICIAL_PLAYOFFS, promocional: BD_PROMOCIONAL_PLAYOFFS, femenino: BD_FEMENINO_PLAYOFFS, federala: { cuartos: BD_FEDERAL_PLAYOFFS.cuartos.flatMap(serie => [serie.ida, serie.vuelta]) } };
+const playoffsBD = { oficial: BD_OFICIAL_PLAYOFFS, promocional: BD_PROMOCIONAL_PLAYOFFS, femenino: BD_FEMENINO_PLAYOFFS, federala: { cuartos: BD_FEDERAL_PLAYOFFS.cuartos.flatMap(serie => [serie.ida, serie.vuelta]).map(p => ({ ...p, local: p.local.replace(/<[^>]+>/g, ''), visitante: p.visitante.replace(/<[^>]+>/g, '') })) } };
         const pd = playoffsBD[cat];
         if (pd) {
             [...(pd.octavos||[]), ...(pd.cuartos||[]), ...(pd.semifinales||[]), ...(pd.final?[pd.final]:[]), ...(pd.finalExtra?[pd.finalExtra]:[])]
@@ -22605,16 +22606,16 @@ if (tor === 'apertura' && cat === 'promocional') {
 const BD_REG_AMATEUR_TEMPORADA = {
     mejoresPrimeros: [
         { nombre: "Santa Rita", pj:4, pg:3, pe:1, pp:0, gf:10, gc:4, pts:10 },
+        { nombre: "Dep. Norte", pj:4, pg:3, pe:1, pp:0, gf:4, gc:0, pts:10 },
         { nombre: "Huracán", pj:4, pg:3, pe:0, pp:1, gf:6, gc:2, pts:9 },
         { nombre: "Racing (Olavarría)", pj:4, pg:2, pe:2, pp:0, gf:10, gc:4, pts:8 },
         { nombre: "Ministerio (Necochea)", pj:4, pg:2, pe:2, pp:0, gf:5, gc:3, pts:8 },
-        { nombre: "Dep. Norte", pj:3, pg:2, pe:1, pp:0, gf:3, gc:0, pts:7 },
     ],
     mejoresSegundos: [
         { nombre: "Quilmes (MdP)", pj:4, pg:2, pe:1, pp:1, gf:9, gc:5, pts:7 },
         { nombre: "Atl. Villegas", pj:4, pg:1, pe:2, pp:1, gf:6, gc:3, pts:7 },
         { nombre: "Independiente (San Cayetano)", pj:4, pg:2, pe:1, pp:1, gf:5, gc:2, pts:7 },
-        { nombre: "Ferro de Olavarría", pj:3, pg:1, pe:1, pp:1, gf:4, gc:6, pts:4 },
+        { nombre: "Ferro de Olavarría", pj:4, pg:2, pe:1, pp:1, gf:6, gc:6, pts:7 },
         { nombre: "Embajadores (Olavarría)", pj:3, pg:0, pe:2, pp:1, gf:2, gc:5, pts:2 },
     ],
     zonas: [
@@ -22625,15 +22626,15 @@ const BD_REG_AMATEUR_TEMPORADA = {
               { fecha:3, libre:"Huracán", partidos:[{ l:"Sarmiento de Pigué", v:"Ferro de Olavarría", gl:3, gv:3, goles_l:[], goles_v:[] }] },
               { fecha:4, libre:"Ferro de Olavarría", partidos:[{ l:"Sarmiento de Pigué", v:"Huracán", gl:1, gv:2, goles_l:[], goles_v:["Leonel Navarro","Johan Munives"] }] },
               { fecha:5, libre:"Sarmiento de Pigué", partidos:[{ l:"Huracán", v:"Ferro de Olavarría", gl:3, gv:0, goles_l:["Brian Scalco (2)","Iván Agudiak"], goles_v:[] }] },
-              { fecha:6, libre:"Huracán", partidos:[{ l:"Ferro de Olavarría", v:"Sarmiento de Pigué", gl:null, gv:null, goles_l:[], goles_v:[] }] },
+              { fecha:6, libre:"Huracán", partidos:[{ l:"Ferro de Olavarría", v:"Sarmiento de Pigué", gl:2, gv:0, goles_l:[], goles_v:[] }] },
           ],
-          puntosEnJuego: "3",
+          puntosEnJuego: "0",
           txtClasifica: "Clasifica a 2° o 3° ronda (Revisar tabla de primeros)",
           txtElimina: "Clasifica a 2° ronda o eliminado (Revisar tabla de segundos)",
           posiciones: [
               { nombre: "Huracán <b>(C)</b>", pj:4, pg:3, pe:0, pp:1, gf:6, gc:2, pts:9 },
-              { nombre: "Ferro de Olavarría", pj:3, pg:1, pe:1, pp:1, gf:4, gc:6, pts:4 },
-              { nombre: "Sarmiento", pj:3, pg:0, pe:1, pp:2, gf:4, gc:6, pts:1 },
+              { nombre: "Ferro de Olavarría", pj:4, pg:2, pe:1, pp:1, gf:6, gc:6, pts:7 },
+              { nombre: "Sarmiento", pj:4, pg:0, pe:1, pp:3, gf:4, gc:8, pts:1 },
           ]
         },
         { titulo: "ZONA 1",
@@ -22680,15 +22681,15 @@ const BD_REG_AMATEUR_TEMPORADA = {
               { fecha:3, libre:"Quilmes", partidos:[{ l:"Dep. Norte", v:"Def. Valeria del Mar", gl:1, gv:0, goles_l:[], goles_v:[] }] },
               { fecha:4, libre:"Def. Valeria del Mar", partidos:[{ l:"Dep. Norte", v:"Quilmes", gl:2, gv:0, goles_l:[], goles_v:[] }] },
               { fecha:5, libre:"Dep. Norte", partidos:[{ l:"Quilmes", v:"Def. Valeria del Mar", gl:4, gv:1, goles_l:[], goles_v:[] }] },
-              { fecha:6, libre:"Quilmes", partidos:[{ l:"Def. Valeria del Mar", v:"Dep. Norte", gl:null, gv:null, goles_l:[], goles_v:[] }] },
+              { fecha:6, libre:"Quilmes", partidos:[{ l:"Def. Valeria del Mar", v:"Dep. Norte", gl:0, gv:1, goles_l:[], goles_v:[] }] },
           ],
-          puntosEnJuego: "3",
+          puntosEnJuego: "0",
           txtClasifica: "Clasifica a 2° o 3° ronda (Revisar tabla de primeros)",
           txtElimina: "Clasifica a 2° ronda o eliminado (Revisar tabla de segundos)",
           posiciones: [
-              { nombre: "Dep. Norte <b>(C)</b>",           pj:3, pg:2, pe:1, pp:0, gf:3, gc:0, pts:7 },
+              { nombre: "Dep. Norte <b>(C)</b>",           pj:4, pg:3, pe:1, pp:0, gf:4, gc:0, pts:10 },
               { nombre: "Quilmes (MdP) <b>(C)</b>",        pj:4, pg:2, pe:1, pp:1, gf:9, gc:5, pts:7 },
-              { nombre: "Def. Valeria del Mar <b>(X)</b>", pj:3, pg:0, pe:0, pp:3, gf:3, gc:10, pts:0 },
+              { nombre: "Def. Valeria del Mar <b>(X)</b>", pj:4, pg:0, pe:0, pp:4, gf:3, gc:11, pts:0 },
           ]
         },
         { titulo: "ZONA 5",
@@ -22734,17 +22735,17 @@ const BD_REG_AMATEUR_TEMPORADA = {
               { fecha:3, partidos:[{ l:"Argentinos", v:"Loma Negra", gl:3, gv:1, goles_l:[], goles_v:[] },{ l:"Estudiantes", v:"El Fortín", gl:4, gv:0, goles_l:[], goles_v:[] }] },
               { fecha:4, partidos:[{ l:"El Fortín", v:"Argentinos", gl:3, gv:0, goles_l:[], goles_v:[] },{ l:"Estudiantes", v:"Loma Negra", gl:5, gv:0, goles_l:[], goles_v:[] }] },
               { fecha:5, partidos:[{ l:"Argentinos", v:"Estudiantes", gl:1, gv:1, goles_l:[], goles_v:[] },{ l:"Loma Negra", v:"El Fortín", gl:2, gv:1, goles_l:[], goles_v:[] }] },
-              { fecha:6, partidos:[{ l:"Loma Negra", v:"Argentinos", gl:null, gv:null, goles_l:[], goles_v:[] },{ l:"El Fortín", v:"Estudiantes", gl:null, gv:null, goles_l:[], goles_v:[] }] },
+              { fecha:6, partidos:[{ l:"Loma Negra", v:"Argentinos", gl:1, gv:2, goles_l:[], goles_v:[] },{ l:"El Fortín", v:"Estudiantes", gl:2, gv:0, goles_l:[], goles_v:[] }] },
           ],
           puntosEnJuego: "3",
           txtClasifica: "Clasifica a la 3° ronda",
           txtElimina: "Clasifica a la 2° ronda",
           posiciones: [
 
-              { nombre: "Estudiantes (Olavarría) <b>(C)</b>", pj:5, pg:4, pe:1, pp:0, gf:16, gc:3, pts:13 },
-              { nombre: "Argentinos (25 de Mayo)", pj:5, pg:2, pe:1, pp:2, gf:6, gc:9, pts:7 },
-              { nombre: "El Fortín (Olavarría)",   pj:5, pg:2, pe:0, pp:3, gf:5, gc:7, pts:6 },
-              { nombre: "Loma Negra (Olavarría)",  pj:5, pg:1, pe:0, pp:4, gf:4, gc:12, pts:3 }
+              { nombre: "Estudiantes (Olavarría) <b>(C)</b>", pj:6, pg:4, pe:1, pp:1, gf:16, gc:5, pts:13 },
+              { nombre: "Argentinos (25 de Mayo)", pj:6, pg:3, pe:1, pp:2, gf:8, gc:10, pts:10 },
+              { nombre: "El Fortín (Olavarría)",   pj:6, pg:3, pe:0, pp:3, gf:7, gc:7, pts:9 },
+              { nombre: "Loma Negra (Olavarría)",  pj:6, pg:1, pe:0, pp:5, gf:4, gc:14, pts:3 }
           ]
         },
     ]
@@ -24215,20 +24216,20 @@ function generarTorneoSeleccion15() {
 const BD_FEDERAL_PLAYOFFS = {
     cuartos: [
         {
-            ida:    { local: "Olimpo", clL: "olimpo", visitante: "Gimnasia de Chivilcoy", clV: "gimnasiachivilcoy", gl: 2, gv: 1, goles_l: ["Martín Ferreyra","Joaquín Susvielles"], goles_v: ["Marcos Salvaggio"] },
-            vuelta: { local: "Gimnasia de Chivilcoy", clL: "gimnasiachivilcoy", visitante: "Olimpo", clV: "olimpo", gl: null, gv: null, goles_l: [], goles_v: [] }
+            ida:    { local: "<b>Olimpo</b>", clL: "olimpo", visitante: "<s>Gimnasia de Chivilcoy</s>", clV: "gimnasiachivilcoy", gl: 2, gv: 1, goles_l: ["Martín Ferreyra","Joaquín Susvielles"], goles_v: [] },
+            vuelta: { local: "<s>Gimnasia de Chivilcoy</s>", clL: "gimnasiachivilcoy", visitante: "<b>Olimpo</b>", clV: "olimpo", gl: 1, gv: 2, goles_l: [], goles_v: ["Diego Ramírez","Brian Guille"] }
         },
         {
-            ida:    { local: "Defensores de Belgrano", clL: "defbelgranovr", visitante: "Alvarado", clV: "alvarado", gl: 2, gv: 2, goles_l: [], goles_v: [] },
-            vuelta: { local: "Alvarado", clL: "alvarado", visitante: "Defensores de Belgrano", clV: "defbelgranovr", gl: null, gv: null, goles_l: [], goles_v: [] }
+            ida:    { local: "<s>Defensores de Belgrano</s>", clL: "defbelgranovr", visitante: "<b>Alvarado</b>", clV: "alvarado", gl: 2, gv: 2, goles_l: [], goles_v: [] },
+            vuelta: { local: "<b>Alvarado</b>", clL: "alvarado", visitante: "<s>Defensores de Belgrano</s>", clV: "defbelgranovr", gl: 2, gv: 0, goles_l: [], goles_v: [] }
         },
         {
             ida:    { local: "<s>Sol de América</s>", clL: "soldeamericafsa", visitante: "<b>Cipolletti</b>", clV: "cipolletti", gl: 1, gv: 0, goles_l: [], goles_v: [] },
             vuelta: { local: "<b>Cipolletti</b>", clL: "cipolletti", visitante: "<s>Sol de América</s>", clV: "soldeamericafsa", gl: 6, gv: 1, goles_l: [], goles_v: [] }
         },
         {
-            ida:    { local: "Atenas de Río Cuarto", clL: "atenasrc", visitante: "San Martín de Formosa", clV: "sanmartinfsa", gl: 0, gv: 1, goles_l: [], goles_v: [] },
-            vuelta: { local: "San Martín de Formosa", clL: "sanmartinfsa", visitante: "Atenas de Río Cuarto", clV: "atenasrc", gl: null, gv: null, goles_l: [], goles_v: [] }
+            ida:    { local: "<s>Atenas de Río Cuarto</s>", clL: "atenasrc", visitante: "<b>San Martín de Formosa</b>", clV: "sanmartinfsa", gl: 0, gv: 1, goles_l: [], goles_v: [] },
+            vuelta: { local: "<b>San Martín de Formosa</b>", clL: "sanmartinfsa", visitante: "<s>Atenas de Río Cuarto</s>", clV: "atenasrc", gl: 1, gv: 1, goles_l: [], goles_v: [] }
         }
     ]
 };
