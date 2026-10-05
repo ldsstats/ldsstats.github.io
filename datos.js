@@ -22521,8 +22521,8 @@ const BD_POSICIONES = {
     segundafemenino: {
         torneo2026: [
             { nombre: "Liniers <b>(C)</b>",             clase: "liniers",         pj:23, pg:21, pe:2, pp:0, gf:94, gc:12, pts:65 },
-            { nombre: "Petroquímicos <b>(C)</b>",       clase: "petroquimicos",   pj:24, pg:17, pe:3, pp:4, gf:56, gc:14, pts:54 },
             { nombre: "San Francisco <b>(C)</b>",       clase: "sanfrancisco",    pj:24, pg:17, pe:3, pp:4, gf:90, gc:28, pts:54 },
+            { nombre: "Petroquímicos <b>(C)</b>",       clase: "petroquimicos",   pj:24, pg:17, pe:3, pp:4, gf:56, gc:14, pts:54 },
             { nombre: "Rosario PB <b>(C)</b>",          clase: "rosariopb",       pj:24, pg:14, pe:3, pp:7, gf:95, gc:33, pts:45 },
             { nombre: "Estrella de Oro <b>(C)</b>",     clase: "estrellaoro",     pj:24, pg:10, pe:3, pp:11, gf:36, gc:42, pts:33 },
             { nombre: "Huracán <b>(C)</b>",             clase: "huracan",         pj:24, pg:6, pe:4, pp:14, gf:29, gc:92, pts:22 },
