@@ -123,6 +123,7 @@ tr[onclick]:hover td { background-color: #e8f5e9 !important; }
 .trelew::before { content: "TR"; color: #000000; font-size: 10px; font-weight: bold; }
 .gimnasiachivilcoy { background: linear-gradient(90deg, #035A23 20%, #fff 20%, #fff 40%, #035A23 40%, #000 60%, #fff 60%, #fff 80%, #035A23 80%); }
 .defbelgranovr { background-color: #EF0D0F; display:inline-flex; align-items:center; justify-content:center; }
+.defbelgranovr::after { content: "🐘"; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); font-size: 9px; }
 .soldeamericafsa { background-color: #00339C; position: relative; }
 .soldeamericafsa::after { content: "☀️"; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); font-size: 9px; }
 .sanmartinfsa { background: repeating-linear-gradient(180deg, #ffffff, #ffffff 5.3px, #001937 5.3px, #001937 10.6px, #ffffff 10.6px, #ffffff 16px); display:inline-flex; align-items:center; justify-content:center; }
@@ -157,7 +158,22 @@ tr[onclick]:hover td { background-color: #e8f5e9 !important; }
 .indeptenqn::after{content:"";position:absolute;inset:0;background:#f00;clip-path:polygon(0 58.8%,100% 50.2%,100% 66.5%,0 75.3%)}
 .jjmoreno { background: linear-gradient(#fff, #fff) top / 100% 5% no-repeat, linear-gradient(#fff, #fff) bottom / 100% 5% no-repeat, linear-gradient(#fff, #fff) left / 5% 100% no-repeat, linear-gradient(#fff, #fff) right / 5% 100% no-repeat, #F76332; }
 .jjmoreno::after { content: "JJ"; font-size: 9px; font-weight: bold; color: white; }
-
+.bartolomemitre { background: linear-gradient(90deg, #30378C 20%, #EDDE51 20%, #EDDE51 40%, #30378C 40%, #30378C 60%, #EDDE51 60%, #EDDE51 80%, #30378C 80%); }
+.defvilelas {background:linear-gradient(180deg,transparent 0% 30%,#fff 30% 50%,transparent 50% 100%),linear-gradient(90deg,#009602 0% 20%,#fff 20% 40%,#009602 40% 60%,#fff 60% 80%,#009602 80% 100%);}
+.sarmientolb { background: linear-gradient(90deg, #fff 20%, #003194 20%, #003194 40%, #fff 40%, #fff 60%,
+ #003194 60%, #003194 80%, #fff 80%); }
+.spbelgrano {background:linear-gradient(180deg,transparent 0% 30%,#2E9B42 30% 50%,transparent 50% 100%),linear-gradient(90deg,#fff 0% 20%,#2E9B42 20% 40%,#fff 40% 60%,#fff 60% 80%,#fff 80% 100%);}
+.splasparejas { background: linear-gradient(90deg, #E61B23 20%, #00A14D 20%, #00A14D 40%, #E61B23 40%, #E61B23 60%, #00A14D 60%, #00A14D 80%, #E61B23 80%); }
+.costabrava { background: linear-gradient(90deg, #E80101 20%, #fff 20%, #fff 40%, #E80101 40%, #E80101 60%, #fff 60%, #fff 80%, #E80101 80%); }
+.sanmartinmendoza { background: linear-gradient(90deg, #E80101 20%, #fff 20%, #fff 40%, #E80101 40%, #E80101 60%, #fff 60%, #fff 80%, #E80101 80%); }
+.douglashaig { background: linear-gradient(90deg, #E80101 20%, #000 20%, #000 40%, #E80101 40%, #E80101 60%, #000 60%, #000 80%, #E80101 80%); }
+.ellinqueño { background: linear-gradient(90deg, #495774 20%, #fff 20%, #fff 40%, #495774 40%, #495774 60%, #fff 60%, #fff 80%, #495774 80%); }
+.deprincon { background: conic-gradient(from -45deg, #08add8 0deg 26deg, #fff 26deg 64deg, #08add8 64deg 90deg, #fff 90deg 116deg, #08add8 116deg 154deg, #fff 154deg 180deg, #08add8 180deg 206deg, #fff 206deg 244deg, #08add8 244deg 270deg, #fff 270deg 296deg, #08add8 296deg 334deg, #fff 334deg 360deg); }
+.deprincon::after { content: "⚽"; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); font-size: 9px; }
+.juventudunidasanluis { background: linear-gradient(90deg, #F2D700 20%, #2A6AAF 20%, #2A6AAF 40%, #F2D700 40%, #F2D700 60%, #2A6AAF 60%, #2A6AAF 80%, #F2D700 80%); }
+.fadep { background: linear-gradient(180deg, #000 0 27.2%, transparent 27.2%), linear-gradient(90deg, #000 20%, #E80101 20%, #E80101 40%, #000 40%, #000 60%, #E80101 60%, #E80101 80%, #000 80%); }
+.nuevedejulio { background: linear-gradient(90deg, #E80101 20%, #fff 20%, #fff 40%, #E80101 40%, #E80101 60%, #fff 60%, #fff 80%, #E80101 80%); }
+.gimnasiacdu { background: repeating-linear-gradient(180deg, #ffffff, #ffffff 5.3px, #018ED9 5.3px, #018ED9 10.6px, #ffffff 10.6px, #ffffff 16px); display:inline-flex; align-items:center; justify-content:center; }
 
 
 /* MENÚ DESPLEGABLE */

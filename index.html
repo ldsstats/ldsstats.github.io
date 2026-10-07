@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>LdS Stats - 2026</title>
-    <link rel="stylesheet" href="style.css?v=7">
+    <link rel="stylesheet" href="style.css?v=77">
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#111111">
     <!-- Google Analytics -->
@@ -32,7 +32,7 @@
     z-index: 999;
     pointer-events: none;
     letter-spacing: 0.3px;
-">🕐 Última actualización: Lun 05/10 20:30hs</div>
+">🕐 Última actualización: Mié 07/10 08:00hs</div>
 
 <div id="container-principal">
     <div id="logo-header"><img src="au11.png" style="height:80px;" alt="LdS Stats"></div>
@@ -166,26 +166,26 @@
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-<script src="datos.js?v=7"></script>
+<script src="datos.js?v=77"></script>
 <script>
     let estado = { torneo: 'home', categoria: '', fecha: 1 };
     let estadoAnterior = { torneo: 'home', categoria: '', fecha: 1 };
 
     // Última actualización por sección — modificar según corresponda
     const ULTIMA_ACT = {
-        default:        "Lun 05/10 20:30hs",
-        home:        "Lun 05/10 20:30hs",
+        default:        "Mié 07/10 08:00hs",
+        home:        "Mié 07/10 08:00hs",
         apertura_oficial:   "Dom 02/08 21:30hs",
         clausura_oficial:   "Dom 04/10 18:40hs",
-        historial:   "Lun 05/10 20:30hs",
+        historial:   "Mié 07/10 08:00hs",
         goleadores_oficial:   "Dom 04/10 18:40hs",
         arqueros_oficial:   "Dom 04/10 18:40hs",
-        reserva_oficial:   "Lun 05/10 20:30hs",
+        reserva_oficial:   "Mié 07/10 08:00hs",
         apertura_promocional:   "Dom 02/08 21:30hs",
         clausura_promocional:   "Dom 04/10 18:40hs",
         goleadores_promocional:   "Dom 04/10 18:40hs",
         arqueros_promocional:   "Dom 04/10 18:40hs",
-        reserva_promocional:   "Lun 05/10 20:30hs",
+        reserva_promocional:   "Mié 07/10 08:00hs",
         posiciones_federala:   "Dom 04/10 21:00hs",
         goleadores_federala:   "Dom 04/10 21:00hs",
         sub131517:   "Vie 02/10 08:00hs",
@@ -294,7 +294,7 @@
         }
         estado.torneo = tor;
         estado.categoria = cat;
-        estado.fecha = (tor === 'apertura' && (cat === 'oficial' || cat === 'promocional')) ? 14 : (tor === 'clausura' && (cat === 'oficial' || cat === 'promocional')) ? 10 : (tor === 'posiciones' && cat === 'federala') ? 18 : (tor === 'apertura' && cat === 'femenino') ? 14 : (tor === 'clausura' && cat === 'femenino') ? 11 : (tor === 'torneo2026' && cat === 'segundafemenino') ? 27 : (tor === 'futsal') ? 10 : (tor === 'futsalreserva') ? 10 : (tor === 'sub15fem') ? 22 : 1; 
+        estado.fecha = (tor === 'apertura' && (cat === 'oficial' || cat === 'promocional')) ? 14 : (tor === 'clausura' && (cat === 'oficial' || cat === 'promocional')) ? 11 : (tor === 'posiciones' && cat === 'federala') ? 18 : (tor === 'apertura' && cat === 'femenino') ? 14 : (tor === 'clausura' && cat === 'femenino') ? 11 : (tor === 'torneo2026' && cat === 'segundafemenino') ? 27 : (tor === 'futsal') ? 11 : (tor === 'futsalreserva') ? 11 : (tor === 'sub15fem') ? 22 : 1; 
         actualizarVista();
         document.documentElement.scrollTop = 0;
         document.body.scrollTop = 0;
@@ -496,6 +496,10 @@
                 cont.innerHTML = generarFemeninoPlayoffs();
             } else if (estado.torneo === 'reservafemeninoplayoffs') {
                 cont.innerHTML = generarReservaFemeninoPlayoffs();
+            } else if (estado.torneo === 'segundafemeninoplayoffs') {
+                cont.innerHTML = generarSegundaFemeninoPlayoffs();
+            } else if (estado.torneo === 'reservasegundafemeninoplayoffs') {
+                cont.innerHTML = generarReservaSegundaFemeninoPlayoffs();
             } else if (estado.torneo === 'seniorgoleadores') {
                 cont.innerHTML = generarSeniorGoleadores();
             } else if (estado.torneo === 'formativas') {
@@ -504,6 +508,8 @@
                 cont.innerHTML = generarRegAmateurFem();
             } else if (estado.torneo === 'regamateurtemporada') {
                 cont.innerHTML = generarRegAmateurTemporada();
+            } else if (estado.torneo === 'regamateurplayoffs') {
+                cont.innerHTML = generarRegAmateurPlayoffs();
             } else if (estado.torneo === 'goleadoresregamateur') {
                 cont.innerHTML = generarGoleadoresRegAmateur();
             } else if (estado.torneo === 'goleadorasregamateurfem') {
@@ -534,7 +540,7 @@
                 cont.innerHTML = generarTablaFederal(estado.etapaFederal || 'playoffs');
             } else if (estado.torneo === 'reserva') {
                 if (!estado._reservaIniciada || estado._reservaCat !== estado.categoria) {
-                    estado.fecha = (estado.categoria === 'oficial' || estado.categoria === 'promocional') ? 10 : (estado.categoria === 'femenino') ? 11 : (estado.categoria === 'segundafemenino') ? 27 : 1;
+                    estado.fecha = (estado.categoria === 'oficial' || estado.categoria === 'promocional') ? 11 : (estado.categoria === 'femenino') ? 11 : (estado.categoria === 'segundafemenino') ? 27 : 1;
                     estado._reservaIniciada = true;
                     estado._reservaCat = estado.categoria;
                 }
