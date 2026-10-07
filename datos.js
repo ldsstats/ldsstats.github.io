@@ -1977,13 +1977,62 @@ function generarHome() {
 
 
      { id: "2026-10-07", label: "MIÉ 07/10", torneos: [
+            { nombre: "FUTSAL | CLAUSURA | 11° FECHA", cat: "federala", torLink: "federala", noAutoResult: true, partidos: [
+            {l:"Pacífico BB", v:"San Francisco", hora:"22:00", gl:null, gv:null, claseL:"pacificobb", claseV:"sanfrancisco",nota:"<b>en cancha de La Estación</b>"},
+            {l:"Villa Mitre", v:"La Esperanza", hora:"22:00", gl:null, gv:null, claseL:"villamitre", claseV:"laesperanza",nota:"<b>en cancha de Don Bosco</b>"},
+            ]},
             { nombre: "REGIONAL AMATEUR | FECHA 6 | REGIÓN BONAERENSE PAMPEANA SUR", cat: "regamateurfem", torLink: "regamateurfem", noAutoResult: true, partidos: [
             {l:"Balonpié", v:"Embajadores", hora:"19:00", gl:null, gv:null, claseL:"balompie", claseV:"embajadoresolavarria",nota:"<b>Zona 6</b>"},
             ]},
        ]},
      { id: "2026-10-08", label: "JUE 08/10", torneos: [
+            { nombre: "FUTSAL | CLAUSURA | 11° FECHA", cat: "federala", torLink: "federala", noAutoResult: true, partidos: [
+            {l:"La Estación", v:"Comercial", hora:"22:00", gl:null, gv:null, claseL:"laestacion", claseV:"comercial",nota:"<b>en cancha de Don Bosco</b>"},
+            ]},
             { nombre: "COPA PAÍS (LIGA DEL SUR)", cat: "copapais", torLink: "copapais", noAutoResult: true, partidos: [
             {l:"San Jorge", v:"La Plata", hora:"18:00", gl:null, gv:null, claseL:"sanjorge", claseV:"laplata",nota:"<b>Ida: 0-1</b>"},
+            ]},
+       ]},
+     { id: "2026-10-09", label: "VIE 09/10", torneos: [
+            { nombre: "FUTSAL | CLAUSURA | 11° FECHA", cat: "federala", torLink: "federala", noAutoResult: true, partidos: [
+            {l:"Petroquímicos", v:"Catamarca", hora:"22:00", gl:null, gv:null, claseL:"petroquimicos", claseV:"catamarca",nota:"<b>en cancha de Petroquímicos</b>"},
+            {l:"Tiro Federal", v:"Los 3 Chiflados", hora:"22:30", gl:null, gv:null, claseL:"tirofederal", claseV:"los3chiflados",nota:"<b>en cancha de Tiro Federal</b>"},
+            ]},
+            { nombre: "FEDERAL A | REVÁLIDA | 2°RONDA (VILLA MITRE)", cat: "federala", torLink: "federala", noAutoResult: true, partidos: [
+            {l:"San Martín de Mendoza", v:"Argentino de Monte Maíz", hora:"21:30", gl:null, gv:null, claseL:"sanmartinmendoza", claseV:"argmontemaiz",nota:"<b>Partido de ida</b>"},
+            {l:"Juventud Antoniana", v:"Huracán Las Heras", hora:"22:00", gl:null, gv:null, claseL:"jantoniana", claseV:"huracanlh",nota:"<b>Partido de ida</b>"},
+            ]},
+       ]},
+     { id: "2026-10-10", label: "SÁB 10/10", torneos: [
+            { nombre: "FEDERAL A | REVÁLIDA | 2°RONDA (VILLA MITRE)", cat: "federala", torLink: "federala", noAutoResult: true, partidos: [
+            {l:"Deportivo Rincón", v:"Kimberley", hora:"16:00", gl:null, gv:null, claseL:"deprincon", claseV:"kimberley",nota:"<b>Partido de ida</b>"},
+            ]},
+            { nombre: "TORNEO JUVENIL | SUB 13 | OCTAVOS/CUARTOS", cat: "sub131517", torLink: "sub131517", noAutoResult: true, partidos: [
+            {l:"<b>Villa Mitre</b>", v:"Sarmiento de Junín", hora:"09:00", gl:null, gv:null, claseL:"villamitre", claseV:"sarmientojunin",nota:"<b>en Pergamino</b>"},
+            {l:"Academia Mascherano", v:"Mac Allister", hora:"09:00", gl:null, gv:null, claseL:"mascherano", claseV:"macallister",nota:"<b>en Pergamino</b>"},
+            ]},
+       ]},
+     { id: "2026-10-11", label: "DOM 11/10", torneos: [
+            { nombre: "FEDERAL A | SEMIFINALES", cat: "federala", torLink: "federala", noAutoResult: true, partidos: [
+            {l:"Cipolletti", v:"Alvarado", hora:"15:30", gl:null, gv:null, claseL:"cipolletti", claseV:"alvarado",nota:"<b>Partido de ida</b>"},
+            {l:"<b>Olimpo</b>", v:"San Martín de Formosa", hora:"16:00", gl:null, gv:null, claseL:"olimpo", claseV:"sanmartinfsa",nota:"<b>Partido de ida</b>"},
+            ]},
+            { nombre: "FEDERAL A | REVÁLIDA | 2°RONDA", cat: "federala", torLink: "federala", noAutoResult: true, partidos: [
+            {l:"FADEP", v:"Atenas de Río Cuarto", hora:"15:00", gl:null, gv:null, claseL:"fadep", claseV:"atenasrc",nota:"<b>Partido de ida</b>"},
+            {l:"Costa Brava", v:"<b>Villa Mitre</b>", hora:"15:00", gl:null, gv:null, claseL:"costabrava", claseV:"villamitre",nota:"<b>Partido de ida</b>"},
+            {l:"El Linqueño", v:"Douglas Haig", hora:"15:30", gl:null, gv:null, claseL:"ellinqueño", claseV:"douglashaig",nota:"<b>Partido de ida</b>"},
+            {l:"Juventud Unida (SL)", v:"Sol de América", hora:"15:30", gl:null, gv:null, claseL:"juventudunidasanluis", claseV:"soldeamericafsa",nota:"<b>Partido de ida</b>"},
+            {l:"Gimnasia de CdU", v:"9 de Julio", hora:"16:00", gl:null, gv:null, claseL:"gimnasiacdu", claseV:"nuevedejulio",nota:"<b>Partido de ida</b>"},
+            {l:"Boca Unidos", v:"Bartolomé Mitre", hora:"16:00", gl:null, gv:null, claseL:"bocaunidos", claseV:"bartolomemitre",nota:"<b>Partido de ida</b>"},
+            {l:"Defensores de Vilelas", v:"Gimnasia de Chivilcoy", hora:"16:00", gl:null, gv:null, claseL:"defvilelas", claseV:"gimnasiachivilcoy",nota:"<b>Partido de ida</b>"},
+            {l:"Defensores de Belgrano (VR)", v:"Sportivo Las Parejas", hora:"16:00", gl:null, gv:null, claseL:"defbelgranovr", claseV:"splasparejas",nota:"<b>Partido de ida</b>"},
+            {l:"Sportivo Belgrano", v:"Sarmiento de La Banda", hora:"17:30", gl:null, gv:null, claseL:"spbelgrano", claseV:"sarmientolb",nota:"<b>Partido de ida</b>"},
+            ]},
+            { nombre: "REGIONAL FEDERAL AMATEUR | BONAERENSE PAMPEANA SUR | 2° RONDA", cat: "regfederaltemp", torLink: "regfederaltemp", noAutoResult: true, partidos: [
+            {l:"Quilmes de MdP", v:"Ministerio", hora:"11:10", gl:null, gv:null, claseL:"quilmesmdp", claseV:"ministerio",nota:"<b>Partido de ida</b>"},
+            {l:"Independiente de San Cayetano", v:"<b>Huracán</b>", hora:"16:00", gl:null, gv:null, claseL:"indeptesancayetano", claseV:"huracan",nota:"<b>Partido de ida</b>"},
+            {l:"Argentino de 25 de Mayo", v:"Racing de Olavarría", hora:"16:00", gl:null, gv:null, claseL:"argentino25demayo", claseV:"racingolavarria",nota:"<b>Partido de ida</b>"},
+            {l:"Ferro de Pico", v:"Atlético Villegas", hora:"20:00", gl:null, gv:null, claseL:"ferropico", claseV:"atlvillegas",nota:"<b>Partido de ida</b>"},
             ]},
        ]},
     ];
@@ -2136,6 +2185,10 @@ function generarFixture(n, tor, cat) {
 const BD_FEDERAL_REVALIDA = {
     segundaRonda: [
         {
+            ida:    { local: "Costa Brava", clL: "costabrava", visitante: "Villa Mitre", clV: "villamitre", gl: null, gv: null, goles_l: [], goles_v: [] },
+            vuelta: { local: "Villa Mitre", clL: "villamitre", visitante: "Costa Brava", clV: "costabrava", gl: null, gv: null, goles_l: [], goles_v: [] }
+        },
+        {
             ida:    { local: "Boca Unidos", clL: "bocaunidos", visitante: "Bartolomé Mitre", clV: "bartolomemitre", gl: null, gv: null, goles_l: [], goles_v: [] },
             vuelta: { local: "Bartolomé Mitre", clL: "bartolomemitre", visitante: "Boca Unidos", clV: "bocaunidos", gl: null, gv: null, goles_l: [], goles_v: [] }
         },
@@ -2172,16 +2225,36 @@ const BD_FEDERAL_REVALIDA = {
             vuelta: { local: "Sol de América", clL: "soldeamericafsa", visitante: "Juventud Unida de San Luis", clV: "juventudunidasanluis", gl: null, gv: null, goles_l: [], goles_v: [] }
         },
         {
-            ida:    { local: "Costa Brava", clL: "costabrava", visitante: "Villa Mitre", clV: "villamitre", gl: null, gv: null, goles_l: [], goles_v: [] },
-            vuelta: { local: "Villa Mitre", clL: "villamitre", visitante: "Costa Brava", clV: "costabrava", gl: null, gv: null, goles_l: [], goles_v: [] }
-        },
-        {
             ida:    { local: "FADEP", clL: "fadep", visitante: "Atenas de Río Cuarto", clV: "atenasrc", gl: null, gv: null, goles_l: [], goles_v: [] },
             vuelta: { local: "Atenas de Río Cuarto", clL: "atenasrc", visitante: "FADEP", clV: "fadep", gl: null, gv: null, goles_l: [], goles_v: [] }
         },
         {
             ida:    { local: "Gimnasia de Concepción del Uruguay", clL: "gimnasiacdu", visitante: "9 de Julio", clV: "nuevedejulio", gl: null, gv: null, goles_l: [], goles_v: [] },
             vuelta: { local: "9 de Julio", clL: "nuevedejulio", visitante: "Gimnasia de Concepción del Uruguay", clV: "gimnasiacdu", gl: null, gv: null, goles_l: [], goles_v: [] }
+        }
+    ],
+    terceraRonda: [
+        {
+            ida:    { local: "A confirmar", clL: "aconfirmar", visitante: "A confirmar", clV: "aconfirmar", gl: null, gv: null, goles_l: [], goles_v: [] },
+            vuelta: { local: "A confirmar", clL: "aconfirmar", visitante: "A confirmar", clV: "aconfirmar", gl: null, gv: null, goles_l: [], goles_v: [] }
+        }
+    ],
+    cuartaRonda: [
+        {
+            ida:    { local: "A confirmar", clL: "aconfirmar", visitante: "A confirmar", clV: "aconfirmar", gl: null, gv: null, goles_l: [], goles_v: [] },
+            vuelta: { local: "A confirmar", clL: "aconfirmar", visitante: "A confirmar", clV: "aconfirmar", gl: null, gv: null, goles_l: [], goles_v: [] }
+        }
+    ],
+    quintaRonda: [
+        {
+            ida:    { local: "A confirmar", clL: "aconfirmar", visitante: "A confirmar", clV: "aconfirmar", gl: null, gv: null, goles_l: [], goles_v: [] },
+            vuelta: { local: "A confirmar", clL: "aconfirmar", visitante: "A confirmar", clV: "aconfirmar", gl: null, gv: null, goles_l: [], goles_v: [] }
+        }
+    ],
+    sextaRonda: [
+        {
+            ida:    { local: "A confirmar", clL: "aconfirmar", visitante: "A confirmar", clV: "aconfirmar", gl: null, gv: null, goles_l: [], goles_v: [] },
+            vuelta: { local: "A confirmar", clL: "aconfirmar", visitante: "A confirmar", clV: "aconfirmar", gl: null, gv: null, goles_l: [], goles_v: [] }
         }
     ]
 };
@@ -2200,30 +2273,29 @@ function generarTablaFederal(etapa = 'playoffs') {
             style="font-size:10px;padding:4px 12px;border:1px solid #1a4a2e;border-radius:12px;cursor:pointer;font-weight:bold;background:${etapa==='revalida'?'#1a4a2e':'#fff'};color:${etapa==='revalida'?'#fff':'#1a4a2e'};">Reválida</button>
     </div>`;
 if (etapa === 'playoffs') {
+    const subPO = estado.subPlayoffFederal || 'cuartos';
     let htmlP = tabs;
 
-    htmlP += `<div class="header-t">PLAYOFFS - CUARTOS DE FINAL</div>`;
+    htmlP += `<div style="display:flex;gap:6px;padding:8px 8px 4px;background:#f9f9f9;border-bottom:1px solid #eee;">
+        <button onclick="estado.subPlayoffFederal='cuartos';document.getElementById('contenido').innerHTML=generarTablaFederal('playoffs')"
+            style="font-size:9px;padding:3px 10px;border:1px solid #1a4a2e;border-radius:10px;cursor:pointer;background:${subPO==='cuartos'?'#1a4a2e':'#fff'};color:${subPO==='cuartos'?'#fff':'#1a4a2e'};">Cuartos de Final</button>
+        <button onclick="estado.subPlayoffFederal='semifinales';document.getElementById('contenido').innerHTML=generarTablaFederal('playoffs')"
+            style="font-size:9px;padding:3px 10px;border:1px solid #1a4a2e;border-radius:10px;cursor:pointer;background:${subPO==='semifinales'?'#1a4a2e':'#fff'};color:${subPO==='semifinales'?'#fff':'#1a4a2e'};">Semifinales</button>
+        <button onclick="estado.subPlayoffFederal='final';document.getElementById('contenido').innerHTML=generarTablaFederal('playoffs')"
+            style="font-size:9px;padding:3px 10px;border:1px solid #1a4a2e;border-radius:10px;cursor:pointer;background:${subPO==='final'?'#1a4a2e':'#fff'};color:${subPO==='final'?'#fff':'#1a4a2e'};">Final</button>
+    </div>`;
+
+    const rondasPO = { cuartos: ['CUARTOS DE FINAL', BD_FEDERAL_PLAYOFFS.cuartos], semifinales: ['SEMIFINALES', BD_FEDERAL_PLAYOFFS.semifinales], final: ['FINAL', BD_FEDERAL_PLAYOFFS.final] };
+    const [tituloPO, duelosPO] = rondasPO[subPO];
+
+    htmlP += `<div class="header-t">PLAYOFFS - ${tituloPO}</div>`;
     htmlP += `<table>`;
 
-    BD_FEDERAL_PLAYOFFS.cuartos.forEach((d, i) => {
+    duelosPO.forEach((d, i) => {
         htmlP += _renderPartidoPlayoff(d.ida);
         htmlP += _renderPartidoPlayoff(d.vuelta);
 
-        if (i < BD_FEDERAL_PLAYOFFS.cuartos.length - 1) {
-            htmlP += `<tr><td colspan="3" style="padding:0;height:20px;background:#729b3c;"></td></tr>`;
-        }
-    });
-
-    htmlP += `</table>`;
-
-    htmlP += `<div class="header-t">PLAYOFFS - SEMIFINALES</div>`;
-    htmlP += `<table>`;
-
-    BD_FEDERAL_PLAYOFFS.semifinales.forEach((d, i) => {
-        htmlP += _renderPartidoPlayoff(d.ida);
-        htmlP += _renderPartidoPlayoff(d.vuelta);
-
-        if (i < BD_FEDERAL_PLAYOFFS.semifinales.length - 1) {
+        if (i < duelosPO.length - 1) {
             htmlP += `<tr><td colspan="3" style="padding:0;height:20px;background:#729b3c;"></td></tr>`;
         }
     });
@@ -2308,13 +2380,26 @@ if (etapa === 'playoffs') {
     }
 
     if (etapa === 'revalida') {
+    const subR = estado.subRondaRevalida || 'segundaRonda';
     let htmlR = tabs;
 
-    htmlR += `<div class="header-t">REVÁLIDA — SEGUNDA RONDA</div>`;
+    const rondasRevalida = [
+        ['segundaRonda', 'Segunda Ronda'], ['terceraRonda', 'Tercera Ronda'], ['cuartaRonda', 'Cuarta Ronda'],
+        ['quintaRonda', 'Quinta Ronda'], ['sextaRonda', 'Sexta Ronda']
+    ];
+    htmlR += `<div style="display:flex;flex-wrap:wrap;gap:6px;padding:8px 8px 4px;background:#f9f9f9;border-bottom:1px solid #eee;">`;
+    rondasRevalida.forEach(([key, label]) => {
+        htmlR += `<button onclick="estado.subRondaRevalida='${key}';document.getElementById('contenido').innerHTML=generarTablaFederal('revalida')"
+            style="font-size:9px;padding:3px 10px;border:1px solid #1a4a2e;border-radius:10px;cursor:pointer;background:${subR===key?'#1a4a2e':'#fff'};color:${subR===key?'#fff':'#1a4a2e'};">${label}</button>`;
+    });
+    htmlR += `</div>`;
+
+    const tituloR = rondasRevalida.find(([key]) => key === subR)[1];
+    htmlR += `<div class="header-t">REVÁLIDA — ${tituloR.toUpperCase()}</div>`;
 
     htmlR += `<table>`;
 
-    BD_FEDERAL_REVALIDA.segundaRonda.forEach((duelo, idx) => {
+    BD_FEDERAL_REVALIDA[subR].forEach((duelo, idx) => {
 
         if (idx > 0) {
             htmlR += `</table>`;
@@ -18024,17 +18109,32 @@ const BD_GOL_SUB = {
 };
 
 const BD_SUB13_PLAYOFFS = {
-    cuartos: [
+    octavos: [
         { local: "Villa Mitre", clL: "villamitre", visitante: "Sarmiento de Junín", clV: "sarmientojunin", gl: null, gv: null },
-        { local: "Gimnasia y Tiro", clL: "gimnasiaytiro", visitante: "Desamparados", clV: "desamparados", gl: null, gv: null },
-        { local: "Dep. Maipú", clL: "depmaipu", visitante: "Atlético Tucumán", clV: "atltucuman", gl: null, gv: null },
+        { local: "Academia Mascherano", clL: "mascherano", visitante: "Mac Allister", clV: "macallister", gl: null, gv: null },
         { local: "Boca Unidos", clL: "bocaunidos", visitante: "Rosario Central", clV: "rosariocentral", gl: null, gv: null },
         { local: "Unión de Santa Fe", clL: "unionsf", visitante: "San Martín de Formosa", clV: "sanmartinfsa", gl: null, gv: null },
-        { local: "Academia Mascherano", clL: "mascherano", visitante: "Mac Allister", clV: "macallister", gl: null, gv: null },
         { local: "CAI", clL: "cai", visitante: "Maronese", clV: "maronese", gl: null, gv: null },
-        { local: "Independiente NQN", clL: "indeptenqn", visitante: "JJ Moreno", clV: "jjmoreno", gl: null, gv: null }
+        { local: "JJ Moreno", clL: "jjmoreno", visitante: "Independiente de Neuquén", clV: "indeptenqn", gl: null, gv: null },
+        { local: "Gimnasia y Tiro", clL: "gimnasiaytiro", visitante: "Desamparados", clV: "desamparados", gl: null, gv: null },
+        { local: "Deportivo Maipú", clL: "depmaipu", visitante: "Atlético Tucumán", clV: "atltucuman", gl: null, gv: null }
+    ],
+    cuartos: [
+        { local: "A confirmar", clL: "aconfirmar", visitante: "A confirmar", clV: "aconfirmar", gl: null, gv: null },
+        { local: "A confirmar", clL: "aconfirmar", visitante: "A confirmar", clV: "aconfirmar", gl: null, gv: null },
+        { local: "A confirmar", clL: "aconfirmar", visitante: "A confirmar", clV: "aconfirmar", gl: null, gv: null },
+        { local: "A confirmar", clL: "aconfirmar", visitante: "A confirmar", clV: "aconfirmar", gl: null, gv: null }
+    ],
+    semifinales: [
+        { local: "A confirmar", clL: "aconfirmar", visitante: "A confirmar", clV: "aconfirmar", gl: null, gv: null },
+        { local: "A confirmar", clL: "aconfirmar", visitante: "A confirmar", clV: "aconfirmar", gl: null, gv: null }
+    ],
+    final: [
+        { local: "A confirmar", clL: "aconfirmar", visitante: "A confirmar", clV: "aconfirmar", gl: null, gv: null }
     ]
 };
+
+let subEtapaSub13Playoffs = 'octavos';
 
 function generarSub() {
     const categorias = [
@@ -18184,13 +18284,25 @@ function mostrarSub13Playoffs() {
             </button>
         </div>`;
 
+    const instanciasSub13 = [
+        ['octavos', 'Octavos de Final'], ['cuartos', 'Cuartos de Final'],
+        ['semifinales', 'Semifinales'], ['final', 'Final']
+    ];
+    html += `<div style="display:flex;flex-wrap:wrap;gap:6px;padding:8px 8px 4px;background:#f9f9f9;border-bottom:1px solid #eee;">`;
+    instanciasSub13.forEach(([key, label]) => {
+        html += `<button onclick="subEtapaSub13Playoffs='${key}';document.getElementById('contenido').innerHTML=mostrarSub13Playoffs()"
+            style="font-size:9px;padding:3px 10px;border:1px solid #1a4a2e;border-radius:10px;cursor:pointer;background:${subEtapaSub13Playoffs===key?'#1a4a2e':'#fff'};color:${subEtapaSub13Playoffs===key?'#fff':'#1a4a2e'};">${label}</button>`;
+    });
+    html += `</div>`;
+
+    const [, tituloInstancia] = instanciasSub13.find(([key]) => key === subEtapaSub13Playoffs);
     html += `<div class="header-t" style="font-size:11px;background:#2c6e49;">
-        CUARTOS DE FINAL
+        ${tituloInstancia.toUpperCase()}
     </div>`;
 
     html += `<table>`;
 
-    BD_SUB13_PLAYOFFS.cuartos.forEach(p => {
+    BD_SUB13_PLAYOFFS[subEtapaSub13Playoffs].forEach(p => {
         html += _renderPartidoPlayoff(p, 'Pendiente');
     });
 
@@ -22848,31 +22960,45 @@ const BD_REGAMATEUR_PLAYOFFS = {
           vuelta: { local: "Dep. Norte", clL: "depnorte", visitante: "A confirmar", clV: "aconfirmar", gl: null, gv: null, goles_l: [], goles_v: [] } },
         { ida:    { local: "A confirmar", clL: "aconfirmar", visitante: "All Boys de Trenel", clV: "allboystrenel", gl: null, gv: null, goles_l: [], goles_v: [] },
           vuelta: { local: "All Boys de Trenel", clL: "allboystrenel", visitante: "A confirmar", clV: "aconfirmar", gl: null, gv: null, goles_l: [], goles_v: [] } },
-        { ida:    { local: "A confirmar", clL: "aconfirmar", visitante: "Estudiantes (Olavarría)", clV: "estudiantesolavarria", gl: null, gv: null, goles_l: [], goles_v: [] },
+                { ida:    { local: "A confirmar", clL: "aconfirmar", visitante: "Estudiantes (Olavarría)", clV: "estudiantesolavarria", gl: null, gv: null, goles_l: [], goles_v: [] },
           vuelta: { local: "Estudiantes (Olavarría)", clL: "estudiantesolavarria", visitante: "A confirmar", clV: "aconfirmar", gl: null, gv: null, goles_l: [], goles_v: [] } }
+    ],
+    cuarta: [
+        { ida:    { local: "A confirmar", clL: "aconfirmar", visitante: "A confirmar", clV: "aconfirmar", gl: null, gv: null, goles_l: [], goles_v: [] },
+          vuelta: { local: "A confirmar", clL: "aconfirmar", visitante: "A confirmar", clV: "aconfirmar", gl: null, gv: null, goles_l: [], goles_v: [] } },
+        { ida:    { local: "A confirmar", clL: "aconfirmar", visitante: "A confirmar", clV: "aconfirmar", gl: null, gv: null, goles_l: [], goles_v: [] },
+          vuelta: { local: "A confirmar", clL: "aconfirmar", visitante: "A confirmar", clV: "aconfirmar", gl: null, gv: null, goles_l: [], goles_v: [] } }
+    ],
+    quinta: [
+        { ida:    { local: "A confirmar", clL: "aconfirmar", visitante: "A confirmar", clV: "aconfirmar", gl: null, gv: null, goles_l: [], goles_v: [] },
+          vuelta: { local: "A confirmar", clL: "aconfirmar", visitante: "A confirmar", clV: "aconfirmar", gl: null, gv: null, goles_l: [], goles_v: [] } }
     ]
 };
+
+let subRondaRegAmateurPlayoffs = 'segunda';
 
 function generarRegAmateurPlayoffs() {
     let html = `<div class="header-t">REGIONAL AMATEUR — PLAYOFFS</div>`;
 
-    html += `<div class="header-t" style="font-size:11px;background:#2c6e49;">SEGUNDA RONDA</div><table>`;
-    BD_REGAMATEUR_PLAYOFFS.segunda.forEach((d, i) => {
-        html += _renderPartidoPlayoff(d.ida);
-        html += _renderPartidoPlayoff(d.vuelta);
-        if (i < BD_REGAMATEUR_PLAYOFFS.segunda.length - 1) {
-            html += `<tr><td colspan="3" style="padding:0;height:20px;background:#729b3c;"></td></tr>`;
-        }
+    const rondasRegAmateur = [
+        ['segunda', 'Segunda Ronda Regional'], ['tercera', 'Tercera Ronda Regional'],
+        ['cuarta', 'Cuarta Ronda Regional'], ['quinta', 'Quinta Ronda Regional']
+    ];
+    html += `<div style="display:flex;flex-wrap:wrap;gap:6px;padding:8px 8px 4px;background:#f9f9f9;border-bottom:1px solid #eee;">`;
+    rondasRegAmateur.forEach(([key, label]) => {
+        html += `<button onclick="subRondaRegAmateurPlayoffs='${key}';document.getElementById('contenido').innerHTML=generarRegAmateurPlayoffs()"
+            style="font-size:9px;padding:3px 10px;border:1px solid #1a4a2e;border-radius:10px;cursor:pointer;background:${subRondaRegAmateurPlayoffs===key?'#1a4a2e':'#fff'};color:${subRondaRegAmateurPlayoffs===key?'#fff':'#1a4a2e'};">${label}</button>`;
     });
-    html += `</table>`;
+    html += `</div>`;
 
-    html += `<div style="height:8px;background:#f0f0f0;border-top:1px solid #ddd;border-bottom:1px solid #ddd;"></div>`;
+    const [, tituloRonda] = rondasRegAmateur.find(([key]) => key === subRondaRegAmateurPlayoffs);
+    const duelos = BD_REGAMATEUR_PLAYOFFS[subRondaRegAmateurPlayoffs];
 
-    html += `<div class="header-t" style="font-size:11px;background:#2c6e49;">TERCERA RONDA</div><table>`;
-    BD_REGAMATEUR_PLAYOFFS.tercera.forEach((d, i) => {
+    html += `<div class="header-t" style="font-size:11px;background:#2c6e49;">${tituloRonda.toUpperCase()}</div><table>`;
+    duelos.forEach((d, i) => {
         html += _renderPartidoPlayoff(d.ida);
         html += _renderPartidoPlayoff(d.vuelta);
-        if (i < BD_REGAMATEUR_PLAYOFFS.tercera.length - 1) {
+        if (i < duelos.length - 1) {
             html += `<tr><td colspan="3" style="padding:0;height:20px;background:#729b3c;"></td></tr>`;
         }
     });
@@ -22987,7 +23113,7 @@ const BD_REG_AMATEUR_FEM = {
     fases: [
         {
             id: "primera-ronda",
-            nombre: "Primera Ronda",
+            nombre: "Primera Ronda Regional",
             duelos: [
                 {
                     ida:    { local: "<b>Villa Mitre</b>",                  clL: "villamitre",        visitante: "Municipales",               clV: "municipales", gl: 4, gv: 1, goles_l: ["Lucrecia Semper (2)","Morena Bouven","Sol Menéndez Perrone"], goles_v: [] },
@@ -23017,7 +23143,7 @@ const BD_REG_AMATEUR_FEM = {
         },
         {
             id: "segunda-ronda",
-            nombre: "Segunda Ronda",
+            nombre: "Segunda Ronda Regional",
             duelos: [
                 {
                     ida:    { local: "Racing de Fortín Olavarría", clL: "racingfortin",    visitante: "<b>Villa Mitre</b>",              clV: "villamitre", gl: 1, gv: 2, goles_l: [], goles_v: ["Camila Aliata","Sol Menéndez Perrone"] },
@@ -23035,7 +23161,7 @@ const BD_REG_AMATEUR_FEM = {
         },
         {
             id: "tercera-ronda",
-            nombre: "Tercera Ronda",
+            nombre: "Tercera Ronda Regional",
             duelos: [
                 {
                     ida:    { local: "Ciudad de Olavarría", clL: "ciudadolavarria",    visitante: "<b>Villa Mitre</b>",              clV: "villamitre", gl: 3, gv: 2, goles_l: [], goles_v: ["Lucrecia Semper","Sol Menéndez Perrone"] },
@@ -23045,7 +23171,7 @@ const BD_REG_AMATEUR_FEM = {
         },
         {
             id: "cuarta-ronda",
-            nombre: "Cuarta Ronda",
+            nombre: "Cuarta Ronda Regional",
             duelos: [
                 {
                     ida:    { local: "Dep. San José de Tandil", clL: "depsanjose",    visitante: "Villa Mitre",              clV: "villamitre", gl: 3, gv: 3, goles_l: [], goles_v: ["Sol Menéndez Perrone (2)","Jéssica Mella"] },
@@ -24194,8 +24320,11 @@ const BD_CAMPEONES_2026 = {
     futsalreserva:      [
     { anio: "2026", equipo: "Los 3 Chiflados", clase: "los3chiflados", detalle: "Ganador del Apertura 2026 al vencer a Petroquímicos por 4-1 el 10/7/2026" }
 ],
-    juveniles:          [],
+    juveniles:          [
+],
     menores:            [
+    { anio: "2026", equipo: "Bella Vista B", clase: "bellavistab", detalle: "Ascendió a la Zona A" },
+    { anio: "2026", equipo: "Olimpo B", clase: "olimpob", detalle: "Ascendió a la Zona A" },
     { anio: "2026", equipo: "La Armonía B", clase: "laarmonia", detalle: "Ganador del Apertura 2026 en 7ma" },
     { anio: "2026", equipo: "Libertad", clase: "libertad", detalle: "Ganador del Apertura 2026 en 8va" },
     { anio: "2026", equipo: "Liniers", clase: "liniers", detalle: "Ganador del Apertura 2026 en 9na" },
@@ -24484,6 +24613,12 @@ const BD_FEDERAL_PLAYOFFS = {
             ida:    { local: "Cipolletti", clL: "cipolletti", visitante: "Alvarado", clV: "alvarado", gl: null, gv: null, goles_l: [], goles_v: [] },
             vuelta: { local: "Alvarado", clL: "alvarado", visitante: "Cipolletti", clV: "cipolletti", gl: null, gv: null, goles_l: [], goles_v: [] }
         },
+    ],
+    final: [
+        {
+            ida:    { local: "A confirmar", clL: "aconfirmar", visitante: "A confirmar", clV: "aconfirmar", gl: null, gv: null, goles_l: [], goles_v: [] },
+            vuelta: { local: "A confirmar", clL: "aconfirmar", visitante: "A confirmar", clV: "aconfirmar", gl: null, gv: null, goles_l: [], goles_v: [] }
+        }
     ]
 };
 
