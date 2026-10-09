@@ -537,7 +537,7 @@ const BD_FIXTURES_FUTSAL_RESERVA = [
     ]},
     { fecha: 11, partidos: [
         {l:"Villa Mitre",    v:"La Esperanza",     gl:1, gv:3},
-        {l:"La Estación",       v:"Comercial",     gl:null, gv:null},
+        {l:"La Estación",       v:"Comercial",     gl:5, gv:2},
         {l:"Tiro Federal", v:"Los 3 Chiflados",     gl:null, gv:null},
         {l:"Catamarca",   v:"Petroquímicos",     gl:null, gv:null},
         {l:"Pacífico BB",   v:"San Francisco",     gl:null, gv:null},
@@ -657,7 +657,7 @@ const BD_FIXTURES_FUTSAL = [
     ]},
     { fecha: 11, partidos: [
         {l:"Villa Mitre",    v:"La Esperanza",     gl:1, gv:6},
-        {l:"La Estación",       v:"Comercial",     gl:null, gv:null},
+        {l:"La Estación",       v:"Comercial",     gl:4, gv:2},
         {l:"Tiro Federal", v:"Los 3 Chiflados",     gl:null, gv:null},
         {l:"Catamarca",   v:"Petroquímicos",     gl:null, gv:null},
         {l:"Pacífico BB",   v:"San Francisco",     gl:null, gv:null},
@@ -1948,7 +1948,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 27).partidos.forEach(p
 });
 
 
-let diaSeleccionadoHome = "2026-10-08"; 
+let diaSeleccionadoHome = "2026-10-09"; 
 let mercadoPasesAbierto = false;
 
 function toggleMercadoPasesHome() {
@@ -1987,10 +1987,10 @@ function generarHome() {
             {l:"Liniers", v:"Sansinena", hora:"20:30", gl:null, gv:null, claseL:"liniers", claseV:"sansinena",nota:"<b>SUSPENDIDO</b>"},
             ]},
             { nombre: "FUTSAL | CLAUSURA | 11° FECHA", cat: "futsal", torLink: "futsal", noAutoResult: true, partidos: [
-            {l:"La Estación", v:"Comercial", hora:"22:00", gl:null, gv:null, claseL:"laestacion", claseV:"comercial",nota:"<b>en cancha de Don Bosco</b>"},
+            {l:"La Estación", v:"Comercial", hora:"22:00", gl:4, gv:2, claseL:"laestacion", claseV:"comercial",nota:"<b>en cancha de Don Bosco</b>"},
             ]},
             { nombre: "COPA PAÍS (LIGA DEL SUR)", cat: "copapais", torLink: "copapais", noAutoResult: true, partidos: [
-            {l:"San Jorge", v:"La Plata", hora:"18:00", gl:null, gv:null, claseL:"sanjorge", claseV:"laplata",nota:"<b>Ida: 0-1</b>"},
+            {l:"San Jorge", v:"La Plata", hora:"18:00", gl:2, gv:1, claseL:"sanjorge", claseV:"laplata",nota:"<b>Ida: 0-1</b>"},
             ]},
             { nombre: "REGIONAL AMATEUR | FECHA 6 | REGIÓN BONAERENSE PAMPEANA SUR (HURACÁN)", cat: "regamateurtemp", torLink: "regamateurtemp", noAutoResult: true, partidos: [
             {l:"Balonpié", v:"Embajadores", hora:"19:00", gl:4, gv:3, claseL:"balompie", claseV:"embajadoresolavarria",nota:"<b>Zona 6</b>"},
@@ -2010,12 +2010,15 @@ function generarHome() {
             { nombre: "PROMOCIONAL | FECHA 11 | CLAUSURA", cat: "oficial", torLink: "oficial", noAutoResult: true, partidos: [
             {l:"Pacífico (C)", v:"Tiro Federal", hora:"16:00", gl:null, gv:null, claseL:"pacificoc", claseV:"tirofederal"},
             ]},
+            { nombre: "1° FEMENINO | FECHA 12 | CLAUSURA", cat: "femenino", torLink: "femenino", noAutoResult: true, partidos: [
+            {l:"Bella Vista", v:"Municipales", hora:"16:00", gl:null, gv:null, claseL:"bellavista", claseV:"municipales"},
+            ]},
             { nombre: "FEDERAL A | REVÁLIDA | 2°RONDA (VILLA MITRE)", cat: "federala", torLink: "federala", noAutoResult: true, partidos: [
             {l:"Deportivo Rincón", v:"Kimberley", hora:"16:00", gl:null, gv:null, claseL:"deprincon", claseV:"kimberley",nota:"<b>Partido de ida</b>"},
             ]},
             { nombre: "TORNEO JUVENIL | SUB 13 | OCTAVOS/CUARTOS", cat: "sub131517", torLink: "sub131517", noAutoResult: true, partidos: [
-            {l:"<b>Villa Mitre</b>", v:"Sarmiento de Junín", hora:"09:00", gl:null, gv:null, claseL:"villamitre", claseV:"sarmientojunin",nota:"<b>en Pergamino</b>"},
-            {l:"Academia Mascherano", v:"Mac Allister", hora:"09:00", gl:null, gv:null, claseL:"mascherano", claseV:"macallister",nota:"<b>en Pergamino</b>"},
+            {l:"<b>Villa Mitre</b>", v:"Sarmiento de Junín", hora:"10:00", gl:null, gv:null, claseL:"villamitre", claseV:"sarmientojunin",nota:"<b>en Pergamino</b>"},
+            {l:"Academia Mascherano", v:"Mac Allister", hora:"10:00", gl:null, gv:null, claseL:"mascherano", claseV:"macallister",nota:"<b>en Pergamino</b>"},
             ]},
        ]},
      { id: "2026-10-11", label: "DOM 11/10", torneos: [
@@ -2056,6 +2059,9 @@ function generarHome() {
             { nombre: "PROMOCIONAL | FECHA 11 | CLAUSURA", cat: "oficial", torLink: "oficial", noAutoResult: true, partidos: [
             {l:"Dublin", v:"Comercial", hora:"11:00", gl:null, gv:null, claseL:"dublin", claseV:"comercial"},
             {l:"Sansinena", v:"Pacífico BB", hora:"16:00", gl:null, gv:null, claseL:"sansinena", claseV:"pacificobb"},
+            ]},
+            { nombre: "1° FEMENINO | FECHA 11 (REPROGRAMADO) | CLAUSURA", cat: "femenino", torLink: "femenino", noAutoResult: true, partidos: [
+            {l:"La Armonía", v:"Bella Vista", hora:"16:00", gl:null, gv:null, claseL:"laarmonia", claseV:"bellavista"},
             ]},
        ]},
     ];
@@ -2163,15 +2169,17 @@ function generarFixture(n, tor, cat) {
         titulo = `${cat.toUpperCase()} - FECHA ${n}`;
     }
     
-    let html = `<div class="nav-fechas">`;
-    for(let i=1; i<=maxFechas; i++) {
-        html += `<div class="btn-f ${i===n?'active':''}" onclick="cambiarFecha(${i})">${i}</div>`;
-    }
-    html += `</div>`;
+    let html = '';
 
     if (cat === 'segundafemenino') {
         html += `<div onclick="navegar('segundafemeninoplayoffs')" style="background:linear-gradient(135deg,#7b1a1a,#a93226);color:#fff;text-align:center;padding:9px 12px;font-size:12px;font-weight:bold;letter-spacing:0.5px;cursor:pointer;border-bottom:2px solid #f0a500;">🏆 Ver cuadro de Playoffs de 2° Femenino ▶</div>`;
     }
+
+    html += `<div class="nav-fechas">`;
+    for(let i=1; i<=maxFechas; i++) {
+        html += `<div class="btn-f ${i===n?'active':''}" onclick="cambiarFecha(${i})">${i}</div>`;
+    }
+    html += `</div>`;
 
     html += `<div class="header-t">${titulo}</div><table>`;
     
@@ -17832,6 +17840,8 @@ const BD_H2H = {
     "Comercial|La Estación": [
         { fecha: "Apertura 2026 - Fecha 11", torneo: "futsal", l: "Comercial", v: "La Estación", gl: 3, gv: 8 },
         { fecha: "Apertura 2026 - Fecha 11", torneo: "futsalreserva", l: "Comercial", v: "La Estación", gl: 6, gv: 4 },
+        { fecha: "Clausura 2026 - Fecha 11", torneo: "futsal", l: "La Estación", v: "Comercial", gl: 4, gv: 2 },
+        { fecha: "Clausura 2026 - Fecha 11", torneo: "futsalreserva", l: "La Estación", v: "Comercial", gl: 5, gv: 2 },
     ],
     "Los 3 Chiflados|Tiro Federal": [
         { fecha: "Apertura 2026 - Fecha 11", torneo: "futsal", l: "Los 3 Chiflados", v: "Tiro Federal", gl: 3, gv: 0 },
@@ -17919,8 +17929,11 @@ function generarReserva(cat) {
     : cat === 'segundafemenino'
     ? 'reservasegundafemeninoplayoffs'
     : null;
+    const textoVisera = cat === 'segundafemenino'
+        ? 'Ver cuadro de Playoffs de Reserva de 2° Femenino'
+        : 'Ver cuadro de Playoffs del Apertura';
     let html = navDest
-        ? `<div onclick="navegar('${navDest}')" style="background:linear-gradient(135deg,#7b1a1a,#a93226);color:#fff;text-align:center;padding:9px 12px;font-size:12px;font-weight:bold;letter-spacing:0.5px;cursor:pointer;border-bottom:2px solid #f0a500;">🏆 Ver cuadro de Playoffs del Apertura ▶</div>`
+        ? `<div onclick="navegar('${navDest}')" style="background:linear-gradient(135deg,#7b1a1a,#a93226);color:#fff;text-align:center;padding:9px 12px;font-size:12px;font-weight:bold;letter-spacing:0.5px;cursor:pointer;border-bottom:2px solid #f0a500;">🏆 ${textoVisera} ▶</div>`
         : '';
 
     // Fixture — igual que generarFixture pero leyendo de reserva
@@ -18339,9 +18352,9 @@ function mostrarSub13Playoffs() {
 
 const BD_POS_FUTSAL = {
     principal: [
-        {n:"La Estación <b>(A)</b> <b>(C)</b>",     cl:"laestacion",    pj:10,pg:10,pe:0,pp:0,gf:44, gc:16, pts:30},
+        {n:"La Estación <b>(A)</b> <b>(C)</b>",     cl:"laestacion",    pj:11,pg:11,pe:0,pp:0,gf:48, gc:18, pts:33},
         {n:"La Esperanza <b>(C)</b>",    cl:"laesperanza",    pj:11,pg:9,pe:1,pp:1,gf:41, gc:21, pts:28},
-        {n:"Comercial <b>(C)</b>",       cl:"comercial",    pj:9,pg:8,pe:0,pp:1,gf:37, gc:21, pts:24},
+        {n:"Comercial <b>(C)</b>",       cl:"comercial",    pj:10,pg:8,pe:0,pp:2,gf:39, gc:25, pts:24},
         {n:"Los 3 Chiflados <b>(*)</b>  <b>(C)</b>", cl:"los3chiflados",    pj:10,pg:7,pe:1,pp:2,gf:38, gc:16, pts:22},
         {n:"Tiro Federal",    cl:"tirofederal",    pj:10,pg:6,pe:1,pp:3,gf:22, gc:18, pts:19},
         {n:"Villa Mitre",     cl:"villamitre",    pj:10,pg:5,pe:2,pp:3,gf:38, gc:36, pts:17},
@@ -18358,13 +18371,13 @@ const BD_POS_FUTSAL = {
         {n:"Los 3 Chiflados <b>(A)</b>  <b>(C)</b>", cl:"los3chiflados",    pj:10,pg:10,pe:0,pp:0,gf:55, gc:14, pts:30},
         {n:"Liniers  <b>(C)</b>",         cl:"liniers",    pj:11,pg:9,pe:0,pp:2,gf:61, gc:28, pts:27},
         {n:"La Esperanza  <b>(C)</b>",    cl:"laesperanza",    pj:11,pg:8,pe:1,pp:2,gf:35, gc:18, pts:25},
-        {n:"La Estación  <b>(C)</b>",     cl:"laestacion",    pj:10,pg:7,pe:0,pp:3,gf:37, gc:25, pts:21},
+        {n:"La Estación  <b>(C)</b>",     cl:"laestacion",    pj:11,pg:8,pe:0,pp:3,gf:42, gc:27, pts:24},
         {n:"Dublin",          cl:"dublin",    pj:11,pg:6,pe:2,pp:3,gf:32, gc:29, pts:20},
         {n:"Petroquímicos",   cl:"petroquimicos",    pj:10,pg:6,pe:1,pp:3,gf:41, gc:30, pts:19},
         {n:"Villa Mitre",     cl:"villamitre",    pj:10,pg:6,pe:0,pp:4,gf:40, gc:36, pts:18},
         {n:"Catamarca",       cl:"catamarca",    pj:10,pg:4,pe:2,pp:4,gf:26, gc:47, pts:14},
         {n:"Tiro Federal",    cl:"tirofederal",    pj:10,pg:3,pe:2,pp:5,gf:17, gc:21, pts:11},
-        {n:"Comercial",       cl:"comercial",    pj:9,pg:3,pe:2,pp:4,gf:19, gc:31, pts:11},
+        {n:"Comercial",       cl:"comercial",    pj:10,pg:3,pe:2,pp:5,gf:21, gc:36, pts:11},
         {n:"Pacífico BB",     cl:"pacificobb",    pj:10,pg:3,pe:0,pp:7,gf:16, gc:38, pts:9},
         {n:"San Francisco",   cl:"sanfrancisco",    pj:10,pg:2,pe:0,pp:8,gf:19, gc:56, pts:6},
         {n:"<s>Dep. Futsal</s> <b>(-)</b>",     cl:"depfutsal",    pj:0,pg:0,pe:0,pp:0,gf:0, gc:0, pts:0},
@@ -19501,8 +19514,8 @@ const BD_COPA_PAIS_CUARTOS = [
             { ronda: "Partido único", l: "Liga del Sur", v: "Trelew", fecha: "Miércoles 14 de octubre", gl: null, gv: null, goles_l: [], goles_v: [] },
             { ronda: "Partido de Ida", l: "Jujuy", v: "Catamarca", fecha: "Miércoles 30 de octubre", gl: 0, gv: 0, goles_l: [], goles_v: [], separador: true },
             { ronda: "Partido de Vuelta", l: "Catamarca", v: "Jujuy", fecha: "Miércoles 14 de octubre", gl: null, gv: null, goles_l: [], goles_v: [] },
-            { ronda: "Partido de Ida", l: "La Plata", v: "San Jorge", fecha: "Miércoles 30 de octubre", gl: 1, gv: 0, goles_l: [], goles_v: [], separador: true },
-            { ronda: "Partido de Vuelta", l: "San Jorge", v: "La Plata", fecha: "Jueves 08 de octubre", gl: null, gv: null, goles_l: [], goles_v: [] },
+            { ronda: "Partido de Ida", l: "<s>La Plata</s>", v: "<b>San Jorge</b>", fecha: "Miércoles 30 de octubre", gl: 1, gv: 0, goles_l: [], goles_v: [], separador: true },
+            { ronda: "Partido de Vuelta", l: "<b>San Jorge</b>", v: "<s>La Plata</s>", fecha: "Jueves 08 de octubre", gl: 2, gv: 1, goles_l: [], goles_v: [] },
         ]
     },
 ];
