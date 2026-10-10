@@ -856,7 +856,7 @@ const idaSub15Fem = [
         {l:"Huracán",               v:"La Armonía",       gl:1, gv:0}
     ]},
     { fecha: 22, partidos: [
-        {l:"Tiro Federal",          v:"Liniers",          gl:null, gv:null},
+        {l:"Tiro Federal",          v:"Liniers",          gl:1, gv:3},
         {l:"La Armonía",            v:"Bella Vista",      gl:null, gv:null},
         {l:"San Francisco",         v:"Sporting",         gl:null, gv:null},
         {l:"Libertad",              v:"Olimpo",           gl:null, gv:null},
@@ -2015,8 +2015,8 @@ function generarHome() {
             {l:"Bella Vista", v:"Municipales", hora:"16:00", gl:null, gv:null, claseL:"bellavista", claseV:"municipales"},
             ]},
             { nombre: "SUB 15 FEMENINO | ÚLTIMA FECHA", cat: "sub15fem", torLink: "sub15fem", noAutoResult: true, partidos: [
-            {l:"Libertad", v:"Olimpo", hora:"10:30", gl:null, gv:null, claseL:"libertad", claseV:"olimpo"},
-            {l:"Tiro Federal", v:"Liniers", hora:"11:00", gl:null, gv:null, claseL:"tirofederal", claseV:"liniers"},
+            {l:"Libertad", v:"Olimpo", hora:"10:30", gl:null, gv:null, claseL:"libertad", claseV:"olimpo",nota:"SUSPENDIDO"},
+            {l:"Tiro Federal", v:"Liniers", hora:"11:00", gl:1, gv:3, claseL:"tirofederal", claseV:"liniers"},
             {l:"Empleados de Comercio", v:"Huracán", hora:"11:00", gl:null, gv:null, claseL:"empleados", claseV:"huracan"},
             {l:"La Armonía", v:"Bella Vista", hora:"16:00", gl:null, gv:null, claseL:"laarmonia", claseV:"bellavista"},
             ]},
@@ -2024,8 +2024,8 @@ function generarHome() {
             {l:"Deportivo Rincón", v:"Kimberley", hora:"16:00", gl:null, gv:null, claseL:"deprincon", claseV:"kimberley",nota:"<b>Partido de ida</b>"},
             ]},
             { nombre: "TORNEO JUVENIL | SUB 13 | OCTAVOS/CUARTOS", cat: "sub131517", torLink: "sub131517", noAutoResult: true, partidos: [
-            {l:"<b>Villa Mitre</b>", v:"Sarmiento de Junín", hora:"10:00", gl:null, gv:null, claseL:"villamitre", claseV:"sarmientojunin",nota:"<b>en Pergamino</b>"},
-            {l:"Academia Mascherano", v:"Mac Allister", hora:"10:00", gl:null, gv:null, claseL:"mascherano", claseV:"macallister",nota:"<b>en Pergamino</b>"},
+            {l:"<b>Villa Mitre</b>", v:"Sarmiento de Junín", hora:"10:00", gl:0, gv:0, pen_l: 4, pen_v:5, claseL:"villamitre", claseV:"sarmientojunin",nota:"<b>en Pergamino</b>"},
+            {l:"Academia Mascherano", v:"Mac Allister", hora:"10:00", gl:2, gv:3, claseL:"mascherano", claseV:"macallister",nota:"<b>en Pergamino</b>"},
             ]},
        ]},
      { id: "2026-10-11", label: "DOM 11/10", torneos: [
@@ -17557,6 +17557,7 @@ const BD_H2H = {
         { fecha: "Torneo 2026 - Fecha 11", torneo: "sub15fem", l: "Liniers", v: "Tiro Federal", gl: 7, gv: 0 },
         { fecha: "Clausura 2026 - Fecha 6", torneo: "futsal", l: "Tiro Federal", v: "Liniers", gl: 3, gv: 4 },
         { fecha: "Clausura 2026 - Fecha 6", torneo: "futsalreserva", l: "Tiro Federal", v: "Liniers", gl: 3, gv: 4 },
+        { fecha: "Torneo 2026 - Fecha 22", torneo: "sub15fem", l: "Tiro Federal", v: "Liniers", gl: 1, gv: 3 },
     ],
     "Huracán|La Estación": [
         { fecha: "Apertura 2026 - Fecha 6", torneo: "futsal", l: "La Estación", v: "Huracán", gl: 5, gv: 2 },
@@ -18167,8 +18168,8 @@ const BD_GOL_SUB = {
 
 const BD_SUB13_PLAYOFFS = {
     octavos: [
-        { local: "Villa Mitre", clL: "villamitre", visitante: "Sarmiento de Junín", clV: "sarmientojunin", gl: null, gv: null },
-        { local: "Academia Mascherano", clL: "mascherano", visitante: "Mac Allister", clV: "macallister", gl: null, gv: null },
+        { local: "<s>Villa Mitre</s>", clL: "villamitre", visitante: "<b>Sarmiento de Junín</b>", clV: "sarmientojunin", gl: 0, gv: 0, pen_l:4, pen_v:5 },
+        { local: "<s>Academia Mascherano</s>", clL: "mascherano", visitante: "<b>Mac Allister</b>", clV: "macallister", gl: 2, gv: 3 },
         { local: "Boca Unidos", clL: "bocaunidos", visitante: "Rosario Central", clV: "rosariocentral", gl: null, gv: null },
         { local: "Unión de Santa Fe", clL: "unionsf", visitante: "San Martín de Formosa", clV: "sanmartinfsa", gl: null, gv: null },
         { local: "CAI", clL: "cai", visitante: "Maronese", clV: "maronese", gl: null, gv: null },
