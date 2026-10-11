@@ -860,7 +860,7 @@ const idaSub15Fem = [
         {l:"La Armonía",            v:"Bella Vista",      gl:1, gv:0},
         {l:"San Francisco",         v:"Sporting",         gl:2, gv:0},
         {l:"Libertad",              v:"Olimpo",           gl:null, gv:null},
-        {l:"Villa Mitre",           v:"Juventud Unida",   gl:null, gv:null},
+        {l:"Villa Mitre",           v:"Juventud Unida",   gl:2, gv:1},
         {l:"Empleados de Comercio", v:"Huracán",          gl:0, gv:2}
     ]}
 ];
@@ -2046,26 +2046,26 @@ function generarHome() {
             ]},
             { nombre: "SUB 15 FEMENINO | ÚLTIMA FECHA", cat: "sub15fem", torLink: "sub15fem", noAutoResult: true, partidos: [
             {l:"San Francisco", v:"Sporting", hora:"11:00", gl:2, gv:0, claseL:"sanfrancisco", claseV:"sporting"},
-            {l:"Villa Mitre", v:"Juventud Unida", hora:"15:00", gl:null, gv:null, claseL:"villamitre", claseV:"juventudunida"},
+            {l:"Villa Mitre", v:"Juventud Unida", hora:"15:00", gl:2, gv:1, claseL:"villamitre", claseV:"juventudunida"},
             ]},
             { nombre: "FEDERAL A | SEMIFINALES", cat: "federala", torLink: "federala", noAutoResult: true, partidos: [
-            {l:"Cipolletti", v:"Alvarado", hora:"15:30", gl:null, gv:null, claseL:"cipolletti", claseV:"alvarado",nota:"<b>Partido de ida</b>"},
+            {l:"Cipolletti", v:"Alvarado", hora:"15:30", gl:1, gv:0, claseL:"cipolletti", claseV:"alvarado",nota:"<b>Partido de ida</b>"},
             {l:"<b>Olimpo</b>", v:"San Martín de Formosa", hora:"16:00", gl:1, gv:1, claseL:"olimpo", claseV:"sanmartinfsa",nota:"<b>Partido de ida</b>"},
             ]},
             { nombre: "FEDERAL A | REVÁLIDA | 2°RONDA", cat: "federala", torLink: "federala", noAutoResult: true, partidos: [
             {l:"FADEP", v:"Atenas de Río Cuarto", hora:"11:00", gl:2, gv:0, claseL:"fadep", claseV:"atenasrc",nota:"<b>Partido de ida</b>"},
-            {l:"Costa Brava", v:"<b>Villa Mitre</b>", hora:"15:00", gl:null, gv:null, claseL:"costabrava", claseV:"villamitre",nota:"<b>Partido de ida</b>"},
-            {l:"El Linqueño", v:"Douglas Haig", hora:"15:30", gl:null, gv:null, claseL:"ellinqueño", claseV:"douglashaig",nota:"<b>Partido de ida</b>"},
-            {l:"Juventud Unida (SL)", v:"Sol de América", hora:"15:30", gl:null, gv:null, claseL:"juventudunidasanluis", claseV:"soldeamericafsa",nota:"<b>Partido de ida</b>"},
-            {l:"Gimnasia de CdU", v:"9 de Julio", hora:"16:00", gl:null, gv:null, claseL:"gimnasiacdu", claseV:"nuevedejulio",nota:"<b>Partido de ida</b>"},
-            {l:"Boca Unidos", v:"Bartolomé Mitre", hora:"16:00", gl:null, gv:null, claseL:"bocaunidos", claseV:"bartolomemitre",nota:"<b>Partido de ida</b>"},
-            {l:"Defensores de Belgrano (VR)", v:"Sportivo Las Parejas", hora:"16:00", gl:null, gv:null, claseL:"defbelgranovr", claseV:"splasparejas",nota:"<b>Partido de ida</b>"},
-            {l:"Sportivo Belgrano", v:"Sarmiento de La Banda", hora:"17:30", gl:null, gv:null, claseL:"spbelgrano", claseV:"sarmientolb",nota:"<b>Partido de ida</b>"},
+            {l:"Costa Brava", v:"<b>Villa Mitre</b>", hora:"15:00", gl:1, gv:1, claseL:"costabrava", claseV:"villamitre",nota:"<b>Partido de ida</b>"},
+            {l:"El Linqueño", v:"Douglas Haig", hora:"15:30", gl:0, gv:0, claseL:"ellinqueño", claseV:"douglashaig",nota:"<b>Partido de ida</b>"},
+            {l:"Juventud Unida (SL)", v:"Sol de América", hora:"15:30", gl:0, gv:0, claseL:"juventudunidasanluis", claseV:"soldeamericafsa",nota:"<b>Partido de ida</b>"},
+            {l:"Gimnasia de CdU", v:"9 de Julio", hora:"16:00", gl:4, gv:1, claseL:"gimnasiacdu", claseV:"nuevedejulio",nota:"<b>Partido de ida</b>"},
+            {l:"Boca Unidos", v:"Bartolomé Mitre", hora:"16:00", gl:1, gv:0, claseL:"bocaunidos", claseV:"bartolomemitre",nota:"<b>Partido de ida</b>"},
+            {l:"Sportivo Las Parejas", v:"Defensores de Belgrano (VR)", hora:"16:00", gl:1, gv:1, claseL:"splasparejas", claseV:"defbelgranovr",nota:"<b>Partido de ida</b>"},
+            {l:"Sportivo Belgrano", v:"Sarmiento de La Banda", hora:"17:30", gl:1, gv:1, claseL:"spbelgrano", claseV:"sarmientolb",nota:"<b>Partido de ida</b>"},
             ]},
             { nombre: "REGIONAL FEDERAL AMATEUR | BONAERENSE PAMPEANA SUR | 2° RONDA", cat: "regfederaltemp", torLink: "regfederaltemp", noAutoResult: true, partidos: [
             {l:"Independiente de San Cayetano", v:"<b>Huracán</b>", hora:"16:00", gl:1, gv:2, claseL:"indeptesancayetano", claseV:"huracan",nota:"<b>Partido de ida</b>"},
-            {l:"Quilmes de MdP", v:"Ministerio", hora:"16:00", gl:null, gv:null, claseL:"quilmesmdp", claseV:"ministerio",nota:"<b>Partido de ida</b>"},
-            {l:"Argentino de 25 de Mayo", v:"Racing de Olavarría", hora:"17:30", gl:null, gv:null, claseL:"argentino25demayo", claseV:"racingolavarria",nota:"<b>Partido de ida</b>"},
+            {l:"Quilmes de MdP", v:"Ministerio", hora:"16:00", gl:4, gv:0, claseL:"quilmesmdp", claseV:"ministerio",nota:"<b>Partido de ida</b>"},
+            {l:"Argentino de 25 de Mayo", v:"Racing de Olavarría", hora:"17:30", gl:1, gv:2, claseL:"argentino25demayo", claseV:"racingolavarria",nota:"<b>Partido de ida</b>"},
             {l:"Ferro de Pico", v:"Atlético Villegas", hora:"20:00", gl:null, gv:null, claseL:"ferropico", claseV:"atlvillegas",nota:"<b>Partido de ida</b>"},
             ]},
        ]},
@@ -2235,11 +2235,11 @@ function generarFixture(n, tor, cat) {
 const BD_FEDERAL_REVALIDA = {
     segundaRonda: [
         {
-            ida:    { local: "Costa Brava", clL: "costabrava", visitante: "Villa Mitre", clV: "villamitre", gl: null, gv: null, goles_l: [], goles_v: [] },
+            ida:    { local: "Costa Brava", clL: "costabrava", visitante: "Villa Mitre", clV: "villamitre", gl: 1, gv: 1, goles_l: [], goles_v: ["Thiago Pérez"] },
             vuelta: { local: "Villa Mitre", clL: "villamitre", visitante: "Costa Brava", clV: "costabrava", gl: null, gv: null, goles_l: [], goles_v: [] }
         },
         {
-            ida:    { local: "Boca Unidos", clL: "bocaunidos", visitante: "Bartolomé Mitre", clV: "bartolomemitre", gl: null, gv: null, goles_l: [], goles_v: [] },
+            ida:    { local: "Boca Unidos", clL: "bocaunidos", visitante: "Bartolomé Mitre", clV: "bartolomemitre", gl: 1, gv: 0, goles_l: [], goles_v: [] },
             vuelta: { local: "Bartolomé Mitre", clL: "bartolomemitre", visitante: "Boca Unidos", clV: "bocaunidos", gl: null, gv: null, goles_l: [], goles_v: [] }
         },
         {
@@ -2247,7 +2247,7 @@ const BD_FEDERAL_REVALIDA = {
             vuelta: { local: "Gimnasia de Chivilcoy", clL: "gimnasiachivilcoy", visitante: "Defensores de Vilelas", clV: "defvilelas", gl: null, gv: null, goles_l: [], goles_v: [] }
         },
         {
-            ida:    { local: "Sportivo Belgrano", clL: "spbelgrano", visitante: "Sarmiento de La Banda", clV: "sarmientolb", gl: null, gv: null, goles_l: [], goles_v: [] },
+            ida:    { local: "Sportivo Belgrano", clL: "spbelgrano", visitante: "Sarmiento de La Banda", clV: "sarmientolb", gl: 1, gv: 1, goles_l: [], goles_v: [] },
             vuelta: { local: "Sarmiento de La Banda", clL: "sarmientolb", visitante: "Sportivo Belgrano", clV: "spbelgrano", gl: null, gv: null, goles_l: [], goles_v: [] }
         },
         {
@@ -2255,7 +2255,7 @@ const BD_FEDERAL_REVALIDA = {
             vuelta: { local: "Huracán Las Heras", clL: "huracanlh", visitante: "Juventud Antonaina", clV: "jantoniana", gl: null, gv: null, goles_l: [], goles_v: [] }
         },
         {
-            ida:    { local: "Sportivo Las Parejas", clL: "splasparejas", visitante: "Def de Belgrano (VR)", clV: "defbelgranovr", gl: null, gv: null, goles_l: [], goles_v: [] },
+            ida:    { local: "Sportivo Las Parejas", clL: "splasparejas", visitante: "Def de Belgrano (VR)", clV: "defbelgranovr", gl: 1, gv: 1, goles_l: [], goles_v: [] },
             vuelta: { local: "Def de Belgrano (VR)", clL: "defbelgranovr", visitante: "Sportivo Las Parejas", clV: "splasparejas", gl: null, gv: null, goles_l: [], goles_v: [] }
         },
         {
@@ -2263,7 +2263,7 @@ const BD_FEDERAL_REVALIDA = {
             vuelta: { local: "Argentino de Monte Maiz", clL: "argmontemaiz", visitante: "San Martín de Mendoza", clV: "sanmartinmendoza", gl: null, gv: null, goles_l: [], goles_v: [] }
         },
         {
-            ida:    { local: "El Linqueño", clL: "ellinqueño", visitante: "Douglas Haig", clV: "douglashaig", gl: null, gv: null, goles_l: [], goles_v: [] },
+            ida:    { local: "El Linqueño", clL: "ellinqueño", visitante: "Douglas Haig", clV: "douglashaig", gl: 0, gv: 0, goles_l: [], goles_v: [] },
             vuelta: { local: "Douglas Haig", clL: "douglashaig", visitante: "El Linqueño", clV: "ellinqueño", gl: null, gv: null, goles_l: [], goles_v: [] }
         },
         {
@@ -2271,7 +2271,7 @@ const BD_FEDERAL_REVALIDA = {
             vuelta: { local: "Kimberley", clL: "kimberley", visitante: "Deportivo Rincón", clV: "deprincon", gl: null, gv: null, goles_l: [], goles_v: [] }
         },
         {
-            ida:    { local: "Juventud Unida de San Luis", clL: "juventudunidasanluis", visitante: "Sol de América", clV: "soldeamericafsa", gl: null, gv: null, goles_l: [], goles_v: [] },
+            ida:    { local: "Juventud Unida de San Luis", clL: "juventudunidasanluis", visitante: "Sol de América", clV: "soldeamericafsa", gl: 0, gv: 0, goles_l: [], goles_v: [] },
             vuelta: { local: "Sol de América", clL: "soldeamericafsa", visitante: "Juventud Unida de San Luis", clV: "juventudunidasanluis", gl: null, gv: null, goles_l: [], goles_v: [] }
         },
         {
@@ -2279,7 +2279,7 @@ const BD_FEDERAL_REVALIDA = {
             vuelta: { local: "Atenas de Río Cuarto", clL: "atenasrc", visitante: "FADEP", clV: "fadep", gl: null, gv: null, goles_l: [], goles_v: [] }
         },
         {
-            ida:    { local: "Gimnasia de Concepción del Uruguay", clL: "gimnasiacdu", visitante: "9 de Julio", clV: "nuevedejulio", gl: null, gv: null, goles_l: [], goles_v: [] },
+            ida:    { local: "Gimnasia de Concepción del Uruguay", clL: "gimnasiacdu", visitante: "9 de Julio", clV: "nuevedejulio", gl: 4, gv: 1, goles_l: [], goles_v: [] },
             vuelta: { local: "9 de Julio", clL: "nuevedejulio", visitante: "Gimnasia de Concepción del Uruguay", clV: "gimnasiacdu", gl: null, gv: null, goles_l: [], goles_v: [] }
         }
     ],
@@ -17708,6 +17708,9 @@ const BD_H2H = {
         { fecha: "Fecha 8 - Fase inicial - 10 may 2026", torneo: "federala", l: "Guillermo Brown", v: "Villa Mitre", gl: 1, gv: 0, goles_l: ["Ignacio Vallejos"], goles_v: []  },
         { fecha: "Fecha 17 - Fase inicial - 26 jun 2026", torneo: "federala", l: "Villa Mitre", v: "Guillermo Brown", gl: 3, gv: 0, goles_l: ["Tomás Ibarra","Carlos Battigelli","Leonel Monti"], goles_v: [] },
     ],
+    "Costa Brava|Villa Mitre": [
+        { fecha: "Federal A - Reválida - Segunda Ronda - Ida", torneo: "federala", l: "Costa Brava", v: "Villa Mitre", gl: 1, gv: 1, goles_l: [], goles_v: ["Thiago Pérez"]  },
+    ],
     "Libertad|Pacífico BB": [
         { fecha: "Apertura 2026 - Fecha 7", torneo: "senior", l: "Libertad", v: "Pacífico BB", gl: 1, gv: 2, goles_l: ["Gustavo Peña"], goles_v: ["Ramón López","Hernán Sacripandi"] },
     ],
@@ -17727,6 +17730,9 @@ const BD_H2H = {
         { fecha: "Apertura 2026 - Fecha 9", torneo: "senior", l: "San Francisco", v: "Pacífico BB", gl: 4, gv: 1, goles_l: ["Ángel Martínez (2)","Víctor Martínez","Juan Pérez"], goles_v: ["Ramón López"] },
         { fecha: "Apertura 2026 - Fecha 11", torneo: "futsal", l: "San Francisco", v: "Pacífico BB", gl: 5, gv: 5 },
         { fecha: "Apertura 2026 - Fecha 11", torneo: "futsalreserva", l: "San Francisco", v: "Pacífico BB", gl: 4, gv: 2 },
+    ],
+    "Olimpo|San Martín de Formosa": [
+        { fecha: "Semifinal - Ida - 11 oct", torneo: "federala", l: "oLIMPO", v: "San Martín de Formosa", gl: 1, gv: 1, goles_l: ["Brian Guille"], goles_v: [] },
     ],
     "Comercial|Libertad": [
         { fecha: "Apertura 2026 - Fecha 9", torneo: "senior", l: "Libertad", v: "Comercial", gl: 1, gv: 2, goles_l: ["Sergio Pascal"], goles_v: ["Emiliano Esmoli (2)"] },
@@ -17763,6 +17769,7 @@ const BD_H2H = {
     ],
     "Juventud Unida|Villa Mitre": [
         { fecha: "Torneo 2026 - Fecha 11", torneo: "sub15fem", l: "Juventud Unida", v: "Villa Mitre", gl: 1, gv: 1 },
+        { fecha: "Torneo 2026 - Fecha 22", torneo: "sub15fem", l: "Villa Mitre", v: "Juventud Unida", gl: 1, gv: 2 },
     ],
     "Empleados de Comercio|Huracán": [
         { fecha: "Torneo 2026 - Fecha 11", torneo: "sub15fem", l: "Huracán", v: "Empleados de Comercio", gl: 0, gv: 2 },
@@ -17948,6 +17955,9 @@ const BD_H2H = {
     "Dep. San José de Tandil|Villa Mitre": [
         { fecha: "Torneo Federal Femenino 2026 - Cuarta Ronda - Ida - 12 ago", torneo: "regamateurfem", l: "Dep. San José de Tandil", v: "Villa Mitre", gl: 3, gv: 3, goles_l: [], goles_v: ["Sol Menéndez Perrone (2)","Jéssica Mella"] },
         { fecha: "Torneo Federal Femenino 2026 - Cuarta Ronda - Vuelta - 19 ago", torneo: "regamateurfem", l: "Villa Mitre", v: "Dep. San José de Tandil", gl: 2, gv: 1, goles_l: ["Morena Bouven","Jessica Mella"], goles_v: [] },
+    ],
+    "Huracán|Independiente de San Cayetano": [
+        { fecha: "Regional Amateur 2026 - Bonaerense Pampeana Sur - Segunda Ronda - Ida", torneo: "regamateurtemp", l: "Independiente de San Cayetano", v: "Huracán", gl: 1, gv: 2, goles_l: [], goles_v: ["Iván Agudiak","Lautaro Cerato"] },
     ],
 };
 
@@ -19958,6 +19968,7 @@ function generarHistorial() {
                         { nombre: "Argentino de Monte Maíz",    clase: "argmontemaiz",     cat: "Federal A" },
                         { nombre: "Huracán Las Heras",    clase: "huracanlh",     cat: "Federal A" },
                         { nombre: "Gimnasia de Chivilcoy",    clase: "gimnasiachivilcoy",     cat: "Federal A" },
+                        { nombre: "San Martín de Formosa",    clase: "sanmartinfsa",     cat: "Federal A" },
                         { nombre: "Huracán de Parque Patricios",    clase: "huracan",     cat: "Copa Argentina", catKey: "copaargentina" }
                     ]
                 },
@@ -19977,6 +19988,7 @@ function generarHistorial() {
                         { nombre: "Juventud Antoniana",    clase: "jantoniana",     cat: "Federal A" },
                         { nombre: "Argentino de Monte Maíz",    clase: "argmontemaiz",     cat: "Federal A" },
                         { nombre: "Huracán Las Heras",    clase: "huracanlh",     cat: "Federal A" },
+                        { nombre: "Costa Brava",    clase: "costabrava",     cat: "Federal A" },
                     ]
                 },
                 {
@@ -19984,6 +19996,7 @@ function generarHistorial() {
                     rivales: [
                         { nombre: "Sarmiento de Pigué",              clase: "sarmientopigue",      cat: "Regional Amateur" },
                         { nombre: "Ferro de Olavarría",              clase: "ferrolavarria",      cat: "Regional Amateur" },
+                        { nombre: "Independiente de San Cayetano",              clase: "indeptesancayetano",      cat: "Regional Amateur" },
                     ]
                 },
                 {
@@ -23075,9 +23088,9 @@ const BD_REGAMATEUR_PLAYOFFS = {
           vuelta: { local: "Huracán", clL: "huracan", visitante: "Independiente de San Cayetano", clV: "indeptesancayetano", gl: null, gv: null, goles_l: [], goles_v: [] } },
         { ida:    { local: "Ferro de Pico", clL: "ferropico", visitante: "Atlético Villegas", clV: "atlvillegas", gl: null, gv: null, goles_l: [], goles_v: [] },
           vuelta: { local: "Atlético Villegas", clL: "atlvillegas", visitante: "Ferro de Pico", clV: "ferropico", gl: null, gv: null, goles_l: [], goles_v: [] } },
-        { ida:    { local: "Quilmes de Mar del Plata", clL: "quilmesmdp", visitante: "Ministerio", clV: "ministerio", gl: null, gv: null, goles_l: [], goles_v: [] },
+        { ida:    { local: "Quilmes de Mar del Plata", clL: "quilmesmdp", visitante: "Ministerio", clV: "ministerio", gl: 4, gv: 0, goles_l: [], goles_v: [] },
           vuelta: { local: "Ministerio", clL: "ministerio", visitante: "Quilmes de Mar del Plata", clV: "quilmesmdp", gl: null, gv: null, goles_l: [], goles_v: [] } },
-        { ida:    { local: "Argentino de 25 de Mayo", clL: "argentino25demayo", visitante: "Racing de Olavarría", clV: "racingolavarria", gl: null, gv: null, goles_l: [], goles_v: [] },
+        { ida:    { local: "Argentino de 25 de Mayo", clL: "argentino25demayo", visitante: "Racing de Olavarría", clV: "racingolavarria", gl: 1, gv: 2, goles_l: [], goles_v: [] },
           vuelta: { local: "Racing de Olavarría", clL: "racingolavarria", visitante: "Argentino de 25 de Mayo", clV: "argentino25demayo", gl: null, gv: null, goles_l: [], goles_v: [] } }
     ],
     tercera: [
@@ -23331,13 +23344,25 @@ BD_GOLEADORES_REGAMATEUR.push({
 BD_GOLEADORES_REGAMATEUR.push({
     jugador: "Brian Scalco", equipo: "Huracán", goles: 2,
     partidos: [
-        { rival: "Ferro de Olavarría", resultado: "Huracán 3 - 0 Ferro de Olavarría", instancia: "Zona 3 - Fecha 5 - Primera Instancia" },
+        { rival: "Ferro de Olavarría", resultado: "Huracán 3 - 0 Ferro de Olavarría", instancia: "Zona 3 - Fecha 5 - Primera Instancia (DOBLETE)" },
     ]
 });
 BD_GOLEADORES_REGAMATEUR.push({
     jugador: "Iván Agudiak", equipo: "Huracán", goles: 1,
     partidos: [
         { rival: "Ferro de Olavarría", resultado: "Huracán 3 - 0 Ferro de Olavarría", instancia: "Zona 3 - Fecha 5 - Primera Instancia" },
+    ]
+});
+BD_GOLEADORES_REGAMATEUR.push({
+    jugador: "Lautaro Cerato", equipo: "Huracán", goles: 1,
+    partidos: [
+        { rival: "Independiente de San Cayetano", resultado: "Independiente (SC) 1 - 2 Huracán", instancia: "Segunda Ronda - Bonaerense Pampeana Sur - Ida" },
+    ]
+});
+BD_GOLEADORES_REGAMATEUR.push({
+    jugador: "Iván Agudiak", equipo: "Huracán", goles: 1,
+    partidos: [
+        { rival: "Independiente de San Cayetano", resultado: "Independiente (SC) 1 - 2 Huracán", instancia: "Segunda Ronda - Bonaerense Pampeana Sur - Ida" },
     ]
 });
 
