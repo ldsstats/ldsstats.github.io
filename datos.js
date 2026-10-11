@@ -2050,7 +2050,7 @@ function generarHome() {
             ]},
             { nombre: "FEDERAL A | SEMIFINALES", cat: "federala", torLink: "federala", noAutoResult: true, partidos: [
             {l:"Cipolletti", v:"Alvarado", hora:"15:30", gl:null, gv:null, claseL:"cipolletti", claseV:"alvarado",nota:"<b>Partido de ida</b>"},
-            {l:"<b>Olimpo</b>", v:"San Martín de Formosa", hora:"16:00", gl:null, gv:null, claseL:"olimpo", claseV:"sanmartinfsa",nota:"<b>Partido de ida</b>"},
+            {l:"<b>Olimpo</b>", v:"San Martín de Formosa", hora:"16:00", gl:1, gv:1, claseL:"olimpo", claseV:"sanmartinfsa",nota:"<b>Partido de ida</b>"},
             ]},
             { nombre: "FEDERAL A | REVÁLIDA | 2°RONDA", cat: "federala", torLink: "federala", noAutoResult: true, partidos: [
             {l:"FADEP", v:"Atenas de Río Cuarto", hora:"11:00", gl:2, gv:0, claseL:"fadep", claseV:"atenasrc",nota:"<b>Partido de ida</b>"},
@@ -2063,7 +2063,7 @@ function generarHome() {
             {l:"Sportivo Belgrano", v:"Sarmiento de La Banda", hora:"17:30", gl:null, gv:null, claseL:"spbelgrano", claseV:"sarmientolb",nota:"<b>Partido de ida</b>"},
             ]},
             { nombre: "REGIONAL FEDERAL AMATEUR | BONAERENSE PAMPEANA SUR | 2° RONDA", cat: "regfederaltemp", torLink: "regfederaltemp", noAutoResult: true, partidos: [
-            {l:"Independiente de San Cayetano", v:"<b>Huracán</b>", hora:"16:00", gl:null, gv:null, claseL:"indeptesancayetano", claseV:"huracan",nota:"<b>Partido de ida</b>"},
+            {l:"Independiente de San Cayetano", v:"<b>Huracán</b>", hora:"16:00", gl:1, gv:2, claseL:"indeptesancayetano", claseV:"huracan",nota:"<b>Partido de ida</b>"},
             {l:"Quilmes de MdP", v:"Ministerio", hora:"16:00", gl:null, gv:null, claseL:"quilmesmdp", claseV:"ministerio",nota:"<b>Partido de ida</b>"},
             {l:"Argentino de 25 de Mayo", v:"Racing de Olavarría", hora:"17:30", gl:null, gv:null, claseL:"argentino25demayo", claseV:"racingolavarria",nota:"<b>Partido de ida</b>"},
             {l:"Ferro de Pico", v:"Atlético Villegas", hora:"20:00", gl:null, gv:null, claseL:"ferropico", claseV:"atlvillegas",nota:"<b>Partido de ida</b>"},
@@ -23071,7 +23071,7 @@ function cambiarFechaRegAmateurTemp(titulo, n) {
 
 const BD_REGAMATEUR_PLAYOFFS = {
     segunda: [
-        { ida:    { local: "Independiente de San Cayetano", clL: "indeptesancayetano", visitante: "Huracán", clV: "huracan", gl: null, gv: null, goles_l: [], goles_v: [] },
+        { ida:    { local: "Independiente de San Cayetano", clL: "indeptesancayetano", visitante: "Huracán", clV: "huracan", gl: 1, gv: 2, goles_l: [], goles_v: ["Lautaro Cerato","Iván Agudiak"] },
           vuelta: { local: "Huracán", clL: "huracan", visitante: "Independiente de San Cayetano", clV: "indeptesancayetano", gl: null, gv: null, goles_l: [], goles_v: [] } },
         { ida:    { local: "Ferro de Pico", clL: "ferropico", visitante: "Atlético Villegas", clV: "atlvillegas", gl: null, gv: null, goles_l: [], goles_v: [] },
           vuelta: { local: "Atlético Villegas", clL: "atlvillegas", visitante: "Ferro de Pico", clV: "ferropico", gl: null, gv: null, goles_l: [], goles_v: [] } },
@@ -24737,7 +24737,7 @@ const BD_FEDERAL_PLAYOFFS = {
     ],
     semifinales: [
         {
-            ida:    { local: "Olimpo", clL: "olimpo", visitante: "San Martín de Formosa", clV: "sanmartinfsa", gl: null, gv: null, goles_l: [], goles_v: [] },
+            ida:    { local: "Olimpo", clL: "olimpo", visitante: "San Martín de Formosa", clV: "sanmartinfsa", gl: 1, gv: 1, goles_l: [], goles_v: ["Brian Guille"] },
             vuelta: { local: "San Martín de Formosa", clL: "sanmartinfsa", visitante: "Olimpo", clV: "olimpo", gl: null, gv: null, goles_l: [], goles_v: [] }
         },
         {
