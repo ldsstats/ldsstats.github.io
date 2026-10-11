@@ -21167,7 +21167,7 @@ const BD_GOLEADORES_CLAUSURA_OFICIAL = [
     },
 { jugador: "Ramiro Gerk", equipo: "Villa Mitre", goles: 2,
       partidos: [
-          { fecha: "Fecha 3", rival: "Huracán", gl: 2, gv: 2, condicion: "Local", goles: 1 }
+          { fecha: "Fecha 3", rival: "Huracán", gl: 2, gv: 2, condicion: "Local", goles: 1 },
           { fecha: "Fecha 11", rival: "San Francisco", gl: 0, gv: 2, condicion: "Visitante", goles: 1 }
       ]
     },
