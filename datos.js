@@ -2323,7 +2323,7 @@ function generarTablaFederal(etapa = 'playoffs') {
             style="font-size:10px;padding:4px 12px;border:1px solid #1a4a2e;border-radius:12px;cursor:pointer;font-weight:bold;background:${etapa==='revalida'?'#1a4a2e':'#fff'};color:${etapa==='revalida'?'#fff':'#1a4a2e'};">Reválida</button>
     </div>`;
 if (etapa === 'playoffs') {
-    const subPO = estado.subPlayoffFederal || 'cuartos';
+    const subPO = estado.subPlayoffFederal || 'semifinales';
     let htmlP = tabs;
 
     htmlP += `<div style="display:flex;gap:6px;padding:8px 8px 4px;background:#f9f9f9;border-bottom:1px solid #eee;">
@@ -2335,7 +2335,7 @@ if (etapa === 'playoffs') {
             style="font-size:9px;padding:3px 10px;border:1px solid #1a4a2e;border-radius:10px;cursor:pointer;background:${subPO==='final'?'#1a4a2e':'#fff'};color:${subPO==='final'?'#fff':'#1a4a2e'};">Final</button>
     </div>`;
 
-    const rondasPO = { cuartos: ['CUARTOS DE FINAL', BD_FEDERAL_PLAYOFFS.cuartos], semifinales: ['SEMIFINALES', BD_FEDERAL_PLAYOFFS.semifinales], final: ['FINAL', null] };
+    const rondasPO = { cuartos: ['CUARTOS DE FINAL', BD_FEDERAL_PLAYOFFS.cuartos], semifinales: ['SEMIFINALES', BD_FEDERAL_PLAYOFFS.semifinales], final: ['FINAL', BD_FEDERAL_PLAYOFFS.final] };
     const [tituloPO, duelosPO] = rondasPO[subPO];
 
     htmlP += `<div class="header-t">PLAYOFFS - ${tituloPO}</div>`;
@@ -2457,7 +2457,7 @@ if (etapa === 'playoffs') {
         if (idx > 0) {
             htmlR += `</table>`;
 
-            htmlR += `<div style="height:10px;background:#f0f0f0;border-top:1px solid #ddd;border-bottom:1px solid #ddd;"></div>`;
+            htmlR += `<div style="height:20px;background:#729b3c;"></div>`;
 
             htmlR += `<table>`;
         }
@@ -18452,7 +18452,8 @@ function generarSub15Fem() {
     const n = estado.fecha || 1;
     const f = idaSub15Fem.find(x => x.fecha === n) || { partidos: [] };
 
-    let html = `<div class="nav-fechas">`;
+    let html = `<div onclick="navegar('sub15femplayoffs')" style="background:linear-gradient(135deg,#7b1a1a,#a93226);color:#fff;text-align:center;padding:9px 12px;font-size:12px;font-weight:bold;letter-spacing:0.5px;cursor:pointer;border-bottom:2px solid #f0a500;">🏆 Ver cuadro de Playoffs de Sub 15 Femenino ▶</div>`;
+    html += `<div class="nav-fechas">`;
     for (let i = 1; i <= 22; i++) {
         html += `<div class="btn-f ${i === n ? 'activa' : ''}" onclick="cambiarFecha(${i})">${i}</div>`;
     }
@@ -21013,9 +21014,9 @@ const BD_GOLEADORAS_CLAUSURA_FEM = [
           { fecha: "Fecha 12", rival: "Libertad", gl: 0, gv: 6, condicion: "Visitante", goles: 1 }
       ]
     },
-{ jugadora: "Dana Ramos", equipo: "Villa Mitre", goles: 1,
+{ jugadora: "Dana Ramos", equipo: "Villa Mitre", goles: 2,
       partidos: [
-          { fecha: "Fecha 12", rival: "Libertad", gl: 0, gv: 6, condicion: "Visitante", goles: 1 }
+          { fecha: "Fecha 12", rival: "Libertad", gl: 0, gv: 6, condicion: "Visitante", goles: 2 }
       ]
     },
 { jugadora: "Celeste Lopetegui", equipo: "Villa Mitre", goles: 1,
@@ -22608,8 +22609,27 @@ function generarPerfilJugador(jugador, equipo, origen, totalOverride, catPerfil)
 
     cats.forEach(cat => {
         let fixtures;
-        if (cat === 'segundafemenino') fixtures = BD_FIXTURES.segundafemenino.torneo2026;
-        else if (cat === 'federala') fixtures = [...BD_FIXTURES.federala.posiciones, ...BD_FIXTURES.federala.nonagonal];
+        if (cat === 'segundafemenino') {
+            const playoffsSegFemPerfil = [...(BD_SEGUNDAFEMENINO_PLAYOFFS.cuartos||[]), ...(BD_SEGUNDAFEMENINO_PLAYOFFS.semis||[])]
+                .flatMap(s => [s.ida, s.vuelta]).filter(p => p && p.gl !== null)
+                .map(p => ({ l: p.local.replace(/<[^>]+>/g, ''), v: p.visitante.replace(/<[^>]+>/g, ''), gl: p.gl, gv: p.gv, goles_l: p.goles_l||[], goles_v: p.goles_v||[], dia: 'Playoffs' }));
+            const todosPartidosSegFem = [...BD_FIXTURES.segundafemenino.torneo2026.flatMap(f => f.partidos), ...playoffsSegFemPerfil];
+            fixtures = [{ partidos: todosPartidosSegFem }];
+        }
+        else if (cat === 'federala') {
+            const revalidaPartidos = Object.values(BD_FEDERAL_REVALIDA).flatMap(r => r)
+                .flatMap(s => [s.ida, s.vuelta]).filter(p => p && p.gl !== null)
+                .map(p => ({ l: p.local.replace(/<[^>]+>/g, ''), v: p.visitante.replace(/<[^>]+>/g, ''), gl: p.gl, gv: p.gv, goles_l: p.goles_l||[], goles_v: p.goles_v||[], clL: p.clL, clV: p.clV, dia: 'Reválida' }));
+            const semifinalesPartidos = (BD_FEDERAL_PLAYOFFS.semifinales || [])
+                .flatMap(s => [s.ida, s.vuelta]).filter(p => p && p.gl !== null)
+                .map(p => ({ l: p.local.replace(/<[^>]+>/g, ''), v: p.visitante.replace(/<[^>]+>/g, ''), gl: p.gl, gv: p.gv, goles_l: p.goles_l||[], goles_v: p.goles_v||[], clL: p.clL, clV: p.clV, dia: 'Semifinales' }));
+            const finalPartidos = BD_FEDERAL_PLAYOFFS.final && BD_FEDERAL_PLAYOFFS.final.gl !== null
+                ? [{ l: BD_FEDERAL_PLAYOFFS.final.local.replace(/<[^>]+>/g, ''), v: BD_FEDERAL_PLAYOFFS.final.visitante.replace(/<[^>]+>/g, ''), gl: BD_FEDERAL_PLAYOFFS.final.gl, gv: BD_FEDERAL_PLAYOFFS.final.gv, goles_l: BD_FEDERAL_PLAYOFFS.final.goles_l||[], goles_v: BD_FEDERAL_PLAYOFFS.final.goles_v||[], clL: BD_FEDERAL_PLAYOFFS.final.clL, clV: BD_FEDERAL_PLAYOFFS.final.clV, dia: 'Final' }]
+                : [];
+            fixtures = [...BD_FIXTURES.federala.posiciones, ...BD_FIXTURES.federala.nonagonal];
+            const todosPartidosFederala = [...fixtures.flatMap(f => f.partidos), ...revalidaPartidos, ...semifinalesPartidos, ...finalPartidos];
+            fixtures = [{ partidos: todosPartidosFederala }];
+        }
         else if (cat === 'oficial' || cat === 'promocional') fixtures = BD_FIXTURES[cat].apertura;
         else fixtures = BD_FIXTURES[cat]?.apertura || [];
 
@@ -22620,7 +22640,7 @@ const playoffsBD = { oficial: BD_OFICIAL_PLAYOFFS, promocional: BD_PROMOCIONAL_P
         if (pd) {
             [...(pd.octavos||[]), ...(pd.cuartos||[]), ...(pd.semifinales||[]), ...(pd.final?[pd.final]:[]), ...(pd.finalExtra?[pd.finalExtra]:[])]
                 .filter(p => p && p.gl !== null)
-                .forEach(p => { if (p) todosPartidos.push({ l: p.local, v: p.visitante, gl: p.gl, gv: p.gv, goles_l: p.goles_l||[], goles_v: p.goles_v||[], dia: 'Playoffs' }); });
+                .forEach(p => { if (p) todosPartidos.push({ l: p.local, v: p.visitante, gl: p.gl, gv: p.gv, goles_l: p.goles_l||[], goles_v: p.goles_v||[], clL: p.clL, clV: p.clV, dia: 'Playoffs' }); });
         }
 
         let equiposBuscar;
@@ -22655,10 +22675,10 @@ if (alias) {
 
             if (golesJugador > 0 && equipoEnEstePartido) {
                 const escRival = cat === 'federala'
-                    ? (BD_EQUIPOS.federala.find(e => e.nombre === rival)?.clase || BD_EQUIPOS.federala_nonagonal.find(e => e.nombre === rival)?.clase || '')
+                    ? (BD_EQUIPOS.federala.find(e => e.nombre === rival)?.clase || BD_EQUIPOS.federala_nonagonal.find(e => e.nombre === rival)?.clase || (condicion === 'Local' ? p.clV : p.clL) || '')
                     : (BD_EQUIPOS[cat]?.find(e => e.nombre === rival)?.clase || '');
                 const escPropio = cat === 'federala'
-                    ? (BD_EQUIPOS.federala.find(e => e.nombre === equipoEnEstePartido)?.clase || BD_EQUIPOS.federala_nonagonal.find(e => e.nombre === equipoEnEstePartido)?.clase || '')
+                    ? (BD_EQUIPOS.federala.find(e => e.nombre === equipoEnEstePartido)?.clase || BD_EQUIPOS.federala_nonagonal.find(e => e.nombre === equipoEnEstePartido)?.clase || (condicion === 'Local' ? p.clL : p.clV) || '')
                     : (BD_EQUIPOS[cat]?.find(e => e.nombre === equipoEnEstePartido)?.clase || '');
                 if (!partidosPorEquipo[equipoEnEstePartido]) partidosPorEquipo[equipoEnEstePartido] = [];
                 const etiquetaTorneo = (origen === 'total' && cat === catPerfil) ? 'Apertura' : catLabels[cat];
@@ -24846,7 +24866,7 @@ const BD_FEDERAL_PLAYOFFS = {
             vuelta: { local: "San Martín de Formosa", clL: "sanmartinfsa", visitante: "Olimpo", clV: "olimpo", gl: null, gv: null, goles_l: [], goles_v: [] }
         },
         {
-            ida:    { local: "Cipolletti", clL: "cipolletti", visitante: "Alvarado", clV: "alvarado", gl: null, gv: null, goles_l: [], goles_v: [] },
+            ida:    { local: "Cipolletti", clL: "cipolletti", visitante: "Alvarado", clV: "alvarado", gl: 1, gv: 0, goles_l: [], goles_v: [] },
             vuelta: { local: "Alvarado", clL: "alvarado", visitante: "Cipolletti", clV: "cipolletti", gl: null, gv: null, goles_l: [], goles_v: [] }
         },
     ],
@@ -25302,3 +25322,60 @@ const BD_RESERVA_SEGUNDAFEMENINO_PLAYOFFS = {
         { local: "San Francisco", clL: "sanfrancisco", visitante: "Rosario PB", clV: "rosariopb", gl: null, gv: null, goles_l: [], goles_v: [] },
     ]
 };
+
+const BD_SUB15FEM_PLAYOFFS = {
+    cuartos: [
+        { local: "Liniers", clL: "liniers", visitante: "La Armonía", clV: "laarmonia", gl: null, gv: null, goles_l: [], goles_v: [] },
+        { local: "Bella Vista", clL: "bellavista", visitante: "Sporting", clV: "sporting", gl: null, gv: null, goles_l: [], goles_v: [] },
+        { local: "Villa Mitre", clL: "villamitre", visitante: "Juventud Unida", clV: "juventudunida", gl: null, gv: null, goles_l: [], goles_v: [] },
+        { local: "Tiro Federal", clL: "tirofederal", visitante: "San Francisco", clV: "sanfrancisco", gl: null, gv: null, goles_l: [], goles_v: [] },
+    ],
+    semis: [
+        { local: "A confirmar", clL: "aconfirmar", visitante: "A confirmar", clV: "aconfirmar", gl: null, gv: null, goles_l: [], goles_v: [] },
+        { local: "A confirmar", clL: "aconfirmar", visitante: "A confirmar", clV: "aconfirmar", gl: null, gv: null, goles_l: [], goles_v: [] },
+    ],
+    final: { local: "A confirmar", clL: "aconfirmar", visitante: "A confirmar", clV: "aconfirmar", gl: null, gv: null, goles_l: [], goles_v: [] }
+};
+
+function generarSub15FemPlayoffs() {
+    let subPO = window._subPOSub15Fem || 'cuartos';
+    const tabs = `<div style="display:flex;gap:6px;padding:8px 8px 4px;background:#f9f9f9;border-bottom:1px solid #eee;">
+        <button onclick="window._subPOSub15Fem='cuartos';document.getElementById('contenido').innerHTML=generarSub15FemPlayoffs()"
+            style="font-size:10px;padding:4px 12px;border:1px solid #1a4a2e;border-radius:12px;cursor:pointer;font-weight:bold;background:${subPO==='cuartos'?'#1a4a2e':'#fff'};color:${subPO==='cuartos'?'#fff':'#1a4a2e'};">Cuartos de final</button>
+        <button onclick="window._subPOSub15Fem='semis';document.getElementById('contenido').innerHTML=generarSub15FemPlayoffs()"
+            style="font-size:10px;padding:4px 12px;border:1px solid #1a4a2e;border-radius:12px;cursor:pointer;font-weight:bold;background:${subPO==='semis'?'#1a4a2e':'#fff'};color:${subPO==='semis'?'#fff':'#1a4a2e'};">Semifinales</button>
+        <button onclick="window._subPOSub15Fem='final';document.getElementById('contenido').innerHTML=generarSub15FemPlayoffs()"
+            style="font-size:10px;padding:4px 12px;border:1px solid #1a4a2e;border-radius:12px;cursor:pointer;font-weight:bold;background:${subPO==='final'?'#1a4a2e':'#fff'};color:${subPO==='final'?'#fff':'#1a4a2e'};">Final</button>
+    </div>`;
+
+    let html = `<div class="header-t">SUB-15 FEMENINO — PLAYOFFS</div>` + tabs;
+    const renderP = p => {
+        const res = p.gl !== null ? `${p.gl} - ${p.gv}` : 'vs';
+        return `<tr>
+            <td class="c-loc"><span style="direction:ltr;display:inline-flex;align-items:center;justify-content:flex-end;width:100%;">${p.local} <div class="escudo ${p.clL}" style="display:inline-block;vertical-align:middle;margin-left:4px;"></div></span></td>
+            <td class="c-res">${res}</td>
+            <td class="c-vis"><div class="escudo ${p.clV}" style="display:inline-block;vertical-align:middle;margin-right:4px;"></div> ${p.visitante}</td>
+        </tr>`;
+    };
+
+    if (subPO === 'cuartos') {
+        html += `<div class="header-t" style="font-size:11px;background:#333;">CUARTOS DE FINAL</div><table>`;
+        BD_SUB15FEM_PLAYOFFS.cuartos.forEach((p, i) => {
+            html += renderP(p);
+            if (i < BD_SUB15FEM_PLAYOFFS.cuartos.length - 1) html += `<tr><td colspan="3" style="padding:0;height:8px;background:#f0f0f0;"></td></tr>`;
+        });
+        html += `</table>`;
+    } else if (subPO === 'semis') {
+        html += `<div class="header-t" style="font-size:11px;background:#333;">SEMIFINALES</div><table>`;
+        BD_SUB15FEM_PLAYOFFS.semis.forEach((p, i) => {
+            html += renderP(p);
+            if (i < BD_SUB15FEM_PLAYOFFS.semis.length - 1) html += `<tr><td colspan="3" style="padding:0;height:8px;background:#f0f0f0;"></td></tr>`;
+        });
+        html += `</table>`;
+    } else {
+        html += `<div class="header-t" style="font-size:11px;background:#333;">FINAL</div><table>`;
+        html += renderP(BD_SUB15FEM_PLAYOFFS.final);
+        html += `</table>`;
+    }
+    return html;
+}
