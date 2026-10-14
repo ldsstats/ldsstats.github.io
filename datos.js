@@ -1987,10 +1987,10 @@ function generarHome() {
             ]},
             { nombre: "SENIOR | CLAUSURA | FECHA 5", cat: "senior", torLink: "senior", noAutoResult: true, partidos: [
             {l:"Sansinena", v:"Bella Vista", hora:"20:00", gl:null, gv:null, claseL:"laesperanza", claseV:"laestacion",nota:"<b>en cancha de Huracán</b>"},
-            {l:"San Francisco", v:"Libertad", hora:"20:00", gl:null, gv:null, claseL:"sanfrancisco", claseV:"libertad",nota:"<b>en cancha de Empleados de Comercio</b>"},
+            {l:"San Francisco", v:"Libertad", hora:"20:00", gl:null, gv:null, claseL:"sanfrancisco", claseV:"libertad",nota:"<b>en cancha de Libertad</b>"},
+            {l:"Comercial", v:"Tiro Federal", hora:"21:00", gl:null, gv:null, claseL:"comercial", claseV:"tirofederal",nota:"<b>en cancha de Comercial</b>"},
             {l:"Huracán", v:"Pacífico (C)", hora:"21:30", gl:null, gv:null, claseL:"huracan", claseV:"pacificoc",nota:"<b>en cancha de Huracán</b>"},
-            {l:"Pacífico BB", v:"Sporting", hora:"21:30", gl:null, gv:null, claseL:"pacificobb", claseV:"sporting",nota:"<b>en cancha de Empleados de Comercio</b>"},
-            {l:"Comercial", v:"Tiro Federal", hora:"21:30", gl:null, gv:null, claseL:"comercial", claseV:"tirofederal",nota:"<b>en cancha de Comercial</b>"},
+            {l:"Pacífico BB", v:"Sporting", hora:"21:30", gl:null, gv:null, claseL:"pacificobb", claseV:"sporting",nota:"<b>en cancha de Libertad</b>"},
             ]},
        ]},
      { id: "2026-10-15", label: "JUE 15/10", torneos: [
