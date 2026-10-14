@@ -294,7 +294,7 @@
         }
         estado.torneo = tor;
         estado.categoria = cat;
-        estado.fecha = (tor === 'apertura' && (cat === 'oficial' || cat === 'promocional')) ? 14 : (tor === 'clausura' && (cat === 'oficial' || cat === 'promocional')) ? 11 : (tor === 'posiciones' && cat === 'federala') ? 18 : (tor === 'apertura' && cat === 'femenino') ? 14 : (tor === 'clausura' && cat === 'femenino') ? 12 : (tor === 'torneo2026' && cat === 'segundafemenino') ? 27 : (tor === 'futsal') ? 11 : (tor === 'futsalreserva') ? 11 : (tor === 'sub15fem') ? 22 : 1; 
+        estado.fecha = (tor === 'apertura' && (cat === 'oficial' || cat === 'promocional')) ? 14 : (tor === 'clausura' && (cat === 'oficial' || cat === 'promocional')) ? 12 : (tor === 'posiciones' && cat === 'federala') ? 18 : (tor === 'apertura' && cat === 'femenino') ? 14 : (tor === 'clausura' && cat === 'femenino') ? 13 : (tor === 'torneo2026' && cat === 'segundafemenino') ? 27 : (tor === 'futsal') ? 12 : (tor === 'futsalreserva') ? 12 : (tor === 'sub15fem') ? 22 : 1; 
         actualizarVista();
         document.documentElement.scrollTop = 0;
         document.body.scrollTop = 0;
@@ -542,7 +542,7 @@
                 cont.innerHTML = generarTablaFederal(estado.etapaFederal || 'playoffs');
             } else if (estado.torneo === 'reserva') {
                 if (!estado._reservaIniciada || estado._reservaCat !== estado.categoria) {
-                    estado.fecha = (estado.categoria === 'oficial' || estado.categoria === 'promocional') ? 11 : (estado.categoria === 'femenino') ? 12 : (estado.categoria === 'segundafemenino') ? 27 : 1;
+                    estado.fecha = (estado.categoria === 'oficial' || estado.categoria === 'promocional') ? 12 : (estado.categoria === 'femenino') ? 13 : (estado.categoria === 'segundafemenino') ? 27 : 1;
                     estado._reservaIniciada = true;
                     estado._reservaCat = estado.categoria;
                 }
