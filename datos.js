@@ -1308,7 +1308,7 @@ BD_FIXTURES.oficial.reserva.push(
     { fecha: 9, partidos: [
         {l:"Liniers",   v:"Bella Vista",   gl:1, gv:2},
         {l:"Sporting",   v:"Huracán",   gl:2, gv:0},
-        {l:"Libertad",   v:"San Francisco",   gl:null, gv:null},
+        {l:"Libertad",   v:"San Francisco",   gl:4, gv:0},
         {l:"Villa Mitre",   v:"La Armonía",   gl:null, gv:null}
     ]},
     { fecha: 10, partidos: [
@@ -1320,7 +1320,7 @@ BD_FIXTURES.oficial.reserva.push(
     { fecha: 11, partidos: [
         {l:"Huracán",   v:"La Armonía",   gl:2, gv:3},
         {l:"Bella Vista",   v:"Sporting",   gl:2, gv:0},
-        {l:"San Francisco",   v:"Villa Mitre",   gl:null, gv:null},
+        {l:"San Francisco",   v:"Villa Mitre",   gl:0, gv:0},
         {l:"Libertad",   v:"Liniers",   gl:1, gv:1}
     ]},
     { fecha: 12, partidos: [
@@ -1406,8 +1406,8 @@ BD_FIXTURES.promocional.reserva.push(
         {l:"Olimpo",   v:"Comercial", gl:0,   gv:0}
     ]},
     { fecha: 11, partidos: [
-        {l:"Dublin", v:"Comercial",              gl:null,   gv:null},
-        {l:"Rosario PB",v:"Olimpo",           gl:null,   gv:null},
+        {l:"Dublin", v:"Comercial",              gl:1,   gv:0},
+        {l:"Rosario PB",v:"Olimpo",           gl:1,   gv:1},
         {l:"Sansinena",   v:"Pacífico BB", gl:3,   gv:1},
         {l:"Pacífico (C)",      v:"Tiro Federal",          gl:0,   gv:8},
     ]},
@@ -1994,6 +1994,9 @@ function generarHome() {
             ]},
        ]},
      { id: "2026-10-15", label: "JUE 15/10", torneos: [
+            { nombre: "2° FEMENINO | ÚLTIMA FECHA | REPROGRAMADO", cat: "sub15fem", torLink: "sub15fem", noAutoResult: true, partidos: [
+            {l:"Liniers", v:"Sansinena", hora:"20:30", gl:null, gv:null, claseL:"liniers", claseV:"sansinena"},
+            ]},
             { nombre: "COPA PAÍS | CUARTOS DE FINAL", cat: "copapais", torLink: "copapais", noAutoResult: true, partidos: [
             {l:"Catamarca", v:"Jujuy", hora:"16:00", gl:null, gv:null, claseL:"catamarcapais", claseV:"jujuy",nota:"<b>Ida: 0-0</b>"},
             ]},
@@ -2011,17 +2014,43 @@ function generarHome() {
             {l:"Liniers", v:"Huracán", hora:"16:00", gl:null, gv:null, claseL:"liniers", claseV:"huracan"},
             ]},
             { nombre: "PROMOCIONAL | FECHA 12 | CLAUSURA", cat: "promocional", torLink: "promocional", noAutoResult: true, partidos: [
+            {l:"Olimpo", v:"Pacífico (C)", hora:"11:00", gl:null, gv:null, claseL:"olimpo", claseV:"pacificoc"},
             {l:"Dublin", v:"Pacífico BB", hora:"16:00", gl:null, gv:null, claseL:"dublin", claseV:"pacificobb"},
             {l:"Tiro Federal", v:"Sansinena", hora:"16:00", gl:null, gv:null, claseL:"tirofederal", claseV:"sansinena"},
             {l:"Comercial", v:"Rosario PB", hora:"16:00", gl:null, gv:null, claseL:"comercial", claseV:"rosariopb"},
+            ]},
+            { nombre: "FEDERAL A | REVÁLIDA (VILLA MITRE) | SEGUNDA RONDA | VUELTA", cat: "federala", torLink: "federala", noAutoResult: true, partidos: [
+            {l:"Kimberley", v:"Dep. Rincón", hora:"15:00", gl:null, gv:null, claseL:"kimberley", claseV:"deprincon",nota:"<b>Ida: 1-0</b>"},
+            {l:"Huracán Las Heras", v:"Juventud Antoniana", hora:"15:30", gl:null, gv:null, claseL:"huracanlh", claseV:"jantoniana",nota:"<b>Ida: 0-3</b>"},
+            {l:"Defensores de Belgrano (VR)", v:"Sportivo Las Parejas", hora:"16:00", gl:null, gv:null, claseL:"defbelgranovr", claseV:"splasparejas",nota:"<b>Ida: 1-1</b>"},
+            {l:"Gimnasia de Chivilcoy", v:"Defensores de Vilelas", hora:"18:00", gl:null, gv:null, claseL:"gimnasiachivilcoy", claseV:"defvilelas",nota:"<b>Ida: 1-1</b>"},
+            {l:"Sol de América", v:"Juventud Unida", hora:"19:00", gl:null, gv:null, claseL:"soldeamericafsa", claseV:"juvunidasl",nota:"<b>Ida: 0-0</b>"},
+            {l:"Atenas de Río Cuarto", v:"FADEP", hora:"19:30", gl:null, gv:null, claseL:"atenasrc", claseV:"fadep",nota:"<b>Ida: 0-2</b>"},
+            {l:"Bartolomé Mitre", v:"Boca Unidos", hora:"20:00", gl:null, gv:null, claseL:"bartolomemitre", claseV:"bocaunidos",nota:"<b>Ida: 0-1</b>"},
+            ]},
+            { nombre: "TORNEO REGIONAL AMATEUR (HURACÁN) | BONAERENSE PAMPEANA SUR | SEGUNDA RONDA | VUELTA", cat: "regamateurtemp", torLink: "regamateurtemp", noAutoResult: true, partidos: [
+            {l:"Atlético Villegas", v:"Ferro de Pico", hora:"19:00", gl:null, gv:null, claseL:"atlvillegas", claseV:"ferropico",nota:"<b>Ida: 2-1</b>"},
             ]},
        ]},
      { id: "2026-10-18", label: "DOM 18/10", torneos: [
             { nombre: "OFICIAL | FECHA 12 | CLAUSURA", cat: "oficial", torLink: "oficial", noAutoResult: true, partidos: [
             {l:"Sporting", v:"Libertad", hora:"16:00", gl:null, gv:null, claseL:"sporting", claseV:"libertad"},
             ]},
-            { nombre: "PROMOCIONAL | FECHA 12 | CLAUSURA", cat: "promocional", torLink: "promocional", noAutoResult: true, partidos: [
-            {l:"Olimpo", v:"Pacífico (C)", hora:"11:00", gl:null, gv:null, claseL:"olimpo", claseV:"pacificoc"},
+            { nombre: "FEDERAL A | CUARTOS DE FINAL | VUELTA", cat: "federala", torLink: "federala", noAutoResult: true, partidos: [
+            {l:"San Martín de Formosa", v:"<b>Olimpo</b>", hora:"15:30", gl:null, gv:null, claseL:"sanmartinfsa", claseV:"olimpo",nota:"<b>Ida: 1-1</b>"},
+            {l:"Alvarado", v:"Cipolletti", hora:"15:30", gl:null, gv:null, claseL:"alvarado", claseV:"cipolletti",nota:"<b>Ida: 0-1</b>"},
+            ]},
+            { nombre: "FEDERAL A | REVÁLIDA | SEGUNDA RONDA | VUELTA", cat: "federala", torLink: "federala", noAutoResult: true, partidos: [
+            {l:"<b>Villa Mitre</b>", v:"Costa Brava", hora:"16:00", gl:null, gv:null, claseL:"villamitre", claseV:"costabrava",nota:"<b>Ida: 1-1</b>"},
+            {l:"Douglas Haig", v:"El Linqueño", hora:"16:00", gl:null, gv:null, claseL:"douglashaig", claseV:"ellinqueño",nota:"<b>Ida: 0-0</b>"},
+            {l:"9 de Julio", v:"Gimnasia (CdU)", hora:"16:00", gl:null, gv:null, claseL:"nuevedejulio", claseV:"gimnasiacdu",nota:"<b>Ida: 1-4</b>"},
+            {l:"Argentino de Monte Maiz", v:"San Martín de Mendoza", hora:"16:15", gl:null, gv:null, claseL:"argmontemaiz", claseV:"sanmartinmza",nota:"<b>Ida: 2-0</b>"},
+            {l:"Sarmiento de La Banda", v:"Sportivo Belgrano", hora:"18:30", gl:null, gv:null, claseL:"sarmientolb", claseV:"spbelgrano",nota:"<b>Ida: 1-1</b>"},
+            ]},
+            { nombre: "TORNEO REGIONAL AMATEUR | BONAERENSE PAMPEANA SUR | SEGUNDA RONDA | VUELTA", cat: "regamateurtemp", torLink: "regamateurtemp", noAutoResult: true, partidos: [
+            {l:"Ministerio", v:"Quilmes (MdP)", hora:"16:00", gl:null, gv:null, claseL:"ministerio", claseV:"quilmesmdp",nota:"<b>Ida: 0-4</b>"},
+            {l:"Racing de Olavarría", v:"Argentino de 25 de Mayo", hora:"16:00", gl:null, gv:null, claseL:"racingolavarria", claseV:"arg25demayo",nota:"<b>Ida: 2-1</b>"},
+            {l:"Huracán", v:"Independiente de San Cayetano", hora:"19:30", gl:null, gv:null, claseL:"huracan", claseV:"indeptesancayetano",nota:"<b>Ida: 2-1</b>"},
             ]},
        ]},
      { id: "2026-10-19", label: "LUN 19/10", torneos: [
@@ -16352,6 +16381,7 @@ const BD_H2H = {
         { fecha: "Fecha 19 - Torneo 2026 - 09 ago", torneo: "segundafemenino", l: "Olimpo", v: "Rosario PB", gl: 2, gv: 7, goles_l: ["Sofía Cáceres","Mía Cibelli"], goles_v: ["Celeste Medina  (2)","Ayelén Zeballos (2)","Alejandra Sturtz","Julieta Díaz","Valentina Cavalli"] },
         { fecha: "Fecha 4 - Clausura 2026 - 23 ago", torneo: "oficial", l: "Olimpo", v: "Rosario PB", gl: 1, gv: 1, goles_l: ["Fabricio Ibarra"], goles_v: ["Nicolás Ovando"] },
         { fecha: "Fecha 11 - Clausura 2026 - 11 oct", torneo: "oficial", l: "Rosario PB", v: "Olimpo", gl: 0, gv: 2, goles_l: [], goles_v: ["Ayrton Ithurriague","Felipe Santamarina"] },
+        { fecha: "Fecha 11 - Clausura 2026", torneo: "reserva_oficial", l: "Rosario PB", v: "Olimpo", gl: 1, gv: 1 },
     ],
     "Pacífico (C)|Petroquímicos": [
         { fecha: "Fecha 1 - Torneo 2026 - 24 mar", torneo: "segundafemenino", l: "Pacífico (C)", v: "Petroquímicos", gl: 1, gv: 5, goles_l: ["Bianca Pascualini"], goles_v: ["Nicole Montenegro (2)","Paola Vallejos","Renata Segovia","Lucía Vallejos"] },
@@ -16513,6 +16543,7 @@ const BD_H2H = {
         { fecha: "Torneo 2026 - Fecha 7", torneo: "sub15fem", l: "Libertad", v: "San Francisco", gl: 1, gv: 2 },
         { fecha: "Torneo 2026 - Fecha 18", torneo: "sub15fem", l: "San Francisco", v: "Libertad", gl: 6, gv: 1 },
         { fecha: "Fecha 9 - Clausura 2026 - 26 ago", torneo: "oficial", l: "Libertad", v: "San Francisco", gl: 1, gv: 1, goles_l: ["Franco Pane"], goles_v: ["Alexis Vega"] },
+        { fecha: "Fecha 9 - Clausura 2026", torneo: "reserva_oficial", l: "Libertad", v: "San Francisco", gl: 4, gv: 0 },
     ],
     "Bella Vista|Liniers": [
         { fecha: "Fecha 2 - Apertura 2026 - 24 mar 2026", torneo: "oficial", l: "Bella Vista", v: "Liniers", gl: 0, gv: 1, goles_l: [], goles_v: ["Rodrigo Phillip"] },
@@ -16654,7 +16685,7 @@ const BD_H2H = {
         { fecha: "Fecha 7 - Apertura 2026 - 2 may 2026", torneo: "promocional", l: "Rosario PB", v: "Sansinena", gl: 4, gv: 4, goles_l: ["Sebastián Mendoza","Favio Durán","Agustín Grippaudo","Nicolás Ovando"], goles_v: ["Manuel Stortini (2)","Diego Romero (2)"] },
         { fecha: "Fecha 7 - Apertura 2026", torneo: "reserva_promocional", l: "Rosario PB", v: "Sansinena", gl: 1, gv: 0 },
         { fecha: "Fecha 14 - Apertura 2026 - 28 jun 2026", torneo: "promocional", l: "Sansinena", v: "Rosario PB", gl: 0, gv: 2, goles_l: [], goles_v: ["Agustín Grippaudo","Pedro Fernández"] },
-        { fecha: "Fecha 14 - Torneo 2026", torneo: "reserva_promocional", l: "Sansinena", v: "Rosario PB", gl: 0, gv: 1 },
+        { fecha: "Fecha 14 - Apertura 2026", torneo: "reserva_promocional", l: "Sansinena", v: "Rosario PB", gl: 0, gv: 1 },
         { fecha: "Fecha 20 - Torneo 2026", torneo: "segundafemenino", l: "Sansinena", v: "Rosario PB", gl: 0, gv: 4, goles_l: [], goles_v: ["Valentina Cavalli","Valentina Cavalli","Valentina Cavalli","Celeste Medina"] },
         { fecha: "Fecha 7 - Clausura 2026 - 13 ago 2026", torneo: "promocional", l: "Rosario PB", v: "Sansinena", gl: 3, gv: 1, goles_l: ["Sebastián Mendoza","Favio Durán (2)"], goles_v: ["Manuel Stortini"] },
         { fecha: "Fecha 7 - Clausura 2026", torneo: "reserva_promocional", l: "Rosario PB", v: "Sansinena", gl: 1, gv: 2 },
@@ -16704,6 +16735,7 @@ const BD_H2H = {
         { fecha: "Clausura 2026 - Fecha 2", torneo: "futsalreserva", l: "Dublin", v: "Comercial", gl: 3, gv: 2 },
         { fecha: "Fecha 4 - Clausura 2026 - 22 ago 2026", torneo: "oficial", l: "Comercial", v: "Dublin", gl: 3, gv: 2, goles_l: ["Alejo Gil","Santiago Giorgis","Fernando Kessler"], goles_v: ["Nahuel Cournou (2)"] },
         { fecha: "Fecha 11 - Clausura 2026 - 12 oct", torneo: "oficial", l: "Dublin", v: "Comercial", gl: 2, gv: 4, goles_l: ["Emiliano Dekker","Nahuel Cornou"], goles_v: ["Alejandro Leiva (2)","Francisco Centeno","Juan Wunderlich"] },
+        { fecha: "Fecha 11 - Clausura 2026", torneo: "reserva_oficial", l: "Dublin", v: "Comercial", gl: 1, gv: 0 },
     ],
     "Catamarca|La Esperanza": [
         { fecha: "Apertura 2026 - Fecha 2", torneo: "futsal", l: "La Esperanza", v: "Catamarca", gl: 7, gv: 3 },
@@ -16949,6 +16981,7 @@ const BD_H2H = {
         { fecha: "Fecha 4 - Clausura 2026 - 23 ago", torneo: "oficial", l: "Villa Mitre", v: "San Francisco", gl: 0, gv: 0, goles_l: [], goles_v: [] },
         { fecha: "Fecha 4 - Clausura 2026", torneo: "reserva_oficial", l: "Villa Mitre", v: "San Francisco", gl: 2, gv: 2 },
         { fecha: "Fecha 11 - Clausura 2026 - 11 oct", torneo: "oficial", l: "San Francisco", v: "Villa Mitre", gl: 0, gv: 2, goles_l: [], goles_v: ["Ramiro Gerk","Constanzo Palacio"] },
+        { fecha: "Fecha 11 - Clausura 2026", torneo: "reserva_oficial", l: "San Francisco", v: "Villa Mitre", gl: 0, gv: 0 },
     ],
     "Empleados de Comercio|Juventud Unida": [
         { fecha: "Apertura 2026 - Fecha 3", torneo: "sub15fem", l: "Empleados de Comercio", v: "Juventud Unida", gl: 0, gv: 4 },
@@ -17993,21 +18026,21 @@ function generarReserva(cat) {
     const BD_RESERVA_POS = {
         'oficial':    [
                        {n:"Bella Vista <b>(C)</b>",   cl:"bellavista",   pj:11, pg:7, pe:2, pp:2, gf:20, gc:14, pts:23},
-                       {n:"Villa Mitre",   cl:"villamitre",   pj:9, pg:7, pe:1, pp:1, gf:24, gc:13, pts:22},
+                       {n:"Villa Mitre",   cl:"villamitre",   pj:10, pg:7, pe:2, pp:1, gf:24, gc:13, pts:23},
                        {n:"La Armonía",    cl:"laarmonia",    pj:10, pg:5, pe:3, pp:2, gf:19, gc:14, pts:18},
                        {n:"Sporting <b>(A)</b>",      cl:"sporting",     pj:10, pg:5, pe:2, pp:3, gf:13, gc:14, pts:17},
                        {n:"Liniers",       cl:"liniers",      pj:11, pg:4, pe:2, pp:5, gf:13, gc:11, pts:14},
-                       {n:"San Francisco", cl:"sanfrancisco", pj:8, pg:2, pe:1, pp:5, gf:14, gc:16, pts:7},
-                       {n:"Huracán",       cl:"huracan",      pj:11, pg:1, pe:3, pp:7, gf:14, gc:28, pts:6},
-                       {n:"Libertad <b>(X)</b>",      cl:"libertad",     pj:10, pg:1, pe:2, pp:7, gf:11, gc:18, pts:5}],
+                       {n:"Libertad <b>(X)</b>",      cl:"libertad",     pj:11, pg:2, pe:2, pp:7, gf:15, gc:18, pts:8},
+                       {n:"San Francisco", cl:"sanfrancisco", pj:9, pg:2, pe:2, pp:5, gf:14, gc:16, pts:8},
+                       {n:"Huracán",       cl:"huracan",      pj:11, pg:1, pe:3, pp:7, gf:14, gc:28, pts:6},],
         'promocional':[
                        {n:"Sansinena",           cl:"sansinena",        pj:10, pg:6, pe:2, pp:2, gf:21, gc:11, pts:20},
-                       {n:"Rosario PB",          cl:"rosariopb",        pj:10, pg:6, pe:1, pp:3, gf:17, gc:14, pts:19},
-                       {n:"Olimpo <b>(A)</b>",              cl:"olimpo",           pj:9, pg:5, pe:2, pp:2, gf:13, gc:9, pts:17},
+                       {n:"Rosario PB",          cl:"rosariopb",        pj:11, pg:6, pe:2, pp:3, gf:18, gc:15, pts:20},
+                       {n:"Olimpo <b>(A)</b>",              cl:"olimpo",           pj:10, pg:5, pe:3, pp:2, gf:14, gc:10, pts:18},
                        {n:"Tiro Federal",        cl:"tirofederal",      pj:9, pg:5, pe:2, pp:2, gf:24, gc:7, pts:17},
                        {n:"Pacífico BB",         cl:"pacificobb",       pj:11, pg:5, pe:1, pp:5, gf:20, gc:17, pts:16},
-                       {n:"Dublin",              cl:"dublin",           pj:9, pg:2, pe:3, pp:4, gf:11, gc:17, pts:9},
-                       {n:"Comercial <b>(X)</b>",           cl:"comercial",        pj:8, pg:1, pe:2, pp:5, gf:9, gc:14, pts:5},
+                       {n:"Dublin",              cl:"dublin",           pj:10, pg:3, pe:3, pp:4, gf:12, gc:17, pts:12},
+                       {n:"Comercial <b>(X)</b>",           cl:"comercial",        pj:9, pg:1, pe:2, pp:6, gf:9, gc:15, pts:5},
                        {n:"Pacífico (C) <b>(X)</b>", cl:"pacificocabildo",  pj:10, pg:1, pe:1, pp:8, gf:13, gc:39, pts:4},],
         'segundafemenino': [
             {n:"Liniers <b>(C)</b>",             cl:"liniers",         pj:18, pg:16, pe:2, pp:0, gf:66, gc:14, pts:50},
