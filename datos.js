@@ -24868,8 +24868,8 @@ const BD_SELECCION15_PLAYOFFS = {
             vuelta: { local: "<s>General Madariaga</s>", clL: "madariaga", visitante: "<b>Azul</b>", clV: "azul", gl: 0, gv: 3, goles_l: [], goles_v: [] }
         },
         {
-            ida: { local: "Pehuajó", clL: "pehuajo", visitante: "Tres Arroyos", clV: "tresarroyos", gl: 3, gv: 0, goles_l: [], goles_v: [] },
-            vuelta:    { local: "Tres Arroyos", clL: "tresarroyos", visitante: "Pehuajó", clV: "pehuajo", gl: null, gv: null, goles_l: [], goles_v: [] },
+            ida: { local: "<b>Pehuajó</b>", clL: "pehuajo", visitante: "<s>Tres Arroyos</s>", clV: "tresarroyos", gl: 3, gv: 0, goles_l: [], goles_v: [] },
+            vuelta:    { local: "<s>Tres Arroyos</s>", clL: "tresarroyos", visitante: "<b>Pehuajó</b>", clV: "pehuajo", gl: 0, gv: 0, goles_l: [], goles_v: [] },
         }
     ]
 };
