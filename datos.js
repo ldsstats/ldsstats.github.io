@@ -1979,7 +1979,7 @@ function generarHome() {
 
      { id: "2026-10-14", label: "MIÉ 14/10", torneos: [
             { nombre: "COPA PAÍS | CUARTOS DE FINAL", cat: "copapais", torLink: "copapais", noAutoResult: true, partidos: [
-            {l:"<b>Liga del Sur</b>", v:"Trelew", hora:"12:00", gl:null, gv:null, claseL:"ldsbb", claseV:"trelew",nota:"<b>Partido único a jugarse en Río Colorado</b>"},
+            {l:"<b>Liga del Sur</b>", v:"Trelew", hora:"12:00", gl:5, gv:3, claseL:"ldsbb", claseV:"trelew",nota:"<b>Partido único a jugarse en Río Colorado</b>"},
             ]},
             { nombre: "FUTSAL | CLAUSURA | FECHA 12", cat: "futsal", torLink: "futsal", noAutoResult: true, partidos: [
             {l:"La Esperanza", v:"La Estación", hora:"22:00", gl:null, gv:null, claseL:"laesperanza", claseV:"laestacion",nota:"<b>en cancha de Don Bosco</b>"},
@@ -19521,7 +19521,7 @@ const BD_COPA_PAIS_CUARTOS = [
         titulo: "CUARTOS DE FINAL",
         tipo: "final",
         partidos: [
-            { ronda: "Partido único", l: "Liga del Sur", v: "Trelew", fecha: "Miércoles 14 de octubre", gl: null, gv: null, goles_l: [], goles_v: [] },
+            { ronda: "Partido único", l: "<b>Liga del Sur</b>", v: "<s>Trelew</s>", fecha: "Miércoles 14 de octubre", gl: 5, gv: 3, goles_l: ["Nahuel Colmenares (2)","Santiago Llanos","Federico Pinedo","En Contra"], goles_v: [] },
             { ronda: "Partido de Ida", l: "Jujuy", v: "Catamarca", fecha: "Miércoles 30 de octubre", gl: 0, gv: 0, goles_l: [], goles_v: [], separador: true },
             { ronda: "Partido de Vuelta", l: "Catamarca", v: "Jujuy", fecha: "Miércoles 14 de octubre", gl: null, gv: null, goles_l: [], goles_v: [] },
             { ronda: "Partido de Ida", l: "<s>La Plata</s>", v: "<b>San Jorge</b>", fecha: "Miércoles 30 de octubre", gl: 1, gv: 0, goles_l: [], goles_v: [], separador: true },
