@@ -1989,7 +1989,7 @@ function generarHome() {
             {l:"Sansinena", v:"Bella Vista", hora:"20:00", gl:2, gv:3, claseL:"sansinena", claseV:"bellavista",nota:"<b>en cancha de Huracán</b>"},
             {l:"San Francisco", v:"Libertad", hora:"20:00", gl:null, gv:null, claseL:"sanfrancisco", claseV:"libertad",nota:"<b>en cancha de Libertad</b>"},
             {l:"Comercial", v:"Tiro Federal", hora:"21:00", gl:null, gv:null, claseL:"comercial", claseV:"tirofederal",nota:"<b>en cancha de Comercial</b>"},
-            {l:"Huracán", v:"Pacífico (C)", hora:"21:30", gl:null, gv:null, claseL:"huracan", claseV:"pacificoc",nota:"<b>en cancha de Huracán</b>"},
+            {l:"Huracán", v:"Pacífico (C)", hora:"21:30", gl:0, gv:1, claseL:"huracan", claseV:"pacificoc",nota:"<b>en cancha de Huracán</b>"},
             {l:"Pacífico BB", v:"Sporting", hora:"21:30", gl:null, gv:null, claseL:"pacificobb", claseV:"sporting",nota:"<b>en cancha de Libertad</b>"},
             ]},
        ]},
@@ -19005,11 +19005,11 @@ const BD_SENIOR_APERTURA = [
     { n: "Tiro Federal",      cl: "tirofederal",   pj: 9, pg: 0, pe: 3, pp: 6, gf: 16, gc: 30, pts: 3 }
 ];
 const BD_SENIOR_CLAUSURA = [
+    { n: "Pacífico (C)",  mostrar: "Pacífico (C) <b>(A)</b>", cl: "pacificoc",    pj:5, pg:4, pe:0, pp:1, gf:9, gc:7, pts:12 },
     { n: "Libertad",      cl: "libertad",     pj:4, pg:3, pe:0, pp:1, gf:7, gc:3, pts:9 },
-{ n: "Pacífico (C)",  mostrar: "Pacífico (C) <b>(A)</b>", cl: "pacificoc",    pj:4, pg:3, pe:0, pp:1, gf:8, gc:7, pts:9 },
     { n: "Bella Vista",   cl: "bellavista",   pj:5, pg:3, pe:0, pp:2, gf:11, gc:10, pts:9 },
     { n: "Pacífico BB",   cl: "pacificobb",   pj:4, pg:3, pe:0, pp:1, gf:10, gc:9, pts:9 },
-    { n: "Huracán",       cl: "huracan",      pj:4, pg:2, pe:1, pp:1, gf:11, gc:8, pts:7 },
+    { n: "Huracán",       cl: "huracan",      pj:5, pg:2, pe:1, pp:2, gf:11, gc:9, pts:7 },
     { n: "Sansinena",     cl: "sansinena",    pj:5, pg:2, pe:1, pp:2, gf:9, gc:8, pts:7 },
     { n: "San Francisco", cl: "sanfrancisco", pj:4, pg:2, pe:0, pp:2, gf:8, gc:10, pts:6 },
     { n: "Comercial",     cl: "comercial",    pj:4, pg:1, pe:0, pp:3, gf:7, gc:9, pts:3 },
@@ -19113,10 +19113,10 @@ const BD_FIXTURES_SENIOR_CLAUSURA = [
     ]},
     { fecha: 5, partidos: [
         { l: "Sansinena",   v: "Bella Vista",      gl: 2, gv: 3, goles_l:[], goles_v:["Víctor Torrero","José Luis Chaparro","Gustavo Pereyra"] },
-        { l: "Pacífico (C)",  v: "Huracán",        gl: null, gv: null },
-        { l: "Sporting",      v: "Pacífico BB",    gl: null, gv: null },
-        { l: "Tiro Federal",  v: "Comercial",      gl: null, gv: null },
-        { l: "Libertad",      v: "San Francisco",  gl: null, gv: null }
+        { l: "Pacífico (C)",  v: "Huracán",        gl: 0, gv: 1, goles_l:[], goles_v:[] },
+        { l: "Sporting",      v: "Pacífico BB",    gl: null, gv: null, goles_l:[], goles_v:[] },
+        { l: "Tiro Federal",  v: "Comercial",      gl: null, gv: null, goles_l:[], goles_v:[] },
+        { l: "Libertad",      v: "San Francisco",  gl: null, gv: null, goles_l:[], goles_v:[] }
     ]},
     { fecha: 6, partidos: [
         { l: "Huracán",   v: "Libertad",      gl: null, gv: null },
