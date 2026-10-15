@@ -545,8 +545,8 @@ const BD_FIXTURES_FUTSAL_RESERVA = [
         {l:"Dep. Futsal",     v:"Dublin",     gl:null, gv:null},
     ]},
     { fecha: 12, partidos: [
-        {l:"Comercial",    v:"Tiro Federal",     gl:null, gv:null},
-        {l:"La Esperanza",     v:"La Estación",     gl:null, gv:null},
+        {l:"Comercial",    v:"Tiro Federal",     gl:4, gv:3},
+        {l:"La Esperanza",     v:"La Estación",     gl:4, gv:1},
         {l:"Los 3 Chiflados",     v:"Pacífico BB",     gl:null, gv:null},
         {l:"Petroquímicos",          v:"Dublin",     gl:null, gv:null},
         {l:"San Francisco",       v:"Catamarca",     gl:null, gv:null},
@@ -665,8 +665,8 @@ const BD_FIXTURES_FUTSAL = [
         {l:"Dep. Futsal",     v:"Dublin",     gl:null, gv:null},
     ]},
     { fecha: 12, partidos: [
-        {l:"Comercial",    v:"Tiro Federal",     gl:null, gv:null},
-        {l:"La Esperanza",     v:"La Estación",     gl:null, gv:null},
+        {l:"Comercial",    v:"Tiro Federal",     gl:3, gv:1},
+        {l:"La Esperanza",     v:"La Estación",     gl:4, gv:6},
         {l:"Los 3 Chiflados",     v:"Pacífico BB",     gl:null, gv:null},
         {l:"Petroquímicos",          v:"Dublin",     gl:null, gv:null},
         {l:"San Francisco",       v:"Catamarca",     gl:null, gv:null},
@@ -1949,7 +1949,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 27).partidos.forEach(p
 });
 
 
-let diaSeleccionadoHome = "2026-10-14"; 
+let diaSeleccionadoHome = "2026-10-15"; 
 let mercadoPasesAbierto = false;
 
 function toggleMercadoPasesHome() {
@@ -1982,11 +1982,11 @@ function generarHome() {
             {l:"<b>Liga del Sur</b>", v:"Trelew", hora:"12:00", gl:5, gv:3, claseL:"ldsbb", claseV:"trelew",nota:"<b>Partido único a jugarse en Río Colorado</b>"},
             ]},
             { nombre: "FUTSAL | CLAUSURA | FECHA 12", cat: "futsal", torLink: "futsal", noAutoResult: true, partidos: [
-            {l:"La Esperanza", v:"La Estación", hora:"22:00", gl:null, gv:null, claseL:"laesperanza", claseV:"laestacion",nota:"<b>en cancha de Don Bosco</b>"},
-            {l:"Comercial", v:"Tiro Federal", hora:"22:00", gl:null, gv:null, claseL:"comercial", claseV:"tirofederal",nota:"<b>en cancha de Comercial</b>"},
+            {l:"La Esperanza", v:"La Estación", hora:"22:00", gl:4, gv:6, claseL:"laesperanza", claseV:"laestacion",nota:"<b>en cancha de Don Bosco</b>"},
+            {l:"Comercial", v:"Tiro Federal", hora:"22:00", gl:3, gv:1, claseL:"comercial", claseV:"tirofederal",nota:"<b>en cancha de Comercial</b>"},
             ]},
-            { nombre: "SENIOR | CLAUSURA | FECHA 5", cat: "senior", torLink: "senior", noAutoResult: true, partidos: [
-            {l:"Sansinena", v:"Bella Vista", hora:"20:00", gl:null, gv:null, claseL:"laesperanza", claseV:"laestacion",nota:"<b>en cancha de Huracán</b>"},
+            { nombre: "SENIOR | CLAUSURA | FECHA 5", cat: "seniorclausura", torLink: "seniorclausura", noAutoResult: true, partidos: [
+            {l:"Sansinena", v:"Bella Vista", hora:"20:00", gl:2, gv:3, claseL:"sansinena", claseV:"bellavista",nota:"<b>en cancha de Huracán</b>"},
             {l:"San Francisco", v:"Libertad", hora:"20:00", gl:null, gv:null, claseL:"sanfrancisco", claseV:"libertad",nota:"<b>en cancha de Libertad</b>"},
             {l:"Comercial", v:"Tiro Federal", hora:"21:00", gl:null, gv:null, claseL:"comercial", claseV:"tirofederal",nota:"<b>en cancha de Comercial</b>"},
             {l:"Huracán", v:"Pacífico (C)", hora:"21:30", gl:null, gv:null, claseL:"huracan", claseV:"pacificoc",nota:"<b>en cancha de Huracán</b>"},
@@ -2017,7 +2017,7 @@ function generarHome() {
             {l:"Olimpo", v:"Pacífico (C)", hora:"11:00", gl:null, gv:null, claseL:"olimpo", claseV:"pacificoc"},
             {l:"Dublin", v:"Pacífico BB", hora:"16:00", gl:null, gv:null, claseL:"dublin", claseV:"pacificobb"},
             {l:"Tiro Federal", v:"Sansinena", hora:"16:00", gl:null, gv:null, claseL:"tirofederal", claseV:"sansinena"},
-            {l:"Comercial", v:"Rosario PB", hora:"16:00", gl:null, gv:null, claseL:"comercial", claseV:"rosariopb"},
+            {l:"Comercial", v:"Rosario PB", hora:"16:00", gl:null, gv:null, claseL:"comercial", claseV:"rosariopb",nota:"<b>Sin visitantes</b>"},
             ]},
             { nombre: "FEDERAL A | REVÁLIDA (VILLA MITRE) | SEGUNDA RONDA | VUELTA", cat: "federala", torLink: "federala", noAutoResult: true, partidos: [
             {l:"Kimberley", v:"Dep. Rincón", hora:"15:00", gl:null, gv:null, claseL:"kimberley", claseV:"deprincon",nota:"<b>Ida: 1-0</b>"},
@@ -2034,7 +2034,7 @@ function generarHome() {
        ]},
      { id: "2026-10-18", label: "DOM 18/10", torneos: [
             { nombre: "OFICIAL | FECHA 12 | CLAUSURA", cat: "oficial", torLink: "oficial", noAutoResult: true, partidos: [
-            {l:"Sporting", v:"Libertad", hora:"16:00", gl:null, gv:null, claseL:"sporting", claseV:"libertad"},
+            {l:"Sporting", v:"Libertad", hora:"16:00", gl:null, gv:null, claseL:"sporting", claseV:"libertad",nota:"<b>Sin visitantes</b>"},
             ]},
             { nombre: "FEDERAL A | CUARTOS DE FINAL | VUELTA", cat: "federala", torLink: "federala", noAutoResult: true, partidos: [
             {l:"San Martín de Formosa", v:"<b>Olimpo</b>", hora:"15:30", gl:null, gv:null, claseL:"sanmartinfsa", claseV:"olimpo",nota:"<b>Ida: 1-1</b>"},
@@ -16350,6 +16350,8 @@ const BD_H2H = {
         { fecha: "Fecha 1 - Clausura 2026 - 01 ago 2026", torneo: "promocional", l: "Tiro Federal", v: "Comercial", gl: 4, gv: 0, goles_l: ["Agustín Restiffo","Franco Fraysse","Mariano McCoubrey","Joaquín Laborde"], goles_v: [] },
         { fecha: "Apertura 2026 - Fecha 12", torneo: "futsal", l: "Tiro Federal", v: "Comercial", gl: 6, gv: 2 },
         { fecha: "Apertura 2026 - Fecha 12", torneo: "futsalreserva", l: "Tiro Federal", v: "Comercial", gl: 2, gv: 2 },
+        { fecha: "Clausura 2026 - Fecha 12", torneo: "futsal", l: "Comercial", v: "Tiro Federal", gl: 3, gv: 1 },
+        { fecha: "Clausura 2026 - Fecha 12", torneo: "futsalreserva", l: "Comercial", v: "Tiro Federal", gl: 4, gv: 3 },
     ],
     "Alvarado|Olimpo": [
         { fecha: "Fecha 1 - Fase inicial - 22 mar 2026", torneo: "federala", l: "Olimpo", v: "Alvarado", gl: 2, gv: 0, goles_l: ["Martín Ferreyra","Diego Ramírez"], goles_v: [] },
@@ -17893,6 +17895,8 @@ const BD_H2H = {
     "La Esperanza|La Estación": [
         { fecha: "Apertura 2026 - Fecha 12", torneo: "futsal", l: "La Estación", v: "La Esperanza", gl: 6, gv: 5 },
         { fecha: "Apertura 2026 - Fecha 12", torneo: "futsalreserva", l: "La Estación", v: "La Esperanza", gl: 3, gv: 3 },
+        { fecha: "Clausura 2026 - Fecha 12", torneo: "futsal", l: "La Esperanza", v: "La Estación", gl: 4, gv: 6 },
+        { fecha: "Clausura 2026 - Fecha 12", torneo: "futsalreserva", l: "La Esperanza", v: "La Estación", gl: 4, gv: 1 },
     ],
     "Dep. Futsal|Liniers": [
         { fecha: "Apertura 2026 - Fecha 12", torneo: "futsal", l: "Liniers", v: "Dep. Futsal", gl: 3, gv: 3 },
@@ -18394,32 +18398,32 @@ function mostrarSub13Playoffs() {
 
 const BD_POS_FUTSAL = {
     principal: [
-        {n:"La Estación <b>(A)</b> <b>(C)</b>",     cl:"laestacion",    pj:11,pg:11,pe:0,pp:0,gf:48, gc:18, pts:33},
-        {n:"La Esperanza <b>(C)</b>",    cl:"laesperanza",    pj:11,pg:9,pe:1,pp:1,gf:41, gc:21, pts:28},
+        {n:"La Estación <b>(A)</b> <b>(C)</b>",     cl:"laestacion",    pj:12,pg:12,pe:0,pp:0,gf:54, gc:22, pts:36},
+        {n:"La Esperanza <b>(C)</b>",    cl:"laesperanza",    pj:12,pg:9,pe:1,pp:2,gf:45, gc:27, pts:28},
+        {n:"Comercial <b>(C)</b>",       cl:"comercial",    pj:11,pg:9,pe:0,pp:2,gf:42, gc:26, pts:27},
         {n:"Los 3 Chiflados <b>(*)</b>  <b>(C)</b>", cl:"los3chiflados",    pj:11,pg:8,pe:1,pp:2,gf:43, gc:18, pts:25},
-        {n:"Comercial <b>(C)</b>",       cl:"comercial",    pj:10,pg:8,pe:0,pp:2,gf:39, gc:25, pts:24},
-        {n:"Tiro Federal",    cl:"tirofederal",    pj:11,pg:6,pe:1,pp:4,gf:24, gc:23, pts:19},
-        {n:"Villa Mitre",     cl:"villamitre",    pj:10,pg:5,pe:2,pp:3,gf:38, gc:36, pts:17},
+        {n:"Villa Mitre <b>(C)</b>",     cl:"villamitre",    pj:11,pg:6,pe:2,pp:3,gf:39, gc:36, pts:20},
+        {n:"Tiro Federal",    cl:"tirofederal",    pj:12,pg:6,pe:1,pp:5,gf:25, gc:26, pts:19},
+        {n:"Liniers <b>(*)</b>",         cl:"liniers",    pj:12,pg:5,pe:2,pp:5,gf:28, gc:31, pts:17},
         {n:"Pacífico BB",     cl:"pacificobb",    pj:10,pg:5,pe:1,pp:4,gf:34, gc:36, pts:16},
-        {n:"Liniers <b>(*)</b>",         cl:"liniers",    pj:11,pg:4,pe:2,pp:5,gf:27, gc:31, pts:14},
         {n:"Petroquímicos",   cl:"petroquimicos",    pj:11,pg:4,pe:1,pp:6,gf:32, gc:38, pts:13},
         {n:"Dublin",          cl:"dublin",    pj:11,pg:4,pe:0,pp:7,gf:22, gc:37, pts:12},
         {n:"San Francisco",   cl:"sanfrancisco",    pj:10,pg:3,pe:0,pp:7,gf:15, gc:33, pts:9},
-        {n:"Catamarca",       cl:"catamarca",    pj:11,pg:2,pe:1,pp:8,gf:21, gc:48, pts:7},
+        {n:"Catamarca <b>(X)</b>",       cl:"catamarca",    pj:11,pg:2,pe:1,pp:8,gf:21, gc:48, pts:7},
         {n:"<s>Dep. Futsal</s> <b>(-)</b>",     cl:"depfutsal",    pj:0,pg:0,pe:0,pp:0,gf:0, gc:0, pts:0},
         {n:"<s>Huracán</s> <b>(-)</b>",         cl:"huracan",    pj:0,pg:0,pe:0,pp:0,gf:0, gc:0, pts:0}
     ],
     reserva: [
         {n:"Los 3 Chiflados <b>(A)</b>  <b>(C)</b>", cl:"los3chiflados",    pj:11,pg:11,pe:0,pp:0,gf:59, gc:15, pts:33},
-        {n:"Liniers  <b>(C)</b>",         cl:"liniers",    pj:11,pg:9,pe:0,pp:2,gf:61, gc:28, pts:27},
-        {n:"La Esperanza  <b>(C)</b>",    cl:"laesperanza",    pj:11,pg:8,pe:1,pp:2,gf:35, gc:18, pts:25},
-        {n:"La Estación  <b>(C)</b>",     cl:"laestacion",    pj:11,pg:8,pe:0,pp:3,gf:42, gc:27, pts:24},
+        {n:"Liniers  <b>(C)</b>",         cl:"liniers",    pj:12,pg:10,pe:0,pp:2,gf:62, gc:28, pts:30},
+        {n:"La Esperanza  <b>(C)</b>",    cl:"laesperanza",    pj:12,pg:9,pe:1,pp:2,gf:39, gc:19, pts:28},
+        {n:"La Estación  <b>(C)</b>",     cl:"laestacion",    pj:12,pg:8,pe:0,pp:4,gf:43, gc:31, pts:24},
         {n:"Petroquímicos  <b>(C)</b>",   cl:"petroquimicos",    pj:11,pg:7,pe:1,pp:3,gf:48, gc:32, pts:22},
+        {n:"Villa Mitre <b>(C)</b>",     cl:"villamitre",    pj:11,pg:7,pe:0,pp:4,gf:41, gc:36, pts:21},
         {n:"Dublin",          cl:"dublin",    pj:11,pg:6,pe:2,pp:3,gf:32, gc:29, pts:20},
-        {n:"Villa Mitre",     cl:"villamitre",    pj:10,pg:6,pe:0,pp:4,gf:40, gc:36, pts:18},
+        {n:"Comercial",       cl:"comercial",    pj:11,pg:4,pe:2,pp:5,gf:25, gc:39, pts:14},
         {n:"Catamarca",       cl:"catamarca",    pj:11,pg:4,pe:2,pp:5,gf:28, gc:54, pts:14},
-        {n:"Tiro Federal",    cl:"tirofederal",    pj:11,pg:3,pe:2,pp:6,gf:18, gc:25, pts:11},
-        {n:"Comercial",       cl:"comercial",    pj:10,pg:3,pe:2,pp:5,gf:21, gc:36, pts:11},
+        {n:"Tiro Federal",    cl:"tirofederal",    pj:12,pg:3,pe:2,pp:7,gf:21, gc:29, pts:11},
         {n:"Pacífico BB",     cl:"pacificobb",    pj:10,pg:3,pe:0,pp:7,gf:16, gc:38, pts:9},
         {n:"San Francisco",   cl:"sanfrancisco",    pj:10,pg:2,pe:0,pp:8,gf:19, gc:56, pts:6},
         {n:"<s>Dep. Futsal</s> <b>(-)</b>",     cl:"depfutsal",    pj:0,pg:0,pe:0,pp:0,gf:0, gc:0, pts:0},
@@ -18555,7 +18559,7 @@ if ((p.goles_l && p.goles_l.length) || (p.goles_v && p.goles_v.length)) {
     });
     html += `</tbody></table>`;
     if (modo === 'principal') {
-html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'><b>📌 Puntos en juego:</b> <b>6</b> tras terminar la fecha 11<br><b>(A)</b> Campeón del Apertura<br><b>(*)</b> Se les dio por perdido el partido a ambos (1-0) por incidentes tras el juego<br><b>(-)</b> Se bajó de la competencia para el Clausura</div>`;
+html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'><b>📌 Puntos en juego:</b> <b>6</b> tras terminar la fecha 11<br><b>(A)</b> Campeón del Apertura<br><b>(X)</b> Eliminado<br><b>(*)</b> Se les dio por perdido el partido a ambos (1-0) por incidentes tras el juego<br><b>(-)</b> Se bajó de la competencia para el Clausura</div>`;
     } else if (modo === 'reserva') {
         html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'><b>📌 Puntos en juego:</b> <b>6</b> tras terminar la fecha 11<br><b>(A)</b> Campeón del Apertura<br><b>(-)</b> Se bajó de la competencia para el Clausura</div>`;
     }
@@ -19003,10 +19007,10 @@ const BD_SENIOR_APERTURA = [
 const BD_SENIOR_CLAUSURA = [
     { n: "Libertad",      cl: "libertad",     pj:4, pg:3, pe:0, pp:1, gf:7, gc:3, pts:9 },
 { n: "Pacífico (C)",  mostrar: "Pacífico (C) <b>(A)</b>", cl: "pacificoc",    pj:4, pg:3, pe:0, pp:1, gf:8, gc:7, pts:9 },
+    { n: "Bella Vista",   cl: "bellavista",   pj:5, pg:3, pe:0, pp:2, gf:11, gc:10, pts:9 },
     { n: "Pacífico BB",   cl: "pacificobb",   pj:4, pg:3, pe:0, pp:1, gf:10, gc:9, pts:9 },
     { n: "Huracán",       cl: "huracan",      pj:4, pg:2, pe:1, pp:1, gf:11, gc:8, pts:7 },
-    { n: "Sansinena",     cl: "sansinena",    pj:4, pg:2, pe:1, pp:1, gf:7, gc:5, pts:7 },
-    { n: "Bella Vista",   cl: "bellavista",   pj:4, pg:2, pe:0, pp:2, gf:8, gc:8, pts:6 },
+    { n: "Sansinena",     cl: "sansinena",    pj:5, pg:2, pe:1, pp:2, gf:9, gc:8, pts:7 },
     { n: "San Francisco", cl: "sanfrancisco", pj:4, pg:2, pe:0, pp:2, gf:8, gc:10, pts:6 },
     { n: "Comercial",     cl: "comercial",    pj:4, pg:1, pe:0, pp:3, gf:7, gc:9, pts:3 },
     { n: "Tiro Federal",  cl: "tirofederal",  pj:4, pg:0, pe:2, pp:2, gf:8, gc:11, pts:2 },
@@ -19108,7 +19112,7 @@ const BD_FIXTURES_SENIOR_CLAUSURA = [
         { l: "Pacífico (C)",      v: "Libertad",   gl: 0, gv: 3, goles_l:[], goles_v:["Mariano Orsi (3)"] },
     ]},
     { fecha: 5, partidos: [
-        { l: "Bella Vista",   v: "Sansinena",      gl: null, gv: null },
+        { l: "Sansinena",   v: "Bella Vista",      gl: 2, gv: 3, goles_l:[], goles_v:["Víctor Torrero","José Luis Chaparro","Gustavo Pereyra"] },
         { l: "Pacífico (C)",  v: "Huracán",        gl: null, gv: null },
         { l: "Sporting",      v: "Pacífico BB",    gl: null, gv: null },
         { l: "Tiro Federal",  v: "Comercial",      gl: null, gv: null },
@@ -19249,6 +19253,7 @@ const BD_GOLEADORES_SENIOR = [
     { nombre: "Juan Pérez", equipo: "San Francisco", goles: 3 },
     { nombre: "Marcos Pierucci", equipo: "Sansinena", goles: 3 },
     { nombre: "Gabriel Bernengo", equipo: "Sporting", goles: 3 },
+    { nombre: "Víctor Torrero", equipo: "Bella Vista", goles: 2 },
     { nombre: "Héctor Soto Sassi", equipo: "Huracán", goles: 2 },
     { nombre: "Sebastián Faillá", equipo: "Huracán", goles: 2 },
     { nombre: "Luis Khin", equipo: "Libertad", goles: 2 },
@@ -19270,7 +19275,8 @@ const BD_GOLEADORES_SENIOR = [
     { nombre: "Gustavo Pereyra", equipo: "Bella Vista", goles: 1 },
     { nombre: "Luciano Álvarez", equipo: "Bella Vista", goles: 1 },
     { nombre: "Fernando Lucas", equipo: "Bella Vista", goles: 1 },
-    { nombre: "Víctor Torrero", equipo: "Bella Vista", goles: 1 },
+    { nombre: "Gustavo Pereyra", equipo: "Bella Vista", goles: 1 },
+    { nombre: "José Luis Chaparro", equipo: "Bella Vista", goles: 1 },
     { nombre: "Jonathan Bravo de Laguna", equipo: "Comercial", goles: 1 },
     { nombre: "Santiago Ayala", equipo: "Comercial", goles: 1 },
     { nombre: "Cristian Rodríguez", equipo: "Comercial", goles: 1 },
