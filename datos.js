@@ -387,7 +387,7 @@ const idaSegundaFemenino = [
     { fecha: 24, libre: "San Francisco", partidos: [{l:"Sansinena", v:"Petroquímicos", gl:0, gv:5, dia:"Sáb 12/09", hora:"15:30", goles_l:[], goles_v:["Renata Segovia","Renata Segovia","Paola Vallejos","Mia Carranza","Morena Varela"]}, {l:"Liniers", v:"Olimpo", gl:5, gv:0, dia:"Sáb 12/09", hora:"15:30", goles_l:["Victoria Sánchez","Victoria Sánchez","Liz Marcolini","Giuliana Morano","Paulina Acevedo"], goles_v:[]}, {l:"Estrella de Oro", v:"Huracán", gl:0, gv:1, dia:"Dom 13/09", hora:"15:30", goles_l:[], goles_v:["Keila Iglesias"]}, {l:"Rosario PB", v:"Pacífico (C)", gl:9, gv:0, dia:"Dom 13/09", hora:"15:30", goles_l:["Ayelén Zeballos","Ayelén Zeballos","Ayelén Zeballos","Celeste Medina","Celeste Medina","Juliana Ruiz","Carolina Díaz","Magdalena Nievas","Julieta Díaz"], goles_v:[]}] },
     { fecha: 25, libre: "Rosario PB", partidos: [{l:"Liniers", v:"San Francisco", gl:4, gv:0, dia:"Sáb 19/09", hora:"15:30", goles_l:["Paulina Acevedo","Paulina Acevedo","Paulina Acevedo","Agustina Borda"], goles_v:[]}, {l:"Olimpo", v:"Huracán", gl:3, gv:3, dia:"Dom 20/09", hora:"15:30", goles_l:["Paloma Dambolena","Paloma Dambolena","Jazmín Navarro"], goles_v:["Keila Iglesias","Pía Córdoba","Martina Dávalos"]}, {l:"Pacífico (C)", v:"Sansinena", gl:0, gv:2, dia:"Miér 23/09", hora:"15:30", goles_l:[], goles_v:["Marisol Huenupi","Daniela Abello"]}, {l:"Petroquímicos", v:"Estrella de Oro", gl:1, gv:0, dia:"Miér 23/09", hora:"15:30", goles_l:["Nicole Montenegro"], goles_v:[]}] },
     { fecha: 26, libre: "Sansinena", partidos: [{l:"Olimpo", v:"San Francisco", gl:2, gv:2, dia:"Sáb 26/09", hora:"15:30", goles_l:["Sofía Cáceres","Sofía Cáceres"], goles_v:["Morena Barzola","Ariana Adassus"]}, {l:"Rosario PB", v:"Liniers", gl:1, gv:3, dia:"Sáb  26/09", hora:"15:30", goles_l:["Celeste Medina"], goles_v:["Iara Schwab","Paz Cutrín","Paz Cutrín"]}, {l:"Huracán", v:"Petroquímicos", gl:0, gv:5, dia:"Sáb  26/09", hora:"15:30", goles_l:[], goles_v:["Nicole Montenegro","Nicole Montenegro","Nicole Montenegro","Morena Varela","Renata Segovia"]}, {l:"Estrella de Oro", v:"Pacífico (C)", gl:2, gv:0, dia:"Dom 27/09", hora:"15:30", goles_l:["Mariana González","Natalia Ríos"], goles_v:[]}] },
-    { fecha: 27, libre: "Estrella de Oro", partidos: [{l:"San Francisco", v:"Rosario PB", gl:6, gv:2, dia:"Dom 04/10", hora:"15:30", goles_l:["Clara Iturrioz","Clara Iturrioz","Clara Iturrioz","Florencia Sorbellini","Florencia Sorbellini","Luciana Sosa"], goles_v:["María Arroyo","María Arroyo"]}, {l:"Pacífico (C)", v:"Huracán", gl:0, gv:5, dia:"Dom 04/10", hora:"15:30", goles_l:[], goles_v:["Micaela Oyarzún","Micaela Oyarzún","Micaela Oyarzún","Keila Iglesias","Keila Iglesias"]}, {l:"Petroquímicos", v:"Olimpo", gl:1, gv:0, dia:"Dom 04/10", hora:"15:30", goles_l:["Nicole Montenegro"], goles_v:[]}, {l:"Liniers", v:"Sansinena", gl:null, gv:null, dia:"Jue 08/10", hora:"20:30", goles_l:[], goles_v:[]}] },
+    { fecha: 27, libre: "Estrella de Oro", partidos: [{l:"San Francisco", v:"Rosario PB", gl:6, gv:2, dia:"Dom 04/10", hora:"15:30", goles_l:["Clara Iturrioz","Clara Iturrioz","Clara Iturrioz","Florencia Sorbellini","Florencia Sorbellini","Luciana Sosa"], goles_v:["María Arroyo","María Arroyo"]}, {l:"Pacífico (C)", v:"Huracán", gl:0, gv:5, dia:"Dom 04/10", hora:"15:30", goles_l:[], goles_v:["Micaela Oyarzún","Micaela Oyarzún","Micaela Oyarzún","Keila Iglesias","Keila Iglesias"]}, {l:"Petroquímicos", v:"Olimpo", gl:1, gv:0, dia:"Dom 04/10", hora:"15:30", goles_l:["Nicole Montenegro"], goles_v:[]}, {l:"Liniers", v:"Sansinena", gl:7, gv:1, dia:"Jue 08/10", hora:"20:30", goles_l:[], goles_v:[]}] },
 ];
 const BD_COPA_ARGENTINA_2026 = [
     { ronda: "32vos de Final", partidos: [
@@ -1949,7 +1949,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 27).partidos.forEach(p
 });
 
 
-let diaSeleccionadoHome = "2026-10-15"; 
+let diaSeleccionadoHome = "2026-10-16"; 
 let mercadoPasesAbierto = false;
 
 function toggleMercadoPasesHome() {
@@ -1994,11 +1994,11 @@ function generarHome() {
             ]},
        ]},
      { id: "2026-10-15", label: "JUE 15/10", torneos: [
-            { nombre: "2° FEMENINO | ÚLTIMA FECHA | REPROGRAMADO", cat: "sub15fem", torLink: "sub15fem", noAutoResult: true, partidos: [
-            {l:"Liniers", v:"Sansinena", hora:"20:30", gl:null, gv:null, claseL:"liniers", claseV:"sansinena"},
+            { nombre: "2° FEMENINO | ÚLTIMA FECHA | REPROGRAMADO", cat: "segundafemenino", torLink: "segundafemenino", noAutoResult: true, partidos: [
+            {l:"Liniers", v:"Sansinena", hora:"20:30", gl:7, gv:1, claseL:"liniers", claseV:"sansinena"},
             ]},
             { nombre: "COPA PAÍS | CUARTOS DE FINAL", cat: "copapais", torLink: "copapais", noAutoResult: true, partidos: [
-            {l:"Catamarca", v:"Jujuy", hora:"16:00", gl:null, gv:null, claseL:"catamarcapais", claseV:"jujuy",nota:"<b>Ida: 0-0</b>"},
+            {l:"Catamarca", v:"Jujuy", hora:"16:00", gl:2, gv:1, claseL:"catamarcapais", claseV:"jujuy",nota:"<b>Ida: 0-0</b>"},
             ]},
        ]},
      { id: "2026-10-16", label: "VIÉ 16/10", torneos: [
@@ -16301,6 +16301,7 @@ const BD_H2H = {
         { fecha: "Torneo 2026 - Fecha 2", torneo: "sub15fem", l: "Villa Mitre", v: "Liniers", gl: 0, gv: 5 },
         { fecha: "Torneo 2026 - Fecha 13", torneo: "sub15fem", l: "Liniers", v: "Villa Mitre", gl: 5, gv: 0 },
         { fecha: "Fecha 1 - Clausura 2026 - 02 ago 2026", torneo: "oficial", l: "Liniers", v: "Villa Mitre", gl: 6, gv: 1, goles_l: ["Valentín Bertoni (2)","Ramiro Ullmann (2)","Enzo Chamorro","Nicolás Malerba"], goles_v: ["Ayrton Matélica"] },
+        { fecha: "Fecha 1 - Clausura 2026", torneo: "reserva_oficial", l: "Villa Mitre", v: "Liniers", gl: 0, gv: 4 },
         { fecha: "Apertura 2026 - Fecha 10", torneo: "futsal", l: "Villa Mitre", v: "Liniers", gl: 6, gv: 4 },
         { fecha: "Apertura 2026 - Fecha 10", torneo: "futsalreserva", l: "Villa Mitre", v: "Liniers", gl: 2, gv: 2 },
         { fecha: "Fecha 8 - Clausura 2026 - 18 ago", torneo: "oficial", l: "Villa Mitre", v: "Liniers", gl: 1, gv: 0, goles_l: ["Julián Monteverde"], goles_v: [] },
@@ -17394,6 +17395,7 @@ const BD_H2H = {
         { fecha: "Fecha 9 - Torneo 2026", torneo: "reserva_segundafemenino", l: "Sansinena", v: "Liniers", gl: 0, gv: 11 },
         { fecha: "Fecha 18 - Torneo 2026 - 02 ago", torneo: "segundafemenino", l: "Liniers", v: "Sansinena", gl: 7, gv: 1, goles_l: ["Paulina Acevedo (4)","Agustina Borda","Paz Cutrín","Daniela Lara"], goles_v: ["Stephanie Arriagada"] },
         { fecha: "Fecha 18 - Torneo 2026", torneo: "reserva_segundafemenino", l: "Liniers", v: "Sansinena", gl: 10, gv: 0 },
+        { fecha: "Fecha 27 - Torneo 2026 - 15 oct", torneo: "segundafemenino", l: "Liniers", v: "Sansinena", gl: 7, gv: 1, goles_l: [], goles_v: [] }
     ],
     "Juventud Antoniana|Olimpo": [
         { fecha: "Fecha 1 - Nonagonal - 02 ago 2026", torneo: "federala", l: "Olimpo", v: "Juventud Antoniana", gl: 0, gv: 0, goles_l: [], goles_v: [] },
@@ -18030,13 +18032,13 @@ function generarReserva(cat) {
     const BD_RESERVA_POS = {
         'oficial':    [
                        {n:"Bella Vista <b>(C)</b>",   cl:"bellavista",   pj:11, pg:7, pe:2, pp:2, gf:20, gc:14, pts:23},
-                       {n:"Villa Mitre",   cl:"villamitre",   pj:10, pg:7, pe:2, pp:1, gf:24, gc:13, pts:23},
+                       {n:"Villa Mitre <b>(C)</b>",   cl:"villamitre",   pj:10, pg:7, pe:2, pp:1, gf:24, gc:13, pts:23},
                        {n:"La Armonía",    cl:"laarmonia",    pj:10, pg:5, pe:3, pp:2, gf:19, gc:14, pts:18},
                        {n:"Sporting <b>(A)</b>",      cl:"sporting",     pj:10, pg:5, pe:2, pp:3, gf:13, gc:14, pts:17},
                        {n:"Liniers",       cl:"liniers",      pj:11, pg:4, pe:2, pp:5, gf:13, gc:11, pts:14},
                        {n:"Libertad <b>(X)</b>",      cl:"libertad",     pj:11, pg:2, pe:2, pp:7, gf:15, gc:18, pts:8},
-                       {n:"San Francisco", cl:"sanfrancisco", pj:9, pg:2, pe:2, pp:5, gf:14, gc:16, pts:8},
-                       {n:"Huracán",       cl:"huracan",      pj:11, pg:1, pe:3, pp:7, gf:14, gc:28, pts:6},],
+                       {n:"San Francisco", cl:"sanfrancisco", pj:10, pg:2, pe:2, pp:6, gf:14, gc:20, pts:8},
+                       {n:"Huracán <b>(X)</b>",       cl:"huracan",      pj:11, pg:1, pe:3, pp:7, gf:14, gc:28, pts:6},],
         'promocional':[
                        {n:"Sansinena",           cl:"sansinena",        pj:10, pg:6, pe:2, pp:2, gf:21, gc:11, pts:20},
                        {n:"Rosario PB",          cl:"rosariopb",        pj:11, pg:6, pe:2, pp:3, gf:18, gc:15, pts:20},
@@ -18044,7 +18046,7 @@ function generarReserva(cat) {
                        {n:"Tiro Federal",        cl:"tirofederal",      pj:9, pg:5, pe:2, pp:2, gf:24, gc:7, pts:17},
                        {n:"Pacífico BB",         cl:"pacificobb",       pj:11, pg:5, pe:1, pp:5, gf:20, gc:17, pts:16},
                        {n:"Dublin",              cl:"dublin",           pj:10, pg:3, pe:3, pp:4, gf:12, gc:17, pts:12},
-                       {n:"Comercial <b>(X)</b>",           cl:"comercial",        pj:9, pg:1, pe:2, pp:6, gf:9, gc:15, pts:5},
+                       {n:"Comercial",           cl:"comercial",        pj:9, pg:1, pe:2, pp:6, gf:9, gc:15, pts:5},
                        {n:"Pacífico (C) <b>(X)</b>", cl:"pacificocabildo",  pj:10, pg:1, pe:1, pp:8, gf:13, gc:39, pts:4},],
         'segundafemenino': [
             {n:"Liniers <b>(C)</b>",             cl:"liniers",         pj:18, pg:16, pe:2, pp:0, gf:66, gc:14, pts:50},
@@ -19561,8 +19563,8 @@ const BD_COPA_PAIS_CUARTOS = [
         tipo: "final",
         partidos: [
             { ronda: "Partido único", l: "<b>Liga del Sur</b>", v: "<s>Trelew</s>", fecha: "Miércoles 14 de octubre", gl: 5, gv: 3, goles_l: ["Nahuel Colmenares (2)","Santiago Llanos","Federico Pinedo","En Contra"], goles_v: [] },
-            { ronda: "Partido de Ida", l: "Jujuy", v: "Catamarca", fecha: "Miércoles 30 de octubre", gl: 0, gv: 0, goles_l: [], goles_v: [], separador: true },
-            { ronda: "Partido de Vuelta", l: "Catamarca", v: "Jujuy", fecha: "Miércoles 14 de octubre", gl: null, gv: null, goles_l: [], goles_v: [] },
+            { ronda: "Partido de Ida", l: "<s>Jujuy</s>", v: "<b>Catamarca</b>", fecha: "Miércoles 30 de octubre", gl: 0, gv: 0, goles_l: [], goles_v: [], separador: true },
+            { ronda: "Partido de Vuelta", l: "<b>Catamarca</b>", v: "<s>Jujuy</s>", fecha: "Miércoles 14 de octubre", gl: 2, gv: 1, goles_l: [], goles_v: [] },
             { ronda: "Partido de Ida", l: "<s>La Plata</s>", v: "<b>San Jorge</b>", fecha: "Miércoles 30 de octubre", gl: 1, gv: 0, goles_l: [], goles_v: [], separador: true },
             { ronda: "Partido de Vuelta", l: "<b>San Jorge</b>", v: "<s>La Plata</s>", fecha: "Jueves 08 de octubre", gl: 2, gv: 1, goles_l: [], goles_v: [] },
         ]
@@ -22884,13 +22886,13 @@ const BD_POSICIONES = {
     },
     segundafemenino: {
         torneo2026: [
-            { nombre: "Liniers <b>(C)</b>",             clase: "liniers",         pj:23, pg:21, pe:2, pp:0, gf:94, gc:12, pts:65 },
+            { nombre: "Liniers <b>(C)</b>",             clase: "liniers",         pj:24, pg:22, pe:2, pp:0, gf:101, gc:13, pts:68 },
             { nombre: "San Francisco <b>(C)</b>",       clase: "sanfrancisco",    pj:24, pg:17, pe:3, pp:4, gf:90, gc:28, pts:54 },
             { nombre: "Petroquímicos <b>(C)</b>",       clase: "petroquimicos",   pj:24, pg:17, pe:3, pp:4, gf:56, gc:14, pts:54 },
             { nombre: "Rosario PB <b>(C)</b>",          clase: "rosariopb",       pj:24, pg:14, pe:3, pp:7, gf:95, gc:33, pts:45 },
             { nombre: "Estrella de Oro <b>(C)</b>",     clase: "estrellaoro",     pj:24, pg:10, pe:3, pp:11, gf:36, gc:42, pts:33 },
             { nombre: "Huracán <b>(C)</b>",             clase: "huracan",         pj:24, pg:6, pe:4, pp:14, gf:29, gc:92, pts:22 },
-            { nombre: "Sansinena <b>(X)</b>",           clase: "sansinena",       pj:23, pg:4, pe:5, pp:14, gf:21, gc:59, pts:17 },
+            { nombre: "Sansinena <b>(X)</b>",           clase: "sansinena",       pj:24, pg:4, pe:5, pp:15, gf:22, gc:66, pts:17 },
             { nombre: "Olimpo <b>(X)</b>",              clase: "olimpo",          pj:24, pg:3, pe:6, pp:15, gf:24, gc:69, pts:15 },
             { nombre: "Pacífico (C) <b>(X)</b>", clase: "pacificocabildo", pj:24, pg:0, pe:1, pp:23, gf:8, gc:103, pts:1 },
         ]
