@@ -387,7 +387,7 @@ const idaSegundaFemenino = [
     { fecha: 24, libre: "San Francisco", partidos: [{l:"Sansinena", v:"Petroquímicos", gl:0, gv:5, dia:"Sáb 12/09", hora:"15:30", goles_l:[], goles_v:["Renata Segovia","Renata Segovia","Paola Vallejos","Mia Carranza","Morena Varela"]}, {l:"Liniers", v:"Olimpo", gl:5, gv:0, dia:"Sáb 12/09", hora:"15:30", goles_l:["Victoria Sánchez","Victoria Sánchez","Liz Marcolini","Giuliana Morano","Paulina Acevedo"], goles_v:[]}, {l:"Estrella de Oro", v:"Huracán", gl:0, gv:1, dia:"Dom 13/09", hora:"15:30", goles_l:[], goles_v:["Keila Iglesias"]}, {l:"Rosario PB", v:"Pacífico (C)", gl:9, gv:0, dia:"Dom 13/09", hora:"15:30", goles_l:["Ayelén Zeballos","Ayelén Zeballos","Ayelén Zeballos","Celeste Medina","Celeste Medina","Juliana Ruiz","Carolina Díaz","Magdalena Nievas","Julieta Díaz"], goles_v:[]}] },
     { fecha: 25, libre: "Rosario PB", partidos: [{l:"Liniers", v:"San Francisco", gl:4, gv:0, dia:"Sáb 19/09", hora:"15:30", goles_l:["Paulina Acevedo","Paulina Acevedo","Paulina Acevedo","Agustina Borda"], goles_v:[]}, {l:"Olimpo", v:"Huracán", gl:3, gv:3, dia:"Dom 20/09", hora:"15:30", goles_l:["Paloma Dambolena","Paloma Dambolena","Jazmín Navarro"], goles_v:["Keila Iglesias","Pía Córdoba","Martina Dávalos"]}, {l:"Pacífico (C)", v:"Sansinena", gl:0, gv:2, dia:"Miér 23/09", hora:"15:30", goles_l:[], goles_v:["Marisol Huenupi","Daniela Abello"]}, {l:"Petroquímicos", v:"Estrella de Oro", gl:1, gv:0, dia:"Miér 23/09", hora:"15:30", goles_l:["Nicole Montenegro"], goles_v:[]}] },
     { fecha: 26, libre: "Sansinena", partidos: [{l:"Olimpo", v:"San Francisco", gl:2, gv:2, dia:"Sáb 26/09", hora:"15:30", goles_l:["Sofía Cáceres","Sofía Cáceres"], goles_v:["Morena Barzola","Ariana Adassus"]}, {l:"Rosario PB", v:"Liniers", gl:1, gv:3, dia:"Sáb  26/09", hora:"15:30", goles_l:["Celeste Medina"], goles_v:["Iara Schwab","Paz Cutrín","Paz Cutrín"]}, {l:"Huracán", v:"Petroquímicos", gl:0, gv:5, dia:"Sáb  26/09", hora:"15:30", goles_l:[], goles_v:["Nicole Montenegro","Nicole Montenegro","Nicole Montenegro","Morena Varela","Renata Segovia"]}, {l:"Estrella de Oro", v:"Pacífico (C)", gl:2, gv:0, dia:"Dom 27/09", hora:"15:30", goles_l:["Mariana González","Natalia Ríos"], goles_v:[]}] },
-    { fecha: 27, libre: "Estrella de Oro", partidos: [{l:"San Francisco", v:"Rosario PB", gl:6, gv:2, dia:"Dom 04/10", hora:"15:30", goles_l:["Clara Iturrioz","Clara Iturrioz","Clara Iturrioz","Florencia Sorbellini","Florencia Sorbellini","Luciana Sosa"], goles_v:["María Arroyo","María Arroyo"]}, {l:"Pacífico (C)", v:"Huracán", gl:0, gv:5, dia:"Dom 04/10", hora:"15:30", goles_l:[], goles_v:["Micaela Oyarzún","Micaela Oyarzún","Micaela Oyarzún","Keila Iglesias","Keila Iglesias"]}, {l:"Petroquímicos", v:"Olimpo", gl:1, gv:0, dia:"Dom 04/10", hora:"15:30", goles_l:["Nicole Montenegro"], goles_v:[]}, {l:"Liniers", v:"Sansinena", gl:7, gv:1, dia:"Jue 08/10", hora:"20:30", goles_l:[], goles_v:[]}] },
+    { fecha: 27, libre: "Estrella de Oro", partidos: [{l:"San Francisco", v:"Rosario PB", gl:6, gv:2, dia:"Dom 04/10", hora:"15:30", goles_l:["Clara Iturrioz","Clara Iturrioz","Clara Iturrioz","Florencia Sorbellini","Florencia Sorbellini","Luciana Sosa"], goles_v:["María Arroyo","María Arroyo"]}, {l:"Pacífico (C)", v:"Huracán", gl:0, gv:5, dia:"Dom 04/10", hora:"15:30", goles_l:[], goles_v:["Micaela Oyarzún","Micaela Oyarzún","Micaela Oyarzún","Keila Iglesias","Keila Iglesias"]}, {l:"Petroquímicos", v:"Olimpo", gl:1, gv:0, dia:"Dom 04/10", hora:"15:30", goles_l:["Nicole Montenegro"], goles_v:[]}, {l:"Liniers", v:"Sansinena", gl:7, gv:1, dia:"Jue 08/10", hora:"20:30", goles_l:["Paz Cutrín","Paz Cutrín","Paz Cutrín","Lola Podestá","Lola Podestá","Clara Zoilo","Paulina Acevedo"], goles_v:["María Sol Miranda"]}] },
 ];
 const BD_COPA_ARGENTINA_2026 = [
     { ronda: "32vos de Final", partidos: [
@@ -1629,10 +1629,10 @@ const idaFemeninoClausura = [
         { l: "Libertad",              v: "Villa Mitre",          gl: 0, gv: 6, dia:"Lun 12/10", hora:"16:00", goles_l:[], goles_v:["Sol Menéndez Perrone (3)","Dana Ramos (2)","Jessica Mella"] }
     ]},
     { fecha: 13, partidos: [
-        { l: "Tiro Federal",          v: "Libertad",             gl: null, gv: null },
-        { l: "Villa Mitre",           v: "Bella Vista",          gl: null, gv: null },
-        { l: "Municipales",           v: "Empleados de Comercio",gl: null, gv: null },
-        { l: "Sporting",              v: "La Armonía",           gl: null, gv: null }
+        { l: "Villa Mitre",           v: "Bella Vista",          gl: null, gv: null, dia:"Sáb 17/10", hora:"16:00", goles_l:[], goles_v:[] },
+        { l: "Municipales",           v: "Empleados de Comercio",gl: null, gv: null, dia:"Sáb 17/10", hora:"16:00", goles_l:[], goles_v:[] },
+        { l: "Sporting",              v: "La Armonía",           gl: null, gv: null, dia:"Sáb 17/10", hora:"16:00", goles_l:[], goles_v:[] },
+        { l: "Tiro Federal",          v: "Libertad",             gl: null, gv: null, dia:"Sáb 17/10", hora:"18:00", goles_l:[], goles_v:[] },
     ]},
     { fecha: 14, partidos: [
         { l: "Empleados de Comercio", v: "Villa Mitre",          gl: null, gv: null },
@@ -1987,10 +1987,10 @@ function generarHome() {
             ]},
             { nombre: "SENIOR | CLAUSURA | FECHA 5", cat: "seniorclausura", torLink: "seniorclausura", noAutoResult: true, partidos: [
             {l:"Sansinena", v:"Bella Vista", hora:"20:00", gl:2, gv:3, claseL:"sansinena", claseV:"bellavista",nota:"<b>en cancha de Huracán</b>"},
-            {l:"San Francisco", v:"Libertad", hora:"20:00", gl:null, gv:null, claseL:"sanfrancisco", claseV:"libertad",nota:"<b>en cancha de Libertad</b>"},
-            {l:"Comercial", v:"Tiro Federal", hora:"21:00", gl:null, gv:null, claseL:"comercial", claseV:"tirofederal",nota:"<b>en cancha de Comercial</b>"},
+            {l:"San Francisco", v:"Libertad", hora:"20:00", gl:0, gv:4, claseL:"sanfrancisco", claseV:"libertad",nota:"<b>en cancha de Libertad</b>"},
+            {l:"Comercial", v:"Tiro Federal", hora:"21:00", gl:2, gv:0, claseL:"comercial", claseV:"tirofederal",nota:"<b>en cancha de Comercial</b>"},
             {l:"Huracán", v:"Pacífico (C)", hora:"21:30", gl:0, gv:1, claseL:"huracan", claseV:"pacificoc",nota:"<b>en cancha de Huracán</b>"},
-            {l:"Pacífico BB", v:"Sporting", hora:"21:30", gl:null, gv:null, claseL:"pacificobb", claseV:"sporting",nota:"<b>en cancha de Libertad</b>"},
+            {l:"Pacífico BB", v:"Sporting", hora:"21:30", gl:2, gv:3, claseL:"pacificobb", claseV:"sporting",nota:"<b>en cancha de Libertad</b>"},
             ]},
        ]},
      { id: "2026-10-15", label: "JUE 15/10", torneos: [
@@ -2018,6 +2018,16 @@ function generarHome() {
             {l:"Dublin", v:"Pacífico BB", hora:"16:00", gl:null, gv:null, claseL:"dublin", claseV:"pacificobb"},
             {l:"Tiro Federal", v:"Sansinena", hora:"16:00", gl:null, gv:null, claseL:"tirofederal", claseV:"sansinena"},
             {l:"Comercial", v:"Rosario PB", hora:"16:00", gl:null, gv:null, claseL:"comercial", claseV:"rosariopb",nota:"<b>Sin visitantes</b>"},
+            ]},
+            { nombre: "1° FEMENINO | FECHA 13 | CLAUSURA", cat: "femenino", torLink: "femenino", noAutoResult: true, partidos: [
+            {l:"Sporting", v:"La Armonía", hora:"16:00", gl:null, gv:null, claseL:"sporting", claseV:"laarmonia"},
+            {l:"Municipales", v:"Empleados de Comercio", hora:"16:00", gl:null, gv:null, claseL:"municipales", claseV:"empleados"},
+            {l:"Villa Mitre", v:"Bella Vista", hora:"16:00", gl:null, gv:null, claseL:"villamitre", claseV:"bellavista"},
+            {l:"Tiro Federal", v:"Libertad", hora:"18:00", gl:null, gv:null, claseL:"tirofederal", claseV:"libertad"},
+            ]},
+            { nombre: "2° FEMENINO | CUARTOS DE FINAL | VUELTA", cat: "segundafemenino", torLink: "segundafemenino", noAutoResult: true, partidos: [
+            {l:"Rosario PB", v:"Estrella de Oro", hora:"16:00", gl:null, gv:null, claseL:"rosariopb", claseV:"estrellaoro",nota:"<b>Ida: 5-1</b>"},
+            {l:"Petroquímicos", v:"Huracán", hora:"20:00", gl:null, gv:null, claseL:"petroquimicos", claseV:"huracan",nota:"<b>Ida: 3-0</b>"},
             ]},
             { nombre: "FEDERAL A | REVÁLIDA (VILLA MITRE) | SEGUNDA RONDA | VUELTA", cat: "federala", torLink: "federala", noAutoResult: true, partidos: [
             {l:"Kimberley", v:"Dep. Rincón", hora:"15:00", gl:null, gv:null, claseL:"kimberley", claseV:"deprincon",nota:"<b>Ida: 1-0</b>"},
@@ -16347,6 +16357,7 @@ const BD_H2H = {
         { fecha: "Final - Apertura 2026 - 11 jul 2026", torneo: "promocional", l: "Comercial", v: "Tiro Federal", gl: 0, gv: 0, pen_l:3, pen_v:0 },
         { fecha: "Semifinales - Apertura 2026", torneo: "reserva_promocional", l: "Tiro Federal", v: "Comercial", gl: 2, gv: 0 },
         { fecha: "Apertura 2026 - Fecha 5", torneo: "senior", l: "Tiro Federal", v: "Comercial", gl: 2, gv: 2, goles_l: ["Juan José Dietz","Mauricio Oldani"], goles_v: ["Luciano Bellini (e/c)","Jonathan Bravo de Laguna"] },
+        { fecha: "Clausura 2026 - Fecha 5", torneo: "senior", l: "Tiro Federal", v: "Comercial", gl: 0, gv: 2, goles_l: [], goles_v: ["Sebastián Aristi","Leandro Piérez"] },
         { fecha: "Apertura 2026 - Octavos de Final", torneo: "senior", l: "Comercial", v: "Tiro Federal", gl: 2, gv: 0, goles_l: ["Cristian Rodríguez","Maximiliano Casas"], goles_v: [] },
         { fecha: "Fecha 1 - Clausura 2026 - 01 ago 2026", torneo: "promocional", l: "Tiro Federal", v: "Comercial", gl: 4, gv: 0, goles_l: ["Agustín Restiffo","Franco Fraysse","Mariano McCoubrey","Joaquín Laborde"], goles_v: [] },
         { fecha: "Apertura 2026 - Fecha 12", torneo: "futsal", l: "Tiro Federal", v: "Comercial", gl: 6, gv: 2 },
@@ -16541,6 +16552,7 @@ const BD_H2H = {
         { fecha: "Fecha 9 - Apertura 2026 - 25 may 2026", torneo: "oficial", l: "Libertad", v: "San Francisco", gl: 2, gv: 0, goles_l: ["Alan Gigena","Matías Mayer"], goles_v: [] },
         { fecha: "Fecha 9 - Apertura 2026", torneo: "reserva_oficial", l: "Libertad", v: "San Francisco", gl: 2, gv: 0 },
         { fecha: "Apertura 2026 - Fecha 5", torneo: "senior", l: "Libertad", v: "San Francisco", gl: 3, gv: 0, goles_l: ["Mariano Moreno","Gustavo Peña","Ariel Paredes"], goles_v: [] },
+        { fecha: "Clausura 2026 - Fecha 5", torneo: "senior", l: "San Francisco", v: "Libertad", gl: 0, gv: 4, goles_l: [], goles_v: ["Mariano Orsi (3)"] },
         { fecha: "Fecha 2 - Clausura 2026 - 09 ago 2026", torneo: "oficial", l: "San Francisco", v: "Libertad", gl: 2, gv: 1, goles_l: ["Alexis Vega","Leonel Romero"], goles_v: ["Nelson Avello"] },
         { fecha: "Fecha 2 - Clausura 2026", torneo: "reserva_oficial", l: "San Francisco", v: "Libertad", gl: 2, gv: 1 },
         { fecha: "Torneo 2026 - Fecha 7", torneo: "sub15fem", l: "Libertad", v: "San Francisco", gl: 1, gv: 2 },
@@ -17328,15 +17340,18 @@ const BD_H2H = {
     ],
     "Bella Vista|Sansinena": [
         { fecha: "Apertura 2026 - Fecha 5", torneo: "senior", l: "Bella Vista", v: "Sansinena", gl: 3, gv: 1, goles_l: ["Gustavo Pereyra","Fabián Merlini","Matías Roque"], goles_v: ["Emiliano Jofré"] },
+        { fecha: "Clausura 2026 - Fecha 5", torneo: "senior", l: "Sansinena", v: "Bella Vista", gl: 2, gv: 3, goles_l: ["Pablo Moggia","Emiliano Jofre"], goles_v: ["Víctor Torrero","José Luis Chaparro","Gustavo Pereyra"] },
     ],
     "Huracán|Pacífico (C)": [
         { fecha: "Apertura 2026 - Fecha 5", torneo: "senior", l: "Pacífico (C)", v: "Huracán", gl: 4, gv: 8, goles_l: ["Esteban Angelini","Silvio Pagalday","Matías Aldunate","Nicolás Becher"], goles_v: ["César Panduro (3)","Héctor Soto Sassi (2)","Sebastián Faillá","Felipe Hippendinger","Javier Bicciconti"] },
         { fecha: "Fecha 9 - Torneo 2026 - 23 may", torneo: "segundafemenino", l: "Huracán", v: "Pacífico (C)", gl: 3, gv: 1, goles_l: ["Keila Iglesias (3)"], goles_v: ["Carolina Delorte"] },
         { fecha: "Fecha 18 - Torneo 2026 - 02 ago", torneo: "segundafemenino", l: "Pacífico (C)", v: "Huracán", gl: 0, gv: 4, goles_l: [], goles_v: ["Rosa Chávez (2)","Nahiara Gualas","Luciana Huichal"] },
         { fecha: "Fecha 27 - Torneo 2026 - 04 oct", torneo: "segundafemenino", l: "Pacífico (C)", v: "Huracán", gl: 0, gv: 5, goles_l: [], goles_v: ["Micaela Oyarzún (3)","Keila Iglesias (2)"] },
+        { fecha: "Clausura 2026 - Fecha 5", torneo: "senior", l: "Pacífico (C)", v: "Huracán", gl: 1, gv: 0, goles_l: ["Cristian Negrín"], goles_v: [] },
     ],
     "Pacífico BB|Sporting": [
         { fecha: "Apertura 2026 - Fecha 5", torneo: "senior", l: "Sporting", v: "Pacífico BB", gl: 1, gv: 0, goles_l: ["Marcos Cossú"], goles_v: [] },
+        { fecha: "Clausura 2026 - Fecha 5", torneo: "senior", l: "Sporting", v: "Pacífico BB", gl: 3, gv: 2, goles_l: ["Gabriel Bernengo (2)","Fernando Pérez"], goles_v: ["Maximiliano Delaudo (2)"] },
     ],
     "Olimpo|Petroquímicos": [
         { fecha: "Fecha 8 - Torneo 2026 - 23 may", torneo: "segundafemenino", l: "Olimpo", v: "Petroquímicos", gl: 0, gv: 0 },
@@ -19007,16 +19022,16 @@ const BD_SENIOR_APERTURA = [
     { n: "Tiro Federal",      cl: "tirofederal",   pj: 9, pg: 0, pe: 3, pp: 6, gf: 16, gc: 30, pts: 3 }
 ];
 const BD_SENIOR_CLAUSURA = [
+    { n: "Libertad",      cl: "libertad",     pj:5, pg:4, pe:0, pp:1, gf:10, gc:3, pts:12 },
     { n: "Pacífico (C)",  mostrar: "Pacífico (C) <b>(A)</b>", cl: "pacificoc",    pj:5, pg:4, pe:0, pp:1, gf:9, gc:7, pts:12 },
-    { n: "Libertad",      cl: "libertad",     pj:4, pg:3, pe:0, pp:1, gf:7, gc:3, pts:9 },
     { n: "Bella Vista",   cl: "bellavista",   pj:5, pg:3, pe:0, pp:2, gf:11, gc:10, pts:9 },
-    { n: "Pacífico BB",   cl: "pacificobb",   pj:4, pg:3, pe:0, pp:1, gf:10, gc:9, pts:9 },
+    { n: "Pacífico BB",   cl: "pacificobb",   pj:5, pg:3, pe:0, pp:2, gf:12, gc:12, pts:9 },
     { n: "Huracán",       cl: "huracan",      pj:5, pg:2, pe:1, pp:2, gf:11, gc:9, pts:7 },
     { n: "Sansinena",     cl: "sansinena",    pj:5, pg:2, pe:1, pp:2, gf:9, gc:8, pts:7 },
-    { n: "San Francisco", cl: "sanfrancisco", pj:4, pg:2, pe:0, pp:2, gf:8, gc:10, pts:6 },
-    { n: "Comercial",     cl: "comercial",    pj:4, pg:1, pe:0, pp:3, gf:7, gc:9, pts:3 },
-    { n: "Tiro Federal",  cl: "tirofederal",  pj:4, pg:0, pe:2, pp:2, gf:8, gc:11, pts:2 },
-    { n: "Sporting",      cl: "sporting",     pj:4, pg:0, pe:0, pp:4, gf:5, gc:9, pts:0 },
+    { n: "Comercial",     cl: "comercial",    pj:5, pg:2, pe:0, pp:3, gf:9, gc:9, pts:6 },
+    { n: "San Francisco", cl: "sanfrancisco", pj:5, pg:2, pe:0, pp:3, gf:8, gc:14, pts:6 },
+    { n: "Sporting",      cl: "sporting",     pj:5, pg:1, pe:0, pp:4, gf:8, gc:11, pts:3 },
+    { n: "Tiro Federal",  cl: "tirofederal",  pj:5, pg:0, pe:2, pp:3, gf:8, gc:13, pts:2 },
 ];
 
 const BD_FIXTURES_SENIOR = [
@@ -19114,11 +19129,11 @@ const BD_FIXTURES_SENIOR_CLAUSURA = [
         { l: "Pacífico (C)",      v: "Libertad",   gl: 0, gv: 3, goles_l:[], goles_v:["Mariano Orsi (3)"] },
     ]},
     { fecha: 5, partidos: [
-        { l: "Sansinena",   v: "Bella Vista",      gl: 2, gv: 3, goles_l:[], goles_v:["Víctor Torrero","José Luis Chaparro","Gustavo Pereyra"] },
-        { l: "Pacífico (C)",  v: "Huracán",        gl: 0, gv: 1, goles_l:[], goles_v:[] },
-        { l: "Sporting",      v: "Pacífico BB",    gl: null, gv: null, goles_l:[], goles_v:[] },
-        { l: "Tiro Federal",  v: "Comercial",      gl: null, gv: null, goles_l:[], goles_v:[] },
-        { l: "Libertad",      v: "San Francisco",  gl: null, gv: null, goles_l:[], goles_v:[] }
+        { l: "Sansinena",   v: "Bella Vista",      gl: 2, gv: 3, goles_l:["Emiliano Jofré","Pablo Moggia"], goles_v:["Víctor Torrero","José Luis Chaparro","Gustavo Pereyra"] },
+        { l: "Pacífico (C)",  v: "Huracán",        gl: 1, gv: 0, goles_l:["Cristian Negrín"], goles_v:[] },
+        { l: "Sporting",      v: "Pacífico BB",    gl: 3, gv: 2, goles_l:["Gabriel Bernengo (2)","Fernando Pérez"], goles_v:["Maximiliano Delaudo (2)"] },
+        { l: "Tiro Federal",  v: "Comercial",      gl: 0, gv: 2, goles_l:[], goles_v:["Sebastián Aristi","Leandro Piérez"] },
+        { l: "Libertad",      v: "San Francisco",  gl: 4, gv: 0, goles_l:["Mariano Orsi (3)"], goles_v:[] }
     ]},
     { fecha: 6, partidos: [
         { l: "Huracán",   v: "Libertad",      gl: null, gv: null },
@@ -19377,7 +19392,7 @@ function generarSeniorClausura() {
     </div>`;
     const pj = BD_SENIOR_CLAUSURA[0].pj || 0;
     const pts = (9 - pj) * 3;
-html += `<div style="background:#f9f9f9;padding:4px 8px;font-size:10px;text-align:center;color:#555;"><b>(A)</b> Campeón del apertura<br>📌 Puntos en juego: <b>15</b><br><b>Libertad</b> recibió tres puntos por la no presentación de <b>Sporting</b> en la fecha 3</div>`;
+html += `<div style="background:#f9f9f9;padding:4px 8px;font-size:10px;text-align:center;color:#555;"><b>(A)</b> Campeón del apertura<br>📌 Puntos en juego: <b>12</b><br><b>Libertad</b> recibió tres puntos por la no presentación de <b>Sporting</b> en la fecha 3</div>`;
     return html;
 }
 
