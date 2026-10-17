@@ -1949,7 +1949,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 27).partidos.forEach(p
 });
 
 
-let diaSeleccionadoHome = "2026-10-16"; 
+let diaSeleccionadoHome = "2026-10-17"; 
 let mercadoPasesAbierto = false;
 
 function toggleMercadoPasesHome() {
@@ -2003,7 +2003,7 @@ function generarHome() {
        ]},
      { id: "2026-10-16", label: "VIÉ 16/10", torneos: [
             { nombre: "FUTSAL | CLAUSURA | FECHA 12", cat: "futsal", torLink: "futsal", noAutoResult: true, partidos: [
-            {l:"Los 3 Chiflados", v:"Pacífico BB", hora:"22:00", gl:null, gv:null, claseL:"los3chiflados", claseV:"pacificobb",nota:"<b>en cancha de La Curtiembre</b>"},
+            {l:"Los 3 Chiflados", v:"Pacífico BB", hora:"22:00", gl:6, gv:4, claseL:"los3chiflados", claseV:"pacificobb",nota:"<b>en cancha de La Curtiembre</b>"},
             {l:"Petroquímicos", v:"Dublin", hora:"22:00", gl:null, gv:null, claseL:"petroquimicos", claseV:"dublin",nota:"<b>en cancha de Petroquímicos</b>"},
             {l:"San Francisco", v:"Catamarca", hora:"22:00", gl:null, gv:null, claseL:"sanfrancisco", claseV:"catamarca",nota:"<b>en cancha de Tiro Federal</b>"},
             ]},
@@ -17922,6 +17922,8 @@ const BD_H2H = {
     "Los 3 Chiflados|Pacífico BB": [
         { fecha: "Apertura 2026 - Fecha 12", torneo: "futsal", l: "Pacífico BB", v: "Los 3 Chiflados", gl: 4, gv: 11 },
         { fecha: "Apertura 2026 - Fecha 12", torneo: "futsalreserva", l: "Pacífico BB", v: "Los 3 Chiflados", gl: 0, gv: 6 },
+        { fecha: "Clausura 2026 - Fecha 12", torneo: "futsal", l: "Los 3 Chiflados", v: "Pacífico BB", gl: 6, gv: 4 },
+        { fecha: "Clausura 2026 - Fecha 12", torneo: "futsalreserva", l: "Los 3 Chiflados", v: "Pacífico BB", gl: 8, gv: 7 },
     ],
     "Catamarca|San Francisco": [
         { fecha: "Apertura 2026 - Fecha 12", torneo: "futsal", l: "Catamarca", v: "San Francisco", gl: 1, gv: 2 },
@@ -18417,12 +18419,12 @@ const BD_POS_FUTSAL = {
     principal: [
         {n:"La Estación <b>(A)</b> <b>(C)</b>",     cl:"laestacion",    pj:12,pg:12,pe:0,pp:0,gf:54, gc:22, pts:36},
         {n:"La Esperanza <b>(C)</b>",    cl:"laesperanza",    pj:12,pg:9,pe:1,pp:2,gf:45, gc:27, pts:28},
+        {n:"Los 3 Chiflados <b>(*)</b>  <b>(C)</b>", cl:"los3chiflados",    pj:12,pg:9,pe:1,pp:2,gf:49, gc:22, pts:28},
         {n:"Comercial <b>(C)</b>",       cl:"comercial",    pj:11,pg:9,pe:0,pp:2,gf:42, gc:26, pts:27},
-        {n:"Los 3 Chiflados <b>(*)</b>  <b>(C)</b>", cl:"los3chiflados",    pj:11,pg:8,pe:1,pp:2,gf:43, gc:18, pts:25},
         {n:"Villa Mitre <b>(C)</b>",     cl:"villamitre",    pj:11,pg:6,pe:2,pp:3,gf:39, gc:36, pts:20},
         {n:"Tiro Federal",    cl:"tirofederal",    pj:12,pg:6,pe:1,pp:5,gf:25, gc:26, pts:19},
         {n:"Liniers <b>(*)</b>",         cl:"liniers",    pj:12,pg:5,pe:2,pp:5,gf:28, gc:31, pts:17},
-        {n:"Pacífico BB",     cl:"pacificobb",    pj:10,pg:5,pe:1,pp:4,gf:34, gc:36, pts:16},
+        {n:"Pacífico BB",     cl:"pacificobb",    pj:11,pg:5,pe:1,pp:5,gf:38, gc:42, pts:16},
         {n:"Petroquímicos",   cl:"petroquimicos",    pj:11,pg:4,pe:1,pp:6,gf:32, gc:38, pts:13},
         {n:"Dublin",          cl:"dublin",    pj:11,pg:4,pe:0,pp:7,gf:22, gc:37, pts:12},
         {n:"San Francisco",   cl:"sanfrancisco",    pj:10,pg:3,pe:0,pp:7,gf:15, gc:33, pts:9},
@@ -18431,7 +18433,7 @@ const BD_POS_FUTSAL = {
         {n:"<s>Huracán</s> <b>(-)</b>",         cl:"huracan",    pj:0,pg:0,pe:0,pp:0,gf:0, gc:0, pts:0}
     ],
     reserva: [
-        {n:"Los 3 Chiflados <b>(A)</b>  <b>(C)</b>", cl:"los3chiflados",    pj:11,pg:11,pe:0,pp:0,gf:59, gc:15, pts:33},
+        {n:"Los 3 Chiflados <b>(A)</b>  <b>(C)</b>", cl:"los3chiflados",    pj:12,pg:12,pe:0,pp:0,gf:67, gc:22, pts:36},
         {n:"Liniers  <b>(C)</b>",         cl:"liniers",    pj:12,pg:10,pe:0,pp:2,gf:62, gc:28, pts:30},
         {n:"La Esperanza  <b>(C)</b>",    cl:"laesperanza",    pj:12,pg:9,pe:1,pp:2,gf:39, gc:19, pts:28},
         {n:"La Estación  <b>(C)</b>",     cl:"laestacion",    pj:12,pg:8,pe:0,pp:4,gf:43, gc:31, pts:24},
@@ -18441,7 +18443,7 @@ const BD_POS_FUTSAL = {
         {n:"Comercial",       cl:"comercial",    pj:11,pg:4,pe:2,pp:5,gf:25, gc:39, pts:14},
         {n:"Catamarca",       cl:"catamarca",    pj:11,pg:4,pe:2,pp:5,gf:28, gc:54, pts:14},
         {n:"Tiro Federal",    cl:"tirofederal",    pj:12,pg:3,pe:2,pp:7,gf:21, gc:29, pts:11},
-        {n:"Pacífico BB",     cl:"pacificobb",    pj:10,pg:3,pe:0,pp:7,gf:16, gc:38, pts:9},
+        {n:"Pacífico BB",     cl:"pacificobb",    pj:11,pg:3,pe:0,pp:8,gf:23, gc:46, pts:9},
         {n:"San Francisco",   cl:"sanfrancisco",    pj:10,pg:2,pe:0,pp:8,gf:19, gc:56, pts:6},
         {n:"<s>Dep. Futsal</s> <b>(-)</b>",     cl:"depfutsal",    pj:0,pg:0,pe:0,pp:0,gf:0, gc:0, pts:0},
         {n:"<s>Huracán</s> <b>(-)</b>",         cl:"huracan",    pj:0,pg:0,pe:0,pp:0,gf:0, gc:0, pts:0}
