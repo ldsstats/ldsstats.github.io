@@ -2030,11 +2030,11 @@ function generarHome() {
             {l:"Petroquímicos", v:"Huracán", hora:"20:00", gl:null, gv:null, claseL:"petroquimicos", claseV:"huracan",nota:"<b>Ida: 3-0</b>"},
             ]},
             { nombre: "FEDERAL A | REVÁLIDA (VILLA MITRE) | SEGUNDA RONDA | VUELTA", cat: "federala", torLink: "federala", noAutoResult: true, partidos: [
-            {l:"Kimberley", v:"Dep. Rincón", hora:"15:00", gl:null, gv:null, claseL:"kimberley", claseV:"deprincon",nota:"<b>Ida: 1-0</b>"},
-            {l:"Huracán Las Heras", v:"Juventud Antoniana", hora:"15:30", gl:null, gv:null, claseL:"huracanlh", claseV:"jantoniana",nota:"<b>Ida: 0-3</b>"},
-            {l:"Defensores de Belgrano (VR)", v:"Sportivo Las Parejas", hora:"16:00", gl:null, gv:null, claseL:"defbelgranovr", claseV:"splasparejas",nota:"<b>Ida: 1-1</b>"},
-            {l:"Gimnasia de Chivilcoy", v:"Defensores de Vilelas", hora:"18:00", gl:null, gv:null, claseL:"gimnasiachivilcoy", claseV:"defvilelas",nota:"<b>Ida: 1-1</b>"},
-            {l:"Sol de América", v:"Juventud Unida", hora:"19:00", gl:null, gv:null, claseL:"soldeamericafsa", claseV:"juvunidasl",nota:"<b>Ida: 0-0</b>"},
+            {l:"Kimberley", v:"Dep. Rincón", hora:"15:00", gl:2, gv:1, claseL:"kimberley", claseV:"deprincon",nota:"<b>Ida: 1-0</b>"},
+            {l:"Huracán Las Heras", v:"Juventud Antoniana", hora:"15:30", gl:1, gv:0, claseL:"huracanlh", claseV:"jantoniana",nota:"<b>Ida: 0-3</b>"},
+            {l:"Defensores de Belgrano (VR)", v:"Sportivo Las Parejas", hora:"16:00", gl:0, gv:1, claseL:"defbelgranovr", claseV:"splasparejas",nota:"<b>Ida: 1-1</b>"},
+            {l:"Gimnasia de Chivilcoy", v:"Defensores de Vilelas", hora:"18:00", gl:3, gv:3, claseL:"gimnasiachivilcoy", claseV:"defvilelas",nota:"<b>Ida: 1-1</b>"},
+            {l:"Sol de América", v:"Juventud Unida", hora:"19:00", gl:2, gv:2, claseL:"soldeamericafsa", claseV:"juvunidasl",nota:"<b>Ida: 0-0</b>"},
             {l:"Atenas de Río Cuarto", v:"FADEP", hora:"19:30", gl:null, gv:null, claseL:"atenasrc", claseV:"fadep",nota:"<b>Ida: 0-2</b>"},
             {l:"Bartolomé Mitre", v:"Boca Unidos", hora:"20:00", gl:null, gv:null, claseL:"bartolomemitre", claseV:"bocaunidos",nota:"<b>Ida: 0-1</b>"},
             ]},
@@ -2228,36 +2228,36 @@ const BD_FEDERAL_REVALIDA = {
             vuelta: { local: "Bartolomé Mitre", clL: "bartolomemitre", visitante: "Boca Unidos", clV: "bocaunidos", gl: null, gv: null, goles_l: [], goles_v: [] }
         },
         {
-            ida:    { local: "Defensores de Vilelas", clL: "defvilelas", visitante: "Gimnasia de Chivilcoy", clV: "gimnasiachivilcoy", gl: 1, gv: 1, goles_l: [], goles_v: [] },
-            vuelta: { local: "Gimnasia de Chivilcoy", clL: "gimnasiachivilcoy", visitante: "Defensores de Vilelas", clV: "defvilelas", gl: null, gv: null, goles_l: [], goles_v: [] }
+            ida:    { local: "<s>Defensores de Vilelas</s>", clL: "defvilelas", visitante: "<n>Gimnasia de Chivilcoy</n>", clV: "gimnasiachivilcoy", gl: 1, gv: 1, goles_l: [], goles_v: [] },
+            vuelta: { local: "<n>Gimnasia de Chivilcoy</n>", clL: "gimnasiachivilcoy", visitante: "<s>Defensores de Vilelas</s>", clV: "defvilelas", gl: 3, gv: 3, goles_l: [], goles_v: [] }
         },
         {
             ida:    { local: "Sportivo Belgrano", clL: "spbelgrano", visitante: "Sarmiento de La Banda", clV: "sarmientolb", gl: 1, gv: 1, goles_l: [], goles_v: [] },
             vuelta: { local: "Sarmiento de La Banda", clL: "sarmientolb", visitante: "Sportivo Belgrano", clV: "spbelgrano", gl: null, gv: null, goles_l: [], goles_v: [] }
         },
         {
-            ida:    { local: "Juventud Antoniana", clL: "jantoniana", visitante: "Huracán Las Heras", clV: "huracanlh", gl: 3, gv: 0, goles_l: [], goles_v: [] },
-            vuelta: { local: "Huracán Las Heras", clL: "huracanlh", visitante: "Juventud Antonaina", clV: "jantoniana", gl: null, gv: null, goles_l: [], goles_v: [] }
+            ida:    { local: "<b>Juventud Antoniana</b>", clL: "jantoniana", visitante: "<s>Huracán Las Heras</s>", clV: "huracanlh", gl: 3, gv: 0, goles_l: [], goles_v: [] },
+            vuelta: { local: "<s>Huracán Las Heras</s>", clL: "huracanlh", visitante: "<b>Juventud Antoniana</b>", clV: "jantoniana", gl: 1, gv: 0, goles_l: [], goles_v: [] }
         },
         {
-            ida:    { local: "Sportivo Las Parejas", clL: "splasparejas", visitante: "Def de Belgrano (VR)", clV: "defbelgranovr", gl: 1, gv: 1, goles_l: [], goles_v: [] },
-            vuelta: { local: "Def de Belgrano (VR)", clL: "defbelgranovr", visitante: "Sportivo Las Parejas", clV: "splasparejas", gl: null, gv: null, goles_l: [], goles_v: [] }
+            ida:    { local: "<b>Sportivo Las Parejas</b>", clL: "splasparejas", visitante: "<s>Def de Belgrano (VR)</s>", clV: "defbelgranovr", gl: 1, gv: 1, goles_l: [], goles_v: [] },
+            vuelta: { local: "<s>Def de Belgrano (VR)</s>", clL: "defbelgranovr", visitante: "<b>Sportivo Las Parejas</b>", clV: "splasparejas", gl: 0, gv: 1, goles_l: [], goles_v: [] }
         },
         {
-            ida:    { local: "San Martín de Mendoza", clL: "sanmartinmendoza", visitante: "Argentino de Monte Maiz", clV: "argmontemaiz", gl: 0, gv: 2, goles_l: [], goles_v: [] },
-            vuelta: { local: "Argentino de Monte Maiz", clL: "argmontemaiz", visitante: "San Martín de Mendoza", clV: "sanmartinmendoza", gl: null, gv: null, goles_l: [], goles_v: [] }
+            ida:    { local: "San Martín de Mendoza", clL: "sanmartinmza", visitante: "Argentino de Monte Maiz", clV: "argmontemaiz", gl: 0, gv: 2, goles_l: [], goles_v: [] },
+            vuelta: { local: "Argentino de Monte Maiz", clL: "argmontemaiz", visitante: "San Martín de Mendoza", clV: "sanmartinmza", gl: null, gv: null, goles_l: [], goles_v: [] }
         },
         {
             ida:    { local: "El Linqueño", clL: "ellinqueño", visitante: "Douglas Haig", clV: "douglashaig", gl: 0, gv: 0, goles_l: [], goles_v: [] },
             vuelta: { local: "Douglas Haig", clL: "douglashaig", visitante: "El Linqueño", clV: "ellinqueño", gl: null, gv: null, goles_l: [], goles_v: [] }
         },
         {
-            ida:    { local: "Deportivo Rincón", clL: "deprincon", visitante: "Kimberley", clV: "kimberley", gl: 0, gv: 1, goles_l: [], goles_v: [] },
-            vuelta: { local: "Kimberley", clL: "kimberley", visitante: "Deportivo Rincón", clV: "deprincon", gl: null, gv: null, goles_l: [], goles_v: [] }
+            ida:    { local: "<s>Deportivo Rincón</s>", clL: "deprincon", visitante: "<b>Kimberley</b>", clV: "kimberley", gl: 0, gv: 1, goles_l: [], goles_v: [] },
+            vuelta: { local: "<b>Kimberley</b>", clL: "kimberley", visitante: "<s>Deportivo Rincón</s>", clV: "deprincon", gl: 2, gv: 1, goles_l: [], goles_v: [] }
         },
         {
-            ida:    { local: "Juventud Unida de San Luis", clL: "juventudunidasanluis", visitante: "Sol de América", clV: "soldeamericafsa", gl: 0, gv: 0, goles_l: [], goles_v: [] },
-            vuelta: { local: "Sol de América", clL: "soldeamericafsa", visitante: "Juventud Unida de San Luis", clV: "juventudunidasanluis", gl: null, gv: null, goles_l: [], goles_v: [] }
+            ida:    { local: "<s>Juventud Unida de San Luis</s>", clL: "juvunidasl", visitante: "<b>Sol de América</b>", clV: "soldeamericafsa", gl: 0, gv: 0, goles_l: [], goles_v: [] },
+            vuelta: { local: "<b>Sol de América</b>", clL: "soldeamericafsa", visitante: "<s>Juventud Unida de San Luis</s>", clV: "juvunidasl", gl: 2, gv: 2, goles_l: [], goles_v: [] }
         },
         {
             ida:    { local: "FADEP", clL: "fadep", visitante: "Atenas de Río Cuarto", clV: "atenasrc", gl: 2, gv: 0, goles_l: [], goles_v: [] },
