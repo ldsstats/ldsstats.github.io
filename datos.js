@@ -2054,7 +2054,7 @@ function generarHome() {
             {l:"<b>Villa Mitre</b>", v:"Costa Brava", hora:"16:00", gl:2, gv:0, claseL:"villamitre", claseV:"costabrava",nota:"<b>Ida: 1-1</b>"},
             {l:"Douglas Haig", v:"El Linqueño", hora:"16:00", gl:1, gv:0, claseL:"douglashaig", claseV:"ellinqueño",nota:"<b>Ida: 0-0</b>"},
             {l:"9 de Julio", v:"Gimnasia (CdU)", hora:"16:00", gl:1, gv:0, claseL:"nuevedejulio", claseV:"gimnasiacdu",nota:"<b>Ida: 1-4</b>"},
-            {l:"Argentino de Monte Maiz", v:"San Martín de Mendoza", hora:"16:15", gl:null, gv:null, claseL:"argmontemaiz", claseV:"sanmartinmza",nota:"<b>Ida: 2-0</b>"},
+            {l:"Argentino de Monte Maiz", v:"San Martín de Mendoza", hora:"16:15", gl:2, gv:1, claseL:"argmontemaiz", claseV:"sanmartinmza",nota:"<b>Ida: 2-0</b>"},
             {l:"Sarmiento de La Banda", v:"Sportivo Belgrano", hora:"18:30", gl:null, gv:null, claseL:"sarmientolb", claseV:"spbelgrano",nota:"<b>Ida: 1-1</b>"},
             ]},
             { nombre: "TORNEO REGIONAL AMATEUR | BONAERENSE PAMPEANA SUR | SEGUNDA RONDA | VUELTA", cat: "regamateurtemp", torLink: "regamateurtemp", noAutoResult: true, partidos: [
@@ -2244,8 +2244,8 @@ const BD_FEDERAL_REVALIDA = {
             vuelta: { local: "<s>Def de Belgrano (VR)</s>", clL: "defbelgranovr", visitante: "<b>Sportivo Las Parejas</b>", clV: "splasparejas", gl: 0, gv: 1, goles_l: [], goles_v: [] }
         },
         {
-            ida:    { local: "San Martín de Mendoza", clL: "sanmartinmza", visitante: "Argentino de Monte Maiz", clV: "argmontemaiz", gl: 0, gv: 2, goles_l: [], goles_v: [] },
-            vuelta: { local: "Argentino de Monte Maiz", clL: "argmontemaiz", visitante: "San Martín de Mendoza", clV: "sanmartinmza", gl: null, gv: null, goles_l: [], goles_v: [] }
+            ida:    { local: "<s>San Martín de Mendoza</s>", clL: "sanmartinmza", visitante: "<b>Argentino de Monte Maiz</b>", clV: "argmontemaiz", gl: 0, gv: 2, goles_l: [], goles_v: [] },
+            vuelta: { local: "<b>Argentino de Monte Maiz</b>", clL: "argmontemaiz", visitante: "<s>San Martín de Mendoza</s>", clV: "sanmartinmza", gl: 2, gv: 1, goles_l: [], goles_v: [] }
         },
         {
             ida:    { local: "<s>El Linqueño</s>", clL: "ellinqueño", visitante: "<b>Douglas Haig</b>", clV: "douglashaig", gl: 0, gv: 0, goles_l: [], goles_v: [] },
