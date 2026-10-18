@@ -1206,7 +1206,7 @@ const idaOficialClausura = [
     { fecha: 9,  partidos: [{l:"Huracán",    v:"Sporting",       gl:2, gv:1, dia:"Vie 25/09", hora:"19:00", goles_l:["Lautaro Torres","Lautaro Cerato"], goles_v:["Jonathan Font"]}, {l:"Libertad",    v:"San Francisco", gl:1, gv:1, dia:"Sáb 26/09", hora:"15:30", goles_l:["Franco Pane"], goles_v:["Alexis Vega"]}, {l:"Liniers",     v:"Bella Vista",   gl:0, gv:2, dia:"Dom 27/09", hora:"15:30", goles_l:[], goles_v:["Agustín Reule","Felipe Acharez"]}, {l:"Villa Mitre", v:"La Armonía",    gl:1, gv:1, dia:"Lun 28/09", hora:"15:30", goles_l:["Valentino Valeri"], goles_v:["Julio Acosta"]}] },
     { fecha: 10, partidos: [{l:"Huracán",     v:"Villa Mitre", gl:0, gv:0, dia:"Dom 04/10", hora:"15:30", goles_l:[], goles_v:[]}, {l:"San Francisco",v:"Sporting", gl:0, gv:0, dia:"Dom 04/10", hora:"15:30", goles_l:[], goles_v:[]}, {l:"La Armonía",  v:"Liniers", gl:1, gv:1, dia:"Dom 04/10", hora:"15:30", goles_l:["Ezequiel Intrevado"], goles_v:["Nicolás Malerba"]}, {l:"Bella Vista", v:"Libertad", gl:2, gv:0, dia:"Dom 04/10", hora:"15:30", goles_l:["Rodrigo Gómez","Gabino Bellegia"], goles_v:[]}] },
     { fecha: 11, partidos: [{l:"San Francisco",v:"Villa Mitre",  gl:0, gv:2, dia:"Dom 11/10", hora:"16:00", goles_l:[], goles_v:["Constanzo Palacio","Ramiro Gerk"]}, {l:"Libertad",    v:"Liniers",       gl:1, gv:0, dia:"Dom 11/10", hora:"16:00", goles_l:["Gianluca Falcioni"], goles_v:[]}, {l:"Bella Vista", v:"Sporting",      gl:1, gv:2, dia:"Lun 12/10", hora:"16:00", goles_l:["Lucas Martínez"], goles_v:["Valentino Barone","Sixto Theaux"]}, {l:"Huracán",     v:"La Armonía",    gl:0, gv:0, dia:"Lun 12/10", hora:"19:30", goles_l:[], goles_v:[]}] },
-    { fecha: 12, partidos: [{l:"La Armonía",  v:"San Francisco", gl:null, gv:null, dia:"Sáb 17/10", hora:"16:00", goles_l:[], goles_v:[]}, {l:"Liniers",     v:"Huracán",       gl:null, gv:null, dia:"Sáb 17/10", hora:"16:00", goles_l:[], goles_v:[]}, {l:"Sporting",    v:"Libertad",      gl:null, gv:null, dia:"Dom 18/10", hora:"16:00", goles_l:[], goles_v:[]}, {l:"Villa Mitre", v:"Bella Vista",   gl:null, gv:null, dia:"Lun 19/10", hora:"16:00", goles_l:[], goles_v:[]}] },
+    { fecha: 12, partidos: [{l:"La Armonía",  v:"San Francisco", gl:1, gv:2, dia:"Sáb 17/10", hora:"16:00", goles_l:["Jerónimo Blanco"], goles_v:["Federico Pinedo (2)"]}, {l:"Liniers",     v:"Huracán",       gl:0, gv:0, dia:"Sáb 17/10", hora:"16:00", goles_l:[], goles_v:[]}, {l:"Sporting",    v:"Libertad",      gl:null, gv:null, dia:"Dom 18/10", hora:"16:00", goles_l:[], goles_v:[]}, {l:"Villa Mitre", v:"Bella Vista",   gl:null, gv:null, dia:"Lun 19/10", hora:"16:00", goles_l:[], goles_v:[]}] },
     { fecha: 13, partidos: [{l:"Villa Mitre", v:"Libertad",      gl:null, gv:null}, {l:"Huracán",     v:"San Francisco", gl:null, gv:null}, {l:"Liniers",     v:"Sporting",      gl:null, gv:null}, {l:"La Armonía",  v:"Bella Vista",   gl:null, gv:null}] },
     { fecha: 14, partidos: [{l:"Sporting",    v:"Villa Mitre",   gl:null, gv:null}, {l:"Bella Vista", v:"Huracán",       gl:null, gv:null}, {l:"Libertad",    v:"La Armonía",    gl:null, gv:null}, {l:"San Francisco",v:"Liniers",       gl:null, gv:null}] }
 ];
@@ -1445,7 +1445,7 @@ const idaPromoClausura = [
     { fecha: 9,  partidos: [{l:"Dublin",      v:"Pacífico (C)", gl:3, gv:1, dia:"Sáb 26/09", hora:"15:30", goles_l:["Nahuel Cornou (2)","Matías Andrade"], goles_v:["Donatello Scaringi"]}, {l:"Tiro Federal",v:"Olimpo",       gl:1, gv:0, dia:"Sáb 26/09", hora:"15:30", goles_l:["Diego Ocampo"], goles_v:[]}, {l:"Comercial",   v:"Sansinena",    gl:3, gv:1, dia:"Sáb 26/09", hora:"15:30", goles_l:["Leandro Giordano","Joaquín Rachi","Alejo Gil","Mauricio Villalobos (e/c)"], goles_v:[]}, {l:"Pacífico BB",  v:"Rosario PB",   gl:0, gv:1, dia:"Dom 27/09", hora:"15:30", goles_l:[], goles_v:["Matías Otero"]}] },
     { fecha: 10, partidos: [{l:"Olimpo",       v:"Comercial", gl:4, gv:0, dia:"Sáb 03/10", hora:"15:30", goles_l:["Joaquín Vidal (2)","Valentín Quidel","Nahuel Colmenares"], goles_v:[]}, {l:"Sansinena",      v:"Dublin", gl:2, gv:1, dia:"Sáb 03/10", hora:"15:30", goles_l:["Giuliano Zinni","Manuel Stortini"], goles_v:["Nahuel Cornou"]}, {l:"Pacífico (C)",v:"Pacífico BB", gl:0, gv:2, dia:"Sáb 03/10", hora:"16:00", goles_l:[], goles_v:["Lisandro Muzi","Javier Maciel"]}, {l:"Rosario PB",  v:"Tiro Federal", gl:1, gv:1, dia:"Dom 04/10", hora:"15:30", goles_l:["Favio Durán"], goles_v:["Genaro Fraysse"]}] },
     { fecha: 11, partidos: [{l:"Pacífico (C)",v:"Tiro Federal", gl:0, gv:6, dia:"Sáb 10/10", hora:"16:00", goles_l:[], goles_v:["Franco Lefiñir","Gino Carrozzi","Agustín Restiffo","Mariano Mc Coubrey","Gino Pizzorno","Genaro Fraysse"]}, {l:"Rosario PB",  v:"Olimpo",       gl:0, gv:2, dia:"Dom 11/10", hora:"11:00", goles_l:[], goles_v:["Ayrton Ithurriague","Felipe Santamarina"]}, {l:"Dublin",       v:"Comercial",    gl:2, gv:4, dia:"Lun 11/10", hora:"11:00", goles_l:["Emiliano Dekker","Nahuel Cornou"], goles_v:["Alejandro Leiva (2)","Francisco Centeno","Juan Ignacio Wunderlich"]},  {l:"Sansinena",   v:"Pacífico BB",  gl:1, gv:1, dia:"Lun 11/10", hora:"16:00", goles_l:["Santiago González"], goles_v:["Lisandro Muzi"]}] },
-    { fecha: 12, partidos: [{l:"Olimpo",      v:"Pacífico (C)", gl:2, gv:0, dia:"Dom 18/10", hora:"11:00", goles_l:["Nahuel Colmenares","Santiago Llanos"], goles_v:[]}, {l:"Comercial",    v:"Rosario PB",   gl:null, gv:null, dia:"Sáb 17/10", hora:"16:00", goles_l:[], goles_v:[]}, {l:"Tiro Federal",v:"Sansinena",    gl:null, gv:null, dia:"Sáb 17/10", hora:"16:00", goles_l:[], goles_v:[]}, {l:"Pacífico BB", v:"Dublin",       gl:null, gv:null, dia:"Sáb 17/10", hora:"16:00", goles_l:[], goles_v:[]}] },
+    { fecha: 12, partidos: [{l:"Olimpo",      v:"Pacífico (C)", gl:2, gv:0, dia:"Dom 18/10", hora:"11:00", goles_l:["Nahuel Colmenares","Santiago Llanos"], goles_v:[]}, {l:"Comercial",    v:"Rosario PB",   gl:2, gv:2, dia:"Sáb 17/10", hora:"16:00", goles_l:["Santiago Giorgis","Alejo Gil"], goles_v:["Sebastián Mendoza","Favio Durán"]}, {l:"Tiro Federal",v:"Sansinena",    gl:1, gv:0, dia:"Sáb 17/10", hora:"16:00", goles_l:["Mariano McCoubrey"], goles_v:[]}, {l:"Dublin", v:"Pacífico BB",       gl:0, gv:1, dia:"Sáb 17/10", hora:"16:00", goles_l:[], goles_v:["Emanuel Rodríguez"]}] },
 
     { fecha: 13, partidos: [{l:"Tiro Federal", v:"Dublin",       gl:null, gv:null}, {l:"Rosario PB",  v:"Pacífico (C)", gl:null, gv:null}, {l:"Olimpo",      v:"Sansinena",    gl:null, gv:null}, {l:"Comercial",   v:"Pacífico BB",  gl:null, gv:null}] },
     { fecha: 14, partidos: [{l:"Dublin",       v:"Olimpo",       gl:null, gv:null}, {l:"Pacífico BB", v:"Tiro Federal", gl:null, gv:null}, {l:"Pacífico (C)",v:"Comercial",    gl:null, gv:null}, {l:"Sansinena",   v:"Rosario PB",   gl:null, gv:null}] }
@@ -2010,14 +2010,14 @@ function generarHome() {
        ]},
      { id: "2026-10-17", label: "SÁB 17/10", torneos: [
             { nombre: "OFICIAL | FECHA 12 | CLAUSURA", cat: "oficial", torLink: "oficial", noAutoResult: true, partidos: [
-            {l:"La Armonía", v:"San Francisco", hora:"16:00", gl:null, gv:null, claseL:"laarmonia", claseV:"sanfrancisco"},
-            {l:"Liniers", v:"Huracán", hora:"16:00", gl:null, gv:null, claseL:"liniers", claseV:"huracan"},
+            {l:"La Armonía", v:"San Francisco", hora:"16:00", gl:1, gv:2, claseL:"laarmonia", claseV:"sanfrancisco"},
+            {l:"Liniers", v:"Huracán", hora:"16:00", gl:0, gv:0, claseL:"liniers", claseV:"huracan"},
             ]},
             { nombre: "PROMOCIONAL | FECHA 12 | CLAUSURA", cat: "promocional", torLink: "promocional", noAutoResult: true, partidos: [
             {l:"Olimpo", v:"Pacífico (C)", hora:"11:00", gl:2, gv:0, claseL:"olimpo", claseV:"pacificoc"},
-            {l:"Dublin", v:"Pacífico BB", hora:"16:00", gl:null, gv:null, claseL:"dublin", claseV:"pacificobb"},
-            {l:"Tiro Federal", v:"Sansinena", hora:"16:00", gl:null, gv:null, claseL:"tirofederal", claseV:"sansinena"},
-            {l:"Comercial", v:"Rosario PB", hora:"16:00", gl:null, gv:null, claseL:"comercial", claseV:"rosariopb",nota:"<b>Sin visitantes</b>"},
+            {l:"Dublin", v:"Pacífico BB", hora:"16:00", gl:0, gv:1, claseL:"dublin", claseV:"pacificobb"},
+            {l:"Tiro Federal", v:"Sansinena", hora:"16:00", gl:1, gv:0, claseL:"tirofederal", claseV:"sansinena"},
+            {l:"Comercial", v:"Rosario PB", hora:"16:00", gl:2, gv:2, claseL:"comercial", claseV:"rosariopb",nota:"<b>Sin visitantes</b>"},
             ]},
             { nombre: "1° FEMENINO | FECHA 13 | CLAUSURA", cat: "femenino", torLink: "femenino", noAutoResult: true, partidos: [
             {l:"Sporting", v:"La Armonía", hora:"16:00", gl:null, gv:null, claseL:"sporting", claseV:"laarmonia"},
@@ -16721,6 +16721,7 @@ const BD_H2H = {
         { fecha: "Fecha 20 - Torneo 2026 - 15 ago", torneo: "segundafemenino", l: "Liniers", v: "Huracán", gl: 8, gv: 1, goles_l: ["Paz Cutrín (3)","María Paz Marino (2)","Paulina Acevedo (2)","Victoria Sánchez"], goles_v: ["Keila Iglesias"] },
         { fecha: "Fecha 5 - Clausura 2026 - 28 ago 2026", torneo: "oficial", l: "Huracán", v: "Liniers", gl: 1, gv: 0, goles_l: ["Antonio Andragnez"], goles_v: [] },
         { fecha: "Fecha 5 - Clausura 2026", torneo: "reserva_oficial", l: "Huracán", v: "Liniers", gl: 1, gv: 1 },
+        { fecha: "Fecha 12 - Clausura 2026 - 17 oct", torneo: "oficial", l: "Liniers", v: "Huracán", gl: 0, gv: 0, goles_l: [], goles_v: [] },
     ],
     "Estrella de Oro|San Francisco": [
         { fecha: "Fecha 2 - Torneo 2026 - 29 mar", torneo: "segundafemenino", l: "Estrella de Oro", v: "San Francisco", gl: 3, gv: 3, goles_l: ["Costanza Franco (2)","Mariana González"], goles_v: ["Clara Iturrioz (2)","Ailín Randisi"] },
@@ -17117,6 +17118,7 @@ const BD_H2H = {
         { fecha: "Fecha 5 - Clausura 2026 - 30 ago 2026", torneo: "promocional", l: "Sansinena", v: "Tiro Federal", gl: 1, gv: 3, goles_l: ["Santiago González"], goles_v: ["Gino Carrozzi (2)","Juan Ignacio Talmón"] },
         { fecha: "Fecha 5 - Clausura 2026", torneo: "reserva_promocional", l: "Sansinena", v: "Tiro Federal", gl: 1, gv: 1},
         { fecha: "Clausura 2026 - Fecha 4", torneo: "senior", l: "Tiro Federal", v: "Sansinena", gl: 1, gv: 1, goles_l: ["Daniel Fernández"], goles_v: ["Pablo Moggia"] },
+        { fecha: "Fecha 12 - Clausura 2026 - 17 oct", torneo: "promocional", l: "Tiro Federal", v: "Sansinena", gl: 1, gv: 0, goles_l: ["Mariano McCoubrey"], goles_v: [] },
     ],
     "Bella Vista|Pacífico BB": [
         { fecha: "Apertura 2026 - Fecha 4", torneo: "senior", l: "Pacífico BB", v: "Bella Vista", gl: 1, gv: 1, goles_l: [], goles_v: [] },
@@ -17296,6 +17298,7 @@ const BD_H2H = {
         { fecha: "Torneo 2026 - Fecha 16", torneo: "sub15fem", l: "San Francisco", v: "La Armonía", gl: 3, gv: 1 },
         { fecha: "Fecha 5 - Clausura 2026 - 29 ago 2026", torneo: "oficial", l: "San Francisco", v: "La Armonía", gl: 1, gv: 0, goles_l: ["Marcelo Castellano"], goles_v: [] },
         { fecha: "Fecha 5 - Clausura 2026", torneo: "reserva_oficial", l: "San Francisco", v: "La Armonía", gl: 2, gv: 4 },
+        { fecha: "Fecha 12 - Clausura 2026 - 17 oct", torneo: "oficial", l: "La Armonía", v: "San Francisco", gl: 1, gv: 2, goles_l: ["Jerónimo Blanco"], goles_v: ["Federico Pinedo (2)"] },
     ],
     "Dublin|Pacífico BB": [
         { fecha: "Fecha 5 - Apertura 2026 - 11 abr 2026", torneo: "promocional", l: "Dublin", v: "Pacífico BB", gl: 1, gv: 0, goles_l: ["Jonathan Arias"], goles_v: [] },
@@ -17308,6 +17311,7 @@ const BD_H2H = {
         { fecha: "Fecha 5 - Clausura 2026", torneo: "reserva_promocional", l: "Pacífico BB", v: "Dublin", gl: 5, gv: 0 },
         { fecha: "Clausura 2026 - Fecha 6", torneo: "futsal", l: "Dublin", v: "Pacífico BB", gl: 4, gv: 2 },
         { fecha: "Clausura 2026 - Fecha 6", torneo: "futsalreserva", l: "Dublin", v: "Pacífico BB", gl: 6, gv: 1 },
+        { fecha: "Fecha 12 - Apertura 2026 - 15 jun 2026", torneo: "promocional", l: "Dublin", v: "Pacífico BB", gl: 0, gv: 1, goles_l: [], goles_v: ["Emanuel Rodríguez"] },
     ],
     "Comercial|Rosario PB": [
         { fecha: "Fecha 5 - Apertura 2026 - 11 abr 2026", torneo: "promocional", l: "Rosario PB", v: "Comercial", gl: 2, gv: 0, goles_l: ["Sebastián Mendoza","Agustín Grippaudo"], goles_v: [] },
@@ -17316,6 +17320,7 @@ const BD_H2H = {
         { fecha: "Fecha 12 - Apertura 2026", torneo: "reserva_promocional", l: "Comercial", v: "Rosario PB", gl: 2, gv: 2 },
         { fecha: "Fecha 5 - Clausura 2026 - 31 ago 2026", torneo: "promocional", l: "Rosario PB", v: "Comercial", gl: 1, gv: 1, goles_l: ["Sebastián Mendoza"], goles_v: ["Mateo Silenzi"] },
         { fecha: "Fecha 5 - Clasura 2026", torneo: "reserva_promocional", l: "Rosario PB", v: "Comercial", gl: 1, gv: 0 }, 
+       { fecha: "Fecha 12 - Clausura 2026 - 17 oct", torneo: "promocional", l: "Comercial", v: "Rosario PB", gl: 2, gv: 2, goles_l: ["Santiago Giorgis","Alejo Gil"], goles_v: ["Sebastián Mendoza","Favio Durán"] },
     ],
     "Kimberley|Olimpo": [
         { fecha: "Fecha 5 - Fase inicial - 18 abr 2026", torneo: "federala", l: "Kimberley", v: "Olimpo", gl: 0, gv: 1, goles_l: [], goles_v: ["Cristian Ibarra"] },
@@ -21116,9 +21121,10 @@ const BD_GOLEADORES_CLAUSURA_OFICIAL = [
           { fecha: "Fecha 1", rival: "Bella Vista", gl: 1, gv: 2, condicion: "Visitante", goles: 1 }
       ]
     },
-{ jugador: "Federico Pinedo", equipo: "San Francisco", goles: 1,
+{ jugador: "Federico Pinedo", equipo: "San Francisco", goles: 3,
       partidos: [
-          { fecha: "Fecha 1", rival: "Bella Vista", gl: 1, gv: 2, condicion: "Visitante", goles: 1 }
+          { fecha: "Fecha 1", rival: "Bella Vista", gl: 1, gv: 2, condicion: "Visitante", goles: 1 },
+          { fecha: "Fecha 12", rival: "La Armonía", gl: 1, gv: 2, condicion: "Visitante", goles: 2 }
       ]
     },
 { jugador: "Marcelo Castellano", equipo: "San Francisco", goles: 3,
@@ -21309,6 +21315,11 @@ const BD_GOLEADORES_CLAUSURA_OFICIAL = [
           { fecha: "Fecha 10", rival: "Liniers", gl: 1, gv: 1, condicion: "Local", goles: 1 }
       ]
     },
+{ jugador: "Jerónimo Blanco", equipo: "La Armonía", goles: 1,
+      partidos: [
+          { fecha: "Fecha 12", rival: "San Francisco", gl: 1, gv: 2, condicion: "Local", goles: 1 },
+      ]
+    },
 ];
 
 const BD_GOLEADORES_CLAUSURA_PROMOCIONAL = [
@@ -21335,9 +21346,10 @@ const BD_GOLEADORES_CLAUSURA_PROMOCIONAL = [
           { fecha: "Fecha 5", rival: "Dublin", gl: 2, gv: 0, condicion: "Local", goles: 1 }
       ]
     },
-{ jugador: "Emanuel Rodríguez", equipo: "Pacífico BB", goles: 1,
+{ jugador: "Emanuel Rodríguez", equipo: "Pacífico BB", goles: 2,
       partidos: [
-          { fecha: "Fecha 5", rival: "Dublin", gl: 2, gv: 0, condicion: "Local", goles: 1 }
+          { fecha: "Fecha 5", rival: "Dublin", gl: 2, gv: 0, condicion: "Local", goles: 1 },
+          { fecha: "Fecha 12", rival: "Dublin", gl: 1, gv: 0, condicion: "Visitante", goles: 1 },
       ]
     },
 { jugador: "Joaquín Laborde", equipo: "Tiro Federal", goles: 1,
@@ -21373,11 +21385,12 @@ const BD_GOLEADORES_CLAUSURA_PROMOCIONAL = [
           { fecha: "Fecha 9", rival: "Olimpo", gl: 1, gv: 0, condicion: "Local", goles: 1 },
       ]
     },
-{ jugador: "Mariano McCoubrey", equipo: "Tiro Federal", goles: 3,
+{ jugador: "Mariano McCoubrey", equipo: "Tiro Federal", goles: 4,
       partidos: [
           { fecha: "Fecha 1", rival: "Comercial", gl: 4, gv: 0, condicion: "Local", goles: 1 },
           { fecha: "Fecha 6", rival: "Dublin", gl: 2, gv: 3, condicion: "Visitante", goles: 1 },
           { fecha: "Fecha 11", rival: "Pacífico (C)", gl: 0, gv: 6, condicion: "Visitante", goles: 1 },
+          { fecha: "Fecha 12", rival: "Sansinena", gl: 1, gv: 0, condicion: "Local", goles: 1 },
       ]
     },
 { jugador: "Gino Pizzorno ", equipo: "Tiro Federal", goles: 1,
@@ -21407,13 +21420,14 @@ const BD_GOLEADORES_CLAUSURA_PROMOCIONAL = [
           { fecha: "Fecha 11", rival: "Pacífico (C)", gl: 0, gv: 6, condicion: "Visitante", goles: 1 },
       ]
     },
-{ jugador: "Alejo Gil", equipo: "Comercial", goles: 5,
+{ jugador: "Alejo Gil", equipo: "Comercial", goles: 6,
       partidos: [
           { fecha: "Fecha 3", rival: "Rosario PB", gl: 1, gv: 1, condicion: "Local", goles: 1 },
           { fecha: "Fecha 4", rival: "Dublin", gl: 3, gv: 2, condicion: "Local", goles: 1 },
           { fecha: "Fecha 6", rival: "Pacífico BB", gl: 1, gv: 1, condicion: "Visitante", goles: 1 },
           { fecha: "Fecha 7", rival: "Pacífico (C)", gl: 1, gv: 0, condicion: "Local", goles: 1 },
-          { fecha: "Fecha 9", rival: "Sansinena", gl: 3, gv: 1, condicion: "Local", goles: 1 }
+          { fecha: "Fecha 9", rival: "Sansinena", gl: 3, gv: 1, condicion: "Local", goles: 1 },
+          { fecha: "Fecha 12", rival: "Rosario PB", gl: 2, gv: 2, condicion: "Local", goles: 1 }
       ]
     },
 { jugador: "Leandro Giordano", equipo: "Comercial", goles: 1,
@@ -21451,9 +21465,10 @@ const BD_GOLEADORES_CLAUSURA_PROMOCIONAL = [
           { fecha: "Fecha 5", rival: "Rosario PB", gl: 1, gv: 1, condicion: "Visitante", goles: 1 }
       ]
     },
-{ jugador: "Santiago Giorgis", equipo: "Comercial", goles: 1,
+{ jugador: "Santiago Giorgis", equipo: "Comercial", goles: 2,
       partidos: [
-          { fecha: "Fecha 4", rival: "Dublin", gl: 3, gv: 2, condicion: "Local", goles: 1 }
+          { fecha: "Fecha 4", rival: "Dublin", gl: 3, gv: 2, condicion: "Local", goles: 1 },
+          { fecha: "Fecha 12", rival: "Rosario PB", gl: 2, gv: 2, condicion: "Local", goles: 1 }
       ]
     },
 { jugador: "Joaquín Vidal", equipo: "Olimpo", goles: 4,
@@ -21475,7 +21490,7 @@ const BD_GOLEADORES_CLAUSURA_PROMOCIONAL = [
           { fecha: "Fecha 6", rival: "Sansinena", gl: 0, gv: 5, condicion: "Visitante", goles: 1 },
       ]
     },
-{ jugador: "Nahuel Colmenares", equipo: "Olimpo", goles: 9,
+{ jugador: "Nahuel Colmenares", equipo: "Olimpo", goles: 10,
       partidos: [
           { fecha: "Fecha 2", rival: "Tiro Federal", gl: 3, gv: 2, condicion: "Local", goles: 2 },
           { fecha: "Fecha 5", rival: "Pacífico (C)", gl: 0, gv: 5, condicion: "Visitante", goles: 4 },
@@ -21523,20 +21538,22 @@ const BD_GOLEADORES_CLAUSURA_PROMOCIONAL = [
           { fecha: "Fecha 9", rival: "Pacífico BB", gl: 0, gv: 1, condicion: "Visitante", goles: 1 }
       ]
     },
-{ jugador: "Favio Durán", equipo: "Rosario PB", goles: 5,
+{ jugador: "Favio Durán", equipo: "Rosario PB", goles: 6,
       partidos: [
           { fecha: "Fecha 6", rival: "Pacífico (C)", gl: 1, gv: 2, condicion: "Visitante", goles: 1 },
           { fecha: "Fecha 7", rival: "Sansinena", gl: 3, gv: 1, condicion: "Local", goles: 2 },
           { fecha: "Fecha 8", rival: "Dublin", gl: 3, gv: 2, condicion: "Local", goles: 1 },
-          { fecha: "Fecha 10", rival: "Tiro Federal", gl: 1, gv: 1, condicion: "Local", goles: 1 }
+          { fecha: "Fecha 10", rival: "Tiro Federal", gl: 1, gv: 1, condicion: "Local", goles: 1 },
+          { fecha: "Fecha 12", rival: "Comercial", gl: 2, gv: 2, condicion: "Visitante", goles: 1 }
       ]
     },
-{ jugador: "Sebastián Mendoza", equipo: "Rosario PB", goles: 5,
+{ jugador: "Sebastián Mendoza", equipo: "Rosario PB", goles: 6,
       partidos: [
           { fecha: "Fecha 5", rival: "Comercial", gl: 1, gv: 1, condicion: "Local", goles: 1 },
           { fecha: "Fecha 6", rival: "Pacífico (C)", gl: 1, gv: 2, condicion: "Visitante", goles: 1 },
           { fecha: "Fecha 7", rival: "Sansinena", gl: 3, gv: 1, condicion: "Local", goles: 1 },
-          { fecha: "Fecha 8", rival: "Dublin", gl: 3, gv: 2, condicion: "Local", goles: 2 }
+          { fecha: "Fecha 8", rival: "Dublin", gl: 3, gv: 2, condicion: "Local", goles: 2 },
+          { fecha: "Fecha 12", rival: "Comercial", gl: 2, gv: 2, condicion: "Visitante", goles: 1 }
       ]
     },
 { jugador: "Gerónimo Fernández", equipo: "Sansinena", goles: 3,
@@ -22441,6 +22458,7 @@ const BD_ARQUEROS_CLAUSURA_OFICIAL = [
             { rival: "Libertad", resultado: "Huracán 1 - 0 Libertad", fecha: 7 },
             { rival: "Villa Mitre", resultado: "Huracán 0 - 0 Villa Mitre", fecha: 10 },
             { rival: "La Armonía", resultado: "Huracán 0 - 0 La Armonía", fecha: 11 },
+            { rival: "Liniers", resultado: "Liniers 0 - 0 Huracán", fecha: 12 },
         ]},
         { jugador: "Facundo Tavoliere", equipo: "Sporting", partidos: [
             { rival: "La Armonía", resultado: "Sporting 2 - 0 La Armonía", fecha: 1 },
@@ -22463,6 +22481,7 @@ const BD_ARQUEROS_CLAUSURA_OFICIAL = [
         { jugador: "Andoni Mendiguibel", equipo: "Liniers", partidos: [
             { rival: "Bella Vista", resultado: "Bella Vista 0 - 0 Liniers", fecha: 2 },
             { rival: "San Francisco", resultado: "Liniers 2 - 0 San Francisco", fecha: 7 },
+            { rival: "Huracán", resultado: "Liniers 0 - 0 Huracán", fecha: 12 },
         ]},
         { jugador: "Ignacio Torres", equipo: "La Armonía", partidos: [
             { rival: "Villa Mitre", resultado: "La Armonía 0 - 0 Villa Mitre", fecha: 2 },
@@ -22491,7 +22510,8 @@ const BD_ARQUEROS_CLAUSURA_PROMOCIONAL = [
             { rival: "Comercial", resultado: "Tiro Federal 4 - 0 Comercial", fecha: 1 },
             { rival: "Pacífico BB", resultado: "Tiro Federal 0 - 0 Pacífico BB", fecha: 7 },
             { rival: "Olimpo", resultado: "Tiro Federal 1 - 0 Olimpo", fecha: 9 },
-            { rival: "Pacífico (C)", resultado: "Pacífico (C) 0 - 6 Tiro Federal", fecha: 11 }
+            { rival: "Pacífico (C)", resultado: "Pacífico (C) 0 - 6 Tiro Federal", fecha: 11 },
+            { rival: "Sansinena", resultado: "Tiro Federal 1 - 0 Sansinena", fecha: 12 }
         ]},
         { jugador: "Enzo Riffo", equipo: "Rosario PB", partidos: [
             { rival: "Dublin", resultado: "Rosario PB 1 - 0 Dublin", fecha: 1 },
@@ -22514,6 +22534,7 @@ const BD_ARQUEROS_CLAUSURA_PROMOCIONAL = [
             { rival: "Dublin", resultado: "Pacífico BB 2 - 0 Dublin", fecha: 5 },
             { rival: "Tiro Federal", resultado: "Tiro Federal 0 - 0 Pacífico BB", fecha: 7 },
             { rival: "Pacífico (C)", resultado: "Pacífico (C) 0 - 2 Pacífico BB", fecha: 10 },
+            { rival: "Dublin", resultado: "Dublin 0 - 1 Pacífico BB", fecha: 12 },
         ]},
         { jugador: "Inan Bauer", equipo: "Sansinena", partidos: [
             { rival: "Comercial", resultado: "Sansinena 2 - 0 Comercial", fecha: 2 },
@@ -22821,23 +22842,23 @@ const BD_POSICIONES = {
             { nombre: "Sporting <b>(X)</b>",      clase: "sporting",     pj:14, pg:3, pe:4, pp:7, gf:15, gc:22,  pts:13 }
         ],
         clausura: [
-            { nombre: "Huracán <b>(A)</b>",       clase: "huracan",      pj:11, pg:3, pe:8, pp:0, gf:8, gc:5,  pts:17 },
+            { nombre: "Huracán <b>(A)</b>",       clase: "huracan",      pj:12, pg:3, pe:9, pp:0, gf:8, gc:5,  pts:18 },
+            { nombre: "San Francisco", clase: "sanfrancisco", pj:12, pg:4, pe:6, pp:2, gf:11, gc:10,  pts:18 },
             { nombre: "Villa Mitre",   clase: "villamitre",   pj:11, pg:3, pe:6, pp:2, gf:7, gc:13,  pts:15 },
-            { nombre: "San Francisco", clase: "sanfrancisco", pj:11, pg:3, pe:6, pp:2, gf:9, gc:9,  pts:15 },
             { nombre: "Sporting",      clase: "sporting",     pj:11, pg:3, pe:6, pp:2, gf:8, gc:6,  pts:15 },
-            { nombre: "La Armonía",    clase: "laarmonia",    pj:11, pg:3, pe:5, pp:3, gf:8, gc:9,  pts:14 },
+            { nombre: "La Armonía",    clase: "laarmonia",    pj:12, pg:3, pe:5, pp:4, gf:9, gc:11,  pts:14 },
             { nombre: "Bella Vista",   clase: "bellavista",   pj:11, pg:3, pe:5, pp:3, gf:11, gc:9,  pts:14 },
             { nombre: "Libertad",      clase: "libertad",     pj:11, pg:2, pe:5, pp:4, gf:5, gc:8,  pts:11 },
-            { nombre: "Liniers",       clase: "liniers",      pj:11, pg:2, pe:3, pp:6, gf:10, gc:10,  pts:9 },
+            { nombre: "Liniers",       clase: "liniers",      pj:12, pg:2, pe:4, pp:6, gf:10, gc:10,  pts:10 },
 ],
         acumulada: [
-            { nombre: "Huracán <b>(S)</b>",       clase: "huracan",      pj:25, pg:10, pe:13, pp:2,  gf:30, gc:18, pts:43 },
+            { nombre: "Huracán <b>(S)</b>",       clase: "huracan",      pj:26, pg:10, pe:14, pp:2,  gf:30, gc:18, pts:44 },
             { nombre: "Bella Vista <b>(S)</b>",   clase: "bellavista",   pj:25, pg:10,  pe:9,  pp:6,  gf:32, gc:20, pts:39 },
             { nombre: "Villa Mitre",   clase: "villamitre",   pj:25, pg:8,  pe:9,  pp:8,  gf:23, gc:26, pts:34 },
-            { nombre: "Liniers",       clase: "liniers",      pj:25, pg:8,  pe:8,  pp:9,  gf:27, gc:17, pts:32 },
+            { nombre: "Liniers",       clase: "liniers",      pj:26, pg:8,  pe:9,  pp:9,  gf:27, gc:17, pts:33 },
+            { nombre: "San Francisco", clase: "sanfrancisco", pj:26, pg:7,  pe:10,  pp:9,  gf:20, gc:28, pts:31 },
             { nombre: "Libertad",      clase: "libertad",     pj:25, pg:6,  pe:11, pp:8,  gf:19, gc:25, pts:29 },
-            { nombre: "San Francisco", clase: "sanfrancisco", pj:25, pg:6,  pe:10,  pp:9,  gf:18, gc:27, pts:28 },
-            { nombre: "La Armonía",    clase: "laarmonia",    pj:25, pg:7,  pe:7,  pp:11, gf:22, gc:34, pts:28 },
+            { nombre: "La Armonía",    clase: "laarmonia",    pj:26, pg:7,  pe:7,  pp:12, gf:23, gc:36, pts:28 },
             { nombre: "Sporting",      clase: "sporting",     pj:25, pg:6,  pe:10,  pp:9,  gf:23, gc:28, pts:28 }
         ]
     },
@@ -22854,22 +22875,22 @@ const BD_POSICIONES = {
         ],
         clausura: [
             { nombre: "Olimpo <b>(C)</b>",              clase: "olimpo",          pj:12, pg:8, pe:3, pp:1, gf:27, gc:6, pts:27 },
-            { nombre: "Rosario PB",          clase: "rosariopb",       pj:11, pg:5, pe:5, pp:1, gf:14, gc:10, pts:20 },
-            { nombre: "Tiro Federal",        clase: "tirofederal",     pj:11, pg:5, pe:4, pp:2, gf:26, gc:13, pts:19 },
-            { nombre: "Comercial <b>(A)</b>",           clase: "comercial",       pj:11, pg:5, pe:3, pp:3, gf:17, gc:20, pts:18 },
-            { nombre: "Pacífico BB",         clase: "pacificobb",      pj:11, pg:2, pe:6, pp:3, gf:9, gc:0, pts:12 },
-            { nombre: "Sansinena",           clase: "sansinena",       pj:11, pg:2, pe:5, pp:4, gf:14, gc:22, pts:11 },
+            { nombre: "Tiro Federal <b>(C)</b>",        clase: "tirofederal",     pj:12, pg:6, pe:4, pp:2, gf:27, gc:13, pts:22 },
+            { nombre: "Rosario PB <b>(C)</b>",          clase: "rosariopb",       pj:12, pg:5, pe:6, pp:1, gf:16, gc:12, pts:21 },
+            { nombre: "Comercial <b>(A)</b>",           clase: "comercial",       pj:12, pg:5, pe:4, pp:3, gf:19, gc:22, pts:19 },
+            { nombre: "Pacífico BB",         clase: "pacificobb",      pj:12, pg:3, pe:6, pp:3, gf:10, gc:9, pts:15 },
+            { nombre: "Sansinena <b>(X)</b>",           clase: "sansinena",       pj:12, pg:2, pe:5, pp:5, gf:14, gc:23, pts:11 },
             { nombre: "Pacífico (C) <b>(X)</b>",        clase: "pacificocabildo", pj:12, pg:2, pe:2, pp:8, gf:12, gc:28, pts:9 },
-            { nombre: "Dublin <b>(X)</b>",              clase: "dublin",          pj:11, pg:1, pe:1, pp:9, gf:14, gc:26, pts:4 }
+            { nombre: "Dublin <b>(X)</b>",              clase: "dublin",          pj:12, pg:1, pe:1, pp:10, gf:14, gc:27, pts:4 }
 ],
         acumulada: [
-            { nombre: "Rosario PB",    clase: "rosariopb",       pj:25, pg:12, pe:10,  pp:3,  gf:41, gc:26, pts:46 },
-            { nombre: "Tiro Federal",  clase: "tirofederal",     pj:25, pg:13, pe:7,  pp:5,  gf:49, gc:19, pts:46 },
-            { nombre: "Comercial",     clase: "comercial",       pj:25, pg:13, pe:6,  pp:6,  gf:34, gc:29, pts:45 },
+            { nombre: "Tiro Federal",        clase: "tirofederal",     pj:26, pg:14, pe:7, pp:5, gf:50, gc:19, pts:49 },
+            { nombre: "Rosario PB",    clase: "rosariopb",       pj:26, pg:12, pe:11,  pp:3,  gf:43, gc:28, pts:47 },
+            { nombre: "Comercial",     clase: "comercial",       pj:26, pg:13, pe:7,  pp:6,  gf:36, gc:31, pts:46 },
             { nombre: "Olimpo",        clase: "olimpo",          pj:26, pg:12,  pe:7,  pp:7,  gf:43, gc:21, pts:43 },
-            { nombre: "Sansinena <b>(X)</b>",     clase: "sansinena",       pj:25, pg:7,  pe:11, pp:7,  gf:34, gc:44, pts:32 },
-            { nombre: "Dublin <b>(X)</b>",        clase: "dublin",          pj:25, pg:5,  pe:6,  pp:14, gf:25, gc:44, pts:21 },
-            { nombre: "Pacífico BB <b>(X)</b>",   clase: "pacificobb",      pj:25, pg:3,  pe:11, pp:11, gf:17, gc:30, pts:20 },
+            { nombre: "Sansinena <b>(X)</b>",     clase: "sansinena",       pj:26, pg:7,  pe:11, pp:8,  gf:34, gc:45, pts:32 },
+            { nombre: "Pacífico BB <b>(X)</b>",   clase: "pacificobb",      pj:26, pg:4,  pe:11, pp:11, gf:18, gc:30, pts:23 },
+            { nombre: "Dublin <b>(X)</b>",        clase: "dublin",          pj:26, pg:5,  pe:6,  pp:15, gf:25, gc:45, pts:21 },
             { nombre: "Pacífico (C) <b>(X)</b>",  clase: "pacificocabildo", pj:26, pg:3,  pe:7,  pp:16, gf:28, gc:59, pts:17 }
         ]
     },
@@ -23015,7 +23036,7 @@ if (tor === 'clausura' && cat === 'femenino') {
     return html + "</tbody></table><div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>6</b> tras la fecha 12<br><b>(A)</b> Ganador del Apertura<br><b>(C)</b> Clasificado a Playoffs<br><b>(X)</b> Eliminado</div>" + htmlAcum;
 }
 if (tor === 'clausura' && cat === 'promocional') {
-    return html + "</tbody></table><div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'><b>(A)</b> Ganador del Apertura<br><b>(C)</b> Clasificado a Playoffs<br><b>(X)</b> Eliminado<br>📌 Puntos en juego: <b>9</b> tras la fecha 11</div>";
+    return html + "</tbody></table><div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'><b>(A)</b> Ganador del Apertura<br><b>(C)</b> Clasificado a Playoffs<br><b>(X)</b> Eliminado<br>📌 Puntos en juego: <b>6</b> tras la fecha 12</div>";
 }
 if (tor === 'apertura' && cat === 'promocional') {
     return html + "</tbody></table><div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'><b>(X)</b> Eliminado<br>📌 Puntos en juego: <b>Torneo finalizado</b></b></div>";
