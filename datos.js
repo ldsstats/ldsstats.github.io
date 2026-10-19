@@ -1326,7 +1326,7 @@ BD_FIXTURES.oficial.reserva.push(
     { fecha: 12, partidos: [
         {l:"Sporting",   v:"Libertad",   gl:3, gv:0},
         {l:"La Armonía",   v:"San Francisco",   gl:null, gv:null},
-        {l:"Liniers",   v:"Huracán",   gl:null, gv:null},
+        {l:"Liniers",   v:"Huracán",   gl:2, gv:0},
         {l:"Villa Mitre",   v:"Bella Vista",   gl:null, gv:null}
     ]},
     { fecha: 13, partidos: [
@@ -18098,10 +18098,10 @@ function generarReserva(cat) {
                        {n:"Villa Mitre <b>(C)</b>",   cl:"villamitre",   pj:10, pg:7, pe:2, pp:1, gf:24, gc:13, pts:23},
                        {n:"Sporting <b>(A)</b>",      cl:"sporting",     pj:11, pg:6, pe:2, pp:3, gf:16, gc:14, pts:20},
                        {n:"La Armonía",    cl:"laarmonia",    pj:10, pg:5, pe:3, pp:2, gf:19, gc:14, pts:18},
-                       {n:"Liniers",       cl:"liniers",      pj:11, pg:4, pe:2, pp:5, gf:13, gc:11, pts:14},
+                       {n:"Liniers",       cl:"liniers",      pj:12, pg:5, pe:2, pp:5, gf:15, gc:11, pts:17},
                        {n:"Libertad <b>(X)</b>",      cl:"libertad",     pj:12, pg:2, pe:2, pp:8, gf:15, gc:21, pts:8},
                        {n:"San Francisco", cl:"sanfrancisco", pj:10, pg:2, pe:2, pp:6, gf:14, gc:20, pts:8},
-                       {n:"Huracán <b>(X)</b>",       cl:"huracan",      pj:11, pg:1, pe:3, pp:7, gf:14, gc:28, pts:6},],
+                       {n:"Huracán <b>(X)</b>",       cl:"huracan",      pj:12, pg:1, pe:3, pp:8, gf:14, gc:30, pts:6},],
         'promocional':[
                        {n:"Sansinena",           cl:"sansinena",        pj:11, pg:6, pe:3, pp:2, gf:22, gc:12, pts:21},
                        {n:"Rosario PB",          cl:"rosariopb",        pj:12, pg:6, pe:2, pp:4, gf:20, gc:19, pts:20},
