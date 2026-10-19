@@ -23547,9 +23547,10 @@ BD_GOLEADORES_REGAMATEUR.push({
     ]
 });
 BD_GOLEADORES_REGAMATEUR.push({
-    jugador: "Iván Agudiak", equipo: "Huracán", goles: 1,
+    jugador: "Iván Agudiak", equipo: "Huracán", goles: 2,
     partidos: [
         { rival: "Ferro de Olavarría", resultado: "Huracán 3 - 0 Ferro de Olavarría", instancia: "Zona 3 - Fecha 5 - Primera Instancia" },
+        { rival: "Independiente de San Cayetano", resultado: "Huracán 1 - 0 Independiente de San Cayetano", instancia: "Bonaerense Pampeana Sur - Segunda Instancia - Vuelta" },
     ]
 });
 BD_GOLEADORES_REGAMATEUR.push({
