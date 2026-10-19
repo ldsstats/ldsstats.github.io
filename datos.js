@@ -23293,14 +23293,14 @@ const BD_REGAMATEUR_PLAYOFFS = {
           vuelta: { local: "<b>Racing de Olavarría<b>", clL: "racingolavarria", visitante: "<s>Argentino de 25 de Mayo</s>", clV: "arg25demayo", gl: 5, gv: 1, goles_l: [], goles_v: [] } }
     ],
     tercera: [
-        { ida:    { local: "A confirmar", clL: "aconfirmar", visitante: "Santa Rita", clV: "santarita", gl: null, gv: null, goles_l: [], goles_v: [] },
-          vuelta: { local: "Santa Rita", clL: "santarita", visitante: "A confirmar", clV: "aconfirmar", gl: null, gv: null, goles_l: [], goles_v: [] } },
-        { ida:    { local: "A confirmar", clL: "aconfirmar", visitante: "Dep. Norte", clV: "depnorte", gl: null, gv: null, goles_l: [], goles_v: [] },
-          vuelta: { local: "Dep. Norte", clL: "depnorte", visitante: "A confirmar", clV: "aconfirmar", gl: null, gv: null, goles_l: [], goles_v: [] } },
-        { ida:    { local: "A confirmar", clL: "aconfirmar", visitante: "All Boys de Trenel", clV: "allboystrenel", gl: null, gv: null, goles_l: [], goles_v: [] },
-          vuelta: { local: "All Boys de Trenel", clL: "allboystrenel", visitante: "A confirmar", clV: "aconfirmar", gl: null, gv: null, goles_l: [], goles_v: [] } },
-                { ida:    { local: "A confirmar", clL: "aconfirmar", visitante: "Estudiantes (Olavarría)", clV: "estudiantesolavarria", gl: null, gv: null, goles_l: [], goles_v: [] },
-          vuelta: { local: "Estudiantes (Olavarría)", clL: "estudiantesolavarria", visitante: "A confirmar", clV: "aconfirmar", gl: null, gv: null, goles_l: [], goles_v: [] } }
+        { ida:    { local: "Huracán", clL: "huracan", visitante: "Santa Rita", clV: "santarita", gl: null, gv: null, goles_l: [], goles_v: [] },
+          vuelta: { local: "Santa Rita", clL: "santarita", visitante: "Huracán", clV: "huracan", gl: null, gv: null, goles_l: [], goles_v: [] } },
+        { ida:    { local: "Quilmes de Mar del Plata", clL: "quilmesmdp", visitante: "Dep. Norte", clV: "depnorte", gl: null, gv: null, goles_l: [], goles_v: [] },
+          vuelta: { local: "Dep. Norte", clL: "depnorte", visitante: "Quilmes de Mar del Plata", clV: "quilmesmdp", gl: null, gv: null, goles_l: [], goles_v: [] } },
+        { ida:    { local: "Ferro de Pico", clL: "ferropico", visitante: "All Boys de Trenel", clV: "allboystrenel", gl: null, gv: null, goles_l: [], goles_v: [] },
+          vuelta: { local: "All Boys de Trenel", clL: "allboystrenel", visitante: "Ferro de Pico", clV: "ferropico", gl: null, gv: null, goles_l: [], goles_v: [] } },
+                { ida:    { local: "Racing de Olavarría", clL: "racingolavarria", visitante: "Estudiantes (Olavarría)", clV: "estudiantesolavarria", gl: null, gv: null, goles_l: [], goles_v: [] },
+          vuelta: { local: "Estudiantes (Olavarría)", clL: "estudiantesolavarria", visitante: "Racing de Olavarría", clV: "racingolavarria", gl: null, gv: null, goles_l: [], goles_v: [] } }
     ],
     cuarta: [
         { ida:    { local: "A confirmar", clL: "aconfirmar", visitante: "A confirmar", clV: "aconfirmar", gl: null, gv: null, goles_l: [], goles_v: [] },
