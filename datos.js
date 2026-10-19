@@ -1206,7 +1206,7 @@ const idaOficialClausura = [
     { fecha: 9,  partidos: [{l:"Huracán",    v:"Sporting",       gl:2, gv:1, dia:"Vie 25/09", hora:"19:00", goles_l:["Lautaro Torres","Lautaro Cerato"], goles_v:["Jonathan Font"]}, {l:"Libertad",    v:"San Francisco", gl:1, gv:1, dia:"Sáb 26/09", hora:"15:30", goles_l:["Franco Pane"], goles_v:["Alexis Vega"]}, {l:"Liniers",     v:"Bella Vista",   gl:0, gv:2, dia:"Dom 27/09", hora:"15:30", goles_l:[], goles_v:["Agustín Reule","Felipe Acharez"]}, {l:"Villa Mitre", v:"La Armonía",    gl:1, gv:1, dia:"Lun 28/09", hora:"15:30", goles_l:["Valentino Valeri"], goles_v:["Julio Acosta"]}] },
     { fecha: 10, partidos: [{l:"Huracán",     v:"Villa Mitre", gl:0, gv:0, dia:"Dom 04/10", hora:"15:30", goles_l:[], goles_v:[]}, {l:"San Francisco",v:"Sporting", gl:0, gv:0, dia:"Dom 04/10", hora:"15:30", goles_l:[], goles_v:[]}, {l:"La Armonía",  v:"Liniers", gl:1, gv:1, dia:"Dom 04/10", hora:"15:30", goles_l:["Ezequiel Intrevado"], goles_v:["Nicolás Malerba"]}, {l:"Bella Vista", v:"Libertad", gl:2, gv:0, dia:"Dom 04/10", hora:"15:30", goles_l:["Rodrigo Gómez","Gabino Bellegia"], goles_v:[]}] },
     { fecha: 11, partidos: [{l:"San Francisco",v:"Villa Mitre",  gl:0, gv:2, dia:"Dom 11/10", hora:"16:00", goles_l:[], goles_v:["Constanzo Palacio","Ramiro Gerk"]}, {l:"Libertad",    v:"Liniers",       gl:1, gv:0, dia:"Dom 11/10", hora:"16:00", goles_l:["Gianluca Falcioni"], goles_v:[]}, {l:"Bella Vista", v:"Sporting",      gl:1, gv:2, dia:"Lun 12/10", hora:"16:00", goles_l:["Lucas Martínez"], goles_v:["Valentino Barone","Sixto Theaux"]}, {l:"Huracán",     v:"La Armonía",    gl:0, gv:0, dia:"Lun 12/10", hora:"19:30", goles_l:[], goles_v:[]}] },
-    { fecha: 12, partidos: [{l:"La Armonía",  v:"San Francisco", gl:1, gv:2, dia:"Sáb 17/10", hora:"16:00", goles_l:["Jerónimo Blanco"], goles_v:["Federico Pinedo (2)"]}, {l:"Liniers",     v:"Huracán",       gl:0, gv:0, dia:"Sáb 17/10", hora:"16:00", goles_l:[], goles_v:[]}, {l:"Sporting",    v:"Libertad",      gl:2, gv:2, dia:"Dom 18/10", hora:"16:00", goles_l:["Jonathan Font","Sixto Theaux"], goles_v:["Nahuel Sánchez","Franco Samana (e/c)"]}, {l:"Villa Mitre", v:"Bella Vista",   gl:null, gv:null, dia:"Lun 19/10", hora:"16:00", goles_l:[], goles_v:[]}] },
+    { fecha: 12, partidos: [{l:"La Armonía",  v:"San Francisco", gl:1, gv:2, dia:"Sáb 17/10", hora:"16:00", goles_l:["Jerónimo Blanco"], goles_v:["Federico Pinedo (2)"]}, {l:"Liniers",     v:"Huracán",       gl:0, gv:0, dia:"Sáb 17/10", hora:"16:00", goles_l:[], goles_v:[]}, {l:"Sporting",    v:"Libertad",      gl:2, gv:2, dia:"Dom 18/10", hora:"16:00", goles_l:["Jonathan Font","Sixto Theaux"], goles_v:["Nahuel Sánchez","Franco Samana (e/c)"]}, {l:"Villa Mitre", v:"Bella Vista",   gl:1, gv:3, dia:"Lun 19/10", hora:"16:00", goles_l:["Julián Monteverde"], goles_v:["Rodrigo Gómez (2)","Matías Mayer"]}] },
     { fecha: 13, partidos: [{l:"Villa Mitre", v:"Libertad",      gl:null, gv:null}, {l:"Huracán",     v:"San Francisco", gl:null, gv:null}, {l:"Liniers",     v:"Sporting",      gl:null, gv:null}, {l:"La Armonía",  v:"Bella Vista",   gl:null, gv:null}] },
     { fecha: 14, partidos: [{l:"Sporting",    v:"Villa Mitre",   gl:null, gv:null}, {l:"Bella Vista", v:"Huracán",       gl:null, gv:null}, {l:"Libertad",    v:"La Armonía",    gl:null, gv:null}, {l:"San Francisco",v:"Liniers",       gl:null, gv:null}] }
 ];
@@ -2065,7 +2065,7 @@ function generarHome() {
        ]},
      { id: "2026-10-19", label: "LUN 19/10", torneos: [
             { nombre: "OFICIAL | FECHA 12 | CLAUSURA", cat: "oficial", torLink: "oficial", noAutoResult: true, partidos: [
-            {l:"Villa Mitre", v:"Bella Vista", hora:"16:00", gl:null, gv:null, claseL:"villamitre", claseV:"bellavista"},
+            {l:"Villa Mitre", v:"Bella Vista", hora:"16:00", gl:1, gv:3, claseL:"villamitre", claseV:"bellavista"},
             ]},
        ]},
     ];
@@ -17321,6 +17321,7 @@ const BD_H2H = {
         { fecha: "Torneo 2026 - Fecha 20", torneo: "sub15fem", l: "Villa Mitre", v: "Bella Vista", gl: 4, gv: 4 },
         { fecha: "Fecha 13 - Clausura 2026 - 17 oct", torneo: "femenino", l: "Villa Mitre", v: "Bella Vista", gl: 4, gv: 0, goles_l: ["Morena Bouven (2)","Dana Ramos","Sol Menéndez Perrone"], goles_v: [] },
         { fecha: "Fecha 13 - Clausura 2026", torneo: "reserva_femenino", l: "Villa Mitre", v: "Bella Vista", gl: 3, gv: 1 },
+        { fecha: "Fecha 12 - Clausura 2026 - 19 oct", torneo: "oficial", l: "Villa Mitre", v: "Bella Vista", gl: 1, gv: 3, goles_l: ["Julián Monteverde"], goles_v: ["Rodrigo Gómez (2)","Matías Mayer"] },
     ],
     "La Armonía|San Francisco": [
         { fecha: "Fecha 5 - Apertura 2026 - 12 abr 2026", torneo: "oficial", l: "San Francisco", v: "La Armonía", gl: 1, gv: 2, goles_l: ["Federico Pinedo"], goles_v: ["Enrique Narvay","Ezequiel Intrevado"] },
@@ -21159,17 +21160,19 @@ const BD_GOLEADORAS_CLAUSURA_FEM = [
 
 const BD_GOLEADORES_CLAUSURA_OFICIAL = [
 
-{ jugador: "Matías Mayer", equipo: "Bella Vista", goles: 2,
+{ jugador: "Matías Mayer", equipo: "Bella Vista", goles: 3,
       partidos: [
           { fecha: "Fecha 4", rival: "Sporting", gl: 1, gv: 1, condicion: "Visitante", goles: 1 },
-          { fecha: "Fecha 6", rival: "La Armonía", gl: 2, gv: 3, condicion: "Local", goles: 1 }
+          { fecha: "Fecha 6", rival: "La Armonía", gl: 2, gv: 3, condicion: "Local", goles: 1 },
+          { fecha: "Fecha 12", rival: "Villa Mitre", gl: 1, gv: 3, condicion: "Visitante", goles: 1 },
       ]
     },
-{ jugador: "Rodrigo Gómez", equipo: "Bella Vista", goles: 3,
+{ jugador: "Rodrigo Gómez", equipo: "Bella Vista", goles: 5,
       partidos: [
           { fecha: "Fecha 1", rival: "San Francisco", gl: 1, gv: 2, condicion: "Local", goles: 1 },
           { fecha: "Fecha 5", rival: "Villa Mitre", gl: 1, gv: 0, condicion: "Local", goles: 1 },
-          { fecha: "Fecha 10", rival: "Libertad", gl: 2, gv: 0, condicion: "Local", goles: 1 }
+          { fecha: "Fecha 10", rival: "Libertad", gl: 2, gv: 0, condicion: "Local", goles: 1 },
+          { fecha: "Fecha 12", rival: "Villa Mitre", gl: 1, gv: 3, condicion: "Visitante", goles: 2 },
       ]
     },
 { jugador: "Nahuel Bardella", equipo: "Bella Vista", goles: 1,
@@ -21336,10 +21339,11 @@ const BD_GOLEADORES_CLAUSURA_OFICIAL = [
           { fecha: "Fecha 11", rival: "San Francisco", gl: 0, gv: 2, condicion: "Visitante", goles: 1 }
       ]
     },
-{ jugador: "Julián Monteverde", equipo: "Villa Mitre", goles: 2,
+{ jugador: "Julián Monteverde", equipo: "Villa Mitre", goles: 3,
       partidos: [
           { fecha: "Fecha 3", rival: "Huracán", gl: 2, gv: 2, condicion: "Local", goles: 1 },
-          { fecha: "Fecha 8", rival: "Liniers", gl: 1, gv: 0, condicion: "Local", goles: 1 }
+          { fecha: "Fecha 8", rival: "Liniers", gl: 1, gv: 0, condicion: "Local", goles: 1 },
+          { fecha: "Fecha 12", rival: "Bella Vista", gl: 1, gv: 3, condicion: "Local", goles: 1 },
       ]
     },
 { jugador: "Santiago Gómez", equipo: "Villa Mitre", goles: 1,
@@ -22941,17 +22945,17 @@ const BD_POSICIONES = {
         clausura: [
             { nombre: "Huracán <b>(A)</b>",       clase: "huracan",      pj:12, pg:3, pe:9, pp:0, gf:8, gc:5,  pts:18 },
             { nombre: "San Francisco", clase: "sanfrancisco", pj:12, pg:4, pe:6, pp:2, gf:11, gc:10,  pts:18 },
+            { nombre: "Bella Vista",   clase: "bellavista",   pj:12, pg:4, pe:5, pp:3, gf:14, gc:10,  pts:17 },
             { nombre: "Sporting",      clase: "sporting",     pj:12, pg:3, pe:7, pp:2, gf:10, gc:7,  pts:16 },
-            { nombre: "Villa Mitre",   clase: "villamitre",   pj:11, pg:3, pe:6, pp:2, gf:7, gc:13,  pts:15 },
+            { nombre: "Villa Mitre",   clase: "villamitre",   pj:12, pg:3, pe:6, pp:3, gf:8, gc:16,  pts:15 },
             { nombre: "La Armonía",    clase: "laarmonia",    pj:12, pg:3, pe:5, pp:4, gf:9, gc:11,  pts:14 },
-            { nombre: "Bella Vista",   clase: "bellavista",   pj:11, pg:3, pe:5, pp:3, gf:11, gc:9,  pts:14 },
             { nombre: "Libertad",      clase: "libertad",     pj:12, pg:2, pe:6, pp:4, gf:7, gc:10,  pts:12 },
             { nombre: "Liniers",       clase: "liniers",      pj:12, pg:2, pe:4, pp:6, gf:10, gc:10,  pts:10 },
 ],
         acumulada: [
             { nombre: "Huracán <b>(S)</b>",       clase: "huracan",      pj:26, pg:10, pe:14, pp:2,  gf:30, gc:18, pts:44 },
-            { nombre: "Bella Vista <b>(S)</b>",   clase: "bellavista",   pj:25, pg:10,  pe:9,  pp:6,  gf:32, gc:20, pts:39 },
-            { nombre: "Villa Mitre",   clase: "villamitre",   pj:25, pg:8,  pe:9,  pp:8,  gf:23, gc:26, pts:34 },
+            { nombre: "Bella Vista <b>(S)</b>",   clase: "bellavista",   pj:26, pg:11,  pe:9,  pp:6,  gf:35, gc:21, pts:42 },
+            { nombre: "Villa Mitre",   clase: "villamitre",   pj:26, pg:8,  pe:9,  pp:9,  gf:24, gc:29, pts:34 },
             { nombre: "Liniers",       clase: "liniers",      pj:26, pg:8,  pe:9,  pp:9,  gf:27, gc:17, pts:33 },
             { nombre: "San Francisco", clase: "sanfrancisco", pj:26, pg:7,  pe:10,  pp:9,  gf:20, gc:28, pts:31 },
             { nombre: "Libertad",      clase: "libertad",     pj:26, pg:6,  pe:12, pp:8,  gf:21, gc:27, pts:30 },
@@ -23103,7 +23107,7 @@ if (tor === 'apertura' && cat === 'oficial') {
     return html + "</tbody></table><div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'><b>(C)</b> Clasificado<br><b>(X)</b> Eliminado<br>📌 Puntos en juego: <b>Torneo finalizado</b></div>";
 }
 if (tor === 'clausura' && cat === 'oficial') {
-    return html + "</tbody></table><div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>9</b> tras finalizar la fecha 11<b><br>(A)</b> Ganador del Apertura</br></div>";
+    return html + "</tbody></table><div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>6</b> tras finalizar la fecha 12<b><br>(A)</b> Ganador del Apertura</br></div>";
 }
 if (tor === 'clausura' && cat === 'femenino') {
     const posAcum = BD_POSICIONES['femenino']?.['acumulada'] || [];
