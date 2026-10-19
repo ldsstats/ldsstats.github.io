@@ -1949,7 +1949,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 27).partidos.forEach(p
 });
 
 
-let diaSeleccionadoHome = "2026-10-18"; 
+let diaSeleccionadoHome = "2026-10-19"; 
 let mercadoPasesAbierto = false;
 
 function toggleMercadoPasesHome() {
@@ -2055,12 +2055,12 @@ function generarHome() {
             {l:"Douglas Haig", v:"El Linqueño", hora:"16:00", gl:1, gv:0, claseL:"douglashaig", claseV:"ellinqueño",nota:"<b>Ida: 0-0</b>"},
             {l:"9 de Julio", v:"Gimnasia (CdU)", hora:"16:00", gl:1, gv:0, claseL:"nuevedejulio", claseV:"gimnasiacdu",nota:"<b>Ida: 1-4</b>"},
             {l:"Argentino de Monte Maiz", v:"San Martín de Mendoza", hora:"16:15", gl:2, gv:1, claseL:"argmontemaiz", claseV:"sanmartinmza",nota:"<b>Ida: 2-0</b>"},
-            {l:"Sarmiento de La Banda", v:"Sportivo Belgrano", hora:"18:30", gl:null, gv:null, claseL:"sarmientolb", claseV:"spbelgrano",nota:"<b>Ida: 1-1</b>"},
+            {l:"Sarmiento de La Banda", v:"Sportivo Belgrano", hora:"18:30", gl:0, gv:0, claseL:"sarmientolb", claseV:"spbelgrano",nota:"<b>Ida: 1-1</b>"},
             ]},
             { nombre: "TORNEO REGIONAL AMATEUR | BONAERENSE PAMPEANA SUR | SEGUNDA RONDA | VUELTA", cat: "regamateurtemp", torLink: "regamateurtemp", noAutoResult: true, partidos: [
             {l:"Ministerio", v:"Quilmes (MdP)", hora:"16:00", gl:1, gv:4, claseL:"ministerio", claseV:"quilmesmdp",nota:"<b>Ida: 0-4</b>"},
-            {l:"Racing de Olavarría", v:"Argentino de 25 de Mayo", hora:"17:30", gl:null, gv:null, claseL:"racingolavarria", claseV:"arg25demayo",nota:"<b>Ida: 2-1</b>"},
-            {l:"Huracán", v:"Independiente de San Cayetano", hora:"19:30", gl:null, gv:null, claseL:"huracan", claseV:"indeptesancayetano",nota:"<b>Ida: 2-1</b>"},
+            {l:"Racing de Olavarría", v:"Argentino de 25 de Mayo", hora:"17:30", gl:5, gv:1, claseL:"racingolavarria", claseV:"arg25demayo",nota:"<b>Ida: 2-1</b>"},
+            {l:"Huracán", v:"Independiente de San Cayetano", hora:"19:30", gl:1, gv:0, claseL:"huracan", claseV:"indeptesancayetano",nota:"<b>Ida: 2-1</b>"},
             ]},
        ]},
      { id: "2026-10-19", label: "LUN 19/10", torneos: [
@@ -2232,8 +2232,8 @@ const BD_FEDERAL_REVALIDA = {
             vuelta: { local: "<n>Gimnasia de Chivilcoy</n>", clL: "gimnasiachivilcoy", visitante: "<s>Defensores de Vilelas</s>", clV: "defvilelas", gl: 3, gv: 3, goles_l: [], goles_v: [] }
         },
         {
-            ida:    { local: "Sportivo Belgrano", clL: "spbelgrano", visitante: "Sarmiento de La Banda", clV: "sarmientolb", gl: 1, gv: 1, goles_l: [], goles_v: [] },
-            vuelta: { local: "Sarmiento de La Banda", clL: "sarmientolb", visitante: "Sportivo Belgrano", clV: "spbelgrano", gl: null, gv: null, goles_l: [], goles_v: [] }
+            ida:    { local: "<s>Sportivo Belgrano</s>", clL: "spbelgrano", visitante: "<b>Sarmiento de La Banda</b>", clV: "sarmientolb", gl: 1, gv: 1, goles_l: [], goles_v: [] },
+            vuelta: { local: "<b>Sarmiento de La Banda</b>", clL: "sarmientolb", visitante: "<s>Sportivo Belgrano</s>", clV: "spbelgrano", gl: 0, gv: 0, goles_l: [], goles_v: [] }
         },
         {
             ida:    { local: "<b>Juventud Antoniana</b>", clL: "jantoniana", visitante: "<s>Huracán Las Heras</s>", clV: "huracanlh", gl: 3, gv: 0, goles_l: [], goles_v: [] },
@@ -2270,9 +2270,33 @@ const BD_FEDERAL_REVALIDA = {
     ],
     terceraRonda: [
         {
-            ida:    { local: "A confirmar", clL: "aconfirmar", visitante: "A confirmar", clV: "aconfirmar", gl: null, gv: null, goles_l: [], goles_v: [] },
-            vuelta: { local: "A confirmar", clL: "aconfirmar", visitante: "A confirmar", clV: "aconfirmar", gl: null, gv: null, goles_l: [], goles_v: [] }
-        }
+            ida:    { local: "Gimnasia de Concepción del Uruguay", clL: "gimnasiacdu", visitante: "Olimpo", clV: "olimpo", gl: null, gv: null, goles_l: [], goles_v: [] },
+            vuelta: { local: "Olimpo", clL: "olimpo", visitante: "Gimnasia de Concepción del Uruguay", clV: "gimnasiacdu", gl: null, gv: null, goles_l: [], goles_v: [] }
+        },
+       {
+            ida:    { local: "Villa Mitre", clL: "villamitre", visitante: "Douglas Haig", clV: "douglashaig", gl: null, gv: null, goles_l: [], goles_v: [] },
+            vuelta: { local: "Douglas Haig", clL: "douglashaig", visitante: "Villa Mitre", clV: "villamitre", gl: null, gv: null, goles_l: [], goles_v: [] }
+        },
+       {
+            ida:    { local: "Sportivo Las Parejas", clL: "splasparejas", visitante: "Alvarado", clV: "alvarado", gl: null, gv: null, goles_l: [], goles_v: [] },
+            vuelta: { local: "Alvarado", clL: "alvarado", visitante: "Sportivo Las Parejas", clV: "splasparejas", gl: null, gv: null, goles_l: [], goles_v: [] }
+        },
+       {
+            ida:    { local: "Boca Unidos", clL: "bocaunidos", visitante: "Gimnasia de Chivilcoy", clV: "gimnasiachivilcoy", gl: null, gv: null, goles_l: [], goles_v: [] },
+            vuelta: { local: "Gimnasia de Chivilcoy", clL: "gimnasiachivilcoy", visitante: "Boca unidos", clV: "bocaunidos", gl: null, gv: null, goles_l: [], goles_v: [] }
+        },
+       {
+            ida:    { local: "Juventud Antoniana", clL: "jantoniana", visitante: "Sol de América", clV: "soldeamericafsa", gl: null, gv: null, goles_l: [], goles_v: [] },
+            vuelta: { local: "Sol de América", clL: "soldeamericafsa", visitante: "Juventud Antoniana", clV: "jantoniana", gl: null, gv: null, goles_l: [], goles_v: [] }
+        },
+       {
+            ida:    { local: "Sarmiento de La Banda", clL: "sarmientolb", visitante: "Atenas de Río Cuarto", clV: "atenasrc", gl: null, gv: null, goles_l: [], goles_v: [] },
+            vuelta: { local: "Atenas de Río Cuarto", clL: "atenasrc", visitante: "Sarmiento de La Banda", clV: "sarmientolb", gl: null, gv: null, goles_l: [], goles_v: [] }
+        },
+       {
+            ida:    { local: "Argentino de Monte Maiz", clL: "argmontemaiz", visitante: "Kimberley", clV: "kimberley", gl: null, gv: null, goles_l: [], goles_v: [] },
+            vuelta: { local: "Kimberley", clL: "kimberley", visitante: "Argentino de Monte Maiz", clV: "argmontemaiz", gl: null, gv: null, goles_l: [], goles_v: [] }
+        },
     ],
     cuartaRonda: [
         {
@@ -2308,7 +2332,7 @@ function generarTablaFederal(etapa = 'playoffs') {
             style="font-size:10px;padding:4px 12px;border:1px solid #1a4a2e;border-radius:12px;cursor:pointer;font-weight:bold;background:${etapa==='revalida'?'#1a4a2e':'#fff'};color:${etapa==='revalida'?'#fff':'#1a4a2e'};">Reválida</button>
     </div>`;
 if (etapa === 'playoffs') {
-    const subPO = estado.subPlayoffFederal || 'semifinales';
+    const subPO = estado.subPlayoffFederal || 'final';
     let htmlP = tabs;
 
     htmlP += `<div style="display:flex;gap:6px;padding:8px 8px 4px;background:#f9f9f9;border-bottom:1px solid #eee;">
@@ -2418,7 +2442,7 @@ if (etapa === 'playoffs') {
     }
 
     if (etapa === 'revalida') {
-    const subR = estado.subRondaRevalida || 'segundaRonda';
+    const subR = estado.subRondaRevalida || 'terceraRonda';
     let htmlR = tabs;
 
     const rondasRevalida = [
@@ -17988,6 +18012,7 @@ const BD_H2H = {
     ],
     "Huracán|Independiente de San Cayetano": [
         { fecha: "Regional Amateur 2026 - Bonaerense Pampeana Sur - Segunda Ronda - Ida", torneo: "regamateurtemp", l: "Independiente de San Cayetano", v: "Huracán", gl: 1, gv: 2, goles_l: [], goles_v: ["Iván Agudiak","Lautaro Cerato"] },
+        { fecha: "Regional Amateur 2026 - Bonaerense Pampeana Sur - Segunda Ronda - Vuelta", torneo: "regamateurtemp", l: "Huracán", v: "Independiente de San Cayetano", gl: 1, gv: 0, goles_l: ["Iván Agudiak"], goles_v: [] },
     ],
 };
 
@@ -19613,7 +19638,7 @@ const BD_COPA_PAIS_SEMIFINALES = [
     },
 ];
 
-let rondaCopaPais = 'cuartos';
+let rondaCopaPais = 'semifinales';
 function cambiarRondaCopaPais(r) {
     rondaCopaPais = r;
     document.getElementById('contenido').innerHTML = generarCopaPais();
@@ -22680,6 +22705,9 @@ function generarPerfilJugador(jugador, equipo, origen, totalOverride, catPerfil)
             const revalidaPartidos = Object.values(BD_FEDERAL_REVALIDA).flatMap(r => r)
                 .flatMap(s => [s.ida, s.vuelta]).filter(p => p && p.gl !== null)
                 .map(p => ({ l: p.local.replace(/<[^>]+>/g, ''), v: p.visitante.replace(/<[^>]+>/g, ''), gl: p.gl, gv: p.gv, goles_l: p.goles_l||[], goles_v: p.goles_v||[], clL: p.clL, clV: p.clV, dia: 'Reválida' }));
+            const cuartosPartidos = (BD_FEDERAL_PLAYOFFS.cuartos || [])
+                .flatMap(s => [s.ida, s.vuelta]).filter(p => p && p.gl !== null)
+                .map(p => ({ l: p.local.replace(/<[^>]+>/g, ''), v: p.visitante.replace(/<[^>]+>/g, ''), gl: p.gl, gv: p.gv, goles_l: p.goles_l||[], goles_v: p.goles_v||[], clL: p.clL, clV: p.clV, dia: 'Playoffs' }));
             const semifinalesPartidos = (BD_FEDERAL_PLAYOFFS.semifinales || [])
                 .flatMap(s => [s.ida, s.vuelta]).filter(p => p && p.gl !== null)
                 .map(p => ({ l: p.local.replace(/<[^>]+>/g, ''), v: p.visitante.replace(/<[^>]+>/g, ''), gl: p.gl, gv: p.gv, goles_l: p.goles_l||[], goles_v: p.goles_v||[], clL: p.clL, clV: p.clV, dia: 'Semifinales' }));
@@ -22687,7 +22715,7 @@ function generarPerfilJugador(jugador, equipo, origen, totalOverride, catPerfil)
                 ? [{ l: BD_FEDERAL_PLAYOFFS.final.local.replace(/<[^>]+>/g, ''), v: BD_FEDERAL_PLAYOFFS.final.visitante.replace(/<[^>]+>/g, ''), gl: BD_FEDERAL_PLAYOFFS.final.gl, gv: BD_FEDERAL_PLAYOFFS.final.gv, goles_l: BD_FEDERAL_PLAYOFFS.final.goles_l||[], goles_v: BD_FEDERAL_PLAYOFFS.final.goles_v||[], clL: BD_FEDERAL_PLAYOFFS.final.clL, clV: BD_FEDERAL_PLAYOFFS.final.clV, dia: 'Final' }]
                 : [];
             fixtures = [...BD_FIXTURES.federala.posiciones, ...BD_FIXTURES.federala.nonagonal];
-            const todosPartidosFederala = [...fixtures.flatMap(f => f.partidos), ...revalidaPartidos, ...semifinalesPartidos, ...finalPartidos];
+            const todosPartidosFederala = [...fixtures.flatMap(f => f.partidos), ...revalidaPartidos, ...cuartosPartidos, ...semifinalesPartidos, ...finalPartidos];
             fixtures = [{ partidos: todosPartidosFederala }];
         }
         else if (cat === 'oficial' || cat === 'promocional') fixtures = BD_FIXTURES[cat].apertura;
@@ -22695,7 +22723,7 @@ function generarPerfilJugador(jugador, equipo, origen, totalOverride, catPerfil)
 
         const todosPartidos = fixtures.flatMap(f => f.partidos);
 
-const playoffsBD = { oficial: BD_OFICIAL_PLAYOFFS, promocional: BD_PROMOCIONAL_PLAYOFFS, femenino: BD_FEMENINO_PLAYOFFS, federala: { cuartos: BD_FEDERAL_PLAYOFFS.cuartos.flatMap(serie => [serie.ida, serie.vuelta]).map(p => ({ ...p, local: p.local.replace(/<[^>]+>/g, ''), visitante: p.visitante.replace(/<[^>]+>/g, '') })) } };
+const playoffsBD = { oficial: BD_OFICIAL_PLAYOFFS, promocional: BD_PROMOCIONAL_PLAYOFFS, femenino: BD_FEMENINO_PLAYOFFS };
         const pd = playoffsBD[cat];
         if (pd) {
             [...(pd.octavos||[]), ...(pd.cuartos||[]), ...(pd.semifinales||[]), ...(pd.final?[pd.final]:[]), ...(pd.finalExtra?[pd.finalExtra]:[])]
@@ -23245,14 +23273,14 @@ function cambiarFechaRegAmateurTemp(titulo, n) {
 
 const BD_REGAMATEUR_PLAYOFFS = {
     segunda: [
-        { ida:    { local: "Independiente de San Cayetano", clL: "indeptesancayetano", visitante: "Huracán", clV: "huracan", gl: 1, gv: 2, goles_l: [], goles_v: ["Lautaro Cerato","Iván Agudiak"] },
-          vuelta: { local: "Huracán", clL: "huracan", visitante: "Independiente de San Cayetano", clV: "indeptesancayetano", gl: null, gv: null, goles_l: [], goles_v: [] } },
+        { ida:    { local: "<s>Independiente de San Cayetano</s>", clL: "indeptesancayetano", visitante: "<b>Huracán</b>", clV: "huracan", gl: 1, gv: 2, goles_l: [], goles_v: ["Lautaro Cerato","Iván Agudiak"] },
+          vuelta: { local: "<b>Huracán</b>", clL: "huracan", visitante: "<s>Independiente de San Cayetano</s>", clV: "indeptesancayetano", gl: 1, gv: 0, goles_l: ["Iván Agudiak"], goles_v: [] } },
         { ida:    { local: "<b>Ferro de Pico</b>", clL: "ferropico", visitante: "<s>Atlético Villegas</s>", clV: "atlvillegas", gl: 1, gv: 1, goles_l: [], goles_v: [] },
           vuelta: { local: "<s>Atlético Villegas</s>", clL: "atlvillegas", visitante: "<b>Ferro de Pico</b>", clV: "ferropico", gl: 0, gv: 1, goles_l: [], goles_v: [] } },
         { ida:    { local: "<b>Quilmes de Mar del Plata</b>", clL: "quilmesmdp", visitante: "<s>Ministerio</s>", clV: "ministerio", gl: 4, gv: 0, goles_l: [], goles_v: [] },
           vuelta: { local: "<s>Ministerio</s>", clL: "ministerio", visitante: "<b>Quilmes de Mar del Plata</b>", clV: "quilmesmdp", gl: 1, gv: 4, goles_l: [], goles_v: [] } },
-        { ida:    { local: "Argentino de 25 de Mayo", clL: "arg25demayo", visitante: "Racing de Olavarría", clV: "racingolavarria", gl: 1, gv: 2, goles_l: [], goles_v: [] },
-          vuelta: { local: "Racing de Olavarría", clL: "racingolavarria", visitante: "Argentino de 25 de Mayo", clV: "arg25demayo", gl: null, gv: null, goles_l: [], goles_v: [] } }
+        { ida:    { local: "<s>Argentino de 25 de Mayo</s>", clL: "arg25demayo", visitante: "<b>Racing de Olavarría<b>", clV: "racingolavarria", gl: 1, gv: 2, goles_l: [], goles_v: [] },
+          vuelta: { local: "<b>Racing de Olavarría<b>", clL: "racingolavarria", visitante: "<s>Argentino de 25 de Mayo</s>", clV: "arg25demayo", gl: 5, gv: 1, goles_l: [], goles_v: [] } }
     ],
     tercera: [
         { ida:    { local: "A confirmar", clL: "aconfirmar", visitante: "Santa Rita", clV: "santarita", gl: null, gv: null, goles_l: [], goles_v: [] },
@@ -23276,7 +23304,7 @@ const BD_REGAMATEUR_PLAYOFFS = {
     ]
 };
 
-let subRondaRegAmateurPlayoffs = 'segunda';
+let subRondaRegAmateurPlayoffs = 'tercera';
 
 function generarRegAmateurPlayoffs() {
     let html = `<div class="header-t">REGIONAL AMATEUR — PLAYOFFS</div>`;
@@ -24931,7 +24959,7 @@ const BD_FEDERAL_PLAYOFFS = {
             vuelta: { local: "<s>Alvarado</s>", clL: "alvarado", visitante: "<b>Cipolletti</b>", clV: "cipolletti", gl: 0, gv: 0, goles_l: [], goles_v: [] }
         },
     ],
-    final: { local: "A confirmar", clL: "aconfirmar", visitante: "A confirmar", clV: "aconfirmar", gl: null, gv: null, goles_l: [], goles_v: [] }
+    final: { local: "Cipolletti", clL: "cipolletti", visitante: "San Martín de Formosa", clV: "sanmartinfsa", gl: null, gv: null, goles_l: [], goles_v: [] }
 };
 
 const BD_SELECCION15_PLAYOFFS = {
