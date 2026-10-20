@@ -16521,6 +16521,7 @@ const BD_H2H = {
         { fecha: "Fecha 6 - Clausura 2026 - 29 ago 2026", torneo: "femenino", l: "Libertad", v: "Tiro Federal", gl: 1, gv: 3, goles_l: ["Teresa Mella"], goles_v: ["Morena Juárez","Nahiara Tillería","Candela Salgado"] },
         { fecha: "Fecha 6 - Clausura 2026", torneo: "reserva_femenino", l: "Libertad", v: "Tiro Federal", gl: 0, gv: 2 },
         { fecha: "Fecha 13 - Clausura 2026 - 18 oct", torneo: "femenino", l: "Tiro Federal", v: "Libertad", gl: 6, gv: 0, goles_l: ["Morena Juárez (2)","Aylén Baratcabal (2)","Victoria Toloza","Magalí Toloza"], goles_v: [] },
+        { fecha: "Fecha 13 - Clausura 2026", torneo: "reserva_femenino", l: "Tiro Federal", v: "Libertad", gl: 4, gv: 0 },
     ],
     "San Francisco|Sporting": [
         { fecha: "Fecha 3 - Apertura 2026 - 29 mar", torneo: "oficial", l: "Sporting", v: "San Francisco", gl: 1, gv: 1, goles_l: ["Jonathan Font"], goles_v: ["Jonathan Ramírez"]},
@@ -18122,10 +18123,10 @@ function generarReserva(cat) {
         ],
         'femenino':   [
             {n:"Bella Vista <b>(C)</b>",           cl:"bellavista", pj:13,pg:11, pe:1, pp:1, gf:22, gc:5, pts:34},
-            {n:"Tiro Federal <b>(A)</b> <b>(C)</b>",          cl:"tirofederal",pj:12,pg:9, pe:2, pp:1, gf:11, gc:3, pts:29},
+            {n:"Tiro Federal <b>(A)</b> <b>(C)</b>",          cl:"tirofederal",pj:13,pg:10, pe:2, pp:1, gf:15, gc:3, pts:32},
             {n:"Villa Mitre <b>(C)</b>",           cl:"villamitre", pj:13,pg:9, pe:0, pp:4, gf:14, gc:8, pts:27},
             {n:"Municipales <b>(C)</b>",           cl:"municipales",pj:13,pg:7, pe:4, pp:2, gf:24, gc:8, pts:25},
-            {n:"Libertad <b>(X)</b>",              cl:"libertad",   pj:12,pg:5, pe:0, pp:7, gf:4, gc:30, pts:15},
+            {n:"Libertad <b>(X)</b>",              cl:"libertad",   pj:13,pg:5, pe:0, pp:8, gf:4, gc:34, pts:15},
             {n:"Sporting <b>(X)</b>",              cl:"sporting",  pj:13,pg:4, pe:1, pp:8, gf:5, gc:18, pts:13},
             {n:"<s>Empleados de Comercio</s> <b>(-)</b>", cl:"empleados", pj:0,pg:0, pe:0, pp:0, gf:0, gc:0, pts:0},
             {n:"<s>La Armonía</s> <b>(-)</b>",            cl:"laarmonia",  pj:0,pg:0, pe:0, pp:0, gf:0, gc:0, pts:0}
