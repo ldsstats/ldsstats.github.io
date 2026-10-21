@@ -1349,7 +1349,7 @@ BD_FIXTURES.promocional.reserva.push(
         {l:"Dublin",      v:"Rosario PB",          gl:2,   gv:3},
         {l:"Sansinena",   v:"Pacífico (C)", gl:5,   gv:2},
         {l:"Pacífico BB", v:"Olimpo",              gl:0,   gv:1},
-        {l:"Tiro Federal",v:"Comercial",           gl:null,   gv:null}
+        {l:"Tiro Federal",v:"Comercial",           gl:6,   gv:0}
     ]},
     { fecha: 2, partidos: [
         {l:"Pacífico (C)", v:"Dublin",      gl:4,   gv:4},
@@ -1415,7 +1415,7 @@ BD_FIXTURES.promocional.reserva.push(
         {l:"Tiro Federal", v:"Sansinena",              gl:1,   gv:1},
         {l:"Comercial", v:"Rosario PB",           gl:4,   gv:2},
         {l:"Dublin",   v:"Pacífico BB", gl:0,   gv:4},
-        {l:"Olimpo",      v:"Pacífico (C)",          gl:null,   gv:null},
+        {l:"Olimpo",      v:"Pacífico (C)",          gl:5,   gv:1},
     ]},
     { fecha: 13, partidos: [
         {l:"Tiro Federal", v:"Dublin",              gl:null,   gv:null},
@@ -16316,6 +16316,7 @@ const BD_H2H = {
         { fecha: "Apertura 2026 - Fecha 12", torneo: "futsalreserva", l: "Tiro Federal", v: "Comercial", gl: 2, gv: 2 },
         { fecha: "Clausura 2026 - Fecha 12", torneo: "futsal", l: "Comercial", v: "Tiro Federal", gl: 3, gv: 1 },
         { fecha: "Clausura 2026 - Fecha 12", torneo: "futsalreserva", l: "Comercial", v: "Tiro Federal", gl: 4, gv: 3 },
+        { fecha: "Fecha 1 - Clausura 2026", torneo: "reserva_promocional", l: "Tiro Federal", v: "Comercial", gl: 6, gv: 0 },
     ],
     "Alvarado|Olimpo": [
         { fecha: "Fecha 1 - Fase inicial - 22 mar 2026", torneo: "federala", l: "Olimpo", v: "Alvarado", gl: 2, gv: 0, goles_l: ["Martín Ferreyra","Diego Ramírez"], goles_v: [] },
@@ -16695,6 +16696,7 @@ const BD_H2H = {
         { fecha: "Fecha 5 - Clausura 2026 - 31 ago 2026", torneo: "promocional", l: "Pacífico (C)", v: "Olimpo", gl: 0, gv: 5, goles_l: [], goles_v: ["Nahuel Colmenares (5)","Galo Fogel"] },
         { fecha: "Fecha 12 - Clausura 2026 - 17 oct", torneo: "promocional", l: "Olimpo", v: "Pacífico (C)", gl: 2, gv: 0, goles_l: ["Nahuel Colmenares","Santiago Llanos"], goles_v: [] },
     ],
+        { fecha: "Fecha 12 - Apertura 2026", torneo: "reserva_promocional", l: "Olimpo", v: "Pacífico (C)", gl: 5, gv: 1 },
     "Comercial|Dublin": [
         { fecha: "Fecha 4 - Apertura 2026 - 03 abr 2026", torneo: "oficial", l: "Comercial", v: "Dublin", gl: 1, gv: 1, goles_l: ["Emiliano Brizzi"], goles_v: ["Marcos Pérez"] },
         { fecha: "Fecha 4 - Apertura 2026", torneo: "reserva_oficial", l: "Comercial", v: "Dublin", gl: 1, gv: 0 },
@@ -18031,13 +18033,13 @@ function generarReserva(cat) {
                        {n:"Huracán <b>(X)</b>",       cl:"huracan",      pj:12, pg:1, pe:3, pp:8, gf:14, gc:30, pts:6},],
         'promocional':[
                        {n:"Sansinena",           cl:"sansinena",        pj:11, pg:6, pe:3, pp:2, gf:22, gc:12, pts:21},
+                       {n:"Olimpo <b>(A)</b>",              cl:"olimpo",           pj:11, pg:6, pe:3, pp:2, gf:19, gc:11, pts:21},
+                       {n:"Tiro Federal",        cl:"tirofederal",      pj:11, pg:6, pe:3, pp:2, gf:31, gc:8, pts:21},
                        {n:"Rosario PB",          cl:"rosariopb",        pj:12, pg:6, pe:2, pp:4, gf:20, gc:19, pts:20},
                        {n:"Pacífico BB",         cl:"pacificobb",       pj:12, pg:6, pe:1, pp:5, gf:24, gc:17, pts:19},
-                       {n:"Olimpo <b>(A)</b>",              cl:"olimpo",           pj:10, pg:5, pe:3, pp:2, gf:14, gc:10, pts:18},
-                       {n:"Tiro Federal",        cl:"tirofederal",      pj:10, pg:5, pe:3, pp:2, gf:25, gc:8, pts:18},
                        {n:"Dublin",              cl:"dublin",           pj:11, pg:3, pe:3, pp:5, gf:12, gc:20, pts:12},
-                       {n:"Comercial",           cl:"comercial",        pj:10, pg:2, pe:2, pp:6, gf:13, gc:17, pts:8},
-                       {n:"Pacífico (C) <b>(X)</b>", cl:"pacificocabildo",  pj:10, pg:1, pe:1, pp:8, gf:13, gc:39, pts:4},],
+                       {n:"Comercial <b>(X)</b>",           cl:"comercial",        pj:11, pg:2, pe:2, pp:7, gf:13, gc:23, pts:8},
+                       {n:"Pacífico (C) <b>(X)</b>", cl:"pacificocabildo",  pj:11, pg:1, pe:1, pp:9, gf:14, gc:44, pts:4},],
         'segundafemenino': [
             {n:"Liniers <b>(C)</b>",             cl:"liniers",         pj:18, pg:16, pe:2, pp:0, gf:66, gc:14, pts:50},
             {n:"San Francisco <b>(C)</b>",       cl:"sanfrancisco",    pj:18, pg:12, pe:2, pp:4, gf:34, gc:15, pts:38},
@@ -18083,7 +18085,7 @@ function generarReserva(cat) {
         if (cat === 'oficial') {
             html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'><b>(A)</b> Ganador del Apertura<br><b>(C)</b> Clasificado al playoffs<br><b>(X)</b> Eliminado<br>📌 Puntos en juego: <b>9</b> tras la fecha 11</div>`;
         } else if (cat === 'promocional') {
-            html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'><b>(A)</b> Ganador del Apertura<br><b>(X)</b> Eliminado<br>📌 Puntos en juego: <b>9</b> tras la fecha 11</div>`;
+            html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'><b>(A)</b> Ganador del Apertura<br><b>(X)</b> Eliminado<br>📌 Puntos en juego: <b>6</b> tras la fecha 12</div>`;
         } else if (cat === 'femenino') {
             html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'><b>(C) Clasificado</b><br><b>(A)</b> Campeón del Apertura<br><b>(X)</b> Eliminado<br><b>(-)</b> No presenta reserva<br>📌 Puntos en juego: <b>6</b> tras la fecha 12</div>`;
         } else if (cat === 'segundafemenino') {
