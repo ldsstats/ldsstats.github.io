@@ -1994,6 +1994,11 @@ function generarHome() {
             {l:"Villa Mitre", v:"Comercial", hora:"22:00", gl:null, gv:null, claseL:"villamitre", claseV:"comercial",nota:"<b>en cancha de Don Bosco</b>"},
             ]},
        ]},
+     { id: "2026-10-25", label: "SÁB 25/10", torneos: [
+            { nombre: "REGIONAL AMATEUR | BONAERENSE PAMPEANA SUR | RONDA 3 - IDA", cat: "regamateurtemporada", torLink: "regamateurtemporada", noAutoResult: true, partidos: [
+            {l:"<b>Huracán</b>", v:"Santa Rita", hora:"16:00", gl:null, gv:null, claseL:"huracan", claseV:"santarita"},
+            ]},
+       ]},
     ];
 
     let html = `<div class="mp-visera" onclick="toggleMercadoPasesHome()">
@@ -16695,8 +16700,8 @@ const BD_H2H = {
         { fecha: "Fecha 12 - Apertura 2026", torneo: "reserva_promocional", l: "Olimpo", v: "Pacífico (C)", gl: 0, gv: 0 },
         { fecha: "Fecha 5 - Clausura 2026 - 31 ago 2026", torneo: "promocional", l: "Pacífico (C)", v: "Olimpo", gl: 0, gv: 5, goles_l: [], goles_v: ["Nahuel Colmenares (5)","Galo Fogel"] },
         { fecha: "Fecha 12 - Clausura 2026 - 17 oct", torneo: "promocional", l: "Olimpo", v: "Pacífico (C)", gl: 2, gv: 0, goles_l: ["Nahuel Colmenares","Santiago Llanos"], goles_v: [] },
-    ],
         { fecha: "Fecha 12 - Apertura 2026", torneo: "reserva_promocional", l: "Olimpo", v: "Pacífico (C)", gl: 5, gv: 1 },
+    ],
     "Comercial|Dublin": [
         { fecha: "Fecha 4 - Apertura 2026 - 03 abr 2026", torneo: "oficial", l: "Comercial", v: "Dublin", gl: 1, gv: 1, goles_l: ["Emiliano Brizzi"], goles_v: ["Marcos Pérez"] },
         { fecha: "Fecha 4 - Apertura 2026", torneo: "reserva_oficial", l: "Comercial", v: "Dublin", gl: 1, gv: 0 },
