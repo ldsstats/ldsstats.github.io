@@ -1978,11 +1978,9 @@ function generarHome() {
 
      { id: "2026-10-21", label: "MIÉ 21/10", torneos: [
             { nombre: "SENIOR | CLAUSURA | FECHA 6", cat: "seniorclausura", torLink: "seniorclausura", noAutoResult: true, partidos: [
-            {l:"Libertad", v:"Huracán", hora:"20:00", gl:null, gv:null, claseL:"libertad", claseV:"huracan",nota:"<b>en cancha de Huracán</b>"},
+            {l:"Libertad", v:"Huracán", hora:"20:00", gl:5, gv:2, claseL:"libertad", claseV:"huracan",nota:"<b>en cancha de Huracán</b>"},
             {l:"Pacífico (C)", v:"Pacífico BB", hora:"20:30", gl:null, gv:null, claseL:"pacificoc", claseV:"pacificobb",nota:"<b>en cancha de Comercial</b>"},
-            {l:"Sporting", v:"Sansinena", hora:"21:00", gl:null, gv:null, claseL:"sporting", claseV:"sansinena",nota:"<b>en cancha de Sporting</b>"},
             {l:"Tiro Federal", v:"San Francisco", hora:"21:30", gl:5, gv:2, claseL:"tirofederal", claseV:"sanfrancisco",nota:"<b>en cancha de Huracán</b>"},
-            {l:"Bella Vista", v:"Comercial", hora:"22:00", gl:null, gv:null, claseL:"bellavista", claseV:"comercial",nota:"<b>en cancha de Comercial</b>"},
             ]},
             { nombre: "FUTSAL | CLAUSURA | FECHA 11 (REPROGRAMADO)", cat: "futsal", torLink: "futsal", noAutoResult: true, partidos: [
             {l:"Pacífico BB", v:"San Francisco", hora:"22:00", gl:5, gv:1, claseL:"pacificobb", claseV:"sanfrancisco",nota:"<b>en cancha de Don Bosco</b>"},
@@ -1994,6 +1992,10 @@ function generarHome() {
      { id: "2026-10-22", label: "JUE 22/10", torneos: [
             { nombre: "FUTSAL | CLAUSURA | FECHA 9 (REPROGRAMADO)", cat: "futsal", torLink: "futsal", noAutoResult: true, partidos: [
             {l:"Villa Mitre", v:"Comercial", hora:"22:00", gl:null, gv:null, claseL:"villamitre", claseV:"comercial",nota:"<b>en cancha de Don Bosco</b>"},
+            ]},
+            { nombre: "SENIOR | CLAUSURA | FECHA 6", cat: "seniorclausura", torLink: "seniorclausura", noAutoResult: true, partidos: [
+            {l:"Sporting", v:"Sansinena", hora:"21:00", gl:null, gv:null, claseL:"sporting", claseV:"sansinena",nota:"<b>en cancha de Sporting</b>"},
+            {l:"Bella Vista", v:"Comercial", hora:"22:00", gl:null, gv:null, claseL:"bellavista", claseV:"comercial",nota:"<b>en cancha de Comercial</b>"},
             ]},
        ]},
      { id: "2026-10-23", label: "VIÉ 23/10", torneos: [
@@ -2008,7 +2010,10 @@ function generarHome() {
             { nombre: "PROMOCIONAL | CLAUSURA | FECHA 13", cat: "promocional", torLink: "promocional", noAutoResult: true, partidos: [
             {l:"Tiro Federal", v:"Dublin", hora:"16:00", gl:null, gv:null, claseL:"tirofederal", claseV:"dublin"},
             {l:"Olimpo", v:"Sansinena", hora:"16:00", gl:null, gv:null, claseL:"olimpo", claseV:"sansinena"},
-            {l:"Comercial", v:"Pacífico BB", hora:"16:00", gl:null, gv:null, claseL:"comercial", claseV:"pacificobb"},
+            {l:"Comercial", v:"Pacífico BB", hora:"16:00", gl:null, gv:null, claseL:"comercial", claseV:"pacificobb",nota:"Sin visitantes"},
+            ]},
+            { nombre: "SUB 15 FEMENINO | CUARTOS DE FINAL", cat: "sub15fem", torLink: "sub15fem", noAutoResult: true, partidos: [
+            {l:"Tiro Federal", v:"San Francisco", hora:"14:30", gl:null, gv:null, claseL:"tirofederal", claseV:"sanfrancisco"},
             ]},
             { nombre: "FEDERAL A | REVÁLIDA - TERCERA RONDA - IDA", cat: "federala", torLink: "federala", noAutoResult: true, partidos: [
             {l:"Argentino de Monte Maiz", v:"Kimberley", hora:"15:45", gl:null, gv:null, claseL:"argmontemaiz", claseV:"kimberley"},
@@ -2017,10 +2022,17 @@ function generarHome() {
      { id: "2026-10-25", label: "DOM 25/10", torneos: [
             { nombre: "OFICIAL | CLAUSURA | FECHA 13", cat: "oficial", torLink: "oficial", noAutoResult: true, partidos: [
             {l:"La Armonía", v:"Bella Vista", hora:"16:00", gl:null, gv:null, claseL:"laarmonia", claseV:"bellavista"},
-            {l:"Liniers", v:"Sporting", hora:"16:00", gl:null, gv:null, claseL:"liniers", claseV:"sporting"},
+            {l:"Liniers", v:"Sporting", hora:"16:00", gl:null, gv:null, claseL:"liniers", claseV:"sporting",nota:"Sin visitantes"},
             ]},
             { nombre: "PROMOCIONAL | CLAUSURA | FECHA 13", cat: "promocional", torLink: "promocional", noAutoResult: true, partidos: [
             {l:"Rosario PB", v:"Pacífico (C)", hora:"16:00", gl:null, gv:null, claseL:"rosariopb", claseV:"pacificoc"},
+            ]},
+            { nombre: "2° FEMENINO | SEMIFINALES | IDA", cat: "segundafemenino", torLink: "segundafemenino", noAutoResult: true, partidos: [
+            {l:"Rosario PB", v:"Liniers", hora:"16:00", gl:null, gv:null, claseL:"rosariopb", claseV:"liniers"},
+            {l:"Petroquímicos", v:"San Francisco", hora:"16:00", gl:null, gv:null, claseL:"petroquimicos", claseV:"sanfrancisco",nota:"en cancha de Libertad"},
+            ]},
+            { nombre: "SUB 15 FEMENINO | CUARTOS DE FINAL", cat: "sub15fem", torLink: "sub15fem", noAutoResult: true, partidos: [
+            {l:"Liniers", v:"La Armonía", hora:"16:00", gl:null, gv:null, claseL:"liniers", claseV:"laarmonia"},
             ]},
             { nombre: "FEDERAL A | REVÁLIDA - TERCERA RONDA - IDA", cat: "federala", torLink: "federala", noAutoResult: true, partidos: [
             {l:"Sportivo Las Parejas", v:"Alvarado", hora:"15:00", gl:null, gv:null, claseL:"splasparejas", claseV:"alvarado"},
@@ -16273,6 +16285,7 @@ const BD_H2H = {
         { fecha: "Fecha 1 - Clausura 2026 - 02 ago 2026", torneo: "oficial", l: "Libertad", v: "Huracán", gl: 0, gv: 0, goles_l: [], goles_v: [] },
         { fecha: "Fecha 8 - Clausura 2026 - 18 ago", torneo: "oficial", l: "Huracán", v: "Libertad", gl: 1, gv: 0, goles_l: ["Iván Agudiak"], goles_v: [] },
         { fecha: "Fecha 8 - Clausura 2026", torneo: "reserva_oficial", l: "Huracán", v: "Libertad", gl: 2, gv: 1 },
+        { fecha: "Clausura 2026 - Fecha 6", torneo: "senior", l: "Libertad", v: "Huracán", gl: 5, gv: 2, goles_l: [], goles_v: ["Juan Manuel Diez","Sergio Pereyra"] },
     ],
     "La Armonía|Sporting": [
         { fecha: "Fecha 1 - Apertura 2026 - 15 mar 2026", torneo: "oficial", l: "Sporting", v: "La Armonía", gl: 1, gv: 2, goles_l: ["Jonathan Font"], goles_v: ["Matías Malmoria (2)"] },
@@ -19051,11 +19064,11 @@ const BD_SENIOR_APERTURA = [
     { n: "Tiro Federal",      cl: "tirofederal",   pj: 9, pg: 0, pe: 3, pp: 6, gf: 16, gc: 30, pts: 3 }
 ];
 const BD_SENIOR_CLAUSURA = [
-    { n: "Libertad",      cl: "libertad",     pj:5, pg:4, pe:0, pp:1, gf:10, gc:3, pts:12 },
+    { n: "Libertad",      cl: "libertad",     pj:6, pg:5, pe:0, pp:1, gf:15, gc:5, pts:15 },
     { n: "Pacífico (C)",  mostrar: "Pacífico (C) <b>(A)</b>", cl: "pacificoc",    pj:5, pg:4, pe:0, pp:1, gf:9, gc:7, pts:12 },
     { n: "Bella Vista",   cl: "bellavista",   pj:5, pg:3, pe:0, pp:2, gf:11, gc:10, pts:9 },
     { n: "Pacífico BB",   cl: "pacificobb",   pj:5, pg:3, pe:0, pp:2, gf:12, gc:12, pts:9 },
-    { n: "Huracán",       cl: "huracan",      pj:5, pg:2, pe:1, pp:2, gf:11, gc:9, pts:7 },
+    { n: "Huracán",       cl: "huracan",      pj:6, pg:2, pe:1, pp:3, gf:13, gc:14, pts:7 },
     { n: "Sansinena",     cl: "sansinena",    pj:5, pg:2, pe:1, pp:2, gf:9, gc:8, pts:7 },
     { n: "Comercial",     cl: "comercial",    pj:5, pg:2, pe:0, pp:3, gf:9, gc:9, pts:6 },
     { n: "San Francisco", cl: "sanfrancisco", pj:6, pg:2, pe:0, pp:4, gf:10, gc:19, pts:6 },
@@ -19165,7 +19178,7 @@ const BD_FIXTURES_SENIOR_CLAUSURA = [
         { l: "Libertad",      v: "San Francisco",  gl: 4, gv: 0, goles_l:["Mariano Orsi (3)"], goles_v:[] }
     ]},
     { fecha: 6, partidos: [
-        { l: "Libertad",   v: "Huracán",      gl: null, gv: null },
+        { l: "Libertad",   v: "Huracán",      gl: 5, gv: 2, goles_l:[], goles_v:["Juan Manuel Diez","Sergio Pereyra"] },
         { l: "Pacífico (C)",      v: "Pacífico BB",  gl: null, gv: null },
         { l: "Sporting",      v: "Sansinena",    gl: null, gv: null },
         { l: "Tiro Federal",  v: "San Francisco",        gl: 5, gv: 2, goles_l:["Juan José Dietz (3)","Mauro Fernández","Federico Mancinelli"], goles_v:[] },
@@ -19805,10 +19818,10 @@ const BD_GOLEADORES_SENIOR_CLAUSURA = [
     { nombre: "Víctor Torrero", equipo: "Bella Vista", goles: 5 },
     { nombre: "Sebastián Aristi", equipo: "Comercial", goles: 4 },
     { nombre: "Juan Pablo Hipperdinger", equipo: "Huracán", goles: 3 },
+    { nombre: "Juan Manuel Diez", equipo: "Huracán", goles: 3 },
     { nombre: "Fernando Priore", equipo: "Bella Vista", goles: 2 },
     { nombre: "Leandro Piérez", equipo: "Comercial", goles: 2 },
     { nombre: "César Panduro", equipo: "Huracán", goles: 2 },
-    { nombre: "Juan Manuel Diez", equipo: "Huracán", goles: 2 },
     { nombre: "Sebastián Bacuco", equipo: "San Francisco", goles: 2 },
     { nombre: "Patricio Muñoz", equipo: "San Francisco", goles: 2 },
     { nombre: "Guillermo Pascual", equipo: "Pacífico BB", goles: 2 },
@@ -19846,6 +19859,7 @@ const BD_GOLEADORES_SENIOR_CLAUSURA = [
     { nombre: "José Luis Chaparro", equipo: "Bella Vista", goles: 1 },
     { nombre: "Héctor Valderrama", equipo: "Huracán", goles: 1 },
     { nombre: "Francisco Pereyra", equipo: "Huracán", goles: 1 },
+    { nombre: "Sergio Pereyra", equipo: "Huracán", goles: 1 },
     { nombre: "Sebastián Bettinelli", equipo: "Sansinena", goles: 1 },
     { nombre: "Mauricio Díaz", equipo: "Sansinena", goles: 1 },
 ];
