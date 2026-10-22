@@ -540,7 +540,7 @@ const BD_FIXTURES_FUTSAL_RESERVA = [
         {l:"La Estación",       v:"Comercial",     gl:5, gv:2},
         {l:"Tiro Federal", v:"Los 3 Chiflados",     gl:1, gv:4},
         {l:"Catamarca",   v:"Petroquímicos",     gl:2, gv:7},
-        {l:"Pacífico BB",   v:"San Francisco",     gl:null, gv:null},
+        {l:"Pacífico BB",   v:"San Francisco",     gl:2, gv:5},
         {l:"Huracán",         v:"Liniers",     gl:null, gv:null},
         {l:"Dep. Futsal",     v:"Dublin",     gl:null, gv:null},
     ]},
@@ -660,7 +660,7 @@ const BD_FIXTURES_FUTSAL = [
         {l:"La Estación",       v:"Comercial",     gl:4, gv:2},
         {l:"Tiro Federal", v:"Los 3 Chiflados",     gl:1, gv:6},
         {l:"Catamarca",   v:"Petroquímicos",     gl:1, gv:6},
-        {l:"Pacífico BB",   v:"San Francisco",     gl:null, gv:null},
+        {l:"Pacífico BB",   v:"San Francisco",     gl:5, gv:1},
         {l:"Huracán",         v:"Liniers",     gl:null, gv:null},
         {l:"Dep. Futsal",     v:"Dublin",     gl:null, gv:null},
     ]},
@@ -1948,7 +1948,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 27).partidos.forEach(p
 });
 
 
-let diaSeleccionadoHome = "2026-10-21"; 
+let diaSeleccionadoHome = "2026-10-22"; 
 let mercadoPasesAbierto = false;
 
 function toggleMercadoPasesHome() {
@@ -1981,14 +1981,14 @@ function generarHome() {
             {l:"Libertad", v:"Huracán", hora:"20:00", gl:null, gv:null, claseL:"libertad", claseV:"huracan",nota:"<b>en cancha de Huracán</b>"},
             {l:"Pacífico (C)", v:"Pacífico BB", hora:"20:30", gl:null, gv:null, claseL:"pacificoc", claseV:"pacificobb",nota:"<b>en cancha de Comercial</b>"},
             {l:"Sporting", v:"Sansinena", hora:"21:00", gl:null, gv:null, claseL:"sporting", claseV:"sansinena",nota:"<b>en cancha de Sporting</b>"},
-            {l:"Tiro Federal", v:"San Francisco", hora:"21:30", gl:null, gv:null, claseL:"tirofederal", claseV:"sanfrancisco",nota:"<b>en cancha de Huracán</b>"},
+            {l:"Tiro Federal", v:"San Francisco", hora:"21:30", gl:5, gv:2, claseL:"tirofederal", claseV:"sanfrancisco",nota:"<b>en cancha de Huracán</b>"},
             {l:"Bella Vista", v:"Comercial", hora:"22:00", gl:null, gv:null, claseL:"bellavista", claseV:"comercial",nota:"<b>en cancha de Comercial</b>"},
             ]},
             { nombre: "FUTSAL | CLAUSURA | FECHA 11 (REPROGRAMADO)", cat: "futsal", torLink: "futsal", noAutoResult: true, partidos: [
-            {l:"Pacífico BB", v:"San Francisco", hora:"22:00", gl:null, gv:null, claseL:"pacificobb", claseV:"sanfrancisco",nota:"<b>en cancha de Don Bosco</b>"},
+            {l:"Pacífico BB", v:"San Francisco", hora:"22:00", gl:5, gv:1, claseL:"pacificobb", claseV:"sanfrancisco",nota:"<b>en cancha de Don Bosco</b>"},
             ]},
             { nombre: "REGIONAL AMATEUR | BONAERENSE PAMPEANA SUR | RONDA 3 - IDA", cat: "regamateurtemporada", torLink: "regamateurtemporada", noAutoResult: true, partidos: [
-            {l:"Ferro de Pico", v:"All Boys (Trenel)", hora:"21:00", gl:null, gv:null, claseL:"ferropico", claseV:"allboystrenel"},
+            {l:"Ferro de Pico", v:"All Boys (Trenel)", hora:"21:00", gl:1, gv:0, claseL:"ferropico", claseV:"allboystrenel"},
             ]},
        ]},
      { id: "2026-10-22", label: "JUE 22/10", torneos: [
@@ -16845,6 +16845,7 @@ const BD_H2H = {
         { fecha: "Apertura 2026 - Fecha 10", torneo: "futsalreserva", l: "Tiro Federal", v: "San Francisco", gl: 2, gv: 5 },
         { fecha: "Clausura 2026 - Fecha 10", torneo: "futsal", l: "San Francisco", v: "Tiro Federal", gl: 0, gv: 2 },
         { fecha: "Clausura 2026 - Fecha 10", torneo: "futsalreserva", l: "San Francisco", v: "Tiro Federal", gl: 3, gv: 4 },
+        { fecha: "Clausura 2026 - Fecha 6", torneo: "senior", l: "Tiro Federal", v: "San Francisco", gl: 5, gv: 2, goles_l: ["Juan José Dietz (3)","Mauro Fernández","Federico Mancinelli"], goles_v: [] },
     ],
     "Huracán|Villa Mitre": [
         { fecha: "Fecha 3 - Apertura 2026 - 28 mar", torneo: "oficial", l: "Villa Mitre", v: "Huracán", gl: 0, gv: 1, goles_l: [], goles_v: ["Agustín Seisdedos"]},
@@ -17764,6 +17765,8 @@ const BD_H2H = {
         { fecha: "Apertura 2026 - Fecha 9", torneo: "senior", l: "San Francisco", v: "Pacífico BB", gl: 4, gv: 1, goles_l: ["Ángel Martínez (2)","Víctor Martínez","Juan Pérez"], goles_v: ["Ramón López"] },
         { fecha: "Apertura 2026 - Fecha 11", torneo: "futsal", l: "San Francisco", v: "Pacífico BB", gl: 5, gv: 5 },
         { fecha: "Apertura 2026 - Fecha 11", torneo: "futsalreserva", l: "San Francisco", v: "Pacífico BB", gl: 4, gv: 2 },
+        { fecha: "Clausura 2026 - Fecha 11", torneo: "futsal", l: "Pacífico BB", v: "San Francisco", gl: 5, gv: 1 },
+        { fecha: "Clasusura 2026 - Fecha 11", torneo: "futsalreserva", l: "Pacífico BB", v: "San Francisco", gl: 2, gv: 5 },
     ],
     "Olimpo|San Martín de Formosa": [
         { fecha: "Semifinal - Ida - 11 oct", torneo: "federala", l: "Olimpo", v: "San Martín de Formosa", gl: 1, gv: 1, goles_l: ["Brian Guille"], goles_v: [] },
@@ -18447,12 +18450,12 @@ const BD_POS_FUTSAL = {
         {n:"Comercial <b>(C)</b>",       cl:"comercial",    pj:11,pg:9,pe:0,pp:2,gf:42, gc:26, pts:27},
         {n:"Villa Mitre <b>(C)</b>",     cl:"villamitre",    pj:11,pg:6,pe:2,pp:3,gf:39, gc:36, pts:20},
         {n:"Tiro Federal <b>(C)</b>",    cl:"tirofederal",    pj:12,pg:6,pe:1,pp:5,gf:25, gc:26, pts:19},
-        {n:"Liniers <b>(*)</b>",         cl:"liniers",    pj:12,pg:5,pe:2,pp:5,gf:28, gc:31, pts:17},
-        {n:"Pacífico BB",     cl:"pacificobb",    pj:11,pg:5,pe:1,pp:5,gf:38, gc:42, pts:16},
+        {n:"Pacífico BB",     cl:"pacificobb",    pj:12,pg:6,pe:1,pp:5,gf:43, gc:43, pts:19},
+        {n:"Liniers <b>(*)</b>  <b>(C)</b>",         cl:"liniers",    pj:12,pg:5,pe:2,pp:5,gf:28, gc:31, pts:17},
         {n:"Dublin",          cl:"dublin",    pj:12,pg:5,pe:0,pp:7,gf:27, gc:40, pts:15},
-        {n:"Petroquímicos",   cl:"petroquimicos",    pj:12,pg:4,pe:1,pp:7,gf:35, gc:43, pts:13},
+        {n:"Petroquímicos <b>(X)</b>",   cl:"petroquimicos",    pj:12,pg:4,pe:1,pp:7,gf:35, gc:43, pts:13},
         {n:"Catamarca <b>(X)</b>",       cl:"catamarca",    pj:12,pg:3,pe:1,pp:8,gf:25, gc:50, pts:10},
-        {n:"San Francisco <b>(X)</b>",   cl:"sanfrancisco",    pj:11,pg:3,pe:0,pp:8,gf:17, gc:37, pts:9},
+        {n:"San Francisco <b>(X)</b>",   cl:"sanfrancisco",    pj:12,pg:3,pe:0,pp:9,gf:18, gc:42, pts:9},
         {n:"<s>Dep. Futsal</s> <b>(-)</b>",     cl:"depfutsal",    pj:0,pg:0,pe:0,pp:0,gf:0, gc:0, pts:0},
         {n:"<s>Huracán</s> <b>(-)</b>",         cl:"huracan",    pj:0,pg:0,pe:0,pp:0,gf:0, gc:0, pts:0}
     ],
@@ -18466,9 +18469,9 @@ const BD_POS_FUTSAL = {
         {n:"Dublin  <b>(C)</b>",          cl:"dublin",    pj:12,pg:6,pe:3,pp:3,gf:35, gc:32, pts:21},
         {n:"Comercial",       cl:"comercial",    pj:11,pg:4,pe:2,pp:5,gf:25, gc:39, pts:14},
         {n:"Catamarca",       cl:"catamarca",    pj:12,pg:4,pe:2,pp:6,gf:30, gc:60, pts:14},
+        {n:"San Francisco",   cl:"sanfrancisco",    pj:12,pg:4,pe:0,pp:8,gf:30, gc:60, pts:12},
         {n:"Tiro Federal",    cl:"tirofederal",    pj:12,pg:3,pe:2,pp:7,gf:21, gc:29, pts:11},
-        {n:"Pacífico BB",     cl:"pacificobb",    pj:11,pg:3,pe:0,pp:8,gf:23, gc:46, pts:9},
-        {n:"San Francisco",   cl:"sanfrancisco",    pj:11,pg:3,pe:0,pp:8,gf:25, gc:58, pts:9},
+        {n:"Pacífico BB <b>(X)</b>",     cl:"pacificobb",    pj:12,pg:3,pe:0,pp:9,gf:25, gc:51, pts:9},
         {n:"<s>Dep. Futsal</s> <b>(-)</b>",     cl:"depfutsal",    pj:0,pg:0,pe:0,pp:0,gf:0, gc:0, pts:0},
         {n:"<s>Huracán</s> <b>(-)</b>",         cl:"huracan",    pj:0,pg:0,pe:0,pp:0,gf:0, gc:0, pts:0}
     ]
@@ -19055,9 +19058,9 @@ const BD_SENIOR_CLAUSURA = [
     { n: "Huracán",       cl: "huracan",      pj:5, pg:2, pe:1, pp:2, gf:11, gc:9, pts:7 },
     { n: "Sansinena",     cl: "sansinena",    pj:5, pg:2, pe:1, pp:2, gf:9, gc:8, pts:7 },
     { n: "Comercial",     cl: "comercial",    pj:5, pg:2, pe:0, pp:3, gf:9, gc:9, pts:6 },
-    { n: "San Francisco", cl: "sanfrancisco", pj:5, pg:2, pe:0, pp:3, gf:8, gc:14, pts:6 },
+    { n: "San Francisco", cl: "sanfrancisco", pj:6, pg:2, pe:0, pp:4, gf:10, gc:19, pts:6 },
+    { n: "Tiro Federal",  cl: "tirofederal",  pj:6, pg:1, pe:2, pp:3, gf:13, gc:15, pts:5 },
     { n: "Sporting",      cl: "sporting",     pj:5, pg:1, pe:0, pp:4, gf:8, gc:11, pts:3 },
-    { n: "Tiro Federal",  cl: "tirofederal",  pj:5, pg:0, pe:2, pp:3, gf:8, gc:13, pts:2 },
 ];
 
 const BD_FIXTURES_SENIOR = [
@@ -19165,7 +19168,7 @@ const BD_FIXTURES_SENIOR_CLAUSURA = [
         { l: "Libertad",   v: "Huracán",      gl: null, gv: null },
         { l: "Pacífico (C)",      v: "Pacífico BB",  gl: null, gv: null },
         { l: "Sporting",      v: "Sansinena",    gl: null, gv: null },
-        { l: "Tiro Federal",  v: "San Francisco",        gl: null, gv: null },
+        { l: "Tiro Federal",  v: "San Francisco",        gl: 5, gv: 2, goles_l:["Juan José Dietz (3)","Mauro Fernández","Federico Mancinelli"], goles_v:[] },
         { l: "Bella Vista",  v: "Comercial",      gl: null, gv: null }
     ]},
     { fecha: 7, partidos: [
@@ -19798,8 +19801,8 @@ function generarCopaPais() {
 
 const BD_GOLEADORES_SENIOR_CLAUSURA = [
     { nombre: "Mariano Orsi", equipo: "Libertad", goles: 8 },
+    { nombre: "Juan José Dietz", equipo: "Tiro Federal", goles: 7 },
     { nombre: "Víctor Torrero", equipo: "Bella Vista", goles: 5 },
-    { nombre: "Juan José Dietz", equipo: "Tiro Federal", goles: 4 },
     { nombre: "Sebastián Aristi", equipo: "Comercial", goles: 4 },
     { nombre: "Juan Pablo Hipperdinger", equipo: "Huracán", goles: 3 },
     { nombre: "Fernando Priore", equipo: "Bella Vista", goles: 2 },
@@ -19813,6 +19816,7 @@ const BD_GOLEADORES_SENIOR_CLAUSURA = [
     { nombre: "Lucas Arias", equipo: "Pacífico (C)", goles: 2 },
     { nombre: "Cristian Negrín", equipo: "Pacífico (C)", goles: 2 },
     { nombre: "Esteban Angelini", equipo: "Pacífico (C)", goles: 2 },
+    { nombre: "Federico Mancinelli", equipo: "Tiro Federal", goles: 2 },
     { nombre: "Emiliano Jofré", equipo: "Sansinena", goles: 2 },
     { nombre: "Sebastián Weidele", equipo: "Sansinena", goles: 2 },
     { nombre: "Pablo Moggia", equipo: "Sansinena", goles: 2 },
@@ -19823,7 +19827,7 @@ const BD_GOLEADORES_SENIOR_CLAUSURA = [
     { nombre: "Armani", equipo: "Libertad", goles: 1 },
     { nombre: "Víctor Loyarte", equipo: "Tiro Federal", goles: 1 },
     { nombre: "César Muzi", equipo: "Tiro Federal", goles: 1 },
-    { nombre: "Federico Mancinelli", equipo: "Tiro Federal", goles: 1 },
+    { nombre: "Mauro Fernández", equipo: "Tiro Federal", goles: 1 },
     { nombre: "Víctor Martínez", equipo: "San Francisco", goles: 1 },
     { nombre: "Diego Vera", equipo: "Sporting", goles: 1 },
     { nombre: "Maximiliano Rodríguez", equipo: "Sporting", goles: 1 },
@@ -23305,7 +23309,7 @@ const BD_REGAMATEUR_PLAYOFFS = {
     tercera: [
         { ida:    { local: "Huracán", clL: "huracan", visitante: "Santa Rita", clV: "santarita", gl: null, gv: null, goles_l: [], goles_v: [] },
           vuelta: { local: "Santa Rita", clL: "santarita", visitante: "Huracán", clV: "huracan", gl: null, gv: null, goles_l: [], goles_v: [] } },
-        { ida:    { local: "Ferro de Pico", clL: "ferropico", visitante: "All Boys de Trenel", clV: "allboystrenel", gl: null, gv: null, goles_l: [], goles_v: [] },
+        { ida:    { local: "Ferro de Pico", clL: "ferropico", visitante: "All Boys de Trenel", clV: "allboystrenel", gl: 1, gv: 0, goles_l: [], goles_v: [] },
           vuelta: { local: "All Boys de Trenel", clL: "allboystrenel", visitante: "Ferro de Pico", clV: "ferropico", gl: null, gv: null, goles_l: [], goles_v: [] } },
         { ida:    { local: "Quilmes de Mar del Plata", clL: "quilmesmdp", visitante: "Dep. Norte", clV: "depnorte", gl: null, gv: null, goles_l: [], goles_v: [] },
           vuelta: { local: "Dep. Norte", clL: "depnorte", visitante: "Quilmes de Mar del Plata", clV: "quilmesmdp", gl: null, gv: null, goles_l: [], goles_v: [] } },
