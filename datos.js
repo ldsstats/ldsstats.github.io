@@ -1634,10 +1634,10 @@ const idaFemeninoClausura = [
         { l: "Tiro Federal",          v: "Libertad",             gl: 6, gv: 0, dia:"Sáb 17/10", hora:"18:00", goles_l:["Morena Juárez (2)","Aylén Baratcabal (2)","Victoria Toloza","Magalí Toloza"], goles_v:[] },
     ]},
     { fecha: 14, partidos: [
-        { l: "Empleados de Comercio", v: "Villa Mitre",          gl: null, gv: null },
-        { l: "La Armonía",            v: "Municipales",          gl: null, gv: null },
-        { l: "Bella Vista",           v: "Tiro Federal",         gl: null, gv: null },
-        { l: "Libertad",              v: "Sporting",             gl: null, gv: null }
+        { l: "Empleados de Comercio", v: "Villa Mitre",          gl: null, gv: null, dia:"Sáb 24/10", hora:"16:00", goles_l:[], goles_v:[] },
+        { l: "La Armonía",            v: "Municipales",          gl: null, gv: null, dia:"Sáb 24/10", hora:"16:00", goles_l:[], goles_v:[] },
+        { l: "Libertad",              v: "Sporting",             gl: null, gv: null, dia:"Sáb 24/10", hora:"16:00", goles_l:[], goles_v:[] },
+        { l: "Bella Vista",           v: "Tiro Federal",         gl: null, gv: null, dia:"Dom 25/10", hora:"16:00", goles_l:[], goles_v:[] },
     ]},
 ];
 idaFemeninoClausura.forEach(f => {
@@ -1948,7 +1948,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 27).partidos.forEach(p
 });
 
 
-let diaSeleccionadoHome = "2026-10-22"; 
+let diaSeleccionadoHome = "2026-10-23"; 
 let mercadoPasesAbierto = false;
 
 function toggleMercadoPasesHome() {
@@ -1985,7 +1985,7 @@ function generarHome() {
             { nombre: "FUTSAL | CLAUSURA | FECHA 11 (REPROGRAMADO)", cat: "futsal", torLink: "futsal", noAutoResult: true, partidos: [
             {l:"Pacífico BB", v:"San Francisco", hora:"22:00", gl:5, gv:1, claseL:"pacificobb", claseV:"sanfrancisco",nota:"<b>en cancha de Don Bosco</b>"},
             ]},
-            { nombre: "REGIONAL AMATEUR | BONAERENSE PAMPEANA SUR | RONDA 3 - IDA", cat: "regamateurtemporada", torLink: "regamateurtemporada", noAutoResult: true, partidos: [
+            { nombre: "REGIONAL AMATEUR | BONAERENSE PAMPEANA SUR | RONDA 3 - IDA (HURACÁN)", cat: "regamateurtemporada", torLink: "regamateurtemporada", noAutoResult: true, partidos: [
             {l:"Ferro de Pico", v:"All Boys (Trenel)", hora:"21:00", gl:1, gv:0, claseL:"ferropico", claseV:"allboystrenel"},
             ]},
        ]},
@@ -2002,7 +2002,7 @@ function generarHome() {
             { nombre: "OFICIAL | CLAUSURA | FECHA 13", cat: "oficial", torLink: "oficial", noAutoResult: true, partidos: [
             {l:"Huracán", v:"San Francisco", hora:"19:30", gl:null, gv:null, claseL:"huracan", claseV:"sanfrancisco"},
             ]},
-            { nombre: "FEDERAL A | REVÁLIDA - TERCERA RONDA - IDA", cat: "federala", torLink: "federala", noAutoResult: true, partidos: [
+            { nombre: "FEDERAL A | REVÁLIDA - TERCERA RONDA - IDA (VILLA MITRE/OLIMPO)", cat: "federala", torLink: "federala", noAutoResult: true, partidos: [
             {l:"Juventud Antoniana", v:"Sol de América", hora:"22:00", gl:null, gv:null, claseL:"jantoniana", claseV:"soldeamericafsa"},
             ]},
        ]},
@@ -2012,10 +2012,19 @@ function generarHome() {
             {l:"Olimpo", v:"Sansinena", hora:"16:00", gl:null, gv:null, claseL:"olimpo", claseV:"sansinena"},
             {l:"Comercial", v:"Pacífico BB", hora:"16:00", gl:null, gv:null, claseL:"comercial", claseV:"pacificobb",nota:"Sin visitantes"},
             ]},
+            { nombre: "FEMENINO | CLAUSURA | ÚLTIMA FECHA", cat: "femenino", torLink: "femenino", noAutoResult: true, partidos: [
+            {l:"Empleados de Comercio", v:"Villa Mitre", hora:"16:00", gl:null, gv:null, claseL:"empleados", claseV:"villamitre"},
+            {l:"La Armonía", v:"Municipales", hora:"16:00", gl:null, gv:null, claseL:"laarmonia", claseV:"municipales"},
+            {l:"Sporting", v:"Libertad", hora:"16:00", gl:null, gv:null, claseL:"sporting", claseV:"libertad"},
+            ]},
+            { nombre: "2° FEMENINO | SEMIFINALES | IDA", cat: "segundafemenino", torLink: "segundafemenino", noAutoResult: true, partidos: [
+            {l:"Rosario PB", v:"Liniers", hora:"16:00", gl:null, gv:null, claseL:"rosariopb", claseV:"liniers"},
+            ]},
             { nombre: "SUB 15 FEMENINO | CUARTOS DE FINAL", cat: "sub15fem", torLink: "sub15fem", noAutoResult: true, partidos: [
+            {l:"Villa Mitre", v:"Juventud Unida", hora:"10:00", gl:null, gv:null, claseL:"villamitre", claseV:"juventudunida"},
             {l:"Tiro Federal", v:"San Francisco", hora:"14:30", gl:null, gv:null, claseL:"tirofederal", claseV:"sanfrancisco"},
             ]},
-            { nombre: "FEDERAL A | REVÁLIDA - TERCERA RONDA - IDA", cat: "federala", torLink: "federala", noAutoResult: true, partidos: [
+            { nombre: "FEDERAL A | REVÁLIDA - TERCERA RONDA - IDA (VILLA MITRE/OLIMPO)", cat: "federala", torLink: "federala", noAutoResult: true, partidos: [
             {l:"Argentino de Monte Maiz", v:"Kimberley", hora:"15:45", gl:null, gv:null, claseL:"argmontemaiz", claseV:"kimberley"},
             ]},
        ]},
@@ -2027,12 +2036,18 @@ function generarHome() {
             { nombre: "PROMOCIONAL | CLAUSURA | FECHA 13", cat: "promocional", torLink: "promocional", noAutoResult: true, partidos: [
             {l:"Rosario PB", v:"Pacífico (C)", hora:"16:00", gl:null, gv:null, claseL:"rosariopb", claseV:"pacificoc"},
             ]},
+            { nombre: "FEMENINO | CLAUSURA | ÚLTIMA FECHA", cat: "femenino", torLink: "femenino", noAutoResult: true, partidos: [
+            {l:"Bella Vista", v:"Tiro Federal", hora:"16:00", gl:null, gv:null, claseL:"bellavista", claseV:"tirofederal"},
+            ]},
             { nombre: "2° FEMENINO | SEMIFINALES | IDA", cat: "segundafemenino", torLink: "segundafemenino", noAutoResult: true, partidos: [
-            {l:"Rosario PB", v:"Liniers", hora:"16:00", gl:null, gv:null, claseL:"rosariopb", claseV:"liniers"},
             {l:"Petroquímicos", v:"San Francisco", hora:"16:00", gl:null, gv:null, claseL:"petroquimicos", claseV:"sanfrancisco",nota:"en cancha de Libertad"},
             ]},
             { nombre: "SUB 15 FEMENINO | CUARTOS DE FINAL", cat: "sub15fem", torLink: "sub15fem", noAutoResult: true, partidos: [
             {l:"Liniers", v:"La Armonía", hora:"16:00", gl:null, gv:null, claseL:"liniers", claseV:"laarmonia"},
+            {l:"Bella Vista", v:"Sporting", hora:"11:45", gl:null, gv:null, claseL:"bellavista", claseV:"sporting"},
+            ]},
+            { nombre: "SUB 15 FEMENINO | FECHA 22 (REPROGRAMADO)", cat: "sub15fem", torLink: "sub15fem", noAutoResult: true, partidos: [
+            {l:"Libertad", v:"Olimpo", hora:"10:30", gl:null, gv:null, claseL:"libertad", claseV:"olimpo"},
             ]},
             { nombre: "FEDERAL A | REVÁLIDA - TERCERA RONDA - IDA", cat: "federala", torLink: "federala", noAutoResult: true, partidos: [
             {l:"Sportivo Las Parejas", v:"Alvarado", hora:"15:00", gl:null, gv:null, claseL:"splasparejas", claseV:"alvarado"},
@@ -22976,7 +22991,7 @@ const BD_POSICIONES = {
             { nombre: "Villa Mitre",   clase: "villamitre",   pj:12, pg:3, pe:6, pp:3, gf:8, gc:16,  pts:15 },
             { nombre: "La Armonía",    clase: "laarmonia",    pj:12, pg:3, pe:5, pp:4, gf:9, gc:11,  pts:14 },
             { nombre: "Libertad",      clase: "libertad",     pj:12, pg:2, pe:6, pp:4, gf:7, gc:10,  pts:12 },
-            { nombre: "Liniers",       clase: "liniers",      pj:12, pg:2, pe:4, pp:6, gf:10, gc:10,  pts:10 },
+            { nombre: "Liniers <b>(X)</b>",       clase: "liniers",      pj:12, pg:2, pe:4, pp:6, gf:10, gc:10,  pts:10 },
 ],
         acumulada: [
             { nombre: "Huracán <b>(S)</b>",       clase: "huracan",      pj:26, pg:10, pe:14, pp:2,  gf:30, gc:18, pts:44 },
