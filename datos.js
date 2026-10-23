@@ -642,7 +642,7 @@ const BD_FIXTURES_FUTSAL = [
         {l:"La Estación",   v:"San Francisco",     gl:5, gv:0},
         {l:"La Esperanza", v:"Los 3 Chiflados",     gl:3, gv:3},
         {l:"Tiro Federal",   v:"Petroquímicos",     gl:3, gv:3},
-        {l:"Villa Mitre",       v:"Comercial",     gl:null, gv:null},
+        {l:"Villa Mitre",       v:"Comercial",     gl:1, gv:4},
         {l:"Dep. Futsal",     v:"Pacífico BB",     gl:null, gv:null},
         {l:"Huracán",         v:"Catamarca",     gl:null, gv:null},
     ]},
@@ -1991,7 +1991,7 @@ function generarHome() {
        ]},
      { id: "2026-10-22", label: "JUE 22/10", torneos: [
             { nombre: "FUTSAL | CLAUSURA | FECHA 9 (REPROGRAMADO)", cat: "futsal", torLink: "futsal", noAutoResult: true, partidos: [
-            {l:"Villa Mitre", v:"Comercial", hora:"22:00", gl:null, gv:null, claseL:"villamitre", claseV:"comercial",nota:"<b>en cancha de Don Bosco</b>"},
+            {l:"Villa Mitre", v:"Comercial", hora:"22:00", gl:1, gv:4, claseL:"villamitre", claseV:"comercial",nota:"<b>en cancha de Don Bosco</b>"},
             ]},
             { nombre: "SENIOR | CLAUSURA | FECHA 6", cat: "seniorclausura", torLink: "seniorclausura", noAutoResult: true, partidos: [
             {l:"Sporting", v:"Sansinena", hora:"21:00", gl:null, gv:null, claseL:"sporting", claseV:"sansinena",nota:"<b>en cancha de Sporting</b>"},
@@ -5675,7 +5675,36 @@ const BD_DETALLES_FUERA = {
                     { condicion: "F3", local: "San Francisco",       visitante: "— Fecha Libre —",      gl: null, gv: null, goles_local: [], goles_visitante: [] },
                     { condicion: "F4", local: "Villa Rosa (Dorrego)", visitante: "San Francisco",       gl: 0, gv: 3, goles_local: [], goles_visitante: ["Matías Soto Torres", "Axel Hiess", "Maximiliano Gandolfo"] },
                     { condicion: "F5", local: "San Francisco",       visitante: "Racing (Carhué)",      gl: 3, gv: 0, goles_local: ["Alexis Vega", "Alejandro Vila", "Diego Romero"], goles_visitante: [] },
-                    { condicion: "F6", local: "San Francisco",       visitante: "— Fecha Libre —",      gl: null, gv: null, goles_local: [], goles_visitante: [] }
+                    { condicion: "F6", local: "San Francisco",       visitante: "— Fecha Libre —",      gl: null, gv: null, goles_local: [], goles_visitante: [] }                ]
+            }
+        ],
+        fases: [
+            {
+                nombre: "Playoffs regional — 2° Ronda",
+                partidos: [
+                    { condicion: "Ida",    local: "San Francisco", visitante: "Huracán de White",              gl: 2, gv: 1, goles_local: [], goles_visitante: [] },
+                    { condicion: "Vuelta", local: "Huracán de White",              visitante: "San Francisco", gl: 2, gv: 1, goles_local: [], goles_visitante: [],nota: "Partido jugado en cancha de Rosario PB",
+                      penales: {
+                          ganador: "San Francisco",
+                          resultado: "1-2",
+                          visitante_conv: ["Matías Soto Torres", "Manuel Álvarez López"],
+                          visitante_fall: ["Leandro Hekel","Alexis Vega","Lautaro Quijada"]
+                      }
+                    }
+                ]
+            },
+            {
+                nombre: "Playoffs regional — 3° Ronda",
+                partidos: [
+                    { condicion: "Ida",    local: "San Francisco",         visitante: "Santa Rita", gl: 2, gv: 2, goles_local: [], goles_visitante: [] },
+                    { condicion: "Vuelta", local: "Santa Rita",      visitante: "San Francisco",    gl: 2, gv: 3, goles_local: [], goles_visitante: [] }
+                ]
+            },
+            {
+                nombre: "Playoffs regional — 4° Ronda",
+                partidos: [
+                    { condicion: "Ida",    local: "San Francisco",         visitante: "Costa Brava", gl: 0, gv: 2, goles_local: [], goles_visitante: [] },
+                    { condicion: "Vuelta", local: "Costa Brava",      visitante: "San Francisco",    gl: 2, gv: 0, goles_local: [], goles_visitante: [] }
                 ]
             }
         ]
@@ -17879,6 +17908,7 @@ const BD_H2H = {
     "Comercial|Villa Mitre": [
         { fecha: "Apertura 2026 - Fecha 9", torneo: "futsal", l: "Comercial", v: "Villa Mitre", gl: 5, gv: 6 },
         { fecha: "Apertura 2026 - Fecha 9", torneo: "futsalreserva", l: "Comercial", v: "Villa Mitre", gl: 1, gv: 5 },
+        { fecha: "Clausura 2026 - Fecha 9", torneo: "futsal", l: "Villa Mitre", v: "Comercial", gl: 1, gv: 4 },
     ],
     "Dep. Futsal|Pacífico BB": [
         { fecha: "Apertura 2026 - Fecha 9", torneo: "futsal", l: "Dep. Futsal", v: "Pacífico BB", gl: 4, gv: 6 },
@@ -18458,13 +18488,13 @@ function mostrarSub13Playoffs() {
 const BD_POS_FUTSAL = {
     principal: [
         {n:"La Estación <b>(A)</b> <b>(C)</b>",     cl:"laestacion",    pj:12,pg:12,pe:0,pp:0,gf:54, gc:22, pts:36},
+        {n:"Comercial <b>(C)</b>",       cl:"comercial",    pj:12,pg:10,pe:0,pp:2,gf:46, gc:27, pts:30},
         {n:"Los 3 Chiflados <b>(*)</b>  <b>(C)</b>", cl:"los3chiflados",    pj:12,pg:9,pe:1,pp:2,gf:49, gc:22, pts:28},
         {n:"La Esperanza <b>(C)</b>",    cl:"laesperanza",    pj:12,pg:9,pe:1,pp:2,gf:45, gc:27, pts:28},
-        {n:"Comercial <b>(C)</b>",       cl:"comercial",    pj:11,pg:9,pe:0,pp:2,gf:42, gc:26, pts:27},
-        {n:"Villa Mitre <b>(C)</b>",     cl:"villamitre",    pj:11,pg:6,pe:2,pp:3,gf:39, gc:36, pts:20},
+        {n:"Villa Mitre <b>(C)</b>",     cl:"villamitre",    pj:12,pg:6,pe:2,pp:4,gf:40, gc:40, pts:20},
         {n:"Tiro Federal <b>(C)</b>",    cl:"tirofederal",    pj:12,pg:6,pe:1,pp:5,gf:25, gc:26, pts:19},
-        {n:"Pacífico BB",     cl:"pacificobb",    pj:12,pg:6,pe:1,pp:5,gf:43, gc:43, pts:19},
-        {n:"Liniers <b>(*)</b>  <b>(C)</b>",         cl:"liniers",    pj:12,pg:5,pe:2,pp:5,gf:28, gc:31, pts:17},
+        {n:"Pacífico BB <b>(C)</b>",     cl:"pacificobb",    pj:12,pg:6,pe:1,pp:5,gf:43, gc:43, pts:19},
+        {n:"Liniers <b>(*)</b>",         cl:"liniers",    pj:12,pg:5,pe:2,pp:5,gf:28, gc:31, pts:17},
         {n:"Dublin",          cl:"dublin",    pj:12,pg:5,pe:0,pp:7,gf:27, gc:40, pts:15},
         {n:"Petroquímicos <b>(X)</b>",   cl:"petroquimicos",    pj:12,pg:4,pe:1,pp:7,gf:35, gc:43, pts:13},
         {n:"Catamarca <b>(X)</b>",       cl:"catamarca",    pj:12,pg:3,pe:1,pp:8,gf:25, gc:50, pts:10},
