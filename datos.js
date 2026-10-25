@@ -2021,7 +2021,7 @@ function generarHome() {
             {l:"Rosario PB", v:"Liniers", hora:"16:00", gl: 1, gv:2, claseL:"rosariopb", claseV:"liniers"},
             ]},
             { nombre: "SUB 15 FEMENINO | CUARTOS DE FINAL", cat: "sub15fem", torLink: "sub15fem", noAutoResult: true, partidos: [
-            {l:"Villa Mitre", v:"Juventud Unida", hora:"10:00", gl:null, gv:null, claseL:"villamitre", claseV:"juventudunida"},
+            {l:"Villa Mitre", v:"Juventud Unida", hora:"10:00", gl:1, gv:4, claseL:"villamitre", claseV:"juventudunida"},
             {l:"Tiro Federal", v:"San Francisco", hora:"14:30", gl:0, gv:0, pen_l:5, pen_v:4, claseL:"tirofederal", claseV:"sanfrancisco"},
             ]},
             { nombre: "FEDERAL A | REVÁLIDA - TERCERA RONDA - IDA (VILLA MITRE/OLIMPO)", cat: "federala", torLink: "federala", noAutoResult: true, partidos: [
@@ -25556,11 +25556,11 @@ const BD_SUB15FEM_PLAYOFFS = {
     cuartos: [
         { local: "Liniers", clL: "liniers", visitante: "La Armonía", clV: "laarmonia", gl: null, gv: null, goles_l: [], goles_v: [] },
         { local: "Bella Vista", clL: "bellavista", visitante: "Sporting", clV: "sporting", gl: null, gv: null, goles_l: [], goles_v: [] },
-        { local: "Villa Mitre", clL: "villamitre", visitante: "Juventud Unida", clV: "juventudunida", gl: null, gv: null, goles_l: [], goles_v: [] },
+        { local: "Villa Mitre", clL: "villamitre", visitante: "Juventud Unida", clV: "juventudunida", gl: 1, gv: 4, goles_l: [], goles_v: [] },
         { local: "Tiro Federal", clL: "tirofederal", visitante: "San Francisco", clV: "sanfrancisco", gl: 0, gv: 0, pen_l:5, pen_v:4, goles_l: [], goles_v: [] },
     ],
     semis: [
-        { local: "A confirmar", clL: "aconfirmar", visitante: "A confirmar", clV: "aconfirmar", gl: null, gv: null, goles_l: [], goles_v: [] },
+        { local: "Juventud Unida", clL: "juventudunida", visitante: "A confirmar", clV: "aconfirmar", gl: null, gv: null, goles_l: [], goles_v: [] },
         { local: "Tiro Federal", clL: "tirofederal", visitante: "A confirmar", clV: "aconfirmar", gl: null, gv: null, goles_l: [], goles_v: [] },
     ],
     final: { local: "A confirmar", clL: "aconfirmar", visitante: "A confirmar", clV: "aconfirmar", gl: null, gv: null, goles_l: [], goles_v: [] }
