@@ -2070,6 +2070,17 @@ function generarHome() {
             {l:"Villa Mitre", v:"Libertad", hora:"16:00", gl:0, gv:3, claseL:"villamitre", claseV:"libertad"},
             ]},
        ]},
+     { id: "2026-10-31", label: "DOM 31/10", torneos: [
+            { nombre: "OFICIAL | CLAUSURA | ÚLTIMA FECHA (TENTATIVO, NO CONFIRMADO)", cat: "oficial", torLink: "oficial", noAutoResult: true, partidos: [
+            {l:"Libertad", v:"La Armonía", hora:"15:00", gl:null, gv:null, claseL:"libertad", claseV:"laarmonia"},
+            {l:"Bella Vista", v:"Huracán", hora:"15:00", gl:null, gv:null, claseL:"bellavista", claseV:"huracan"},
+            {l:"Sporting", v:"Villa Mitre", hora:"15:00", gl:null, gv:null, claseL:"sporting", claseV:"villamitre"},
+            {l:"San Francisco", v:"Liniers", hora:"15:00", gl:null, gv:null, claseL:"sanfrancisco", claseV:"liniers"},
+            ]},
+            { nombre: "FEDERAL A | REVÁLIDA - TERCERA RONDA - VUELTA", cat: "federala", torLink: "federala", noAutoResult: true, partidos: [
+            {l:"Olimpo", v:"Gimnasia (CdU)", hora:"19:00", gl:null, gv:null, claseL:"olimpo", claseV:"gimnasiacdu"},
+            ]},
+       ]},
     ];
 
     let html = `<div class="mp-visera" onclick="toggleMercadoPasesHome()">
@@ -24486,7 +24497,7 @@ function generarReservaPromocionalPlayoffs() {
     return html;
 }
 
-function generarFemeninoPlayoffs() {
+function generarFemeninoPlayoffsApertura() {
     let html = `<div class="header-t">1° FEMENINO — PLAYOFFS</div>`;
     html += `<div style="background:#111;color:#ffd700;text-align:center;padding:10px 12px;display:flex;align-items:center;justify-content:center;gap:10px;border-bottom:2px solid #ffd700;">
         <img src="Municipales.png" style="width:36px;height:36px;object-fit:contain;">
@@ -24506,7 +24517,7 @@ function generarFemeninoPlayoffs() {
     return html;
 }
 
-function generarReservaFemeninoPlayoffs() {
+function generarReservaFemeninoPlayoffsApertura() {
     let html = `<div class="header-t">RESERVA 1° FEMENINO — PLAYOFFS</div>`;
     html += `<div style="background:#111;color:#ffd700;text-align:center;padding:10px 12px;display:flex;align-items:center;justify-content:center;gap:10px;border-bottom:2px solid #ffd700;">
         <img src="Tiro_Federal.png" style="width:36px;height:36px;object-fit:contain;border-radius:50%;background:#fff;">
@@ -24579,6 +24590,16 @@ function generarReservaSegundaFemeninoPlayoffs() {
         </button>
     </div>`;
 
+    html += `<div class="header-t" style="font-size:11px;background:#2c6e49;">CUARTOS DE FINAL</div><table>`;
+    BD_RESERVA_SEGUNDAFEMENINO_PLAYOFFS.cuartos.forEach((d, i) => {
+        html += _renderPartidoPlayoff(d.ida);
+        html += _renderPartidoPlayoff(d.vuelta);
+        if (i < BD_RESERVA_SEGUNDAFEMENINO_PLAYOFFS.cuartos.length - 1) {
+            html += `<tr><td colspan="3" style="padding:0;height:12px;background:#729b3c;"></td></tr>`;
+        }
+    });
+    html += `</table>`;
+    html += `<div style="height:8px;background:#f0f0f0;border-top:1px solid #ddd;border-bottom:1px solid #ddd;"></div>`;
     html += `<div class="header-t" style="font-size:11px;background:#2c6e49;">SEMIFINALES</div><table>`;
 
     BD_RESERVA_SEGUNDAFEMENINO_PLAYOFFS.semis.forEach(p => {
@@ -25591,8 +25612,14 @@ const BD_SEGUNDAFEMENINO_PLAYOFFS = {
 };
 
 const BD_RESERVA_SEGUNDAFEMENINO_PLAYOFFS = {
+    cuartos: [
+        {
+            ida:    { local: "Petroquímicos", clL: "petroquimicos", visitante: "Estrella de Oro", clV: "estrellaoro", gl: 1, gv: 4, goles_l: [], goles_v: [] },
+            vuelta: { local: "Estrella de Oro", clL: "estrellaoro", visitante: "Petroquímicos", clV: "petroquimicos", gl: null, gv: null, goles_l: [], goles_v: [] }
+        },
+    ],
     semis: [
-        { local: "Liniers", clL: "liniers", visitante: "Estrella de Oro", clV: "estrellaoro", gl: null, gv: null, goles_l: [], goles_v: [] },
+        { local: "Liniers", clL: "liniers", visitante: "A confirmar", clV: "aconfirmar", gl: null, gv: null, goles_l: [], goles_v: [] },
         { local: "San Francisco", clL: "sanfrancisco", visitante: "Rosario PB", clV: "rosariopb", gl: null, gv: null, goles_l: [], goles_v: [] },
     ]
 };
@@ -25612,7 +25639,7 @@ const BD_SUB15FEM_PLAYOFFS = {
 };
 
 function generarSub15FemPlayoffs() {
-    let subPO = window._subPOSub15Fem || 'cuartos';
+    let subPO = window._subPOSub15Fem || 'semis';
     const tabs = `<div style="display:flex;gap:6px;padding:8px 8px 4px;background:#f9f9f9;border-bottom:1px solid #eee;">
         <button onclick="window._subPOSub15Fem='cuartos';document.getElementById('contenido').innerHTML=generarSub15FemPlayoffs()"
             style="font-size:10px;padding:4px 12px;border:1px solid #1a4a2e;border-radius:12px;cursor:pointer;font-weight:bold;background:${subPO==='cuartos'?'#1a4a2e':'#fff'};color:${subPO==='cuartos'?'#fff':'#1a4a2e'};">Cuartos de final</button>
@@ -25650,6 +25677,87 @@ function generarSub15FemPlayoffs() {
     } else {
         html += `<div class="header-t" style="font-size:11px;background:#333;">FINAL</div><table>`;
         html += renderP(BD_SUB15FEM_PLAYOFFS.final);
+        html += `</table>`;
+    }
+    return html;
+}
+
+const BD_FEMENINO_CLAUSURA_PLAYOFFS = {
+    semifinales: [
+        { local: "Municipales", clL: "municipales", visitante: "Bella Vista", clV: "bellavista", gl: null, gv: null, goles_l: [], goles_v: [] },
+        { local: "Villa Mitre", clL: "villamitre", visitante: "Tiro Federal", clV: "tirofederal", gl: null, gv: null, goles_l: [], goles_v: [] }
+    ],
+    final: { local: "A confirmar", clL: "aconfirmar", visitante: "A confirmar", clV: "aconfirmar", gl: null, gv: null, goles_l: [], goles_v: [] }
+};
+
+const BD_RESERVA_FEMENINO_CLAUSURA_PLAYOFFS = {
+    semifinales: [
+        { local: "Bella Vista", clL: "bellavista", visitante: "Municipales", clV: "municipales", gl: null, gv: null, goles_l: [], goles_v: [] },
+        { local: "Tiro Federal", clL: "tirofederal", visitante: "Villa Mitre", clV: "villamitre", gl: null, gv: null, goles_l: [], goles_v: [] }
+    ],
+    final: { local: "A confirmar", clL: "aconfirmar", visitante: "A confirmar", clV: "aconfirmar", gl: null, gv: null, goles_l: [], goles_v: [] }
+};
+
+let torneoPlayoffsFem = 'clausura';
+let rondaPlayoffsFemClausura = 'semifinales';
+let torneoPlayoffsResFem = 'clausura';
+let rondaPlayoffsResFemClausura = 'semifinales';
+
+function _btnPOFem(texto, activo, accion) {
+    return `<button onclick="${accion}" style="font-size:10px;padding:4px 12px;border:1px solid #1a4a2e;border-radius:12px;cursor:pointer;font-weight:bold;background:${activo ? '#1a4a2e' : '#fff'};color:${activo ? '#fff' : '#1a4a2e'};">${texto}</button>`;
+}
+
+function generarFemeninoPlayoffs() {
+    let html = `<div class="header-t">1° FEMENINO — PLAYOFFS</div>`;
+    html += `<div style="display:flex;gap:6px;padding:8px;background:#f9f9f9;border-bottom:1px solid #ddd;">
+        ${_btnPOFem('Apertura', torneoPlayoffsFem === 'apertura', "torneoPlayoffsFem='apertura';document.getElementById('contenido').innerHTML=generarFemeninoPlayoffs()")}
+        ${_btnPOFem('Clausura', torneoPlayoffsFem === 'clausura', "torneoPlayoffsFem='clausura';document.getElementById('contenido').innerHTML=generarFemeninoPlayoffs()")}
+    </div>`;
+
+    if (torneoPlayoffsFem === 'apertura') {
+        html += generarFemeninoPlayoffsApertura().replace('<div class="header-t">1° FEMENINO — PLAYOFFS</div>', '');
+        return html;
+    }
+
+    html += `<div style="display:flex;gap:6px;padding:8px;background:#f9f9f9;border-bottom:1px solid #ddd;">
+        ${_btnPOFem('Semifinales', rondaPlayoffsFemClausura === 'semifinales', "rondaPlayoffsFemClausura='semifinales';document.getElementById('contenido').innerHTML=generarFemeninoPlayoffs()")}
+        ${_btnPOFem('Final', rondaPlayoffsFemClausura === 'final', "rondaPlayoffsFemClausura='final';document.getElementById('contenido').innerHTML=generarFemeninoPlayoffs()")}
+    </div>`;
+    if (rondaPlayoffsFemClausura === 'semifinales') {
+        html += `<div class="header-t" style="font-size:11px;background:#2c6e49;">SEMIFINALES</div><table>`;
+        BD_FEMENINO_CLAUSURA_PLAYOFFS.semifinales.forEach(p => { html += _renderPartidoPlayoff(p); });
+        html += `</table>`;
+    } else {
+        html += `<div class="header-t" style="font-size:11px;background:#7b1a1a;">🏆 FINAL</div><table>`;
+        html += _renderPartidoPlayoff(BD_FEMENINO_CLAUSURA_PLAYOFFS.final);
+        html += `</table>`;
+    }
+    return html;
+}
+
+function generarReservaFemeninoPlayoffs() {
+    let html = `<div class="header-t">RESERVA 1° FEMENINO — PLAYOFFS</div>`;
+    html += `<div style="display:flex;gap:6px;padding:8px;background:#f9f9f9;border-bottom:1px solid #ddd;">
+        ${_btnPOFem('Apertura', torneoPlayoffsResFem === 'apertura', "torneoPlayoffsResFem='apertura';document.getElementById('contenido').innerHTML=generarReservaFemeninoPlayoffs()")}
+        ${_btnPOFem('Clausura', torneoPlayoffsResFem === 'clausura', "torneoPlayoffsResFem='clausura';document.getElementById('contenido').innerHTML=generarReservaFemeninoPlayoffs()")}
+    </div>`;
+
+    if (torneoPlayoffsResFem === 'apertura') {
+        html += generarReservaFemeninoPlayoffsApertura().replace('<div class="header-t">RESERVA 1° FEMENINO — PLAYOFFS</div>', '');
+        return html;
+    }
+
+    html += `<div style="display:flex;gap:6px;padding:8px;background:#f9f9f9;border-bottom:1px solid #ddd;">
+        ${_btnPOFem('Semifinales', rondaPlayoffsResFemClausura === 'semifinales', "rondaPlayoffsResFemClausura='semifinales';document.getElementById('contenido').innerHTML=generarReservaFemeninoPlayoffs()")}
+        ${_btnPOFem('Final', rondaPlayoffsResFemClausura === 'final', "rondaPlayoffsResFemClausura='final';document.getElementById('contenido').innerHTML=generarReservaFemeninoPlayoffs()")}
+    </div>`;
+    if (rondaPlayoffsResFemClausura === 'semifinales') {
+        html += `<div class="header-t" style="font-size:11px;background:#2c6e49;">SEMIFINALES</div><table>`;
+        BD_RESERVA_FEMENINO_CLAUSURA_PLAYOFFS.semifinales.forEach(p => { html += _renderPartidoPlayoff(p); });
+        html += `</table>`;
+    } else {
+        html += `<div class="header-t" style="font-size:11px;background:#7b1a1a;">🏆 FINAL</div><table>`;
+        html += _renderPartidoPlayoff(BD_RESERVA_FEMENINO_CLAUSURA_PLAYOFFS.final);
         html += `</table>`;
     }
     return html;
