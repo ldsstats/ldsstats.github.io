@@ -309,8 +309,8 @@ let fechaNonagonal = 9;
 
 function cambiarFechaNonagonal(n) {
     fechaNonagonal = n;
-    estado.etapaFederal = 'playoffs';
-    document.getElementById('contenido').innerHTML = generarTablaFederal('playoffs');
+    estado.etapaFederal = 'nonagonal';
+    document.getElementById('contenido').innerHTML = generarTablaFederal('nonagonal');
 }
 
 function _generarFixtureNonagonal(n) {
@@ -1998,6 +1998,9 @@ function generarHome() {
             {l:"Liniers", v:"Petroquímicos", hora:"22:00", gl:null, gv:null, claseL:"liniers", claseV:"petroquimicos",nota:"en cancha de Comercial"},
             {l:"La Esperanza", v:"Tiro Federal", hora:"22:00", gl:null, gv:null, claseL:"laesperanza", claseV:"tirofederal",nota:"en cancha de Don Bosco"},
             ]},
+            { nombre: "REGIONAL AMATEUR | BONAERENSE PAMPEANA SUR | TERCERA RONDA | VUELTA (HURACÁN)", cat: "torneoregtemporada", torLink: "torneoregtemporada", noAutoResult: true, partidos: [
+            {l:"All Boys de Trenel", v:"Ferro de Pico", hora:"20:30", gl:null, gv:null, claseL:"allboystrenel", claseV:"ferropico",nota:"<b>IDA: 0-1</b>"},
+            ]},
        ]},
      { id: "2026-10-29", label: "JUE 29/10", torneos: [
             { nombre: "FUTSAL | CLAUSURA | ÚLTIMA FECHA", cat: "futsal", torLink: "futsal", noAutoResult: true, partidos: [
@@ -2018,11 +2021,16 @@ function generarHome() {
             {l:"San Francisco", v:"Liniers", hora:"15:00", gl:null, gv:null, claseL:"sanfrancisco", claseV:"liniers"},
             ]},
             { nombre: "FEDERAL A | REVÁLIDA - TERCERA RONDA - VUELTA", cat: "federala", torLink: "federala", noAutoResult: true, partidos: [
-            {l:"Olimpo", v:"Gimnasia (CdU)", hora:"19:00", gl:null, gv:null, claseL:"olimpo", claseV:"gimnasiacdu"},
+            {l:"Douglas Haig", v:"Villa Mitre", hora:"16:00", gl:null, gv:null, claseL:"douglashaig", claseV:"villamitre",nota:"<b>0-1</b>"},
+            {l:"Olimpo", v:"Gimnasia (CdU)", hora:"19:00", gl:null, gv:null, claseL:"olimpo", claseV:"gimnasiacdu",nota:"<b>0-0</b>"},
             ]},
        ]},
      { id: "2026-11-01", label: "DOM 01/11", torneos: [
+            { nombre: "FEDERAL A | REVÁLIDA - TERCERA RONDA - VUELTA (VILLA MITRE/OLIMPO)", cat: "federala", torLink: "federala", noAutoResult: true, partidos: [
+            {l:"Alvarado", v:"Sportivo Las Parejas", hora:"11:30", gl:null, gv:null, claseL:"alvarado", claseV:"splasparejas",nota:"<b>1-0</b>"},
+            ]},
             { nombre: "REGIONAL AMATEUR | BONAERENSE PAMPEANA SUR | RONDA 3 - VUELTA", cat: "regamateurtemporada", torLink: "regamateurtemporada", noAutoResult: true, partidos: [
+            {l:"Estudiantes de Olavarría", v:"Racing de Olavarría", hora:"11:00", gl:null, gv:null, claseL:"estudiantesolavarria", claseV:"racingolavarria",nota:"<b>2-2</b>"},
             {l:"Santa Rita", v:"<b>Huracán</b>", hora:"19:30", gl:null, gv:null, claseL:"santarita", claseV:"huracan"},
             ]},
        ]},
@@ -2276,7 +2284,7 @@ const BD_FEDERAL_REVALIDA = {
     ]
 };
 
-function generarTablaFederal(etapa = 'playoffs') {
+function generarTablaFederal(etapa = 'revalida') {
     const tabs = `<div style="display:flex;gap:6px;padding:8px 8px 4px;background:#f9f9f9;border-bottom:1px solid #eee;">
         <button onclick="estado.etapaFederal='inicial';document.getElementById('contenido').innerHTML=generarTablaFederal('inicial')"
             style="font-size:10px;padding:4px 12px;border:1px solid #1a4a2e;border-radius:12px;cursor:pointer;font-weight:bold;
@@ -17734,7 +17742,7 @@ const BD_H2H = {
         { fecha: "Fecha 7 - Clausura 2026", torneo: "reserva_promocional", l: "Comercial", v: "Pacífico (C)", gl: 4, gv: 1 },
     ],
     "Olimpo|Villa Mitre": [
-        { fecha: "Fecha 1 - Zona Sur - Argentino A - 24 sep 1995", torneo: "federala", l: "Olimpo", v: "Olimpo", gl: 2, gv: 3 },
+        { fecha: "Fecha 1 - Zona Sur - Argentino A - 24 sep 1995", torneo: "federala", l: "Olimpo", v: "Villa Mitre", gl: 2, gv: 3 },
         { fecha: "Fecha 8 - Zona Sur - Argentino A - 12 nov 1995", torneo: "federala", l: "Villa Mitre", v: "Olimpo", gl: 2, gv: 1 },
         { fecha: "Fecha 1 - 2°Fase - Argentino A - 14 ene 1996", torneo: "federala", l: "Olimpo", v: "Villa Mitre", gl: 6, gv: 1 },
         { fecha: "Fecha 8 - 2°Fase - Argentino A - 03 mar 1996", torneo: "federala", l: "Villa Mitre", v: "Olimpo", gl: 2, gv: 1 },
@@ -19104,8 +19112,8 @@ const BD_SENIOR_APERTURA = [
 ];
 const BD_SENIOR_CLAUSURA = [
     { n: "Libertad",      cl: "libertad",     pj:6, pg:5, pe:0, pp:1, gf:15, gc:5, pts:15 },
-    { n: "Pacífico (C)",  mostrar: "Pacífico (C) <b>(A)</b>", cl: "pacificoc",    pj:6, pg:4, pe:0, pp:2, gf:9, gc:10, pts:12 },
     { n: "Pacífico BB",   cl: "pacificobb",   pj:6, pg:4, pe:0, pp:2, gf:15, gc:12, pts:12 },
+    { n: "Pacífico (C)",  mostrar: "Pacífico (C) <b>(A)</b>", cl: "pacificoc",    pj:6, pg:4, pe:0, pp:2, gf:9, gc:10, pts:12 },
     { n: "Sansinena",     cl: "sansinena",    pj:6, pg:3, pe:1, pp:2, gf:13, gc:10, pts:10 },
     { n: "Comercial",     cl: "comercial",    pj:6, pg:3, pe:0, pp:3, gf:10, gc:9, pts:9 },
     { n: "Bella Vista",   cl: "bellavista",   pj:6, pg:3, pe:0, pp:3, gf:11, gc:11, pts:9 },
@@ -25112,7 +25120,7 @@ const BD_FEDERAL_PLAYOFFS = {
             vuelta: { local: "<s>Alvarado</s>", clL: "alvarado", visitante: "<b>Cipolletti</b>", clV: "cipolletti", gl: 0, gv: 0, goles_l: [], goles_v: [] }
         },
     ],
-    final: { local: "Cipolletti", clL: "cipolletti", visitante: "San Martín de Formosa", clV: "sanmartinfsa", gl: null, gv: null, goles_l: [], goles_v: [] }
+    final: { local: "<s>Cipolletti</s>", clL: "cipolletti", visitante: "<b>San Martín de Formosa</b>", clV: "sanmartinfsa", gl: 0, gv: 2, goles_l: [], goles_v: [] }
 };
 
 const BD_SELECCION15_PLAYOFFS = {
