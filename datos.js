@@ -1948,7 +1948,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 27).partidos.forEach(p
 });
 
 
-let diaSeleccionadoHome = "2026-10-26"; 
+let diaSeleccionadoHome = "2026-10-27"; 
 let mercadoPasesAbierto = false;
 
 function toggleMercadoPasesHome() {
@@ -1976,98 +1976,38 @@ function generarHome() {
     const agenda = [
 
 
-     { id: "2026-10-21", label: "MIÉ 21/10", torneos: [
-            { nombre: "SENIOR | CLAUSURA | FECHA 6", cat: "seniorclausura", torLink: "seniorclausura", noAutoResult: true, partidos: [
-            {l:"Libertad", v:"Huracán", hora:"20:00", gl:5, gv:2, claseL:"libertad", claseV:"huracan",nota:"<b>en cancha de Huracán</b>"},
-            {l:"Pacífico (C)", v:"Pacífico BB", hora:"20:30", gl:0, gv:3, claseL:"pacificoc", claseV:"pacificobb",nota:"<b>en cancha de Comercial</b>"},
-            {l:"Tiro Federal", v:"San Francisco", hora:"21:30", gl:5, gv:2, claseL:"tirofederal", claseV:"sanfrancisco",nota:"<b>en cancha de Huracán</b>"},
-            ]},
-            { nombre: "FUTSAL | CLAUSURA | FECHA 11 (REPROGRAMADO)", cat: "futsal", torLink: "futsal", noAutoResult: true, partidos: [
-            {l:"Pacífico BB", v:"San Francisco", hora:"22:00", gl:5, gv:1, claseL:"pacificobb", claseV:"sanfrancisco",nota:"<b>en cancha de Don Bosco</b>"},
-            ]},
-            { nombre: "REGIONAL AMATEUR | BONAERENSE PAMPEANA SUR | RONDA 3 - IDA (HURACÁN)", cat: "regamateurtemporada", torLink: "regamateurtemporada", noAutoResult: true, partidos: [
-            {l:"Ferro de Pico", v:"All Boys (Trenel)", hora:"21:00", gl:1, gv:0, claseL:"ferropico", claseV:"allboystrenel"},
-            ]},
-       ]},
-     { id: "2026-10-22", label: "JUE 22/10", torneos: [
-            { nombre: "FUTSAL | CLAUSURA | FECHA 9 (REPROGRAMADO)", cat: "futsal", torLink: "futsal", noAutoResult: true, partidos: [
-            {l:"Villa Mitre", v:"Comercial", hora:"22:00", gl:1, gv:4, claseL:"villamitre", claseV:"comercial",nota:"<b>en cancha de Don Bosco</b>"},
-            ]},
-            { nombre: "SENIOR | CLAUSURA | FECHA 6", cat: "seniorclausura", torLink: "seniorclausura", noAutoResult: true, partidos: [
-            {l:"Sporting", v:"Sansinena", hora:"21:00", gl:2, gv:4, claseL:"sporting", claseV:"sansinena",nota:"<b>en cancha de Sporting</b>"},
-            {l:"Bella Vista", v:"Comercial", hora:"22:00", gl:0, gv:1, claseL:"bellavista", claseV:"comercial",nota:"<b>en cancha de Comercial</b>"},
-            ]},
-       ]},
-     { id: "2026-10-23", label: "VIÉ 23/10", torneos: [
-            { nombre: "OFICIAL | CLAUSURA | FECHA 13", cat: "oficial", torLink: "oficial", noAutoResult: true, partidos: [
-            {l:"Huracán", v:"San Francisco", hora:"19:30", gl:2, gv:0, claseL:"huracan", claseV:"sanfrancisco"},
-            ]},
-            { nombre: "FEDERAL A | REVÁLIDA - TERCERA RONDA - IDA (VILLA MITRE/OLIMPO)", cat: "federala", torLink: "federala", noAutoResult: true, partidos: [
-            {l:"Juventud Antoniana", v:"Sol de América", hora:"22:00", gl:3, gv:0, claseL:"jantoniana", claseV:"soldeamericafsa"},
-            ]},
-       ]},
-     { id: "2026-10-24", label: "SÁB 24/10", torneos: [
-            { nombre: "PROMOCIONAL | CLAUSURA | FECHA 13", cat: "promocional", torLink: "promocional", noAutoResult: true, partidos: [
-            {l:"Tiro Federal", v:"Dublin", hora:"16:00", gl:2, gv:0, claseL:"tirofederal", claseV:"dublin"},
-            {l:"Olimpo", v:"Sansinena", hora:"16:00", gl:2, gv:0, claseL:"olimpo", claseV:"sansinena"},
-            {l:"Comercial", v:"Pacífico BB", hora:"16:00", gl:1, gv:3, claseL:"comercial", claseV:"pacificobb",nota:"Sin visitantes"},
-            ]},
-            { nombre: "FEMENINO | CLAUSURA | ÚLTIMA FECHA", cat: "femenino", torLink: "femenino", noAutoResult: true, partidos: [
-            {l:"Empleados de Comercio", v:"Villa Mitre", hora:"16:00", gl:1, gv:5, claseL:"empleados", claseV:"villamitre"},
-            {l:"La Armonía", v:"Municipales", hora:"16:00", gl:1, gv:0, claseL:"laarmonia", claseV:"municipales"},
-            {l:"Sporting", v:"Libertad", hora:"16:00", gl:1, gv:0, claseL:"sporting", claseV:"libertad"},
-            ]},
-            { nombre: "2° FEMENINO | SEMIFINALES | IDA", cat: "segundafemenino", torLink: "segundafemenino", noAutoResult: true, partidos: [
-            {l:"Rosario PB", v:"Liniers", hora:"16:00", gl: 1, gv:2, claseL:"rosariopb", claseV:"liniers"},
-            ]},
-            { nombre: "SUB 15 FEMENINO | CUARTOS DE FINAL", cat: "sub15fem", torLink: "sub15fem", noAutoResult: true, partidos: [
-            {l:"Villa Mitre", v:"Juventud Unida", hora:"10:00", gl:1, gv:4, claseL:"villamitre", claseV:"juventudunida"},
-            {l:"Tiro Federal", v:"San Francisco", hora:"14:30", gl:0, gv:0, pen_l:3, pen_v:1, claseL:"tirofederal", claseV:"sanfrancisco"},
-            ]},
-            { nombre: "FEDERAL A | REVÁLIDA - TERCERA RONDA - IDA (VILLA MITRE/OLIMPO)", cat: "federala", torLink: "federala", noAutoResult: true, partidos: [
-            {l:"Argentino de Monte Maiz", v:"Kimberley", hora:"15:45", gl:0, gv:0, claseL:"argmontemaiz", claseV:"kimberley"},
-            ]},
-       ]},
-     { id: "2026-10-25", label: "DOM 25/10", torneos: [
-            { nombre: "OFICIAL | CLAUSURA | FECHA 13", cat: "oficial", torLink: "oficial", noAutoResult: true, partidos: [
-            {l:"La Armonía", v:"Bella Vista", hora:"16:00", gl:1, gv:0, claseL:"laarmonia", claseV:"bellavista"},
-            {l:"Liniers", v:"Sporting", hora:"16:00", gl:1, gv:0, claseL:"liniers", claseV:"sporting",nota:"Sin visitantes"},
-            ]},
-            { nombre: "PROMOCIONAL | CLAUSURA | FECHA 13", cat: "promocional", torLink: "promocional", noAutoResult: true, partidos: [
-            {l:"Rosario PB", v:"Pacífico (C)", hora:"16:00", gl:1, gv:1, claseL:"rosariopb", claseV:"pacificoc"},
-            ]},
-            { nombre: "FEMENINO | CLAUSURA | ÚLTIMA FECHA", cat: "femenino", torLink: "femenino", noAutoResult: true, partidos: [
-            {l:"Bella Vista", v:"Tiro Federal", hora:"16:00", gl:2, gv:1, claseL:"bellavista", claseV:"tirofederal"},
-            ]},
-            { nombre: "2° FEMENINO | SEMIFINALES | IDA", cat: "segundafemenino", torLink: "segundafemenino", noAutoResult: true, partidos: [
-            {l:"Petroquímicos", v:"San Francisco", hora:"16:00", gl:1, gv:0, claseL:"petroquimicos", claseV:"sanfrancisco",nota:"en cancha de Libertad"},
-            ]},
-            { nombre: "SUB 15 FEMENINO | CUARTOS DE FINAL", cat: "sub15fem", torLink: "sub15fem", noAutoResult: true, partidos: [
-            {l:"Bella Vista", v:"Sporting", hora:"11:45", gl:1, gv:1, pen_l:5, pen_v:4, claseL:"bellavista", claseV:"sporting"},
-            {l:"Liniers", v:"La Armonía", hora:"16:00", gl:7, gv:0, claseL:"liniers", claseV:"laarmonia"},
-            ]},
-            { nombre: "SUB 15 FEMENINO | FECHA 22 (REPROGRAMADO)", cat: "sub15fem", torLink: "sub15fem", noAutoResult: true, partidos: [
-            {l:"Libertad", v:"Olimpo", hora:"10:30", gl:0, gv:2, claseL:"libertad", claseV:"olimpo"},
-            ]},
-            { nombre: "FEDERAL A | REVÁLIDA - TERCERA RONDA - IDA", cat: "federala", torLink: "federala", noAutoResult: true, partidos: [
-            {l:"Sportivo Las Parejas", v:"Alvarado", hora:"15:00", gl:0, gv:1, claseL:"splasparejas", claseV:"alvarado"},
-            {l:"<b>Villa Mitre</b>", v:"Douglas Haig", hora:"16:00", gl:1, gv:0, claseL:"villamitre", claseV:"douglashaig"},
-            {l:"Gimnasia (CdU)", v:"<b>Olimpo</b>", hora:"16:00", gl:0, gv:0, claseL:"gimnasiacdu", claseV:"olimpo"},
-            {l:"Boca Unidos", v:"Gimnasia de Chivilcoy", hora:"16:00", gl:null, gv:null, claseL:"bocaunidos", claseV:"gimnasiachivilcoy"},
-            {l:"Sarmiento de La Banda", v:"Atenas de Río Cuarto", hora:"16:00", gl:3, gv:0, claseL:"sarmientolb", claseV:"atenasrc"},
-            ]},
-            { nombre: "REGIONAL AMATEUR | BONAERENSE PAMPEANA SUR | RONDA 3 - IDA", cat: "regamateurtemporada", torLink: "regamateurtemporada", noAutoResult: true, partidos: [
-            {l:"Racing de Olavarría", v:"Estudiantes de Olavarría", hora:"15:00", gl:2, gv:2, claseL:"racingolavarria", claseV:"estudiantesolavarria"},
-            {l:"<b>Huracán</b>", v:"Santa Rita", hora:"16:00", gl:3, gv:0, claseL:"huracan", claseV:"santarita"},
-            {l:"Quilmes de Mar del Plata", v:"Dep. Norte", hora:"16:00", gl:0, gv:1, claseL:"quilmesmdp", claseV:"depnorte"},
-            ]},
-            { nombre: "FEDERAL A | FINAL", cat: "federala", torLink: "federala", noAutoResult: true, partidos: [
-            {l:"Cipolletti", v:"San Martín de Formosa", hora:"16:00", gl:0, gv:2, claseL:"cipolletti", claseV:"sanmartinfsa"},
-            ]},
-       ]},
      { id: "2026-10-26", label: "LUN 26/10", torneos: [
             { nombre: "OFICIAL | CLAUSURA | FECHA 13", cat: "oficial", torLink: "oficial", noAutoResult: true, partidos: [
             {l:"Villa Mitre", v:"Libertad", hora:"16:00", gl:0, gv:3, claseL:"villamitre", claseV:"libertad"},
+            ]},
+       ]},
+     { id: "2026-10-27", label: "MAR 27/10", torneos: [
+            { nombre: "FUTSAL | CLAUSURA | ÚLTIMA FECHA", cat: "futsal", torLink: "futsal", noAutoResult: true, partidos: [
+            {l:"Dublin", v:"San Francisco", hora:"22:30", gl:null, gv:null, claseL:"dublin", claseV:"sanfrancisco",nota:"en cancha de Don Bosco"},
+            ]},
+            { nombre: "SENIOR | CLAUSURA | ÚLTIMA FECHA", cat: "seniorclausura", torLink: "seniorclausura", noAutoResult: true, partidos: [
+            {l:"San Francisco", v:"Huracán", hora:"20:00", gl:null, gv:null, claseL:"sanfrancisco", claseV:"huracan",nota:"en cancha de Huracán"},
+            {l:"Pacífico BB", v:"Libertad", hora:"20:30", gl:null, gv:null, claseL:"pacificobb", claseV:"libertad",nota:"en cancha de Comercial"},
+            {l:"Sansinena", v:"Pacífico (C)", hora:"21:00", gl:null, gv:null, claseL:"sansinena", claseV:"pacificoc",nota:"en cancha de Sansinena"},
+            {l:"Tiro Federal", v:"Bella Vista", hora:"21:30", gl:null, gv:null, claseL:"tirofederal", claseV:"bellavista",nota:"en cancha de Huracán"},
+            {l:"Comercial", v:"Sporting", hora:"22:00", gl:null, gv:null, claseL:"comercial", claseV:"sporting",nota:"en cancha de Comercial"},
+            ]},
+       ]},
+     { id: "2026-10-28", label: "MIÉ 28/10", torneos: [
+            { nombre: "FUTSAL | CLAUSURA | ÚLTIMA FECHA", cat: "futsal", torLink: "futsal", noAutoResult: true, partidos: [
+            {l:"Liniers", v:"Petroquímicos", hora:"22:00", gl:null, gv:null, claseL:"liniers", claseV:"petroquimicos",nota:"en cancha de Comercial"},
+            {l:"La Esperanza", v:"Tiro Federal", hora:"22:00", gl:null, gv:null, claseL:"laesperanza", claseV:"tirofederal",nota:"en cancha de Don Bosco"},
+            ]},
+       ]},
+     { id: "2026-10-29", label: "JUE 29/10", torneos: [
+            { nombre: "FUTSAL | CLAUSURA | ÚLTIMA FECHA", cat: "futsal", torLink: "futsal", noAutoResult: true, partidos: [
+            {l:"La Estación", v:"Villa Mitre", hora:"22:30", gl:null, gv:null, claseL:"laestacion", claseV:"villamitre",nota:"en cancha de Don Bosco"},
+            ]},
+       ]},
+     { id: "2026-10-30", label: "VIÉ 30/10", torneos: [
+            { nombre: "FUTSAL | CLAUSURA | ÚLTIMA FECHA", cat: "futsal", torLink: "futsal", noAutoResult: true, partidos: [
+            {l:"Pacífico BB", v:"Comercial", hora:"22:00", gl:null, gv:null, claseL:"pacificobb", claseV:"comercial",nota:"en cancha de Don Bosco"},
+            {l:"Catamarca", v:"Los 3 Chiflados", hora:"22:00", gl:null, gv:null, claseL:"catamarca", claseV:"los3chiflados",nota:"en cancha de Petroquímicos"},
             ]},
        ]},
      { id: "2026-10-31", label: "SÁB 31/10", torneos: [
