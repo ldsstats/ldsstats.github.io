@@ -677,7 +677,7 @@ const BD_FIXTURES_FUTSAL = [
         {l:"Comercial",       v:"Pacífico BB",     gl:null, gv:null},
         {l:"Dep. Futsal",     v:"Huracán",     gl:null, gv:null},
         {l:"La Esperanza",    v:"Tiro Federal",     gl:null, gv:null},
-        {l:"San Francisco",   v:"Dublin",     gl:null, gv:null},
+        {l:"Dublin",   v:"San Francisco",     gl:5, gv:2},
         {l:"Petroquímicos",   v:"Liniers",     gl:null, gv:null},
         {l:"Villa Mitre",     v:"La Estación",     gl:null, gv:null},
         {l:"Los 3 Chiflados", v:"Catamarca",     gl:null, gv:null},
@@ -1983,7 +1983,7 @@ function generarHome() {
        ]},
      { id: "2026-10-27", label: "MAR 27/10", torneos: [
             { nombre: "FUTSAL | CLAUSURA | ÚLTIMA FECHA", cat: "futsal", torLink: "futsal", noAutoResult: true, partidos: [
-            {l:"Dublin", v:"San Francisco", hora:"22:30", gl:null, gv:null, claseL:"dublin", claseV:"sanfrancisco",nota:"en cancha de Don Bosco"},
+            {l:"Dublin", v:"San Francisco", hora:"22:30", gl:5, gv:2, claseL:"dublin", claseV:"sanfrancisco",nota:"en cancha de Don Bosco"},
             ]},
             { nombre: "SENIOR | CLAUSURA | ÚLTIMA FECHA", cat: "seniorclausura", torLink: "seniorclausura", noAutoResult: true, partidos: [
             {l:"San Francisco", v:"Huracán", hora:"20:00", gl:0, gv:6, claseL:"sanfrancisco", claseV:"huracan",nota:"en cancha de Huracán"},
@@ -18035,6 +18035,7 @@ const BD_H2H = {
     "Dublin|San Francisco": [
         { fecha: "Apertura 2026 - Fecha 13", torneo: "futsal", l: "San Francisco", v: "Dublin", gl: 3, gv: 3 },
         { fecha: "Apertura 2026 - Fecha 13", torneo: "futsalreserva", l: "San Francisco", v: "Dublin", gl: 3, gv: 7 },
+        { fecha: "Clausura 2026 - Fecha 13", torneo: "futsal", l: "Dublin", v: "San Francisco", gl: 5, gv: 2 },
     ],
     "La Armonía|Municipales": [
         { fecha: "Fecha 7 - Apertura 2026 - 10 may", torneo: "femenino", l: "Municipales", v: "La Armonía", gl: 3, gv: 0, goles_l: ["Victoria Nervi","Ludmila Fernández","Ivana Lindstrom"], goles_v: [] },
@@ -18520,11 +18521,11 @@ const BD_POS_FUTSAL = {
         {n:"Villa Mitre <b>(C)</b>",     cl:"villamitre",    pj:12,pg:6,pe:2,pp:4,gf:40, gc:40, pts:20},
         {n:"Pacífico BB <b>(C)</b>",     cl:"pacificobb",    pj:12,pg:6,pe:1,pp:5,gf:43, gc:43, pts:19},
         {n:"Tiro Federal <b>(C)</b>",    cl:"tirofederal",    pj:12,pg:6,pe:1,pp:5,gf:25, gc:26, pts:19},
+        {n:"Dublin",          cl:"dublin",    pj:13,pg:6,pe:0,pp:7,gf:32, gc:42, pts:18},
         {n:"Liniers <b>(*)</b>",         cl:"liniers",    pj:12,pg:5,pe:2,pp:5,gf:28, gc:31, pts:17},
-        {n:"Dublin",          cl:"dublin",    pj:12,pg:5,pe:0,pp:7,gf:27, gc:40, pts:15},
         {n:"Petroquímicos <b>(X)</b>",   cl:"petroquimicos",    pj:12,pg:4,pe:1,pp:7,gf:35, gc:43, pts:13},
         {n:"Catamarca <b>(X)</b>",       cl:"catamarca",    pj:12,pg:3,pe:1,pp:8,gf:25, gc:50, pts:10},
-        {n:"San Francisco <b>(X)</b>",   cl:"sanfrancisco",    pj:12,pg:3,pe:0,pp:9,gf:18, gc:42, pts:9},
+        {n:"San Francisco <b>(X)</b>",   cl:"sanfrancisco",    pj:13,pg:3,pe:0,pp:10,gf:20, gc:47, pts:9},
         {n:"<s>Dep. Futsal</s> <b>(-)</b>",     cl:"depfutsal",    pj:0,pg:0,pe:0,pp:0,gf:0, gc:0, pts:0},
         {n:"<s>Huracán</s> <b>(-)</b>",         cl:"huracan",    pj:0,pg:0,pe:0,pp:0,gf:0, gc:0, pts:0}
     ],
@@ -19490,7 +19491,7 @@ function generarSeniorClausura() {
     </div>`;
     const pj = BD_SENIOR_CLAUSURA[0].pj || 0;
     const pts = (9 - pj) * 3;
-html += `<div style="background:#f9f9f9;padding:4px 8px;font-size:10px;text-align:center;color:#555;"><b>(A)</b> Campeón del apertura<br><b>(1/8)</b> Sin chances de clasificar a semifinales<br>📌 Puntos en juego: <b>9</b><br><b>Libertad</b> recibió tres puntos por la no presentación de <b>Sporting</b> en la fecha 3</div>`;
+html += `<div style="background:#f9f9f9;padding:4px 8px;font-size:10px;text-align:center;color:#555;"><b>(A)</b> Campeón del apertura<br><b>(1/8)</b> Sin chances de clasificar a semifinales<br>📌 Puntos en juego: <b>6</b><br><b>Libertad</b> recibió tres puntos por la no presentación de <b>Sporting</b> en la fecha 3</div>`;
     return html;
 }
 
