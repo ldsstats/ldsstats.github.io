@@ -1987,9 +1987,9 @@ function generarHome() {
             ]},
             { nombre: "SENIOR | CLAUSURA | ÚLTIMA FECHA", cat: "seniorclausura", torLink: "seniorclausura", noAutoResult: true, partidos: [
             {l:"San Francisco", v:"Huracán", hora:"20:00", gl:0, gv:6, claseL:"sanfrancisco", claseV:"huracan",nota:"en cancha de Huracán"},
-            {l:"Pacífico BB", v:"Libertad", hora:"20:30", gl:null, gv:null, claseL:"pacificobb", claseV:"libertad",nota:"en cancha de Comercial"},
-            {l:"Sansinena", v:"Pacífico (C)", hora:"21:00", gl:null, gv:null, claseL:"sansinena", claseV:"pacificoc",nota:"en cancha de Sansinena"},
-            {l:"Tiro Federal", v:"Bella Vista", hora:"21:30", gl:null, gv:null, claseL:"tirofederal", claseV:"bellavista",nota:"en cancha de Huracán"},
+            {l:"Pacífico BB", v:"Libertad", hora:"20:30", gl:3, gv:5, claseL:"pacificobb", claseV:"libertad",nota:"en cancha de Comercial"},
+            {l:"Sansinena", v:"Pacífico (C)", hora:"21:00", gl:2, gv:4, claseL:"sansinena", claseV:"pacificoc",nota:"en cancha de Sansinena"},
+            {l:"Tiro Federal", v:"Bella Vista", hora:"21:30", gl:1, gv:3, claseL:"tirofederal", claseV:"bellavista",nota:"en cancha de Huracán"},
             {l:"Comercial", v:"Sporting", hora:"22:00", gl:null, gv:null, claseL:"comercial", claseV:"sporting",nota:"en cancha de Comercial"},
             ]},
        ]},
@@ -16359,6 +16359,7 @@ const BD_H2H = {
         { fecha: "Fecha 1 - Clausura 2026 - 02 ago 2026", torneo: "promocional", l: "Sansinena", v: "Pacífico (C)", gl: 1, gv: 1, goles_l: ["Gerónimo Fernández"], goles_v: ["Marcelo Soto"] },
         { fecha: "Fecha 1 - Clausura 2026", torneo: "reserva_promocional", l: "Sansinena", v: "Pacífico (C)", gl: 5, gv: 2 },
         { fecha: "Apertura 2026 - Fecha 7", torneo: "senior", l: "Sansinena", v: "Pacífico (C)", gl: 1, gv: 3, goles_l: ["Emiliano Jofré"], goles_v: ["Leandro Duelle (2)","Esteban Angelini"] },
+        { fecha: "Clausura 2026 - Fecha 7", torneo: "senior", l: "Sansinena", v: "Pacífico (C)", gl: 2, gv: 4, goles_l: [], goles_v: ["Leandro Duelle (2)","Santiago Martín (2)"] },
         { fecha: "Apertura 2026 - Cuartos de Final", torneo: "senior", l: "Pacífico (C)", v: "Sansinena", gl: 4, gv: 1, goles_l: ["Fabián Soto (2)","Leandro Duelle","Esteban Angelini"], goles_v: ["Cristian González"] },
         { fecha: "Fecha 7 - Torneo 2026 - 25 may", torneo: "segundafemenino", l: "Sansinena", v: "Pacífico (C)", gl: 3, gv: 0, goles_l: ["Melina Gómez","Jocelyn Zarza","Daniela Abello"], goles_v: [] },
         { fecha: "Fecha 16 - Torneo 2026 - 11 jul", torneo: "segundafemenino", l: "Pacífico (C)", v: "Sansinena", gl: 1, gv: 1, goles_l: ["Bianca Pascualini"], goles_v: ["Melina Gómez"] },
@@ -17580,6 +17581,7 @@ const BD_H2H = {
         { fecha: "Semifinales - Apertura 2026", torneo: "reserva_femenino", l: "Tiro Federal", v: "Bella Vista", gl: 0, gv: 1 },
         { fecha: "Final Extra - Apertura 2026", torneo: "reserva_femenino", l: "Tiro Federal", v: "Bella Vista", gl: 1, gv: 1, pen_l:3, pen_v:1 },
         { fecha: "Apertura 2026 - Fecha 7", torneo: "senior", l: "Bella Vista", v: "Tiro Federal", gl: 2, gv: 1, goles_l: ["Fabián Merlini (2)"], goles_v: ["Javier Muñoz"] },
+        { fecha: "Clausura 2026 - Fecha 7", torneo: "senior", l: "Tiro Federal", v: "Bella Vista", gl: 1, gv: 3, goles_l: [], goles_v: [] },
         { fecha: "Torneo 2026 - Fecha 8", torneo: "sub15fem", l: "Tiro Federal", v: "Bella Vista", gl: 0, gv: 6 },
         { fecha: "Fecha 7 - Clausura 2026 - 06 sep", torneo: "femenino", l: "Tiro Federal", v: "Bella Vista", gl: 3, gv: 0, goles_l: ["Agostina Caballero","Aylen Baratcabal","Morena Juárez"], goles_v: [] },
         { fecha: "Fecha 7 - Clausura 2026", torneo: "reserva_femenino", l: "Tiro Federal", v: "Bella Vista", gl: 0, gv: 1 },
@@ -17805,6 +17807,7 @@ const BD_H2H = {
     ],
     "Libertad|Pacífico BB": [
         { fecha: "Apertura 2026 - Fecha 7", torneo: "senior", l: "Libertad", v: "Pacífico BB", gl: 1, gv: 2, goles_l: ["Gustavo Peña"], goles_v: ["Ramón López","Hernán Sacripandi"] },
+        { fecha: "Clausura 2026 - Fecha 7", torneo: "senior", l: "Pacífico BB", v: "Libertad", gl: 3, gv: 5, goles_l: [], goles_v: [] },
     ],
     "Comercial|Sporting": [
         { fecha: "Apertura 2026 - Fecha 7", torneo: "senior", l: "Sporting", v: "Comercial", gl: 1, gv: 2, goles_l: ["Marcos Cossú"], goles_v: ["Maximiliano Casas","Nicolás Custodio"] },
@@ -19116,16 +19119,16 @@ const BD_SENIOR_APERTURA = [
     { n: "Tiro Federal",      cl: "tirofederal",   pj: 9, pg: 0, pe: 3, pp: 6, gf: 16, gc: 30, pts: 3 }
 ];
 const BD_SENIOR_CLAUSURA = [
-    { n: "Libertad",      cl: "libertad",     pj:6, pg:5, pe:0, pp:1, gf:15, gc:5, pts:15 },
-    { n: "Pacífico BB",   cl: "pacificobb",   pj:6, pg:4, pe:0, pp:2, gf:15, gc:12, pts:12 },
-    { n: "Pacífico (C)",  mostrar: "Pacífico (C) <b>(A)</b>", cl: "pacificoc",    pj:6, pg:4, pe:0, pp:2, gf:9, gc:10, pts:12 },
-    { n: "Sansinena",     cl: "sansinena",    pj:6, pg:3, pe:1, pp:2, gf:13, gc:10, pts:10 },
+    { n: "Libertad",      cl: "libertad",     pj:7, pg:6, pe:0, pp:1, gf:20, gc:8, pts:18 },
+    { n: "Pacífico (C)",  mostrar: "Pacífico (C) <b>(A)</b>", cl: "pacificoc",    pj:7, pg:5, pe:0, pp:2, gf:13, gc:12, pts:15 },
+    { n: "Pacífico BB",   cl: "pacificobb",   pj:7, pg:4, pe:0, pp:3, gf:18, gc:17, pts:12 },
+    { n: "Sansinena",     cl: "sansinena",    pj:7, pg:3, pe:1, pp:3, gf:15, gc:14, pts:10 },
     { n: "Huracán",       cl: "huracan",      pj:7, pg:3, pe:1, pp:3, gf:19, gc:14, pts:10 },
+    { n: "Bella Vista",   cl: "bellavista",   pj:7, pg:4, pe:0, pp:3, gf:14, gc:12, pts:12 },
     { n: "Comercial",     cl: "comercial",    pj:6, pg:3, pe:0, pp:3, gf:10, gc:9, pts:9 },
-    { n: "Bella Vista",   cl: "bellavista",   pj:6, pg:3, pe:0, pp:3, gf:11, gc:11, pts:9 },
-    { n: "San Francisco", cl: "sanfrancisco", pj:7, pg:2, pe:0, pp:5, gf:10, gc:25, pts:6 },
-    { n: "Tiro Federal",  cl: "tirofederal",  pj:6, pg:1, pe:2, pp:3, gf:13, gc:15, pts:5 },
-    { n: "Sporting",      cl: "sporting",     pj:6, pg:1, pe:0, pp:5, gf:10, gc:15, pts:3 },
+    { n: "San Francisco",  mostrar: "San Francisco <b>(1/8)</b>", cl: "sanfrancisco", pj:7, pg:2, pe:0, pp:5, gf:10, gc:25, pts:6 },
+    { n: "Tiro Federal",  mostrar: "Tiro Federal <b>(1/8)</b>", cl: "tirofederal",  pj:7, pg:1, pe:2, pp:4, gf:14, gc:18, pts:5 },
+    { n: "Sporting",  mostrar: "Sporting <b>(1/8)</b>", cl: "sporting",     pj:6, pg:1, pe:0, pp:5, gf:10, gc:15, pts:3 },
 ];
 
 const BD_FIXTURES_SENIOR = [
@@ -19237,9 +19240,9 @@ const BD_FIXTURES_SENIOR_CLAUSURA = [
         { l: "Bella Vista",  v: "Comercial",      gl: 0, gv: 1, goles_l:[], goles_v:["Leandro Piérez"] }
     ]},
     { fecha: 7, partidos: [
-        { l: "Bella Vista",   v: "Tiro Federal",      gl: null, gv: null },
-        { l: "Libertad",  v: "Pacífico BB",        gl: null, gv: null },
-        { l: "Sansinena",      v: "Pacífico (C)",    gl: null, gv: null },
+        { l: "Tiro Federal",   v: "Bella Vista",      gl: 1, gv: 3 },
+        { l: "Pacífico BB",  v: "Libertad",        gl: 3, gv: 5 },
+        { l: "Sansinena",      v: "Pacífico (C)",    gl: 2, gv: 4, goles_l:[], goles_v:["Santiago Martín (2)","Leandro Duelle (2)"] },
         { l: "San Francisco",  v: "Huracán",      gl: 0, gv: 6, goles_l:[], goles_v:["Cristian Lucero (2)","César Panduro (2)","Felipe Hippendinger","Nicolás Brendel"] },
         { l: "Sporting",      v: "Comercial",  gl: null, gv: null }
     ]},
@@ -19486,7 +19489,7 @@ function generarSeniorClausura() {
     </div>`;
     const pj = BD_SENIOR_CLAUSURA[0].pj || 0;
     const pts = (9 - pj) * 3;
-html += `<div style="background:#f9f9f9;padding:4px 8px;font-size:10px;text-align:center;color:#555;"><b>(A)</b> Campeón del apertura<br>📌 Puntos en juego: <b>9</b><br><b>Libertad</b> recibió tres puntos por la no presentación de <b>Sporting</b> en la fecha 3</div>`;
+html += `<div style="background:#f9f9f9;padding:4px 8px;font-size:10px;text-align:center;color:#555;"><b>(A)</b> Campeón del apertura<br><b>(1/8)</b> Sin chances de clasificar a semifinales<br>📌 Puntos en juego: <b>9</b><br><b>Libertad</b> recibió tres puntos por la no presentación de <b>Sporting</b> en la fecha 3</div>`;
     return html;
 }
 
@@ -19875,6 +19878,7 @@ const BD_GOLEADORES_SENIOR_CLAUSURA = [
     { nombre: "Leandro Piérez", equipo: "Comercial", goles: 3 },
     { nombre: "Juan Manuel Diez", equipo: "Huracán", goles: 3 },
     { nombre: "Maximiliano Delaudo", equipo: "Pacífico BB", goles: 3 },
+    { nombre: "Leandro Duelle", equipo: "Pacífico (C)", goles: 3 },
     { nombre: "Paolo Quiroga", equipo: "Sporting", goles: 3 },
     { nombre: "Fernando Priore", equipo: "Bella Vista", goles: 2 },
     { nombre: "Cristian Pedraza", equipo: "Libertad", goles: 2 },
@@ -19908,9 +19912,9 @@ const BD_GOLEADORES_SENIOR_CLAUSURA = [
     { nombre: "Fernando Pérez", equipo: "Sporting", goles: 1 },
     { nombre: "Hernán Sangripandi", equipo: "Pacífico BB", goles: 1 },
     { nombre: "Claudio Ibáñez", equipo: "Pacífico BB", goles: 1 },
-    { nombre: "Leandro Duelle", equipo: "Pacífico (C)", goles: 1 },
     { nombre: "Fernando Rodríguez", equipo: "Pacífico (C)", goles: 1 },
     { nombre: "Fernando Marabini", equipo: "Pacífico (C)", goles: 1 },
+    { nombre: "Santiago Martín", equipo: "Pacífico (C)", goles: 1 },
     { nombre: "Alejandro Umaña", equipo: "Bella Vista", goles: 1 },
     { nombre: "Fernando Lucas", equipo: "Bella Vista", goles: 1 },
     { nombre: "Gustavo Pereyra", equipo: "Bella Vista", goles: 1 },
