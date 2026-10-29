@@ -554,7 +554,7 @@ const BD_FIXTURES_FUTSAL_RESERVA = [
         {l:"Huracán",         v:"Villa Mitre",     gl:null, gv:null},
     ]},
     { fecha: 13, partidos: [
-        {l:"Dublin",   v:"San Francisco",     gl:null, gv:null},
+        {l:"Dublin",   v:"San Francisco",     gl:1, gv:7},
         {l:"La Esperanza",    v:"Tiro Federal",     gl:5, gv:1},
         {l:"Liniers",   v:"Petroquímicos",     gl:11, gv:1},
         {l:"Comercial",       v:"Pacífico BB",     gl:null, gv:null},
@@ -674,7 +674,7 @@ const BD_FIXTURES_FUTSAL = [
         {l:"Huracán",         v:"Villa Mitre",     gl:null, gv:null},
     ]},
     { fecha: 13, partidos: [
-        {l:"Dublin",   v:"San Francisco",     gl:5, gv:2},
+        {l:"Dublin",   v:"San Francisco",     gl:6, gv:4},
         {l:"La Esperanza",    v:"Tiro Federal",     gl:2, gv:0},
         {l:"Liniers",   v:"Petroquímicos",     gl:4, gv:2},
         {l:"Comercial",       v:"Pacífico BB",     gl:null, gv:null},
@@ -1983,7 +1983,7 @@ function generarHome() {
        ]},
      { id: "2026-10-27", label: "MAR 27/10", torneos: [
             { nombre: "FUTSAL | CLAUSURA | ÚLTIMA FECHA", cat: "futsal", torLink: "futsal", noAutoResult: true, partidos: [
-            {l:"Dublin", v:"San Francisco", hora:"22:30", gl:5, gv:2, claseL:"dublin", claseV:"sanfrancisco",nota:"en cancha de Don Bosco"},
+            {l:"Dublin", v:"San Francisco", hora:"22:30", gl:6, gv:4, claseL:"dublin", claseV:"sanfrancisco",nota:"en cancha de Don Bosco"},
             ]},
             { nombre: "SENIOR | CLAUSURA | ÚLTIMA FECHA", cat: "seniorclausura", torLink: "seniorclausura", noAutoResult: true, partidos: [
             {l:"San Francisco", v:"Huracán", hora:"20:00", gl:0, gv:6, claseL:"sanfrancisco", claseV:"huracan",nota:"en cancha de Huracán"},
@@ -2023,7 +2023,6 @@ function generarHome() {
             { nombre: "PROMOCIONAL | CLAUSURA | ÚLTIMA FECHA", cat: "promocional", torLink: "promocional", noAutoResult: true, partidos: [
             {l:"Pacífico BB", v:"Tiro Federal", hora:"15:00", gl:null, gv:null, claseL:"pacificobb", claseV:"tirofederal"},
             {l:"Pacífico (C)", v:"Comercial", hora:"15:00", gl:null, gv:null, claseL:"pacificoc", claseV:"comercial"},
-            {l:"Sansinena", v:"Rosario PB", hora:"15:00", gl:null, gv:null, claseL:"sansinena", claseV:"rosariopb"},
             ]},
             { nombre: "2° FEMENINO | SEMIFINAL | VUELTA", cat: "segundafemenino", torLink: "segundafemenino", noAutoResult: true, partidos: [
             {l:"Liniers", v:"Rosario PB", hora:"16:00", gl:null, gv:null, claseL:"liniers", claseV:"rosariopb",nota:"<b>Ida: 2-1</b>"},
@@ -2040,6 +2039,7 @@ function generarHome() {
        ]},
      { id: "2026-11-01", label: "DOM 01/11", torneos: [
             { nombre: "PROMOCIONAL | CLAUSURA | ÚLTIMA FECHA", cat: "promocional", torLink: "promocional", noAutoResult: true, partidos: [
+            {l:"Sansinena", v:"Rosario PB", hora:"15:00", gl:null, gv:null, claseL:"sansinena", claseV:"rosariopb"},
             {l:"Dublin", v:"Olimpo", hora:"11:00", gl:null, gv:null, claseL:"dublin", claseV:"olimpo"},
             ]},
             { nombre: "FEDERAL A | REVÁLIDA - TERCERA RONDA - VUELTA (VILLA MITRE/OLIMPO)", cat: "federala", torLink: "federala", noAutoResult: true, partidos: [
@@ -18058,6 +18058,7 @@ const BD_H2H = {
         { fecha: "Apertura 2026 - Fecha 13", torneo: "futsal", l: "San Francisco", v: "Dublin", gl: 3, gv: 3 },
         { fecha: "Apertura 2026 - Fecha 13", torneo: "futsalreserva", l: "San Francisco", v: "Dublin", gl: 3, gv: 7 },
         { fecha: "Clausura 2026 - Fecha 13", torneo: "futsal", l: "Dublin", v: "San Francisco", gl: 5, gv: 2 },
+        { fecha: "Clausura 2026 - Fecha 13", torneo: "futsalreserva", l: "Dublin", v: "San Francisco", gl: 1, gv: 7 },
     ],
     "La Armonía|Municipales": [
         { fecha: "Fecha 7 - Apertura 2026 - 10 may", torneo: "femenino", l: "Municipales", v: "La Armonía", gl: 3, gv: 0, goles_l: ["Victoria Nervi","Ludmila Fernández","Ivana Lindstrom"], goles_v: [] },
@@ -18544,10 +18545,10 @@ const BD_POS_FUTSAL = {
         {n:"Liniers <b>(*)</b> <b>(C)</b>",         cl:"liniers",    pj:13,pg:6,pe:2,pp:5,gf:32, gc:33, pts:20},
         {n:"Pacífico BB <b>(C)</b>",     cl:"pacificobb",    pj:12,pg:6,pe:1,pp:5,gf:43, gc:43, pts:19},
         {n:"Tiro Federal <b>(C)</b>",    cl:"tirofederal",    pj:13,pg:6,pe:1,pp:6,gf:25, gc:28, pts:19},
-        {n:"Dublin <b>(X)</b>",          cl:"dublin",    pj:13,pg:6,pe:0,pp:7,gf:32, gc:42, pts:18},
+        {n:"Dublin <b>(X)</b>",          cl:"dublin",    pj:13,pg:6,pe:0,pp:7,gf:33, gc:44, pts:18},
         {n:"Petroquímicos <b>(X)</b>",   cl:"petroquimicos",    pj:13,pg:4,pe:1,pp:8,gf:37, gc:47, pts:13},
         {n:"Catamarca <b>(X)</b>",       cl:"catamarca",    pj:12,pg:3,pe:1,pp:8,gf:25, gc:50, pts:10},
-        {n:"San Francisco <b>(X)</b>",   cl:"sanfrancisco",    pj:13,pg:3,pe:0,pp:10,gf:20, gc:47, pts:9},
+        {n:"San Francisco <b>(X)</b>",   cl:"sanfrancisco",    pj:13,pg:3,pe:0,pp:10,gf:22, gc:48, pts:9},
         {n:"<s>Dep. Futsal</s> <b>(-)</b>",     cl:"depfutsal",    pj:0,pg:0,pe:0,pp:0,gf:0, gc:0, pts:0},
         {n:"<s>Huracán</s> <b>(-)</b>",         cl:"huracan",    pj:0,pg:0,pe:0,pp:0,gf:0, gc:0, pts:0}
     ],
@@ -18558,11 +18559,11 @@ const BD_POS_FUTSAL = {
         {n:"La Estación  <b>(C)</b>",     cl:"laestacion",    pj:12,pg:8,pe:0,pp:4,gf:43, gc:31, pts:24},
         {n:"Villa Mitre <b>(C)</b>",     cl:"villamitre",    pj:12,pg:8,pe:0,pp:4,gf:46, gc:39, pts:24},
         {n:"Petroquímicos  <b>(C)</b>",   cl:"petroquimicos",    pj:13,pg:7,pe:2,pp:4,gf:51, gc:46, pts:23},
-        {n:"Dublin  <b>(C)</b>",          cl:"dublin",    pj:12,pg:6,pe:3,pp:3,gf:35, gc:32, pts:21},
+        {n:"Dublin  <b>(C)</b>",          cl:"dublin",    pj:13,pg:6,pe:3,pp:4,gf:36, gc:39, pts:21},
+        {n:"San Francisco",   cl:"sanfrancisco",    pj:13,pg:5,pe:0,pp:8,gf:37, gc:61, pts:15},
         {n:"Comercial",       cl:"comercial",    pj:12,pg:4,pe:2,pp:6,gf:28, gc:44, pts:14},
         {n:"Catamarca",       cl:"catamarca",    pj:12,pg:4,pe:2,pp:6,gf:30, gc:60, pts:14},
-        {n:"San Francisco",   cl:"sanfrancisco",    pj:12,pg:4,pe:0,pp:8,gf:30, gc:60, pts:12},
-        {n:"Tiro Federal",    cl:"tirofederal",    pj:13,pg:3,pe:2,pp:7,gf:22, gc:34, pts:11},
+        {n:"Tiro Federal <b>(X)</b>",    cl:"tirofederal",    pj:13,pg:3,pe:2,pp:7,gf:22, gc:34, pts:11},
         {n:"Pacífico BB <b>(X)</b>",     cl:"pacificobb",    pj:12,pg:3,pe:0,pp:9,gf:25, gc:51, pts:9},
         {n:"<s>Dep. Futsal</s> <b>(-)</b>",     cl:"depfutsal",    pj:0,pg:0,pe:0,pp:0,gf:0, gc:0, pts:0},
         {n:"<s>Huracán</s> <b>(-)</b>",         cl:"huracan",    pj:0,pg:0,pe:0,pp:0,gf:0, gc:0, pts:0}
