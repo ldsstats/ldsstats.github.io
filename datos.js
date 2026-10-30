@@ -557,8 +557,8 @@ const BD_FIXTURES_FUTSAL_RESERVA = [
         {l:"Dublin",   v:"San Francisco",     gl:1, gv:7},
         {l:"La Esperanza",    v:"Tiro Federal",     gl:5, gv:1},
         {l:"Liniers",   v:"Petroquímicos",     gl:11, gv:1},
+        {l:"Villa Mitre",     v:"La Estación",     gl:3, gv:3},
         {l:"Comercial",       v:"Pacífico BB",     gl:null, gv:null},
-        {l:"Villa Mitre",     v:"La Estación",     gl:null, gv:null},
         {l:"Los 3 Chiflados", v:"Catamarca",     gl:null, gv:null},
         {l:"Dep. Futsal",     v:"Huracán",     gl:null, gv:null},
     ]}
@@ -677,8 +677,8 @@ const BD_FIXTURES_FUTSAL = [
         {l:"Dublin",   v:"San Francisco",     gl:6, gv:4},
         {l:"La Esperanza",    v:"Tiro Federal",     gl:2, gv:0},
         {l:"Liniers",   v:"Petroquímicos",     gl:4, gv:2},
+        {l:"Villa Mitre",     v:"La Estación",     gl:1, gv:1},
         {l:"Comercial",       v:"Pacífico BB",     gl:null, gv:null},
-        {l:"Villa Mitre",     v:"La Estación",     gl:null, gv:null},
         {l:"Los 3 Chiflados", v:"Catamarca",     gl:null, gv:null},
         {l:"Dep. Futsal",     v:"Huracán",     gl:null, gv:null},
     ]}
@@ -1948,7 +1948,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 27).partidos.forEach(p
 });
 
 
-let diaSeleccionadoHome = "2026-10-29"; 
+let diaSeleccionadoHome = "2026-10-30"; 
 let mercadoPasesAbierto = false;
 
 function toggleMercadoPasesHome() {
@@ -2004,7 +2004,7 @@ function generarHome() {
        ]},
      { id: "2026-10-29", label: "JUE 29/10", torneos: [
             { nombre: "FUTSAL | CLAUSURA | ÚLTIMA FECHA", cat: "futsal", torLink: "futsal", noAutoResult: true, partidos: [
-            {l:"La Estación", v:"Villa Mitre", hora:"22:30", gl:null, gv:null, claseL:"laestacion", claseV:"villamitre",nota:"en cancha de Don Bosco"},
+            {l:"La Estación", v:"Villa Mitre", hora:"22:30", gl:1, gv:1, claseL:"laestacion", claseV:"villamitre",nota:"en cancha de Don Bosco"},
             ]},
        ]},
      { id: "2026-10-30", label: "VIÉ 30/10", torneos: [
@@ -2266,8 +2266,8 @@ const BD_FEDERAL_REVALIDA = {
             vuelta: { local: "Alvarado", clL: "alvarado", visitante: "Sportivo Las Parejas", clV: "splasparejas", gl: null, gv: null, goles_l: [], goles_v: [] }
         },
        {
-            ida:    { local: "Boca Unidos", clL: "bocaunidos", visitante: "Gimnasia de Chivilcoy", clV: "gimnasiachivilcoy", gl: null, gv: null, goles_l: [], goles_v: [] },
-            vuelta: { local: "Gimnasia de Chivilcoy", clL: "gimnasiachivilcoy", visitante: "Boca unidos", clV: "bocaunidos", gl: null, gv: null, goles_l: [], goles_v: [] }
+            ida:    { local: "<s>Boca Unidos</s>", clL: "bocaunidos", visitante: "<b>Gimnasia de Chivilcoy</b>", clV: "gimnasiachivilcoy", gl: null, gv: null, goles_l: [], goles_v: [] },
+            vuelta: { local: "<b>Gimnasia de Chivilcoy</b>", clL: "gimnasiachivilcoy", visitante: "<s>Boca Unidos</s>", clV: "bocaunidos", gl: null, gv: null, goles_l: [], goles_v: [] }
         },
        {
             ida:    { local: "Juventud Antoniana", clL: "jantoniana", visitante: "Sol de América", clV: "soldeamericafsa", gl: 3, gv: 0, goles_l: [], goles_v: [] },
@@ -17641,6 +17641,8 @@ const BD_H2H = {
         { fecha: "Apertura 2026 - Fecha 13", torneo: "futsalreserva", l: "Villa Mitre", v: "La Estación", gl: 5, gv: 2 },
         { fecha: "Apertura 2026 - Cuartos de final", torneo: "futsalreserva", l: "Villa Mitre", v: "La Estación", gl: 4, gv: 4 },
         { fecha: "Apertura 2026 - Final", torneo: "futsal", l: "La Estación", v: "Villa Mitre", gl: 3, gv: 3, pen_l:4, pen_v:3 },
+        { fecha: "Clausura 2026 - Fecha 13", torneo: "futsal", l: "Villa Mitre", v: "La Estación", gl: 1, gv: 1 },
+        { fecha: "Clausura 2026 - Fecha 13", torneo: "futsalreserva", l: "Villa Mitre", v: "La Estación", gl: 3, gv: 3 },
     ],
     "Los 3 Chiflados|San Francisco": [
         { fecha: "Apertura 2026 - Fecha 6", torneo: "futsal", l: "Los 3 Chiflados", v: "San Francisco", gl: 8, gv: 4 },
@@ -18334,13 +18336,6 @@ const BD_GOL_SUB = {
 const BD_SUB13_PLAYOFFS = {
     octavos: [
         { local: "<s>Villa Mitre</s>", clL: "villamitre", visitante: "<b>Sarmiento de Junín</b>", clV: "sarmientojunin", gl: 0, gv: 0, pen_l:4, pen_v:5 },
-        { local: "<s>Academia Mascherano</s>", clL: "mascherano", visitante: "<b>Mac Allister</b>", clV: "macallister", gl: 2, gv: 3 },
-        { local: "Boca Unidos", clL: "bocaunidos", visitante: "Rosario Central", clV: "rosariocentral", gl: null, gv: null },
-        { local: "Unión de Santa Fe", clL: "unionsf", visitante: "San Martín de Formosa", clV: "sanmartinfsa", gl: null, gv: null },
-        { local: "CAI", clL: "cai", visitante: "Maronese", clV: "maronese", gl: null, gv: null },
-        { local: "JJ Moreno", clL: "jjmoreno", visitante: "Independiente de Neuquén", clV: "indeptenqn", gl: null, gv: null },
-        { local: "Gimnasia y Tiro", clL: "gimnasiaytiro", visitante: "Desamparados", clV: "desamparados", gl: null, gv: null },
-        { local: "Deportivo Maipú", clL: "depmaipu", visitante: "Atlético Tucumán", clV: "atltucuman", gl: null, gv: null }
     ],
     cuartos: [
         { local: "A confirmar", clL: "aconfirmar", visitante: "A confirmar", clV: "aconfirmar", gl: null, gv: null },
@@ -18537,11 +18532,11 @@ function mostrarSub13Playoffs() {
 
 const BD_POS_FUTSAL = {
     principal: [
-        {n:"La Estación <b>(A)</b> <b>(C)</b>",     cl:"laestacion",    pj:12,pg:12,pe:0,pp:0,gf:54, gc:22, pts:36},
+        {n:"La Estación <b>(A)</b> <b>(C)</b>",     cl:"laestacion",    pj:13,pg:12,pe:1,pp:0,gf:55, gc:23, pts:37},
         {n:"La Esperanza <b>(C)</b>",    cl:"laesperanza",    pj:13,pg:10,pe:1,pp:2,gf:47, gc:27, pts:31},
         {n:"Comercial <b>(C)</b>",       cl:"comercial",    pj:12,pg:10,pe:0,pp:2,gf:46, gc:27, pts:30},
         {n:"Los 3 Chiflados <b>(*)</b>  <b>(C)</b>", cl:"los3chiflados",    pj:12,pg:9,pe:1,pp:2,gf:49, gc:22, pts:28},
-        {n:"Villa Mitre <b>(C)</b>",     cl:"villamitre",    pj:12,pg:6,pe:2,pp:4,gf:40, gc:40, pts:20},
+        {n:"Villa Mitre <b>(C)</b>",     cl:"villamitre",    pj:13,pg:6,pe:3,pp:4,gf:41, gc:41, pts:21},
         {n:"Liniers <b>(*)</b> <b>(C)</b>",         cl:"liniers",    pj:13,pg:6,pe:2,pp:5,gf:32, gc:33, pts:20},
         {n:"Pacífico BB <b>(C)</b>",     cl:"pacificobb",    pj:12,pg:6,pe:1,pp:5,gf:43, gc:43, pts:19},
         {n:"Tiro Federal <b>(C)</b>",    cl:"tirofederal",    pj:13,pg:6,pe:1,pp:6,gf:25, gc:28, pts:19},
@@ -18556,8 +18551,8 @@ const BD_POS_FUTSAL = {
         {n:"Los 3 Chiflados <b>(A)</b>  <b>(C)</b>", cl:"los3chiflados",    pj:12,pg:12,pe:0,pp:0,gf:67, gc:22, pts:36},
         {n:"Liniers  <b>(C)</b>",         cl:"liniers",    pj:13,pg:11,pe:0,pp:2,gf:73, gc:29, pts:33},
         {n:"La Esperanza  <b>(C)</b>",    cl:"laesperanza",    pj:13,pg:10,pe:1,pp:2,gf:44, gc:20, pts:31},
-        {n:"La Estación  <b>(C)</b>",     cl:"laestacion",    pj:12,pg:8,pe:0,pp:4,gf:43, gc:31, pts:24},
-        {n:"Villa Mitre <b>(C)</b>",     cl:"villamitre",    pj:12,pg:8,pe:0,pp:4,gf:46, gc:39, pts:24},
+        {n:"La Estación  <b>(C)</b>",     cl:"laestacion",    pj:13,pg:8,pe:1,pp:4,gf:46, gc:34, pts:25},
+        {n:"Villa Mitre <b>(C)</b>",     cl:"villamitre",    pj:13,pg:8,pe:1,pp:4,gf:49, gc:42, pts:25},
         {n:"Petroquímicos  <b>(C)</b>",   cl:"petroquimicos",    pj:13,pg:7,pe:2,pp:4,gf:51, gc:46, pts:23},
         {n:"Dublin  <b>(C)</b>",          cl:"dublin",    pj:13,pg:6,pe:3,pp:4,gf:36, gc:39, pts:21},
         {n:"San Francisco",   cl:"sanfrancisco",    pj:13,pg:5,pe:0,pp:8,gf:37, gc:61, pts:15},
