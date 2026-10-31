@@ -2026,9 +2026,11 @@ function generarHome() {
             ]},
             { nombre: "2° FEMENINO | SEMIFINAL | VUELTA", cat: "segundafemenino", torLink: "segundafemenino", noAutoResult: true, partidos: [
             {l:"Liniers", v:"Rosario PB", hora:"16:00", gl:null, gv:null, claseL:"liniers", claseV:"rosariopb",nota:"<b>Ida: 2-1</b>"},
+            {l:"San Francisco", v:"Petroquímicos", hora:"16:00", gl:null, gv:null, claseL:"sanfrancisco", claseV:"petroquimicos",nota:"<b>Ida: 0-1</b>"},
             ]},
             { nombre: "SUB-15 FEMENINO | SEMIFINAL", cat: "sub15fem", torLink: "sub15fem", noAutoResult: true, partidos: [
             {l:"Liniers", v:"Juventud Unida", hora:"13:15", gl:null, gv:null, claseL:"liniers", claseV:"juventudunida"},
+            {l:"Bella Vista", v:"Tiro Federal", hora:"13:15", gl:null, gv:null, claseL:"bellavista", claseV:"tirofederal"},
             ]},
             { nombre: "FEDERAL A | REVÁLIDA - TERCERA RONDA - VUELTA", cat: "federala", torLink: "federala", noAutoResult: true, partidos: [
             {l:"Kimberley", v:"Argentino de Monte Maiz", hora:"15:00", gl:null, gv:null, claseL:"kimberley", claseV:"argmontemaiz",nota:"<b>0-0</b>"},
@@ -2038,6 +2040,10 @@ function generarHome() {
             ]},
        ]},
      { id: "2026-11-01", label: "DOM 01/11", torneos: [
+            { nombre: "1° FEMENINO | CLAUSURA | SEMIFINALES", cat: "promocional", torLink: "promocional", noAutoResult: true, partidos: [
+            {l:"Municipales", v:"Bella Vista", hora:"13:00", gl:null, gv:null, claseL:"municipales", claseV:"bellavista"},
+            {l:"Villa Mitre", v:"Tiro Federal", hora:"13:00", gl:null, gv:null, claseL:"villamitre", claseV:"tirofederal"},
+            ]},
             { nombre: "PROMOCIONAL | CLAUSURA | ÚLTIMA FECHA", cat: "promocional", torLink: "promocional", noAutoResult: true, partidos: [
             {l:"Sansinena", v:"Rosario PB", hora:"15:00", gl:null, gv:null, claseL:"sansinena", claseV:"rosariopb"},
             {l:"Dublin", v:"Olimpo", hora:"11:00", gl:null, gv:null, claseL:"dublin", claseV:"olimpo"},
