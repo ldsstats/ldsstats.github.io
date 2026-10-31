@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>LdS Stats - 2026</title>
-    <link rel="stylesheet" href="style.css?v=7">
+    <link rel="stylesheet" href="style.css?v=67">
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#111111">
     <!-- Google Analytics -->
@@ -166,7 +166,7 @@
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-<script src="datos.js?v=7"></script>
+<script src="datos.js?v=67"></script>
 <script>
     let estado = { torneo: 'home', categoria: '', fecha: 1 };
     let estadoAnterior = { torneo: 'home', categoria: '', fecha: 1 };
@@ -194,8 +194,8 @@
         clausura_femenino:   "Dom 25/10 00:00hs",
         goleadores_femenino:   "Dom 25/10 00:00hs",
         reserva_femenino:   "Dom 25/10 00:00hs",
-        torneo2026_segundafemenino:   "Dom 25/10 00:00hs",
-        goleadores_segundafemenino:   "Dom 25/10 00:00hs",
+        torneo2026_segundafemenino:   "Sáb 31/10 19:30hs",
+        goleadores_segundafemenino:   "Sáb 31/10 19:30hs",
         reserva_segundafemenino:   "Dom 25/10 00:00hs",
         sub15fem:   "Dom 25/10 00:00hs",
         torneo2026_senior:   "Jue 17/09 08:00hs",
@@ -494,6 +494,10 @@
                 cont.innerHTML = generarReservaOficialPlayoffs();
             } else if (estado.torneo === 'reservapromocionalplayoffs') {
                 cont.innerHTML = generarReservaPromocionalPlayoffs();
+            } else if (estado.torneo === 'oficialplayoffsclausura') {
+                cont.innerHTML = generarOficialPlayoffsClausura();
+            } else if (estado.torneo === 'promocionalplayoffsclausura') {
+                cont.innerHTML = generarPromocionalPlayoffsClausura();
             } else if (estado.torneo === 'femeninoplayoffs') {
                 cont.innerHTML = generarFemeninoPlayoffs();
             } else if (estado.torneo === 'reservafemeninoplayoffs') {
@@ -548,11 +552,15 @@
                 }
                 cont.innerHTML = generarReserva(estado.categoria);
             } else if (estado.torneo === 'clausura' && estado.categoria === 'oficial') {
-                cont.innerHTML = generarFixture(estado.fecha, 'clausura', 'oficial') +
+                const viseraOficialClausura = `<div onclick="navegar('oficialplayoffsclausura')" style="background:linear-gradient(135deg,#7b1a1a,#a93226);color:#fff;text-align:center;padding:9px 12px;font-size:12px;font-weight:bold;letter-spacing:0.5px;cursor:pointer;border-bottom:2px solid #f0a500;">🏆 Ver cuadro de Playoffs y Desempate por el descenso ▶</div>`;
+                cont.innerHTML = viseraOficialClausura +
+                                 generarFixture(estado.fecha, 'clausura', 'oficial') +
                                  generarTabla('clausura', 'oficial') +
                                  generarTabla('acumulada', 'oficial');
             } else if (estado.torneo === 'clausura' && estado.categoria === 'promocional') {
-                cont.innerHTML = generarFixture(estado.fecha, 'clausura', 'promocional') +
+                const viseraPromoClausura = `<div onclick="navegar('promocionalplayoffsclausura')" style="background:linear-gradient(135deg,#7b1a1a,#a93226);color:#fff;text-align:center;padding:9px 12px;font-size:12px;font-weight:bold;letter-spacing:0.5px;cursor:pointer;border-bottom:2px solid #f0a500;">🏆 Ver cuadro de Playoffs ▶</div>`;
+                cont.innerHTML = viseraPromoClausura +
+                                 generarFixture(estado.fecha, 'clausura', 'promocional') +
                                  generarTabla('clausura', 'promocional') +
                                  generarTabla('acumulada', 'promocional');
             } else if (estado.torneo === 'copapais') {

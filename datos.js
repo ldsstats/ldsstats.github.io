@@ -2025,28 +2025,30 @@ function generarHome() {
             {l:"Pacífico (C)", v:"Comercial", hora:"15:00", gl:0, gv:1, claseL:"pacificoc", claseV:"comercial"},
             ]},
             { nombre: "2° FEMENINO | SEMIFINAL | VUELTA", cat: "segundafemenino", torLink: "segundafemenino", noAutoResult: true, partidos: [
-            {l:"Liniers", v:"Rosario PB", hora:"16:00", gl:null, gv:null, claseL:"liniers", claseV:"rosariopb",nota:"<b>Ida: 2-1</b>"},
-            {l:"San Francisco", v:"Petroquímicos", hora:"16:00", gl:null, gv:null, claseL:"sanfrancisco", claseV:"petroquimicos",nota:"<b>Ida: 0-1</b>"},
+            {l:"Liniers", v:"Rosario PB", hora:"16:00", gl:2, gv:2, claseL:"liniers", claseV:"rosariopb",nota:"<b>Ida: 2-1</b>"},
             ]},
             { nombre: "SUB-15 FEMENINO | SEMIFINAL", cat: "sub15fem", torLink: "sub15fem", noAutoResult: true, partidos: [
             {l:"Liniers", v:"Juventud Unida", hora:"13:15", gl:null, gv:null, claseL:"liniers", claseV:"juventudunida"},
             {l:"Bella Vista", v:"Tiro Federal", hora:"13:15", gl:null, gv:null, claseL:"bellavista", claseV:"tirofederal"},
             ]},
             { nombre: "FEDERAL A | REVÁLIDA - TERCERA RONDA - VUELTA", cat: "federala", torLink: "federala", noAutoResult: true, partidos: [
-            {l:"Kimberley", v:"Argentino de Monte Maiz", hora:"15:00", gl:null, gv:null, claseL:"kimberley", claseV:"argmontemaiz",nota:"<b>0-0</b>"},
-            {l:"Douglas Haig", v:"Villa Mitre", hora:"16:00", gl:null, gv:null, claseL:"douglashaig", claseV:"villamitre",nota:"<b>0-1</b>"},
+            {l:"Kimberley", v:"Argentino de Monte Maiz", hora:"15:00", gl:1, gv:1, claseL:"kimberley", claseV:"argmontemaiz",nota:"<b>0-0</b>"},
+            {l:"Douglas Haig", v:"Villa Mitre", hora:"16:00", gl:3, gv:0, claseL:"douglashaig", claseV:"villamitre",nota:"<b>0-1</b>"},
             {l:"Olimpo", v:"Gimnasia (CdU)", hora:"19:00", gl:null, gv:null, claseL:"olimpo", claseV:"gimnasiacdu",nota:"<b>0-0</b>"},
             {l:"Sol de América", v:"Juventud Antoniana", hora:"19:00", gl:null, gv:null, claseL:"soldeamericafsa", claseV:"jantoniana",nota:"<b>0-3</b>"},
             ]},
        ]},
      { id: "2026-11-01", label: "DOM 01/11", torneos: [
+            { nombre: "PROMOCIONAL | CLAUSURA | ÚLTIMA FECHA", cat: "promocional", torLink: "promocional", noAutoResult: true, partidos: [
+            {l:"Sansinena", v:"Rosario PB", hora:"15:00", gl:null, gv:null, claseL:"sansinena", claseV:"rosariopb"},
+            {l:"Dublin", v:"Olimpo", hora:"11:00", gl:null, gv:null, claseL:"dublin", claseV:"olimpo"},
+            ]},
             { nombre: "1° FEMENINO | CLAUSURA | SEMIFINALES", cat: "promocional", torLink: "promocional", noAutoResult: true, partidos: [
             {l:"Municipales", v:"Bella Vista", hora:"13:00", gl:null, gv:null, claseL:"municipales", claseV:"bellavista"},
             {l:"Villa Mitre", v:"Tiro Federal", hora:"13:00", gl:null, gv:null, claseL:"villamitre", claseV:"tirofederal"},
             ]},
-            { nombre: "PROMOCIONAL | CLAUSURA | ÚLTIMA FECHA", cat: "promocional", torLink: "promocional", noAutoResult: true, partidos: [
-            {l:"Sansinena", v:"Rosario PB", hora:"15:00", gl:null, gv:null, claseL:"sansinena", claseV:"rosariopb"},
-            {l:"Dublin", v:"Olimpo", hora:"11:00", gl:null, gv:null, claseL:"dublin", claseV:"olimpo"},
+            { nombre: "2° FEMENINO | SEMIFINAL | VUELTA", cat: "segundafemenino", torLink: "segundafemenino", noAutoResult: true, partidos: [
+            {l:"San Francisco", v:"Petroquímicos", hora:"16:00", gl:null, gv:null, claseL:"sanfrancisco", claseV:"petroquimicos",nota:"<b>Ida: 0-1</b>"},
             ]},
             { nombre: "FEDERAL A | REVÁLIDA - TERCERA RONDA - VUELTA (VILLA MITRE/OLIMPO)", cat: "federala", torLink: "federala", noAutoResult: true, partidos: [
             {l:"Alvarado", v:"Sportivo Las Parejas", hora:"11:30", gl:null, gv:null, claseL:"alvarado", claseV:"splasparejas",nota:"<b>1-0</b>"},
@@ -2264,8 +2266,8 @@ const BD_FEDERAL_REVALIDA = {
             vuelta: { local: "Olimpo", clL: "olimpo", visitante: "Gimnasia de Concepción del Uruguay", clV: "gimnasiacdu", gl: null, gv: null, goles_l: [], goles_v: [] }
         },
        {
-            ida:    { local: "Villa Mitre", clL: "villamitre", visitante: "Douglas Haig", clV: "douglashaig", gl: 1, gv: 0, goles_l: ["Santos Bacigalupe"], goles_v: [] },
-            vuelta: { local: "Douglas Haig", clL: "douglashaig", visitante: "Villa Mitre", clV: "villamitre", gl: null, gv: null, goles_l: [], goles_v: [] }
+            ida:    { local: "<s>Villa Mitre</s>", clL: "villamitre", visitante: "<b>Douglas Haig</b>", clV: "douglashaig", gl: 1, gv: 0, goles_l: ["Santos Bacigalupe"], goles_v: [] },
+            vuelta: { local: "<b>Douglas Haig</b>", clL: "douglashaig", visitante: "<s>Villa Mitre</s>", clV: "villamitre", gl: 3, gv: 0, goles_l: [], goles_v: [] }
         },
        {
             ida:    { local: "Sportivo Las Parejas", clL: "splasparejas", visitante: "Alvarado", clV: "alvarado", gl: 0, gv: 1, goles_l: [], goles_v: [] },
@@ -2284,8 +2286,8 @@ const BD_FEDERAL_REVALIDA = {
             vuelta: { local: "Atenas de Río Cuarto", clL: "atenasrc", visitante: "Sarmiento de La Banda", clV: "sarmientolb", gl: null, gv: null, goles_l: [], goles_v: [] }
         },
        {
-            ida:    { local: "Argentino de Monte Maiz", clL: "argmontemaiz", visitante: "Kimberley", clV: "kimberley", gl: 0, gv: 0, goles_l: [], goles_v: [] },
-            vuelta: { local: "Kimberley", clL: "kimberley", visitante: "Argentino de Monte Maiz", clV: "argmontemaiz", gl: null, gv: null, goles_l: [], goles_v: [] }
+            ida:    { local: "<s>Argentino de Monte Maiz</s>", clL: "argmontemaiz", visitante: "<b>Kimberley</b>", clV: "kimberley", gl: 0, gv: 0, goles_l: [], goles_v: [] },
+            vuelta: { local: "<b>Kimberley</b>", clL: "kimberley", visitante: "<s>Argentino de Monte Maiz</s>", clV: "argmontemaiz", gl: 1, gv: 1, goles_l: [], goles_v: [] }
         },
     ],
     cuartaRonda: [
@@ -16266,6 +16268,7 @@ const BD_H2H = {
         { fecha: "Fecha 26 - Torneo 2026 - 26 ago", torneo: "segundafemenino", l: "Rosario PB", v: "Liniers", gl: 1, gv: 3, goles_l: ["Celeste Medina"], goles_v: ["Iara Schwab","Paz Cutrín (2)"] },
         { fecha: "Fecha 26 - Torneo 2026", torneo: "reserva_segundafemenino", l: "Rosario PB", v: "Liniers", gl: 1, gv: 4 },
         { fecha: "Cuartos de Final - Ida - Torneo 2026 - 24 oct", torneo: "segundafemenino", l: "Rosario PB", v: "Liniers", gl: 1, gv: 2, goles_l: ["Juliana Ruiz"], goles_v: ["Paulina Acevedo","Giuliana Morano"] },
+        { fecha: "Cuartos de Final - Vuelta - Torneo 2026 - 31 oct", torneo: "segundafemenino", l: "Liniers", v: "Rosario PB", gl: 2, gv: 2, goles_l: ["Paulina Acevedo","Agustina Borda"], goles_v: ["Celeste Medina","Valentina Cavalli"] },
     ],
     "Olimpo|San Francisco": [
         { fecha: "Fecha 8 - Torneo 2026 - 17 may", torneo: "segundafemenino", l: "San Francisco", v: "Olimpo", gl: 4, gv: 0, goles_l: ["Rocío de Mirta (2)","Ariana Adassus","Julieta Coronel"], goles_v: [] },
@@ -25639,8 +25642,8 @@ const BD_SEGUNDAFEMENINO_PLAYOFFS = {
     ],
     semis: [
         {
-            ida:    { local: "Rosario PB", clL: "rosariopb", visitante: "Liniers", clV: "liniers", gl: 1, gv: 2, goles_l: ["Juliana Ruiz"], goles_v: ["Paulina Acevedo","Giuliana Morano"] },
-            vuelta: { local: "Liniers", clL: "liniers", visitante: "Rosario PB", clV: "rosariopb", gl: null, gv: null, goles_l: [], goles_v: [] }
+            ida:    { local: "<s>Rosario PB</s>", clL: "rosariopb", visitante: "<b>Liniers</b>", clV: "liniers", gl: 1, gv: 2, goles_l: ["Juliana Ruiz"], goles_v: ["Paulina Acevedo","Giuliana Morano"] },
+            vuelta: { local: "<b>Liniers</b>", clL: "liniers", visitante: "<s>Rosario PB</s>", clV: "rosariopb", gl: 2, gv: 2, goles_l: ["Paulina Acevedo","Agustina Borda"], goles_v: ["Celeste Medina","Valentina Cavalli"] }
         },
         {
             ida:    { local: "Petroquímicos", clL: "petroquimicos", visitante: "San Francisco", clV: "sanfrancisco", gl: 1, gv: 0, goles_l: ["Romina Zarza"], goles_v: [] },
@@ -25798,5 +25801,63 @@ function generarReservaFemeninoPlayoffs() {
         html += _renderPartidoPlayoff(BD_RESERVA_FEMENINO_CLAUSURA_PLAYOFFS.final);
         html += `</table>`;
     }
+    return html;
+}
+
+const BD_OFICIAL_CLAUSURA_PLAYOFFS = {
+    semifinales: [
+        { local: "Huracán", clL: "huracan", visitante: "Libertad", clV: "libertad", gl: null, gv: null, goles_l: [], goles_v: [] },
+        { local: "San Francisco", clL: "sanfrancisco", visitante: "Bella Vista", clV: "bellavista", gl: null, gv: null, goles_l: [], goles_v: [] }
+    ],
+    final: { local: "A confirmar", clL: "aconfirmar", visitante: "A confirmar", clV: "aconfirmar", gl: null, gv: null, goles_l: [], goles_v: [] },
+    desempate: { local: "La Armonía", clL: "laarmonia", visitante: "Sporting", clV: "sporting", gl: null, gv: null, goles_l: [], goles_v: [] }
+};
+
+const BD_PROMOCIONAL_CLAUSURA_PLAYOFFS = {
+    semifinales: [
+        { local: "Tiro Federal", clL: "tirofederal", visitante: "Rosario PB", clV: "rosariopb", gl: null, gv: null, goles_l: [], goles_v: [] },
+        { local: "Olimpo", clL: "olimpo", visitante: "Comercial", clV: "comercial", gl: null, gv: null, goles_l: [], goles_v: [] }
+    ],
+    final: { local: "A confirmar", clL: "aconfirmar", visitante: "A confirmar", clV: "aconfirmar", gl: null, gv: null, goles_l: [], goles_v: [] }
+};
+
+let subOficialClausuraPO = 'playoffs';
+
+function _btnPOClausura(texto, activo, accion) {
+    return `<button onclick="${accion}" style="font-size:10px;padding:4px 12px;border:1px solid #1a4a2e;border-radius:12px;cursor:pointer;font-weight:bold;background:${activo ? '#1a4a2e' : '#fff'};color:${activo ? '#fff' : '#1a4a2e'};">${texto}</button>`;
+}
+
+function generarOficialPlayoffsClausura() {
+    let html = `<div class="header-t">TORNEO OFICIAL — PLAYOFFS Y DESEMPATE CLAUSURA 2026</div>`;
+    html += `<div style="display:flex;gap:6px;padding:8px;background:#f9f9f9;border-bottom:1px solid #ddd;">
+        ${_btnPOClausura('Playoffs', subOficialClausuraPO === 'playoffs', "subOficialClausuraPO='playoffs';document.getElementById('contenido').innerHTML=generarOficialPlayoffsClausura()")}
+        ${_btnPOClausura('Desempate', subOficialClausuraPO === 'desempate', "subOficialClausuraPO='desempate';document.getElementById('contenido').innerHTML=generarOficialPlayoffsClausura()")}
+    </div>`;
+
+    if (subOficialClausuraPO === 'playoffs') {
+        html += `<div class="header-t" style="font-size:11px;background:#2c6e49;">SEMIFINALES</div><table>`;
+        BD_OFICIAL_CLAUSURA_PLAYOFFS.semifinales.forEach(p => { html += _renderPartidoPlayoff(p); });
+        html += `</table>`;
+        html += `<div style="height:8px;background:#f0f0f0;border-top:1px solid #ddd;border-bottom:1px solid #ddd;"></div>`;
+        html += `<div class="header-t" style="font-size:11px;background:#7b1a1a;">🏆 FINAL</div><table>`;
+        html += _renderPartidoPlayoff(BD_OFICIAL_CLAUSURA_PLAYOFFS.final, 'Pendiente');
+        html += `</table>`;
+    } else {
+        html += `<div class="header-t" style="font-size:11px;background:#7b1a1a;">DESEMPATE POR EL DESCENSO</div><table>`;
+        html += _renderPartidoPlayoff(BD_OFICIAL_CLAUSURA_PLAYOFFS.desempate);
+        html += `</table>`;
+    }
+    return html;
+}
+
+function generarPromocionalPlayoffsClausura() {
+    let html = `<div class="header-t">TORNEO PROMOCIONAL — PLAYOFFS CLAUSURA 2026</div>`;
+    html += `<div class="header-t" style="font-size:11px;background:#2c6e49;">SEMIFINALES</div><table>`;
+    BD_PROMOCIONAL_CLAUSURA_PLAYOFFS.semifinales.forEach(p => { html += _renderPartidoPlayoff(p); });
+    html += `</table>`;
+    html += `<div style="height:8px;background:#f0f0f0;border-top:1px solid #ddd;border-bottom:1px solid #ddd;"></div>`;
+    html += `<div class="header-t" style="font-size:11px;background:#7b1a1a;">🏆 FINAL</div><table>`;
+    html += _renderPartidoPlayoff(BD_PROMOCIONAL_CLAUSURA_PLAYOFFS.final, 'Pendiente');
+    html += `</table>`;
     return html;
 }
