@@ -2034,7 +2034,7 @@ function generarHome() {
             { nombre: "FEDERAL A | REVÁLIDA - TERCERA RONDA - VUELTA", cat: "federala", torLink: "federala", noAutoResult: true, partidos: [
             {l:"Kimberley", v:"Argentino de Monte Maiz", hora:"15:00", gl:1, gv:1, claseL:"kimberley", claseV:"argmontemaiz",nota:"<b>0-0</b>"},
             {l:"Douglas Haig", v:"Villa Mitre", hora:"16:00", gl:3, gv:0, claseL:"douglashaig", claseV:"villamitre",nota:"<b>0-1</b>"},
-            {l:"Olimpo", v:"Gimnasia (CdU)", hora:"19:00", gl:null, gv:null, claseL:"olimpo", claseV:"gimnasiacdu",nota:"<b>0-0</b>"},
+            {l:"Olimpo", v:"Gimnasia (CdU)", hora:"19:00", gl:1, gv:0, claseL:"olimpo", claseV:"gimnasiacdu",nota:"<b>0-0</b>"},
             {l:"Sol de América", v:"Juventud Antoniana", hora:"19:00", gl:null, gv:null, claseL:"soldeamericafsa", claseV:"jantoniana",nota:"<b>0-3</b>"},
             ]},
        ]},
@@ -2262,8 +2262,8 @@ const BD_FEDERAL_REVALIDA = {
     ],
     terceraRonda: [
         {
-            ida:    { local: "Gimnasia de Concepción del Uruguay", clL: "gimnasiacdu", visitante: "Olimpo", clV: "olimpo", gl: 0, gv: 0, goles_l: [], goles_v: [] },
-            vuelta: { local: "Olimpo", clL: "olimpo", visitante: "Gimnasia de Concepción del Uruguay", clV: "gimnasiacdu", gl: null, gv: null, goles_l: [], goles_v: [] }
+            ida:    { local: "<s>Gimnasia de Concepción del Uruguay</s>", clL: "gimnasiacdu", visitante: "<b>Olimpo</b>", clV: "olimpo", gl: 0, gv: 0, goles_l: [], goles_v: [] },
+            vuelta: { local: "<b>Olimpo</b>", clL: "olimpo", visitante: "<s>Gimnasia de Concepción del Uruguay</s>", clV: "gimnasiacdu", gl: 1, gv: 0, goles_l: ["Cristian Amarilla"], goles_v: [] }
         },
        {
             ida:    { local: "<s>Villa Mitre</s>", clL: "villamitre", visitante: "<b>Douglas Haig</b>", clV: "douglashaig", gl: 1, gv: 0, goles_l: ["Santos Bacigalupe"], goles_v: [] },
@@ -17833,6 +17833,7 @@ const BD_H2H = {
     ],
     "Gimnasia (CdU)|Olimpo": [
         { fecha: "Federal A - Reválida - Tercera Ronda - Ida", torneo: "federala", l: "Gimnasia (CdU)", v: "Olimpo", gl: 0, gv: 0, goles_l: [], goles_v: []  },
+        { fecha: "Federal A - Reválida - Tercera Ronda - Vuelta", torneo: "federala", l: "Olimpo", v: "Gimnasia (CdU)", gl: 1, gv: 0, goles_l: ["Cristian Amarilla"], goles_v: []  },
     ],
     "Guillermo Brown|Villa Mitre": [
         { fecha: "Fecha 8 - Fase inicial - 10 may 2026", torneo: "federala", l: "Guillermo Brown", v: "Villa Mitre", gl: 1, gv: 0, goles_l: ["Ignacio Vallejos"], goles_v: []  },
