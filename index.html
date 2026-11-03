@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>LdS Stats - 2026</title>
-    <link rel="stylesheet" href="style.css?v=7">
+    <link rel="stylesheet" href="style.css?v=78">
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#111111">
     <!-- Google Analytics -->
@@ -128,6 +128,7 @@
                 <a href="#" onclick="navegar('futsal')">Torneo 2026</a>
                 <a href="#" onclick="navegar('futsalgoleadores')">Goleadores por club</a>
                 <a href="#" onclick="navegar('futsalreserva')">Reserva</a>
+                <a href="#" onclick="navegar('futsalselecciones')">Nacional de Selecciones</a>
                 <a href="#" onclick="navegar('futsalbonaerense')">Torneo Bonaerense Pampeana Sur - Zona Ascenso</a>
                 <a href="#" onclick="navegar('futsalbonaerensepromocional')">Torneo Bonaerense Pampeana Sur - Promocional</a>
             </div>
@@ -166,7 +167,7 @@
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-<script src="datos.js?v=7"></script>
+<script src="datos.js?v=78"></script>
 <script>
     let estado = { torneo: 'home', categoria: '', fecha: 1 };
     let estadoAnterior = { torneo: 'home', categoria: '', fecha: 1 };
@@ -202,6 +203,7 @@
         futsal:   "Sáb 31/10 00:00hs",
         futsalgoleadores:   "Lun 19/10 08:00hs",
         futsalreserva:   "Vié 30/10 00:00hs",
+        futsalselecciones:   "Mar 03/11 00:00hs",
         quienessomos:   "Miér 1/04 — 00:00hs",
         equiposfuera:   "Dom 22/3 — 1:15hs",
         futsalbonaerense:   "Mar 16/06 00:00hs",
@@ -474,6 +476,8 @@
                 cont.innerHTML = generarFutsal('reserva');
             } else if (estado.torneo === 'futsalreservaplayoffs') {
                 cont.innerHTML = generarFutsalReservaPlayoffs();
+            } else if (estado.torneo === 'futsalselecciones') {
+                cont.innerHTML = generarFutsalSelecciones();
             } else if (estado.torneo === 'futsalgoleadores') {
                 cont.innerHTML = generarFutsalGoleadores();
             } else if (estado.torneo === 'futsalbonaerense') {

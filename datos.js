@@ -1985,6 +1985,21 @@ function generarHome() {
             {l:"Pacífico (C)", v:"Comercial", hora:"22:00", gl:null, gv:null, claseL:"pacificoc", claseV:"comercial",nota:"en cancha de Comercial"},
             ]},
        ]},
+     { id: "2026-11-04", label: "MIÉ 04/11", torneos: [
+            { nombre: "NACIONAL DE SELECCIONES | GRUPO B | FECHA 1", cat: "futsalselecciones", torLink: "futsalselecciones", noAutoResult: true, partidos: [
+            {l:"<b>Liga del Sur</b>", v:"Salta", hora:"16:00", gl:null, gv:null, claseL:"ldsbb", claseV:"salta"},
+            ]},
+       ]},
+     { id: "2026-11-05", label: "JUE 05/11", torneos: [
+            { nombre: "NACIONAL DE SELECCIONES | GRUPO B | FECHA 2", cat: "futsalselecciones", torLink: "futsalselecciones", noAutoResult: true, partidos: [
+            {l:"<b>Liga del Sur</b>", v:"Río Grande", hora:"13:00", gl:null, gv:null, claseL:"ldsbb", claseV:"riogrande"},
+            ]},
+       ]},
+     { id: "2026-11-06", label: "VIE 06/11", torneos: [
+            { nombre: "NACIONAL DE SELECCIONES | GRUPO B | FECHA 3 (Interzonal)", cat: "futsalselecciones", torLink: "futsalselecciones", noAutoResult: true, partidos: [
+            {l:"<b>Liga del Sur</b>", v:"El Calafate", hora:"13:00", gl:null, gv:null, claseL:"ldsbb", claseV:"elcalafate"},
+            ]},
+       ]},
      { id: "2026-11-12", label: "JUE 12/11", torneos: [
             { nombre: "FEDERAL A | REVÁLIDA - CUARTA RONDA | IDA", cat: "federala", torLink: "federala", noAutoResult: true, partidos: [
             {l:"Kimberley", v:"Olimpo", hora:"15:30", gl:null, gv:null, claseL:"kimberley", claseV:"olimpo"},
@@ -24594,6 +24609,14 @@ function generarSegundaFemeninoPlayoffs() {
     });
     html += `</table>`;
 
+
+    html += `<div style="height:8px;background:#f0f0f0;border-top:1px solid #ddd;border-bottom:1px solid #ddd;"></div>`;
+
+    html += `<div class="header-t" style="font-size:11px;background:#7b1a1a;">🏆 FINAL</div><table>`;
+    html += _renderPartidoPlayoff(BD_SEGUNDAFEMENINO_PLAYOFFS.final.ida);
+    html += _renderPartidoPlayoff(BD_SEGUNDAFEMENINO_PLAYOFFS.final.vuelta);
+    html += `</table>`;
+
     return html;
 }
 
@@ -25630,7 +25653,11 @@ const BD_SEGUNDAFEMENINO_PLAYOFFS = {
             ida:    { local: "<b>Petroquímicos</b>", clL: "petroquimicos", visitante: "<s>San Francisco</s>", clV: "sanfrancisco", gl: 1, gv: 0, goles_l: ["Romina Zarza"], goles_v: [] },
             vuelta: { local: "<s>San Francisco</s>", clL: "sanfrancisco", visitante: "<b>Petroquímicos</b>", clV: "petroquimicos", gl: 4, gv: 4, goles_l: ["Florencia Sorbellini","Florencia Sorbellini","Florencia Sorbellini","Rocío de Mirta"], goles_v: ["Morena Varela","Renata Segovia","Camila Raúl","Camila Raúl"] }
         },
-    ]
+    ],
+    final: {
+        ida:    { local: "Petroquímicos", clL: "petroquimicos", visitante: "Liniers", clV: "liniers", gl: null, gv: null, goles_l: [], goles_v: [] },
+        vuelta: { local: "Liniers", clL: "liniers", visitante: "Petroquímicos", clV: "petroquimicos", gl: null, gv: null, goles_l: [], goles_v: [] }
+        },
 };
 
 const BD_RESERVA_SEGUNDAFEMENINO_PLAYOFFS = {
@@ -25841,4 +25868,78 @@ function generarPromocionalPlayoffsClausura() {
     html += _renderPartidoPlayoff(BD_PROMOCIONAL_CLAUSURA_PLAYOFFS.final, 'Pendiente');
     html += `</table>`;
     return html;
+}
+
+
+function generarFutsalSelecciones() {
+    const esc = {
+        ldsbb: `<svg width="16" height="16" viewBox="0 0 16 16"><rect width="16" height="16" fill="#30d1d1"/><text x="8" y="6.5" text-anchor="middle" font-size="4.5" font-weight="bold" fill="white" font-family="Arial">LS</text><text x="8" y="13" text-anchor="middle" font-size="4.5" font-weight="bold" fill="white" font-family="Arial">BB</text></svg>`
+    };
+    const e = k => `<span style="display:inline-flex;align-items:center;vertical-align:middle;">${esc[k] || ''}</span>`;
+
+    const fixture = [
+        { fecha: "FECHA 1",    dia: "Mié 4/11 · 16hs", l: "Liga del Sur", v: "Salta",       lk: "ldsbb", vk: "", gl: null, gv: null },
+        { fecha: "FECHA 2",    dia: "Jue 5/11 · 13hs", l: "Liga del Sur", v: "Río Grande",  lk: "ldsbb", vk: "", gl: null, gv: null },
+        { fecha: "INTERZONAL", dia: "Vie 6/11 · 13hs", l: "Liga del Sur", v: "El Calafate", lk: "ldsbb", vk: "", gl: null, gv: null }
+    ];
+
+    const grupos = {
+        B: { label: "GRUPO B", verdes: 1, equipos: [
+            { nombre: "Liga del Sur", key: "ldsbb" },
+            { nombre: "Salta",        key: "" },
+            { nombre: "Río Grande",   key: "" }
+        ]},
+        A: { label: "GRUPO A", verdes: 2, equipos: [
+            { nombre: "Río Gallegos", key: "" },
+            { nombre: "Ushuaia",      key: "" },
+            { nombre: "Rosario",      key: "" },
+            { nombre: "San Nicolás",  key: "" }
+        ]},
+        C: { label: "GRUPO C", verdes: 1, equipos: [
+            { nombre: "Bariloche",   key: "" },
+            { nombre: "El Calafate", key: "" },
+            { nombre: "Río Turbio",  key: "" }
+        ]}
+    };
+
+    const tablaGrupo = g => {
+        let h = `<div class="header-t">POSICIONES — ${g.label}</div>
+        <table><thead><tr>
+            <th style="width:20px;">#</th>
+            <th style="text-align:left;padding-left:6px;">Equipo</th>
+            <th class="c-stat">PJ</th><th class="c-stat">PG</th><th class="c-stat">PE</th>
+            <th class="c-stat">PP</th><th class="c-stat">GF</th><th class="c-stat">GC</th>
+            <th class="c-stat">Dif</th><th class="c-stat">Pts</th>
+        </tr></thead><tbody>`;
+        g.equipos.forEach((eq, i) => {
+            const cl = i < g.verdes ? 'p-playoff' : '';
+            h += `<tr class="${cl}">
+                <td class="c-pos">${i + 1}</td>
+                <td class="c-equipo"><span style="display:inline-flex;align-items:center;gap:5px;">${e(eq.key)} ${eq.nombre}</span></td>
+                <td class="c-stat">0</td><td class="c-stat">0</td><td class="c-stat">0</td>
+                <td class="c-stat">0</td><td class="c-stat">0</td><td class="c-stat">0</td>
+                <td class="c-stat">0</td><td class="c-stat"><b>0</b></td>
+            </tr>`;
+        });
+        h += `</tbody></table>`;
+        return h;
+    };
+
+    let fixtureHtml = `<div class="header-t">FIXTURE — LIGA DEL SUR</div><table>`;
+    fixture.forEach(p => {
+        const res = p.gl !== null ? `${p.gl} - ${p.gv}` : '- -';
+        fixtureHtml += `<tr><td colspan="3" style="text-align:center;font-weight:bold;background:#eee;font-size:11px;padding:4px;">${p.fecha} · ${p.dia}</td></tr>`;
+        fixtureHtml += `<tr>
+            <td class="c-loc"><span style="display:inline-flex;align-items:center;justify-content:flex-end;width:100%;gap:4px;">${p.l} ${e(p.lk)}</span></td>
+            <td class="c-res">${res}</td>
+            <td class="c-vis"><span style="display:inline-flex;align-items:center;gap:4px;">${e(p.vk)} ${p.v}</span></td>
+        </tr>`;
+    });
+    fixtureHtml += `</table>`;
+
+    return `<div class="header-t">FUTSAL — NACIONAL DE SELECCIONES</div>`
+        + tablaGrupo(grupos.B)
+        + fixtureHtml
+        + tablaGrupo(grupos.A)
+        + tablaGrupo(grupos.C);
 }
