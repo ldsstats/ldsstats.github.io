@@ -1948,7 +1948,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 27).partidos.forEach(p
 });
 
 
-let diaSeleccionadoHome = "2026-11-01"; 
+let diaSeleccionadoHome = "2026-11-03"; 
 let mercadoPasesAbierto = false;
 
 function toggleMercadoPasesHome() {
@@ -1976,51 +1976,18 @@ function generarHome() {
     const agenda = [
 
 
-     { id: "2026-10-31", label: "SÁB 31/10", torneos: [
-            { nombre: "OFICIAL | CLAUSURA | ÚLTIMA FECHA", cat: "oficial", torLink: "oficial", noAutoResult: true, partidos: [
-            {l:"Libertad", v:"La Armonía", hora:"15:00", gl:0, gv:0, claseL:"libertad", claseV:"laarmonia"},
-            {l:"Bella Vista", v:"Huracán", hora:"15:00", gl:2, gv:3, claseL:"bellavista", claseV:"huracan"},
-            {l:"Sporting", v:"Villa Mitre", hora:"15:00", gl:2, gv:0, claseL:"sporting", claseV:"villamitre"},
-            {l:"San Francisco", v:"Liniers", hora:"15:00", gl:1, gv:0, claseL:"sanfrancisco", claseV:"liniers"},
-            ]},
-            { nombre: "PROMOCIONAL | CLAUSURA | ÚLTIMA FECHA", cat: "promocional", torLink: "promocional", noAutoResult: true, partidos: [
-            {l:"Pacífico BB", v:"Tiro Federal", hora:"15:00", gl:0, gv:0, claseL:"pacificobb", claseV:"tirofederal"},
-            {l:"Pacífico (C)", v:"Comercial", hora:"15:00", gl:0, gv:1, claseL:"pacificoc", claseV:"comercial"},
-            ]},
-            { nombre: "2° FEMENINO | SEMIFINAL | VUELTA", cat: "segundafemenino", torLink: "segundafemenino", noAutoResult: true, partidos: [
-            {l:"Liniers", v:"Rosario PB", hora:"16:00", gl:2, gv:2, claseL:"liniers", claseV:"rosariopb",nota:"<b>Ida: 2-1</b>"},
-            ]},
-            { nombre: "SUB-15 FEMENINO | SEMIFINAL", cat: "sub15fem", torLink: "sub15fem", noAutoResult: true, partidos: [
-            {l:"Liniers", v:"Juventud Unida", hora:"13:15", gl:8, gv:0, claseL:"liniers", claseV:"juventudunida"},
-            {l:"Bella Vista", v:"Tiro Federal", hora:"13:15", gl:1, gv:0, claseL:"bellavista", claseV:"tirofederal"},
-            ]},
-            { nombre: "FEDERAL A | REVÁLIDA - TERCERA RONDA - VUELTA", cat: "federala", torLink: "federala", noAutoResult: true, partidos: [
-            {l:"Kimberley", v:"Argentino de Monte Maiz", hora:"15:00", gl:1, gv:1, claseL:"kimberley", claseV:"argmontemaiz",nota:"<b>0-0</b>"},
-            {l:"Douglas Haig", v:"Villa Mitre", hora:"16:00", gl:3, gv:0, claseL:"douglashaig", claseV:"villamitre",nota:"<b>0-1</b>"},
-            {l:"Olimpo", v:"Gimnasia (CdU)", hora:"19:00", gl:1, gv:0, claseL:"olimpo", claseV:"gimnasiacdu",nota:"<b>0-0</b>"},
-            {l:"Sol de América", v:"Juventud Antoniana", hora:"19:00", gl:2, gv:0, claseL:"soldeamericafsa", claseV:"jantoniana",nota:"<b>0-3</b>"},
+     { id: "2026-11-03", label: "MAR 03/11", torneos: [
+            { nombre: "SENIOR | CLAUSURA | FECHA 8", cat: "seniorclausura", torLink: "seniorclausura", noAutoResult: true, partidos: [
+            {l:"Libertad", v:"Sansinena", hora:"20:00", gl:null, gv:null, claseL:"libertad", claseV:"sansinena",nota:"en cancha de Huracán"},
+            {l:"San Francisco", v:"Bella Vista", hora:"20:30", gl:null, gv:null, claseL:"sanfrancisco", claseV:"bellavista",nota:"en cancha de Comercial"},
+            {l:"Sporting", v:"Tiro Federal", hora:"21:00", gl:null, gv:null, claseL:"sporting", claseV:"tirofederal",nota:"en cancha de Sporting"},
+            {l:"Huracán", v:"Pacífico BB", hora:"21:30", gl:null, gv:null, claseL:"huracan", claseV:"pacificobb",nota:"en cancha de Huracán"},
+            {l:"Pacífico (C)", v:"Comercial", hora:"22:00", gl:null, gv:null, claseL:"pacificoc", claseV:"comercial",nota:"en cancha de Comercial"},
             ]},
        ]},
-     { id: "2026-11-01", label: "DOM 01/11", torneos: [
-            { nombre: "PROMOCIONAL | CLAUSURA | ÚLTIMA FECHA", cat: "promocional", torLink: "promocional", noAutoResult: true, partidos: [
-            {l:"Sansinena", v:"Rosario PB", hora:"15:00", gl:1, gv:0, claseL:"sansinena", claseV:"rosariopb"},
-            {l:"Dublin", v:"Olimpo", hora:"11:00", gl:4, gv:1, claseL:"dublin", claseV:"olimpo"},
-            ]},
-            { nombre: "1° FEMENINO | CLAUSURA | SEMIFINALES", cat: "promocional", torLink: "promocional", noAutoResult: true, partidos: [
-            {l:"Municipales", v:"Bella Vista", hora:"13:00", gl:4, gv:0, claseL:"municipales", claseV:"bellavista"},
-            {l:"Villa Mitre", v:"Tiro Federal", hora:"13:00", gl:6, gv:1, claseL:"villamitre", claseV:"tirofederal"},
-            ]},
-            { nombre: "2° FEMENINO | SEMIFINAL | VUELTA", cat: "segundafemenino", torLink: "segundafemenino", noAutoResult: true, partidos: [
-            {l:"San Francisco", v:"Petroquímicos", hora:"16:00", gl:4, gv:4, claseL:"sanfrancisco", claseV:"petroquimicos",nota:"<b>Ida: 0-1</b>"},
-            ]},
-            { nombre: "FEDERAL A | REVÁLIDA - TERCERA RONDA - VUELTA (VILLA MITRE/OLIMPO)", cat: "federala", torLink: "federala", noAutoResult: true, partidos: [
-            {l:"Alvarado", v:"Sportivo Las Parejas", hora:"11:30", gl:1, gv:2, claseL:"alvarado", claseV:"splasparejas",nota:"<b>1-0</b>"},
-            {l:"Atenas de Río Cuarto", v:"Sarmiento de La Banda", hora:"19:15", gl:4, gv:2, claseL:"atenasrc", claseV:"sarmientolb",nota:"<b>0-3</b>"},
-            ]},
-            { nombre: "REGIONAL AMATEUR | BONAERENSE PAMPEANA SUR | RONDA 3 - VUELTA", cat: "regamateurtemporada", torLink: "regamateurtemporada", noAutoResult: true, partidos: [
-            {l:"Dep. Norte", v:"Quilmes", hora:"11:00", gl:0, gv:0, claseL:"depnorte", claseV:"quilmesmdp",nota:"<b>0-1</b>"},
-            {l:"Estudiantes de Olavarría", v:"Racing de Olavarría", hora:"11:00", gl:0, gv:1, claseL:"estudiantesolavarria", claseV:"racingolavarria",nota:"<b>2-2</b>"},
-            {l:"Santa Rita", v:"<b>Huracán</b>", hora:"19:00", gl:2, gv:0, claseL:"santarita", claseV:"huracan"},
+     { id: "2026-11-12", label: "JUE 12/11", torneos: [
+            { nombre: "FEDERAL A | REVÁLIDA - CUARTA RONDA | IDA", cat: "federala", torLink: "federala", noAutoResult: true, partidos: [
+            {l:"Kimberley", v:"Olimpo", hora:"15:30", gl:null, gv:null, claseL:"kimberley", claseV:"olimpo"},
             ]},
        ]},
     ];
