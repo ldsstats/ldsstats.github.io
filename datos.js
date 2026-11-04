@@ -1390,7 +1390,7 @@ BD_FIXTURES.promocional.reserva.push(
     { fecha: 8, partidos: [
         {l:"Pacífico (C)",   v:"Sansinena", gl:1,   gv:2},
         {l:"Rosario PB",      v:"Dublin",          gl:1,   gv:0},
-        {l:"Comercial",v:"Tiro Federal",           gl:null,   gv:null},
+        {l:"Comercial",v:"Tiro Federal",           gl:1,   gv:2},
         {l:"Olimpo", v:"Pacífico BB",              gl:3,   gv:1}
     ]},
     { fecha: 9, partidos: [
@@ -1981,7 +1981,7 @@ function generarHome() {
             {l:"Libertad", v:"Sansinena", hora:"20:00", gl:null, gv:null, claseL:"libertad", claseV:"sansinena",nota:"en cancha de Huracán"},
             {l:"San Francisco", v:"Bella Vista", hora:"20:30", gl:null, gv:null, claseL:"sanfrancisco", claseV:"bellavista",nota:"en cancha de Comercial"},
             {l:"Sporting", v:"Tiro Federal", hora:"21:00", gl:null, gv:null, claseL:"sporting", claseV:"tirofederal",nota:"en cancha de Sporting"},
-            {l:"Huracán", v:"Pacífico BB", hora:"21:30", gl:null, gv:null, claseL:"huracan", claseV:"pacificobb",nota:"en cancha de Huracán"},
+            {l:"Huracán", v:"Pacífico BB", hora:"21:30", gl:3, gv:0, claseL:"huracan", claseV:"pacificobb",nota:"en cancha de Huracán"},
             {l:"Pacífico (C)", v:"Comercial", hora:"22:00", gl:null, gv:null, claseL:"pacificoc", claseV:"comercial",nota:"en cancha de Comercial"},
             ]},
        ]},
@@ -17834,6 +17834,7 @@ const BD_H2H = {
         { fecha: "Apertura 2026 - Fecha 8", torneo: "senior", l: "Pacífico BB", v: "Huracán", gl: 2, gv: 3, goles_l: ["Maximiliano Delaudo","Hernán Sangripandi"], goles_v: ["César Panduro (2)","Sergio Pereyra"] },
         { fecha: "Apertura 2026 - Fecha 8", torneo: "futsal", l: "Pacífico BB", v: "Huracán", gl: 8, gv: 3 },
         { fecha: "Apertura 2026 - Fecha 8", torneo: "futsalreserva", l: "Pacífico BB", v: "Huracán", gl: 6, gv: 4 },
+        { fecha: "Clausura 2026 - Fecha 8", torneo: "senior", l: "Huracán", v: "Pacífico BB", gl: 3, gv: 0, goles_l: ["César Panduro (2)","Cristian Lucero"], goles_v: [] },
     ],
     "Libertad|Sansinena": [
         { fecha: "Apertura 2026 - Fecha 8", torneo: "senior", l: "Sansinena", v: "Libertad", gl: 1, gv: 1, goles_l: ["Emiliano Scheffer"], goles_v: ["Pablo Cerra"] }
@@ -18174,12 +18175,12 @@ function generarReserva(cat) {
                        {n:"Huracán <b>(X)</b>",       cl:"huracan",      pj:14, pg:1, pe:3, pp:10, gf:17, gc:34, pts:6},],
         'promocional':[
                        {n:"Olimpo <b>(A)</b> <b>(C)</b>",              cl:"olimpo",           pj:14, pg:9, pe:3, pp:2, gf:31, gc:13, pts:30},
+                       {n:"Tiro Federal <b>(C)</b>",        cl:"tirofederal",      pj:14, pg:8, pe:3, pp:3, gf:41, gc:12, pts:27},
                        {n:"Sansinena <b>(C)</b>",           cl:"sansinena",        pj:14, pg:8, pe:3, pp:3, gf:31, gc:15, pts:27},
                        {n:"Pacífico BB <b>(C)</b>",         cl:"pacificobb",       pj:14, pg:8, pe:1, pp:5, gf:29, gc:19, pts:25},
-                       {n:"Tiro Federal <b>(C)</b>",        cl:"tirofederal",      pj:13, pg:7, pe:3, pp:3, gf:39, gc:11, pts:24},
                        {n:"Rosario PB <b>(X)</b>",          cl:"rosariopb",        pj:14, pg:7, pe:2, pp:5, gf:23, gc:23, pts:23},
                        {n:"Dublin <b>(X)</b>",              cl:"dublin",           pj:14, pg:3, pe:3, pp:8, gf:13, gc:37, pts:12},
-                       {n:"Comercial <b>(X)</b>",           cl:"comercial",        pj:13, pg:3, pe:2, pp:8, gf:18, gc:26, pts:11},
+                       {n:"Comercial <b>(X)</b>",           cl:"comercial",        pj:14, pg:3, pe:2, pp:9, gf:19, gc:28, pts:11},
                        {n:"Pacífico (C) <b>(X)</b>", cl:"pacificocabildo",  pj:14, pg:1, pe:1, pp:12, gf:16, gc:56, pts:4},],
         'segundafemenino': [
             {n:"Liniers <b>(C)</b>",             cl:"liniers",         pj:18, pg:16, pe:2, pp:0, gf:66, gc:14, pts:50},
@@ -18226,7 +18227,7 @@ function generarReserva(cat) {
         if (cat === 'oficial') {
             html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'><b>(A)</b> Ganador del Apertura<br><b>(C)</b> Clasificado al playoffs<br><b>(X)</b> Eliminado<br>📌 Puntos en juego: <b>3</b> tras la fecha 13</div>`;
         } else if (cat === 'promocional') {
-            html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'><b>(A)</b> Ganador del Apertura<br><b>(X)</b> Eliminado<br>📌 Puntos en juego: <b>6</b> tras la fecha 12</div>`;
+            html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'><b>(A)</b> Ganador del Apertura<br><b>(X)</b> Eliminado<br>📌 Puntos en juego: <b>0</b></div>`;
         } else if (cat === 'femenino') {
             html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'><b>(C) Clasificado</b><br><b>(A)</b> Campeón del Apertura<br><b>(X)</b> Eliminado<br><b>(-)</b> No presenta reserva<br>📌 Puntos en juego: <b>6</b> tras la fecha 12</div>`;
         } else if (cat === 'segundafemenino') {
@@ -19135,11 +19136,11 @@ const BD_SENIOR_APERTURA = [
 const BD_SENIOR_CLAUSURA = [
     { n: "Libertad",      cl: "libertad",     pj:7, pg:6, pe:0, pp:1, gf:20, gc:8, pts:18 },
     { n: "Pacífico (C)",  mostrar: "Pacífico (C) <b>(A)</b>", cl: "pacificoc",    pj:7, pg:5, pe:0, pp:2, gf:13, gc:12, pts:15 },
-    { n: "Pacífico BB",   cl: "pacificobb",   pj:7, pg:4, pe:0, pp:3, gf:18, gc:17, pts:12 },
+    { n: "Huracán",       cl: "huracan",      pj:8, pg:4, pe:1, pp:3, gf:22, gc:14, pts:13 },
+    { n: "Pacífico BB",   cl: "pacificobb",   pj:8, pg:4, pe:0, pp:4, gf:18, gc:20, pts:12 },
     { n: "Comercial",     cl: "comercial",    pj:7, pg:4, pe:0, pp:3, gf:17, gc:9, pts:12 },
     { n: "Bella Vista",   cl: "bellavista",   pj:7, pg:4, pe:0, pp:3, gf:14, gc:12, pts:12 },
     { n: "Sansinena",     cl: "sansinena",    pj:7, pg:3, pe:1, pp:3, gf:15, gc:14, pts:10 },
-    { n: "Huracán",       cl: "huracan",      pj:7, pg:3, pe:1, pp:3, gf:19, gc:14, pts:10 },
     { n: "San Francisco",  mostrar: "San Francisco <b>(1/8)</b>", cl: "sanfrancisco", pj:7, pg:2, pe:0, pp:5, gf:10, gc:25, pts:6 },
     { n: "Tiro Federal",  mostrar: "Tiro Federal <b>(1/8)</b>", cl: "tirofederal",  pj:7, pg:1, pe:2, pp:4, gf:14, gc:18, pts:5 },
     { n: "Sporting",  mostrar: "Sporting <b>(1/8)</b>", cl: "sporting",     pj:7, pg:1, pe:0, pp:6, gf:10, gc:22, pts:3 },
@@ -19261,7 +19262,7 @@ const BD_FIXTURES_SENIOR_CLAUSURA = [
         { l: "Sporting",      v: "Comercial",  gl: 0, gv: 7, goles_l:[], goles_v:["Sebastián Aristi (3)","Jonathan Bravo de Laguna","Maximiliano Casas","Emiliano Esmoli","Emanuel Ihitz"] }
     ]},
     { fecha: 8, partidos: [
-        { l: "Pacífico BB",   v: "Huracán",      gl: null, gv: null },
+        { l: "Huracán",   v: "Pacífico BB",      gl: 3, gv: 0, goles_l:["César Panduro (2)","Cristian Lucero"], goles_v:[] },
         { l: "Bella Vista",  v: "San Francisco",        gl: null, gv: null },
         { l: "Sansinena",      v: "Libertad",    gl: null, gv: null },
         { l: "Comercial",  v: "Pacífico (C)",      gl: null, gv: null },
@@ -19448,7 +19449,7 @@ const BD_GOLES_CONTRA_SENIOR = [
 ];
 
 function generarSeniorClausura() {
-    const n = estado.fechaSeniorClausura || 7;
+    const n = estado.fechaSeniorClausura || 8;
     const f = BD_FIXTURES_SENIOR_CLAUSURA.find(x => x.fecha === n) || { partidos: [] };
     const equipos = BD_SENIOR_CLAUSURA.map(e => ({ nombre: e.n, clase: e.cl }));
 
@@ -19886,13 +19887,14 @@ const BD_GOLEADORES_SENIOR_CLAUSURA = [
     { nombre: "Juan José Dietz", equipo: "Tiro Federal", goles: 8 },
     { nombre: "Sebastián Aristi", equipo: "Comercial", goles: 7 },
     { nombre: "Víctor Torrero", equipo: "Bella Vista", goles: 6 },
-    { nombre: "César Panduro", equipo: "Huracán", goles: 4 },
+    { nombre: "César Panduro", equipo: "Huracán", goles: 6 },
     { nombre: "Juan Pablo Hipperdinger", equipo: "Huracán", goles: 4 },
     { nombre: "Emiliano Jofré", equipo: "Sansinena", goles: 4 },
     { nombre: "Maximiliano Delaudo", equipo: "Pacífico BB", goles: 4 },
     { nombre: "Guillermo Pascual", equipo: "Pacífico BB", goles: 4 },
     { nombre: "Leandro Piérez", equipo: "Comercial", goles: 3 },
     { nombre: "Juan Manuel Diez", equipo: "Huracán", goles: 3 },
+    { nombre: "Cristian Lucero", equipo: "Huracán", goles: 3 },
     { nombre: "Leandro Duelle", equipo: "Pacífico (C)", goles: 3 },
     { nombre: "Paolo Quiroga", equipo: "Sporting", goles: 3 },
     { nombre: "Pablo Moggia", equipo: "Sansinena", goles: 3 },
@@ -19903,7 +19905,6 @@ const BD_GOLEADORES_SENIOR_CLAUSURA = [
     { nombre: "Matías Vázquez", equipo: "Libertad", goles: 2 },
     { nombre: "Mariano Moreno", equipo: "Libertad", goles: 2 },
     { nombre: "Darío Dieser", equipo: "Libertad", goles: 2 },
-    { nombre: "Cristian Lucero", equipo: "Huracán", goles: 2 },
     { nombre: "Sebastián Bacuco", equipo: "San Francisco", goles: 2 },
     { nombre: "Patricio Muñoz", equipo: "San Francisco", goles: 2 },
     { nombre: "Gustavo Fernández", equipo: "Pacífico BB", goles: 2 },
@@ -23325,7 +23326,7 @@ if (tor === 'clausura' && cat === 'femenino') {
     return html + "</tbody></table><div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'>📌 Puntos en juego: <b>0</b> tras la fecha 14<br><b>(A)</b> Ganador del Apertura<br><b>(C)</b> Clasificado a Playoffs<br><b>(X)</b> Eliminado</div>" + htmlAcum;
 }
 if (tor === 'clausura' && cat === 'promocional') {
-    return html + "</tbody></table><div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'><b>(A)</b> Ganador del Apertura<br><b>(C)</b> Clasificado a Playoffs<br><b>(X)</b> Eliminado<br>📌 Puntos en juego: <b>6</b> tras la fecha 12</div>";
+    return html + "</tbody></table><div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'><b>(A)</b> Ganador del Apertura<br><b>(C)</b> Clasificado a Playoffs<br><b>(X)</b> Eliminado<br>📌 Puntos en juego: <b>Torneo finalizado</b></div>";
 }
 if (tor === 'apertura' && cat === 'promocional') {
     return html + "</tbody></table><div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'><b>(X)</b> Eliminado<br>📌 Puntos en juego: <b>Torneo finalizado</b></b></div>";
