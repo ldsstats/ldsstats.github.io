@@ -25918,10 +25918,10 @@ function generarFutsalSelecciones() {
             { nombre: "Salta",        key: "",      pj: 1, pg: 0, pe: 0, pp: 1, gf: 2, gc: 3, pts: 0 },
         ]},
         A: { label: "GRUPO A", verdes: 2, equipos: [
-            { nombre: "Río Gallegos", key: "", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
-            { nombre: "Ushuaia",      key: "", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
-            { nombre: "Rosario",      key: "", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
-            { nombre: "San Nicolás",  key: "", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 }
+            { nombre: "Río Gallegos", key: "", pj: 1, pg: 1, pe: 0, pp: 0, gf: 8, gc: 1, pts: 3 },
+            { nombre: "Rosario",      key: "", pj: 1, pg: 1, pe: 0, pp: 0, gf: 5, gc: 2, pts: 3 },
+            { nombre: "Ushuaia",      key: "", pj: 1, pg: 0, pe: 0, pp: 1, gf: 2, gc: 5, pts: 0 },
+            { nombre: "San Nicolás",  key: "", pj: 1, pg: 0, pe: 0, pp: 1, gf: 1, gc: 8, pts: 0 }
         ]},
         C: { label: "GRUPO C", verdes: 1, equipos: [
             { nombre: "Bariloche",   key: "", pj: 1, pg: 1, pe: 0, pp: 0, gf: 8, gc: 2, pts: 3 },
