@@ -1992,7 +1992,7 @@ function generarHome() {
        ]},
      { id: "2026-11-05", label: "JUE 05/11", torneos: [
             { nombre: "NACIONAL DE SELECCIONES | GRUPO B | FECHA 2", cat: "futsalselecciones", torLink: "futsalselecciones", noAutoResult: true, partidos: [
-            {l:"<b>Liga del Sur</b>", v:"Río Grande", hora:"13:00", gl:null, gv:null, claseL:"ldsbb", claseV:"riogrande"},
+            {l:"<b>Liga del Sur</b>", v:"Río Grande", hora:"13:00", gl:1, gv:9, claseL:"ldsbb", claseV:"riogrande"},
             ]},
        ]},
      { id: "2026-11-06", label: "VIE 06/11", torneos: [
@@ -25918,14 +25918,14 @@ function generarFutsalSelecciones() {
 
     const fixture = [
         { fecha: "FECHA 1",    dia: "Mié 4/11 · 16hs", l: "Liga del Sur", v: "Salta",       lk: "ldsbb", vk: "", gl: 3, gv: 2, goles_l:["Valentín García (2)","Marcos Durán"], goles_v:[] },
-        { fecha: "FECHA 2",    dia: "Jue 5/11 · 13hs", l: "Liga del Sur", v: "Río Grande",  lk: "ldsbb", vk: "", gl: null, gv: null },
+        { fecha: "FECHA 2",    dia: "Jue 5/11 · 13hs", l: "Liga del Sur", v: "Río Grande",  lk: "ldsbb", vk: "", gl: 1, gv: 9 },
         { fecha: "INTERZONAL", dia: "Vie 6/11 · 13hs", l: "Liga del Sur", v: "El Calafate", lk: "ldsbb", vk: "", gl: null, gv: null }
     ];
 
     const grupos = {
         B: { label: "GRUPO B", verdes: 1, equipos: [
-            { nombre: "Río Grande",   key: "",      pj: 1, pg: 1, pe: 0, pp: 0, gf: 4, gc: 1, pts: 3 },
-            { nombre: "Liga del Sur", key: "ldsbb", pj: 1, pg: 1, pe: 0, pp: 0, gf: 3, gc: 2, pts: 3 },
+            { nombre: "Río Grande",   key: "",      pj: 2, pg: 2, pe: 0, pp: 0, gf: 13, gc: 2, pts: 6 },
+            { nombre: "Liga del Sur", key: "ldsbb", pj: 2, pg: 1, pe: 0, pp: 1, gf: 4, gc: 11, pts: 3 },
             { nombre: "Salta",        key: "",      pj: 1, pg: 0, pe: 0, pp: 1, gf: 2, gc: 3, pts: 0 },
         ]},
         A: { label: "GRUPO A", verdes: 2, equipos: [
@@ -25936,8 +25936,8 @@ function generarFutsalSelecciones() {
         ]},
         C: { label: "GRUPO C", verdes: 1, equipos: [
             { nombre: "Bariloche",   key: "", pj: 1, pg: 1, pe: 0, pp: 0, gf: 8, gc: 2, pts: 3 },
-            { nombre: "El Calafate", key: "", pj: 1, pg: 0, pe: 0, pp: 1, gf: 2, gc: 8, pts: 0 },
-            { nombre: "Río Turbio",  key: "", pj: 1, pg: 0, pe: 0, pp: 1, gf: 1, gc: 4, pts: 0 }
+            { nombre: "El Calafate", key: "", pj: 2, pg: 1, pe: 0, pp: 1, gf: 5, gc: 9, pts: 3 },
+            { nombre: "Río Turbio",  key: "", pj: 2, pg: 0, pe: 0, pp: 2, gf: 2, gc: 7, pts: 0 }
         ]}
     };
 
