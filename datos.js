@@ -1325,9 +1325,9 @@ BD_FIXTURES.oficial.reserva.push(
     ]},
     { fecha: 12, partidos: [
         {l:"Sporting",   v:"Libertad",   gl:3, gv:0},
-        {l:"La Armonía",   v:"San Francisco",   gl:null, gv:null},
+        {l:"La Armonía",   v:"San Francisco",   gl:1, gv:1},
         {l:"Liniers",   v:"Huracán",   gl:2, gv:0},
-        {l:"Villa Mitre",   v:"Bella Vista",   gl:null, gv:null}
+        {l:"Villa Mitre",   v:"Bella Vista",   gl:1, gv:0}
     ]},
     { fecha: 13, partidos: [
         {l:"Villa Mitre",   v:"Libertad",   gl:3, gv:1},
@@ -2015,6 +2015,10 @@ function generarHome() {
             { nombre: "FEDERAL A | REVÁLIDA - CUARTA RONDA | IDA (OLIMPO)", cat: "federala", torLink: "federala", noAutoResult: true, partidos: [
             {l:"Juventud Antoniana", v:"Cipolletti", hora:"17:00", gl:null, gv:null, claseL:"jantoniana", claseV:"cipolletti"},
             {l:"Sarmiento de La Banda", v:"Alvarado", hora:"18:00", gl:null, gv:null, claseL:"sarmientolb", claseV:"alvarado"},
+            ]},
+            { nombre: "COPA PAÍS | SEMIFINALES | PARTIDO ÚNICO", cat: "copapais", torLink: "copapais", noAutoResult: true, partidos: [
+            {l:"<b>Liga del Sur</b>", v:"San Jorge", hora:"16:00", gl:null, gv:null, claseL:"ldsbb", claseV:"sanjorge",nota:"Se jugará en San Nicolás"},
+            {l:"Catamarca", v:"Albardón", hora:"18:30", gl:null, gv:null, claseL:"catamarcapais", claseV:"albardon",nota:"Se jugará en La Rioja"},
             ]},
        ]},
      { id: "2026-11-12", label: "JUE 12/11", torneos: [
@@ -17364,6 +17368,7 @@ const BD_H2H = {
         { fecha: "Fecha 13 - Clausura 2026 - 17 oct", torneo: "femenino", l: "Villa Mitre", v: "Bella Vista", gl: 4, gv: 0, goles_l: ["Morena Bouven (2)","Dana Ramos","Sol Menéndez Perrone"], goles_v: [] },
         { fecha: "Fecha 13 - Clausura 2026", torneo: "reserva_femenino", l: "Villa Mitre", v: "Bella Vista", gl: 3, gv: 1 },
         { fecha: "Fecha 12 - Clausura 2026 - 19 oct", torneo: "oficial", l: "Villa Mitre", v: "Bella Vista", gl: 1, gv: 3, goles_l: ["Julián Monteverde"], goles_v: ["Rodrigo Gómez (2)","Matías Mayer"] },
+        { fecha: "Fecha 12 - Clausura 2026", torneo: "reserva_oficial", l: "Villa Mitre", v: "Bella Vista", gl: 1, gv: 0 },
     ],
     "La Armonía|San Francisco": [
         { fecha: "Fecha 5 - Apertura 2026 - 12 abr 2026", torneo: "oficial", l: "San Francisco", v: "La Armonía", gl: 1, gv: 2, goles_l: ["Federico Pinedo"], goles_v: ["Enrique Narvay","Ezequiel Intrevado"] },
@@ -17375,6 +17380,7 @@ const BD_H2H = {
         { fecha: "Fecha 5 - Clausura 2026 - 29 ago 2026", torneo: "oficial", l: "San Francisco", v: "La Armonía", gl: 1, gv: 0, goles_l: ["Marcelo Castellano"], goles_v: [] },
         { fecha: "Fecha 5 - Clausura 2026", torneo: "reserva_oficial", l: "San Francisco", v: "La Armonía", gl: 2, gv: 4 },
         { fecha: "Fecha 12 - Clausura 2026 - 17 oct", torneo: "oficial", l: "La Armonía", v: "San Francisco", gl: 1, gv: 2, goles_l: ["Jerónimo Blanco"], goles_v: ["Federico Pinedo (2)"] },
+        { fecha: "Fecha 12 - Clausura 2026", torneo: "reserva_oficial", l: "La Armonía", v: "San Francisco", gl: 1, gv: 1 },
     ],
     "Dublin|Pacífico BB": [
         { fecha: "Fecha 5 - Apertura 2026 - 11 abr 2026", torneo: "promocional", l: "Dublin", v: "Pacífico BB", gl: 1, gv: 0, goles_l: ["Jonathan Arias"], goles_v: [] },
@@ -18138,6 +18144,10 @@ function generarReserva(cat) {
     let html = navDest
         ? `<div onclick="navegar('${navDest}')" style="background:linear-gradient(135deg,#7b1a1a,#a93226);color:#fff;text-align:center;padding:9px 12px;font-size:12px;font-weight:bold;letter-spacing:0.5px;cursor:pointer;border-bottom:2px solid #f0a500;">🏆 ${textoVisera} ▶</div>`
         : '';
+    const navDestClausura = cat === 'oficial' ? 'reservaoficialplayoffsclausura' : cat === 'promocional' ? 'reservapromocionalplayoffsclausura' : null;
+    if (navDestClausura) {
+        html += `<div onclick="navegar('${navDestClausura}')" style="background:linear-gradient(135deg,#7b1a1a,#a93226);color:#fff;text-align:center;padding:9px 12px;font-size:12px;font-weight:bold;letter-spacing:0.5px;cursor:pointer;border-bottom:2px solid #f0a500;">🏆 Ver cuadro de Playoffs del Clausura ▶</div>`;
+    }
 
     // Fixture — igual que generarFixture pero leyendo de reserva
     let f = fixtures.find(x => x.fecha === n) || { partidos: [], libre: null };
@@ -18186,12 +18196,12 @@ function generarReserva(cat) {
     // Tabla de posiciones — solo puntos, calculados desde fixtures
     const BD_RESERVA_POS = {
         'oficial':    [
-                       {n:"Villa Mitre <b>(C)</b>",   cl:"villamitre",   pj:13, pg:9, pe:3, pp:1, gf:33, gc:17, pts:30},
-                       {n:"Bella Vista <b>(C)</b>",   cl:"bellavista",   pj:13, pg:9, pe:2, pp:2, gf:25, gc:16, pts:29},
+                       {n:"Villa Mitre <b>(C)</b>",   cl:"villamitre",   pj:14, pg:10, pe:3, pp:1, gf:34, gc:17, pts:33},
+                       {n:"Bella Vista <b>(C)</b>",   cl:"bellavista",   pj:14, pg:9, pe:2, pp:3, gf:25, gc:17, pts:29},
+                       {n:"La Armonía <b>(C)</b>",    cl:"laarmonia",    pj:14, pg:6, pe:5, pp:3, gf:26, gc:21, pts:23},
                        {n:"Liniers <b>(C)</b>",       cl:"liniers",      pj:14, pg:7, pe:2, pp:5, gf:22, gc:11, pts:23},
-                       {n:"La Armonía <b>(C)</b>",    cl:"laarmonia",    pj:13, pg:6, pe:4, pp:3, gf:25, gc:20, pts:22},
                        {n:"Sporting <b>(A)</b>  <b>(X)</b>",      cl:"sporting",     pj:14, pg:6, pe:2, pp:6, gf:20, gc:29, pts:20},
-                       {n:"San Francisco <b>(X)</b>", cl:"sanfrancisco", pj:13, pg:4, pe:2, pp:7, gf:21, gc:25, pts:14},
+                       {n:"San Francisco <b>(X)</b>", cl:"sanfrancisco", pj:14, pg:4, pe:3, pp:7, gf:22, gc:26, pts:15},
                        {n:"Libertad <b>(X)</b>",      cl:"libertad",     pj:14, pg:2, pe:2, pp:10, gf:17, gc:27, pts:8},
                        {n:"Huracán <b>(X)</b>",       cl:"huracan",      pj:14, pg:1, pe:3, pp:10, gf:17, gc:34, pts:6},],
         'promocional':[
@@ -18246,7 +18256,7 @@ function generarReserva(cat) {
         });
         html += `</tbody></table>`;
         if (cat === 'oficial') {
-            html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'><b>(A)</b> Ganador del Apertura<br><b>(C)</b> Clasificado al playoffs<br><b>(X)</b> Eliminado<br>📌 Puntos en juego: <b>3</b> tras la fecha 13</div>`;
+            html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'><b>(A)</b> Ganador del Apertura<br><b>(C)</b> Clasificado al playoffs<br><b>(X)</b> Eliminado<br>📌 Puntos en juego: <b>0</b></div>`;
         } else if (cat === 'promocional') {
             html += `<div style='background:#f9f9f9; padding:4px 8px; font-size:10px; text-align:center; color:#555;'><b>(A)</b> Ganador del Apertura<br><b>(X)</b> Eliminado<br>📌 Puntos en juego: <b>0</b></div>`;
         } else if (cat === 'femenino') {
@@ -18651,6 +18661,7 @@ function generarFutsal(modo) {
 
     const navDest = modo === 'reserva' ? 'futsalreservaplayoffs' : 'futsalplayoffs';
     let html = `<div onclick="navegar('${navDest}')" style="background:linear-gradient(135deg,#7b1a1a,#a93226);color:#fff;text-align:center;padding:9px 12px;font-size:12px;font-weight:bold;letter-spacing:0.5px;cursor:pointer;border-bottom:2px solid #f0a500;">🏆 Ver cuadro de Playoffs del Apertura ▶</div>`;
+    html += `<div onclick="navegar('${modo === 'reserva' ? 'futsalreservaplayoffsclausura' : 'futsalplayoffsclausura'}')" style="background:linear-gradient(135deg,#7b1a1a,#a93226);color:#fff;text-align:center;padding:9px 12px;font-size:12px;font-weight:bold;letter-spacing:0.5px;cursor:pointer;border-bottom:2px solid #f0a500;">🏆 Ver cuadro de Playoffs del Clausura ▶</div>`;
     html += `<div class="nav-fechas">`;
     for (let i = 1; i <= 13; i++) {
         html += `<div class="btn-f ${i === n ? 'activa' : ''}" onclick="estado.fecha=${i};document.getElementById('contenido').innerHTML=generarFutsal('${modo}')">${i}</div>`;
@@ -19724,8 +19735,8 @@ const BD_COPA_PAIS_SEMIFINALES = [
         titulo: "SEMIFINALES",
         tipo: "final",
         partidos: [
-            { ronda: "", l: "Albardón", v: "A confirmar", fecha: "", gl: null, gv: null, goles_l: [], goles_v: [] },
-            { ronda: "", l: "A confirmar", v: "A confirmar", fecha: "", gl: null, gv: null, goles_l: [], goles_v: [], separador: true  },
+            { ronda: "", l: "Liga del Sur", v: "San Jorge", fecha: "", gl: null, gv: null, goles_l: [], goles_v: [] },
+            { ronda: "", l: "Catamarca", v: "Albardón", fecha: "", gl: null, gv: null, goles_l: [], goles_v: [], separador: true  },
         ]
     },
 ];
@@ -25977,4 +25988,63 @@ function generarFutsalSelecciones() {
         + fixtureHtml
         + tablaGrupo(grupos.A)
         + tablaGrupo(grupos.C);
+}
+
+
+/* ═══ PLAYOFFS CLAUSURA: RESERVAS Y FUTSAL ═══ */
+
+const BD_RESERVA_OFICIAL_CLAUSURA_PLAYOFFS = {
+    semifinales: [
+        { local: "Villa Mitre", clL: "villamitre", visitante: "Liniers", clV: "liniers", gl: null, gv: null, goles_l: [], goles_v: [] },
+        { local: "Bella Vista", clL: "bellavista", visitante: "La Armonía", clV: "laarmonia", gl: null, gv: null, goles_l: [], goles_v: [] }
+    ]
+};
+
+const BD_RESERVA_PROMOCIONAL_CLAUSURA_PLAYOFFS = {
+    semifinales: [
+        { local: "Olimpo", clL: "olimpo", visitante: "Pacífico BB", clV: "pacificobb", gl: null, gv: null, goles_l: [], goles_v: [] },
+        { local: "Tiro Federal", clL: "tirofederal", visitante: "Sansinena", clV: "sansinena", gl: null, gv: null, goles_l: [], goles_v: [] }
+    ]
+};
+
+const BD_FUTSAL_CLAUSURA_PLAYOFFS = {
+    cuartos: [
+        { local: "La Estación", clL: "laestacion", visitante: "Tiro Federal", clV: "tirofederal", gl: null, gv: null, goles_l: [], goles_v: [] },
+        { local: "Los 3 Chiflados", clL: "los3chiflados", visitante: "Liniers", clV: "liniers", gl: null, gv: null, goles_l: [], goles_v: [] },
+        { local: "La Esperanza", clL: "laesperanza", visitante: "Villa Mitre", clV: "villamitre", gl: null, gv: null, goles_l: [], goles_v: [] },
+        { local: "Comercial", clL: "comercial", visitante: "Pacífico BB", clV: "pacificobb", gl: null, gv: null, goles_l: [], goles_v: [] }
+    ]
+};
+
+const BD_FUTSAL_RESERVA_CLAUSURA_PLAYOFFS = {
+    cuartos: [
+        { local: "Los 3 Chiflados", clL: "los3chiflados", visitante: "A confirmar", clV: "aconfirmar", gl: null, gv: null, goles_l: [], goles_v: [] },
+        { local: "Liniers", clL: "liniers", visitante: "Dublin", clV: "dublin", gl: null, gv: null, goles_l: [], goles_v: [] },
+        { local: "La Esperanza", clL: "laesperanza", visitante: "Petroquímicos", clV: "petroquimicos", gl: null, gv: null, goles_l: [], goles_v: [] },
+        { local: "La Estación", clL: "laestacion", visitante: "Villa Mitre", clV: "villamitre", gl: null, gv: null, goles_l: [], goles_v: [] }
+    ]
+};
+
+function _armarPOClausura(titulo, etapa, partidos) {
+    let html = `<div class="header-t">${titulo}</div>`;
+    html += `<div class="header-t" style="font-size:11px;background:#2c6e49;">${etapa}</div><table>`;
+    partidos.forEach(p => { html += _renderPartidoPlayoff(p); });
+    html += `</table>`;
+    return html;
+}
+
+function generarReservaOficialPlayoffsClausura() {
+    return _armarPOClausura('RESERVA OFICIAL — PLAYOFFS CLAUSURA 2026', 'SEMIFINALES', BD_RESERVA_OFICIAL_CLAUSURA_PLAYOFFS.semifinales);
+}
+
+function generarReservaPromocionalPlayoffsClausura() {
+    return _armarPOClausura('RESERVA PROMOCIONAL — PLAYOFFS CLAUSURA 2026', 'SEMIFINALES', BD_RESERVA_PROMOCIONAL_CLAUSURA_PLAYOFFS.semifinales);
+}
+
+function generarFutsalPlayoffsClausura() {
+    return _armarPOClausura('FUTSAL — PLAYOFFS CLAUSURA 2026', 'CUARTOS DE FINAL', BD_FUTSAL_CLAUSURA_PLAYOFFS.cuartos);
+}
+
+function generarFutsalReservaPlayoffsClausura() {
+    return _armarPOClausura('FUTSAL RESERVA — PLAYOFFS CLAUSURA 2026', 'CUARTOS DE FINAL', BD_FUTSAL_RESERVA_CLAUSURA_PLAYOFFS.cuartos);
 }
