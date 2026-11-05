@@ -1999,10 +1999,27 @@ function generarHome() {
             { nombre: "NACIONAL DE SELECCIONES | GRUPO B | FECHA 3 (Interzonal)", cat: "futsalselecciones", torLink: "futsalselecciones", noAutoResult: true, partidos: [
             {l:"<b>Liga del Sur</b>", v:"El Calafate", hora:"13:00", gl:null, gv:null, claseL:"ldsbb", claseV:"elcalafate"},
             ]},
+            { nombre: "REGIONAL AMATEUR | CUARTA RONDA | BONAERENSE PAMPEANA SUR | IDA (HURACÁN)", cat: "regamateurtemporada", torLink: "regamateurtemporada", noAutoResult: true, partidos: [
+            {l:"Racing de Olavarría", v:"Deportivo Norte", hora:"21:00", gl:null, gv:null, claseL:"racingolavarria", claseV:"depnorte"},
+            ]},
+       ]},
+     { id: "2026-11-07", label: "SÁB 07/11", torneos: [
+            { nombre: "FEDERAL A | REVÁLIDA - CUARTA RONDA | IDA (OLIMPO)", cat: "federala", torLink: "federala", noAutoResult: true, partidos: [
+            {l:"Douglas Haig", v:"Gimnasia de Chivilcoy", hora:"16:00", gl:null, gv:null, claseL:"douglashaig", claseV:"gimnasiachivilcoy"},
+            ]},
+       ]},
+     { id: "2026-11-08", label: "DOM 08/11", torneos: [
+            { nombre: "REGIONAL AMATEUR | CUARTA RONDA | BONAERENSE PAMPEANA SUR | IDA", cat: "regamateurtemporada", torLink: "regamateurtemporada", noAutoResult: true, partidos: [
+            {l:"Ferro de Pico", v:"<b>Huracán</b>", hora:"20:00", gl:null, gv:null, claseL:"ferropico", claseV:"huracan"},
+            ]},
+            { nombre: "FEDERAL A | REVÁLIDA - CUARTA RONDA | IDA (OLIMPO)", cat: "federala", torLink: "federala", noAutoResult: true, partidos: [
+            {l:"Juventud Antoniana", v:"Cipolletti", hora:"17:00", gl:null, gv:null, claseL:"jantoniana", claseV:"cipolletti"},
+            {l:"Sarmiento de La Banda", v:"Alvarado", hora:"18:00", gl:null, gv:null, claseL:"sarmientolb", claseV:"alvarado"},
+            ]},
        ]},
      { id: "2026-11-12", label: "JUE 12/11", torneos: [
             { nombre: "FEDERAL A | REVÁLIDA - CUARTA RONDA | IDA", cat: "federala", torLink: "federala", noAutoResult: true, partidos: [
-            {l:"Kimberley", v:"Olimpo", hora:"15:30", gl:null, gv:null, claseL:"kimberley", claseV:"olimpo"},
+            {l:"Kimberley", v:"<b>Olimpo</b>", hora:"15:30", gl:null, gv:null, claseL:"kimberley", claseV:"olimpo"},
             ]},
        ]},
     ];
