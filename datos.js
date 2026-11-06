@@ -1948,7 +1948,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 27).partidos.forEach(p
 });
 
 
-let diaSeleccionadoHome = "2026-11-05"; 
+let diaSeleccionadoHome = "2026-11-06"; 
 let mercadoPasesAbierto = false;
 
 function toggleMercadoPasesHome() {
@@ -1997,7 +1997,7 @@ function generarHome() {
        ]},
      { id: "2026-11-06", label: "VIE 06/11", torneos: [
             { nombre: "NACIONAL DE SELECCIONES | GRUPO B | FECHA 3 (Interzonal)", cat: "futsalselecciones", torLink: "futsalselecciones", noAutoResult: true, partidos: [
-            {l:"<b>Liga del Sur</b>", v:"El Calafate", hora:"13:00", gl:null, gv:null, claseL:"ldsbb", claseV:"elcalafate"},
+            {l:"<b>Liga del Sur</b>", v:"El Calafate", hora:"13:00", gl:2, gv:6, claseL:"ldsbb", claseV:"elcalafate"},
             ]},
             { nombre: "REGIONAL AMATEUR | CUARTA RONDA | BONAERENSE PAMPEANA SUR | IDA (HURACÁN)", cat: "regamateurtemporada", torLink: "regamateurtemporada", noAutoResult: true, partidos: [
             {l:"Racing de Olavarría", v:"Deportivo Norte", hora:"21:00", gl:null, gv:null, claseL:"racingolavarria", claseV:"depnorte"},
@@ -25925,19 +25925,19 @@ function generarFutsalSelecciones() {
     const grupos = {
         B: { label: "GRUPO B", verdes: 1, equipos: [
             { nombre: "Río Grande",   key: "",      pj: 2, pg: 2, pe: 0, pp: 0, gf: 13, gc: 2, pts: 6 },
-            { nombre: "Liga del Sur", key: "ldsbb", pj: 2, pg: 1, pe: 0, pp: 1, gf: 4, gc: 11, pts: 3 },
-            { nombre: "Salta",        key: "",      pj: 1, pg: 0, pe: 0, pp: 1, gf: 2, gc: 3, pts: 0 },
+            { nombre: "Liga del Sur", key: "ldsbb", pj: 3, pg: 1, pe: 0, pp: 2, gf: 6, gc: 17, pts: 3 },
+            { nombre: "Salta",        key: "",      pj: 2, pg: 0, pe: 0, pp: 2, gf: 4, gc: 9, pts: 0 },
         ]},
         A: { label: "GRUPO A", verdes: 2, equipos: [
-            { nombre: "Río Gallegos", key: "", pj: 1, pg: 1, pe: 0, pp: 0, gf: 8, gc: 1, pts: 3 },
-            { nombre: "Rosario",      key: "", pj: 1, pg: 1, pe: 0, pp: 0, gf: 5, gc: 2, pts: 3 },
-            { nombre: "Ushuaia",      key: "", pj: 1, pg: 0, pe: 0, pp: 1, gf: 2, gc: 5, pts: 0 },
-            { nombre: "San Nicolás",  key: "", pj: 1, pg: 0, pe: 0, pp: 1, gf: 1, gc: 8, pts: 0 }
+            { nombre: "Río Gallegos", key: "", pj: 2, pg: 2, pe: 0, pp: 0, gf: 10, gc: 1, pts: 6 },
+            { nombre: "Rosario",      key: "", pj: 2, pg: 2, pe: 0, pp: 0, gf: 8, gc: 4, pts: 6 },
+            { nombre: "Ushuaia",      key: "", pj: 2, pg: 0, pe: 0, pp: 2, gf: 2, gc: 7, pts: 0 },
+            { nombre: "San Nicolás",  key: "", pj: 2, pg: 0, pe: 0, pp: 2, gf: 3, gc: 11, pts: 0 }
         ]},
         C: { label: "GRUPO C", verdes: 1, equipos: [
-            { nombre: "Bariloche",   key: "", pj: 1, pg: 1, pe: 0, pp: 0, gf: 8, gc: 2, pts: 3 },
-            { nombre: "El Calafate", key: "", pj: 2, pg: 1, pe: 0, pp: 1, gf: 5, gc: 9, pts: 3 },
-            { nombre: "Río Turbio",  key: "", pj: 2, pg: 0, pe: 0, pp: 2, gf: 2, gc: 7, pts: 0 }
+            { nombre: "Bariloche",   key: "", pj: 3, pg: 3, pe: 0, pp: 0, gf: 17, gc: 5, pts: 9 },
+            { nombre: "El Calafate", key: "", pj: 3, pg: 2, pe: 0, pp: 1, gf: 11, gc: 11, pts: 6 },
+            { nombre: "Río Turbio",  key: "", pj: 3, pg: 0, pe: 0, pp: 3, gf: 3, gc: 10, pts: 0 }
         ]}
     };
 
