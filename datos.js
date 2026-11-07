@@ -2005,7 +2005,7 @@ function generarHome() {
        ]},
      { id: "2026-11-07", label: "SÁB 07/11", torneos: [
             { nombre: "FEDERAL A | REVÁLIDA - CUARTA RONDA | IDA (OLIMPO)", cat: "federala", torLink: "federala", noAutoResult: true, partidos: [
-            {l:"Douglas Haig", v:"Gimnasia de Chivilcoy", hora:"16:00", gl:null, gv:null, claseL:"douglashaig", claseV:"gimnasiachivilcoy"},
+            {l:"Douglas Haig", v:"Gimnasia de Chivilcoy", hora:"16:00", gl:1, gv:0, claseL:"douglashaig", claseV:"gimnasiachivilcoy"},
             ]},
        ]},
      { id: "2026-11-08", label: "DOM 08/11", torneos: [
@@ -2270,7 +2270,7 @@ const BD_FEDERAL_REVALIDA = {
             vuelta: { local: "Alvarado", clL: "alvarado", visitante: "Sarmiento de La Banda", clV: "sarmientolb", gl: null, gv: null, goles_l: [], goles_v: [] }
         },
         {
-            ida:    { local: "Douglas Haig", clL: "douglashaig", visitante: "Gimnasia de Chivilcoy", clV: "gimnasiachivilcoy", gl: null, gv: null, goles_l: [], goles_v: [] },
+            ida:    { local: "Douglas Haig", clL: "douglashaig", visitante: "Gimnasia de Chivilcoy", clV: "gimnasiachivilcoy", gl: 1, gv: 0, goles_l: [], goles_v: [] },
             vuelta: { local: "Gimnasia de Chivilcoy", clL: "gimnasiachivilcoy", visitante: "Douglas Haig", clV: "douglashaig", gl: null, gv: null, goles_l: [], goles_v: [] }
         }
     ],
