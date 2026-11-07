@@ -1948,7 +1948,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 27).partidos.forEach(p
 });
 
 
-let diaSeleccionadoHome = "2026-11-06"; 
+let diaSeleccionadoHome = "2026-11-07"; 
 let mercadoPasesAbierto = false;
 
 function toggleMercadoPasesHome() {
@@ -2000,7 +2000,7 @@ function generarHome() {
             {l:"<b>Liga del Sur</b>", v:"El Calafate", hora:"13:00", gl:2, gv:6, claseL:"ldsbb", claseV:"elcalafate"},
             ]},
             { nombre: "REGIONAL AMATEUR | CUARTA RONDA | BONAERENSE PAMPEANA SUR | IDA (HURACÁN)", cat: "regamateurtemporada", torLink: "regamateurtemporada", noAutoResult: true, partidos: [
-            {l:"Racing de Olavarría", v:"Deportivo Norte", hora:"21:00", gl:null, gv:null, claseL:"racingolavarria", claseV:"depnorte"},
+            {l:"Racing de Olavarría", v:"Deportivo Norte", hora:"21:00", gl:1, gv:1, claseL:"racingolavarria", claseV:"depnorte"},
             ]},
        ]},
      { id: "2026-11-07", label: "SÁB 07/11", torneos: [
@@ -23564,7 +23564,7 @@ const BD_REGAMATEUR_PLAYOFFS = {
     cuarta: [
         { ida:    { local: "Ferro de Pico", clL: "ferropico", visitante: "Huracán", clV: "huracan", gl: null, gv: null, goles_l: [], goles_v: [] },
           vuelta: { local: "Huracán", clL: "huracan", visitante: "Ferro de Pico", clV: "ferropico", gl: null, gv: null, goles_l: [], goles_v: [] } },
-        { ida:    { local: "Racing de Olavarría", clL: "racingolavarria", visitante: "Deportivo Norte", clV: "depnorte", gl: null, gv: null, goles_l: [], goles_v: [] },
+        { ida:    { local: "Racing de Olavarría", clL: "racingolavarria", visitante: "Deportivo Norte", clV: "depnorte", gl: 1, gv: 1, goles_l: [], goles_v: [] },
           vuelta: { local: "Deportivo Norte", clL: "depnorte", visitante: "Racing de Olavarría", clV: "racingolavarria", gl: null, gv: null, goles_l: [], goles_v: [] } }
     ],
     quinta: [
@@ -25924,9 +25924,9 @@ function generarFutsalSelecciones() {
 
     const grupos = {
         B: { label: "GRUPO B", verdes: 1, equipos: [
-            { nombre: "Río Grande",   key: "",      pj: 2, pg: 2, pe: 0, pp: 0, gf: 13, gc: 2, pts: 6 },
+            { nombre: "Río Grande",   key: "",      pj: 3, pg: 3, pe: 0, pp: 0, gf: 26, gc: 2, pts: 9 },
             { nombre: "Liga del Sur", key: "ldsbb", pj: 3, pg: 1, pe: 0, pp: 2, gf: 6, gc: 17, pts: 3 },
-            { nombre: "Salta",        key: "",      pj: 2, pg: 0, pe: 0, pp: 2, gf: 4, gc: 9, pts: 0 },
+            { nombre: "Salta",        key: "",      pj: 3, pg: 0, pe: 0, pp: 3, gf: 4, gc: 22, pts: 0 },
         ]},
         A: { label: "GRUPO A", verdes: 2, equipos: [
             { nombre: "Río Gallegos", key: "", pj: 2, pg: 2, pe: 0, pp: 0, gf: 10, gc: 1, pts: 6 },
