@@ -1948,7 +1948,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 27).partidos.forEach(p
 });
 
 
-let diaSeleccionadoHome = "2026-11-07"; 
+let diaSeleccionadoHome = "2026-11-08"; 
 let mercadoPasesAbierto = false;
 
 function toggleMercadoPasesHome() {
@@ -2013,12 +2013,12 @@ function generarHome() {
             {l:"Ferro de Pico", v:"<b>Huracán</b>", hora:"20:00", gl:null, gv:null, claseL:"ferropico", claseV:"huracan"},
             ]},
             { nombre: "FEDERAL A | REVÁLIDA - CUARTA RONDA | IDA (OLIMPO)", cat: "federala", torLink: "federala", noAutoResult: true, partidos: [
-            {l:"Juventud Antoniana", v:"Cipolletti", hora:"17:00", gl:null, gv:null, claseL:"jantoniana", claseV:"cipolletti"},
-            {l:"Sarmiento de La Banda", v:"Alvarado", hora:"18:00", gl:null, gv:null, claseL:"sarmientolb", claseV:"alvarado"},
+            {l:"Juventud Antoniana", v:"Cipolletti", hora:"17:00", gl:0, gv:1, claseL:"jantoniana", claseV:"cipolletti"},
+            {l:"Sarmiento de La Banda", v:"Alvarado", hora:"18:00", gl:1, gv:0, claseL:"sarmientolb", claseV:"alvarado"},
             ]},
             { nombre: "COPA PAÍS | SEMIFINALES | PARTIDO ÚNICO", cat: "copapais", torLink: "copapais", noAutoResult: true, partidos: [
-            {l:"<b>Liga del Sur</b>", v:"San Jorge", hora:"16:00", gl:null, gv:null, claseL:"ldsbb", claseV:"sanjorge",nota:"Se jugará en San Nicolás"},
-            {l:"Catamarca", v:"Albardón", hora:"18:30", gl:null, gv:null, claseL:"catamarcapais", claseV:"albardon",nota:"Se jugará en La Rioja"},
+            {l:"<b>Liga del Sur</b>", v:"San Jorge", hora:"16:00", gl:0, gv:0, pen_l:3, pen_v:4, claseL:"ldsbb", claseV:"sanjorge",nota:"Se jugará en San Nicolás"},
+            {l:"Catamarca", v:"Albardón", hora:"18:30", gl:1, gv:0, claseL:"catamarcapais", claseV:"albardon",nota:"Se jugará en La Rioja"},
             ]},
        ]},
      { id: "2026-11-12", label: "JUE 12/11", torneos: [
@@ -2262,11 +2262,11 @@ const BD_FEDERAL_REVALIDA = {
             vuelta: { local: "Olimpo", clL: "olimpo", visitante: "Kimberley", clV: "kimberley", gl: null, gv: null, goles_l: [], goles_v: [] }
         },
         {
-            ida:    { local: "Juventud Antoniana", clL: "jantoniana", visitante: "Cipolletti", clV: "cipolletti", gl: null, gv: null, goles_l: [], goles_v: [] },
+            ida:    { local: "Juventud Antoniana", clL: "jantoniana", visitante: "Cipolletti", clV: "cipolletti", gl: 1, gv: 0, goles_l: [], goles_v: [] },
             vuelta: { local: "Cipolletti", clL: "cipolletti", visitante: "Juventud Antoniana", clV: "jantoniana", gl: null, gv: null, goles_l: [], goles_v: [] }
         },
         {
-            ida:    { local: "Sarmiento de La Banda", clL: "sarmientolb", visitante: "Alvarado", clV: "alvarado", gl: null, gv: null, goles_l: [], goles_v: [] },
+            ida:    { local: "Sarmiento de La Banda", clL: "sarmientolb", visitante: "Alvarado", clV: "alvarado", gl: 1, gv: 0, goles_l: [], goles_v: [] },
             vuelta: { local: "Alvarado", clL: "alvarado", visitante: "Sarmiento de La Banda", clV: "sarmientolb", gl: null, gv: null, goles_l: [], goles_v: [] }
         },
         {
@@ -19735,8 +19735,8 @@ const BD_COPA_PAIS_SEMIFINALES = [
         titulo: "SEMIFINALES",
         tipo: "final",
         partidos: [
-            { ronda: "", l: "Liga del Sur", v: "San Jorge", fecha: "", gl: null, gv: null, goles_l: [], goles_v: [] },
-            { ronda: "", l: "Catamarca", v: "Albardón", fecha: "", gl: null, gv: null, goles_l: [], goles_v: [], separador: true  },
+            { ronda: "", l: "<s>Liga del Sur</s>", v: "<b>San Jorge</b>", fecha: "", gl: 0, gv: 0, pen_l:3, pen_v:4, goles_l: [], goles_v: [] },
+            { ronda: "", l: "<b>Catamarca</b>", v: "<s>Albardón</s>", fecha: "", gl: 1, gv: 0, goles_l: [], goles_v: [], separador: true  },
         ]
     },
 ];
