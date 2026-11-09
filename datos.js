@@ -2010,7 +2010,7 @@ function generarHome() {
        ]},
      { id: "2026-11-08", label: "DOM 08/11", torneos: [
             { nombre: "REGIONAL AMATEUR | CUARTA RONDA | BONAERENSE PAMPEANA SUR | IDA", cat: "regamateurtemporada", torLink: "regamateurtemporada", noAutoResult: true, partidos: [
-            {l:"Ferro de Pico", v:"<b>Huracán</b>", hora:"20:00", gl:null, gv:null, claseL:"ferropico", claseV:"huracan"},
+            {l:"Ferro de Pico", v:"<b>Huracán</b>", hora:"20:00", gl:3, gv:0, claseL:"ferropico", claseV:"huracan"},
             ]},
             { nombre: "FEDERAL A | REVÁLIDA - CUARTA RONDA | IDA (OLIMPO)", cat: "federala", torLink: "federala", noAutoResult: true, partidos: [
             {l:"Juventud Antoniana", v:"Cipolletti", hora:"17:00", gl:0, gv:1, claseL:"jantoniana", claseV:"cipolletti"},
@@ -18118,6 +18118,10 @@ const BD_H2H = {
     ],
     "Huracán|Santa Rita": [
         { fecha: "Regional Amateur 2026 - Bonaerense Pampeana Sur - Tercera Ronda - Ida", torneo: "regamateurtemp", l: "Huracán", v: "Santa Rita", gl: 3, gv: 0, goles_l: ["Iván Agudiak (2)","Agustín Seisdedos"], goles_v: [] },
+        { fecha: "Regional Amateur 2026 - Bonaerense Pampeana Sur - Tercera Ronda - Vuelta", torneo: "regamateurtemp", l: "Santa Rita", v: "Huracán", gl: 2, gv: 0, goles_l: [], goles_v: [] },
+    ],
+    "Huracán|Ferro de Pico": [
+        { fecha: "Regional Amateur 2026 - Bonaerense Pampeana Sur - Cuarta Ronda - Ida", torneo: "regamateurtemp", l: "Ferro de Pico", v: "Huracán", gl: 3, gv: 0, goles_l: [], goles_v: [] },
     ],
 };
 
@@ -23562,7 +23566,7 @@ const BD_REGAMATEUR_PLAYOFFS = {
           vuelta: { local: "<s>Estudiantes (Olavarría)</s>", clL: "estudiantesolavarria", visitante: "<b>Racing de Olavarría</b>", clV: "racingolavarria", gl: 0, gv: 1, goles_l: [], goles_v: [] } }
     ],
     cuarta: [
-        { ida:    { local: "Ferro de Pico", clL: "ferropico", visitante: "Huracán", clV: "huracan", gl: null, gv: null, goles_l: [], goles_v: [] },
+        { ida:    { local: "Ferro de Pico", clL: "ferropico", visitante: "Huracán", clV: "huracan", gl: 3, gv: 0, goles_l: [], goles_v: [] },
           vuelta: { local: "Huracán", clL: "huracan", visitante: "Ferro de Pico", clV: "ferropico", gl: null, gv: null, goles_l: [], goles_v: [] } },
         { ida:    { local: "Racing de Olavarría", clL: "racingolavarria", visitante: "Deportivo Norte", clV: "depnorte", gl: 1, gv: 1, goles_l: [], goles_v: [] },
           vuelta: { local: "Deportivo Norte", clL: "depnorte", visitante: "Racing de Olavarría", clV: "racingolavarria", gl: null, gv: null, goles_l: [], goles_v: [] } }
