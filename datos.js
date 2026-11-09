@@ -1948,7 +1948,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 27).partidos.forEach(p
 });
 
 
-let diaSeleccionadoHome = "2026-11-08"; 
+let diaSeleccionadoHome = "2026-11-09"; 
 let mercadoPasesAbierto = false;
 
 function toggleMercadoPasesHome() {
@@ -1976,38 +1976,6 @@ function generarHome() {
     const agenda = [
 
 
-     { id: "2026-11-03", label: "MAR 03/11", torneos: [
-            { nombre: "SENIOR | CLAUSURA | FECHA 8", cat: "seniorclausura", torLink: "seniorclausura", noAutoResult: true, partidos: [
-            {l:"Libertad", v:"Sansinena", hora:"20:00", gl:3, gv:2, claseL:"libertad", claseV:"sansinena",nota:"en cancha de Huracán"},
-            {l:"San Francisco", v:"Bella Vista", hora:"20:30", gl:2, gv:2, claseL:"sanfrancisco", claseV:"bellavista",nota:"en cancha de Comercial"},
-            {l:"Sporting", v:"Tiro Federal", hora:"21:00", gl:2, gv:2, claseL:"sporting", claseV:"tirofederal",nota:"en cancha de Sporting"},
-            {l:"Huracán", v:"Pacífico BB", hora:"21:30", gl:3, gv:0, claseL:"huracan", claseV:"pacificobb",nota:"en cancha de Huracán"},
-            {l:"Pacífico (C)", v:"Comercial", hora:"22:00", gl:1, gv:1, claseL:"pacificoc", claseV:"comercial",nota:"en cancha de Comercial"},
-            ]},
-       ]},
-     { id: "2026-11-04", label: "MIÉ 04/11", torneos: [
-            { nombre: "NACIONAL DE SELECCIONES | GRUPO B | FECHA 1", cat: "futsalselecciones", torLink: "futsalselecciones", noAutoResult: true, partidos: [
-            {l:"<b>Liga del Sur</b>", v:"Salta", hora:"16:00", gl:3, gv:2, claseL:"ldsbb", claseV:"salta"},
-            ]},
-       ]},
-     { id: "2026-11-05", label: "JUE 05/11", torneos: [
-            { nombre: "NACIONAL DE SELECCIONES | GRUPO B | FECHA 2", cat: "futsalselecciones", torLink: "futsalselecciones", noAutoResult: true, partidos: [
-            {l:"<b>Liga del Sur</b>", v:"Río Grande", hora:"13:00", gl:1, gv:9, claseL:"ldsbb", claseV:"riogrande"},
-            ]},
-       ]},
-     { id: "2026-11-06", label: "VIE 06/11", torneos: [
-            { nombre: "NACIONAL DE SELECCIONES | GRUPO B | FECHA 3 (Interzonal)", cat: "futsalselecciones", torLink: "futsalselecciones", noAutoResult: true, partidos: [
-            {l:"<b>Liga del Sur</b>", v:"El Calafate", hora:"13:00", gl:2, gv:6, claseL:"ldsbb", claseV:"elcalafate"},
-            ]},
-            { nombre: "REGIONAL AMATEUR | CUARTA RONDA | BONAERENSE PAMPEANA SUR | IDA (HURACÁN)", cat: "regamateurtemporada", torLink: "regamateurtemporada", noAutoResult: true, partidos: [
-            {l:"Racing de Olavarría", v:"Deportivo Norte", hora:"21:00", gl:1, gv:1, claseL:"racingolavarria", claseV:"depnorte"},
-            ]},
-       ]},
-     { id: "2026-11-07", label: "SÁB 07/11", torneos: [
-            { nombre: "FEDERAL A | REVÁLIDA - CUARTA RONDA | IDA (OLIMPO)", cat: "federala", torLink: "federala", noAutoResult: true, partidos: [
-            {l:"Douglas Haig", v:"Gimnasia de Chivilcoy", hora:"16:00", gl:1, gv:0, claseL:"douglashaig", claseV:"gimnasiachivilcoy"},
-            ]},
-       ]},
      { id: "2026-11-08", label: "DOM 08/11", torneos: [
             { nombre: "REGIONAL AMATEUR | CUARTA RONDA | BONAERENSE PAMPEANA SUR | IDA", cat: "regamateurtemporada", torLink: "regamateurtemporada", noAutoResult: true, partidos: [
             {l:"Ferro de Pico", v:"<b>Huracán</b>", hora:"20:00", gl:3, gv:0, claseL:"ferropico", claseV:"huracan"},
@@ -2021,9 +1989,39 @@ function generarHome() {
             {l:"Catamarca", v:"Albardón", hora:"18:30", gl:1, gv:0, claseL:"catamarcapais", claseV:"albardon",nota:"Se jugará en La Rioja"},
             ]},
        ]},
+     { id: "2026-11-09", label: "LUN 09/11", torneos: [
+            { nombre: "SENIOR | CLAUSURA | ÚLTIMA FECHA", cat: "senior", torLink: "senior", noAutoResult: true, partidos: [
+            {l:"Pacífico BB", v:"San Francisco", hora:"16:30", gl:null, gv:null, claseL:"pacificobb", claseV:"sanfrancisco",nota:"en cancha de Pacífico de Cabildo"},
+            {l:"Tiro Federal", v:"Pacífico (C)", hora:"18:00", gl:null, gv:null, claseL:"tirofederal", claseV:"pacificoc",nota:"en cancha de Pacífico de Cabildo"},
+            ]},
+       ]},
+     { id: "2026-11-10", label: "MAR 10/11", torneos: [
+            { nombre: "SENIOR | CLAUSURA | ÚLTIMA FECHA", cat: "senior", torLink: "senior", noAutoResult: true, partidos: [
+            {l:"Sansinena", v:"Huracán", hora:"20:30", gl:null, gv:null, claseL:"sansinena", claseV:"huracan",nota:"en cancha de Sansinena"},
+            {l:"Bella Vista", v:"Sporting", hora:"20:30", gl:null, gv:null, claseL:"bellavista", claseV:"sporting",nota:"en cancha de Comercial"},
+            {l:"Comercial", v:"Libertad", hora:"22:00", gl:null, gv:null, claseL:"comercial", claseV:"libertad",nota:"en cancha de Comercial"},
+            ]},
+       ]},
      { id: "2026-11-12", label: "JUE 12/11", torneos: [
             { nombre: "FEDERAL A | REVÁLIDA - CUARTA RONDA | IDA", cat: "federala", torLink: "federala", noAutoResult: true, partidos: [
             {l:"Kimberley", v:"<b>Olimpo</b>", hora:"15:30", gl:null, gv:null, claseL:"kimberley", claseV:"olimpo"},
+            ]},
+       ]},
+     { id: "2026-11-14", label: "SÁB 14/11", torneos: [
+            { nombre: "OFICIAL | CLAUSURA | SEMIFINALES", cat: "oficial", torLink: "oficial", noAutoResult: true, partidos: [
+            {l:"Huracán", v:"Libertad", hora:"15:00", gl:null, gv:null, claseL:"huracan", claseV:"libertad"},
+            ]},
+            { nombre: "PROMOCIONAL | CLAUSURA | SEMIFINALES", cat: "promocional", torLink: "promocional", noAutoResult: true, partidos: [
+            {l:"Olimpo", v:"Comercial", hora:"16:00", gl:null, gv:null, claseL:"olimpo", claseV:"comercial"},
+            {l:"Tiro Federal", v:"Rosario PB", hora:"16:00", gl:null, gv:null, claseL:"tirofederal", claseV:"rosariopb"},
+            ]},
+       ]},
+     { id: "2026-11-15", label: "DOM 15/11", torneos: [
+            { nombre: "OFICIAL | CLAUSURA | SEMIFINALES", cat: "oficial", torLink: "oficial", noAutoResult: true, partidos: [
+            {l:"San Francisco", v:"Bella Vista", hora:"16:00", gl:null, gv:null, claseL:"sanfrancisco", claseV:"bellavista"},
+            ]},
+            { nombre: "OFICIAL | DESEMPATE | DESCENSO/PROMOCIÓN", cat: "oficial", torLink: "oficial", noAutoResult: true, partidos: [
+            {l:"La Armonía", v:"Sporting", hora:"16:00", gl:null, gv:null, claseL:"laarmonia", claseV:"sporting",nota:"en cancha de Liniers"},
             ]},
        ]},
     ];
