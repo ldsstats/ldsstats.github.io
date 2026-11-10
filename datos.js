@@ -1948,7 +1948,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 27).partidos.forEach(p
 });
 
 
-let diaSeleccionadoHome = "2026-11-09"; 
+let diaSeleccionadoHome = "2026-11-10"; 
 let mercadoPasesAbierto = false;
 
 function toggleMercadoPasesHome() {
@@ -1990,9 +1990,9 @@ function generarHome() {
             ]},
        ]},
      { id: "2026-11-09", label: "LUN 09/11", torneos: [
-            { nombre: "SENIOR | CLAUSURA | ÚLTIMA FECHA", cat: "senior", torLink: "senior", noAutoResult: true, partidos: [
+            { nombre: "SENIOR | CLAUSURA | ÚLTIMA FECHA", cat: "seniorclausura", torLink: "seniorclausura", noAutoResult: true, partidos: [
             {l:"Pacífico BB", v:"San Francisco", hora:"16:30", gl:null, gv:null, claseL:"pacificobb", claseV:"sanfrancisco",nota:"en cancha de Pacífico de Cabildo"},
-            {l:"Tiro Federal", v:"Pacífico (C)", hora:"18:00", gl:null, gv:null, claseL:"tirofederal", claseV:"pacificoc",nota:"en cancha de Pacífico de Cabildo"},
+            {l:"Tiro Federal", v:"Pacífico (C)", hora:"18:00", gl:2, gv:1, claseL:"tirofederal", claseV:"pacificoc",nota:"en cancha de Pacífico de Cabildo"},
             ]},
        ]},
      { id: "2026-11-10", label: "MAR 10/11", torneos: [
@@ -17273,6 +17273,7 @@ const BD_H2H = {
         { fecha: "Fecha 4 - Clausura 2026 - 22 ago 2026", torneo: "promocional", l: "Tiro Federal", v: "Pacífico (C)", gl: 2, gv: 2, goles_l: ["Joaquín Laborde","Gino Carrozzi"], goles_v: ["Gianni Ferrari (2)"] },
         { fecha: "Fecha 11 - Clausura 2026 - 10 oct", torneo: "promocional", l: "Pacífico (C)", v: "Tiro Federal", gl: 0, gv: 6, goles_l: [], goles_v: ["Franco Lefiñir","Gino Carrozzi","Agustín Restiffo","Mariano McCoubrey","Gino Pizzorno","Genaro Fraysse"] },
         { fecha: "Fecha 11 - Clausura 2026", torneo: "reserva_promocional", l: "Pacífico (C)", v: "Tiro Federal", gl: 0, gv: 8 },
+        { fecha: "Clausura 2026 - Fecha 9", torneo: "senior", l: "Pacífico (C)", v: "Tiro Federal", gl: 2, gv: 1, goles_l: ["Juan José Dietz (2)"], goles_v: ["Santiago Martín","Esteban Angelini"] },
     ],
     "Bella Vista|La Armonía": [
         { fecha: "Fecha 4 - Apertura 2026 - 11 abr", torneo: "femenino", l: "Bella Vista", v: "La Armonía", gl: 2, gv: 0, goles_l: ["Victoria Toloza","Mahia Romero"], goles_v: [] },
@@ -19169,14 +19170,14 @@ const BD_SENIOR_APERTURA = [
 ];
 const BD_SENIOR_CLAUSURA = [
     { n: "Libertad",  mostrar: "Libertad <b>(SF)</b>", cl: "libertad",     pj:8, pg:7, pe:0, pp:1, gf:23, gc:10, pts:21 },
-    { n: "Pacífico (C)",  mostrar: "Pacífico (C) <b>(A)</b> <b>(SF)</b>", cl: "pacificoc",    pj:8, pg:6, pe:0, pp:2, gf:15, gc:13, pts:18 },
+    { n: "Pacífico (C)",  mostrar: "Pacífico (C) <b>(A)</b> <b>(SF)</b>", cl: "pacificoc",    pj:9, pg:7, pe:0, pp:2, gf:17, gc:14, pts:21 },
     { n: "Bella Vista",  mostrar: "Bella Vista <b>(1/8)</b>", cl: "bellavista",   pj:8, pg:4, pe:1, pp:3, gf:16, gc:14, pts:13 },
     { n: "Huracán",  mostrar: "Huracán <b>(1/8)</b>", cl: "huracan",      pj:8, pg:4, pe:1, pp:3, gf:22, gc:14, pts:13 },
     { n: "Comercial",  mostrar: "Comercial <b>(1/8)</b>", cl: "comercial",    pj:8, pg:4, pe:0, pp:4, gf:18, gc:11, pts:12 },
     { n: "Pacífico BB",  mostrar: "Pacífico BB <b>(1/8)</b>", cl: "pacificobb",   pj:8, pg:4, pe:0, pp:4, gf:18, gc:20, pts:12 },
     { n: "Sansinena",  mostrar: "Sansinena <b>(1/8)</b>", cl: "sansinena",    pj:8, pg:3, pe:1, pp:4, gf:17, gc:17, pts:10 },
     { n: "San Francisco",  mostrar: "San Francisco <b>(1/8)</b>", cl: "sanfrancisco", pj:8, pg:2, pe:1, pp:5, gf:12, gc:27, pts:7 },
-    { n: "Tiro Federal",  mostrar: "Tiro Federal <b>(1/8)</b>", cl: "tirofederal",  pj:8, pg:1, pe:3, pp:4, gf:16, gc:20, pts:6 },
+    { n: "Tiro Federal",  mostrar: "Tiro Federal <b>(1/8)</b>", cl: "tirofederal",  pj:9, pg:1, pe:3, pp:5, gf:17, gc:22, pts:6 },
     { n: "Sporting",  mostrar: "Sporting <b>(1/8)</b>", cl: "sporting",     pj:8, pg:1, pe:1, pp:6, gf:12, gc:24, pts:4 },
 ];
 
@@ -19306,7 +19307,7 @@ const BD_FIXTURES_SENIOR_CLAUSURA = [
         { l: "San Francisco",   v: "Pacífico BB",      gl: null, gv: null },
         { l: "Huracán",  v: "Sansinena",        gl: null, gv: null },
         { l: "Libertad",      v: "Comercial",    gl: null, gv: null },
-        { l: "Pacífico (C)",  v: "Tiro Federal",      gl: null, gv: null },
+        { l: "Pacífico (C)",  v: "Tiro Federal",      gl: 2, gv: 1, goles_l:["Santiago Martín","Esteban Angelini"], goles_v:["Juan José Dietz"] },
         { l: "Sporting",      v: "Bella Vista",  gl: null, gv: null }
     ]},
 ];
@@ -19394,8 +19395,8 @@ const BD_GOLEADORES_SENIOR = [
     { nombre: "César Panduro", equipo: "Huracán", goles: 13 },
     { nombre: "Marcos Cossu", equipo: "Sporting", goles: 9 },
     { nombre: "Leandro Duelle", equipo: "Pacífico (C)", goles: 9 },
-    { nombre: "Juan José Dietz", equipo: "Tiro Federal", goles: 8 },
-    { nombre: "Esteban Angelini", equipo: "Pacífico (C)", goles: 8 },
+    { nombre: "Juan José Dietz", equipo: "Tiro Federal", goles: 9 },
+    { nombre: "Esteban Angelini", equipo: "Pacífico (C)", goles: 9 },
     { nombre: "Emiliano Jofré", equipo: "Sansinena", goles: 8 },
     { nombre: "Maximiliano Casas", equipo: "Comercial", goles: 5 },
     { nombre: "Fabián Merlini", equipo: "Bella Vista", goles: 4 },
@@ -19425,6 +19426,7 @@ const BD_GOLEADORES_SENIOR = [
     { nombre: "Pablo Cerra", equipo: "Libertad", goles: 2 },
     { nombre: "Hernán Sangripanti", equipo: "Pacífico BB", goles: 2 },
     { nombre: "Nicolás Arroyo", equipo: "Pacífico (C)", goles: 2 },
+    { nombre: "Santiago Martín", equipo: "Pacífico (C)", goles: 2 },
     { nombre: "Patricio Muñoz", equipo: "San Francisco", goles: 2 },
     { nombre: "Federico Timi", equipo: "San Francisco", goles: 2 },
     { nombre: "Mauricio Oldani", equipo: "Tiro Federal", goles: 2 },
@@ -19456,7 +19458,6 @@ const BD_GOLEADORES_SENIOR = [
     { nombre: "Silvio Pagalday", equipo: "Pacífico (C)", goles: 1 },
     { nombre: "Matías Aldunate", equipo: "Pacífico (C)", goles: 1 },
     { nombre: "Nicolás Becher", equipo: "Pacífico (C)", goles: 1 },
-    { nombre: "Santiago Martín", equipo: "Pacífico (C)", goles: 1 },
     { nombre: "Gabriel Dauwalder", equipo: "San Francisco", goles: 1 },
     { nombre: "Marcos Ramos", equipo: "San Francisco", goles: 1 },
     { nombre: "Damián Vidal", equipo: "San Francisco", goles: 1 },
@@ -19483,7 +19484,7 @@ const BD_GOLES_CONTRA_SENIOR = [
 ];
 
 function generarSeniorClausura() {
-    const n = estado.fechaSeniorClausura || 8;
+    const n = estado.fechaSeniorClausura || 9;
     const f = BD_FIXTURES_SENIOR_CLAUSURA.find(x => x.fecha === n) || { partidos: [] };
     const equipos = BD_SENIOR_CLAUSURA.map(e => ({ nombre: e.n, clase: e.cl }));
 
