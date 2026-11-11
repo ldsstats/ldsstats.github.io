@@ -558,7 +558,7 @@ const BD_FIXTURES_FUTSAL_RESERVA = [
         {l:"La Esperanza",    v:"Tiro Federal",     gl:5, gv:1},
         {l:"Liniers",   v:"Petroquímicos",     gl:11, gv:1},
         {l:"Villa Mitre",     v:"La Estación",     gl:3, gv:3},
-        {l:"Comercial",       v:"Pacífico BB",     gl:null, gv:null},
+        {l:"Comercial",       v:"Pacífico BB",     gl:3, gv:2},
         {l:"Los 3 Chiflados", v:"Catamarca",     gl:10, gv:6},
         {l:"Dep. Futsal",     v:"Huracán",     gl:null, gv:null},
     ]}
@@ -1948,7 +1948,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 27).partidos.forEach(p
 });
 
 
-let diaSeleccionadoHome = "2026-11-12"; 
+let diaSeleccionadoHome = "2026-11-11"; 
 let mercadoPasesAbierto = false;
 
 function toggleMercadoPasesHome() {
@@ -2002,9 +2002,33 @@ function generarHome() {
             {l:"Comercial", v:"Libertad", hora:"22:00", gl:2, gv:3, claseL:"comercial", claseV:"libertad",nota:"en cancha de Comercial"},
             ]},
        ]},
+     { id: "2026-11-11", label: "MIÉ 11/11", torneos: [
+            { nombre: "FUTSAL | CUARTOS DE FINAL", cat: "futsal", torLink: "futsal", noAutoResult: true, partidos: [
+            {l:"Comercial", v:"Pacífico BB", hora:"22:00", gl:null, gv:null, claseL:"comercial", claseV:"pacificobb",nota: "en cancha de Comercial"},
+            {l:"La Estación", v:"Tiro Federal", hora:"22:00", gl:null, gv:null, claseL:"laestacion", claseV:"tirofederal",nota: "en cancha de Don Bosco"},
+            ]},
+            { nombre: "FUTSAL (RESERVA) | CUARTOS DE FINAL", cat: "futsalreserva", torLink: "futsalreserva", noAutoResult: true, partidos: [
+            {l:"Liniers", v:"Dublin", hora:"20:30", gl:null, gv:null, claseL:"liniers", claseV:"dublin",nota: "en cancha de Comercial"},
+            {l:"La Estación", v:"Villa Mitre", hora:"20:30", gl:null, gv:null, claseL:"laestacion", claseV:"villamitre",nota: "en cancha de Don Bosco"},
+            ]},
+       ]},
      { id: "2026-11-12", label: "JUE 12/11", torneos: [
             { nombre: "FEDERAL A | REVÁLIDA - CUARTA RONDA | IDA", cat: "federala", torLink: "federala", noAutoResult: true, partidos: [
             {l:"Kimberley", v:"<b>Olimpo</b>", hora:"15:30", gl:null, gv:null, claseL:"kimberley", claseV:"olimpo"},
+            ]},
+            { nombre: "FUTSAL | CUARTOS DE FINAL", cat: "futsal", torLink: "futsal", noAutoResult: true, partidos: [
+            {l:"La Esperanza", v:"Villa Mitre", hora:"22:00", gl:null, gv:null, claseL:"laesperanza", claseV:"villamitre",nota: "en cancha de Don Bosco"},
+            ]},
+            { nombre: "FUTSAL (RESERVA) | CUARTOS DE FINAL", cat: "futsalreserva", torLink: "futsalreserva", noAutoResult: true, partidos: [
+            {l:"La Esperanza", v:"Petroquímicos", hora:"20:30", gl:null, gv:null, claseL:"laesperanza", claseV:"petroquimicos",nota: "en cancha de Don Bosco"},
+            ]},
+       ]},
+     { id: "2026-11-13", label: "VIÉ 13/11", torneos: [
+            { nombre: "FUTSAL | CUARTOS DE FINAL", cat: "futsal", torLink: "futsal", noAutoResult: true, partidos: [
+            {l:"Los 3 Chiflados", v:"Liniers", hora:"22:00", gl:null, gv:null, claseL:"los3chiflados", claseV:"liniers",nota: "en cancha de La Curtiembre"},
+            ]},
+            { nombre: "FUTSAL (RESERVA) | CUARTOS DE FINAL", cat: "futsalreserva", torLink: "futsalreserva", noAutoResult: true, partidos: [
+            {l:"Los 3 Chiflados", v:"Comercial", hora:"20:30", gl:null, gv:null, claseL:"los3chiflados", claseV:"comercial", nota:"en cancha de La Curtiembre"},
             ]},
        ]},
      { id: "2026-11-14", label: "SÁB 14/11", torneos: [
@@ -16863,6 +16887,7 @@ const BD_H2H = {
         { fecha: "Fecha 13 - Clausura 2026 - 24 oct", torneo: "promocional", l: "Comercial", v: "Pacífico BB", gl: 1, gv: 3, goles_l: ["Fernando Kessler"], goles_v: ["Lisandro Muzi (2)","Franco Orrego"] },
         { fecha: "Fecha 13 - Clausura 2026", torneo: "reserva_promocional", l: "Comercial", v: "Pacífico BB", gl: 1, gv: 2 },
         { fecha: "Clausura 2026 - Fecha 13", torneo: "futsal", l: "Pacífico BB", v: "Comercial", gl: 2, gv: 1 },
+        { fecha: "Clausura 2026 - Fecha 13", torneo: "futsalreserva", l: "Pacífico BB", v: "Comercial", gl: 2, gv: 3 },
     ],
     "Huracán|Tiro Federal": [
         { fecha: "Apertura 2026 - Fecha 2", torneo: "senior", l: "Huracán", v: "Tiro Federal", gl: 6, gv: 1, goles_l: ["Felipe Hippendinger (3)","César Panduro (3)"], goles_v: ["Guido Leobono"] },
@@ -18600,11 +18625,11 @@ const BD_POS_FUTSAL = {
         {n:"Villa Mitre <b>(C)</b>",     cl:"villamitre",    pj:13,pg:8,pe:1,pp:4,gf:49, gc:42, pts:25},
         {n:"Petroquímicos  <b>(C)</b>",   cl:"petroquimicos",    pj:13,pg:7,pe:2,pp:4,gf:51, gc:46, pts:23},
         {n:"Dublin  <b>(C)</b>",          cl:"dublin",    pj:13,pg:6,pe:3,pp:4,gf:36, gc:39, pts:21},
+        {n:"Comercial",       cl:"comercial",    pj:13,pg:5,pe:2,pp:6,gf:31, gc:46, pts:17},
         {n:"San Francisco",   cl:"sanfrancisco",    pj:13,pg:5,pe:0,pp:8,gf:37, gc:61, pts:15},
-        {n:"Comercial",       cl:"comercial",    pj:12,pg:4,pe:2,pp:6,gf:28, gc:44, pts:14},
         {n:"Catamarca <b>(X)</b>",       cl:"catamarca",    pj:13,pg:4,pe:2,pp:7,gf:30, gc:70, pts:14},
         {n:"Tiro Federal <b>(X)</b>",    cl:"tirofederal",    pj:13,pg:3,pe:2,pp:7,gf:22, gc:34, pts:11},
-        {n:"Pacífico BB <b>(X)</b>",     cl:"pacificobb",    pj:12,pg:3,pe:0,pp:9,gf:25, gc:51, pts:9},
+        {n:"Pacífico BB <b>(X)</b>",     cl:"pacificobb",    pj:13,pg:3,pe:0,pp:10,gf:27, gc:54, pts:9},
         {n:"<s>Dep. Futsal</s> <b>(-)</b>",     cl:"depfutsal",    pj:0,pg:0,pe:0,pp:0,gf:0, gc:0, pts:0},
         {n:"<s>Huracán</s> <b>(-)</b>",         cl:"huracan",    pj:0,pg:0,pe:0,pp:0,gf:0, gc:0, pts:0}
     ]
