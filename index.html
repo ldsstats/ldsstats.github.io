@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>LdS Stats - 2026</title>
-    <link rel="stylesheet" href="style.css?v=7">
+    <link rel="stylesheet" href="style.css?v=77">
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#111111">
     <!-- Google Analytics -->
@@ -32,7 +32,7 @@
     z-index: 999;
     pointer-events: none;
     letter-spacing: 0.3px;
-">🕐 Última actualización: Mar 10/11 00:00hs</div>
+">🕐 Última actualización: Miér 11/11 19:30hs</div>
 
 <div id="container-principal">
     <div id="logo-header"><img src="au11.png" style="height:80px;" alt="LdS Stats"></div>
@@ -167,21 +167,21 @@
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-<script src="datos.js?v=7"></script>
+<script src="datos.js?v=77"></script>
 <script>
     let estado = { torneo: 'home', categoria: '', fecha: 1 };
     let estadoAnterior = { torneo: 'home', categoria: '', fecha: 1 };
 
     // Última actualización por sección — modificar según corresponda
     const ULTIMA_ACT = {
-        default:        "Mar 10/11 00:00hs",
-        home:        "Mar 10/11 00:00hs",
+        default:        "Miér 11/11 19:30hs",
+        home:        "Miér 11/11 19:30hs",
         apertura_oficial:   "Dom 02/08 21:30hs",
         clausura_oficial:   "Sáb 31/10 19:30hs",
-        historial:   "Mar 10/11 00:00hs",
+        historial:   "Miér 11/11 19:30hs",
         goleadores_oficial:   "Sáb 31/10 19:30hs",
         arqueros_oficial:   "Sáb 31/10 19:30hs",
-        reserva_oficial:   "Lun 02/11 08:00hs",
+        reserva_oficial:   "Miér 11/11 19:30hs",
         apertura_promocional:   "Dom 02/08 21:30hs",
         clausura_promocional:   "Dom 01/11 18:00hs",
         goleadores_promocional:   "Dom 01/11 18:00hs",
@@ -209,8 +209,8 @@
         futsalbonaerense:   "Mar 16/06 00:00hs",
         futsalbonaerensepromocional: "Mar 16/06 00:00hs",
         seniorapertura: "Miér 15/07 00:00hs",
-        seniorclausura: "Mar 10/11 00:00hs",
-        seniorgoleadores: "Mar 10/11 00:00hs",
+        seniorclausura: "Miér 11/11 19:30hs",
+        seniorgoleadores: "Miér 11/11 19:30hs",
         copapais: "Dom 08/11 21:00hs",
         regamateurtemporada: "Lun 09/11 11:30hs",
         regamateurfem:   "Dom 20/09 17:25hs",
@@ -488,6 +488,8 @@
                 cont.innerHTML = generarSeniorApertura();
             } else if (estado.torneo === 'seniorplayoffs') {
                 cont.innerHTML = generarSeniorPlayoffs();
+            } else if (estado.torneo === 'seniorplayoffsclausura') {
+                cont.innerHTML = generarSeniorPlayoffsClausura();
             } else if (estado.torneo === 'seniorclausura') {
                 cont.innerHTML = generarSeniorClausura();
             } else if (estado.torneo === 'oficialplayoffs') {
