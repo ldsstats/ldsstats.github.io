@@ -2014,7 +2014,7 @@ function generarHome() {
        ]},
      { id: "2026-11-12", label: "JUE 12/11", torneos: [
             { nombre: "FEDERAL A | REVÁLIDA - CUARTA RONDA | IDA", cat: "federala", torLink: "federala", noAutoResult: true, partidos: [
-            {l:"Kimberley", v:"<b>Olimpo</b>", hora:"15:30", gl:null, gv:null, claseL:"kimberley", claseV:"olimpo"},
+            {l:"Kimberley", v:"<b>Olimpo</b>", hora:"15:30", gl:1, gv:1, claseL:"kimberley", claseV:"olimpo"},
             ]},
             { nombre: "FUTSAL | CUARTOS DE FINAL", cat: "futsal", torLink: "futsal", noAutoResult: true, partidos: [
             {l:"La Esperanza", v:"Villa Mitre", hora:"22:00", gl:null, gv:null, claseL:"laesperanza", claseV:"villamitre",nota: "en cancha de Don Bosco"},
@@ -2294,7 +2294,7 @@ const BD_FEDERAL_REVALIDA = {
     ],
     cuartaRonda: [
         {
-            ida:    { local: "Kimberley", clL: "kimberley", visitante: "Olimpo", clV: "olimpo", gl: null, gv: null, goles_l: [], goles_v: [] },
+            ida:    { local: "Kimberley", clL: "kimberley", visitante: "Olimpo", clV: "olimpo", gl: 1, gv: 1, goles_l: [], goles_v: ["Agustín Stancato"] },
             vuelta: { local: "Olimpo", clL: "olimpo", visitante: "Kimberley", clV: "kimberley", gl: null, gv: null, goles_l: [], goles_v: [] }
         },
         {
@@ -17452,6 +17452,7 @@ const BD_H2H = {
         { fecha: "Fecha 5 - Fase inicial - 18 abr 2026", torneo: "federala", l: "Kimberley", v: "Olimpo", gl: 0, gv: 1, goles_l: [], goles_v: ["Cristian Ibarra"] },
         { fecha: "Fecha 14 - Fase inicial - 20 jun 2026", torneo: "federala", l: "Olimpo", v: "Kimberley", gl: 0, gv: 0, goles_l: [], goles_v: [] },
         { fecha: "Fecha 5 - Nonagonal - 23 ago 2026", torneo: "federala", l: "Olimpo", v: "Kimberley", gl: 1, gv: 0, goles_l: ["Nicolás Báez (e/c)"], goles_v: [] },
+        { fecha: "Reválida - Cuarta ronda - Ida - 12 nov 2026", torneo: "federala", l: "Kimberley", v: "Olimpo", gl: 1, gv: 1, goles_l: [], goles_v: ["Agustín Stancato"] },
     ],
     "Santamarina|Villa Mitre": [
         { fecha: "Fecha 5 - Fase inicial - 19 abr 2026", torneo: "federala", l: "Villa Mitre", v: "Santamairna", gl: 0, gv: 0, goles_l: [], goles_v: [] },
@@ -26075,7 +26076,7 @@ const BD_FUTSAL_CLAUSURA_PLAYOFFS = {
 
 const BD_FUTSAL_RESERVA_CLAUSURA_PLAYOFFS = {
     cuartos: [
-        { local: "Los 3 Chiflados", clL: "los3chiflados", visitante: "A confirmar", clV: "aconfirmar", gl: null, gv: null, goles_l: [], goles_v: [] },
+        { local: "Los 3 Chiflados", clL: "los3chiflados", visitante: "Comercial", clV: "comercial", gl: null, gv: null, goles_l: [], goles_v: [] },
         { local: "Liniers", clL: "liniers", visitante: "Dublin", clV: "dublin", gl: 7, gv: 2, goles_l: [], goles_v: [] },
         { local: "La Esperanza", clL: "laesperanza", visitante: "Petroquímicos", clV: "petroquimicos", gl: null, gv: null, goles_l: [], goles_v: [] },
         { local: "La Estación", clL: "laestacion", visitante: "Villa Mitre", clV: "villamitre", gl: null, gv: null, goles_l: [], goles_v: [] }
