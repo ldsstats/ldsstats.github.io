@@ -1948,7 +1948,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 27).partidos.forEach(p
 });
 
 
-let diaSeleccionadoHome = "2026-11-11"; 
+let diaSeleccionadoHome = "2026-11-12"; 
 let mercadoPasesAbierto = false;
 
 function toggleMercadoPasesHome() {
@@ -2004,11 +2004,11 @@ function generarHome() {
        ]},
      { id: "2026-11-11", label: "MIÉ 11/11", torneos: [
             { nombre: "FUTSAL | CUARTOS DE FINAL", cat: "futsal", torLink: "futsal", noAutoResult: true, partidos: [
-            {l:"Comercial", v:"Pacífico BB", hora:"22:00", gl:null, gv:null, claseL:"comercial", claseV:"pacificobb",nota: "en cancha de Comercial"},
-            {l:"La Estación", v:"Tiro Federal", hora:"22:00", gl:null, gv:null, claseL:"laestacion", claseV:"tirofederal",nota: "en cancha de Don Bosco"},
+            {l:"Comercial", v:"Pacífico BB", hora:"22:00", gl:4, gv:3, claseL:"comercial", claseV:"pacificobb",nota: "en cancha de Comercial"},
+            {l:"La Estación", v:"Tiro Federal", hora:"22:00", gl:3, gv:1, claseL:"laestacion", claseV:"tirofederal",nota: "en cancha de Don Bosco"},
             ]},
             { nombre: "FUTSAL (RESERVA) | CUARTOS DE FINAL", cat: "futsalreserva", torLink: "futsalreserva", noAutoResult: true, partidos: [
-            {l:"Liniers", v:"Dublin", hora:"20:30", gl:null, gv:null, claseL:"liniers", claseV:"dublin",nota: "en cancha de Comercial"},
+            {l:"Liniers", v:"Dublin", hora:"20:30", gl:7, gv:2, claseL:"liniers", claseV:"dublin",nota: "en cancha de Comercial"},
             {l:"La Estación", v:"Villa Mitre", hora:"20:30", gl:null, gv:null, claseL:"laestacion", claseV:"villamitre",nota: "en cancha de Don Bosco"},
             ]},
        ]},
@@ -2038,6 +2038,9 @@ function generarHome() {
             { nombre: "PROMOCIONAL | CLAUSURA | SEMIFINALES", cat: "promocional", torLink: "promocional", noAutoResult: true, partidos: [
             {l:"Olimpo", v:"Comercial", hora:"16:00", gl:null, gv:null, claseL:"olimpo", claseV:"comercial"},
             {l:"Tiro Federal", v:"Rosario PB", hora:"16:00", gl:null, gv:null, claseL:"tirofederal", claseV:"rosariopb"},
+            ]},
+            { nombre: "2° FEMENINO | FINAL ÚNICA", cat: "segundafemenino", torLink: "segundafemenino", noAutoResult: true, partidos: [
+            {l:"Liniers", v:"Petroquímicos", hora:"16:00", gl:null, gv:null, claseL:"liniers", claseV:"petroquimicos"},
             ]},
             { nombre: "REGIONAL AMATEUR | CUARTA RONDA | BONAERENSE PAMPEANA SUR | VUELTA (HURACÁN)", cat: "regamateurtemporada", torLink: "regamateurtemporada", noAutoResult: true, partidos: [
             {l:"Deportivo Norte", v:"Racing de Olavarría", hora:"16:00", gl:null, gv:null, claseL:"depnorte", claseV:"racingolavarria",nota:"Ida: 1-1"},
@@ -16499,6 +16502,7 @@ const BD_H2H = {
         { fecha: "Apertura 2026 - Fecha 1", torneo: "futsalreserva", l: "La Estación", v: "Tiro Federal", gl: 1, gv: 1 },
         { fecha: "Clausura 2026 - Fecha 1", torneo: "futsal", l: "Tiro Federal", v: "La Estación", gl: 3, gv: 1 },
         { fecha: "Clausura 2026 - Fecha 1", torneo: "futsalreserva", l: "Tiro Federal", v: "La Estación", gl: 3, gv: 1 },
+        { fecha: "Clausura 2026 - Cuartos de final", torneo: "futsal", l: "La Estación", v: "Tiro Federal", gl: 3, gv: 1 },
     ],
     "Liniers|San Francisco": [
         { fecha: "Apertura 2026 - Fecha 1", torneo: "futsal", l: "Liniers", v: "San Francisco", gl: 2, gv: 2 },
@@ -16888,6 +16892,7 @@ const BD_H2H = {
         { fecha: "Fecha 13 - Clausura 2026", torneo: "reserva_promocional", l: "Comercial", v: "Pacífico BB", gl: 1, gv: 2 },
         { fecha: "Clausura 2026 - Fecha 13", torneo: "futsal", l: "Pacífico BB", v: "Comercial", gl: 2, gv: 1 },
         { fecha: "Clausura 2026 - Fecha 13", torneo: "futsalreserva", l: "Pacífico BB", v: "Comercial", gl: 2, gv: 3 },
+        { fecha: "Clausura 2026 - Cuartos de final", torneo: "futsal", l: "Comercial", v: "Pacífico BB", gl: 4, gv: 3 },
     ],
     "Huracán|Tiro Federal": [
         { fecha: "Apertura 2026 - Fecha 2", torneo: "senior", l: "Huracán", v: "Tiro Federal", gl: 6, gv: 1, goles_l: ["Felipe Hippendinger (3)","César Panduro (3)"], goles_v: ["Guido Leobono"] },
@@ -17707,6 +17712,7 @@ const BD_H2H = {
         { fecha: "Apertura 2026 - Cuartos de final", torneo: "futsalreserva", l: "Liniers", v: "Dublin", gl: 3, gv: 5 },
         { fecha: "Clausura 2026 - Fecha 9", torneo: "futsal", l: "Dublin", v: "Liniers", gl: 2, gv: 4 },
         { fecha: "Clausura 2026 - Fecha 9", torneo: "futsalreserva", l: "Dublin", v: "Liniers", gl: 3, gv: 2 },
+        { fecha: "Clausura 2026 - Cuartos de final", torneo: "futsalreserva", l: "Liniers", v: "Dublin", gl: 7, gv: 2 },
     ],
     "La Esperanza|Petroquímicos": [
         { fecha: "Apertura 2026 - Fecha 7", torneo: "futsal", l: "Petroquímicos", v: "La Esperanza", gl: 2, gv: 3 },
@@ -24699,7 +24705,6 @@ function generarSegundaFemeninoPlayoffs() {
     html += `<div style="height:8px;background:#f0f0f0;border-top:1px solid #ddd;border-bottom:1px solid #ddd;"></div>`;
 
     html += `<div class="header-t" style="font-size:11px;background:#7b1a1a;">🏆 FINAL</div><table>`;
-    html += _renderPartidoPlayoff(BD_SEGUNDAFEMENINO_PLAYOFFS.final.ida);
     html += _renderPartidoPlayoff(BD_SEGUNDAFEMENINO_PLAYOFFS.final.vuelta);
     html += `</table>`;
 
@@ -25741,7 +25746,6 @@ const BD_SEGUNDAFEMENINO_PLAYOFFS = {
         },
     ],
     final: {
-        ida:    { local: "Petroquímicos", clL: "petroquimicos", visitante: "Liniers", clV: "liniers", gl: null, gv: null, goles_l: [], goles_v: [] },
         vuelta: { local: "Liniers", clL: "liniers", visitante: "Petroquímicos", clV: "petroquimicos", gl: null, gv: null, goles_l: [], goles_v: [] }
         },
 };
@@ -26062,17 +26066,17 @@ const BD_RESERVA_PROMOCIONAL_CLAUSURA_PLAYOFFS = {
 
 const BD_FUTSAL_CLAUSURA_PLAYOFFS = {
     cuartos: [
-        { local: "La Estación", clL: "laestacion", visitante: "Tiro Federal", clV: "tirofederal", gl: null, gv: null, goles_l: [], goles_v: [] },
+        { local: "La Estación", clL: "laestacion", visitante: "Tiro Federal", clV: "tirofederal", gl: 3, gv: 1, goles_l: [], goles_v: [] },
         { local: "Los 3 Chiflados", clL: "los3chiflados", visitante: "Liniers", clV: "liniers", gl: null, gv: null, goles_l: [], goles_v: [] },
         { local: "La Esperanza", clL: "laesperanza", visitante: "Villa Mitre", clV: "villamitre", gl: null, gv: null, goles_l: [], goles_v: [] },
-        { local: "Comercial", clL: "comercial", visitante: "Pacífico BB", clV: "pacificobb", gl: null, gv: null, goles_l: [], goles_v: [] }
+        { local: "Comercial", clL: "comercial", visitante: "Pacífico BB", clV: "pacificobb", gl: 4, gv: 3, goles_l: [], goles_v: [] }
     ]
 };
 
 const BD_FUTSAL_RESERVA_CLAUSURA_PLAYOFFS = {
     cuartos: [
         { local: "Los 3 Chiflados", clL: "los3chiflados", visitante: "A confirmar", clV: "aconfirmar", gl: null, gv: null, goles_l: [], goles_v: [] },
-        { local: "Liniers", clL: "liniers", visitante: "Dublin", clV: "dublin", gl: null, gv: null, goles_l: [], goles_v: [] },
+        { local: "Liniers", clL: "liniers", visitante: "Dublin", clV: "dublin", gl: 7, gv: 2, goles_l: [], goles_v: [] },
         { local: "La Esperanza", clL: "laesperanza", visitante: "Petroquímicos", clV: "petroquimicos", gl: null, gv: null, goles_l: [], goles_v: [] },
         { local: "La Estación", clL: "laestacion", visitante: "Villa Mitre", clV: "villamitre", gl: null, gv: null, goles_l: [], goles_v: [] }
     ]
