@@ -177,6 +177,12 @@ tr[onclick]:hover td { background-color: #e8f5e9 !important; }
 .salta::before { content: "S"; color: #000000; font-size: 10px; font-weight: bold; }
 .riogrande::before { content: "RG"; color: #000000; font-size: 10px; font-weight: bold; }
 .elcalafate::before { content: "EC"; color: #000000; font-size: 10px; font-weight: bold; }
+.guaraniaf { background: linear-gradient(135deg, white 30%, red 30%, red 70%, white 70%); }
+.sanlorenzocafayate { background: linear-gradient(90deg, #003399 20%, #FE0002 20%, #FE0002 40%, #003399 40%, #003399 60%,
+ #FE0002 60%, #FE0002 80%, #003399 80%); }
+.santamaria::after { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: #004da6; clip-path: polygon(0 0, 50% 50%, 100% 0, 100% 25%, 50% 75%, 0 25%); }
+.somra { background: linear-gradient(90deg, white 50%, green 50%); }
+.gimnasiamza { background: linear-gradient(90deg, #000 20%, #fff 20%, #fff 40%, #000 40%, #000 60%, #fff 60%, #fff 80%, #000 80%); }
 
 
 /* MENÚ DESPLEGABLE */

@@ -1948,7 +1948,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 27).partidos.forEach(p
 });
 
 
-let diaSeleccionadoHome = "2026-11-15"; 
+let diaSeleccionadoHome = "2026-11-17"; 
 let mercadoPasesAbierto = false;
 
 function toggleMercadoPasesHome() {
@@ -1976,85 +1976,6 @@ function generarHome() {
     const agenda = [
 
 
-     { id: "2026-11-09", label: "LUN 09/11", torneos: [
-            { nombre: "SENIOR | CLAUSURA | ÚLTIMA FECHA", cat: "seniorclausura", torLink: "seniorclausura", noAutoResult: true, partidos: [
-            {l:"Pacífico BB", v:"San Francisco", hora:"16:30", gl:2, gv:1, claseL:"pacificobb", claseV:"sanfrancisco",nota:"en cancha de Pacífico de Cabildo"},
-            {l:"Tiro Federal", v:"Pacífico (C)", hora:"18:00", gl:2, gv:1, claseL:"tirofederal", claseV:"pacificoc",nota:"en cancha de Pacífico de Cabildo"},
-            ]},
-       ]},
-     { id: "2026-11-10", label: "MAR 10/11", torneos: [
-            { nombre: "SENIOR | CLAUSURA | ÚLTIMA FECHA", cat: "seniorclausura", torLink: "seniorclausura", noAutoResult: true, partidos: [
-            {l:"Sansinena", v:"Huracán", hora:"20:30", gl:4, gv:0, claseL:"sansinena", claseV:"huracan",nota:"en cancha de Sansinena"},
-            {l:"Bella Vista", v:"Sporting", hora:"20:30", gl:1, gv:0, claseL:"bellavista", claseV:"sporting",nota:"en cancha de Comercial"},
-            {l:"Comercial", v:"Libertad", hora:"22:00", gl:2, gv:3, claseL:"comercial", claseV:"libertad",nota:"en cancha de Comercial"},
-            ]},
-       ]},
-     { id: "2026-11-11", label: "MIÉ 11/11", torneos: [
-            { nombre: "FUTSAL | CUARTOS DE FINAL", cat: "futsal", torLink: "futsal", noAutoResult: true, partidos: [
-            {l:"Comercial", v:"Pacífico BB", hora:"22:00", gl:4, gv:3, claseL:"comercial", claseV:"pacificobb",nota: "en cancha de Comercial"},
-            {l:"La Estación", v:"Tiro Federal", hora:"22:00", gl:3, gv:1, claseL:"laestacion", claseV:"tirofederal",nota: "en cancha de Don Bosco"},
-            ]},
-            { nombre: "FUTSAL (RESERVA) | CUARTOS DE FINAL", cat: "futsalreserva", torLink: "futsalreserva", noAutoResult: true, partidos: [
-            {l:"Liniers", v:"Dublin", hora:"20:30", gl:7, gv:2, claseL:"liniers", claseV:"dublin",nota: "en cancha de Comercial"},
-            {l:"La Estación", v:"Villa Mitre", hora:"20:30", gl:null, gv:null, claseL:"laestacion", claseV:"villamitre",nota: "en cancha de Don Bosco"},
-            ]},
-       ]},
-     { id: "2026-11-12", label: "JUE 12/11", torneos: [
-            { nombre: "FEDERAL A | REVÁLIDA - CUARTA RONDA | IDA", cat: "federala", torLink: "federala", noAutoResult: true, partidos: [
-            {l:"Kimberley", v:"<b>Olimpo</b>", hora:"15:30", gl:1, gv:1, claseL:"kimberley", claseV:"olimpo"},
-            ]},
-            { nombre: "FUTSAL | CUARTOS DE FINAL", cat: "futsal", torLink: "futsal", noAutoResult: true, partidos: [
-            {l:"La Esperanza", v:"Villa Mitre", hora:"22:00", gl:6, gv:5, claseL:"laesperanza", claseV:"villamitre",nota: "en cancha de Don Bosco"},
-            ]},
-            { nombre: "FUTSAL (RESERVA) | CUARTOS DE FINAL", cat: "futsalreserva", torLink: "futsalreserva", noAutoResult: true, partidos: [
-            {l:"La Esperanza", v:"Petroquímicos", hora:"20:30", gl:2, gv:2, claseL:"laesperanza", claseV:"petroquimicos",nota: "en cancha de Don Bosco"},
-            ]},
-       ]},
-     { id: "2026-11-13", label: "VIÉ 13/11", torneos: [
-            { nombre: "FUTSAL | CUARTOS DE FINAL", cat: "futsal", torLink: "futsal", noAutoResult: true, partidos: [
-            {l:"Los 3 Chiflados", v:"Liniers", hora:"22:00", gl:null, gv:null, claseL:"los3chiflados", claseV:"liniers",nota: "en cancha de La Curtiembre"},
-            ]},
-            { nombre: "FUTSAL (RESERVA) | CUARTOS DE FINAL", cat: "futsalreserva", torLink: "futsalreserva", noAutoResult: true, partidos: [
-            {l:"Los 3 Chiflados", v:"Comercial", hora:"20:30", gl:null, gv:null, claseL:"los3chiflados", claseV:"comercial", nota:"en cancha de La Curtiembre"},
-            ]},
-       ]},
-     { id: "2026-11-14", label: "SÁB 14/11", torneos: [
-            { nombre: "OFICIAL | CLAUSURA | SEMIFINALES", cat: "oficial", torLink: "oficial", noAutoResult: true, partidos: [
-            {l:"Huracán", v:"Libertad", hora:"15:00", gl:0, gv:0, pen_l:3, pen_v:5, claseL:"huracan", claseV:"libertad"},
-            ]},
-            { nombre: "PROMOCIONAL | CLAUSURA | SEMIFINALES", cat: "promocional", torLink: "promocional", noAutoResult: true, partidos: [
-            {l:"Olimpo", v:"Comercial", hora:"16:00", gl:1, gv:0, claseL:"olimpo", claseV:"comercial"},
-            {l:"Tiro Federal", v:"Rosario PB", hora:"16:00", gl:3, gv:1, claseL:"tirofederal", claseV:"rosariopb"},
-            ]},
-            { nombre: "2° FEMENINO | FINAL ÚNICA", cat: "segundafemenino", torLink: "segundafemenino", noAutoResult: true, partidos: [
-            {l:"Liniers", v:"Petroquímicos", hora:"16:00", gl:null, gv:null, claseL:"liniers", claseV:"petroquimicos",nota:"SUSPENDIDO"},
-            ]},
-            { nombre: "SUB 15 | FINAL", cat: "sub15fem", torLink: "sub15fem", noAutoResult: true, partidos: [
-            {l:"Liniers", v:"Bella Vista", hora:"16:00", gl:4, gv:0, claseL:"liniers", claseV:"bellavista",nota:"Si gana Liniers, será campeón; si gana Bella Vista se jugará una final extra"},
-            ]},
-            { nombre: "REGIONAL AMATEUR | CUARTA RONDA | BONAERENSE PAMPEANA SUR | VUELTA (HURACÁN)", cat: "regamateurtemporada", torLink: "regamateurtemporada", noAutoResult: true, partidos: [
-            {l:"Deportivo Norte", v:"Racing de Olavarría", hora:"16:00", gl:1, gv:1, pen_l:5, pen_v:6, claseL:"depnorte", claseV:"racingolavarria",nota:"Ida: 1-1"},
-            ]},
-       ]},
-     { id: "2026-11-15", label: "DOM 15/11", torneos: [
-            { nombre: "OFICIAL | CLAUSURA | SEMIFINALES", cat: "oficial", torLink: "oficial", noAutoResult: true, partidos: [
-            {l:"San Francisco", v:"Bella Vista", hora:"16:00", gl:1, gv:2, claseL:"sanfrancisco", claseV:"bellavista"},
-            ]},
-            { nombre: "OFICIAL | DESEMPATE | DESCENSO/PROMOCIÓN", cat: "oficial", torLink: "oficial", noAutoResult: true, partidos: [
-            {l:"La Armonía", v:"Sporting", hora:"16:00", gl:0, gv:2, claseL:"laarmonia", claseV:"sporting",nota:"en cancha de Liniers"},
-            ]},
-            { nombre: "FEMENINO | CLAUSURA | FINAL", cat: "femenino", torLink: "femenino", noAutoResult: true, partidos: [
-            {l:"Municipales", v:"Villa Mitre", hora:"16:00", gl:3, gv:4, claseL:"municipales", claseV:"villamitre",nota:"Si gana Villa Mitre, se jugará una final extra para determinar el campeón del Clausura; si gana Municipales, automáticamente será el campeón anual"},
-            ]},
-            { nombre: "REGIONAL AMATEUR | CUARTA RONDA | BONAERENSE PAMPEANA SUR | VUELTA", cat: "regamateurtemporada", torLink: "regamateurtemporada", noAutoResult: true, partidos: [
-            {l:"<b>Huracán</b>", v:"Ferro de Pico", hora:"20:00", gl:null, gv:null, claseL:"huracan", claseV:"ferropico",nota:"Ida: 0-3"},
-            ]},
-            { nombre: "FEDERAL A | REVÁLIDA - CUARTA RONDA | VUELTA (OLIMPO)", cat: "federala", torLink: "federala", noAutoResult: true, partidos: [
-            {l:"Cipolletti", v:"Juventud Antoniana", hora:"15:00", gl:3, gv:0, claseL:"cipolletti", claseV:"jantoniana",nota:"Ida: 0-1"},
-            {l:"Alvarado", v:"Sarmiento de La Banda", hora:"16:00", gl:0, gv:0, claseL:"alvarado", claseV:"sarmientolb",nota:"Ida: 0-1"},
-            {l:"Gimnasia de Chivilcoy", v:"Douglas Haig", hora:"17:00", gl:2, gv:2, claseL:"gimnasiachivilcoy", claseV:"douglashaig",nota:"Ida: 0-1"},
-            ]},
-       ]},
      { id: "2026-11-17", label: "MAR 17/11", torneos: [
             { nombre: "FEDERAL A | REVÁLIDA - CUARTA RONDA | VUELTA", cat: "federala", torLink: "federala", noAutoResult: true, partidos: [
             {l:"<b>Olimpo</b>", v:"Kimberley", hora:"20:15", gl:null, gv:null, claseL:"olimpo", claseV:"kimberley",nota:"en la ida: 1-1"},
@@ -2296,16 +2217,16 @@ const BD_FEDERAL_REVALIDA = {
             vuelta: { local: "Olimpo", clL: "olimpo", visitante: "Kimberley", clV: "kimberley", gl: null, gv: null, goles_l: [], goles_v: [] }
         },
         {
-            ida:    { local: "Juventud Antoniana", clL: "jantoniana", visitante: "<b>Cipolletti</b>", clV: "cipolletti", gl: 1, gv: 0, goles_l: [], goles_v: [] },
-            vuelta: { local: "<b>Cipolletti</b>", clL: "cipolletti", visitante: "Juventud Antoniana", clV: "jantoniana", gl: 3, gv: 0, goles_l: [], goles_v: [] }
+            ida:    { local: "<s>Juventud Antoniana</s>", clL: "jantoniana", visitante: "<b>Cipolletti</b>", clV: "cipolletti", gl: 1, gv: 0, goles_l: [], goles_v: [] },
+            vuelta: { local: "<b>Cipolletti</b>", clL: "cipolletti", visitante: "<s>Juventud Antoniana</s>", clV: "jantoniana", gl: 3, gv: 0, goles_l: [], goles_v: [] }
         },
         {
-            ida:    { local: "<b>Sarmiento de La Banda</b>", clL: "sarmientolb", visitante: "Alvarado", clV: "alvarado", gl: 1, gv: 0, goles_l: [], goles_v: [] },
-            vuelta: { local: "Alvarado", clL: "alvarado", visitante: "<b>Sarmiento de La Banda</b>", clV: "sarmientolb", gl: 0, gv: 0, goles_l: [], goles_v: [] }
+            ida:    { local: "<b>Sarmiento de La Banda</b>", clL: "sarmientolb", visitante: "<s>Alvarado</s>", clV: "alvarado", gl: 1, gv: 0, goles_l: [], goles_v: [] },
+            vuelta: { local: "<s>Alvarado</s>", clL: "alvarado", visitante: "<b>Sarmiento de La Banda</b>", clV: "sarmientolb", gl: 0, gv: 0, goles_l: [], goles_v: [] }
         },
         {
-            ida:    { local: "<b>Douglas Haig</b>", clL: "douglashaig", visitante: "Gimnasia de Chivilcoy", clV: "gimnasiachivilcoy", gl: 1, gv: 0, goles_l: [], goles_v: [] },
-            vuelta: { local: "Gimnasia de Chivilcoy", clL: "gimnasiachivilcoy", visitante: "<b>Douglas Haig</b>", clV: "douglashaig", gl: 2, gv: 2, goles_l: [], goles_v: [] }
+            ida:    { local: "<b>Douglas Haig</b>", clL: "douglashaig", visitante: "<s>Gimnasia de Chivilcoy</s>", clV: "gimnasiachivilcoy", gl: 1, gv: 0, goles_l: [], goles_v: [] },
+            vuelta: { local: "<s>Gimnasia de Chivilcoy</s>", clL: "gimnasiachivilcoy", visitante: "<b>Douglas Haig</b>", clV: "douglashaig", gl: 2, gv: 2, goles_l: [], goles_v: [] }
         }
     ],
     quintaRonda: [
@@ -16394,6 +16315,7 @@ const BD_H2H = {
         { fecha: "Fecha 8 - Apertura 2026", torneo: "reserva_promocional", l: "Pacífico BB", v: "Olimpo", gl: 0, gv: 2, goles_l: [], goles_v: ["Valentín Quidel","Santiago Llanos"] },
         { fecha: "Fecha 1 - Clausura 2026 - 01 ago 2026", torneo: "promocional", l: "Pacífico BB", v: "Olimpo", gl: 0, gv: 0 },
         { fecha: "Fecha 1 - Clausura 2026", torneo: "reserva_promocional", l: "Pacífico BB", v: "Olimpo", gl: 0, gv: 1 },
+        { fecha: "Semifinales - Clausura 2026", torneo: "reserva_promocional", l: "Olimpo", v: "Pacífico BB", gl: 0, gv: 0, pen_l:3, pen_v:5 },
     ],
     "Pacífico (C)|Sansinena": [
         { fecha: "Fecha 1 - Apertura 2026 - 15 mar 2026", torneo: "promocional", l: "Sansinena", v: "Pacífico (C)", gl: 3, gv: 3, goles_l: ["Pablo González","Valentín Moral","Manuel Stortini"], goles_v: ["Gianni Ferrari (2)","Emanuel López"] },
@@ -16452,6 +16374,7 @@ const BD_H2H = {
         { fecha: "Fecha 10 - Torneo 2026 - 30 may", torneo: "segundafemenino", l: "Estrella de Oro", v: "Liniers", gl: 0, gv: 2, goles_l: [], goles_v: ["Paulina Acevedo","Isabella Pezzutti"] },
         { fecha: "Fecha 19 - Torneo 2026 - 09 ago", torneo: "segundafemenino", l: "Estrella de Oro", v: "Liniers", gl: 0, gv: 1, goles_l: [], goles_v: ["María Paz Marino"] },
         { fecha: "Fecha 19 - Torneo 2026", torneo: "reserva_segundafemenino", l: "Estrella de Oro", v: "Liniers", gl: 2, gv: 4 },
+        { fecha: "Semifinal - Torneo 2026", torneo: "reserva_segundafemenino", l: "Liniers", v: "Estrella de Oro", gl: 3, gv: 0 },
     ],
     "Olimpo|Rosario PB": [
         { fecha: "Fecha 4 - Apertura 2026 - 03 abr 2026", torneo: "promocional", l: "Olimpo", v: "Rosario PB", gl: 2, gv: 2, goles_l: ["Nahuel Colmenares (2)"], goles_v: ["Ezequiel Katz","Agustín Grippaudo"] },
@@ -16750,7 +16673,7 @@ const BD_H2H = {
         { fecha: "Fecha 2 - Clausura 2026", torneo: "reserva_femenino", l: "Villa Mitre", v: "Empleados de Comercio", gl: 1, gv: 0 },
         { fecha: "Torneo Federal Femenino 2026 - Primera Ronda - Vuelta - 8 ago", torneo: "femenino", l: "Municipales", v: "Villa Mitre", gl: 1, gv: 2, goles_l: [], goles_v: [] },
         { fecha: "Fecha 9 - Clausura 2026 - 20 ago", torneo: "femenino", l: "Municipales", v: "Villa Mitre", gl: 1, gv: 4, goles_l: ["Victoria Nervi"], goles_v: ["Lucrecia Semper (4)","Morena Bouven","Camila Aliata"] },
-        { fecha: "Clausura 2026 - Final - 15 nov", torneo: "femenino", l: "Municipales", v: "Villa Mitre", gl: 3, gv: 4, goles_l: [], goles_v: [] },
+        { fecha: "Clausura 2026 - Final - 15 nov", torneo: "femenino", l: "Municipales", v: "Villa Mitre", gl: 3, gv: 4, goles_l: ["Victoria Nervi","Marianela Santana","Abigail Britos"], goles_v: ["Lucrecia Semper (2)","Morena Bouven","Sol Menéndez Perrone"] },
     ],
     "Empleados de Comercio|Libertad": [
         { fecha: "Fecha 2 - Apertura 2026 - 28 mar", torneo: "femenino", l: "Libertad", v: "Empleados de Comercio", gl: 0, gv: 5, goles_l: [], goles_v: ["Marianela Santana (4)","Trinidad Rivas"] },
@@ -16853,6 +16776,7 @@ const BD_H2H = {
         { fecha: "Apertura 2026 - Fecha 2", torneo: "futsalreserva", l: "Los 3 Chiflados", v: "Liniers", gl: 3, gv: 1 },
         { fecha: "Clausura 2026 - Fecha 2", torneo: "futsal", l: "Liniers", v: "Los 3 Chiflados", gl: 1, gv: 2 },
         { fecha: "Clausura 2026 - Fecha 2", torneo: "futsalreserva", l: "Liniers", v: "Los 3 Chiflados", gl: 1, gv: 5 },
+        { fecha: "Clausura 2026 - Semifinales", torneo: "futsal", l: "Los 3 Chiflados", v: "Liniers", gl: 2, gv: 4 },
     ],
     "La Estación|Pacífico BB": [
         { fecha: "Apertura 2026 - Fecha 2", torneo: "futsal", l: "La Estación", v: "Pacífico BB", gl: 8, gv: 5 },
@@ -17192,6 +17116,7 @@ const BD_H2H = {
         { fecha: "Fecha 3 - Clausura 2026", torneo: "reserva_femenino", l: "Municipales", v: "Tiro Federal", gl: 1, gv: 1 },
         { fecha: "Fecha 10 - Clausura 2026 - 27 ago", torneo: "femenino", l: "Tiro Federal", v: "Municipales", gl: 1, gv: 5, goles_l: ["Abril Sáenz"], goles_v: ["Luján Díaz (2)","Valeria Navarrete (2)","Stefanía Sueyro"] },
         { fecha: "Fecha 10 - Clausura 2026", torneo: "reserva_femenino", l: "Tiro Federal", v: "Municipales", gl: 1, gv: 1 },
+        { fecha: "Final - Clausura 2026", torneo: "reserva_femenino", l: "Tiro Federal", v: "Municipales", gl: 0, gv: 1 },
     ],
     "La Armonía|Libertad": [
         { fecha: "Fecha 3 - Apertura 2026 - 05 abr", torneo: "femenino", l: "La Armonía", v: "Libertad", gl: 2, gv: 0, goles_l: ["Aixa Bruzzone (2)"], goles_v: [] },
@@ -17235,6 +17160,7 @@ const BD_H2H = {
         { fecha: "Clausura 2026 - Fecha 4", torneo: "senior", l: "Tiro Federal", v: "Sansinena", gl: 1, gv: 1, goles_l: ["Daniel Fernández"], goles_v: ["Pablo Moggia"] },
         { fecha: "Fecha 12 - Clausura 2026 - 17 oct", torneo: "promocional", l: "Tiro Federal", v: "Sansinena", gl: 1, gv: 0, goles_l: ["Mariano McCoubrey"], goles_v: [] },
         { fecha: "Fecha 12 - Clausura 2026", torneo: "reserva_promocional", l: "Tiro Federal", v: "Sansinena", gl: 1, gv: 1 },
+        { fecha: "Semifinales - Clausura 2026", torneo: "reserva_promocional", l: "Tiro Federal", v: "Sansinena", gl: 2, gv: 2, pen_l:3, pen_v:4 },
     ],
     "Bella Vista|Pacífico BB": [
         { fecha: "Apertura 2026 - Fecha 4", torneo: "senior", l: "Pacífico BB", v: "Bella Vista", gl: 1, gv: 1, goles_l: [], goles_v: [] },
@@ -17675,6 +17601,7 @@ const BD_H2H = {
         { fecha: "Apertura 2026 - Cuartos de final", torneo: "futsal", l: "Los 3 Chiflados", v: "Comercial", gl: 3, gv: 3 },
         { fecha: "Clausura 2026 - Fecha 8", torneo: "futsal", l: "Los 3 Chiflados", v: "Comercial", gl: 6, gv: 3 },
         { fecha: "Clausura 2026 - Fecha 8", torneo: "futsalreserva", l: "Los 3 Chiflados", v: "Comercial", gl: 6, gv: 1 },
+        { fecha: "Clausura 2026 - Semifinales", torneo: "futsalreserva", l: "Los 3 Chiflados", v: "Comercial", gl: 8, gv: 0 },
     ],
     "La Esperanza|Tiro Federal": [
         { fecha: "Apertura 2026 - Fecha 13", torneo: "futsal", l: "La Esperanza", v: "Tiro Federal", gl: 9, gv: 3 },
@@ -17705,6 +17632,7 @@ const BD_H2H = {
         { fecha: "Apertura 2026 - Final", torneo: "futsal", l: "La Estación", v: "Villa Mitre", gl: 3, gv: 3, pen_l:4, pen_v:3 },
         { fecha: "Clausura 2026 - Fecha 13", torneo: "futsal", l: "Villa Mitre", v: "La Estación", gl: 1, gv: 1 },
         { fecha: "Clausura 2026 - Fecha 13", torneo: "futsalreserva", l: "Villa Mitre", v: "La Estación", gl: 3, gv: 3 },
+        { fecha: "Clausura 2026 - Semifinales", torneo: "futsalreserva", l: "La Estación", v: "Villa Mitre", gl: 2, gv: 2 },
     ],
     "Los 3 Chiflados|San Francisco": [
         { fecha: "Apertura 2026 - Fecha 6", torneo: "futsal", l: "Los 3 Chiflados", v: "San Francisco", gl: 8, gv: 4 },
@@ -18176,6 +18104,7 @@ const BD_H2H = {
     ],
     "Huracán|Ferro de Pico": [
         { fecha: "Regional Amateur 2026 - Bonaerense Pampeana Sur - Cuarta Ronda - Ida", torneo: "regamateurtemp", l: "Ferro de Pico", v: "Huracán", gl: 3, gv: 0, goles_l: [], goles_v: [] },
+        { fecha: "Regional Amateur 2026 - Bonaerense Pampeana Sur - Cuarta Ronda - Vuelta", torneo: "regamateurtemp", l: "Huracán", v: "Ferro de Pico", gl: 5, gv: 1, goles_l: ["Iván Agudiak (2)","Leonel Navarro (2)","Walter Linares"], goles_v: [] },
     ],
 };
 
@@ -19228,9 +19157,9 @@ const BD_SENIOR_CLAUSURA = [
     { n: "Pacífico (C)",  mostrar: "Pacífico (C) <b>(A)</b> <b>(SF)</b>", cl: "pacificoc",    pj:9, pg:7, pe:0, pp:2, gf:17, gc:14, pts:21 },
     { n: "Bella Vista",  mostrar: "Bella Vista <b>(1/8)</b>", cl: "bellavista",   pj:9, pg:5, pe:1, pp:3, gf:17, gc:14, pts:16 },
     { n: "Pacífico BB",  mostrar: "Pacífico BB <b>(1/8)</b>", cl: "pacificobb",   pj:9, pg:5, pe:0, pp:4, gf:20, gc:21, pts:15 },
+    { n: "Sansinena",  mostrar: "Sansinena <b>(1/8)</b>", cl: "sansinena",    pj:9, pg:4, pe:1, pp:4, gf:21, gc:17, pts:13 },
     { n: "Huracán",  mostrar: "Huracán <b>(1/8)</b>", cl: "huracan",      pj:9, pg:4, pe:1, pp:4, gf:22, gc:18, pts:13 },
     { n: "Comercial",  mostrar: "Comercial <b>(1/8)</b>", cl: "comercial",    pj:9, pg:4, pe:0, pp:5, gf:20, gc:14, pts:12 },
-    { n: "Sansinena",  mostrar: "Sansinena <b>(1/8)</b>", cl: "sansinena",    pj:9, pg:4, pe:1, pp:4, gf:21, gc:17, pts:13 },
     { n: "San Francisco",  mostrar: "San Francisco <b>(1/8)</b>", cl: "sanfrancisco", pj:9, pg:2, pe:1, pp:6, gf:13, gc:29, pts:7 },
     { n: "Tiro Federal",  mostrar: "Tiro Federal <b>(1/8)</b>", cl: "tirofederal",  pj:9, pg:1, pe:3, pp:5, gf:17, gc:22, pts:6 },
     { n: "Sporting",  mostrar: "Sporting <b>(1/8)</b>", cl: "sporting",     pj:9, pg:1, pe:1, pp:7, gf:12, gc:25, pts:4 },
@@ -20973,15 +20902,16 @@ const BD_GOLEADORAS_CLAUSURA_FEM = [
           { fecha: "Fecha 7", rival: "La Armonía", gl: 5, gv: 0, condicion: "Local", goles: 1 }
       ]
     },
-{ jugadora: "Abigail Britos", equipo: "Municipales", goles: 6,
+{ jugadora: "Abigail Britos", equipo: "Municipales", goles: 7,
       partidos: [
           { fecha: "Fecha 6", rival: "Municipales", gl: 0, gv: 2, condicion: "Visitante", goles: 2 },
           { fecha: "Fecha 7", rival: "La Armonía", gl: 5, gv: 0, condicion: "Local", goles: 2 },
           { fecha: "Fecha 8", rival: "Sporting", gl: 4, gv: 2, condicion: "Local", goles: 1 },
           { fecha: "Semifinales", rival: "Bella Vista", gl: 4, gv: 0, condicion: "Local", goles: 1 },
+          { fecha: "Final", rival: "Villa Mitre", gl: 3, gv: 4, condicion: "Visitante", goles: 1 },
       ]
     },
-{ jugadora: "Victoria Nervi", equipo: "Municipales", goles: 9,
+{ jugadora: "Victoria Nervi", equipo: "Municipales", goles: 10,
       partidos: [
           { fecha: "Fecha 3", rival: "Tiro Federal", gl: 4, gv: 1, condicion: "Local", goles: 1 },
           { fecha: "Fecha 4", rival: "Libertad", gl: 0, gv: 6, condicion: "Visitante", goles: 2 },
@@ -20989,9 +20919,10 @@ const BD_GOLEADORAS_CLAUSURA_FEM = [
           { fecha: "Fecha 11", rival: "Libertad", gl: 8, gv: 0, condicion: "Local", goles: 1 },
           { fecha: "Fecha 12", rival: "Bella Vista", gl: 3, gv: 0, condicion: "Local", goles: 1 },
           { fecha: "Semifinales", rival: "Bella Vista", gl: 4, gv: 0, condicion: "Local", goles: 3 },
+          { fecha: "Final", rival: "Villa Mitre", gl: 3, gv: 4, condicion: "Visitante", goles: 1 },
       ]
     },
-{ jugadora: "Marianela Santana", equipo: "Municipales", goles: 10,
+{ jugadora: "Marianela Santana", equipo: "Municipales", goles: 11,
       partidos: [
           { fecha: "Fecha 4", rival: "Libertad", gl: 0, gv: 6, condicion: "Visitante", goles: 1 },
           { fecha: "Fecha 5", rival: "Bella Vista", gl: 0, gv: 2, condicion: "Visitante", goles: 2 },
@@ -20999,6 +20930,7 @@ const BD_GOLEADORAS_CLAUSURA_FEM = [
           { fecha: "Fecha 12", rival: "Bella Vista", gl: 3, gv: 0, condicion: "Local", goles: 1 },
           { fecha: "Fecha 13", rival: "Empleados de Comercio", gl: 6, gv: 1, condicion: "Local", goles: 2 },
           { fecha: "Fecha 14", rival: "La Armonía", gl: 0, gv: 1, condicion: "Visitante", goles: 1 },
+          { fecha: "Final", rival: "Villa Mitre", gl: 3, gv: 4, condicion: "Visitante", goles: 1 },
       ]
     },
 { jugadora: "Alison Guerrero", equipo: "Empleados de Comercio", goles: 2,
@@ -21248,21 +21180,23 @@ const BD_GOLEADORAS_CLAUSURA_FEM = [
           { fecha: "Fecha 7", rival: "Empleados de Comercio", gl: 4, gv: 0, condicion: "Local", goles: 1 }
       ]
     },
-{ jugadora: "Sol Menéndez Perrone", equipo: "Villa Mitre", goles: 11,
+{ jugadora: "Sol Menéndez Perrone", equipo: "Villa Mitre", goles: 12,
       partidos: [
           { fecha: "Fecha 3", rival: "Sporting", gl: 0, gv: 5, condicion: "Visitante", goles: 1 },
           { fecha: "Fecha 5", rival: "Libertad", gl: 1, gv: 0, condicion: "Local", goles: 1 },
           { fecha: "Fecha 12", rival: "Libertad", gl: 0, gv: 6, condicion: "Visitante", goles: 3 },
           { fecha: "Fecha 13", rival: "Bella Vista", gl: 4, gv: 0, condicion: "Local", goles: 1 },
-          { fecha: "Fecha 14", rival: "Empleados de Comercio", gl: 1, gv: 5, condicion: "Visitante", goles: 5 }
+          { fecha: "Fecha 14", rival: "Empleados de Comercio", gl: 1, gv: 5, condicion: "Visitante", goles: 5 },
+          { fecha: "Final", rival: "Villa Mitre", gl: 3, gv: 4, condicion: "Visitante", goles: 1 },
       ]
     },
-{ jugadora: "Morena Bouven", equipo: "Villa Mitre", goles: 5,
+{ jugadora: "Morena Bouven", equipo: "Villa Mitre", goles: 6,
       partidos: [
           { fecha: "Fecha 2", rival: "Municipales", gl: 2, gv: 2, condicion: "Local", goles: 1 },
           { fecha: "Fecha 3", rival: "Sporting", gl: 0, gv: 5, condicion: "Visitante", goles: 1 },
           { fecha: "Fecha 9", rival: "Municipales", gl: 1, gv: 4, condicion: "Visitante", goles: 1 },
-          { fecha: "Fecha 13", rival: "Bella Vista", gl: 4, gv: 0, condicion: "Local", goles: 2 }
+          { fecha: "Fecha 13", rival: "Bella Vista", gl: 4, gv: 0, condicion: "Local", goles: 2 },
+          { fecha: "Final", rival: "Villa Mitre", gl: 3, gv: 4, condicion: "Visitante", goles: 1 },
       ]
     },
 { jugadora: "Camila Aliata", equipo: "Villa Mitre", goles: 2,
@@ -21278,12 +21212,13 @@ const BD_GOLEADORAS_CLAUSURA_FEM = [
           { fecha: "Fecha 4", rival: "Tiro Federal", gl: 2, gv: 2, condicion: "Visitante", goles: 1 },
       ]
     },
-{ jugadora: "Lucrecia Semper", equipo: "Villa Mitre", goles: 7,
+{ jugadora: "Lucrecia Semper", equipo: "Villa Mitre", goles: 9,
       partidos: [
           { fecha: "Fecha 4", rival: "Tiro Federal", gl: 2, gv: 2, condicion: "Visitante", goles: 1 },
           { fecha: "Fecha 9", rival: "Municipales", gl: 1, gv: 4, condicion: "Visitante", goles: 3 },
           { fecha: "Fecha 11", rival: "Tiro Federal", gl: 2, gv: 3, condicion: "Local", goles: 1 },
           { fecha: "Semifinales", rival: "Tiro Federal", gl: 6, gv: 1, condicion: "Local", goles: 2 },
+          { fecha: "Final", rival: "Villa Mitre", gl: 3, gv: 4, condicion: "Visitante", goles: 2 },
       ]
     },
 { jugadora: "Jéssica Mella", equipo: "Villa Mitre", goles: 6,
@@ -23647,18 +23582,18 @@ const BD_REGAMATEUR_PLAYOFFS = {
           vuelta: { local: "<s>Estudiantes (Olavarría)</s>", clL: "estudiantesolavarria", visitante: "<b>Racing de Olavarría</b>", clV: "racingolavarria", gl: 0, gv: 1, goles_l: [], goles_v: [] } }
     ],
     cuarta: [
-        { ida:    { local: "Ferro de Pico", clL: "ferropico", visitante: "Huracán", clV: "huracan", gl: 3, gv: 0, goles_l: [], goles_v: [] },
-          vuelta: { local: "Huracán", clL: "huracan", visitante: "Ferro de Pico", clV: "ferropico", gl: null, gv: null, goles_l: [], goles_v: [] } },
+        { ida:    { local: "<s>Ferro de Pico</s>", clL: "ferropico", visitante: "<b>Huracán</b>", clV: "huracan", gl: 3, gv: 0, goles_l: [], goles_v: [] },
+          vuelta: { local: "<b>Huracán</b>", clL: "huracan", visitante: "<s>Ferro de Pico</s>", clV: "ferropico", gl: 5, gv: 1, goles_l: ["Leonel Navarro (2)","Walter Linares","Iván Agudiak (2)"], goles_v: [] } },
         { ida:    { local: "<b>Racing de Olavarría</b>", clL: "racingolavarria", visitante: "<s>Deportivo Norte</s>", clV: "depnorte", gl: 1, gv: 1, goles_l: [], goles_v: [] },
-          vuelta: { local: "<s>Deportivo Norte</s>", clL: "depnorte", visitante: "<b>Racing de Olavarría</b>", clV: "racingolavarria", gl: null, gv: null, goles_l: [], goles_v: [] } }
+          vuelta: { local: "<s>Deportivo Norte</s>", clL: "depnorte", visitante: "<b>Racing de Olavarría</b>", clV: "racingolavarria", gl: 1, gv: 1, pen_l:5, pen_v:6, goles_l: [], goles_v: [] } }
     ],
     quinta: [
-        { ida:    { local: "A confirmar", clL: "aconfirmar", visitante: "A confirmar", clV: "aconfirmar", gl: null, gv: null, goles_l: [], goles_v: [] },
-          vuelta: { local: "A confirmar", clL: "aconfirmar", visitante: "A confirmar", clV: "aconfirmar", gl: null, gv: null, goles_l: [], goles_v: [] } }
+        { ida:    { local: "Huracán", clL: "huracan", visitante: "Racing de Olavarría", clV: "racingolavarria", gl: null, gv: null, goles_l: [], goles_v: [] },
+          vuelta: { local: "Racing de Olavarría", clL: "racingolavarria", visitante: "Huracán", clV: "huracan", gl: null, gv: null, goles_l: [], goles_v: [] } }
     ]
 };
 
-let subRondaRegAmateurPlayoffs = 'cuarta';
+let subRondaRegAmateurPlayoffs = 'quinta';
 
 function generarRegAmateurPlayoffs() {
     let html = `<div class="header-t">REGIONAL AMATEUR — PLAYOFFS</div>`;
@@ -23873,9 +23808,10 @@ BD_GOLEADORES_REGAMATEUR.push({
     ]
 });
 BD_GOLEADORES_REGAMATEUR.push({
-    jugador: "Leonel Navarro", equipo: "Huracán", goles: 1,
+    jugador: "Leonel Navarro", equipo: "Huracán", goles: 3,
     partidos: [
         { rival: "Sarmiento de Pigué", resultado: "Sarmiento de Pigué 1 - 2 Huracán", instancia: "Zona 3 - Fecha 4 - Primera Instancia" },
+        { rival: "Ferro de Pico", resultado: "Huracán 5 - 1 Ferro de Pico", instancia: "Bonaerense Pampeana Sur - Cuarta Instancia - Vuelta (DOBLETE)" },
     ]
 });
 BD_GOLEADORES_REGAMATEUR.push({
@@ -23891,12 +23827,13 @@ BD_GOLEADORES_REGAMATEUR.push({
     ]
 });
 BD_GOLEADORES_REGAMATEUR.push({
-    jugador: "Iván Agudiak", equipo: "Huracán", goles: 5,
+    jugador: "Iván Agudiak", equipo: "Huracán", goles: 7,
     partidos: [
         { rival: "Ferro de Olavarría", resultado: "Huracán 3 - 0 Ferro de Olavarría", instancia: "Zona 3 - Fecha 5 - Primera Instancia" },
         { rival: "Independiente de San Cayetano", resultado: "Independiente (SC) 1 - 2 Huracán", instancia: "Segunda Ronda - Bonaerense Pampeana Sur - Ida" },
         { rival: "Independiente de San Cayetano", resultado: "Huracán 1 - 0 Independiente de San Cayetano", instancia: "Bonaerense Pampeana Sur - Segunda Instancia - Vuelta" },
         { rival: "Santa Rita", resultado: "Huracán 3 - 0 Santa Rita", instancia: "Bonaerense Pampeana Sur - Tercera Instancia - Ida" },
+        { rival: "Ferro de Pico", resultado: "Huracán 5 - 1 Ferro de Pico", instancia: "Bonaerense Pampeana Sur - Cuarta Instancia - Vuelta (DOBLETE)" },
     ]
 });
 BD_GOLEADORES_REGAMATEUR.push({
@@ -23909,6 +23846,12 @@ BD_GOLEADORES_REGAMATEUR.push({
     jugador: "Agustín Seisdedos", equipo: "Huracán", goles: 1,
     partidos: [
         { rival: "Santa Rita", resultado: "Huracán 3 - 0 Santa Rita", instancia: "Bonaerense Pampeana Sur - Tercera Instancia - Ida" },
+    ]
+});
+BD_GOLEADORES_REGAMATEUR.push({
+    jugador: "Walter Linares", equipo: "Huracán", goles: 1,
+    partidos: [
+        { rival: "Ferro de Pico", resultado: "Huracán 5 - 1 Ferro de Pico", instancia: "Bonaerense Pampeana Sur - Cuarta Instancia - Vuelta" },
     ]
 });
 
@@ -25792,7 +25735,7 @@ const BD_RESERVA_SEGUNDAFEMENINO_PLAYOFFS = {
         },
     ],
     semis: [
-        { local: "Liniers", clL: "liniers", visitante: "Estrella de Oro", clV: "estrellaoro", gl: null, gv: null, goles_l: [], goles_v: [] },
+        { local: "<b>Liniers</b>", clL: "liniers", visitante: "<s>Estrella de Oro</s>", clV: "estrellaoro", gl: 3, gv: 0, goles_l: [], goles_v: [] },
         { local: "San Francisco", clL: "sanfrancisco", visitante: "Rosario PB", clV: "rosariopb", gl: null, gv: null, goles_l: [], goles_v: [] },
     ]
 };
@@ -25864,7 +25807,8 @@ const BD_FEMENINO_CLAUSURA_PLAYOFFS = {
         { local: "<b>Municipales</b>", clL: "municipales", visitante: "<s>Bella Vista</s>", clV: "bellavista", gl: 4, gv: 0, goles_l: ["Victoria Nervi (3)","Abigail Britos"], goles_v: [] },
         { local: "<b>Villa Mitre</b>", clL: "villamitre", visitante: "<s>Tiro Federal</s>", clV: "tirofederal", gl: 6, gv: 1, goles_l: ["Vera Moggia (2)","Lucrecia Semper (2)","Jéssica Mella (2)"], goles_v: ["Camila Odriozola"] }
     ],
-    final: { local: "Municipales", clL: "municipales", visitante: "Villa Mitre", clV: "villamitre", gl: null, gv: null, goles_l: [], goles_v: [] }
+    final: { local: "Municipales", clL: "municipales", visitante: "Villa Mitre", clV: "villamitre", gl: 3, gv: 4, goles_l: ["Victoria Nervi","Marianela Santana","Abigail Britos"], goles_v: ["Lucrecia Semper (2)","Morena Bouven","Sol Menéndez Perrone"] },
+    finalExtra: { local: "Municipales", clL: "municipales", visitante: "Villa Mitre", clV: "villamitre", gl: null, gv: null, goles_l: [], goles_v: [] }
 };
 
 const BD_RESERVA_FEMENINO_CLAUSURA_PLAYOFFS = {
@@ -25872,13 +25816,14 @@ const BD_RESERVA_FEMENINO_CLAUSURA_PLAYOFFS = {
         { local: "<s>Bella Vista</s>", clL: "bellavista", visitante: "<b>Municipales</b>", clV: "municipales", gl: 1, gv: 2, goles_l: [], goles_v: [] },
         { local: "<b>Tiro Federal</b>", clL: "tirofederal", visitante: "<s>Villa Mitre</s>", clV: "villamitre", gl: 1, gv: 0, goles_l: [], goles_v: [] }
     ],
-    final: { local: "Tiro Federal", clL: "tirofederal", visitante: "Municipales", clV: "municipales", gl: null, gv: null, goles_l: [], goles_v: [] }
+    final: { local: "<s>Tiro Federal</s>", clL: "tirofederal", visitante: "<b>Municipales</b>", clV: "municipales", gl: 0, gv: 1, goles_l: [], goles_v: [] },
+    finalExtra: { local: "Bella Vista", clL: "bellavista", visitante: "Municipales", clV: "municipales", gl: null, gv: null, goles_l: [], goles_v: [] }
 };
 
 let torneoPlayoffsFem = 'clausura';
-let rondaPlayoffsFemClausura = 'semifinales';
+let rondaPlayoffsFemClausura = 'finalextra';
 let torneoPlayoffsResFem = 'clausura';
-let rondaPlayoffsResFemClausura = 'semifinales';
+let rondaPlayoffsResFemClausura = 'finalextra';
 
 function _btnPOFem(texto, activo, accion) {
     return `<button onclick="${accion}" style="font-size:10px;padding:4px 12px;border:1px solid #1a4a2e;border-radius:12px;cursor:pointer;font-weight:bold;background:${activo ? '#1a4a2e' : '#fff'};color:${activo ? '#fff' : '#1a4a2e'};">${texto}</button>`;
@@ -25899,10 +25844,15 @@ function generarFemeninoPlayoffs() {
     html += `<div style="display:flex;gap:6px;padding:8px;background:#f9f9f9;border-bottom:1px solid #ddd;">
         ${_btnPOFem('Semifinales', rondaPlayoffsFemClausura === 'semifinales', "rondaPlayoffsFemClausura='semifinales';document.getElementById('contenido').innerHTML=generarFemeninoPlayoffs()")}
         ${_btnPOFem('Final', rondaPlayoffsFemClausura === 'final', "rondaPlayoffsFemClausura='final';document.getElementById('contenido').innerHTML=generarFemeninoPlayoffs()")}
+        ${_btnPOFem('Final Extra', rondaPlayoffsFemClausura === 'finalextra', "rondaPlayoffsFemClausura='finalextra';document.getElementById('contenido').innerHTML=generarFemeninoPlayoffs()")}
     </div>`;
     if (rondaPlayoffsFemClausura === 'semifinales') {
         html += `<div class="header-t" style="font-size:11px;background:#2c6e49;">SEMIFINALES</div><table>`;
         BD_FEMENINO_CLAUSURA_PLAYOFFS.semifinales.forEach(p => { html += _renderPartidoPlayoff(p); });
+        html += `</table>`;
+    } else if (rondaPlayoffsFemClausura === 'finalextra') {
+        html += `<div class="header-t" style="font-size:11px;background:#2c6e49;">FINAL EXTRA</div><table>`;
+        html += _renderPartidoPlayoff(BD_FEMENINO_CLAUSURA_PLAYOFFS.finalExtra, 'Pendiente');
         html += `</table>`;
     } else {
         html += `<div class="header-t" style="font-size:11px;background:#7b1a1a;">🏆 FINAL</div><table>`;
@@ -25927,10 +25877,15 @@ function generarReservaFemeninoPlayoffs() {
     html += `<div style="display:flex;gap:6px;padding:8px;background:#f9f9f9;border-bottom:1px solid #ddd;">
         ${_btnPOFem('Semifinales', rondaPlayoffsResFemClausura === 'semifinales', "rondaPlayoffsResFemClausura='semifinales';document.getElementById('contenido').innerHTML=generarReservaFemeninoPlayoffs()")}
         ${_btnPOFem('Final', rondaPlayoffsResFemClausura === 'final', "rondaPlayoffsResFemClausura='final';document.getElementById('contenido').innerHTML=generarReservaFemeninoPlayoffs()")}
+        ${_btnPOFem('Final Extra', rondaPlayoffsResFemClausura === 'finalextra', "rondaPlayoffsResFemClausura='finalextra';document.getElementById('contenido').innerHTML=generarReservaFemeninoPlayoffs()")}
     </div>`;
     if (rondaPlayoffsResFemClausura === 'semifinales') {
         html += `<div class="header-t" style="font-size:11px;background:#2c6e49;">SEMIFINALES</div><table>`;
         BD_RESERVA_FEMENINO_CLAUSURA_PLAYOFFS.semifinales.forEach(p => { html += _renderPartidoPlayoff(p); });
+        html += `</table>`;
+    } else if (rondaPlayoffsResFemClausura === 'finalextra') {
+        html += `<div class="header-t" style="font-size:11px;background:#2c6e49;">FINAL EXTRA</div><table>`;
+        html += _renderPartidoPlayoff(BD_RESERVA_FEMENINO_CLAUSURA_PLAYOFFS.finalExtra, 'Pendiente');
         html += `</table>`;
     } else {
         html += `<div class="header-t" style="font-size:11px;background:#7b1a1a;">🏆 FINAL</div><table>`;
@@ -26097,27 +26052,39 @@ const BD_RESERVA_OFICIAL_CLAUSURA_PLAYOFFS = {
 
 const BD_RESERVA_PROMOCIONAL_CLAUSURA_PLAYOFFS = {
     semifinales: [
-        { local: "Olimpo", clL: "olimpo", visitante: "Pacífico BB", clV: "pacificobb", gl: null, gv: null, goles_l: [], goles_v: [] },
-        { local: "Tiro Federal", clL: "tirofederal", visitante: "Sansinena", clV: "sansinena", gl: null, gv: null, goles_l: [], goles_v: [] }
-    ]
+        { local: "<s>Olimpo</s>", clL: "olimpo", visitante: "<b>Pacífico BB</b>", clV: "pacificobb", gl: 0, gv: 0, pen_l:3, pen_v:5, goles_l: [], goles_v: [] },
+        { local: "<s>Tiro Federal</s>", clL: "tirofederal", visitante: "<b>Sansinena</b>", clV: "sansinena", gl: 2, gv: 2, pen_l:3, pen_v:4, goles_l: [], goles_v: [] }
+    ],
+    final: { local: "Sansinena", clL: "sansinena", visitante: "Pacífico BB", clV: "pacificobb", gl: null, gv: null, goles_l: [], goles_v: [] },
+    finalExtra: { local: "Olimpo", clL: "olimpo", visitante: "A confirmar", clV: "aconfirmar", gl: null, gv: null, goles_l: [], goles_v: [] }
 };
 
 const BD_FUTSAL_CLAUSURA_PLAYOFFS = {
     cuartos: [
         { local: "<b>La Estación</b>", clL: "laestacion", visitante: "Tiro Federal", clV: "tirofederal", gl: 3, gv: 1, goles_l: [], goles_v: [] },
-        { local: "Los 3 Chiflados", clL: "los3chiflados", visitante: "Liniers", clV: "liniers", gl: null, gv: null, goles_l: [], goles_v: [] },
+        { local: "Los 3 Chiflados", clL: "los3chiflados", visitante: "Liniers", clV: "liniers", gl: 2, gv: 4, goles_l: [], goles_v: [] },
         { local: "<b>La Esperanza</b>", clL: "laesperanza", visitante: "Villa Mitre", clV: "villamitre", gl: 6, gv: 5, goles_l: [], goles_v: [] },
         { local: "<b>Comercial</b>", clL: "comercial", visitante: "Pacífico BB", clV: "pacificobb", gl: 4, gv: 3, goles_l: [], goles_v: [] }
-    ]
+    ],
+    semifinales: [
+        { local: "La Estación", clL: "laestacion", visitante: "Liniers", clV: "liniers", gl: null, gv: null, goles_l: [], goles_v: [] },
+        { local: "La Esperanza", clL: "laesperanza", visitante: "Comercial", clV: "comercial", gl: null, gv: null, goles_l: [], goles_v: [] }
+    ],
+    final: { local: "A confirmar", clL: "aconfirmar", visitante: "A confirmar", clV: "aconfirmar", gl: null, gv: null, goles_l: [], goles_v: [] }
 };
 
 const BD_FUTSAL_RESERVA_CLAUSURA_PLAYOFFS = {
     cuartos: [
-        { local: "Los 3 Chiflados", clL: "los3chiflados", visitante: "Comercial", clV: "comercial", gl: null, gv: null, goles_l: [], goles_v: [] },
+        { local: "Los 3 Chiflados", clL: "los3chiflados", visitante: "Comercial", clV: "comercial", gl: 8, gv: 0, goles_l: [], goles_v: [] },
         { local: "<b>Liniers</b>", clL: "liniers", visitante: "Dublin", clV: "dublin", gl: 7, gv: 2, goles_l: [], goles_v: [] },
         { local: "<b>La Esperanza</b>", clL: "laesperanza", visitante: "Petroquímicos", clV: "petroquimicos", gl: 2, gv: 2, goles_l: [], goles_v: [] },
-        { local: "La Estación", clL: "laestacion", visitante: "Villa Mitre", clV: "villamitre", gl: null, gv: null, goles_l: [], goles_v: [] }
-    ]
+        { local: "La Estación", clL: "laestacion", visitante: "Villa Mitre", clV: "villamitre", gl: 2, gv: 2, goles_l: [], goles_v: [] }
+    ],
+    semifinales: [
+        { local: "Los 3 Chiflados", clL: "los3chiflados", visitante: "La Estación", clV: "laestacion", gl: null, gv: null, goles_l: [], goles_v: [] },
+        { local: "Liniers", clL: "liniers", visitante: "La Esperanza", clV: "laesperanza", gl: null, gv: null, goles_l: [], goles_v: [] }
+    ],
+    final: { local: "A confirmar", clL: "aconfirmar", visitante: "A confirmar", clV: "aconfirmar", gl: null, gv: null, goles_l: [], goles_v: [] }
 };
 
 function _armarPOClausura(titulo, etapa, partidos) {
@@ -26143,15 +26110,45 @@ function generarReservaOficialPlayoffsClausura() {
 }
 
 function generarReservaPromocionalPlayoffsClausura() {
-    return _armarPOClausura('RESERVA PROMOCIONAL — PLAYOFFS CLAUSURA 2026', 'SEMIFINALES', BD_RESERVA_PROMOCIONAL_CLAUSURA_PLAYOFFS.semifinales);
+    const bd = BD_RESERVA_PROMOCIONAL_CLAUSURA_PLAYOFFS;
+    let html = _armarPOClausura('RESERVA PROMOCIONAL — PLAYOFFS CLAUSURA 2026', 'SEMIFINALES', bd.semifinales);
+    html += `<div style="height:8px;background:#f0f0f0;border-top:1px solid #ddd;border-bottom:1px solid #ddd;"></div>`;
+    html += `<div class="header-t" style="font-size:11px;background:#7b1a1a;">🏆 FINAL</div><table>`;
+    html += _renderPartidoPlayoff(bd.final, 'Pendiente');
+    html += `</table>`;
+    html += `<div style="height:8px;background:#f0f0f0;border-top:1px solid #ddd;border-bottom:1px solid #ddd;"></div>`;
+    html += `<div class="header-t" style="font-size:11px;background:#2c6e49;">FINAL EXTRA</div><table>`;
+    html += _renderPartidoPlayoff(bd.finalExtra, 'Pendiente');
+    html += `</table>`;
+    return html;
 }
 
 function generarFutsalPlayoffsClausura() {
-    return _armarPOClausura('FUTSAL — PLAYOFFS CLAUSURA 2026', 'CUARTOS DE FINAL', BD_FUTSAL_CLAUSURA_PLAYOFFS.cuartos);
+    const bd = BD_FUTSAL_CLAUSURA_PLAYOFFS;
+    let html = _armarPOClausura('FUTSAL — PLAYOFFS CLAUSURA 2026', 'CUARTOS DE FINAL', bd.cuartos);
+    html += `<div style="height:8px;background:#f0f0f0;border-top:1px solid #ddd;border-bottom:1px solid #ddd;"></div>`;
+    html += `<div class="header-t" style="font-size:11px;background:#2c6e49;">SEMIFINALES</div><table>`;
+    bd.semifinales.forEach(p => { html += _renderPartidoPlayoff(p, 'Pendiente'); });
+    html += `</table>`;
+    html += `<div style="height:8px;background:#f0f0f0;border-top:1px solid #ddd;border-bottom:1px solid #ddd;"></div>`;
+    html += `<div class="header-t" style="font-size:11px;background:#7b1a1a;">🏆 FINAL</div><table>`;
+    html += _renderPartidoPlayoff(bd.final, 'Pendiente');
+    html += `</table>`;
+    return html;
 }
 
 function generarFutsalReservaPlayoffsClausura() {
-    return _armarPOClausura('FUTSAL RESERVA — PLAYOFFS CLAUSURA 2026', 'CUARTOS DE FINAL', BD_FUTSAL_RESERVA_CLAUSURA_PLAYOFFS.cuartos);
+    const bd = BD_FUTSAL_RESERVA_CLAUSURA_PLAYOFFS;
+    let html = _armarPOClausura('FUTSAL RESERVA — PLAYOFFS CLAUSURA 2026', 'CUARTOS DE FINAL', bd.cuartos);
+    html += `<div style="height:8px;background:#f0f0f0;border-top:1px solid #ddd;border-bottom:1px solid #ddd;"></div>`;
+    html += `<div class="header-t" style="font-size:11px;background:#2c6e49;">SEMIFINALES</div><table>`;
+    bd.semifinales.forEach(p => { html += _renderPartidoPlayoff(p, 'Pendiente'); });
+    html += `</table>`;
+    html += `<div style="height:8px;background:#f0f0f0;border-top:1px solid #ddd;border-bottom:1px solid #ddd;"></div>`;
+    html += `<div class="header-t" style="font-size:11px;background:#7b1a1a;">🏆 FINAL</div><table>`;
+    html += _renderPartidoPlayoff(bd.final, 'Pendiente');
+    html += `</table>`;
+    return html;
 }
 
 
@@ -26161,8 +26158,8 @@ const BD_SENIOR_CLAUSURA_PLAYOFFS = {
     octavos: [
         { local: "Bella Vista", clL: "bellavista", visitante: "Sporting", clV: "sporting", gl: null, gv: null, goles_l: [], goles_v: [] },
         { local: "Pacífico BB", clL: "pacificobb", visitante: "Tiro Federal", clV: "tirofederal", gl: null, gv: null, goles_l: [], goles_v: [] },
-        { local: "Huracán", clL: "huracan", visitante: "San Francisco", clV: "sanfrancisco", gl: null, gv: null, goles_l: [], goles_v: [] },
-        { local: "Comercial", clL: "comercial", visitante: "Sansinena", clV: "sansinena", gl: null, gv: null, goles_l: [], goles_v: [] }
+        { local: "Sansinena", clL: "sansinena", visitante: "San Francisco", clV: "sanfrancisco", gl: null, gv: null, goles_l: [], goles_v: [] },
+        { local: "Huracán", clL: "huracan", visitante: "Comercial", clV: "comercial", gl: null, gv: null, goles_l: [], goles_v: [] }
     ],
     cuartos: [
         { local: "A confirmar", clL: "aconfirmar", visitante: "A confirmar", clV: "aconfirmar", gl: null, gv: null, goles_l: [], goles_v: [] },
