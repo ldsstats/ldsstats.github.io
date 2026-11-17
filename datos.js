@@ -1980,11 +1980,24 @@ function generarHome() {
             { nombre: "FEDERAL A | REVÁLIDA - CUARTA RONDA | VUELTA", cat: "federala", torLink: "federala", noAutoResult: true, partidos: [
             {l:"<b>Olimpo</b>", v:"Kimberley", hora:"20:15", gl:null, gv:null, claseL:"olimpo", claseV:"kimberley",nota:"en la ida: 1-1"},
             ]},
+            { nombre: "FUTSAL | SEMIFINALES", cat: "futsal", torLink: "futsal", noAutoResult: true, partidos: [
+            {l:"La Esperanza", v:"Comercial", hora:"22:00", gl:null, gv:null, claseL:"laesperanza", claseV:"comercial",nota:"en cancha de Don Bosco"},
+            {l:"La Estación", v:"Liniers", hora:"22:00", gl:null, gv:null, claseL:"laestacion", claseV:"liniers",nota:"en cancha de La Curtiembre"},
+            ]},
+            { nombre: "FUTSAL RESERVA | SEMIFINALES", cat: "futsal", torLink: "futsal", noAutoResult: true, partidos: [
+            {l:"Liniers", v:"La Esperanza", hora:"20:30", gl:null, gv:null, claseL:"liniers", claseV:"laesperanza",nota:"en cancha de Don Bosco"},
+            {l:"Los 3 Chiflados", v:"La Estación", hora:"20:30", gl:null, gv:null, claseL:"los3chiflados", claseV:"laestacion",nota:"en cancha de La Curtiembre"},
+            ]},
             { nombre: "SENIOR | OCTAVOS DE FINAL", cat: "seniorclausura", torLink: "seniorclausura", noAutoResult: true, partidos: [
             {l:"Pacífico BB", v:"Tiro Federal", hora:"18:00", gl:null, gv:null, claseL:"pacificobb", claseV:"tirofederal",nota:"en cancha de Pacífico"},
             {l:"Bella Vista", v:"Sporting", hora:"20:00", gl:null, gv:null, claseL:"bellavista", claseV:"sporting",nota:"en cancha de Huracán"},
             {l:"Huracán", v:"Comercial", hora:"21:00", gl:null, gv:null, claseL:"huracan", claseV:"comercial",nota:"en cancha de Sansinena"},
-            {l:"Huracán", v:"Comercial", hora:"21:30", gl:null, gv:null, claseL:"huracan", claseV:"comercial",nota:"en cancha de Huracán"},
+            {l:"Sansinena", v:"San Francisco", hora:"21:30", gl:null, gv:null, claseL:"sansinena", claseV:"sanfrancisco",nota:"en cancha de Huracán"},
+            ]},
+       ]},
+     { id: "2026-11-22", label: "DOM 22/11", torneos: [
+            { nombre: "REGIONAL FEDERAL AMATEUR | BONAERENSE PAMPEANA SUR | FINAL IDA", cat: "regamateurtemporada", torLink: "regamateurtemporada", noAutoResult: true, partidos: [
+            {l:"<b>Huracán</b>", v:"Racing de Olavarría", hora:"20:00", gl:null, gv:null, claseL:"huracan", claseV:"racingolavarria"},
             ]},
        ]},
     ];
