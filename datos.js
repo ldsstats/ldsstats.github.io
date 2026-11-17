@@ -1980,6 +1980,12 @@ function generarHome() {
             { nombre: "FEDERAL A | REVÁLIDA - CUARTA RONDA | VUELTA", cat: "federala", torLink: "federala", noAutoResult: true, partidos: [
             {l:"<b>Olimpo</b>", v:"Kimberley", hora:"20:15", gl:null, gv:null, claseL:"olimpo", claseV:"kimberley",nota:"en la ida: 1-1"},
             ]},
+            { nombre: "SENIOR | OCTAVOS DE FINAL", cat: "seniorclausura", torLink: "seniorclausura", noAutoResult: true, partidos: [
+            {l:"Pacífico BB", v:"Tiro Federal", hora:"18:00", gl:null, gv:null, claseL:"pacificobb", claseV:"tirofederal",nota:"en cancha de Pacífico"},
+            {l:"Bella Vista", v:"Sporting", hora:"20:00", gl:null, gv:null, claseL:"bellavista", claseV:"sporting",nota:"en cancha de Huracán"},
+            {l:"Huracán", v:"Comercial", hora:"21:00", gl:null, gv:null, claseL:"huracan", claseV:"comercial",nota:"en cancha de Sansinena"},
+            {l:"Huracán", v:"Comercial", hora:"21:30", gl:null, gv:null, claseL:"huracan", claseV:"comercial",nota:"en cancha de Huracán"},
+            ]},
        ]},
     ];
 
