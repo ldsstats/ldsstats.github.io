@@ -1978,7 +1978,7 @@ function generarHome() {
 
      { id: "2026-11-17", label: "MAR 17/11", torneos: [
             { nombre: "FEDERAL A | REVÁLIDA - CUARTA RONDA | VUELTA", cat: "federala", torLink: "federala", noAutoResult: true, partidos: [
-            {l:"<b>Olimpo</b>", v:"Kimberley", hora:"20:15", gl:null, gv:null, claseL:"olimpo", claseV:"kimberley",nota:"en la ida: 1-1"},
+            {l:"<b>Olimpo</b>", v:"Kimberley", hora:"20:15", gl:1, gv:1, claseL:"olimpo", claseV:"kimberley",nota:"en la ida: 1-1"},
             ]},
             { nombre: "FUTSAL | SEMIFINALES", cat: "futsal", torLink: "futsal", noAutoResult: true, partidos: [
             {l:"La Esperanza", v:"Comercial", hora:"22:00", gl:null, gv:null, claseL:"laesperanza", claseV:"comercial",nota:"en cancha de Don Bosco"},
@@ -2232,8 +2232,8 @@ const BD_FEDERAL_REVALIDA = {
     ],
     cuartaRonda: [
         {
-            ida:    { local: "Kimberley", clL: "kimberley", visitante: "Olimpo", clV: "olimpo", gl: 1, gv: 1, goles_l: [], goles_v: ["Agustín Stancato"] },
-            vuelta: { local: "Olimpo", clL: "olimpo", visitante: "Kimberley", clV: "kimberley", gl: null, gv: null, goles_l: [], goles_v: [] }
+            ida:    { local: "<s>Kimberley</s>", clL: "kimberley", visitante: "<b>Olimpo</b>", clV: "olimpo", gl: 1, gv: 1, goles_l: [], goles_v: ["Agustín Stancato"] },
+            vuelta: { local: "<b>Olimpo</b>", clL: "olimpo", visitante: "<s>Kimberley</s>", clV: "kimberley", gl: 1, gv: 1, goles_l: ["Brian Guille"], goles_v: [] }
         },
         {
             ida:    { local: "<s>Juventud Antoniana</s>", clL: "jantoniana", visitante: "<b>Cipolletti</b>", clV: "cipolletti", gl: 1, gv: 0, goles_l: [], goles_v: [] },
@@ -2250,8 +2250,12 @@ const BD_FEDERAL_REVALIDA = {
     ],
     quintaRonda: [
         {
-            ida:    { local: "A confirmar", clL: "aconfirmar", visitante: "A confirmar", clV: "aconfirmar", gl: null, gv: null, goles_l: [], goles_v: [] },
-            vuelta: { local: "A confirmar", clL: "aconfirmar", visitante: "A confirmar", clV: "aconfirmar", gl: null, gv: null, goles_l: [], goles_v: [] }
+            ida:    { local: "Douglas Haig", clL: "douglashaig", visitante: "Olimpo", clV: "olimpo", gl: null, gv: null, goles_l: [], goles_v: [] },
+            vuelta: { local: "Olimpo", clL: "olimpo", visitante: "Douglas Haig", clV: "douglashaig", gl: null, gv: null, goles_l: [], goles_v: [] }
+        },
+        {
+            ida:    { local: "Sarmiento de La Banda", clL: "sarmientolb", visitante: "Cipolletti", clV: "cipolletti", gl: null, gv: null, goles_l: [], goles_v: [] },
+            vuelta: { local: "Cipolletti", clL: "cipolletti", visitante: "Sarmiento de La Banda", clV: "sarmientolb", gl: null, gv: null, goles_l: [], goles_v: [] }
         }
     ],
     sextaRonda: [
@@ -2386,7 +2390,7 @@ if (etapa === 'playoffs') {
     }
 
     if (etapa === 'revalida') {
-    const subR = estado.subRondaRevalida || 'cuartaRonda';
+    const subR = estado.subRondaRevalida || 'quintaRonda';
     let htmlR = tabs;
 
     const rondasRevalida = [
@@ -17403,6 +17407,7 @@ const BD_H2H = {
         { fecha: "Fecha 14 - Fase inicial - 20 jun 2026", torneo: "federala", l: "Olimpo", v: "Kimberley", gl: 0, gv: 0, goles_l: [], goles_v: [] },
         { fecha: "Fecha 5 - Nonagonal - 23 ago 2026", torneo: "federala", l: "Olimpo", v: "Kimberley", gl: 1, gv: 0, goles_l: ["Nicolás Báez (e/c)"], goles_v: [] },
         { fecha: "Reválida - Cuarta ronda - Ida - 12 nov 2026", torneo: "federala", l: "Kimberley", v: "Olimpo", gl: 1, gv: 1, goles_l: [], goles_v: ["Agustín Stancato"] },
+        { fecha: "Reválida - Cuarta ronda - Vuelta - 17 nov 2026", torneo: "federala", l: "Olimpo", v: "Kimberley", gl: 1, gv: 1, goles_l: ["Brian Guille"], goles_v: [] },
     ],
     "Santamarina|Villa Mitre": [
         { fecha: "Fecha 5 - Fase inicial - 19 abr 2026", torneo: "federala", l: "Villa Mitre", v: "Santamairna", gl: 0, gv: 0, goles_l: [], goles_v: [] },
