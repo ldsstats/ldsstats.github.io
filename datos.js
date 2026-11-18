@@ -1990,9 +1990,9 @@ function generarHome() {
             ]},
             { nombre: "SENIOR | OCTAVOS DE FINAL", cat: "seniorclausura", torLink: "seniorclausura", noAutoResult: true, partidos: [
             {l:"Pacífico BB", v:"Tiro Federal", hora:"18:00", gl:1, gv:2, claseL:"pacificobb", claseV:"tirofederal",nota:"en cancha de Pacífico"},
-            {l:"Bella Vista", v:"Sporting", hora:"20:00", gl:null, gv:null, claseL:"bellavista", claseV:"sporting",nota:"en cancha de Huracán"},
+            {l:"Bella Vista", v:"Sporting", hora:"20:00", gl:1, gv:3, claseL:"bellavista", claseV:"sporting",nota:"en cancha de Huracán"},
             {l:"Huracán", v:"Comercial", hora:"21:00", gl:3, gv:0, claseL:"huracan", claseV:"comercial",nota:"en cancha de Sansinena"},
-            {l:"Sansinena", v:"San Francisco", hora:"21:30", gl:null, gv:null, claseL:"sansinena", claseV:"sanfrancisco",nota:"en cancha de Huracán"},
+            {l:"Sansinena", v:"San Francisco", hora:"21:30", gl:0, gv:1, claseL:"sansinena", claseV:"sanfrancisco",nota:"en cancha de Huracán"},
             ]},
        ]},
      { id: "2026-11-22", label: "DOM 22/11", torneos: [
@@ -16426,6 +16426,7 @@ const BD_H2H = {
         { fecha: "Apertura 2026 - Fecha 2", torneo: "senior", l: "Sansinena", v: "San Francisco", gl: 1, gv: 1, goles_l: ["Emiliano Jofré"], goles_v: ["Patricio Muñoz"] },
         { fecha: "Clausura 2026 - Fecha 2", torneo: "senior", l: "Sansinena", v: "San Francisco", gl: 4, gv: 1, goles_l: ["Emiliano Jofré","Pablo Moggia","Sebastián Bettinelli","Mauricio Díaz"], goles_v: ["Patricio Muñoz"] },
         { fecha: "Fecha 19 - Torneo 2026 - 17 ago", torneo: "segundafemenino", l: "Sansinena", v: "San Francisco", gl: 1, gv: 2, goles_l: ["Micaela Gómez"], goles_v: ["Morena Barzola","Florencia Sorbellini"] },
+        { fecha: "Clausura 2026 - 8vos de Final", torneo: "senior", l: "Sansinena", v: "San Francisco", gl: 0, gv: 1, goles_l: [], goles_v: ["Patricio Muñoz"] },
     ],
     "Dep. Futsal|Villa Mitre": [
         { fecha: "Apertura 2026 - Fecha 1", torneo: "futsal", l: "Dep. Futsal", v: "Villa Mitre", gl: 2, gv: 4 },
@@ -16683,6 +16684,7 @@ const BD_H2H = {
         { fecha: "Fecha 9 - Clausura 2026 - 19 sep", torneo: "reserva_femenino", l: "Sporting", v: "Bella Vista", gl: 1, gv: 2 },
         { fecha: "Fecha 11 - Clausura 2026 - 12 oct", torneo: "oficial", l: "Bella Vista", v: "Sporting", gl: 1, gv: 2, goles_l: ["Lucas Martínez"], goles_v: ["Valentino Barone","Sixto Theaux"] },
         { fecha: "Fecha 11 - Clausura 2026", torneo: "reserva_oficial", l: "Bella Vista", v: "Sporting", gl: 2, gv: 0 },
+        { fecha: "Clausura 2026 - 8vos de Final", torneo: "senior", l: "Bella Vista", v: "Sporting", gl: 1, gv: 3, goles_l: ["Fernando Lucas"], goles_v: ["Diego Vera","Maximiliano Rodríguez","Maximiliano Macías"] },
     ],
     "Municipales|Villa Mitre": [
         { fecha: "Fecha 2 - Apertura 2026 - 28 mar", torneo: "femenino", l: "Villa Mitre", v: "Municipales", gl: 1, gv: 5, goles_l: ["Agustina Rodríguez"], goles_v: ["Valeria Navarrete (2)","Victoria Nervi","Ludmila Fernández","Stefanía Sueyro"] },
@@ -16910,6 +16912,7 @@ const BD_H2H = {
         { fecha: "Fecha 10 - Clausura 2026 - 04 oct", torneo: "oficial", l: "La Armonía", v: "Liniers", gl: 1, gv: 1, goles_l: ["Ezequiel Intrevado"], goles_v: ["Nicolás Malerba"]},
         { fecha: "Fecha 10 - Clausura 2026", torneo: "reserva_oficial", l: "La Armonía", v: "Liniers", gl: 2, gv: 0},
         { fecha: "Torneo 2026 - Cuartos de Final", torneo: "sub15fem", l: "Liniers", v: "La Armonía", gl: 7, gv: 0 },
+        { fecha: "Final - Clausura 2026", torneo: "reserva_oficial", l: "La Armonía", v: "Liniers", gl: 1, gv: 2},
     ],
     "Comercial|Olimpo": [
         { fecha: "Fecha 3 - Apertura 2026 - 28 mar", torneo: "promocional", l: "Comercial", v: "Olimpo", gl: 1, gv: 0, goles_l: ["Francisco Centeno"], goles_v: []},
@@ -19429,6 +19432,7 @@ const BD_GOLEADORES_SENIOR = [
     { nombre: "Gustavo Peña", equipo: "Libertad", goles: 3 },
     { nombre: "Maximiliano Delaudo", equipo: "Pacífico BB", goles: 3 },
     { nombre: "Ángel Martínez", equipo: "San Francisco", goles: 3 },
+    { nombre: "Patricio Muñoz", equipo: "San Francisco", goles: 3 },
     { nombre: "Juan Pérez", equipo: "San Francisco", goles: 3 },
     { nombre: "Marcos Pierucci", equipo: "Sansinena", goles: 3 },
     { nombre: "Gabriel Bernengo", equipo: "Sporting", goles: 3 },
@@ -19442,7 +19446,6 @@ const BD_GOLEADORES_SENIOR = [
     { nombre: "Hernán Sangripanti", equipo: "Pacífico BB", goles: 2 },
     { nombre: "Nicolás Arroyo", equipo: "Pacífico (C)", goles: 2 },
     { nombre: "Santiago Martín", equipo: "Pacífico (C)", goles: 2 },
-    { nombre: "Patricio Muñoz", equipo: "San Francisco", goles: 2 },
     { nombre: "Federico Timi", equipo: "San Francisco", goles: 2 },
     { nombre: "Mauricio Oldani", equipo: "Tiro Federal", goles: 2 },
     { nombre: "Javier Muñoz", equipo: "Tiro Federal", goles: 2 },
@@ -19943,7 +19946,7 @@ const BD_GOLEADORES_SENIOR_CLAUSURA = [
     { nombre: "Emiliano Jofré", equipo: "Sansinena", goles: 6 },
     { nombre: "Juan Pablo Hipperdinger", equipo: "Huracán", goles: 6 },
     { nombre: "Guillermo Pascual", equipo: "Pacífico BB", goles: 4 },
-    { nombre: "Fernando Lucas", equipo: "Bella Vista", goles: 3 },
+    { nombre: "Fernando Lucas", equipo: "Bella Vista", goles: 4 },
     { nombre: "Leandro Piérez", equipo: "Comercial", goles: 3 },
     { nombre: "Juan Manuel Diez", equipo: "Huracán", goles: 3 },
     { nombre: "Cristian Lucero", equipo: "Huracán", goles: 3 },
@@ -19955,6 +19958,7 @@ const BD_GOLEADORES_SENIOR_CLAUSURA = [
     { nombre: "Paolo Quiroga", equipo: "Sporting", goles: 3 },
     { nombre: "Pablo Moggia", equipo: "Sansinena", goles: 3 },
     { nombre: "Sebastián Weidele", equipo: "Sansinena", goles: 3 },
+    { nombre: "Maximiliano Macías", equipo: "Sporting", goles: 3 },
     { nombre: "Fernando Priore", equipo: "Bella Vista", goles: 2 },
     { nombre: "Jonathan Bravo de Laguna", equipo: "Comercial", goles: 2 },
     { nombre: "Emiliano Esmoli", equipo: "Comercial", goles: 2 },
@@ -19975,7 +19979,8 @@ const BD_GOLEADORES_SENIOR_CLAUSURA = [
     { nombre: "Nicolás Martin", equipo: "Sansinena", goles: 2 },
     { nombre: "Sebastián Bettinelli", equipo: "Sansinena", goles: 2 },
     { nombre: "Gabriel Bernengo", equipo: "Sporting", goles: 2 },
-    { nombre: "Maximiliano Macías", equipo: "Sporting", goles: 2 },
+    { nombre: "Diego Vera", equipo: "Sporting", goles: 2 },
+    { nombre: "Maximiliano Rodríguez", equipo: "Sporting", goles: 2 },
     { nombre: "Armani", equipo: "Libertad", goles: 1 },
     { nombre: "Maximiliano Casas", equipo: "Comercial", goles: 1 },
     { nombre: "Daniel Durán", equipo: "Comercial", goles: 1 },
@@ -19987,8 +19992,6 @@ const BD_GOLEADORES_SENIOR_CLAUSURA = [
     { nombre: "Horacio Ocampo", equipo: "San Francisco", goles: 1 },
     { nombre: "Damián Vidal", equipo: "San Francisco", goles: 1 },
     { nombre: "Marcos Ramos", equipo: "San Francisco", goles: 1 },
-    { nombre: "Diego Vera", equipo: "Sporting", goles: 1 },
-    { nombre: "Maximiliano Rodríguez", equipo: "Sporting", goles: 1 },
     { nombre: "Fernando Pérez", equipo: "Sporting", goles: 1 },
     { nombre: "Hernán Sangripandi", equipo: "Pacífico BB", goles: 1 },
     { nombre: "Fernando Rodríguez", equipo: "Pacífico (C)", goles: 1 },
@@ -26085,10 +26088,10 @@ const BD_RESERVA_OFICIAL_CLAUSURA_PLAYOFFS = {
         { local: "<s>Bella Vista</s>", clL: "bellavista", visitante: "<b>La Armonía</b>", clV: "laarmonia", gl: 3, gv: 3, pen_l:4, pen_v:5, goles_l: [], goles_v: [] }
     ],
     final: [
-        { local: "La Armonía", clL: "laarmonia", visitante: "Liniers", clV: "liniers", gl: null, gv: null, goles_l: [], goles_v: [] }
+        { local: "La Armonía", clL: "laarmonia", visitante: "Liniers", clV: "liniers", gl: 1, gv: 2, goles_l: [], goles_v: [] }
     ],
     finalextra: [
-        { local: "Villa Mitre", clL: "villamitre", visitante: "A confirmar", clV: "aconfirmar", gl: null, gv: null, goles_l: [], goles_v: [] }
+        { local: "Villa Mitre", clL: "villamitre", visitante: "Liniers", clV: "liniers", gl: null, gv: null, goles_l: [], goles_v: [] }
     ]
 };
 
@@ -26198,9 +26201,9 @@ function generarFutsalReservaPlayoffsClausura() {
 
 const BD_SENIOR_CLAUSURA_PLAYOFFS = {
     octavos: [
-        { local: "Bella Vista", clL: "bellavista", visitante: "Sporting", clV: "sporting", gl: null, gv: null, goles_l: [], goles_v: [] },
+        { local: "Bella Vista", clL: "bellavista", visitante: "<b>Sporting</b>", clV: "sporting", gl: 1, gv: 3, goles_l: ["Fernando Lucas"], goles_v: ["Diego Vera","Maximiliano Rodríguez","Maximiliano Macías"] },
         { local: "Pacífico BB", clL: "pacificobb", visitante: "<b>Tiro Federal</b>", clV: "tirofederal", gl: 1, gv: 2, goles_l: ["Claudio Ibáñez"], goles_v: ["Víctor Loyarte","Fabricio Prieto"] },
-        { local: "Sansinena", clL: "sansinena", visitante: "San Francisco", clV: "sanfrancisco", gl: null, gv: null, goles_l: [], goles_v: [] },
+        { local: "Sansinena", clL: "sansinena", visitante: "<b>San Francisco</b>", clV: "sanfrancisco", gl: 0, gv: 1, goles_l: [], goles_v: ["Patricio Muñoz Campos"] },
         { local: "<b>Huracán</b>", clL: "huracan", visitante: "Comercial", clV: "comercial", gl: 3, gv: 0, goles_l: ["Juan Hippendinger (2)","César Panduro"], goles_v: [] }
     ],
     cuartos: [
