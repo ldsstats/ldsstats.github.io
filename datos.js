@@ -1948,7 +1948,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 27).partidos.forEach(p
 });
 
 
-let diaSeleccionadoHome = "2026-11-17"; 
+let diaSeleccionadoHome = "2026-11-21"; 
 let mercadoPasesAbierto = false;
 
 function toggleMercadoPasesHome() {
@@ -1995,7 +1995,19 @@ function generarHome() {
             {l:"Sansinena", v:"San Francisco", hora:"21:30", gl:0, gv:1, claseL:"sansinena", claseV:"sanfrancisco",nota:"en cancha de Huracán"},
             ]},
        ]},
+     { id: "2026-11-21", label: "SÁB 21/11", torneos: [
+            { nombre: "PROMOCIONAL | CLAUSURA | FINAL", cat: "promocional", torLink: "promocional", noAutoResult: true, partidos: [
+            {l:"Olimpo", v:"Tiro Federal", hora:"16:00", gl:null, gv:null, claseL:"olimpo", claseV:"tirofederal",nota:"Si gana Olimpo será campeón del Clausura y jugará la Final Anual contra Comercial. Si gana Tiro Federal, se jugará un segundo partido entre estos equipos"},
+            ]},
+       ]},
      { id: "2026-11-22", label: "DOM 22/11", torneos: [
+            { nombre: "OFICIAL | CLAUSURA | FINAL", cat: "oficial", torLink: "oficial", noAutoResult: true, partidos: [
+            {l:"Bella Vista", v:"Libertad", hora:"16:00", gl:null, gv:null, claseL:"bellavista", claseV:"libertad",nota:"El ganador enfrentará en la Final Extra a Huracán por el título del Clausura"},
+            ]},
+            { nombre: "FEDERAL A | SEMIFINAL - REVÁLIDA | IDA", cat: "federala", torLink: "federala", noAutoResult: true, partidos: [
+            {l:"Douglas Haig", v:"<b>Olimpo</b>", hora:"17:00", gl:null, gv:null, claseL:"douglashaig", claseV:"olimpo"},
+            {l:"Sarmiento de La Banda", v:"Cipolletti", hora:"19:30", gl:null, gv:null, claseL:"sarmientolb", claseV:"cipolletti"},
+            ]},
             { nombre: "REGIONAL FEDERAL AMATEUR | BONAERENSE PAMPEANA SUR | FINAL IDA", cat: "regamateurtemporada", torLink: "regamateurtemporada", noAutoResult: true, partidos: [
             {l:"<b>Huracán</b>", v:"Racing de Olavarría", hora:"20:00", gl:null, gv:null, claseL:"huracan", claseV:"racingolavarria"},
             ]},
