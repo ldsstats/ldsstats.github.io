@@ -1948,7 +1948,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 27).partidos.forEach(p
 });
 
 
-let diaSeleccionadoHome = "2026-11-21"; 
+let diaSeleccionadoHome = "2026-11-20"; 
 let mercadoPasesAbierto = false;
 
 function toggleMercadoPasesHome() {
@@ -1993,6 +1993,11 @@ function generarHome() {
             {l:"Bella Vista", v:"Sporting", hora:"20:00", gl:1, gv:3, claseL:"bellavista", claseV:"sporting",nota:"en cancha de Huracán"},
             {l:"Huracán", v:"Comercial", hora:"21:00", gl:3, gv:0, claseL:"huracan", claseV:"comercial",nota:"en cancha de Sansinena"},
             {l:"Sansinena", v:"San Francisco", hora:"21:30", gl:0, gv:1, claseL:"sansinena", claseV:"sanfrancisco",nota:"en cancha de Huracán"},
+            ]},
+       ]},
+     { id: "2026-11-20", label: "VIE 20/11", torneos: [
+            { nombre: "FUTSAL | CLAUSURA | FINAL", cat: "futsal", torLink: "futsal", noAutoResult: true, partidos: [
+            {l:"La Esperanza", v:"Liniers", hora:"22:30", gl:null, gv:null, claseL:"laesperanza", claseV:"liniers"},
             ]},
        ]},
      { id: "2026-11-21", label: "SÁB 21/11", torneos: [
