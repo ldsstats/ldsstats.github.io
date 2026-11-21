@@ -1948,7 +1948,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 27).partidos.forEach(p
 });
 
 
-let diaSeleccionadoHome = "2026-11-20"; 
+let diaSeleccionadoHome = "2026-11-21"; 
 let mercadoPasesAbierto = false;
 
 function toggleMercadoPasesHome() {
@@ -1997,17 +1997,35 @@ function generarHome() {
        ]},
      { id: "2026-11-20", label: "VIE 20/11", torneos: [
             { nombre: "FUTSAL | CLAUSURA | FINAL", cat: "futsal", torLink: "futsal", noAutoResult: true, partidos: [
-            {l:"La Esperanza", v:"Liniers", hora:"22:30", gl:null, gv:null, claseL:"laesperanza", claseV:"liniers"},
+            {l:"La Esperanza", v:"Liniers", hora:"22:30", gl:1, gv:2, claseL:"laesperanza", claseV:"liniers"},
+            ]},
+            { nombre: "FUTSAL RESERVA | CLAUSURA | FINAL", cat: "futsalreserva", torLink: "futsalreserva", noAutoResult: true, partidos: [
+            {l:"Liniers", v:"La Estación", hora:"20:30", gl:3, gv:2, claseL:"liniers", claseV:"laestacion"},
             ]},
        ]},
      { id: "2026-11-21", label: "SÁB 21/11", torneos: [
             { nombre: "PROMOCIONAL | CLAUSURA | FINAL", cat: "promocional", torLink: "promocional", noAutoResult: true, partidos: [
             {l:"Olimpo", v:"Tiro Federal", hora:"16:00", gl:null, gv:null, claseL:"olimpo", claseV:"tirofederal",nota:"Si gana Olimpo será campeón del Clausura y jugará la Final Anual contra Comercial. Si gana Tiro Federal, se jugará un segundo partido entre estos equipos"},
             ]},
+            { nombre: "2° FEMENINO | FINAL", cat: "segundafemenino", torLink: "segundafemenino", noAutoResult: true, partidos: [
+            {l:"Liniers", v:"Petroquímicos", hora:"16:30", gl:null, gv:null, claseL:"liniers", claseV:"petroquimicos",nota:"El ganador se corona como campeón y asciende a Primera División"},
+            ]},
+            { nombre: "RESERVA 2° FEMENINO | SEMIFINALES | VUELTA", cat: "segundafemenino", torLink: "segundafemenino", noAutoResult: true, partidos: [
+            {l:"Liniers", v:"Estrella de Oro", hora:"13:00", gl:null, gv:null, claseL:"liniers", claseV:"estrellaoro",nota:"En la ida: 3-0"},
+            ]},
        ]},
      { id: "2026-11-22", label: "DOM 22/11", torneos: [
             { nombre: "OFICIAL | CLAUSURA | FINAL", cat: "oficial", torLink: "oficial", noAutoResult: true, partidos: [
             {l:"Bella Vista", v:"Libertad", hora:"16:00", gl:null, gv:null, claseL:"bellavista", claseV:"libertad",nota:"El ganador enfrentará en la Final Extra a Huracán por el título del Clausura"},
+            ]},
+            { nombre: "FEMENINO | CLAUSURA | FINAL EXTRA", cat: "femenino", torLink: "femenino", noAutoResult: true, partidos: [
+            {l:"Municipales", v:"Villa Mitre", hora:"16:00", gl:null, gv:null, claseL:"municipales", claseV:"villamitre",nota:"El ganador se corona como campeón del clausura. Si es Municipales, automáticamente es el campeón anual"},
+            ]},
+            { nombre: "RESERVA 2° FEMENINO | SEMIFINALES | VUELTA", cat: "segundafemenino", torLink: "segundafemenino", noAutoResult: true, partidos: [
+            {l:"San Francisco", v:"Petroquímicos", hora:"16:00", gl:null, gv:null, claseL:"sanfrancisco", claseV:"petroquimicos",nota:"En la ida: 0-1"},
+            ]},
+            { nombre: "RESERVA FEMENINO | CLAUSURA | FINAL EXTRA", cat: "reserva_femenino", torLink: "reserva_femenino", noAutoResult: true, partidos: [
+            {l:"Bella Vista", v:"Municipales", hora:"11:00", gl:null, gv:null, claseL:"bellavista", claseV:"municipales",nota:"El ganador se corona como campeón del clausura y jugará la final anual ante Tiro Federal"},
             ]},
             { nombre: "FEDERAL A | SEMIFINAL - REVÁLIDA | IDA", cat: "federala", torLink: "federala", noAutoResult: true, partidos: [
             {l:"Douglas Haig", v:"<b>Olimpo</b>", hora:"17:00", gl:null, gv:null, claseL:"douglashaig", claseV:"olimpo"},
@@ -17327,6 +17345,7 @@ const BD_H2H = {
         { fecha: "Clausura 2026 - Fecha 4", torneo: "futsal", l: "Liniers", v: "La Esperanza", gl: 2, gv: 4 },
         { fecha: "Clausura 2026 - Fecha 4", torneo: "futsalreserva", l: "Liniers", v: "La Esperanza", gl: 2, gv: 1 },
         { fecha: "Clausura 2026 - Semifinal", torneo: "futsalreserva", l: "Liniers", v: "La Esperanza", gl: 4, gv: 2 },
+        { fecha: "Clausura 2026 - Final del Playoffs", torneo: "futsal", l: "La Esperanza", v: "Liniers", gl: 1, gv: 2 },
     ],
     "Dublin|La Estación": [
         { fecha: "Apertura 2026 - Fecha 4", torneo: "futsal", l: "La Estación", v: "Dublin", gl: 1, gv: 0 },
@@ -17503,6 +17522,7 @@ const BD_H2H = {
         { fecha: "Clausura 2026 - Fecha 5", torneo: "futsal", l: "La Estación", v: "Liniers", gl: 6, gv: 1 },
         { fecha: "Clausura 2026 - Fecha 5", torneo: "futsalreserva", l: "La Estación", v: "Liniers", gl: 6, gv: 8 },
         { fecha: "Clausura 2026 - Semifinal", torneo: "futsal", l: "La Estación", v: "Liniers", gl: 4, gv: 5 },
+        { fecha: "Clausura 2026 - Final de Playoffs", torneo: "futsal", l: "Liniers", v: "La Estación", gl: 3, gv: 2 },
     ],
     "Catamarca|Pacífico BB": [
         { fecha: "Apertura 2026 - Fecha 5", torneo: "futsal", l: "Catamarca", v: "Pacífico BB", gl: 2, gv: 6 },
@@ -18178,7 +18198,7 @@ function generarReserva(cat) {
     : null;
     const textoVisera = cat === 'segundafemenino'
         ? 'Ver cuadro de Playoffs de Reserva de 2° Femenino'
-        : 'Ver cuadro de Playoffs del Apertura';
+        : 'Ver cuadro de Playoffs de Apertura y Clausura';
     let html = navDest
         ? `<div onclick="navegar('${navDest}')" style="background:linear-gradient(135deg,#7b1a1a,#a93226);color:#fff;text-align:center;padding:9px 12px;font-size:12px;font-weight:bold;letter-spacing:0.5px;cursor:pointer;border-bottom:2px solid #f0a500;">🏆 ${textoVisera} ▶</div>`
         : '';
@@ -26132,7 +26152,8 @@ const BD_FUTSAL_CLAUSURA_PLAYOFFS = {
         { local: "La Estación", clL: "laestacion", visitante: "<b>Liniers</b>", clV: "liniers", gl: 4, gv: 5, goles_l: [], goles_v: [] },
         { local: "<b>La Esperanza</b>", clL: "laesperanza", visitante: "Comercial", clV: "comercial", gl: 6, gv: 4, goles_l: [], goles_v: [] }
     ],
-    final: { local: "La Esperanza", clL: "laesperanza", visitante: "Liniers", clV: "liniers", gl: null, gv: null, goles_l: [], goles_v: [] }
+    final: { local: "<b>Liniers</b>", clL: "liniers", visitante: "La Estación", clV: "laestacion", gl: 3, gv: 2, goles_l: [], goles_v: [] },
+    finalextra: { local: "Liniers", clL: "liniers", visitante: "Los 3 Chiflados", clV: "los3chiflados", gl: null, gv: null, goles_l: [], goles_v: [] }
 };
 
 const BD_FUTSAL_RESERVA_CLAUSURA_PLAYOFFS = {
@@ -26146,7 +26167,8 @@ const BD_FUTSAL_RESERVA_CLAUSURA_PLAYOFFS = {
         { local: "Los 3 Chiflados", clL: "los3chiflados", visitante: "<b>La Estación</b>", clV: "laestacion", gl: 2, gv: 3, goles_l: [], goles_v: [] },
         { local: "<b>Liniers</b>", clL: "liniers", visitante: "La Esperanza", clV: "laesperanza", gl: 4, gv: 2, goles_l: [], goles_v: [] }
     ],
-    final: { local: "Liniers", clL: "liniers", visitante: "La Estación", clV: "laestacion", gl: null, gv: null, goles_l: [], goles_v: [] }
+    final: { local: "<b>Liniers</b>", clL: "liniers", visitante: "La Estación", clV: "laestacion", gl: 3, gv: 2, goles_l: [], goles_v: [] },
+    finalextra: { local: "Liniers", clL: "liniers", visitante: "Los 3 Chiflados", clV: "los3chiflados", gl: null, gv: null, goles_l: [], goles_v: [] }
 };
 
 function _armarPOClausura(titulo, etapa, partidos) {
@@ -26196,6 +26218,10 @@ function generarFutsalPlayoffsClausura() {
     html += `<div class="header-t" style="font-size:11px;background:#7b1a1a;">🏆 FINAL</div><table>`;
     html += _renderPartidoPlayoff(bd.final, 'Pendiente');
     html += `</table>`;
+    html += `<div style="height:8px;background:#f0f0f0;border-top:1px solid #ddd;border-bottom:1px solid #ddd;"></div>`;
+    html += `<div class="header-t" style="font-size:11px;background:#2c6e49;">FINAL EXTRA</div><table>`;
+    html += _renderPartidoPlayoff(bd.finalextra, 'Pendiente');
+    html += `</table>`;
     return html;
 }
 
@@ -26209,6 +26235,10 @@ function generarFutsalReservaPlayoffsClausura() {
     html += `<div style="height:8px;background:#f0f0f0;border-top:1px solid #ddd;border-bottom:1px solid #ddd;"></div>`;
     html += `<div class="header-t" style="font-size:11px;background:#7b1a1a;">🏆 FINAL</div><table>`;
     html += _renderPartidoPlayoff(bd.final, 'Pendiente');
+    html += `</table>`;
+    html += `<div style="height:8px;background:#f0f0f0;border-top:1px solid #ddd;border-bottom:1px solid #ddd;"></div>`;
+    html += `<div class="header-t" style="font-size:11px;background:#2c6e49;">FINAL EXTRA</div><table>`;
+    html += _renderPartidoPlayoff(bd.finalextra, 'Pendiente');
     html += `</table>`;
     return html;
 }
