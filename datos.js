@@ -2011,7 +2011,7 @@ function generarHome() {
             {l:"Liniers", v:"Petroquímicos", hora:"16:30", gl:null, gv:null, claseL:"liniers", claseV:"petroquimicos",nota:"El ganador se corona como campeón y asciende a Primera División"},
             ]},
             { nombre: "RESERVA 2° FEMENINO | SEMIFINALES | VUELTA", cat: "segundafemenino", torLink: "segundafemenino", noAutoResult: true, partidos: [
-            {l:"Liniers", v:"Estrella de Oro", hora:"13:00", gl:null, gv:null, claseL:"liniers", claseV:"estrellaoro",nota:"En la ida: 3-0"},
+            {l:"Liniers", v:"Estrella de Oro", hora:"13:00", gl:7, gv:0, claseL:"liniers", claseV:"estrellaoro",nota:"En la ida: 3-0"},
             ]},
        ]},
      { id: "2026-11-22", label: "DOM 22/11", torneos: [
@@ -16432,7 +16432,8 @@ const BD_H2H = {
         { fecha: "Fecha 10 - Torneo 2026 - 30 may", torneo: "segundafemenino", l: "Estrella de Oro", v: "Liniers", gl: 0, gv: 2, goles_l: [], goles_v: ["Paulina Acevedo","Isabella Pezzutti"] },
         { fecha: "Fecha 19 - Torneo 2026 - 09 ago", torneo: "segundafemenino", l: "Estrella de Oro", v: "Liniers", gl: 0, gv: 1, goles_l: [], goles_v: ["María Paz Marino"] },
         { fecha: "Fecha 19 - Torneo 2026", torneo: "reserva_segundafemenino", l: "Estrella de Oro", v: "Liniers", gl: 2, gv: 4 },
-        { fecha: "Semifinal - Ida - Torneo 2026", torneo: "reserva_segundafemenino", l: "Liniers", v: "Estrella de Oro", gl: 3, gv: 0 },
+        { fecha: "Semifinal - Ida - Torneo 2026", torneo: "reserva_segundafemenino", l: "Estrella de Oro", v: "Liniers", gl: 0, gv: 3 },
+        { fecha: "Semifinal - Vuelta - Torneo 2026", torneo: "reserva_segundafemenino", l: "Liniers", v: "Estrella de Oro", gl: 7, gv: 0 },
     ],
     "Olimpo|Rosario PB": [
         { fecha: "Fecha 4 - Apertura 2026 - 03 abr 2026", torneo: "promocional", l: "Olimpo", v: "Rosario PB", gl: 2, gv: 2, goles_l: ["Nahuel Colmenares (2)"], goles_v: ["Ezequiel Katz","Agustín Grippaudo"] },
@@ -25812,8 +25813,8 @@ const BD_RESERVA_SEGUNDAFEMENINO_PLAYOFFS = {
     ],
     semis: [
         {
-            ida:    { local: "Estrella de Oro", clL: "estrellaoro", visitante: "Liniers", clV: "liniers", gl: 0, gv: 3, goles_l: [], goles_v: [] },
-            vuelta: { local: "Liniers", clL: "liniers", visitante: "Estrella de Oro", clV: "estrellaoro", gl: null, gv: null, goles_l: [], goles_v: [] }
+            ida:    { local: "<s>Estrella de Oro</s>", clL: "estrellaoro", visitante: "<b>Liniers</b>", clV: "liniers", gl: 0, gv: 3, goles_l: [], goles_v: [] },
+            vuelta: { local: "<b>Liniers</b>", clL: "liniers", visitante: "<s>Estrella de Oro</s>", clV: "estrellaoro", gl: 7, gv: 0, goles_l: [], goles_v: [] }
         },
         {
             ida:    { local: "Rosario PB", clL: "rosariopb", visitante: "San Francisco", clV: "sanfrancisco", gl: 2, gv: 0, goles_l: [], goles_v: [] },
