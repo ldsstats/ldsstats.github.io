@@ -1948,7 +1948,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 27).partidos.forEach(p
 });
 
 
-let diaSeleccionadoHome = "2026-11-21"; 
+let diaSeleccionadoHome = "2026-11-22"; 
 let mercadoPasesAbierto = false;
 
 function toggleMercadoPasesHome() {
@@ -2005,10 +2005,10 @@ function generarHome() {
        ]},
      { id: "2026-11-21", label: "SÁB 21/11", torneos: [
             { nombre: "PROMOCIONAL | CLAUSURA | FINAL", cat: "promocional", torLink: "promocional", noAutoResult: true, partidos: [
-            {l:"Olimpo", v:"Tiro Federal", hora:"16:00", gl:null, gv:null, claseL:"olimpo", claseV:"tirofederal",nota:"Si gana Olimpo será campeón del Clausura y jugará la Final Anual contra Comercial. Si gana Tiro Federal, se jugará un segundo partido entre estos equipos"},
+            {l:"Olimpo", v:"Tiro Federal", hora:"16:00", gl:2, gv:0, claseL:"olimpo", claseV:"tirofederal",nota:"Si gana Olimpo será campeón del Clausura y jugará la Final Anual contra Comercial. Si gana Tiro Federal, se jugará un segundo partido entre estos equipos"},
             ]},
             { nombre: "2° FEMENINO | FINAL", cat: "segundafemenino", torLink: "segundafemenino", noAutoResult: true, partidos: [
-            {l:"Liniers", v:"Petroquímicos", hora:"16:30", gl:null, gv:null, claseL:"liniers", claseV:"petroquimicos",nota:"El ganador se corona como campeón y asciende a Primera División"},
+            {l:"Liniers", v:"Petroquímicos", hora:"16:30", gl:2, gv:2, pen_l:5, pen_v:3, claseL:"liniers", claseV:"petroquimicos",nota:"El ganador se corona como campeón y asciende a Primera División"},
             ]},
             { nombre: "RESERVA 2° FEMENINO | SEMIFINALES | VUELTA", cat: "segundafemenino", torLink: "segundafemenino", noAutoResult: true, partidos: [
             {l:"Liniers", v:"Estrella de Oro", hora:"13:00", gl:7, gv:0, claseL:"liniers", claseV:"estrellaoro",nota:"En la ida: 3-0"},
@@ -2033,6 +2033,11 @@ function generarHome() {
             ]},
             { nombre: "REGIONAL FEDERAL AMATEUR | BONAERENSE PAMPEANA SUR | FINAL IDA", cat: "regamateurtemporada", torLink: "regamateurtemporada", noAutoResult: true, partidos: [
             {l:"<b>Huracán</b>", v:"Racing de Olavarría", hora:"20:00", gl:null, gv:null, claseL:"huracan", claseV:"racingolavarria"},
+            ]},
+       ]},
+     { id: "2026-11-23", label: "LUN 23/11", torneos: [
+            { nombre: "RESERVA PROMOCIONAL | CLAUSURA | FINAL", cat: "reservapromocional", torLink: "reservapromocional", noAutoResult: true, partidos: [
+            {l:"Sansinena", v:"Pacífico BB", hora:"16:00", gl:null, gv:null, claseL:"sansinena", claseV:"pacificobb",nota:"El ganador se enfrentará a Olimpo en la final extra del Clausura"},
             ]},
        ]},
     ];
@@ -16681,6 +16686,7 @@ const BD_H2H = {
         { fecha: "Torneo 2026 - Fecha 17", torneo: "sub15fem", l: "Olimpo", v: "Tiro Federal", gl: 1, gv: 2 },
         { fecha: "Fecha 9 - Clausura 2026 - 26 ago", torneo: "promocional", l: "Tiro Federal", v: "Olimpo", gl: 1, gv: 0, goles_l: ["Diego Ocampo"], goles_v: [] },
         { fecha: "Fecha 9 - Clausura 2026", torneo: "reserva_promocional", l: "Tiro Federal", v: "Olimpo", gl: 3, gv: 1 },
+        { fecha: "Final - Clausura 2026 - 21 nov", torneo: "promocional", l: "OLimpo", v: "Tiro Federal", gl: 2, gv: 0, goles_l: ["Felipe Santamarina","Santiago Llanos"], goles_v: [] },
     ],
     "Comercial|Sansinena": [
         { fecha: "Fecha 2 - Apertura 2026 - 24 mar 2026", torneo: "promocional", l: "Sansinena", v: "Comercial", gl: 1, gv: 1, goles_l: ["Manuel Stortini"], goles_v: ["Alejo Gil"] },
@@ -17011,6 +17017,7 @@ const BD_H2H = {
         { fecha: "Apertura 2026 - Fecha 13", torneo: "futsalreserva", l: "Petroquímicos", v: "Liniers", gl: 3, gv: 9 },
         { fecha: "Clausura 2026 - Fecha 13", torneo: "futsal", l: "Liniers", v: "Petroquímicos", gl: 4, gv: 2 },
         { fecha: "Clausura 2026 - Fecha 13", torneo: "futsalreserva", l: "Liniers", v: "Petroquímicos", gl: 11, gv: 1 },
+        { fecha: "Final - Torneo 2026 - 21 nov", torneo: "segundafemenino", l: "Liniers", v: "Petroquímicos", gl: 2, gv: 2, pen_l:5, pen_v:3, goles_l: ["Paulina Acevedo"], goles_v: []},
     ],
     "Olimpo|Sansinena": [
         { fecha: "Fecha 3 - Torneo 2026 - 05 abr", torneo: "segundafemenino", l: "Sansinena", v: "Olimpo", gl: 2, gv: 1, goles_l: ["Estefanía Arapey","Melina Gómez"], goles_v: ["Flavia Curín"]},
@@ -18199,7 +18206,7 @@ function generarReserva(cat) {
     : null;
     const textoVisera = cat === 'segundafemenino'
         ? 'Ver cuadro de Playoffs de Reserva de 2° Femenino'
-        : 'Ver cuadro de Playoffs de Apertura y Clausura';
+        : 'Ver cuadro de Playoffs de Apertura';
     let html = navDest
         ? `<div onclick="navegar('${navDest}')" style="background:linear-gradient(135deg,#7b1a1a,#a93226);color:#fff;text-align:center;padding:9px 12px;font-size:12px;font-weight:bold;letter-spacing:0.5px;cursor:pointer;border-bottom:2px solid #f0a500;">🏆 ${textoVisera} ▶</div>`
         : '';
@@ -21841,11 +21848,12 @@ const BD_GOLEADORES_CLAUSURA_PROMOCIONAL = [
           { fecha: "Fecha 10", rival: "Comercial", gl: 4, gv: 0, condicion: "Local", goles: 1 }
       ]
     },
-{ jugador: "Santiago Llanos", equipo: "Olimpo", goles: 3,
+{ jugador: "Santiago Llanos", equipo: "Olimpo", goles: 4,
       partidos: [
           { fecha: "Fecha 1", rival: "Pacífico BB", gl: 0, gv: 2, condicion: "Visitante", goles: 1 },
           { fecha: "Fecha 2", rival: "Tiro Federal", gl: 3, gv: 2, condicion: "Local", goles: 1 },
-          { fecha: "Fecha 12", rival: "Pacífico (C)", gl: 2, gv: 0, condicion: "Local", goles: 1 }
+          { fecha: "Fecha 12", rival: "Pacífico (C)", gl: 2, gv: 0, condicion: "Local", goles: 1 },
+          { fecha: "Final", rival: "Tiro Federal", gl: 1, gv: 0, condicion: "Local", goles: 1 },
       ]
     },
 { jugador: "Galo Fogel", equipo: "Olimpo", goles: 2,
@@ -21885,11 +21893,12 @@ const BD_GOLEADORES_CLAUSURA_PROMOCIONAL = [
           { fecha: "Semifinales", rival: "Tiro Federal", gl: 1, gv: 0, condicion: "Local", goles: 1 },
       ]
     },
-{ jugador: "Felipe Santamarina", equipo: "Olimpo", goles: 3,
+{ jugador: "Felipe Santamarina", equipo: "Olimpo", goles: 4,
       partidos: [
           { fecha: "Fecha 3", rival: "Comercial", gl: 1, gv: 1, condicion: "Visitante", goles: 1 },
           { fecha: "Fecha 6", rival: "Sansinena", gl: 0, gv: 5, condicion: "Visitante", goles: 1 },
           { fecha: "Fecha 11", rival: "Rosario PB", gl: 0, gv: 2, condicion: "Visitante", goles: 1 },
+          { fecha: "Final", rival: "Tiro Federal", gl: 1, gv: 0, condicion: "Local", goles: 1 },
       ]
     },
 { jugador: "Fabricio Ibarra", equipo: "Olimpo", goles: 1,
@@ -22941,6 +22950,7 @@ const BD_ARQUEROS_CLAUSURA_PROMOCIONAL = [
             { rival: "Pacífico (C)", resultado: "Olimpo 2 - 0 Pacífico (C)", fecha: 12 },
             { rival: "Sansinena", resultado: "Olimpo 2 - 0 Sansinena", fecha: 13 },
             { rival: "Comercial", resultado: "Olimpo 1 - 0 Comercial", instancia: "Semifinal" },
+            { rival: "Tiro Federal", resultado: "Olimpo 2 - 0 Tiro Federal", instancia: "Final" },
         ]},
         { jugador: "Haziel Mastandrea", equipo: "Pacífico BB", partidos: [
             { rival: "Rosario PB", resultado: "Rosario PB 0 - 0 Pacífico BB", fecha: 2 },
@@ -24726,7 +24736,10 @@ function generarSegundaFemeninoPlayoffs() {
             Reserva
         </button>
     </div>`;
-
+    html += `<div style="background:#111;color:#ffd700;text-align:center;padding:10px 12px;display:flex;align-items:center;justify-content:center;gap:10px;border-bottom:2px solid #ffd700;">
+        <img src="Liniers.png" style="width:36px;height:36px;object-fit:contain;border-radius:50%;background:#fff;">
+        <span style="font-size:13px;font-weight:bold;letter-spacing:0.5px;">🏆 LINIERS — CAMPEÓN DE LA TEMPORADA 2026</span>
+    </div>`;
     html += `<div class="header-t" style="font-size:11px;background:#2c6e49;">CUARTOS DE FINAL</div><table>`;
     BD_SEGUNDAFEMENINO_PLAYOFFS.cuartos.forEach((d, i) => {
         html += _renderPartidoPlayoff(d.ida);
@@ -25036,7 +25049,8 @@ const BD_CAMPEONES_2026 = {
     { anio: "2026", equipo: "Huracán", clase: "huracan", detalle: "Ganador del Apertura 2026 al vencer a Liniers por 2-0 el 26/7/2026 en la final extra jugada en cancha de Tiro Federal" }
 ],
     promocional:        [
-    { anio: "2026", equipo: "Comercial", clase: "comercial", detalle: "Ganador del Apertura 2026 al vencer a Tiro Federal por penales (3-0) tras igualar 0-0 en los 90' el 11/7/2026" }
+    { anio: "2026", equipo: "Comercial", clase: "comercial", detalle: "Ganador del Apertura 2026 al vencer a Tiro Federal por penales (3-0) tras igualar 0-0 en los 90' el 11/7/2026" },
+    { anio: "2026", equipo: "Olimpo", clase: "olimpo", detalle: "Ganador del Clausura 2026 al vencer a Tiro Federal por 2-0 en su cancha el 21/11/2026" }
 ],
     reservaoficial:     [
     { anio: "2026", equipo: "Sporting", clase: "sporting", detalle: "Ganador del Apertura 2026 al vencer a Villa Mitre por 2-1 el 19/7/2026" }
@@ -25047,7 +25061,9 @@ const BD_CAMPEONES_2026 = {
     femenino:           [
     { anio: "2026", equipo: "Municipales", clase: "municipales", detalle: "Ganador del Apertura 2026 al vencer a Villa Mitre por 3-2 el 19/7/2026" }
 ],
-    segundafemenino:    [],
+    segundafemenino:    [
+    { anio: "2026", equipo: "Liniers", clase: "liniers", detalle: "Campeón de la temporada 2026 tras vencer a Petroquímicos por penales (5-3) tras igualar 2-2 en los 120' el 21/11/2026" }
+],
     reservafemenino:    [
     { anio: "2026", equipo: "Tiro Federal", clase: "tirofederal", detalle: "Ganador del Apertura 2026 al vencer a Bella Vista por penales (3-1) tras igualar 1-1 en los 90' el 18/7/2026" }
 ],
@@ -25800,7 +25816,7 @@ const BD_SEGUNDAFEMENINO_PLAYOFFS = {
         },
     ],
     final: {
-        vuelta: { local: "Liniers", clL: "liniers", visitante: "Petroquímicos", clV: "petroquimicos", gl: null, gv: null, goles_l: [], goles_v: [] }
+        vuelta: { local: "<b>Liniers</b>", clL: "liniers", visitante: "Petroquímicos", clV: "petroquimicos", gl: 2, gv: 2, pen_l:5, pen_v:3, goles_l: [], goles_v: [] }
         },
 };
 
@@ -25992,7 +26008,7 @@ const BD_PROMOCIONAL_CLAUSURA_PLAYOFFS = {
         { local: "Tiro Federal", clL: "tirofederal", visitante: "Rosario PB", clV: "rosariopb", gl: 3, gv: 1, goles_l: ["Joaquín Martínez","Agustín Cabrera (2)"], goles_v: ["Nicolás Ovando"] },
         { local: "Olimpo", clL: "olimpo", visitante: "Comercial", clV: "comercial", gl: 1, gv: 0, goles_l: ["Marcos Acosta"], goles_v: [] }
     ],
-    final: { local: "Olimpo", clL: "olimpo", visitante: "Tiro Federal", clV: "tirofederal", gl: null, gv: null, goles_l: [], goles_v: [] }
+    final: { local: "<b>Olimpo</b>", clL: "olimpo", visitante: "Tiro Federal", clV: "tirofederal", gl: 2, gv: 0, goles_l: [], goles_v: [] }
 };
 
 let subOficialClausuraPO = 'playoffs';
@@ -26026,6 +26042,10 @@ function generarOficialPlayoffsClausura() {
 
 function generarPromocionalPlayoffsClausura() {
     let html = `<div class="header-t">TORNEO PROMOCIONAL — PLAYOFFS CLAUSURA 2026</div>`;
+    html += `<div style="background:#111;color:#ffd700;text-align:center;padding:10px 12px;display:flex;align-items:center;justify-content:center;gap:10px;border-bottom:2px solid #ffd700;">
+        <img src="Olimpo.png" style="width:36px;height:36px;object-fit:contain;border-radius:50%;background:#fff;">
+        <span style="font-size:13px;font-weight:bold;letter-spacing:0.5px;">🏆 OLIMPO — GANADOR DEL CLAUSURA</span>
+    </div>`;
     html += `<div class="header-t" style="font-size:11px;background:#2c6e49;">SEMIFINALES</div><table>`;
     BD_PROMOCIONAL_CLAUSURA_PLAYOFFS.semifinales.forEach(p => { html += _renderPartidoPlayoff(p); });
     html += `</table>`;
