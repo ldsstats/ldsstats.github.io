@@ -1948,7 +1948,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 27).partidos.forEach(p
 });
 
 
-let diaSeleccionadoHome = "2026-11-24"; 
+let diaSeleccionadoHome = "2026-11-25"; 
 let mercadoPasesAbierto = false;
 
 function toggleMercadoPasesHome() {
@@ -1991,6 +1991,11 @@ function generarHome() {
             ]},
             { nombre: "RESERVA FUTSAL | CLAUSURA | FINAL EXTRA", cat: "futsal", torLink: "futsal", noAutoResult: true, partidos: [
             {l:"Los 3 Chiflados", v:"Liniers", hora:"20:30", gl:1, gv:1, pen_l:4, pen_v:5, claseL:"los3chiflados", claseV:"liniers",nota:"En Don Bosco"},
+            ]},
+       ]},
+     { id: "2026-11-25", label: "MIÉ 25/11", torneos: [
+            { nombre: "RESERVA OFICIAL | CLAUSURA | FINAL EXTRA", cat: "reservaoficial", torLink: "reservaoficial", noAutoResult: true, partidos: [
+            {l:"Villa Mitre", v:"Liniers", hora:"16:00", gl:1, gv:2, claseL:"villamitre", claseV:"liniers",nota:"El ganador será ganador del Clausura y enfrentará a Sporting por el título anual"},
             ]},
        ]},
     ];
@@ -18181,6 +18186,9 @@ function generarReserva(cat) {
     if (navDestClausura) {
         html += `<div onclick="navegar('${navDestClausura}')" style="background:linear-gradient(135deg,#7b1a1a,#a93226);color:#fff;text-align:center;padding:9px 12px;font-size:12px;font-weight:bold;letter-spacing:0.5px;cursor:pointer;border-bottom:2px solid #f0a500;">🏆 Ver cuadro de Playoffs del Clausura ▶</div>`;
     }
+    if (cat === 'oficial') {
+        html += `<div onclick="navegar('reservaoficialfinalanual')" style="background:linear-gradient(135deg,#7b1a1a,#a93226);color:#fff;text-align:center;padding:9px 12px;font-size:12px;font-weight:bold;letter-spacing:0.5px;cursor:pointer;border-bottom:2px solid #f0a500;">🏆 Ver Final Anual ▶</div>`;
+    }
 
     // Fixture — igual que generarFixture pero leyendo de reserva
     let f = fixtures.find(x => x.fecha === n) || { partidos: [], libre: null };
@@ -24797,7 +24805,11 @@ function generarReservaSegundaFemeninoPlayoffs() {
     });
 
     html += `</table>`;
-
+    html += `<div style="height:8px;background:#f0f0f0;border-top:1px solid #ddd;border-bottom:1px solid #ddd;"></div>`;
+    html += `<div class="header-t" style="font-size:11px;background:#7b1a1a;">🏆 FINAL</div><table>`;
+    html += _renderPartidoPlayoff(BD_RESERVA_SEGUNDAFEMENINO_PLAYOFFS.final.ida);
+    html += _renderPartidoPlayoff(BD_RESERVA_SEGUNDAFEMENINO_PLAYOFFS.final.vuelta);
+    html += `</table>`;
     return html;
 }
 
@@ -25042,7 +25054,8 @@ const BD_CAMPEONES_2026 = {
     { anio: "2026", equipo: "Olimpo", clase: "olimpo", detalle: "Ganador del Clausura 2026 al vencer a Tiro Federal por 2-0 en su cancha el 21/11/2026" }
 ],
     reservaoficial:     [
-    { anio: "2026", equipo: "Sporting", clase: "sporting", detalle: "Ganador del Apertura 2026 al vencer a Villa Mitre por 2-1 el 19/7/2026" }
+    { anio: "2026", equipo: "Sporting", clase: "sporting", detalle: "Ganador del Apertura 2026 al vencer a Villa Mitre por 2-1 el 19/7/2026" },
+    { anio: "2026", equipo: "Liniers", clase: "liniers", detalle: "Ganador del Clausura 2026 al vencer a Villa Mitre por 2-1 el 25/11/2026" },
 ],
     reservapromocional: [
     { anio: "2026", equipo: "Olimpo", clase: "olimpo", detalle: "Ganador del Apertura 2026 al vencer a Rosario PB por 2-0 el 18/7/2026" }
@@ -25824,10 +25837,14 @@ const BD_RESERVA_SEGUNDAFEMENINO_PLAYOFFS = {
             vuelta: { local: "<b>Liniers</b>", clL: "liniers", visitante: "<s>Estrella de Oro</s>", clV: "estrellaoro", gl: 7, gv: 0, goles_l: [], goles_v: [] }
         },
         {
-            ida:    { local: "<b<Rosario PB</b>", clL: "rosariopb", visitante: "<s>San Francisco</s>", clV: "sanfrancisco", gl: 2, gv: 0, goles_l: [], goles_v: [] },
+            ida:    { local: "<b>Rosario PB</b>", clL: "rosariopb", visitante: "<s>San Francisco</s>", clV: "sanfrancisco", gl: 2, gv: 0, goles_l: [], goles_v: [] },
             vuelta: { local: "<s>San Francisco</s>", clL: "sanfrancisco", visitante: "<b>Rosario PB</b>", clV: "rosariopb", gl: 0, gv: 1, goles_l: [], goles_v: [] }
         }
-    ]
+    ],
+    final: {
+        ida:    { local: "Rosario PB", clL: "rosariopb", visitante: "Liniers", clV: "liniers", gl: null, gv: null, goles_l: [], goles_v: [] },
+        vuelta: { local: "Liniers", clL: "liniers", visitante: "Rosario PB", clV: "rosariopb", gl: null, gv: null, goles_l: [], goles_v: [] }
+    }
 };
 
 const BD_SUB15FEM_PLAYOFFS = {
@@ -25941,6 +25958,10 @@ function generarFemeninoPlayoffs() {
         BD_FEMENINO_CLAUSURA_PLAYOFFS.semifinales.forEach(p => { html += _renderPartidoPlayoff(p); });
         html += `</table>`;
     } else if (rondaPlayoffsFemClausura === 'finalextra') {
+        html += `<div style="background:#111;color:#ffd700;text-align:center;padding:10px 12px;display:flex;align-items:center;justify-content:center;gap:10px;border-bottom:2px solid #ffd700;">
+            <img src="Villa_Mitre.png" style="width:36px;height:36px;object-fit:contain;border-radius:50%;background:#fff;">
+            <span style="font-size:13px;font-weight:bold;letter-spacing:0.5px;">🏆 VILLA MITRE — GANADOR DEL APERTURA</span>
+        </div>`;
         html += `<div class="header-t" style="font-size:11px;background:#2c6e49;">FINAL EXTRA</div><table>`;
         html += _renderPartidoPlayoff(BD_FEMENINO_CLAUSURA_PLAYOFFS.finalExtra, 'Pendiente');
         html += `</table>`;
@@ -25957,10 +25978,18 @@ function generarReservaFemeninoPlayoffs() {
     html += `<div style="display:flex;gap:6px;padding:8px;background:#f9f9f9;border-bottom:1px solid #ddd;">
         ${_btnPOFem('Apertura', torneoPlayoffsResFem === 'apertura', "torneoPlayoffsResFem='apertura';document.getElementById('contenido').innerHTML=generarReservaFemeninoPlayoffs()")}
         ${_btnPOFem('Clausura', torneoPlayoffsResFem === 'clausura', "torneoPlayoffsResFem='clausura';document.getElementById('contenido').innerHTML=generarReservaFemeninoPlayoffs()")}
+
+        ${_btnPOFem('Final Extra', torneoPlayoffsResFem === 'finalextra', "torneoPlayoffsResFem='finalextra';document.getElementById('contenido').innerHTML=generarReservaFemeninoPlayoffs()")}
     </div>`;
 
     if (torneoPlayoffsResFem === 'apertura') {
         html += generarReservaFemeninoPlayoffsApertura().replace('<div class="header-t">RESERVA 1° FEMENINO — PLAYOFFS</div>', '');
+        return html;
+    }
+    if (torneoPlayoffsResFem === 'finalextra') {
+        html += `<div class="header-t" style="font-size:11px;background:#2c6e49;">FINAL EXTRA</div><table>`;
+        html += _renderPartidoPlayoff(BD_RESERVA_FEMENINO_FINAL_EXTRA, 'Pendiente');
+        html += `</table>`;
         return html;
     }
 
@@ -25974,6 +26003,10 @@ function generarReservaFemeninoPlayoffs() {
         BD_RESERVA_FEMENINO_CLAUSURA_PLAYOFFS.semifinales.forEach(p => { html += _renderPartidoPlayoff(p); });
         html += `</table>`;
     } else if (rondaPlayoffsResFemClausura === 'finalextra') {
+        html += `<div style="background:#111;color:#ffd700;text-align:center;padding:10px 12px;display:flex;align-items:center;justify-content:center;gap:10px;border-bottom:2px solid #ffd700;">
+            <img src="Municipales.png" style="width:36px;height:36px;object-fit:contain;border-radius:50%;background:#fff;">
+            <span style="font-size:13px;font-weight:bold;letter-spacing:0.5px;">🏆 MUNICIPALES - GANADOR DEL CLAUSURA</span>
+        </div>`;
         html += `<div class="header-t" style="font-size:11px;background:#2c6e49;">FINAL EXTRA</div><table>`;
         html += _renderPartidoPlayoff(BD_RESERVA_FEMENINO_CLAUSURA_PLAYOFFS.finalExtra, 'Pendiente');
         html += `</table>`;
@@ -25991,6 +26024,7 @@ const BD_OFICIAL_CLAUSURA_PLAYOFFS = {
         { local: "San Francisco", clL: "sanfrancisco", visitante: "<b>Bella Vista</b>", clV: "bellavista", gl: 1, gv: 2, goles_l: [], goles_v: [] }
     ],
     final: { local: "Bella Vista", clL: "bellavista", visitante: "Libertad", clV: "libertad", gl: 3, gv: 1, goles_l: ["Nahuel Bardella","Matías Mayer","Gabino Bellegia"], goles_v: ["Santiago Soto"] },
+    finalextra: { local: "Huracán", clL: "huracan", visitante: "Bella Vista", clV: "bellavista", gl: null, gv: null, goles_l: [], goles_v: [] },
     desempate: { local: "La Armonía", clL: "laarmonia", visitante: "<b>Sporting</b>", clV: "sporting", gl: 0, gv: 2, goles_l: [], goles_v: [] }
 };
 
@@ -26022,6 +26056,10 @@ function generarOficialPlayoffsClausura() {
         html += `<div style="height:8px;background:#f0f0f0;border-top:1px solid #ddd;border-bottom:1px solid #ddd;"></div>`;
         html += `<div class="header-t" style="font-size:11px;background:#7b1a1a;">🏆 FINAL</div><table>`;
         html += _renderPartidoPlayoff(BD_OFICIAL_CLAUSURA_PLAYOFFS.final, 'Pendiente');
+        html += `</table>`;
+        html += `<div style="height:8px;background:#f0f0f0;border-top:1px solid #ddd;border-bottom:1px solid #ddd;"></div>`;
+        html += `<div class="header-t" style="font-size:11px;background:#2c6e49;">FINAL EXTRA</div><table>`;
+        html += _renderPartidoPlayoff(BD_OFICIAL_CLAUSURA_PLAYOFFS.finalextra, 'Pendiente');
         html += `</table>`;
     } else {
         html += `<div class="header-t" style="font-size:11px;background:#7b1a1a;">DESEMPATE POR EL DESCENSO</div><table>`;
@@ -26140,7 +26178,7 @@ const BD_RESERVA_OFICIAL_CLAUSURA_PLAYOFFS = {
         { local: "La Armonía", clL: "laarmonia", visitante: "Liniers", clV: "liniers", gl: 1, gv: 2, goles_l: [], goles_v: [] }
     ],
     finalextra: [
-        { local: "Villa Mitre", clL: "villamitre", visitante: "Liniers", clV: "liniers", gl: null, gv: null, goles_l: [], goles_v: [] }
+        { local: "Villa Mitre", clL: "villamitre", visitante: "Liniers", clV: "liniers", gl: 1, gv: 2, goles_l: [], goles_v: [] }
     ]
 };
 
@@ -26319,4 +26357,31 @@ function generarFutsalReservaFinalExtra() {
     html += _renderPartidoPlayoff(BD_FUTSAL_RESERVA_FINAL_ANUAL, 'Pendiente');
     html += `</table>`;
     return html;
+}
+
+
+/* ═══ FINALES ANUALES / FINAL EXTRA ═══ */
+
+const BD_PROMOCIONAL_FINAL_ANUAL = { local: "Comercial", clL: "comercial", visitante: "Olimpo", clV: "olimpo", gl: null, gv: null, goles_l: [], goles_v: [] };
+const BD_RESERVA_OFICIAL_FINAL_ANUAL = { local: "Sporting", clL: "sporting", visitante: "Liniers", clV: "liniers", gl: null, gv: null, goles_l: [], goles_v: [] };
+const BD_FEMENINO_FINAL_ANUAL = { local: "Municipales", clL: "municipales", visitante: "Villa Mitre", clV: "villamitre", gl: null, gv: null, goles_l: [], goles_v: [] };
+const BD_RESERVA_FEMENINO_FINAL_EXTRA = { local: "Municipales", clL: "municipales", visitante: "Tiro Federal", clV: "tirofederal", gl: null, gv: null, goles_l: [], goles_v: [] };
+
+function _armarFinalAnual(titulo, partido) {
+    let html = `<div class="header-t">${titulo}</div><table>`;
+    html += _renderPartidoPlayoff(partido, 'Pendiente');
+    html += `</table>`;
+    return html;
+}
+
+function generarPromocionalFinalAnual() {
+    return _armarFinalAnual('TORNEO PROMOCIONAL — FINAL ANUAL', BD_PROMOCIONAL_FINAL_ANUAL);
+}
+
+function generarReservaOficialFinalAnual() {
+    return _armarFinalAnual('RESERVA OFICIAL — FINAL ANUAL', BD_RESERVA_OFICIAL_FINAL_ANUAL);
+}
+
+function generarFemeninoFinalAnual() {
+    return _armarFinalAnual('1° FEMENINO — FINAL ANUAL', BD_FEMENINO_FINAL_ANUAL);
 }
