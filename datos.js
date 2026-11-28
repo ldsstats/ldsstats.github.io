@@ -1948,7 +1948,7 @@ BD_FIXTURES.segundafemenino.reserva.find(f => f.fecha === 27).partidos.forEach(p
 });
 
 
-let diaSeleccionadoHome = "2026-11-25"; 
+let diaSeleccionadoHome = "2026-11-28"; 
 let mercadoPasesAbierto = false;
 
 function toggleMercadoPasesHome() {
@@ -1996,6 +1996,44 @@ function generarHome() {
      { id: "2026-11-25", label: "MIÉ 25/11", torneos: [
             { nombre: "RESERVA OFICIAL | CLAUSURA | FINAL EXTRA", cat: "reservaoficial", torLink: "reservaoficial", noAutoResult: true, partidos: [
             {l:"Villa Mitre", v:"Liniers", hora:"16:00", gl:1, gv:2, claseL:"villamitre", claseV:"liniers",nota:"El ganador será ganador del Clausura y enfrentará a Sporting por el título anual"},
+            ]},
+       ]},
+     { id: "2026-11-26", label: "JUE 26/11", torneos: [
+            { nombre: "RESERVA FUTSAL | FINAL ANUAL", cat: "reservafutsal", torLink: "reservafutsal", noAutoResult: true, partidos: [
+            {l:"Los 3 Chiflados", v:"Liniers", hora:"22:00", gl:3, gv:3, pen_l:5, pen_v:4, claseL:"los3chiflados", claseV:"liniers",nota:"El ganador será campeón 2026"},
+            ]},
+       ]},
+     { id: "2026-11-27", label: "VIE 27/11", torneos: [
+            { nombre: "FUTSAL PROMOCIONAL DE FUTSAL | SUBREGIÓN PAMPEANA SUR | FECHA 1", cat: "futsalpromopampeana", torLink: "futsalpromopampeana", noAutoResult: true, partidos: [
+            {l:"Comercial", v:"Villa Mitre", hora:"20:30", gl:8, gv:5, claseL:"comercial", claseV:"villamitre"},
+            {l:"Los 3 Chiflados", v:"Argentinos del Sud", hora:"22:00", gl:null, gv:null, claseL:"los3chiflados", claseV:"sydargentinos"},
+            ]},
+       ]},
+     { id: "2026-11-28", label: "SÁB 28/11", torneos: [
+            { nombre: "PROMOCIONAL | FINAL ANUAL", cat: "promocional", torLink: "promocional", noAutoResult: true, partidos: [
+            {l:"Olimpo", v:"Comercial", hora:"17:00", gl:null, gv:null, claseL:"olimpo", claseV:"comercial",nota:"El ganador ascenderá; el perdedor jugará la promoción ante Sporting"},
+            ]},
+            { nombre: "FUTSAL PROMOCIONAL DE FUTSAL | SUBREGIÓN PAMPEANA SUR | FECHA 2", cat: "futsalpromopampeana", torLink: "futsalpromopampeana", noAutoResult: true, partidos: [
+            {l:"Los 3 Chiflados", v:"Villa Mitre", hora:"20:30", gl:null, gv:null, claseL:"los3chiflados", claseV:"villamitre"},
+            {l:"Comercial", v:"Argentinos del Sud", hora:"21:00", gl:null, gv:null, claseL:"comercial", claseV:"sydargentinos"},
+            ]},
+       ]},
+     { id: "2026-11-29", label: "DOM 29/11", torneos: [
+            { nombre: "FEDERAL A | REVÁLIDA | SEMIFINAL - VUELTA", cat: "federala", torLink: "federala", noAutoResult: true, partidos: [
+            {l:"Cipolletti", v:"Sarmiento de La Banda", hora:"17:00", gl:null, gv:null, claseL:"cipolletti", claseV:"sarmientolb",nota:"Ida: 0-0"},
+            {l:"Olimpo", v:"Douglas Haig", hora:"20:00", gl:null, gv:null, claseL:"olimpo", claseV:"douglashaig",nota:"Ida: 2-2"},
+            ]},
+            { nombre: "REGIONAL FEDERAL AMATEUR | FINAL BONAERENSE PAMPEANA SUR | VUELTA", cat: "promocional", torLink: "promocional", noAutoResult: true, partidos: [
+            {l:"Racing de Olavarría", v:"Huracán", hora:"20:00", gl:null, gv:null, claseL:"racingolavarria", claseV:"huracan",nota:"Ida: 1-3"},
+            ]},
+            { nombre: "FUTSAL PROMOCIONAL DE FUTSAL | SUBREGIÓN PAMPEANA SUR | FECHA 3", cat: "futsalpromopampeana", torLink: "futsalpromopampeana", noAutoResult: true, partidos: [
+            {l:"Villa Mitre", v:"Argentinos del Sud", hora:"15:00", gl:null, gv:null, claseL:"villamitre", claseV:"sydargentinos"},
+            {l:"Comercial", v:"Los 3 Chiflados", hora:"17:00", gl:null, gv:null, claseL:"comercial", claseV:"los3chiflados"},
+            ]},
+       ]},
+     { id: "2026-12-02", label: "MIÉ 02/12", torneos: [
+            { nombre: "OFICIAL | CLAUSURA | FINAL EXTRA", cat: "oficial", torLink: "oficial", noAutoResult: true, partidos: [
+            {l:"Huracán", v:"Bella Vista", hora:"19:00", gl:null, gv:null, claseL:"huracan", claseV:"bellavista",nota:"Si gana Huracán será campeón anual; si gana Bella Vista se quedará con el Clausura y habrá final anual"},
             ]},
        ]},
     ];
@@ -16889,7 +16927,7 @@ const BD_H2H = {
         { fecha: "Clausura 2026 - Fecha 10", torneo: "futsalreserva", l: "San Francisco", v: "Tiro Federal", gl: 3, gv: 4 },
         { fecha: "Clausura 2026 - Fecha 6", torneo: "senior", l: "Tiro Federal", v: "San Francisco", gl: 5, gv: 2, goles_l: ["Juan José Dietz (3)","Mauro Fernández","Federico Mancinelli"], goles_v: ["Horacio Ocampo","Damián Vidal"] },
         { fecha: "Torneo 2026 - Semifinales", torneo: "sub15fem", l: "Tiro Federal", v: "San Francisco", gl: 0, gv: 0, pen_l:5, pen_v:4 },
-        { fecha: "Clausura 2026 - Cuartos de Final", torneo: "senior", l: "San Francisco", v: "Tiro Federal", gl: 3, gv: 2, goles_l: ["Federico Timi","Patricio Muñoz","Sebastian Alfonsin"], goles_v: [] },
+        { fecha: "Clausura 2026 - Cuartos de Final", torneo: "senior", l: "San Francisco", v: "Tiro Federal", gl: 3, gv: 2, goles_l: ["Federico Timi","Patricio Muñoz","Sebastian Alfonsin"], goles_v: ["Juan José Dietz","Federico Mancinelli"] },
     ],
     "Huracán|Villa Mitre": [
         { fecha: "Fecha 3 - Apertura 2026 - 28 mar", torneo: "oficial", l: "Villa Mitre", v: "Huracán", gl: 0, gv: 1, goles_l: [], goles_v: ["Agustín Seisdedos"]},
@@ -19960,7 +19998,7 @@ function generarCopaPais() {
 }
 
 const BD_GOLEADORES_SENIOR_CLAUSURA = [
-    { nombre: "Juan José Dietz", equipo: "Tiro Federal", goles: 9 },
+    { nombre: "Juan José Dietz", equipo: "Tiro Federal", goles: 10 },
     { nombre: "Mariano Orsi", equipo: "Libertad", goles: 9 },
     { nombre: "César Panduro", equipo: "Huracán", goles: 8 },
     { nombre: "Sebastián Aristi", equipo: "Comercial", goles: 7 },
@@ -19983,6 +20021,7 @@ const BD_GOLEADORES_SENIOR_CLAUSURA = [
     { nombre: "Sebastián Weidele", equipo: "Sansinena", goles: 3 },
     { nombre: "Patricio Muñoz", equipo: "San Francisco", goles: 3 },
     { nombre: "Maximiliano Macías", equipo: "Sporting", goles: 3 },
+    { nombre: "Federico Mancinelli", equipo: "Tiro Federal", goles: 3 },
     { nombre: "Fernando Priore", equipo: "Bella Vista", goles: 2 },
     { nombre: "Jonathan Bravo de Laguna", equipo: "Comercial", goles: 2 },
     { nombre: "Emiliano Esmoli", equipo: "Comercial", goles: 2 },
@@ -19997,7 +20036,6 @@ const BD_GOLEADORES_SENIOR_CLAUSURA = [
     { nombre: "Claudio Ibáñez", equipo: "Pacífico BB", goles: 2 },
     { nombre: "Lucas Arias", equipo: "Pacífico (C)", goles: 2 },
     { nombre: "Esteban Angelini", equipo: "Pacífico (C)", goles: 2 },
-    { nombre: "Federico Mancinelli", equipo: "Tiro Federal", goles: 2 },
     { nombre: "Víctor Loyarte", equipo: "Tiro Federal", goles: 2 },
     { nombre: "Víctor Martínez", equipo: "San Francisco", goles: 2 },
     { nombre: "Nicolás Martin", equipo: "Sansinena", goles: 2 },
@@ -25050,23 +25088,24 @@ const BD_CAMPEONES_2026 = {
     { anio: "2026", equipo: "Huracán", clase: "huracan", detalle: "Ganador del Apertura 2026 al vencer a Liniers por 2-0 el 26/7/2026 en la final extra jugada en cancha de Tiro Federal" }
 ],
     promocional:        [
+    { anio: "2026", equipo: "Olimpo", clase: "olimpo", detalle: "Ganador del Clausura 2026 al vencer a Tiro Federal por 2-0 en su cancha el 21/11/2026" },
     { anio: "2026", equipo: "Comercial", clase: "comercial", detalle: "Ganador del Apertura 2026 al vencer a Tiro Federal por penales (3-0) tras igualar 0-0 en los 90' el 11/7/2026" },
-    { anio: "2026", equipo: "Olimpo", clase: "olimpo", detalle: "Ganador del Clausura 2026 al vencer a Tiro Federal por 2-0 en su cancha el 21/11/2026" }
 ],
-    reservaoficial:     [
+    reservaoficial:     [    { anio: "2026", equipo: "Liniers", clase: "liniers", detalle: "Ganador del Clausura 2026 al vencer a Villa Mitre por 2-1 el 25/11/2026" },
     { anio: "2026", equipo: "Sporting", clase: "sporting", detalle: "Ganador del Apertura 2026 al vencer a Villa Mitre por 2-1 el 19/7/2026" },
-    { anio: "2026", equipo: "Liniers", clase: "liniers", detalle: "Ganador del Clausura 2026 al vencer a Villa Mitre por 2-1 el 25/11/2026" },
 ],
     reservapromocional: [
     { anio: "2026", equipo: "Olimpo", clase: "olimpo", detalle: "Ganador del Apertura 2026 al vencer a Rosario PB por 2-0 el 18/7/2026" }
 ],
     femenino:           [
+    { anio: "2026", equipo: "Villa Mitre", clase: "villamitre", detalle: "Ganador del Clausura 2026 al vencer a Municipales por penales el 22/11/2026" },
     { anio: "2026", equipo: "Municipales", clase: "municipales", detalle: "Ganador del Apertura 2026 al vencer a Villa Mitre por 3-2 el 19/7/2026" }
 ],
     segundafemenino:    [
     { anio: "2026", equipo: "Liniers", clase: "liniers", detalle: "Campeón de la temporada 2026 tras vencer a Petroquímicos por penales (5-3) tras igualar 2-2 en los 120' el 21/11/2026" }
 ],
     reservafemenino:    [
+    { anio: "2026", equipo: "Municipales", clase: "municipales", detalle: "Ganador del Clausura 2026 al vencer a Bella Vista por 3-2 el 22/11/2026" },
     { anio: "2026", equipo: "Tiro Federal", clase: "tirofederal", detalle: "Ganador del Apertura 2026 al vencer a Bella Vista por penales (3-1) tras igualar 1-1 en los 90' el 18/7/2026" }
 ],
     reservasegundafem:  [],
@@ -25074,12 +25113,13 @@ const BD_CAMPEONES_2026 = {
     { anio: "2026", equipo: "Liniers", clase: "liniers", detalle: "Campeón del Torneo 2026 al vencer en la final a Bella Vista por 4-0 el 14/11/2026. Cerró el año invicto con 24 victorias, un empate, 159 goles a favor y solo tres en contra" }
 ],
     futsal:             [
-    { anio: "2026", equipo: "La Estación", clase: "laestacion", detalle: "Ganadora del Apertura 2026 al vencer a Villa Mitre por penales el 10/7/2026" },
     { anio: "2026", equipo: "La Estación", clase: "laestacion", detalle: "Campeón anual luego de quedarse con el Clausura 2026 al vencer a Liniers por penales el 24/11/2026" },
+    { anio: "2026", equipo: "La Estación", clase: "laestacion", detalle: "Ganadora del Apertura 2026 al vencer a Villa Mitre por penales el 10/7/2026" },
 ],
     futsalreserva:      [
+    { anio: "2026", equipo: "Los 3 Chiflados", clase: "los3chiflados", detalle: "Ganador de 2026 al vencer a Liniers por penales el 26/11/2026" },
+    { anio: "2026", equipo: "Liniers", clase: "liniers", detalle: "Ganador del Clausura 2026 al vencer a Los 3 Chiflados por penales el 24/11/2026" },
     { anio: "2026", equipo: "Los 3 Chiflados", clase: "los3chiflados", detalle: "Ganador del Apertura 2026 al vencer a Petroquímicos por 4-1 el 10/7/2026" },
-    { anio: "2026", equipo: "Liniers", clase: "liniers", detalle: "Ganador del Clausura 2026 al vencer a Los 3 Chiflados por penales el 24/11/2026" }
 ],
     juveniles:          [
 ],
@@ -26318,12 +26358,12 @@ const BD_SENIOR_CLAUSURA_PLAYOFFS = {
         { local: "<b>Huracán</b>", clL: "huracan", visitante: "Comercial", clV: "comercial", gl: 3, gv: 0, goles_l: ["Juan Hippendinger (2)","César Panduro"], goles_v: [] }
     ],
     cuartos: [
-        { local: "San Francisco", clL: "sanfrancisco", visitante: "Tiro Federal", clV: "tirofederal", gl: 3, gv: 2, goles_l: ["Federico Timi","Patricio Muñoz","Sebastián Alfonsin"], goles_v: [] },
+        { local: "San Francisco", clL: "sanfrancisco", visitante: "Tiro Federal", clV: "tirofederal", gl: 3, gv: 2, goles_l: ["Federico Timi","Patricio Muñoz","Sebastián Alfonsin"], goles_v: ["Juan José Dietz","Federico Mancinelli"] },
         { local: "Huracán", clL: "huracan", visitante: "Sporting", clV: "sporting", gl: 3, gv: 0, goles_l: ["Iván López","César Panduro","Francisco Pereyra"], goles_v: [] }
     ],
     semifinales: [
-        { local: "Libertad", clL: "libertad", visitante: "A confirmar", clV: "aconfirmar", gl: null, gv: null, goles_l: [], goles_v: [] },
-        { local: "Pacífico (C)", clL: "pacificoc", visitante: "A confirmar", clV: "aconfirmar", gl: null, gv: null, goles_l: [], goles_v: [] }
+        { local: "Libertad", clL: "libertad", visitante: "San Francisco", clV: "sanfrancisco", gl: null, gv: null, goles_l: [], goles_v: [] },
+        { local: "Pacífico (C)", clL: "pacificoc", visitante: "Huracán", clV: "huracan", gl: null, gv: null, goles_l: [], goles_v: [] }
     ]
 };
 
@@ -26349,7 +26389,7 @@ function generarSeniorPlayoffsClausura() {
 
 
 const BD_FUTSAL_RESERVA_FINAL_ANUAL = {
-    local: "Los 3 Chiflados", clL: "los3chiflados", visitante: "Liniers", clV: "liniers", gl: null, gv: null, goles_l: [], goles_v: []
+    local: "<b>Los 3 Chiflados</b>", clL: "los3chiflados", visitante: "Liniers", clV: "liniers", gl: 2, gv: 2, pen_l:5, pen_v:4, goles_l: [], goles_v: []
 };
 
 function generarFutsalReservaFinalExtra() {
@@ -26384,4 +26424,78 @@ function generarReservaOficialFinalAnual() {
 
 function generarFemeninoFinalAnual() {
     return _armarFinalAnual('1° FEMENINO — FINAL ANUAL', BD_FEMENINO_FINAL_ANUAL);
+}
+
+
+/* ═══ FUTSAL — TORNEO PROMOCIONAL SUBREGIÓN PAMPEANA SUR ═══ */
+
+const BD_FUTSAL_PROMO_PAMPEANA = {
+    posiciones: [
+        { n: "Comercial",          cl: "comercial",     pj: 1, pg: 1, pe: 0, pp: 0, gf: 8, gc: 5, pts: 3 },
+        { n: "Los 3 Chiflados",    cl: "los3chiflados", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
+        { n: "Argentinos del Sud", cl: "sydargentinos", pj: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, pts: 0 },
+        { n: "Villa Mitre",        cl: "villamitre",    pj: 1, pg: 0, pe: 0, pp: 1, gf: 5, gc: 8, pts: 0 }
+    ],
+    fixture: [
+        { fecha: 1, partidos: [
+            { l: "Comercial",       lk: "comercial",     v: "Villa Mitre",        vk: "villamitre",    hora: "20:30hs", gl: null, gv: null },
+            { l: "Los 3 Chiflados", lk: "los3chiflados", v: "Argentinos del Sud", vk: "sydargentinos", hora: "22:00hs", gl: null, gv: null }
+        ]},
+        { fecha: 2, partidos: [
+            { l: "Los 3 Chiflados", lk: "los3chiflados", v: "Villa Mitre",        vk: "villamitre",    hora: "19:00hs", gl: null, gv: null },
+            { l: "Comercial",       lk: "comercial",     v: "Argentinos del Sud", vk: "sydargentinos", hora: "21:00hs", gl: null, gv: null }
+        ]},
+        { fecha: 3, partidos: [
+            { l: "Villa Mitre",     lk: "villamitre",    v: "Argentinos del Sud", vk: "sydargentinos", hora: "15:00hs", gl: null, gv: null },
+            { l: "Comercial",       lk: "comercial",     v: "Los 3 Chiflados",    vk: "los3chiflados", hora: "17:00hs", gl: null, gv: null }
+        ]}
+    ]
+};
+
+function generarFutsalPromoPampeanaSur() {
+    const bd = BD_FUTSAL_PROMO_PAMPEANA;
+    const n = estado.fechaPromoPampeana || 1;
+    const f = bd.fixture.find(x => x.fecha === n) || { partidos: [] };
+
+    let html = `<div class="header-t">TORNEO PROMOCIONAL DE FUTSAL - SUBREGIÓN PAMPEANA SUR</div>`;
+
+    html += `<div class="nav-fechas">`;
+    for (let i = 1; i <= 3; i++) {
+        html += `<div class="btn-f ${i === n ? 'activa' : ''}" onclick="estado.fechaPromoPampeana=${i};document.getElementById('contenido').innerHTML=generarFutsalPromoPampeanaSur()">${i}</div>`;
+    }
+    html += `</div>`;
+
+    html += `<div class="header-t">FECHA ${n}</div><table>`;
+    f.partidos.forEach(p => {
+        const res = p.gl !== null ? `${p.gl} - ${p.gv}` : p.hora;
+        const resStyle = p.gl !== null ? '' : 'font-size:10px; color:#888;';
+        html += `<tr>
+            <td class="c-loc"><span style="direction:ltr;display:inline-flex;align-items:center;justify-content:flex-end;width:100%;">${p.l} <div class="escudo ${p.lk}" style="display:inline-block;vertical-align:middle;margin-left:4px;"></div></span></td>
+            <td class="c-res" style="${resStyle}">${res}</td>
+            <td class="c-vis"><div class="escudo ${p.vk}" style="display:inline-block;vertical-align:middle;margin-right:4px;"></div> ${p.v}</td>
+        </tr>`;
+    });
+    html += `</table>`;
+
+    html += `<div class="header-t">POSICIONES</div>`;
+    html += `<table><thead><tr>
+        <th style="width:25px;">#</th>
+        <th style="text-align:left;padding-left:8px;">Equipo</th>
+        <th class="c-stat">PJ</th><th class="c-stat">PG</th><th class="c-stat">PE</th>
+        <th class="c-stat">PP</th><th class="c-stat">GF</th><th class="c-stat">GC</th>
+        <th class="c-stat">Dif</th><th class="c-stat">Pts</th>
+    </tr></thead><tbody>`;
+    bd.posiciones.forEach((e, i) => {
+        const dif = e.gf - e.gc;
+        html += `<tr>
+            <td class="c-pos">${i + 1}</td>
+            <td class="c-equipo"><div class="escudo ${e.cl}" style="display:inline-block;vertical-align:middle;margin-right:4px;"></div>${e.n}</td>
+            <td class="c-stat">${e.pj}</td><td class="c-stat">${e.pg}</td><td class="c-stat">${e.pe}</td>
+            <td class="c-stat">${e.pp}</td><td class="c-stat">${e.gf}</td><td class="c-stat">${e.gc}</td>
+            <td class="c-stat">${dif > 0 ? '+' + dif : dif}</td><td class="c-stat"><b>${e.pts}</b></td>
+        </tr>`;
+    });
+    html += `</tbody></table>`;
+
+    return html;
 }
